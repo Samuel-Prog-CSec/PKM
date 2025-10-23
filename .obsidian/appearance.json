@@ -1,0 +1,15 @@
+{
+  "cssTheme": "AnuPpuccin",
+  "theme": "obsidian",
+  "accentColor": "",
+  "baseFontSize": 18,
+  "enabledCssSnippets": [
+    "custom-rainbow-colors",
+    "custom-background"
+  ],
+  "nativeMenus": false,
+  "showViewHeader": true,
+  "showRibbon": true,
+  "translucency": false,
+  "interfaceFontFamily": "Aldo"
+}

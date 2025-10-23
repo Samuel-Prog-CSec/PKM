@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Tabla
+    filters:
+      and:
+        - file.hasTag("Datos")
+        - file.hasTag("Ingenieria")
+        - Area == link("Inteligencia del negocio.base")
+    sort:
+      - property: file.name
+        direction: DESC
+  - type: table
+    name: Vista

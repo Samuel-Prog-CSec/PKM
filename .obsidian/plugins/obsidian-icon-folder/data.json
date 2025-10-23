@@ -1,0 +1,79 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "BoBxInjection",
+      "BoBxlWindows",
+      "RaHammerDrop",
+      "RaSickle",
+      "TiSpider"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Build Obsidian REFERENCIAS.md": {
+    "iconName": "LiFileCode",
+    "iconColor": "#eeff00"
+  },
+  "REVISAR ENLACES.md": {
+    "iconName": "LiCurlyBraces",
+    "iconColor": "#00fbff"
+  },
+  "02 - Areas/Ingenieria": "RaPotion",
+  "02 - Areas/SO's (ORGANIZAR)": "TiServerCog",
+  "03 - Recursos/Biblioteca": "LiLibraryBig",
+  "03 - Recursos/Lenguajes": "TiCode",
+  "03 - Recursos/Lenguajes/Bash": "OcCommandPalette16",
+  "03 - Recursos/Lenguajes/Python": "TiBrandPython",
+  "03 - Recursos/Templates": "TiTemplate",
+  "05 - PENDIENTES/Hacking (ORGANIZAR)": "RaBurningEmbers",
+  "05 - PENDIENTES/VARIOS": "TiReportSearch",
+  "01 - Proyectos/Tcpdump": "TiSpy",
+  "01 - Proyectos/Redes/Protocolos": "TiProtocol",
+  "01 - Proyectos/Redes/Protocolos/HTTP": "TiHttpConnect",
+  "01 - Proyectos/Redes/Protocolos/HTTPS": "TiLock",
+  "01 - Proyectos/Wireshark": "RaShark",
+  "01 - Proyectos/GO": "TiBrandGolang",
+  "02 - Areas/🛡️🔵 Blue Team/(2) Análisis de red": "LiNetwork",
+  "03 - Recursos/🛠️ Tools/Nmap": "TiEyeSearch",
+  "02 - Areas/🛡️🔵 Blue Team/000 - Manejo de incidentes": "RaCrackedShield",
+  "02 - Areas/🛡️🔵 Blue Team/002 - Manejo de logs": "LiLogs",
+  "01 - Proyectos/004 - Threat Intelligence": "BoBxsRadiation",
+  "01 - Proyectos/Desarrollo con IA": "TiRobot",
+  "02 - Areas/Ingenieria/Bases de datos": "LiDatabase",
+  "02 - Areas/Ingenieria/Bases de datos/MongoDB.md": "BoBxlMongodb",
+  "CWEE Path.md": {
+    "iconName": "TiListCheck",
+    "iconColor": "#37ff00"
+  },
+  "Windows 11 Setup.md": {
+    "iconName": "BoBxlWindows",
+    "iconColor": "#009dff"
+  },
+  "Hacking web": "TiSpider",
+  "Hacking web/Information Gathering": "RaSickle",
+  "Hacking web/Injection attacks": "BoBxInjection"
+}

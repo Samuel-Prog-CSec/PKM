@@ -1,0 +1,7 @@
+[Han creado un MONITOR para PROGRAMADORES](https://www.youtube.com/watch?v=mi8iRhREgiM&t=86s)
+[# This monitor gave me +28 Int! (BenQ Programming Monitor RD280U)](https://www.youtube.com/@kalestarler)
+[# Best 4K Monitor for Designers? | BenQ PD3225U Review](https://www.youtube.com/@JeremyMuradesign)
+[A monitor designed for programming/coding? (ft. the BenQ GW2790QT and ScreenBar)](https://www.youtube.com/@kalestarler)
+[# Best BenQ Monitor Settings](https://www.youtube.com/@itsDubla)
+[# BenQ RD280UA Review (Best Programming Monitor?)](https://www.youtube.com/@simpleprogrammer)
+[The Ultimate Coding Monitor? BenQ RD280U Review](https://www.youtube.com/@DamianPEdwards)

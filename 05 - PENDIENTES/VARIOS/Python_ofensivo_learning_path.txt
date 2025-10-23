@@ -1,0 +1,64 @@
+Diferencias entre Python2, Python3, PIP2 y PIP3
+Conceptos básicos de Python
+El intérprete de Python
+Shebang y convenios en Python
+Variables y tipos de datos
+Operadores básicos en Python
+String Formatting
+Control de flujo (Condicionales y Bucles)
+Funciones y ámbito de las variables
+Funciones lambda anónimas
+Manejo de errores y excepciones
+Colecciones y estructuras de datos en Python
+Listas
+Tuplas
+Conjuntos
+Diccionarios
+Programación Orientada a Objetos en Python (POO)
+Métodos estáticos y métodos de clase
+Comprendiendo mejor el uso de self
+Herencia y polimorfismo
+Encapsulamiento y métodos especiales
+Decoradores y propiedades
+Módulos y paquetes en Python
+Organización del código en módulos
+Importación y uso de módulos
+Creación y distribución de paquetes
+Entrada y salida de datos
+Entrada por teclado y salida por pantalla
+Lectura y escritura de archivos
+Formateo de cadenas y manipulación de texto
+Biblioteca estándar y herramientas adicionales
+Manejo de fechas y horas
+Expresiones regulares
+Manejo de archivos y directorios
+Conexiones de red y protocolos
+Manejo de librerías comunes
+Librería os y sys
+Librería requests 
+Librería requests 
+Librería Urllib3
+Librería threading y multiprocessing
+Introducción a las interfaces gráficas de usuario (GUI)
+Desarrollo de aplicaciones GUI con Tkinter 
+Desarrollo de aplicaciones GUI avanzado con CustomTkinter
+Chat Multiusuario con GUI y Cifrado E2E 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Creando un escáner de puertos
+Creando un programa que nos cambie la dirección MAC (macchanger)
+Creando un escáner de red (ICMP)
+Creando un escáner de red (ARP) con Scapy
+Creando un envenenador ARP (ARP Spoofer) con Scapy
+Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy
+Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy
+Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump
+Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump
+Creando un DNS Spoofer con Scapy y NetfilterQueue
+Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking)
+Creando un Keylogger 
+Creando un Keylogger 
+Creación de Malware 
+Creación de Backdoors y Command and Control (C&C) 
+Creación de Forward Shell

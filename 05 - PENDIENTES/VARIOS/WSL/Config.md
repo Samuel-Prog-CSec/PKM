@@ -1,0 +1,9 @@
+- https://www.reddit.com/r/bashonubuntuonwindows/comments/ptju0w/best_practices_for_setting_up_a_wsl_2_development/?tl=es-es&rdt=56677
+- https://learn.microsoft.com/en-us/windows/wsl/setup/environment
+- https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+- https://www.sitepoint.com/wsl2/
+- https://kind.sigs.k8s.io/docs/user/using-wsl2/
+- https://www.bleepingcomputer.com/news/microsoft/windows-10-wsl2-now-allows-you-to-configure-global-options/
+- https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+- https://garrytrinder.github.io/2020/12/my-wsl2-windows-terminal-setup
+- https://www.digitalocean.com/community/posts/trying-the-new-wsl-2-its-fast-windows-subsystem-for-linux

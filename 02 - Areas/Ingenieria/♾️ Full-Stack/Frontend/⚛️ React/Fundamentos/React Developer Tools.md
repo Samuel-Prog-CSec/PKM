@@ -1,0 +1,5 @@
+[React Developer Tools](https://www.google.com/url?sa=E&q=https%3A%2F%2Freactjs.org%2Fblog%2F2019%2F08%2F15%2Fnew-react-devtools.html) es una extensión para los navegadores Google Chrome y Mozilla Firefox que, instalada, nos provee de un conjunto de utilidades para la inspección de los componentes de una aplicación web React.js en ejecución. De esta forma podremos observar una vista del árbol de componentes, así como el estado actual y las propiedades de cada componente seleccionado.
+
+Tan solo tenemos que hacer `click` con el botón derecho del ratón y seleccionar “`inspeccionar`” para acceder a la información de la web. Después, en la pestaña React accedemos a la información proporcionada por estas herramientas.
+
+Así mismo, gracias a estas herramientas, podemos ver si una aplicación web está desarrollada en React.js y si se está ejecutando en producción o en depuración, entre otras características. Es muy aconsejable utilizar este tipo de herramientas para depurar tus aplicaciones web, a nivel de cliente desde el navegador.

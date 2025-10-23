@@ -1,0 +1,1 @@
+[better-auth: A First Look](https://www.youtube.com/watch?v=2cQTV6NYxis)

@@ -1,0 +1,7 @@
+views:
+  - type: table
+    name: No-Relacionales
+    filters:
+      and:
+        - Area == link("Bases de datos.base", "Bases de datos")
+        - file.tags.contains("Bases-datos/No-Relacionales")

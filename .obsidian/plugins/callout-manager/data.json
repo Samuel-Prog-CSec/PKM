@@ -1,0 +1,67 @@
+{
+  "callouts": {
+    "custom": [
+      "hacker",
+      "recomendacion"
+    ],
+    "settings": {
+      "hacker": [
+        {
+          "changes": {
+            "icon": "lucide-biohazard"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {
+            "color": "2, 116, 21"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "0, 255, 42"
+          }
+        }
+      ],
+      "cite": [
+        {
+          "changes": {
+            "icon": "lucide-activity"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "227, 107, 167"
+          }
+        }
+      ],
+      "recomendacion": [
+        {
+          "changes": {
+            "icon": "lucide-bell-ring",
+            "color": "168, 130, 255"
+          }
+        }
+      ]
+    }
+  },
+  "calloutDetection": {
+    "obsidian": true,
+    "theme": true,
+    "snippet": true
+  }
+}

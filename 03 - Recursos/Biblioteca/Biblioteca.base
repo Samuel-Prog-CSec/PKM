@@ -1,0 +1,11 @@
+views:
+  - type: cards
+    name: Tabla
+    filters:
+      and:
+        - file.inFolder("03 - Recursos/Biblioteca")
+    order:
+      - file.name
+    imageFit: ""
+    cardSize: 350
+    imageAspectRatio: 1

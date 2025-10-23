@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "seed": 3,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": true
+  },
+  "knownTags": {
+    "WHOIS": 1,
+    "excalidraw": 2,
+    "Windows": 3,
+    "Linux": 4,
+    "Pentesting": 5,
+    "Introduccion": 6,
+    "Pentesting/Enumeracion": 1,
+    "Escaneo": 7,
+    "Escaneo/Redes": 1,
+    "Pentesting/Vulnerabilidad": 2,
+    "Ingenieria": 8,
+    "Datos": 9,
+    "Bases-datos": 10,
+    "Bases-datos/No-Relacionales": 1,
+    "Web": 11,
+    "Web/Red-Team": 1,
+    "Pentesting/Explotacion": 3
+  },
+  "_version": 3
+}

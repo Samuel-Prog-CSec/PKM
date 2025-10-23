@@ -1,0 +1,12 @@
+Common SQL injection vulnerabilities to look out for include:
+
+1. **Error-Based SQL Injection**: Exploiting error messages returned by the database to gain information about the database structure.
+2. **Union-Based SQL Injection**: Using the `UNION` SQL operator to combine the results of two or more `SELECT` statements to retrieve data from other tables.
+3. **Boolean-Based Blind SQL Injection**: Inferring information by sending queries that return different results based on a true or false condition.
+4. **Time-Based Blind SQL Injection**: Inferring information by sending queries that cause a time delay in the database response.
+5. **Out-of-Band SQL Injection**: Using alternative channels (e.g., DNS or HTTP requests) to retrieve data when direct responses are not possible.
+6. **Stacked Queries SQL Injection**: Ejecutar múltiples consultas SQL en una sola llamada, separadas por un punto y coma (;).
+7. **Second-Order SQL Injection**: Inyectar código SQL malicioso en una entrada que no se ejecuta inmediatamente, sino que se almacena en la base de datos y se ejecuta en un contexto diferente.
+8. **Blind SQL Injection**: Inferir información sin recibir mensajes de error explícitos, utilizando técnicas como las basadas en booleanos o en tiempo.
+
+To mitigate these vulnerabilities, always use parameterized queries, stored procedures, and input validation.
