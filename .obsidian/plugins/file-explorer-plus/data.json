@@ -80,6 +80,27 @@
         "type": "FILES",
         "pattern": "01 - Proyectos/Redes/Protocolos/Protocolos de red.md",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Hacking web/Generación de PDF/Vulnerabilidades de generación de PDF.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Hacking web/XPath Injection/Inyección XPath.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Hacking web/XSS/Cross-Site Scripting (XSS).md",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

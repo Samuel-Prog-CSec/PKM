@@ -5,16 +5,14 @@ tags:
   - Datos
 Fecha de actualización: 2025-10-20
 Nota previa: "[[Bypass de autenticación]]"
-Nota siguiente:
+Nota siguiente: "[[Exfiltración avanzada de datos]]"
 Area: "[[Inyección XPath]]"
 ---
 ---
 
 Discutiremos **cómo manipular consultas [[Inyección XPath#Fundamentos XPath|XPath]] de modo que accedamos a datos arbitrarios** de documentos *XML*, utilizando técnicas similares a [[💉🧲 Inyección de Unión]].
 
-# Exfiltración sencilla de datos
-Para demostrar la exfiltración de datos mediante [[Inyección XPath]]
- en un escenario base simple, consideremos una aplicación web que nos permite consultar datos sobre las calles de San Francisco. Podemos ingresar una consulta de búsqueda y elegir entre un nombre de calle largo y corto. La aplicación web muestra todas las calles de San Francisco que coinciden con nuestra consulta:
+Para demostrar la exfiltración de datos mediante [[Inyección XPath]] en un escenario base simple, consideremos una aplicación web que nos permite consultar datos sobre las calles de San Francisco. Podemos ingresar una consulta de búsqueda y elegir entre un nombre de calle largo y corto. La aplicación web muestra todas las calles de San Francisco que coinciden con nuestra consulta:
 ![Formulario de búsqueda del índice de calles de San Francisco con entrada "BAR". Opciones para nombre de calle largo o corto. Botón enviar. La lista de resultados incluye calles como BARCELONA AVE y LOMBARD ST.](https://academy.hackthebox.com/storage/modules/204/dataexfil_1.png)
 
 Al observar la solicitud, podemos ver que la consulta de búsqueda se envía en el parámetro *GET* `q`, mientras que nuestra elección de un nombre de calle largo/corto se transmite en el parámetro *GET* `f`:

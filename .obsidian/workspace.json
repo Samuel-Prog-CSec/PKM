@@ -4,35 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c93d285889caad06",
+        "id": "7c4d8ce9f73e0262",
         "type": "tabs",
         "children": [
           {
-            "id": "ec6ad1551a8a952c",
+            "id": "275d2f8cebf8ce56",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hacking web/Injection attacks/Exfiltración avanzada de datos.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Exfiltración avanzada de datos"
-            }
-          },
-          {
-            "id": "71fdf73ba056d42e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hacking web/Injection attacks/Inyección XPath.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Inyección XPath"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -127,13 +109,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hacking web/Injection attacks/Exfiltración avanzada de datos.md",
+                "file": "05 - PENDIENTES/VARIOS/Pintura-Revisar.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Exfiltración avanzada de datos"
+              "title": "Esquema de Pintura-Revisar"
             }
           },
           {
@@ -228,43 +210,44 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ec6ad1551a8a952c",
+  "active": "a5984c00f83c5aee",
   "lastOpenFiles": [
-    "Hacking web/Injection attacks/Exfiltración de datos.md",
-    "Hacking web/Injection attacks/Exfiltración avanzada de datos.md",
-    "Hacking web/Injection attacks/Bypass de autenticación.md",
-    "Hacking web/Injection attacks/Inyección XPath.md",
+    "05 - PENDIENTES/VARIOS/Pintura-Revisar.md",
+    "Hacking web/XSS/Cross-Site Scripting (XSS).md",
+    "Pentesting/Break Password",
+    "Pentesting",
+    "Hacking web/Generación de PDF/Vulnerabilidades de generación de PDF.md",
+    "Hacking web/Generación de PDF/Prevención de vulnerabilidades en la generación de PDF.md",
+    "Hacking web/Generación de PDF/Explotación de vulnerabilidades de generación de PDF.md",
+    "Hacking web/Fuzzing/Fuzzing web.md",
+    "02 - Areas/🛡️🔵 Blue Team/002 - Manejo de logs/Registros de eventos de Windows.md",
+    "Hacking web/Generación de PDF",
+    "Hacking web/XPath Injection/Exfiltración avanzada de datos.md",
+    "Hacking web/Web Pentesting.base",
     "Hacking web/💉🩸 SQL Injection/Nuevo-Formato/💉🧲 Inyección de Unión.md",
+    "Hacking web/❌💉🩸 NoSQL Injection/NoSQL Injection.md",
+    "Hacking web/💉🩸 SQL Injection/Nuevo-Formato/Inyección a ciegas.md",
+    "Hacking web/XPath Injection/Inyección XPath.md",
+    "Hacking web/XPath Injection/Explotación a ciegas.md",
+    "Hacking web/XPath Injection/Exfiltración de datos.md",
+    "Hacking web/XPath Injection/Bypass de autenticación.md",
     "Hacking web/💉🩸 SQL Injection/Nuevo-Formato/SQL Inyection.md",
     "Hacking web/💉🩸 SQL Injection/Nuevo-Formato",
     "Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/Inyección de Unión.md",
     "Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/💉🩸 SQL Injection.md",
     "02 - Areas/Ingenieria/💾 Bases de Datos/SQL/🐬 MySQL/💬 Sentencias SQL.md",
     "Hacking web/Injection attacks/Sin título.md",
-    "Hacking web/Injection attacks",
+    "Hacking web/XPath Injection",
     "01 - Proyectos/Redes/Protocolos/Protocolos.base",
     "01 - Proyectos/Redes/Protocolos/Protocolos de red.md",
-    "Hacking web/Web Pentesting.base",
     "Hacking web/XSS/XSS Almacenado.md",
     "05 - PENDIENTES/VARIOS/Windows/REVISAR.md",
     "Windows 11 Setup.md",
     "REVISAR ENLACES.md",
-    "Hacking web/XSS/Cross-Site Scripting (XSS).md",
     "01 - Proyectos/Redes/Protocolos/HTTP/HTTP.md",
-    "Hacking web/Fuzzing/Fuzzing web.md",
-    "Hacking web/XSS/XSS Reflejado.md",
-    "Hacking web/XSS/DOM-Based.md",
-    "01 - Proyectos/Hacking web/XSS/Sin título.md",
     "01 - Proyectos/Hacking web/Cross-Site Scripting (XSS)",
-    "05 - PENDIENTES/VARIOS/REVISAR (CAOS)/📒 Obsidian.md",
-    "05 - PENDIENTES/VARIOS/REVISAR (CAOS)/🖥️ Monitor.md",
-    "05 - PENDIENTES/VARIOS/REVISAR (CAOS)/🐧💖 Distros Linux.md",
-    "05 - PENDIENTES/VARIOS/REVISAR (CAOS)/Visual Studio Code Config.md",
     "Hacking web/XSS",
     "01 - Proyectos/Hacking web/Fuzzing/Sin título.base",
-    "Hacking web/Fuzzing",
-    "Hacking web/Information Gathering",
-    "Hacking web",
     "04 - Archivos/Images/trafico_rdp_encriptado.png",
     "04 - Archivos/Images/trafico_rdp_desencriptado.png",
     "SO's/Logs y eventos/Sin título.canvas",

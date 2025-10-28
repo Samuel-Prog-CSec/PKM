@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "BoBxInjection",
-      "BoBxlWindows",
-      "RaHammerDrop",
-      "RaSickle",
-      "TiSpider"
+      "BoBxPaint",
+      "TiPasswordUser",
+      "RaCrossedAxes",
+      "RaBombExplosion",
+      "TiPdf"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -75,5 +75,9 @@
   },
   "Hacking web": "TiSpider",
   "Hacking web/Information Gathering": "RaSickle",
-  "Hacking web/Injection attacks": "BoBxInjection"
+  "Hacking web/XPath Injection": "BoBxInjection",
+  "Hacking web/Generación de PDF": "TiPdf",
+  "Pentesting": "RaCrossedAxes",
+  "Pentesting/Break Password": "TiPasswordUser",
+  "05 - PENDIENTES/VARIOS/Pintura-Revisar.md": "BoBxPaint"
 }
