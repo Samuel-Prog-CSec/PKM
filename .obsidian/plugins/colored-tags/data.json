@@ -31,7 +31,10 @@
     "Seguridad/Prevencion-Vulnerabilidad": 1,
     "7✨": 13,
     "5✨": 14,
-    "12✨": 15
+    "12✨": 15,
+    "Pentesting/Wi-Fi": 4,
+    "Seguridad/Autenticacion": 2,
+    "Seguridad/Contraseñas": 3
   },
   "_version": 3
 }

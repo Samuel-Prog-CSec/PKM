@@ -1,48 +1,46 @@
-El **proyecto Metasploit** es una plataforma modular de pruebas de penetración basada en **Ruby** que ==permite escribir, probar y ejecutar el código de explotación==. Este código de explotación puede ser personalizado por el usuario o puede tomarse de una base de datos que contenga los últimos exploits ya descubiertos y modularizados. 
+---
+tags:
+  - Introduccion
+  - Linux
+  - Pentesting
+Fecha de actualización: 2025-11-13
+Nota previa:
+Nota siguiente: "[[👨‍💻 MSFconsole]]"
+Area: "[[3️⃣ Explotación]]"
+---
+---
+
+El **proyecto Metasploit** es una <mark style="background: #ADCCFFA6;">plataforma modular de pruebas de penetración</mark> basada en **Ruby** que permite <mark style="background: #FFB86CA6;">escribir, probar y ejecutar el código de explotación</mark>. Este código de explotación puede ser personalizado por el usuario o puede tomarse de una base de datos que contenga los últimos exploits ya descubiertos y modularizados. 
 
 El **framework Metasploit** incluye un conjunto de herramientas que se pueden utilizar para probar vulnerabilidades de seguridad, enumerar redes, ejecutar ataques y evadir la detección. 
 
-Los **módulos**, son ==pruebas de concepto de explotación reales que ya se han desarrollado y probado== en la práctica y se han integrado en el framework para proporcionar a los pentesters un acceso sencillo a diferentes vectores de ataque para diferentes plataformas y servicios. 
+Los **módulos**, son <mark style="background: #ADCCFFA6;">pruebas de concepto de explotación reales que ya se han desarrollado y probado en la práctica</mark> y se han integrado en el framework para proporcionar a los pentesters un acceso sencillo a diferentes vectores de ataque para diferentes plataformas y servicios. 
 
-El punto fuerte de Metasploit es que ==proporciona una gran cantidad de objetivos y versiones disponibles==, todos a unos pocos comandos de distancia de un punto de apoyo exitoso.  Estos, combinados con un **exploit hecho a medida** para esas versiones vulnerables y con un **payload** que se envía después del exploit, que ==nos dará acceso real al sistema==, nos proporcionan una forma sencilla y automatizada de cambiar entre conexiones de destino durante nuestras aventuras post-explotación.
-
-
-# Índice
-- [[Ⓜ️🧨 Metasploit]]
-- [[👨‍💻 MSFconsole]]
+El punto fuerte de *Metasploit* es que <mark style="background: #FFB8EBA6;">proporciona una gran cantidad de objetivos y versiones disponibles</mark>.  Estos, combinados con un **exploit hecho a medida** para esas versiones vulnerables y con un <mark style="background: #FFB86CA6;">**payload** que se envía después del exploit, que nos dará acceso real al sistema</mark>, nos proporcionan una forma sencilla y automatizada de cambiar entre conexiones de destino durante nuestras aventuras post-explotación.
 
 
 # Metasploit Pro
-La **versión Metasploit Pro** es diferente de la versión Metasploit Framework con algunas características adicionales: 
+La **versión Metasploit Pro** es diferente de la versión *Metasploit Framework* con algunas características adicionales: 
 - Cadenas de tareas Ingeniería social. 
 - Validaciones de vulnerabilidades. 
 - GUI. 
 - Asistentes de inicio rápido. 
 - Integración con **Nexpose**.
+> [!recomendacion]+
+> La versión *Pro* también contiene su propia consola, muy similar a **msfconsole**.
 
-La versión Pro ==también contiene su propia consola==, muy similar a **msfconsole**. Para tener una idea general de lo que pueden lograr las características más nuevas de Metasploit Pro, consulta la lista a continuación:
-
-
-# Consola de Metasploit Framework
-La **msfconsole** es probablemente la ==interfaz más popular== de **Metasploit Framework (MSF)**. Proporciona una consola centralizada "todo en uno" y le permite un ==acceso eficiente a prácticamente todas las opciones disponibles en MSF==. Las características que generalmente ofrece msfconsole son las siguientes:
-- Es la única forma compatible de acceder a la mayoría de las funciones dentro de Metasploit.
-- Proporciona una interfaz basada en consola para el Framework.
-- Contiene la mayoría de las funciones y es la interfaz de MSF más estable.
-- Compatibilidad total con readline, tabulación y finalización de comandos.
-- Ejecución de comandos externos en msfconsole.
-
+---
 
 # Arquitectura
-De forma predeterminada, todos los archivos básicos relacionados con Metasploit Framework se pueden encontrar en: **/usr/share/metasploit-framework** (en la distribución de seguridad ParrotOS de HTB Academy).
+De forma predeterminada, todos los archivos básicos relacionados con *Metasploit Framework* se pueden encontrar en: **/usr/share/metasploit-framework** (en la distribución de seguridad *ParrotOS*).
 
 
 ## Datos, documentación, biblioteca
-Estos son los archivos base del marco. Los datos y la biblioteca son las **partes funcionales** de la interfaz de msfconsole, mientras que la carpeta `Documentación` contiene todos los **detalles técnicos** sobre el proyecto.
+Estos son los archivos base del marco. Los datos y la biblioteca son las **partes funcionales** de la interfaz de [[👨‍💻 MSFconsole]], mientras que la carpeta `Documentación` contiene todos los **detalles técnicos** sobre el proyecto.
 
 
 ## Módulos
-Los módulos **se dividen en categorías** independientes en esta carpeta. Se encuentran en las siguientes carpetas:
-
+Los [[Módulos]] **se dividen en categorías** independientes en esta carpeta. Se encuentran en las siguientes carpetas:
 ```shell
 ls /usr/share/metasploit-framework/modules
 
@@ -51,8 +49,7 @@ auxiliary  encoders  evasion  exploits  nops  payloads  post
 
 
 ## Plugins
-Los plugins ofrecen al pentester más flexibilidad al usar msfconsole, ya que pueden cargarse fácilmente de forma manual o automática según sea necesario para **proporcionar funcionalidad adicional y automatización** durante nuestra evaluación.
-
+Los plugins <mark style="background: #ADCCFFA6;">ofrecen al pentester más flexibilidad al usar *msfconsole*</mark>, ya que pueden cargarse fácilmente de forma manual o automática según sea necesario para **proporcionar funcionalidad adicional y automatización** durante nuestra evaluación.
 ```shell
 ls /usr/share/metasploit-framework/plugins/
 
@@ -68,8 +65,7 @@ ffautoregen.rb     nexpose.rb     socket_logger.rb
 
 
 ## Scripts
-Funcionalidad de **Meterpreter** y otros ==scripts útiles==.
-
+Funcionalidad de [[Meterpreter]] y otros scripts útiles.
 ```shell
 ls /usr/share/metasploit-framework/scripts/
 
@@ -78,9 +74,8 @@ meterpreter  ps  resource  shell
 
 
 ## Herramientas
-**Utilidades de línea de comandos** que se pueden llamar directamente desde el menú msfconsole.
-
-```shel
+**Utilidades de línea de comandos** que se pueden llamar directamente desde el menú *msfconsole*.
+```shell
 ls /usr/share/metasploit-framework/tools/
 
 context  docs     hardware  modules   payloads

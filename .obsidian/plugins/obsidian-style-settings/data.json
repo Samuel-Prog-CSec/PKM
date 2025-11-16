@@ -78,7 +78,7 @@
   "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-mocha-old",
   "anuppuccin-custom-background@@anp-custom-bg-blur-dark": 0,
   "anuppuccin-custom-background@@anp-custom-bg-brightness-dark": 1,
-  "anuppuccin-custom-background@@anp-custom-bg-card-fg-opacity-dark": 0.85,
+  "anuppuccin-custom-background@@anp-custom-bg-card-fg-opacity-dark": 0.9,
   "anuppuccin-theme-settings@@anp-border-radius": 18,
   "anuppuccin-theme-settings@@anp-simple-rainbow-indentation-toggle": true,
   "anuppuccin-theme-settings@@anp-simple-rainbow-collapse-icon-toggle": true,
@@ -86,5 +86,7 @@
   "anp-custom-rainbow-colors@@rainbow-color-1-default": "rainbow-color-1-accent",
   "anp-custom-rainbow-colors@@rainbow-color-2-default": "rainbow-color-2-flamingo",
   "anuppuccin-theme-settings@@anp-alt-rainbow-style": "anp-simple-rainbow-color-toggle",
-  "anuppuccin-theme-settings@@anp-rainbow-subfolder-color-toggle": true
+  "anuppuccin-theme-settings@@anp-rainbow-subfolder-color-toggle": true,
+  "anuppuccin-theme-settings@@anp-translucency-opacity": 0.15,
+  "anuppuccin-theme-settings@@anp-depth-tab-opacity": 0.6
 }

@@ -78,7 +78,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "01 - Proyectos/Redes/Protocolos/Protocolos de red.md",
+        "pattern": "Redes/Protocolos/Protocolos de red.md",
         "patternType": "STRICT"
       },
       {
@@ -100,6 +100,55 @@
         "active": true,
         "type": "FILES",
         "pattern": "Hacking web/XSS/Cross-Site Scripting (XSS).md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Hacking Wi-Fi/Wi-Fi Pentesting.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "03 - Recursos/🛠️ Tools/Burp Suite/Burp Suite.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "03 - Recursos/🛠️ Tools/ZAP/Proxy de ataque OWASP Zed (ZAP).md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "03 - Recursos/🛠️ Tools/Metasploit/Ⓜ️🧨 Metasploit.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "03 - Recursos/🛠️ Tools/Metasploit/👨‍💻 MSFconsole.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Pentesting/000 - Fases del Pentesting/Pentesting.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Red-Team.base",
         "patternType": "STRICT"
       }
     ],
