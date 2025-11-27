@@ -50,21 +50,21 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "CWEE Path.md",
+        "pattern": "🔴⚔️ Red Team/CWEE Path.md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Hacking web/Web Pentesting.base",
+        "pattern": "🔴⚔️ Red Team/Hacking web/Web Pentesting.base",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Hacking web/Fuzzing/Fuzzing web.md",
+        "pattern": "🔴⚔️ Red Team/Hacking web/Fuzzing/Fuzzing web.md",
         "patternType": "STRICT"
       },
       {
@@ -85,28 +85,28 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Hacking web/Generación de PDF/Vulnerabilidades de generación de PDF.md",
+        "pattern": "🔴⚔️ Red Team/Hacking web/Generación de PDF/Vulnerabilidades de generación de PDF.md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Hacking web/XPath Injection/Inyección XPath.md",
+        "pattern": "🔴⚔️ Red Team/Hacking web/XPath Injection/Inyección XPath.md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Hacking web/XSS/Cross-Site Scripting (XSS).md",
+        "pattern": "🔴⚔️ Red Team/Hacking web/XSS/Cross-Site Scripting (XSS).md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Hacking Wi-Fi/Wi-Fi Pentesting.base",
+        "pattern": "🔴⚔️ Red Team/Hacking Wi-Fi/Wi-Fi Pentesting.base",
         "patternType": "STRICT"
       },
       {
@@ -141,14 +141,28 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Pentesting/000 - Fases del Pentesting/Pentesting.md",
+        "pattern": "🔴⚔️ Red Team/Pentesting/000 - Fases del Pentesting/Pentesting.md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Red-Team.base",
+        "pattern": "🔴⚔️ Red Team/Red-Team.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "React/Introducción.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "HTML/Introducción a HTML.md",
         "patternType": "STRICT"
       }
     ],

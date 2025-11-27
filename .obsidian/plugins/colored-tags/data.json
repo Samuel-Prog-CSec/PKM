@@ -34,7 +34,9 @@
     "12✨": 15,
     "Pentesting/Wi-Fi": 4,
     "Seguridad/Autenticacion": 2,
-    "Seguridad/Contraseñas": 3
+    "Seguridad/Contraseñas": 3,
+    "Web/Front-end": 2,
+    "Web/Back-end": 3
   },
   "_version": 3
 }

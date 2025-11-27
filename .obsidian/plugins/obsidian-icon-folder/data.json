@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "OcCopilot96",
-      "🔴",
-      "RaFireBomb",
-      "OcLinkExternal16",
-      "TiProng"
+      "BoBxlHtml5",
+      "TiLockShare",
+      "TiShieldLock",
+      "BoBxlCss3",
+      "BoBxlReact"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -56,34 +56,38 @@
   "01 - Proyectos/Desarrollo con IA": "TiRobot",
   "02 - Areas/Ingenieria/Bases de datos": "LiDatabase",
   "02 - Areas/Ingenieria/Bases de datos/MongoDB.md": "BoBxlMongodb",
-  "CWEE Path.md": {
-    "iconName": "TiListCheck",
-    "iconColor": "#37ff00"
-  },
   "Windows 11 Setup.md": {
     "iconName": "BoBxlWindows",
     "iconColor": "#009dff"
   },
-  "Hacking web": "TiSpider",
-  "Hacking web/Information Gathering": "RaSickle",
-  "Hacking web/XPath Injection": "BoBxInjection",
-  "Hacking web/Generación de PDF": "TiPdf",
-  "Pentesting": "RaCrossedAxes",
-  "Pentesting/Break Password": "TiPasswordUser",
   "05 - PENDIENTES/VARIOS/Pintura-Revisar.md": "BoBxPaint",
-  "Hacking Wi-Fi": "LiWifi",
   "03 - Recursos/🛠️ Tools/John The Ripper": "RaScythe",
-  "🛡️🔵 Blue Team/(2) Análisis de red": "LiNetwork",
-  "🛡️🔵 Blue Team/000 - Manejo de incidentes": "RaCrackedShield",
-  "🛡️🔵 Blue Team/002 - Manejo de logs": "LiLogs",
-  "🛡️🔵 Blue Team/004 - Threat Intelligence": "BoBxsRadiation",
   "03 - Recursos/🛠️ Tools/Tcpdump": "TiSpy",
   "03 - Recursos/🛠️ Tools/Wireshark": "RaShark",
   "Redes/Protocolos": "TiProtocol",
   "Redes/Protocolos/HTTP": "TiHttpConnect",
   "Redes/Protocolos/HTTPS": "TiLock",
-  "Hacking web/Proxies web": "OcLinkExternal16",
   "03 - Recursos/🛠️ Tools/Metasploit": "RaFireBomb",
-  "Red-Team.base": "🔴",
-  "AI Hacking": "OcCopilot96"
+  "React": "BoBxlReact",
+  "CSS": "BoBxlCss3",
+  "JWT": "TiLockShare",
+  "HTML": "BoBxlHtml5",
+  "🔴⚔️ Red Team/Pentesting": "RaCrossedAxes",
+  "🔴⚔️ Red Team/Pentesting/Break Password": "TiPasswordUser",
+  "🔴⚔️ Red Team/Hacking Wi-Fi": "LiWifi",
+  "🔴⚔️ Red Team/Hacking web": "TiSpider",
+  "🔴⚔️ Red Team/Hacking web/Generación de PDF": "TiPdf",
+  "🔴⚔️ Red Team/Hacking web/Proxies web": "OcLinkExternal16",
+  "🔴⚔️ Red Team/Hacking web/Information Gathering": "RaSickle",
+  "🔴⚔️ Red Team/Hacking web/XPath Injection": "BoBxInjection",
+  "🔴⚔️ Red Team/AI Hacking": "OcCopilot96",
+  "🔵🛡️ Blue Team/(2) Análisis de red": "LiNetwork",
+  "🔵🛡️ Blue Team/002 - Manejo de logs": "LiLogs",
+  "🔵🛡️ Blue Team/000 - Manejo de incidentes": "RaCrackedShield",
+  "🔵🛡️ Blue Team/004 - Threat Intelligence": "BoBxsRadiation",
+  "🔴⚔️ Red Team/Red-Team.base": "🔴",
+  "🔴⚔️ Red Team/CWEE Path.md": {
+    "iconName": "TiListCheck",
+    "iconColor": "#37ff00"
+  }
 }

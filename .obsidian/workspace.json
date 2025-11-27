@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "99a605fcfff89950",
+        "id": "a0397a59452db1f0",
         "type": "tabs",
         "children": [
           {
-            "id": "b83a04457ccfe77e",
+            "id": "fb6767d627d51ece",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "React/Introducción.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Introducción"
             }
           }
         ]
@@ -29,7 +33,7 @@
       {
         "id": "62094ecb6430a30c",
         "type": "tabs",
-        "dimension": 74.27745664739885,
+        "dimension": 75.626204238921,
         "children": [
           {
             "id": "a5984c00f83c5aee",
@@ -50,12 +54,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#12✨",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               },
               "icon": "lucide-search",
               "title": "Buscar"
@@ -74,12 +78,12 @@
         ]
       },
       {
-        "id": "44362b014ac98375",
+        "id": "d0debabd7b604d7b",
         "type": "tabs",
-        "dimension": 25.722543352601157,
+        "dimension": 24.373795761079,
         "children": [
           {
-            "id": "ced7f9766ee2ac2a",
+            "id": "d0426677ca4befe9",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -109,12 +113,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "React/Introducción.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de Introducción"
             }
           },
           {
@@ -199,54 +204,54 @@
     "hiddenItems": {
       "bases:Crear nueva base": false,
       "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "callout-manager:Insert Callout": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "graph:Abrir vista gráfica": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "a5984c00f83c5aee",
+  "active": "fb6767d627d51ece",
   "lastOpenFiles": [
-    "AI Hacking",
+    "React/Introducción.md",
+    "CSS/Herramientas para estilos.md",
+    "HTML/Introducción a HTML.md",
+    "CSS/Introducción a CSS.md",
+    "🔴⚔️ Red Team",
+    "02 - Areas/Ingenieria/♾️ Full-Stack/🔙🔚 Backend/APIs/Express.js/Express.js.md",
+    "HTML/main, section e img.md",
+    "HTML/Footer.md",
+    "HTML/Formularios y listas.md",
+    "03 - Recursos/Templates/Template para proyectos.md",
+    "JWT/Introducción a JWT.md",
+    "HTML",
+    "JWT",
+    "React/Componentes/Tipos de componentes.md",
+    "React/Componentes/Componentes.md",
+    "React/Componentes/Fases del ciclo de vida.md",
+    "🔴⚔️ Red Team/Pentesting/Break Password/Descifrado de contraseñas.md",
+    "CSS",
+    "🔴⚔️ Red Team/Pentesting/000 - Fases del Pentesting/Pentesting.md",
+    "02 - Areas/React/Fundamentos/Sintaxis JSX.md",
+    "02 - Areas/React/Fundamentos/React Developer Tools.md",
+    "🔴⚔️ Red Team/AI Hacking",
     "Build Obsidian REFERENCIAS.md",
-    "CWEE Path.md",
+    "🔴⚔️ Red Team/CWEE Path.md",
     "REVISAR ENLACES.md",
-    "Red-Team.base",
-    "Pentesting/Payloads/Reverse shell.md",
-    "Pentesting/000 - Fases del Pentesting/Pentesting.md",
-    "Pentesting/000 - Fases del Pentesting/1️⃣ Enumeracion.md",
+    "🔴⚔️ Red Team/Red-Team.base",
+    "🔴⚔️ Red Team/Pentesting/Payloads/Reverse shell.md",
+    "🔴⚔️ Red Team/Pentesting/000 - Fases del Pentesting/1️⃣ Enumeracion.md",
     "03 - Recursos/🛠️ Tools/Metasploit/Ⓜ️🧨 Metasploit.md",
     "03 - Recursos/🛠️ Tools/Metasploit/👨‍💻 MSFconsole.md",
     "03 - Recursos/🛠️ Tools/Metasploit/Encoders.md",
-    "03 - Recursos/🛠️ Tools/Metasploit/Módulos.md",
-    "03 - Recursos/🛠️ Tools/Metasploit/Payloads.md",
-    "03 - Recursos/🛠️ Tools/Metasploit/Meterpreter.md",
-    "Pentesting/Payloads",
-    "Pentesting/000 - Fases del Pentesting/3️⃣ Explotación.md",
-    "Pentesting/000 - Fases del Pentesting/2️⃣ Búsqueda de vulnerabilidades.md",
-    "03 - Recursos/🛠️ Tools/Burp Suite/Burp Suite.md",
-    "03 - Recursos/🛠️ Tools/ZAP/Proxy de ataque OWASP Zed (ZAP).md",
-    "Hacking web/Proxies web/Interceptación solicitudes.md",
-    "Hacking web/Proxies web/Setup del proxy.md",
-    "Hacking web/Proxies web/Proxies web.md",
+    "🔴⚔️ Red Team/Pentesting/Payloads",
     "03 - Recursos/🛠️ Tools/ZAP",
     "03 - Recursos/🛠️ Tools/Burp Suite",
-    "Hacking web/Fuzzing/Fuzzing web.md",
-    "Hacking web/Proxies web",
-    "Hacking Wi-Fi/Wi-Fi Pentesting.base",
-    "🛡️🔵 Blue Team/🛡️🖥️🗂️ Asegurar Windows/Referencias.md",
-    "Windows 11 Setup.md",
-    "03 - Recursos/🛠️ Tools/John The Ripper/Jhon The Ripper.md",
-    "Pentesting/Break Password/Descifrado de contraseñas.md",
-    "03 - Recursos/🛠️ Tools/John The Ripper",
-    "Hacking Wi-Fi/001 - Introducción/Fundamentos.md",
-    "Hacking Wi-Fi/001 - Introducción",
-    "Hacking Wi-Fi",
-    "Pentesting/Break Password",
+    "🔴⚔️ Red Team/Hacking web/Proxies web",
     "04 - Archivos/Images/trafico_rdp_encriptado.png",
     "04 - Archivos/Images/trafico_rdp_desencriptado.png",
     "SO's/Logs y eventos/Sin título.canvas",
