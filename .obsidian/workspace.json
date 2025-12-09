@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a0397a59452db1f0",
+        "id": "b3b65d50d2554d4f",
         "type": "tabs",
         "children": [
           {
-            "id": "fb6767d627d51ece",
+            "id": "2d80eb1654a596d5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React/Introducción.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Introducción"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -113,13 +109,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/Introducción.md",
+                "file": "03 - Recursos/🛠️ Tools/Wireshark/Desencriptar conexiones.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Introducción"
+              "title": "Esquema de Desencriptar conexiones"
             }
           },
           {
@@ -208,50 +204,50 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
       "callout-manager:Insert Callout": false,
       "templater-obsidian:Templater": false,
       "graph:Abrir vista gráfica": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "fb6767d627d51ece",
+  "active": "a5984c00f83c5aee",
   "lastOpenFiles": [
-    "React/Introducción.md",
-    "CSS/Herramientas para estilos.md",
-    "HTML/Introducción a HTML.md",
-    "CSS/Introducción a CSS.md",
-    "🔴⚔️ Red Team",
-    "02 - Areas/Ingenieria/♾️ Full-Stack/🔙🔚 Backend/APIs/Express.js/Express.js.md",
-    "HTML/main, section e img.md",
-    "HTML/Footer.md",
-    "HTML/Formularios y listas.md",
-    "03 - Recursos/Templates/Template para proyectos.md",
+    "03 - Recursos/🛠️ Tools/Wireshark/Uso avanzado de Wireshark.md",
+    "03 - Recursos/🛠️ Tools/Wireshark/Wireshark.md",
+    "03 - Recursos/🛠️ Tools/Tcpdump/Tcpdump.md",
+    "03 - Recursos/🛠️ Tools/Tcpdump/Filtrado de paquetes Tcpdump.md",
+    "🔵🛡️ Blue Team/IDS & IPS/IDS-IPS.md",
+    "01 - Proyectos/002 - Footprinting/🔬 Metodología de enumeración.md",
+    "01 - Proyectos/002 - Footprinting/📘 Principios de la enumeración.md",
+    "01 - Proyectos/002 - Footprinting/🔎👣2️⃣1️⃣ FTP.md",
+    "🔵🛡️ Blue Team/002 - Manejo de logs/Seguimiento de eventos para Windows.md",
+    "🔵🛡️ Blue Team/002 - Manejo de logs/Sysmon.md",
+    "🔵🛡️ Blue Team/002 - Manejo de logs/Registros de eventos de Windows.md",
+    "🔵🛡️ Blue Team/🛡️🖥️🗂️ Asegurar Windows/Referencias.md",
+    "🔵🛡️ Blue Team/(2) Análisis de red/Tipos de análisis de red.md",
+    "🔵🛡️ Blue Team/(2) Análisis de red/Análisis del tráfico de red.md",
+    "🔵🛡️ Blue Team/(2) Análisis de red/Proceso de análisis.md",
     "JWT/Introducción a JWT.md",
+    "Tailwind CSS",
+    "CSS/Herramientas para estilos.md",
+    "02 - Areas/Ingenieria/TFG/Front-end.md",
+    "02 - Areas/Ingenieria/TFG/Supabase.md",
+    "02 - Areas/Ingenieria/TFG/Sprints.md",
+    "02 - Areas/Ingenieria/BI/Análisis de datos.md",
+    "02 - Areas/Ingenieria/BI/Inteligencia del negocio.base",
+    "02 - Areas/Ingenieria/BI/Modelado dimensional.md",
+    "02 - Areas/Ingenieria/TFG",
+    "02 - Areas/Ingenieria/BI/Laboratorio/Fase 1 - Carga y limpieza de datos.md",
+    "02 - Areas/Ingenieria/BI/Laboratorio",
+    "02 - Areas/Ingenieria/BI/Tema 2.md",
+    "02 - Areas/Ingenieria/BI/Tema 1.md",
+    "02 - Areas/Ingenieria/🧠👔 Bussiness Inteligence/1️⃣ Carga y transformación de datos.md",
+    "🔴⚔️ Red Team",
     "HTML",
     "JWT",
-    "React/Componentes/Tipos de componentes.md",
-    "React/Componentes/Componentes.md",
-    "React/Componentes/Fases del ciclo de vida.md",
-    "🔴⚔️ Red Team/Pentesting/Break Password/Descifrado de contraseñas.md",
     "CSS",
-    "🔴⚔️ Red Team/Pentesting/000 - Fases del Pentesting/Pentesting.md",
-    "02 - Areas/React/Fundamentos/Sintaxis JSX.md",
-    "02 - Areas/React/Fundamentos/React Developer Tools.md",
     "🔴⚔️ Red Team/AI Hacking",
-    "Build Obsidian REFERENCIAS.md",
-    "🔴⚔️ Red Team/CWEE Path.md",
-    "REVISAR ENLACES.md",
     "🔴⚔️ Red Team/Red-Team.base",
-    "🔴⚔️ Red Team/Pentesting/Payloads/Reverse shell.md",
-    "🔴⚔️ Red Team/Pentesting/000 - Fases del Pentesting/1️⃣ Enumeracion.md",
-    "03 - Recursos/🛠️ Tools/Metasploit/Ⓜ️🧨 Metasploit.md",
-    "03 - Recursos/🛠️ Tools/Metasploit/👨‍💻 MSFconsole.md",
-    "03 - Recursos/🛠️ Tools/Metasploit/Encoders.md",
-    "🔴⚔️ Red Team/Pentesting/Payloads",
-    "03 - Recursos/🛠️ Tools/ZAP",
-    "03 - Recursos/🛠️ Tools/Burp Suite",
-    "🔴⚔️ Red Team/Hacking web/Proxies web",
     "04 - Archivos/Images/trafico_rdp_encriptado.png",
     "04 - Archivos/Images/trafico_rdp_desencriptado.png",
     "SO's/Logs y eventos/Sin título.canvas",

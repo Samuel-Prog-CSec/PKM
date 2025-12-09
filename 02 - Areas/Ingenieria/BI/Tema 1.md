@@ -176,10 +176,6 @@ Herramientas que cubren ETL, almacenamiento, OLAP, reporting y visualización. A
 6. **Construir** vistas materializadas / cubos OLAP / modelos semánticos para reporting.
 
 ## 6.5. Métricas/KPIs — cómo justificarlas en un examen
-- Siempre **vincula KPI ⇄ objetivo estratégico**.  
-- Ejemplo: “Objetivo: aumentar facturación online → KPI: % crecimiento mensual de ventas online (cohortes)”.
-
----
-
-# 7. Resumen ejecutivo (versión para examen)
-El dato es un activo que, bien gobernado y gestionado, aporta ventaja competitiva. Para ello necesitamos gobernanza, ingeniería y analítica. Un Data Warehouse + OLAP + herramientas BI conforman la pila clásica para convertir datos en conocimiento y acciones. Marcos y normas (marcos de buena práctica) proporcionan el marco de madurez y control para asegurar calidad, cumplimiento y valor.
+- Siempre **vincula KPI `⇄` objetivo estratégico**.  
+ - Ejemplo: 
+> “*Objetivo: aumentar facturación online `→` KPI: % crecimiento mensual de ventas online (cohortes)*”.

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "BoBxlTailwindCss",
+      "TiNetwork",
+      "TiReportSearch",
       "BoBxlHtml5",
-      "TiLockShare",
-      "TiShieldLock",
-      "BoBxlCss3",
-      "BoBxlReact"
+      "TiLockShare"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -53,7 +53,6 @@
   "05 - PENDIENTES/VARIOS": "TiReportSearch",
   "01 - Proyectos/GO": "TiBrandGolang",
   "03 - Recursos/🛠️ Tools/Nmap": "TiEyeSearch",
-  "01 - Proyectos/Desarrollo con IA": "TiRobot",
   "02 - Areas/Ingenieria/Bases de datos": "LiDatabase",
   "02 - Areas/Ingenieria/Bases de datos/MongoDB.md": "BoBxlMongodb",
   "Windows 11 Setup.md": {
@@ -89,5 +88,8 @@
   "🔴⚔️ Red Team/CWEE Path.md": {
     "iconName": "TiListCheck",
     "iconColor": "#37ff00"
-  }
+  },
+  "02 - Areas/Ingenieria/BI": "TiReportSearch",
+  "Redes": "TiNetwork",
+  "Tailwind CSS": "BoBxlTailwindCss"
 }

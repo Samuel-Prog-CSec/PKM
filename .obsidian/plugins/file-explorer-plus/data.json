@@ -164,6 +164,13 @@
         "type": "FILES",
         "pattern": "HTML/Introducción a HTML.md",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Areas/Ingenieria/BI/Inteligencia del negocio.base",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [
