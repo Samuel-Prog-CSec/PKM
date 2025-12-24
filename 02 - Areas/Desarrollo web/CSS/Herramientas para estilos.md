@@ -18,3 +18,6 @@ Area:
 [Librería de componentes animados](https://magicui.design/)
 [Ready made animations on CSS](https://animista.net/)
 [Gradientes CSS](https://cssgradient.io/)
+[Generador de temas de colores para componentes de shadcn](https://zippystarter.com/tools/shadcn-ui-theme-generator/demo/dashboard)
+[Detectar performace issues en React](https://react-scan.com/)
+[Documentar UI de React profesionalmente](https://www.fumadocs.dev/)

@@ -155,14 +155,14 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "React/Introducción.md",
+        "pattern": "02 - Areas/Desarrollo web/React/Introducción.md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "HTML/Introducción a HTML.md",
+        "pattern": "02 - Areas/Desarrollo web/HTML/Introducción a HTML.md",
         "patternType": "STRICT"
       },
       {
@@ -170,6 +170,20 @@
         "active": true,
         "type": "FILES",
         "pattern": "02 - Areas/Ingenieria/BI/Inteligencia del negocio.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Omarchy.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Reparación Razer Basilisk V3 Pro 35k.md",
         "patternType": "STRICT"
       }
     ],

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "BoBxlTailwindCss",
-      "TiNetwork",
-      "TiReportSearch",
-      "BoBxlHtml5",
-      "TiLockShare"
+      "LiMouse",
+      "BoBxRfid",
+      "TiTerminal2",
+      "BoBxsCustomize",
+      "BoBxlTailwindCss"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -67,10 +67,6 @@
   "Redes/Protocolos/HTTP": "TiHttpConnect",
   "Redes/Protocolos/HTTPS": "TiLock",
   "03 - Recursos/🛠️ Tools/Metasploit": "RaFireBomb",
-  "React": "BoBxlReact",
-  "CSS": "BoBxlCss3",
-  "JWT": "TiLockShare",
-  "HTML": "BoBxlHtml5",
   "🔴⚔️ Red Team/Pentesting": "RaCrossedAxes",
   "🔴⚔️ Red Team/Pentesting/Break Password": "TiPasswordUser",
   "🔴⚔️ Red Team/Hacking Wi-Fi": "LiWifi",
@@ -91,5 +87,18 @@
   },
   "02 - Areas/Ingenieria/BI": "TiReportSearch",
   "Redes": "TiNetwork",
-  "Tailwind CSS": "BoBxlTailwindCss"
+  "Omarchy.md": {
+    "iconName": "TiTerminal2",
+    "iconColor": "#ed06fe"
+  },
+  "02 - Areas/Desarrollo web/JWT": "TiLockShare",
+  "02 - Areas/Desarrollo web/HTML": "BoBxlHtml5",
+  "02 - Areas/Desarrollo web/CSS": "BoBxlCss3",
+  "02 - Areas/Desarrollo web/React": "BoBxlReact",
+  "02 - Areas/Desarrollo web/Tailwind CSS": "BoBxlTailwindCss",
+  "Reparación Razer Basilisk V3 Pro 35k.md": {
+    "iconName": "LiMouse",
+    "iconColor": "#00ff11"
+  },
+  "TFG": "BoBxRfid"
 }

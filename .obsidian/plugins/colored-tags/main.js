@@ -163,20 +163,23 @@ function applyColoredClasses(domElement) {
   const nodes = Array.from(
     domElement.getElementsByClassName("cm-hashtag")
   );
-  let currentHashEl = null;
+  let currentTagNodes = [];
   for (const el of nodes) {
     const text = el.innerText.trim();
     if (text === "#") {
-      currentHashEl = el;
+      currentTagNodes = [el];
       continue;
     }
-    if (!currentHashEl) {
+    if (!currentTagNodes.length) {
       continue;
     }
-    if (!normalizeTagText(text)) {
+    currentTagNodes.push(el);
+    const combinedText = currentTagNodes.map((node) => node.innerText).join("");
+    if (!normalizeTagText(combinedText)) {
+      currentTagNodes = [];
       continue;
     }
-    applyColoredTagClass([el, currentHashEl], text);
+    applyColoredTagClass(currentTagNodes, combinedText);
   }
 }
 var coloredClassApplierPlugin = import_view.ViewPlugin.fromClass(
@@ -191,7 +194,7 @@ var coloredClassApplierPlugin = import_view.ViewPlugin.fromClass(
 );
 
 // src/tag-appliers/BaseViewTagApplier.ts
-var BASE_TAG_SELECTOR = ".bases-table a.tag, .bases-table-container a.tag, .value-list-container a.tag";
+var BASE_TAG_SELECTOR = '.bases-table a.tag, .bases-table-container a.tag, .value-list-container a.tag, a.tag[href^="#"]';
 function getTagNameFromElement(el) {
   return normalizeTagText(el.textContent);
 }
@@ -5228,12 +5231,12 @@ ${css}
     const tagFlat = tagName.replace(/[^0-9a-z-]/gi, "");
     const tagLower = tagName.toLowerCase().replace(/\//g, "\\/");
     const selectors = [
-      `a.tag[href="${tagHref}"]`,
+      `a.tag[href="${tagHref}" i]`,
       `a.tag.colored-tag-${tagLower}`,
       `.cm-s-obsidian .cm-line span.cm-hashtag.colored-tag-${tagLower}`,
       `.metadata-property[data-property-key="tags" i] .multi-select-pill.colored-tag-${tagLower}`
     ];
-    if (tagFlat) {
+    if (tagFlat && !tagName.includes("/")) {
       const flatLower = tagFlat.toLowerCase();
       selectors.push(
         `.cm-s-obsidian .cm-line span.cm-tag-${flatLower}.cm-hashtag`,
