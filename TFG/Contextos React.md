@@ -5,15 +5,10 @@ Vamos a desglosarlo en un lenguaje sencillo y aplicado a tu proyecto.
 ## 1. 🎒 ¿Qué es el Context API? (El Concepto)
 
 Imagina que tu aplicación React es un edificio de apartamentos.
-
 - **`App.js`** es la entrada principal (Planta 0).
-    
 - Tienes un componente **`<GamePage>`** (Planta 3).
-    
 - Dentro, un componente **`<ScoreDisplay>`** (Apartamento 3B).
-    
 - Dentro, un **`<Button>`** (en el baño del 3B).
-    
 
 Ahora, imagina que tienes un dato que todos necesitan saber, como "la luz del edificio está encendida o apagada".
 
@@ -22,70 +17,44 @@ Ahora, imagina que tienes un dato que todos necesitan saber, como "la luz del ed
 Esto se llama **"prop drilling" (perforación de props)** y es un infierno de mantener.
 
 **La solución (Context API):** El Context API es como un **sistema de megafonía global** para el edificio.
-
 1. **Creas un "Contexto":** (`LightContext`).
-    
 2. **Envuelves tu app en un "Proveedor":** (`<LightContext.Provider>`). Este es el altavoz principal en la entrada (`App.js`) que emite el mensaje: "¡La luz está ENCENDIDA!".
-    
 3. **Consumes el Contexto:** Ahora, cualquier componente, sin importar lo profundo que esté (como el `<Button>` en el baño del 3B), puede "sintonizar" ese altavoz con un solo gancho (`useContext(LightContext)`) y obtener el mensaje ("ENCENDIDA") directamente, sin que sus padres (Planta 3, Apartamento 3B) tengan que pasárselo.
-    
 
 ---
 
 ## 2. 👨‍🏫 / 🧑‍🎓 Aplicación 1: Gestión de Usuario (Alumno vs. Profesor)
-
 Este es el caso de uso **perfecto** para Context.
-
 - **El Problema:** Casi todos los componentes de tu app necesitan saber dos cosas: "¿Hay un usuario logueado?" y "¿Es un profesor o un alumno?".
-    
 - **La Solución:** Creas un `AuthContext`.
-    
 - **Cómo funciona:**
-    
     1. Cuando la app se carga, el `<AuthContext.Provider>` envuelve todo. Su valor inicial es `{ user: null, role: null }`.
-        
     2. El usuario inicia sesión. Llamas a una función `login(userData)` que vive en tu Provider.
-        
     3. El Provider actualiza su estado a `{ user: { name: 'Profesor Alba' }, role: 'professor' }`.
-        
     4. **Automágicamente**, todos los componentes que "sintonizan" este contexto se vuelven a renderizar.
-        
 - **El Resultado:**
-    
     - **`<Navbar>`:** Llama a `useContext(AuthContext)` y ve `{ role: 'professor' }`. Muestra el botón "Crear Sesión".
-        
     - **`<Sidebar>`:** Llama a `useContext(AuthContext)` y ve `{ role: 'professor' }`. Muestra el enlace "/admin/dashboard".
-        
     - **`<GameCard>`:** Llama a `useContext(AuthContext)` y ve `{ role: 'student' }`. Muestra el botón "¡Jugar!".
-        
 
 No tienes que pasar `props` de "role" por toda tu aplicación.
 
 ---
 
 ## 3. 🎨 Aplicación 2: Temas Dinámicos (Contexto de Juego)
-
 Aquí es donde se pone elegante. Tu profesor te dio una pista genial. Confundes un poco los términos, pero la idea es correcta: usar el **React Context** para manejar el tema visual basado en tu **Game Context** (el modelo de Mongoose).
-
 - **El Problema:** Quieres que la partida de "Matemáticas" tenga un fondo azul y botones serios, pero que la de "Países y Banderas" tenga un fondo verde y botones divertidos.
-    
 - **La Solución:** Creas un `ThemeContext` o `GameThemeContext`.
-    
 - **Cómo funciona:**
-    
     1. El `<GameThemeContext.Provider>` envuelve tu página de juego (`<GamePage>`).
-        
     2. Cuando el jugador selecciona la sesión de "Matemáticas", tú (programáticamente) le pasas un objeto de tema al Provider:
-        
-        JSON
-        
-        ```
+```JSON
         {
           "primaryColor": "#3b82f6", // Azul
           "backgroundColor": "#efefef",
           "font": "Arial"
         }
-        ```
+```
         
     3. Cuando selecciona "Países":
         

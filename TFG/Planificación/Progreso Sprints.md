@@ -5,3 +5,10 @@ Terminada tareas referentes a la arquitectura básica del proyecto.
 ---
 
 # Comienzo Sprint 2
+Creada la lista de tareas para el Sprint 2, comenzamos con el mantenimiento de todos los problemas identificados en el Sprint 1.
+![[Inicio_Sprint_2.png]]
+![[Backlog_Inicio_Sprint_2.png]]
+
+---
+
+# Mitad Sprint 2 (final primera semana)

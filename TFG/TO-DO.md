@@ -1,0 +1,3 @@
+- [ ] Incluir seeder de los decks.
+- [ ]  Actualizar seeders para tener en cuenta en las sesiones de juego los decks y no cartas solas.
+- [ ] Alterar seeders de usuarios para tener en cuenta los nuevos parametros del modelo y a los super usuarios.

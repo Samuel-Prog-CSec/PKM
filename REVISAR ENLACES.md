@@ -4,3 +4,11 @@ https://www.youtube.com/watch?v=6p5Eb1sqgIY
 https://www.youtube.com/watch?v=5VxKPVeDH1I
 https://www.youtube.com/watch?v=Yzi1o-BH6QQ&list=WL&index=15
 https://www.youtube.com/watch?v=gafuqdKwD_U&t=1330s
+
+
+
+# Revisar Windows
+https://www.youtube.com/watch?v=AK2JE2YsKto
+https://www.youtube.com/watch?v=EQtXPbyJ_fI
+https://www.youtube.com/watch?v=G0_wVLhI-Ds
+https://www.youtube.com/watch?v=DPrcsee_Zwo

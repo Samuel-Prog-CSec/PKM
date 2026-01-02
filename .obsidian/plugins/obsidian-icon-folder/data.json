@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiMouse",
-      "BoBxRfid",
-      "TiTerminal2",
-      "BoBxsCustomize",
-      "BoBxlTailwindCss"
+      "TiLockCog",
+      "TiChecks",
+      "OcCache16",
+      "BoBxTask",
+      "TiBrandSupabase"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -87,10 +87,6 @@
   },
   "02 - Areas/Ingenieria/BI": "TiReportSearch",
   "Redes": "TiNetwork",
-  "Omarchy.md": {
-    "iconName": "TiTerminal2",
-    "iconColor": "#ed06fe"
-  },
   "02 - Areas/Desarrollo web/JWT": "TiLockShare",
   "02 - Areas/Desarrollo web/HTML": "BoBxlHtml5",
   "02 - Areas/Desarrollo web/CSS": "BoBxlCss3",
@@ -100,5 +96,17 @@
     "iconName": "LiMouse",
     "iconColor": "#00ff11"
   },
-  "TFG": "BoBxRfid"
+  "TFG": "BoBxRfid",
+  "TFG/Supabase": "TiBrandSupabase",
+  "TFG/Planificación": "BoBxTask",
+  "Arch Linux Custom.md": {
+    "iconName": "TiTerminal2",
+    "iconColor": "#ed06fe"
+  },
+  "TFG/Redis": "OcCache16",
+  "TFG/TO-DO.md": {
+    "iconName": "TiChecks",
+    "iconColor": "#00ff1e"
+  },
+  "TFG/Seguridad": "TiLockCog"
 }

@@ -176,7 +176,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Omarchy.md",
+        "pattern": "Arch Linux Custom.md",
         "patternType": "STRICT"
       },
       {
