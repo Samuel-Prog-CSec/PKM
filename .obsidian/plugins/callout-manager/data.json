@@ -56,6 +56,27 @@
             "color": "168, 130, 255"
           }
         }
+      ],
+      "attention": [
+        {
+          "changes": {
+            "icon": "lucide-biceps-flexed"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "227, 107, 167"
+          }
+        }
       ]
     }
   },

@@ -20,6 +20,7 @@
     "linux": 4,
     "pentesting": 5,
     "seguridad": 12,
+    "visualización": 17,
     "web": 11,
     "windows": 3,
     "análisis/datos": 1,
@@ -32,6 +33,7 @@
     "seguridad/autenticacion": 2,
     "seguridad/contraseñas": 3,
     "seguridad/prevencion-vulnerabilidad": 1,
+    "visualización/datos": 1,
     "web/back-end": 3,
     "web/front-end": 2,
     "web/red-team": 1

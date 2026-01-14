@@ -1,7 +1,7 @@
 ---
 tags:
 Fecha de actualización: 2025-11-28
-Nota previa: "[[Tema 2]]"
+Nota previa: "[[002 -]]"
 Nota siguiente:
 Area: "[[Inteligencia del negocio.base|Inteligencia del negocio]]"
 ---

@@ -2,24 +2,24 @@
 
 ## Índice
 
-1. [Visión General](#visión-general)
-2. [Arquitectura de Tokens](#arquitectura-de-tokens)
-3. [Flujos de Autenticación](#flujos-de-autenticación)
-	- [Login Inicial](#login-inicial)
-	- [Uso del Access Token](#uso-del-access-token)
-	- [Refresh Token (Rotación)](#refresh-token-rotación)
-	- [Logout](#logout)
-4. [Funciones del Sistema](#funciones-del-sistema)
-	- [Generación de Tokens](#generación-de-tokens)
-	- [Verificación de Access Token](#verificación-de-access-token)
-	- [Verificación de Refresh Token](#verificación-de-refresh-token)
-	- [Revocación de Tokens](#revocación-de-tokens)
-5. [Detección de Robo de Tokens](#detección-de-robo-de-tokens)
-6. [Security Flags](#security-flags)
-7. [Estructura en Redis](#estructura-en-redis)
-8. [Configuración](#configuración)
-9. [Mejores Prácticas](#mejores-prácticas)
-10. [Troubleshooting](#troubleshooting)
+1. [[#Visión General]]
+2. [[#Arquitectura de Tokens]]
+3. [[#Flujos de Autenticación]]
+	- [[#Login Inicial]]
+	- [[#Uso del Access Token]]
+	- [[#Refresh Token (Rotación)]]
+	- [[#Logout]]
+4. [[#Funciones del Sistema]]
+	- [[#Generación de Tokens]]
+	- [[#Verificación de Access Token]]
+	- [[#Verificación de Refresh Token]]
+	- [[#Revocación de Tokens]]
+5. [[#Detección de Robo de Tokens]]
+6. [[#Security Flags]]
+7. [[#Estructura en Redis]]
+8. [[#Configuración]]
+9. [[#Mejores Prácticas]]
+10. [[#Troubleshooting]]
 
 ---
 
@@ -142,7 +142,7 @@ Login (23 Dic)
      │                              │                              │
      │ POST /auth/login             │                              │
      │ {email, password}            │                              │
-     │─────────────────────────────▶│                              │
+     │─────────────────────────────>│                              │
      │                              │                              │
      │                              │ 1. Buscar usuario en MongoDB │
      │                              │    (email)                   │
@@ -157,14 +157,14 @@ Login (23 Dic)
      │                              │    - Refresh Token (7 días)  │
      │                              │                              │
      │                              │ 5. Almacenar refresh token   │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    HSET refresh:{jti}        │
      │                              │    {userId, familyId, ...}   │
      │                              │    EXPIRE 7 días             │
      │                              │                              │
      │ 200 OK                       │                              │
      │ {accessToken, refreshToken}  │                              │
-     │◀─────────────────────────────│                              │
+     │<─────────────────────────────│                              │
      │                              │                              │
 ```
 
@@ -213,21 +213,21 @@ const generateTokenPair = async (user, req) => {
      │                              │                              │
      │ GET /api/users               │                              │
      │ Authorization: Bearer {AT}   │                              │
-     │─────────────────────────────▶│                              │
+     │─────────────────────────────>│                              │
      │                              │                              │
      │                              │ 1. Verificar firma JWT       │
      │                              │    jwt.verify(token, secret) │
      │                              │                              │
      │                              │ 2. ¿Token en blacklist?      │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    EXISTS blacklist:{jti}    │
-     │                              │◀─────────────────────────────│
+     │                              │<─────────────────────────────│
      │                              │    → 0 (no existe = OK)      │
      │                              │                              │
      │                              │ 3. ¿Security flag activo?    │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    GET security:{userId}     │
-     │                              │◀─────────────────────────────│
+     │                              │<─────────────────────────────│
      │                              │    → null (no hay = OK)      │
      │                              │                              │
      │                              │ 4. Token válido ✓            │
@@ -235,7 +235,7 @@ const generateTokenPair = async (user, req) => {
      │                              │                              │
      │ 200 OK                       │                              │
      │ {data...}                    │                              │
-     │◀─────────────────────────────│                              │
+     │<─────────────────────────────│                              │
 ```
 
 **Código relevante (`auth.js`):**
@@ -291,14 +291,14 @@ const checkSecurityFlag = async (userId, tokenIssuedAt) => {
      │                              │                              │
      │ POST /auth/refresh           │                              │
      │ {refreshToken}               │                              │
-     │─────────────────────────────▶│                              │
+     │─────────────────────────────>│                              │
      │                              │                              │
      │                              │ 1. Verificar firma JWT       │
      │                              │                              │
      │                              │ 2. ¿Ya fue usado (rotado)?   │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    GET used:{jti}            │
-     │                              │◀─────────────────────────────│
+     │                              │<─────────────────────────────│
      │                              │                              │
      │                              │ Si fue usado:                │
      │                              │   → ¿Dentro de grace period? │
@@ -307,28 +307,28 @@ const checkSecurityFlag = async (userId, tokenIssuedAt) => {
      │                              │         Invalidar familia    │
      │                              │                              │
      │                              │ 3. Obtener info del token    │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    HGETALL refresh:{jti}     │
-     │                              │◀─────────────────────────────│
+     │                              │<─────────────────────────────│
      │                              │                              │
      │                              │ 4. Marcar como usado         │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    SETEX used:{jti} ttl {...}│
      │                              │                              │
      │                              │ 5. Eliminar token antiguo    │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    DEL refresh:{jti}         │
      │                              │                              │
      │                              │ 6. Generar nuevos tokens     │
      │                              │    (MISMO familyId)          │
      │                              │                              │
      │                              │ 7. Almacenar nuevo refresh   │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    HSET refresh:{newJti}     │
      │                              │                              │
      │ 200 OK                       │                              │
      │ {accessToken, refreshToken}  │ ← Ambos son NUEVOS           │
-     │◀─────────────────────────────│                              │
+     │<─────────────────────────────│                              │
 ```
 
 **Código relevante (`auth.js`):**
@@ -381,21 +381,21 @@ const verifyRefreshToken = async (token) => {
      │ POST /auth/logout            │                              │
      │ Authorization: Bearer {AT}   │                              │
      │ {refreshToken}               │                              │
-     │─────────────────────────────▶│                              │
+     │─────────────────────────────>│                              │
      │                              │                              │
      │                              │ 1. Revocar access token      │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    SETEX blacklist:{jti}     │
      │                              │    TTL = tiempo restante     │
      │                              │                              │
      │                              │ 2. Revocar refresh token     │
-     │                              │─────────────────────────────▶│
+     │                              │─────────────────────────────>│
      │                              │    DEL refresh:{jti}         │
      │                              │    SETEX blacklist:{jti}     │
      │                              │                              │
      │ 200 OK                       │                              │
      │ {message: "Logout exitoso"}  │                              │
-     │◀─────────────────────────────│                              │
+     │<─────────────────────────────│                              │
      │                              │                              │
      │ Cliente elimina tokens       │                              │
      │ de localStorage/memoria      │                              │
@@ -517,7 +517,7 @@ await revokeAllUserTokens(userId, 'password_change');
 El sistema detecta robo cuando un refresh token **ya rotado** se intenta usar **fuera del grace period**:
 ```
                     TIEMPO
-    ──────────────────────────────────────────────────────────────▶
+    ──────────────────────────────────────────────────────────────>
     
     │                    │                    │
     │   Token 1 usado    │   Grace period     │   Después del
@@ -539,19 +539,19 @@ El sistema detecta robo cuando un refresh token **ya rotado** se intenta usar **
 └──────┬───────┘         └──────┬───────┘         └──────┬───────┘
        │                        │                        │
        │ 1. Roba refresh token  │                        │
-       │◀───────────────────────│                        │
+       │<───────────────────────│                        │
        │                        │                        │
        │ 2. Usa token robado    │                        │
-       │────────────────────────│───────────────────────▶│
+       │────────────────────────│───────────────────────>│
        │                        │                        │ Token rotado
-       │◀───────────────────────│───────────────────────-│ Nuevos tokens
+       │<───────────────────────│───────────────────────-│ Nuevos tokens
        │ (Atacante tiene        │                        │
        │  nuevos tokens)        │                        │
        │                        │                        │
        │                        │ 3. Víctima usa su      │
        │                        │    refresh token       │
        │                        │    (ya fue rotado!)    │
-       │                        │───────────────────────▶│
+       │                        │───────────────────────>│
        │                        │                        │
        │                        │     ⚠️ ROBO DETECTADO  │
        │                        │     Fuera del grace    │
@@ -560,7 +560,7 @@ El sistema detecta robo cuando un refresh token **ya rotado** se intenta usar **
        │ 4. TODOS los tokens    │                        │
        │    de la familia       │                        │
        │    invalidados         │                        │
-       │◀───────────────────────│◀───────────────────────│
+       │<───────────────────────│<───────────────────────│
        │                        │                        │
        │ Atacante: 401          │ Víctima: 401           │
        │ "Sesión inválida"      │ "Sesión inválida"      │
@@ -643,7 +643,7 @@ const checkSecurityFlag = async (userId, tokenIssuedAt) => {
 │   Tokens antiguos      Security Flag       Tokens nuevos           │
 │   (max 1 hora vida)    creado aquí         (válidos)               │
 │                             │                                      │
-│   ──────────────────────────┼──────────────────────────────────▶   │
+│   ──────────────────────────┼──────────────────────────────────>   │
 │                             │                                      │
 │   Token A (emitido -30min)  │  Token B (emitido +5min)             │
 │   iat < flag → INVÁLIDO     │  iat > flag → VÁLIDO                 │

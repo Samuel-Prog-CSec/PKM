@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "TiLockCog",
-      "TiChecks",
-      "OcCache16",
-      "BoBxTask",
-      "TiBrandSupabase"
+      "BoBxRfid",
+      "TiScriptPlus",
+      "LiScriptEngine",
+      "OcProject16",
+      "TiLockCog"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -55,10 +55,6 @@
   "03 - Recursos/🛠️ Tools/Nmap": "TiEyeSearch",
   "02 - Areas/Ingenieria/Bases de datos": "LiDatabase",
   "02 - Areas/Ingenieria/Bases de datos/MongoDB.md": "BoBxlMongodb",
-  "Windows 11 Setup.md": {
-    "iconName": "BoBxlWindows",
-    "iconColor": "#009dff"
-  },
   "05 - PENDIENTES/VARIOS/Pintura-Revisar.md": "BoBxPaint",
   "03 - Recursos/🛠️ Tools/John The Ripper": "RaScythe",
   "03 - Recursos/🛠️ Tools/Tcpdump": "TiSpy",
@@ -108,5 +104,12 @@
     "iconName": "TiChecks",
     "iconColor": "#00ff1e"
   },
-  "TFG/Seguridad": "TiLockCog"
+  "TFG/Seguridad": "TiLockCog",
+  "02 - Areas/Ingenieria/GPSI": "OcProject16",
+  "TFG/Metodologías": "TiScriptPlus",
+  "Windows 11 Pro Optimized Setup.md": {
+    "iconName": "BoBxlWindows",
+    "iconColor": "#009dff"
+  },
+  "TFG/RFID": "BoBxRfid"
 }

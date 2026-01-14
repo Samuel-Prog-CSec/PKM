@@ -4,8 +4,6 @@ views:
     filters:
       and:
         - Area == link("Inteligencia del negocio.base")
-    sort:
-      - property: file.name
-        direction: DESC
+    sort: []
   - type: table
     name: Vista

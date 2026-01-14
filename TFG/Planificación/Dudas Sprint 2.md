@@ -3,3 +3,8 @@
 3. ¿Quién es el actor que modifica los datos de los alumnos (cambios de clase, de profesor, etc.)?
 4. ¿Un profesor debería tener los permisos para auto-asignarse a una clase? ¿Y para des-asignar a otro?
 	1. En caso negativo, ¿Quién ejecuta estas tareas?
+	2. Actualmente, el profesor al que pertenecen los alumnos es que tiene la responsabilidad de cambiar sus alumnos a otro profesor (para evitar explotación del sistema y que restringir permisos de operaciones, revisar esta implementación -> ¿demasiado restrictiva?).
+5. Actualmente, el servidor del backend registra los eventos *RFID* que llegan a través del puerto serie, esta era la implementación inicial del `rfidServide.js`. Sin embargo, esto es **MUY** limitante porque sólo va a registrar el puerto serie del servidor, cuando hagamos un despliegue del backend (en `Heroku` o similares) dejará de poder conectarse con el sensor ya que no tendremos acceso directo al servidor y sus puertos. Alternativas posibles:
+	1. Usar MQTT para la comunicación a través del front-end (el front registra y reconoce el dispositivo).
+	2. Seguir usando el puerto serie, pero, que sea el front-end quien reconozca el puerto serie del dispositivo activo y registre los mensajes que lleguen a través de él y se los mande a la API.
+	3. ¿Quizá el backend puede seguir funcionando con el service? ¿Cómo podría registrar el puerto serie de cada dispositivo que quiera jugar para intentar mantener la implementación actual?

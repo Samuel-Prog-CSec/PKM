@@ -12,3 +12,4 @@ Creada la lista de tareas para el Sprint 2, comenzamos con el mantenimiento de t
 ---
 
 # Mitad Sprint 2 (final primera semana)
+![[Backlog_Primera_Semana_Sprint_2.png]]

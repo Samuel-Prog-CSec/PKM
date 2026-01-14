@@ -1,12 +1,3 @@
-¡Excelente elección! **Supabase Storage** es la pareja perfecta para tu stack. Es gratuito, rápido (usa CDN) y su SDK para JavaScript es una maravilla.
-Para un TFG de Ingeniería, no queremos simplemente "tirar el archivo". Vamos a implementar un patrón robusto donde:
-1. **MongoDB** es la "Fuente de la Verdad" (metadatos, organización lógica, relación con el juego).
-2. **Supabase** es el "Almacén Tonto" (solo guarda los bytes y nos da una URL).
-
-Aquí tienes la arquitectura y la implementación paso a paso.
-
----
-
 # 🏗️ Arquitectura del Flujo de Subida
 El Frontend nunca hablará directamente con Supabase (por seguridad y control). Todo pasará por tu API.
 1. **Frontend:** Envía un `FormData` (archivo + datos) al Backend (`POST /api/assets`).
