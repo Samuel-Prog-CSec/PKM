@@ -17,6 +17,8 @@ https://www.youtube.com/watch?v=xrUKHbf7LLw
 
 # Customización de Brave Browser
 https://www.youtube.com/watch?v=xrUKHbf7LLw
+https://www.youtube.com/watch?v=tSfDZiK3eHk
+https://youtu.be/W6cKFliWW6Q
 
 ---
 
@@ -27,17 +29,11 @@ Controlar la configuración 3D -> Configuración global -> Sincronización verti
 
 ---
 
-# Customizar Brave Browser
-https://www.youtube.com/watch?v=tSfDZiK3eHk
-https://youtu.be/W6cKFliWW6Q
-
----
-
 # Optimizar BIOS
 - Find CPU settings and enable **Intel VT-x/EPT** (or AMD-V/RVI) and **VT-d**, if available.
 
 ---
 
-# Teclado / Ratón
+# Optimizar Teclado / Ratón
 - **Reducir input lag del teclado**: ajustes de teclado (`Teclado`) -> Retraso de la repetición y Velocidad de la repetición -> **al máximo** (*Corto* y *Rápida*).
 - **Reducir input lag ratón**: ajustes de ratón (`Ratón`) -> Opciones de puntero -> Establecer velocidad de puntero en el **tick número 6**/11 && **Desactivar precisión de puntero**.

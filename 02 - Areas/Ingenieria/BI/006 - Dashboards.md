@@ -37,41 +37,41 @@ El objetivo de toda visualización es <mark style="background: #ADCCFFA6;">encon
 
 # 2. Diseños Visuales
 ## 2.1. Consideraciones de diseño
-- Si la **audiencia es técnica/analítica** $\rightarrow$ *Diseño simple y claro* (`Data Storytelling/Showcasing`). Las visualizaciones para el análisis de datos a audiencia con perfiles técnicos están destinadas a comunicar de forma clara y directa.
-- Si la **audiencia es general/persuasión** $\rightarrow$ *Diseño emocional* (`Data Art`). Crear diseños que provoquen una respuesta emocional al público objetivo
+- Si la **audiencia es técnica/analítica** $\rightarrow$ *Diseño simple y claro* (`Data Storytelling/Showcasing`). Las visualizaciones para el análisis de datos a audiencia con perfiles técnicos están <mark style="background: #ADCCFFA6;">destinadas a comunicar de forma clara y directa</mark>.
+- Si la **audiencia es general/persuasión** $\rightarrow$ *Diseño emocional* (`Data Art`). <mark style="background: #ADCCFFA6;">Crear diseños que provoquen una respuesta emocional</mark> al público objetivo
 
 ### 2.1.1. Cómo añadir contexto (4 formas)
-Añadir contexto a los elementos gráficos ayuda a la audiencia a comprender el valor y el significado de la información que se está visualizando. Si se ha optado por elegir un paradigma de diseño data art, no es adecuado agregar contexto ya que se perdería el objetivo que se pretende conseguir.
-1. **Mediante datos:** Añadir métricas relevantes de apoyo (ej. tasa de abandono).
-2. **Mediante anotaciones:** Encabezados y descripciones breves.
-3. **Mediante elementos gráficos:** Líneas de tendencia, puntos de referencia, iconos.
-4. **Mediante títulos y subtítulos:** La forma más sencilla de orientar al lector.
+Añadir contexto a los elementos gráficos <mark style="background: #ADCCFFA6;">ayuda a la audiencia a comprender el valor y el significado de la información que se está visualizando</mark>. Si se ha optado por elegir un paradigma de diseño <mark style="background: #FFB8EBA6;">data art, no es adecuado agregar contexto ya que se perdería el objetivo que se pretende conseguir</mark>.
+1. **Mediante datos:** Añadir <mark style="background: #FFB86CA6;">métricas relevantes de apoyo</mark> (ej. tasa de abandono).
+2. **Mediante anotaciones:** <mark style="background: #FFB86CA6;">Encabezados y descripciones</mark> breves.
+3. **Mediante elementos gráficos:** Líneas de tendencia, puntos de referencia, <mark style="background: #FFB86CA6;">iconos</mark>.
+4. **Mediante títulos y subtítulos:** La forma más sencilla de <mark style="background: #FFB86CA6;">orientar al lector</mark>.
 
 ## 2.2. Selección del gráfico adecuado
-Probablemente habrá que representar muchas facetas diferentes de la información, por lo que ser· necesario usar diferentes tipos de gráficos dentro de la misma visualización. Se clasifican en cuatro grupos según su complejidad y objetivo:
+Probablemente habrá que representar muchas facetas diferentes de la información, por lo que <mark style="background: #FFB86CA6;">será necesario usar diferentes tipos de gráficos dentro de la misma visualización</mark>. Se clasifican en cuatro grupos según su complejidad y objetivo:
 
 ### A) Gráficos Estándar (Audiencia no puramente analítica)
-- **Área:** Comparar valores y ver volumen acumulado.
-- **Barras:** Comparar valores de una misma categoría.
-- **Líneas:** Cambios en el tiempo o relaciones entre parámetros. Muy versátiles.
-- **Circular (Pie chart):** Comparar partes de un todo. **Advertencia:** Evitar si la audiencia es experta/analítica (demasiada simplicidad).
+- **Área:** <mark style="background: #FFB8EBA6;">Comparar valores y ver volumen acumulado</mark>.
+- **Barras:** Comparar valores <mark style="background: #FFB8EBA6;">de una misma categoría</mark>.
+- **Líneas:** <mark style="background: #FFB8EBA6;">Cambios en el tiempo o relaciones</mark> entre parámetros. Muy versátiles.
+- **Circular (Pie chart):** <mark style="background: #FFB8EBA6;">Comparar partes de un todo</mark>. **Advertencia:** <mark style="background: #FF5582A6;">Evitar si la audiencia es experta/analítica</mark> (*demasiada simplicidad*).
 
 ### B) Gráficos Comparativos (Audiencia con cierta capacidad analítica)
-Muestran el valor relativo de múltiples parámetros en una categoría, o la relación entre parámetros dentro de múltiples categorías compartidas. La principal diferencia con los gráficos estándar es que los comparativos ofrecen una forma de comparar simultáneamente más de un parámetro y categoría, a diferencia de los estándares en los que solo se puede apreciar la diferencia entre un parámetro de cualquier categoría.
-- **Burbujas (Bubble):** Variante de dispersión donde el tamaño del círculo es una tercera dimensión. Útil para ver "huecos" o _outliers_.
-- **Mapas de árbol (Tree maps):** Rectángulos anidados. El tamaño del área indica el valor relativo respecto al total.
-- **Círculos rellenos (Packed circle):** Similar al Tree map pero con círculos agrupados.
-- **Columnas apiladas:** Comparar múltiples atributos en una misma categoría. _Consejo:_ No incluir demasiados atributos para no saturar.
+Muestran el valor relativo de múltiples parámetros en una categoría, o la relación entre parámetros dentro de múltiples categorías compartidas. La principal diferencia con los *gráficos estándar* es que los *comparativos* <mark style="background: #ADCCFFA6;">ofrecen una forma de comparar simultáneamente más de un parámetro y categoría</mark>, a diferencia de los *estándares* en los que <mark style="background: #FFB86CA6;">solo se puede apreciar la diferencia entre un parámetro de cualquier categoría</mark>.
+- **Burbujas (Bubble):** Variante de dispersión donde el <mark style="background: #FFB8EBA6;">tamaño del círculo es una tercera dimensión</mark>. <mark style="background: #8000E1A6;">Útil para ver "huecos"</mark> o _outliers_.
+- **Mapas de árbol (Tree maps):** <mark style="background: #FFB8EBA6;">Rectángulos anidados</mark>. El tamaño del área indica el valor relativo respecto al total.
+- **Círculos rellenos (Packed circle):** Similar al Tree map pero <mark style="background: #8000E1A6;">con círculos agrupados</mark>.
+- **Columnas apiladas:** <mark style="background: #FFB8EBA6;">Comparar múltiples atributos en una misma categoría</mark>. _Consejo:_ <mark style="background: #8000E1A6;">No incluir demasiados atributos</mark> para no saturar.
 
 ### C) Gráficos Estadísticos (Audiencia experta)
-- **Histograma:** Distribución de frecuencia de una variable (barras).
-- **Dispersión (Scatter plot):** Relación (x,y) para ver patrones, tendencias y valores atípicos.
-- **Matriz de dispersión:** Serie de diagramas para ver correlaciones entre múltiples variables.
+- **Histograma:** Distribución de <mark style="background: #FFB8EBA6;">frecuencia de una variable</mark> (*barras*).
+- **Dispersión (Scatter plot):** Relación (*x, y*) <mark style="background: #FFB8EBA6;">para ver patrones, tendencias y valores atípicos</mark>.
+- **Matriz de dispersión:** Serie de diagramas <mark style="background: #FFB8EBA6;">para ver correlaciones entre múltiples variables</mark>.
 
 ### D) Mapas (Datos espaciales)
-- **Choropleth:** Áreas coloreadas/sombreadas según una variable (ej. Renta por estado).
-- **Mapas de puntos:** Puntos en ubicaciones específicas. Pueden variar en tamaño/color.
-- **Raster surface:** Datos sobre imágenes reales (satélite, fotografías).
+- **Choropleth:** <mark style="background: #FFB8EBA6;">Áreas coloreadas/sombreadas</mark> según una variable (ej. Renta por estado).
+- **Mapas de puntos:** <mark style="background: #FFB8EBA6;">Puntos en ubicaciones específicas</mark>. Pueden variar en <mark style="background: #8000E1A6;">tamaño/color.</mark>
+- **Raster surface:** Datos sobre <mark style="background: #FFB8EBA6;">imágenes reales</mark> (satélite, fotografías).
 
 ## 2.3. Buenas prácticas de diseño
 - **Consistencia > Elegancia:** Usar plantillas estándar (mismos fondos, ubicación de títulos) para que el usuario se centre en el análisis, no en aprender a usar el dashboard.
@@ -90,21 +90,21 @@ Muestran el valor relativo de múltiples parámetros en una categoría, o la rel
 - **Evitar barras de desplazamiento (scroll):** Si hay muchos datos, mejor paginar o usar otra pantalla.
 
 ## 2.4. Errores de diseño comunes
-1. **Orden incorrecto:** Mostrar dimensiones no relacionadas jerárquicamente en un orden que insinúa una relación o tendencia falsa (ej. mezclar tiendas y semanas aleatoriamente en el eje X).
-2. **Distorsión de área:** Usar iconos que al aumentar de altura también aumentan de anchura, cuadruplicando el área visual cuando el dato solo se ha duplicado (ej. el gráfico de las manzanas).
+1. **Orden incorrecto:** Mostrar <mark style="background: #ADCCFFA6;">dimensiones no relacionadas jerárquicamente en un orden que insinúa una relación</mark> o tendencia falsa (ej. mezclar tiendas y semanas aleatoriamente en el eje X).
+2. **Distorsión de área:** <mark style="background: #ADCCFFA6;">Usar iconos que al aumentar de altura también aumentan de anchura</mark>, cuadruplicando el área visual cuando <mark style="background: #FFB8EBA6;">el dato solo se ha duplicado</mark> (ej. el gráfico de las manzanas).
 
 ---
 
 # 3. Tipos de Gráficos según el Análisis (Guía de uso)
 
-| **Tipo de Análisis** | **Objetivo**                            | **Gráficos Recomendados**                                                                                                                                  | **Consejos**                                                                      |
-| -------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| **Comparativo**      | Clasificar y comparar magnitudes.       | **Barras** (Simples o Apiladas).<br><br>Barras **Horizontales**: Para cualquier nº de elementos.<br><br>Barras **Verticales**: Solo si hay < 12 elementos. | Usar un único color si es simple.                                                 |
-| **Tendencias**       | Ver evolución temporal.                 | **Líneas** y **Áreas**.                                                                                                                                    | Tiempo en el eje X. Usar distintos tipos de líneas/colores para segmentos.        |
-| **Contribución**     | Ver la parte respecto al todo (%).      | **Tree Map** (muchos valores).<br><br>**Circular** (pocos valores).                                                                                        | Circular solo si hay < 10 elementos. Tree map usa degradados para enfatizar peso. |
-| **Correlación**      | Identificar relaciones entre variables. | **Dispersión** (Scatter).                                                                                                                                  | Combinar con líneas/barras. Validar que la correlación implica causalidad.        |
-| **Geográfico**       | Datos por ubicación.                    | **Mapas**.                                                                                                                                                 | Emparejar con gráficos adicionales (líneas/tablas) para dar detalle.              |
-| **Distribución**     | Ver el rango, promedio y dispersión.    | **Box Plots** (Caja) e **Histogramas**.                                                                                                                    | Box Plot muestra cuartiles (Q1, Q2, Q3) y outliners.                              |
+| **Tipo de Análisis** | **Objetivo**                              | **Gráficos Recomendados**                                                                                                                                  | **Consejos**                                                                      |
+| -------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Comparativo**      | *Clasificar y comparar magnitudes*.       | **Barras** (Simples o Apiladas).<br><br>Barras **Horizontales**: Para cualquier nº de elementos.<br><br>Barras **Verticales**: Solo si hay < 12 elementos. | Usar un único color si es simple.                                                 |
+| **Tendencias**       | Ver *evolución temporal*.                 | **Líneas** y **Áreas**.                                                                                                                                    | Tiempo en el eje X. Usar distintos tipos de líneas/colores para segmentos.        |
+| **Contribución**     | *Ver la parte respecto al todo* (`%`).    | **Tree Map** (muchos valores).<br><br>**Circular** (pocos valores).                                                                                        | Circular solo si hay < 10 elementos. Tree map usa degradados para enfatizar peso. |
+| **Correlación**      | Identificar *relaciones entre variables*. | **Dispersión** (Scatter).                                                                                                                                  | Combinar con líneas/barras. Validar que la correlación implica causalidad.        |
+| **Geográfico**       | *Datos por ubicación*.                    | **Mapas**.                                                                                                                                                 | Emparejar con gráficos adicionales (líneas/tablas) para dar detalle.              |
+| **Distribución**     | *Ver el rango, promedio y dispersión*.    | **Box Plots** (Caja) e **Histogramas**.                                                                                                                    | Box Plot muestra cuartiles (Q1, Q2, Q3) y outliners.                              |
 
 ---
 

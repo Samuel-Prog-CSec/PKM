@@ -5,30 +5,30 @@ tags:
   - Ingenieria
 Fecha de actualización: 2025-12-04
 Nota previa:
-Nota siguiente:
+Nota siguiente: "[[006 - Dashboards]]"
 Area: "[[Inteligencia del negocio.base|Inteligencia del negocio]]"
 ---
 ---
 
 # 1. Conceptos Básicos
-El análisis de datos es la ciencia de examinar conjuntos de datos para obtener conclusiones, identificar tendencias y mejorar la toma de decisiones.
+El **análisis de datos** es la <mark style="background: #ADCCFFA6;">ciencia de examinar conjuntos de datos para obtener conclusiones, identificar tendencias y mejorar la toma de decisiones</mark>.
 
 ## Tipos de Análisis (Según naturaleza)
-* **Cuantitativo:** Información numérica, estadística exacta (ej: calificaciones).
-* **Cualitativo:** Información textual o de opinión (ej: focus groups).
+* **Cuantitativo:** <mark style="background: #FFB86CA6;">Información numérica, estadística</mark> exacta (ej: calificaciones).
+* **Cualitativo:** <mark style="background: #FFB86CA6;">Información textual o de opinión</mark> (ej: focus groups).
 
 ## Niveles de Análisis (Según objetivo)
-Ordenados de menor a mayor valor/complejidad:
-1. **Descriptivo:** *¿Qué ha pasado?* Se basa en datos históricos y KPIs. Es el más común (Dashboards, Informes).
-2. **Diagnóstico:** *¿Por qué ha pasado?* Busca las causas de anomalías o tendencias detectadas en el descriptivo (Drill-down).
-3. **Predictivo:** *¿Qué pasará?* Usa modelos matemáticos y estadísticos para proyectar tendencias futuras (Forecasting).
-4. **Prescriptivo:** *¿Qué debemos hacer?* Sugiere acciones para lograr un objetivo basándose en las predicciones.
-5. **Cognitivo:** *Simulación humana.* Usa Deep Learning e IA para entender razonamientos y emociones (texto, imágenes).
+Ordenados <mark style="background: #FFB8EBA6;">de menor a mayor valor/complejidad</mark>:
+1. **Descriptivo:** *¿Qué ha pasado?* Se basa en <mark style="background: #ADCCFFA6;">datos históricos y KPIs</mark>. Es el más común (Dashboards, Informes).
+2. **Diagnóstico:** *¿Por qué ha pasado?* <mark style="background: #ADCCFFA6;">Busca las causas de anomalías o tendencias</mark> detectadas en el descriptivo (*Drill-down*).
+3. **Predictivo:** *¿Qué pasará?* Usa <mark style="background: #ADCCFFA6;">modelos matemáticos y estadísticos</mark> para <mark style="background: #FFB86CA6;">proyectar tendencias futuras</mark> (*Forecasting*).
+4. **Prescriptivo:** *¿Qué debemos hacer?* <mark style="background: #ADCCFFA6;">Sugiere acciones para lograr un objetivo</mark> <mark style="background: #8000E1A6;">basándose en las predicciones</mark>.
+5. **Cognitivo:** *Simulación humana.* Usa <mark style="background: #ADCCFFA6;">Deep Learning e IA</mark> para <mark style="background: #FFB8EBA6;">entender razonamientos y emociones</mark> (texto, imágenes).
 
 ---
 
 # 2. Proceso de Análisis
-El ciclo de vida de un proyecto de análisis no empieza con tecnología, sino con preguntas de negocio:
+El <mark style="background: #FF5582A6;">ciclo de vida de un proyecto de análisis no empieza con tecnología</mark>, sino <mark style="background: #ADCCFFA6;">con preguntas de negocio</mark>:
 ```mermaid
 graph LR
     A[Recopilación Requisitos] --> B[Ingesta y Procesamiento]
@@ -38,17 +38,17 @@ graph LR
     E --> A
 ```
 
-1. **Requisitos:** Definir las preguntas clave y los KPIs.
-2. **Ingesta (ETL):** Identificar fuentes y alimentar el DW.
-3. **Exploración:** Entender la calidad y naturaleza de los datos (limpieza).
-4. **Análisis/Implementación:** Crear los modelos y visualizaciones (PowerBI).
-5. **Feedback:** Validar si responde a las necesidades del negocio.
+1. **Requisitos:** Definir las <mark style="background: #ADCCFFA6;">preguntas clave y los KPIs</mark>.
+2. **Ingesta (ETL):** Identificar <mark style="background: #ADCCFFA6;">fuentes y alimentar el *DW*</mark>.
+3. **Exploración:** <mark style="background: #ADCCFFA6;">Entender la calidad y naturaleza</mark> de los datos (<mark style="background: #FFB86CA6;">limpieza</mark>).
+4. **Análisis/Implementación:** <mark style="background: #ADCCFFA6;">Crear los modelos y visualizaciones</mark> (*PowerBI*).
+5. **Feedback:** <mark style="background: #ADCCFFA6;">Validar si responde a las necesidades</mark> del negocio.
 
 ---
 
 # 3. Análisis con OLAP
 ## Arquitectura del Cubo
-- **Cubo OLAP (Hipercubo):** Estructura rígida multidimensional. Una vez creado, es difícil cambiar sus dimensiones.
+- **Cubo OLAP (Hipercubo):** <mark style="background: #ADCCFFA6;">Estructura rígida multidimensional</mark>. <mark style="background: #FFB8EBA6;">Una vez creado, es difícil cambiar sus dimensiones</mark>.
 ```mermaid
 graph TD
     subgraph Cubo ["Cubo OLAP (Ventas)"]
@@ -65,187 +65,57 @@ graph TD
 ```
 ## Tipos de Implementación (ROLAP vs MOLAP)
 
-| **Característica** | **MOLAP (Multidimensional)**                                 | **ROLAP (Relational)**                                         | **HOLAP (Hybrid)**                 |
-| ------------------ | ------------------------------------------------------------ | -------------------------------------------------------------- | ---------------------------------- |
-| **Almacenamiento** | Estructuras propietarias (Arrays/Matrices).                  | Tablas relacionales (Estrella/Copo de Nieve).                  | Mixto.                             |
-| **Ventajas**       | **Rapidez extrema** (pre-cálculo). Indexación natural.       | Escalabilidad (grandes volúmenes). Usa SGBD existente.         | Balance entre velocidad y volumen. |
-| **Desventajas**    | Larga carga de datos. Espacio en disco. Menor escalabilidad. | **Lento** (calcula al vuelo). Rendimiento cae con complejidad. | Complejidad de gestión.            |
-| **Uso**            | Dashboards rápidos.                                          | Navegación y detalle histórico.                                | Lo mejor de ambos.                 |
+| **Característica** | **MOLAP (Multidimensional)**                                 | **ROLAP (Relational)**                                         | **HOLAP (Hybrid)**                   |
+| ------------------ | ------------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------ |
+| **Almacenamiento** | *Estructuras propietarias* (`Arrays`/`Matrices`).            | *Tablas relacionales* (Estrella/Copo de Nieve).                | *Mixto*.                             |
+| **Ventajas**       | **Rapidez extrema** (pre-cálculo). *Indexación natural*.     | Escalabilidad (grandes volúmenes). *Usa SGBD existente*.       | *Balance* entre velocidad y volumen. |
+| **Desventajas**    | Larga carga de datos. Espacio en disco. Menor escalabilidad. | **Lento** (calcula al vuelo). Rendimiento cae con complejidad. | **Complejidad** de gestión.          |
+| **Uso**            | Dashboards rápidos.                                          | Navegación y detalle histórico.                                | Lo mejor de ambos.                   |
 
 ## Operaciones OLAP (Navegación)
-Las operaciones OLAP transforman la vista de los datos multidimensionales. Para identificar qué operación se ha realizado entre una "Tabla A" y una "Tabla B", fíjate en **qué cambia (filas o columnas)**.
+Las **operaciones OLAP** <mark style="background: #ADCCFFA6;">transforman la vista de los datos multidimensionales</mark>. <mark style="background: #FFB8EBA6;">Para identificar qué operación se ha realizado entre una "Tabla A" y una "Tabla B", fíjate en **qué cambia (filas o columnas)**.</mark>
 
 ### A. Navegación por Jerarquía (Cambia el Nivel de Detalle)
-Se mueve verticalmente por la jerarquía de una dimensión (ej: Tiempo: Año > Trimestre > Mes).
+Se <mark style="background: #ADCCFFA6;">mueve verticalmente por la jerarquía de una dimensión</mark> (ej: Tiempo: Año > Trimestre > Mes).
 1. **Drill-down (Desglosar):**
-    - **Qué hace:** Baja un nivel en la jerarquía (de general a específico).
-    - **Efecto visual:** Aumenta el número de filas. Se ve "más detalle".
+    - **Qué hace:** <mark style="background: #FFB86CA6;">Baja un nivel en la jerarquía</mark> (de general a específico).
+    - **Efecto visual:** <mark style="background: #FFB8EBA6;">Aumenta el número de filas</mark>. Se ve "<mark style="background: #8000E1A6;">más detalle</mark>".
     - _Ejemplo:_ Pasar de ver ventas por `Año` a verlas por `Trimestres`.
-```mermaid 
-graph LR
-    subgraph Vista_Inicial ["Vista Inicial"]
-        V1[Ventas por País]
-    end
-    
-    subgraph Vista_Final ["Vista Tras Drill-Down"]
-        V2[Ventas por Ciudad]
-    end
-    
-    V1 -->|Drill-down: Desglosar| V2
-    
-    style V1 fill:#f9f,stroke:#333,stroke-width:2px
-    style V2 fill:#bbf,stroke:#333,stroke-width:2px
-```
+![[Drill_down.png]]
 2. **Drill-up (Agrupar/Enrollar):**
-    - **Qué hace:** Sube un nivel en la jerarquía (de específico a general).
-    - **Efecto visual:** Disminuye el número de filas. Los datos se agregan (suman).
+    - **Qué hace:** <mark style="background: #FFB86CA6;">Sube un nivel en la jerarquía</mark> (de específico a general).
+    - **Efecto visual:** <mark style="background: #FFB8EBA6;">Disminuye el número de filas</mark>. Los <mark style="background: #8000E1A6;">datos se agregan (suman)</mark>.
     - _Ejemplo:_ Pasar de ver ventas por `Mes` a ver el total del `Año`.
-```mermaid
-graph LR
-    subgraph Inicial ["Vista Inicial (Mes)"]
-        V1[Ventas por Mes]
-    end
-    
-    subgraph Final ["Vista Final (Año)"]
-        V2[Ventas por Año Sumadas]
-    end
-    
-    V1 -->|Drill-up: Agrupar| V2
-    
-    style V1 fill:#bbf,stroke:#333,stroke-width:2px
-    style V2 fill:#f9f,stroke:#333,stroke-width:2px
-```
+![[Drill_up.png]]
+
 ### B. Manipulación de Atributos (Cambia la Estructura de Consulta)
-No se mueve por la jerarquía, sino que añade o quita columnas de dimensiones (atributos) para cambiar el contexto.
+No se mueve por la jerarquía, sino que <mark style="background: #ADCCFFA6;">añade o quita columnas de dimensiones (*atributos*) para cambiar el contexto</mark>.
 1. **Drill-across (Añadir dimensión):**
-    - **Qué hace:** Añade un nuevo atributo/columna a la consulta para dar más contexto.
-    - **Efecto visual:** Aparece una **columna nueva** que antes no estaba.
+    - **Qué hace:** <mark style="background: #FFB86CA6;">Añade un nuevo atributo/columna a la consulta</mark> para dar <mark style="background: #8000E1A6;">más contexto</mark>.
+    - **Efecto visual:** Aparece una **columna nueva** que <mark style="background: #FFB8EBA6;">antes no estaba</mark>.
     - _Ejemplo:_ Tienes `Producto` y `Ventas`. Añades la columna `Tienda`. Ahora ves qué producto se vendió en qué tienda.
-```mermaid
-graph LR
-    subgraph Tabla_A ["Tabla A (Sólo Tienda)"]
-        A1[Medida: Ventas]
-    end
-    
-    subgraph Tabla_B ["Tabla B (Tienda + Vendedor)"]
-        B1[Medida: Ventas]
-    end
-    
-    A1 & B1
-    
-    subgraph Columnas
-        C1[Dim: Tienda]
-        C2[Dim: Vendedor]
-    end
-    
-    C1 --> A1
-    C1 & C2 --> B1
-    
-    A1 -->|Drill-across: Añadir columna| B1
-    
-    style C1 fill:#ffd,stroke:#333,stroke-width:2px
-    style C2 fill:#aaf,stroke:#333,stroke-width:2px
-```
-1. **Roll-across (Quitar dimensión):**
-    - **Qué hace:** Elimina un atributo/columna de la consulta.
-    - **Efecto visual:** Desaparece una columna y las filas se agrupan (menos detalle horizontal).
+![[Drill_across.png]]
+2. **Roll-across (Quitar dimensión):**
+    - **Qué hace:** <mark style="background: #FFB86CA6;">Elimina un atributo/columna de la consulta</mark>.
+    - **Efecto visual:** <mark style="background: #FFB8EBA6;">Desaparece una columna y las filas se agrupan</mark> (<mark style="background: #8000E1A6;">menos detalle horizontal</mark>).
     - _Ejemplo:_ Quitas la columna `Tienda` para ver solo `Producto` y `Ventas` totales.
-```mermaid
-graph LR
-    subgraph Tabla_A ["Tabla A (Tienda + Vendedor)"]
-        A1[Medida: Ventas]
-    end
-    
-    subgraph Tabla_B ["Tabla B (Sólo Tienda)"]
-        B1[Medida: Ventas]
-    end
-    
-    A1 & B1
-    
-    subgraph Columnas
-        C1[Dim: Tienda]
-        C2[Dim: Vendedor]
-    end
-    
-    C1 & C2 --> A1
-    C1 --> B1
-    
-    A1 -->|Roll-across: Quitar columna| B1
-    
-    style C1 fill:#ffd,stroke:#333,stroke-width:2px
-    style C2 fill:#aaf,stroke:#333,stroke-width:2px
-```
+![[Roll_across.png]]
 
 ### C. Orientación y Filtrado
-5. **Pivot (Rotar):**
-    - **Qué hace:** Rota los ejes de visualización. Lo que eran filas pasan a ser columnas y viceversa.
-    - **Efecto visual:** Los datos son los mismos, pero la tabla se "gira".
-```mermaid
-graph LR
-    subgraph Tabla_A ["Tabla A (Original)"]
-        A1[Filas: Mes]
-        A2[Columnas: Producto]
-    end
-    
-    subgraph Tabla_B ["Tabla B (Pivotada)"]
-        B1[Filas: Producto]
-        B2[Columnas: Mes]
-    end
-    
-    A1 & A2 -->|Pivot: Rotar Ejes| B1 & B2
-    
-    style A1 fill:#ffd,stroke:#333,stroke-width:2px
-    style B1 fill:#ffd,stroke:#333,stroke-width:2px
-    style A2 fill:#f9f,stroke:#333,stroke-width:2px
-    style B2 fill:#f9f,stroke:#333,stroke-width:2px
-```
-1. **Page (Paginar):**
-    - **Qué hace:** Divide el cubo en secciones basadas en un valor de un atributo, como si fueran páginas de un libro.
+1. **Pivot (Rotar):**
+    - **Qué hace:** <mark style="background: #ADCCFFA6;">Rota los ejes de visualización</mark>. <mark style="background: #FFB8EBA6;">Lo que eran filas pasan a ser columnas y viceversa</mark>.
+    - **Efecto visual:** <mark style="background: #FFB86CA6;">Los datos son los mismos</mark>, pero la tabla se "gira".
+![[Pivot.png]]
+2. **Page (Paginar):**
+    - **Qué hace:** <mark style="background: #ADCCFFA6;">Divide el cubo en secciones basadas en un valor de un atributo</mark>, como si fueran <mark style="background: #8000E1A6;">páginas de un libro</mark>.
     - _Ejemplo:_ Ver una tabla solo para `Producto A`, pasar página y ver la misma tabla para `Producto B`.
-2. **Slice & Dice (Cortar y Trocear):**
-    - **Slice:** Seleccionar un **único valor** de una dimensión (ej: "Solo año 2023"). Es un corte plano.
-    - **Dice:** Seleccionar un **sub-cubo** específico filtrando por dos o más dimensiones (ej: "Año 2023" Y "Tienda Norte").
-```mermaid
-graph TD
-    subgraph Cubo_Total ["Cubo Completo (Todos los datos)"]
-        C(Datos: Tiempo, Producto, Tienda)
-    end
-    
-    subgraph Slice ["Slice (Corte)"]
-        S[Datos filtrados: Sólo Tiempo = '2024']
-    end
-    
-    subgraph Dice ["Dice (Troceado - Subcubo)"]
-        D[Datos filtrados: Tiempo='2024' Y Tienda='Norte']
-    end
-    
-    C -->|Slice: Filtro en 1 Dim| S
-    C -->|Dice: Filtro en N Dims| D
-    
-    style C fill:#fff,stroke:#333,stroke-width:3px
-    style S fill:#ff9,stroke:#333,stroke-width:2px
-    style D fill:#faa,stroke:#333,stroke-width:2px
-```
-1. **Drill-through (Detalle):**
-    - **Qué hace:** Va al fondo de los datos, mostrando las filas individuales de la base de datos transaccional que componen un dato agregado.
-```mermaid
-graph LR
-    subgraph Nivel_Agregado ["Cubo OLAP (Medida Agregada)"]
-        A[Ventas Totales: 15.000€]
-    end
-    
-    subgraph Nivel_Detalle ["Base de Datos Transaccional (OLTP)"]
-        D1[Fila 1: Pedido 101, 50€]
-        D2[Fila 2: Pedido 102, 100€]
-        D3[Fila N...]
-    end
-    
-    A -->|Drill-through: Mostrar origen| D1 & D2 & D3
-    
-    style A fill:#bbf,stroke:#333,stroke-width:2px
-    style D1 fill:#f9f,stroke:#333,stroke-width:1px
-    style D2 fill:#f9f,stroke:#333,stroke-width:1px
-```
+![[Page.png]]
+3. **Slice & Dice (Cortar y Trocear):**
+    - **Slice:** <mark style="background: #ADCCFFA6;">Seleccionar un **único valor** de una dimensión</mark> (ej: "Solo año 2023"). Es un <mark style="background: #FFB8EBA6;">corte plano</mark>.
+    - **Dice:** <mark style="background: #ADCCFFA6;">Seleccionar un **sub-cubo** específico</mark> filtrando por dos o más dimensiones (ej: "Año 2023" Y "Tienda Norte").
+4. **Drill-through (Detalle):**
+    - **Qué hace:** <mark style="background: #FFB86CA6;">Va al fondo de los datos</mark>, mostrando las <mark style="background: #ADCCFFA6;">filas individuales de la base de datos transaccional que componen un dato agregado</mark>.
+![[Drill_through.png]]
 
 ---
 
@@ -253,7 +123,7 @@ graph LR
 Descubrimiento de patrones (KDD - Knowledge Discovery in Databases).
 
 ## A. Reglas de Asociación
-Buscar correlaciones del tipo "Si compra A, compra B" (Market Basket Analysis)9. Se mide con dos métricas clave:
+Buscar correlaciones del tipo "Si compra A, compra B" (Market Basket Analysis). Se mide con dos métricas clave:
 > [!INFO]+ Fórmulas Clave (Examen)
 > 
 > - Soporte (Support): Frecuencia con la que aparece el conjunto de items en el total de transacciones.
@@ -296,34 +166,47 @@ Modelo no supervisado (sin etiquetas previas). Agrupa objetos similares.
 ---
 
 # 5. Big Data
-Gestión de datos cuyo **Volumen, Velocidad y Variedad** superan las herramientas tradicionales.
+<mark style="background: #ADCCFFA6;">Gestión de datos</mark> cuyo **Volumen, Velocidad y Variedad** <mark style="background: #FF5582A6;">superan las herramientas tradicionales</mark>.
 
 ## Las V del Big Data
-1. **Volumen:** Cantidad masiva.
-2. **Velocidad:** Generación en tiempo real (streaming).
-3. **Variedad:** Estructurados, semi-estructurados y no estructurados (texto, video).
-4. **Veracidad:** Calidad y fiabilidad del dato (limpiar incertidumbre).
-5. **Valor:** Retorno de inversión (ROI) para el negocio.
+1. **Volumen:** Cantidad <mark style="background: #FFB86CA6;">masiva</mark>.
+2. **Velocidad:** <mark style="background: #FFB8EBA6;">Generación en tiempo real</mark> (*streaming*).
+3. **Variedad:** <mark style="background: #FFB86CA6;">Estructurados, semi-estructurados y no estructurados</mark> (texto, video).
+4. **Veracidad:** <mark style="background: #FFB8EBA6;">Calidad y fiabilidad</mark> del dato (<mark style="background: #FFB86CA6;">limpiar incertidumbre</mark>).
+5. **Valor:** <mark style="background: #FFB8EBA6;">Retorno de inversión</mark> (*ROI*) para el negocio.
 
 ## Modelo MapReduce
-Paradigma de computación paralela y distribuida.
-1. **Map():** Procesa datos en cada nodo y emite pares `(clave, valor)`.
+<mark style="background: #ADCCFFA6;">Paradigma de computación paralela y distribuida</mark>.
+1. **Map():** <mark style="background: #FFB86CA6;">Procesa datos en cada nodo y emite pares</mark> `(clave, valor)`.
     - _Ejemplo WordCount:_ `("hola", 1)`, `("mundo", 1)`, `("hola", 1)`.
-2. **Shuffle (Barajado):** Agrupa y ordena los pares por clave.
+2. **Shuffle (Barajado):** <mark style="background: #FFB86CA6;">Agrupa y ordena</mark> los pares por clave.
+    - La fase *Shuffle* <mark style="background: #FFB8EBA6;">es automática</mark> y es la <mark style="background: #8000E1A6;">encargada de mover los datos por la red para que todas las claves iguales lleguen</mark> al mismo *Reducer*.
     - _Salida:_ `("hola", [1, 1])`, `("mundo", [1])`.
-3. **Reduce():** Agrega los valores de cada clave.
+3. **Reduce():** <mark style="background: #FFB86CA6;">Agrega los valores de cada clave</mark>.
     - _Salida:_ `("hola", 2)`, `("mundo", 1)`.
 
+### Caso Práctico: Conteo de Palabras (Word Count)
+1. **Input:** "El perro ladra. El gato maúlla."
+2. **Splitting:** Se divide el texto.
+3. **Fase MAP:** Cada nodo procesa su trozo y emite pares `(clave, valor)`.
+    - Detecta "El" →→ emite `("El", 1)`
+    - Detecta "perro" →→ emite `("perro", 1)`
+    - Detecta "El" otra vez →→ emite `("El", 1)`
+4. **Fase SHUFFLE (Intermedia/Invisible):** Agrupa todas las claves iguales.
+    - Agrupa los `("El", 1)` y `("El", 1)` en una lista: `("El", [1, 1])`.
+5. **Fase REDUCE:** Suma la lista de valores.
+    - Recibe `("El", [1, 1])` →→ Suma →→ Resultado `("El", 2)`.
+
 ## Ecosistema Hadoop
-Framework Open Source para almacenamiento y procesamiento distribuido.
+<mark style="background: #ADCCFFA6;">Framework Open Source para almacenamiento y procesamiento</mark> <mark style="background: #FFB86CA6;">distribuido</mark>.
 
-**Componentes Núcleo:**
-- **HDFS:** Sistema de ficheros distribuido (Almacenamiento).
-- **YARN:** Gestor de recursos y planificación.
-- **MapReduce:** Motor de procesamiento.
-- **Common:** Utilidades comunes.
+### Componentes Núcleo
+- **HDFS:** Almacena los <mark style="background: #FFB86CA6;">datos troceados y replicados</mark> en <mark style="background: #FFB8EBA6;">varios nodos</mark> (<mark style="background: #FF5582A6;">tolerancia a fallos</mark>).
+- **YARN:** <mark style="background: #FFB86CA6;">Gestor de recursos y planificación</mark>. Asigna recursos (RAM/CPU) a las tareas.
+- **MapReduce:** <mark style="background: #FFB86CA6;">Motor de procesamiento</mark>.
+- **Common:** <mark style="background: #FFB8EBA6;">Utilidades</mark> comunes.
 
-**Herramientas del Ecosistema (Zoo)** :
+### Herramientas del Ecosistema (Zoo)
 - **Hive:** Infraestructura de DW sobre Hadoop (permite consultas tipo SQL).
 - **Pig:** Plataforma para crear programas de análisis (lenguaje _Pig Latin_).
 - **HBase:** Base de datos **NoSQL** distribuida (columnar).
@@ -338,10 +221,10 @@ Framework Open Source para almacenamiento y procesamiento distribuido.
 
 # 6. Big Data vs. BI Tradicional
 
-|**Característica**|**BI Tradicional (DW)**|**Big Data (Hadoop/Data Lake)**|
-|---|---|---|
-|**Datos**|Estructurados (Tablas).|Estructurados, Semi y No Estructurados (Texto, Logs, Vídeo).|
-|**Volumen**|Gigabytes / Terabytes.|Petabytes / Exabytes.|
-|**Esquema**|**Schema-on-Write:** Se define al guardar (ETL estricto).|**Schema-on-Read:** Se define al leer (flexible, ELT).|
-|**Procesamiento**|Centralizado o SMP.|Distribuido (MPP / MapReduce).|
-|**Coste**|Alto (Hardware propietario).|Bajo (Hardware commodity / Open Source).|
+| **Característica** | **BI Tradicional (DW)**                                     | **Big Data (Hadoop/Data Lake)**                              |
+| ------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| **Datos**          | Estructurados (Tablas).                                     | Estructurados, Semi y No Estructurados (Texto, Logs, Vídeo). |
+| **Volumen**        | Gigabytes / Terabytes.                                      | Petabytes / Exabytes.                                        |
+| **Esquema**        | **Schema-on-Write:** Se define *al guardar* (ETL estricto). | **Schema-on-Read:** Se define *al leer* (flexible, ELT).     |
+| **Procesamiento**  | *Centralizado* o SMP.                                       | *Distribuido* (MPP / MapReduce).                             |
+| **Coste**          | *Alto* (Hardware propietario).                              | *Bajo* (Hardware commodity / Open Source).                   |

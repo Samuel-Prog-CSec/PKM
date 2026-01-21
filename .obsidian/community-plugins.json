@@ -3,7 +3,6 @@
   "obsidian-excalidraw-plugin",
   "obsidian-outliner",
   "obsidian-icon-shortcodes",
-  "obsidian-enhancing-export",
   "obsidian-style-settings",
   "callout-manager",
   "obsidian-dynamic-background",
@@ -17,5 +16,6 @@
   "file-explorer-plus",
   "templater-obsidian",
   "dataview",
-  "folder-links"
+  "folder-links",
+  "better-export-pdf"
 ]

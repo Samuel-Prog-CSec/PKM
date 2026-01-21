@@ -5,7 +5,7 @@ tags:
   - Introduccion
 Fecha de actualización: 2025-09-24
 Nota previa:
-Nota siguiente: "[[002 -]]"
+Nota siguiente: "[[002 - Implantación de sistemas BI]]"
 Area: "[[Inteligencia del negocio.base]]"
 ---
 ---
@@ -61,7 +61,7 @@ AENOR ha definido normas específicas que suelen caer en examen:
 - **ISO/IEC 38505-1:** Aplicación de la norma ISO 38500 al gobierno de datos.
 
 ## 2.5. Niveles de Madurez
-Según la norma UNE 0080, se evalúa la madurez en niveles del 0 al 521:
+Según la norma UNE 0080, se evalúa la madurez en niveles del 0 al 5:
 - Nivel 0: Incompleto.
 - Nivel 1: Realizado.
 - Nivel 2: Gestionado (aquí ya hay planificación y control).
@@ -73,13 +73,7 @@ Según la norma UNE 0080, se evalúa la madurez en niveles del 0 al 521:
 
 # 3. Paradigmas: Ciencia, Ingeniería y Análisis
 ## 3.1. Ciencia de Datos (Data Science)
-Disciplina multidisciplinar (matemáticas, estadística, IA) para extraer conocimientos e ideas de muchos datos estructurados y no estructurados.
-
-4 Tipos de Análisis (Evolución):
-1. **Descriptivo:** examina los datos para obtener información sobre lo que ha ocurrido u ocurre. ¿Qué ha pasado?
-2. **Diagnóstico:** examen profundo o detallado de datos para entender por qué ha ocurrido algo. (Minería, correlaciones, _Drill-down_).
-3. **Predictivo:** utiliza los datos históricos para hacer previsiones precisas sobre los patrones de datos que pueden producirse en el futuro. (Previsiones, Machine Learning).
-4. **Prescriptivo:** no solo predice lo que es probable que ocurra, sino que sugiere una respuesta óptima para ese resultado. ¿Qué deberíamos hacer? (Optimización, simulación, recomendación de acciones).
+Definido en [[005 - Análisis de datos]]
 
 ### 3.1.1. Proceso de la ciencia de datos
 1. **Obtener datos** `->`
