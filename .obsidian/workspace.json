@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0030e616296f1aaf",
+        "id": "9214b4f8f9d7d8df",
         "type": "tabs",
         "children": [
           {
-            "id": "7c3f11e88cabb4c3",
+            "id": "77596c83ec0fe335",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Areas/Ingenieria/BI/001 - El dato como activo y fundamentos de BI.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "001 - El dato como activo y fundamentos de BI"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -42,7 +38,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -96,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225,
-    "collapsed": true
+    "width": 232
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -114,13 +109,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 - Areas/Ingenieria/BI/006 - Dashboards.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de 006 - Dashboards"
+              "title": "Esquema"
             }
           },
           {
@@ -199,8 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276,
-    "collapsed": true
+    "width": 266
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,9 +209,28 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7c3f11e88cabb4c3",
+  "active": "a5984c00f83c5aee",
   "lastOpenFiles": [
+    "05 - PENDIENTES/Hacking (ORGANIZAR)/👾 Malware/Enlaces.md",
+    "Pasted image 20260204195344.png",
+    "Pasted image 20260204195342.png",
+    "Pasted image 20260204195339.png",
+    "Pasted image 20251222140151.png",
+    "TFG/Planificación/Progreso Sprints.md",
+    "04 - Archivos/Images/TFG/Planificación/Primera_Semana_Sprint_3.png",
+    "04 - Archivos/Images/TFG/Planificación/Backlog_Primera_Semana_Sprint_3.png",
+    "TFG/Planificación/Dudas Sprint 2.md",
     "02 - Areas/Ingenieria/BI/006 - Dashboards.md",
+    "Fuzzing/01 - Directorios y archivos.md",
+    "Fuzzing/05 - Filtrando la salida.md",
+    "Fuzzing/02 - Recursivo.md",
+    "Fuzzing/00 - Herramientas.md",
+    "Fuzzing/Fuzzing web.md",
+    "Fuzzing/04 - Subdominios y host virtual.md",
+    "Fuzzing/03 - Parámetros y valores.md",
+    "🔴⚔️ Red Team/Hacking web/Web Pentesting.base",
+    "🔴⚔️ Red Team/Red-Team.base",
+    "05 - PENDIENTES/VARIOS/REVISAR (CAOS)/🖥️ Monitor.md",
     "02 - Areas/Ingenieria/BI/001 - El dato como activo y fundamentos de BI.md",
     "02 - Areas/Ingenieria/BI/005 - Análisis de datos.md",
     "02 - Areas/Ingenieria/BI/003 - Modelado dimensional.md",
@@ -227,21 +239,13 @@
     "04 - Archivos/Images/BI/TEMA_3/SCD_Tipo_6.png",
     "04 - Archivos/Images/BI/TEMA_3/SCD_Tipo_4.png",
     "04 - Archivos/Images/BI/TEMA_3/SCD_Tipo_3.png",
-    "Pasted image 20251222140151.png",
-    "04 - Archivos/Images/BI/TEMA_3/SCD_Tipo_2.png",
     "04 - Archivos/Images/BI/TEMA_3",
-    "04 - Archivos/Images/BI/TEMA_5/Drill_down.png",
-    "04 - Archivos/Images/BI/TEMA_5/Drill_across.png",
     "OPTIMIZAR WINDOWS 11 PRO.md",
-    "04 - Archivos/Images/BI/TEMA_5/Drill_through.png",
-    "04 - Archivos/Images/BI/TEMA_5/Page.png",
     "04 - Archivos/Images/BI/TEMA_5",
     "04 - Archivos/Images/BI",
     "02 - Areas/Desarrollo web/CSS/Herramientas para estilos.md",
     "02 - Areas/Ingenieria/BI/Inteligencia del negocio.base",
-    "🔴⚔️ Red Team/Hacking web/Web Pentesting.base",
     "Sin título.md",
-    "🔴⚔️ Red Team/Red-Team.base",
     "Windows 11 Pro Optimized Setup.md",
     "REVISAR ENLACES.md",
     "Reparación Razer Basilisk V3 Pro 35k.md",
@@ -249,16 +253,6 @@
     "Arch Linux Custom.md",
     "🔴⚔️ Red Team/Hacking Wi-Fi/Referencias.md",
     "TFG/Front-end.md",
-    "02 - Areas/Desarrollo web/React/Introducción.md",
-    "TFG/Metodologías/Estrategia de calidad y mantenimiento.md",
-    "02 - Areas/Ingenieria/♾️ Full-Stack/📖 Referencias proyecto Anthem.md",
-    "TFG/Contextos React.md",
-    "TFG/RFID/Problema RFID actual.md",
-    "02 - Areas/Ingenieria/GPSI/005 - Gestión de Riesgos en Proyectos Software.md",
-    "02 - Areas/Ingenieria/GPSI/002 - Planificación de Proyectos Software.md",
-    "02 - Areas/Ingenieria/GPSI/004 - Estimación del Software.md",
-    "02 - Areas/Ingenieria/GPSI/003 - SCRUM.md",
-    "TFG/Redis/Arquitectura, Decisiones de Diseño y Uso.md",
     "TFG/RFID",
     "TFG/Metodologías",
     "02 - Areas/Ingenieria/GPSI",

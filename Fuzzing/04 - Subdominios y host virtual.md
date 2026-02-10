@@ -1,8 +1,8 @@
 ---
 tags:
 Fecha de actualización: 2025-10-10
-Nota previa: "[[Parámetros y valores]]"
-Nota siguiente: "[[Filtrando la salida]]"
+Nota previa: "[[03 - Parámetros y valores]]"
+Nota siguiente: "[[05 - Filtrando la salida]]"
 Area: "[[Fuzzing web]]"
 ---
 ---
@@ -18,7 +18,7 @@ Los subdominios, por otro lado, son extensiones de un nombre de dominio principa
 | **Riesgos de seguridad** | Los *vhosts* mal configurados pueden exponer aplicaciones internas o datos confidenciales. | Pueden ocurrir vulnerabilidades de toma de control de subdominios si los registros *DNS* están mal administrados. |
 
 # Gobuster
-[[Herramientas#Gobuster|Gobuster]] es una herramienta de línea de comandos versátil reconocida por sus capacidades de [[Directorios y archivos]] y DNS. <mark style="background: #ADCCFFA6;">Sondea sistemáticamente servidores web o dominios de destino para descubrir directorios, archivos y subdominios ocultos</mark>, lo que lo convierte en un activo valioso en evaluaciones de seguridad y pruebas de penetración.
+[[00 - Herramientas#Gobuster|Gobuster]] es una herramienta de línea de comandos versátil reconocida por sus capacidades de [[01 - Directorios y archivos]] y DNS. <mark style="background: #ADCCFFA6;">Sondea sistemáticamente servidores web o dominios de destino para descubrir directorios, archivos y subdominios ocultos</mark>, lo que lo convierte en un activo valioso en evaluaciones de seguridad y pruebas de penetración.
 
 La flexibilidad de `Gobuster` se extiende al fuzzing para varios tipos de contenido:
 - **Directorios**: descubrir directorios ocultos en un servidor web.

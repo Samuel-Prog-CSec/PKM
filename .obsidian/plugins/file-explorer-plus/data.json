@@ -64,7 +64,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/Fuzzing/Fuzzing web.md",
+        "pattern": "Fuzzing/Fuzzing web.md",
         "patternType": "STRICT"
       },
       {
@@ -184,6 +184,13 @@
         "active": true,
         "type": "FILES",
         "pattern": "Reparación Razer Basilisk V3 Pro 35k.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "OPTIMIZAR WINDOWS 11 PRO.md",
         "patternType": "STRICT"
       }
     ],

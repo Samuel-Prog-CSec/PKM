@@ -3,9 +3,10 @@ tags:
   - Web/Red-Team
   - Pentesting
   - Pentesting/Enumeracion
+  - Escaneo
 Fecha de actualización: 2025-10-08
-Nota previa: "[[Herramientas]]"
-Nota siguiente: "[[Recursivo]]"
+Nota previa: "[[00 - Herramientas]]"
+Nota siguiente: "[[02 - Recursivo]]"
 Area: "[[Fuzzing web]]"
 ---
 ---
@@ -29,7 +30,7 @@ Las listas de palabras son **el elemento vital del fuzzing de directorios y arch
 
 Las listas de palabras generalmente se compilan a partir de varias fuentes. Esto a menudo incluye extraer de la web nombres de archivos y directorios comunes, analizar violaciones de datos disponibles públicamente y extraer información de directorios de vulnerabilidades conocidas. Luego, estas <mark style="background: #8000E1A6;">listas de palabras se seleccionan meticulosamente</mark>, eliminando duplicados y entradas irrelevantes para garantizar una eficiencia y eficacia óptimas durante las operaciones de fuzzing. El objetivo es crear una lista completa de posibles directorios y nombres de archivos que probablemente se encontrarán en servidores web, lo que le permitirá investigar exhaustivamente una aplicación de destino en busca de activos ocultos.
 
-Las [[Herramientas]] para fuzzing tienen listas de palabras integradas, pero están diseñadas para funcionar perfectamente con archivos de listas de palabras externos. Esta flexibilidad le permite utilizar listas de palabras preexistentes o crear las suyas propias para adaptar sus esfuerzos de fuzzing a objetivos y escenarios específicos.
+Las [[00 - Herramientas]] para fuzzing tienen listas de palabras integradas, pero están diseñadas para funcionar perfectamente con archivos de listas de palabras externos. Esta flexibilidad le permite utilizar listas de palabras preexistentes o crear las suyas propias para adaptar sus esfuerzos de fuzzing a objetivos y escenarios específicos.
 
 Una de las colecciones de listas de palabras más completas y utilizadas es [SecLists](https://github.com/danielmiessler/SecLists),<mark style="background: #FFB8EBA6;"> proporciona un vasto repositorio de listas de palabras para diversos fines de pruebas de seguridad, incluido el fuzzing de directorios y archivos</mark>.
 

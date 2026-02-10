@@ -6,7 +6,7 @@ tags:
   - Pentesting/Enumeracion
 Fecha de actualización: 2025-10-08
 Nota previa:
-Nota siguiente: "[[Herramientas]]"
+Nota siguiente: "[[00 - Herramientas]]"
 Area: "[[Web Pentesting.base|Web Pentesting]]"
 ---
 

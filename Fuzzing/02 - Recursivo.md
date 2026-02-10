@@ -4,8 +4,8 @@ tags:
   - Pentesting
   - Pentesting/Enumeracion
 Fecha de actualización: 2025-10-08
-Nota previa: "[[Directorios y archivos]]"
-Nota siguiente: "[[Parámetros y valores]]"
+Nota previa: "[[01 - Directorios y archivos]]"
+Nota siguiente: "[[03 - Parámetros y valores]]"
 Area: "[[Fuzzing web]]"
 ---
 ---

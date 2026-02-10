@@ -2,9 +2,10 @@
 tags:
   - Web/Red-Team
   - Pentesting
+  - Linux
 Fecha de actualización: 2025-10-08
 Nota previa: "[[Fuzzing web]]"
-Nota siguiente: "[[Directorios y archivos]]"
+Nota siguiente: "[[01 - Directorios y archivos]]"
 Area: "[[Fuzzing web]]"
 ---
 ---

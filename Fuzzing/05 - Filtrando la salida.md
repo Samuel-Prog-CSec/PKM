@@ -1,14 +1,18 @@
 ---
 tags:
+  - Análisis
+  - Visualización/Datos
+  - Web/Red-Team
+  - Pentesting
 Fecha de actualización: 2025-10-10
-Nota previa: "[[Subdominios y host virtual]]"
+Nota previa: "[[04 - Subdominios y host virtual]]"
 Nota siguiente:
 Area: "[[Fuzzing web]]"
 ---
 ---
 
 # Gobuster
-[[Herramientas#Gobuster|Gobuster]] ofrece varias opciones de filtrado según el módulo que se esté ejecutando, para ayudar a centrarse en respuestas específicas y agilizar el análisis. Hay una pequeña salvedad: las opciones `-s` y `-b` <mark style="background: #FFB86CA6;">solo están disponibles en el modo de fuzzing `dir`.</mark>
+[[00 - Herramientas#Gobuster|Gobuster]] ofrece varias opciones de filtrado según el módulo que se esté ejecutando, para ayudar a centrarse en respuestas específicas y agilizar el análisis. Hay una pequeña salvedad: las opciones `-s` y `-b` <mark style="background: #FFB86CA6;">solo están disponibles en el modo de fuzzing `dir`.</mark>
 
 | Bandera            | Descripción                                                                                          | Ejemplo de escenario                                                           |
 | ------------------ | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -25,7 +29,7 @@ $ gobuster dir -u http://example.com/ -w wordlist.txt -s 200,301 --exclude-lengt
 ---
 
 # FFUF
-[[Herramientas#FFUF|FFUF]] ofrece un sistema de filtrado altamente personalizable, que permite un control preciso sobre la salida mostrada. Esto permite examinar de manera eficiente cantidades potencialmente grandes de datos y centrarse en los hallazgos más relevantes. <mark style="background: #FFB8EBA6;">Las opciones de filtrado se clasifican en varios tipos</mark>, cada uno de los cuales cumple un propósito específico al refinar sus resultados.
+[[00 - Herramientas#FFUF|FFUF]] ofrece un sistema de filtrado altamente personalizable, que permite un control preciso sobre la salida mostrada. Esto permite examinar de manera eficiente cantidades potencialmente grandes de datos y centrarse en los hallazgos más relevantes. <mark style="background: #FFB8EBA6;">Las opciones de filtrado se clasifican en varios tipos</mark>, cada uno de los cuales cumple un propósito específico al refinar sus resultados.
 
 | Bandera                                           | Descripción                                                                                                                                                                                                                                                                                                                                                | Ejemplo de escenario                                                                                                                                              |
 | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +61,7 @@ $ ffuf -u http://example.com/FUZZ -w wordlist.txt -mt >500
 ---
 
 # wenum
-[[Herramientas#wfuzz/wenum|wenum]] ofrece un <mark style="background: #ADCCFFA6;">sistema de filtrado robusto para ayudar a gestionar y refinar la gran cantidad de datos</mark> generados durante el fuzzing. Puede filtrar según códigos de estado, tamaño de respuesta/número de caracteres, número de palabras, número de líneas e incluso expresiones regulares.
+[[00 - Herramientas#wfuzz/wenum|00 - Herramientas]] ofrece un <mark style="background: #ADCCFFA6;">sistema de filtrado robusto para ayudar a gestionar y refinar la gran cantidad de datos</mark> generados durante el fuzzing. Puede filtrar según códigos de estado, tamaño de respuesta/número de caracteres, número de palabras, número de líneas e incluso expresiones regulares.
 
 |Bandera|Descripción|Ejemplo de escenario|
 |---|---|---|
@@ -93,7 +97,7 @@ $ wenum -w wordlist.txt --sr "admin\|password" -u https://example.com/FUZZ
 ---
 
 # Feroxbuster
-[[Herramientas#FeroxBuster|Feroxbuster]] está diseñado para ser <mark style="background: #ADCCFFA6;">potente y flexible</mark>, lo que le permite <mark style="background: #FFB8EBA6;">ajustar los resultados que recibe durante un escaneo</mark>. Ofrece una variedad de filtros que operan tanto a nivel de solicitud como de respuesta.
+[[00 - Herramientas#FeroxBuster|Feroxbuster]] está diseñado para ser <mark style="background: #ADCCFFA6;">potente y flexible</mark>, lo que le permite <mark style="background: #FFB8EBA6;">ajustar los resultados que recibe durante un escaneo</mark>. Ofrece una variedad de filtros que operan tanto a nivel de solicitud como de respuesta.
 
 |Bandera|Descripción|Ejemplo de escenario|
 |---|---|---|

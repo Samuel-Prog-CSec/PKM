@@ -4,8 +4,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
 Fecha de actualización: 2025-10-08
-Nota previa: "[[Recursivo]]"
-Nota siguiente: "[[Subdominios y host virtual]]"
+Nota previa: "[[02 - Recursivo]]"
+Nota siguiente: "[[04 - Subdominios y host virtual]]"
 Area: "[[Fuzzing web]]"
 ---
 ---
@@ -59,7 +59,7 @@ Los parámetros son las <mark style="background: #ADCCFFA6;">puertas de enlace a
 
 ---
 # Caso de uso con wenum
-En este caso podemos usar [[Herramientas#wfuzz/wenum|wenum]] explorar los parámetros `GET` y `POST` dentro de nuestra aplicación web de destino, con el <mark style="background: #ADCCFFA6;">objetivo final de descubrir valores ocultos que desencadenan respuestas únicas, revelando potencialmente vulnerabilidades</mark>.
+En este caso podemos usar [[00 - Herramientas#wfuzz/wenum|00 - Herramientas]] explorar los parámetros `GET` y `POST` dentro de nuestra aplicación web de destino, con el <mark style="background: #ADCCFFA6;">objetivo final de descubrir valores ocultos que desencadenan respuestas únicas, revelando potencialmente vulnerabilidades</mark>.
 > [!help]+
 > Podemos instalar las herramientas como `wenum` en nuestro host de ataque:
 > - `$ pipx install git+https://github.com/WebFuzzForge/wenum`
@@ -110,7 +110,7 @@ Hay una línea que destaca en la respuesta:
 > Esto indica que cuando el parámetro `x` se estableció en el valor "`OA...`" el <mark style="background: #FF5582A6;">servidor respondió con un código de estado `200 OK`, que sugiere una entrada válida</mark>.
 
 ## Caso de uso con POST
-Fuzear los parámetros `POST` requiere un enfoque ligeramente diferente al difuminar los parámetros `GET`. En lugar de agregar valores directamente a la *URL*, usaremos [[Herramientas#FFUF|ffuf]] para <mark style="background: #FFB86CA6;">enviar los payloads dentro del cuerpo de la solicitud</mark>. Esto nos permite probar cómo la aplicación maneja los datos enviados a través de formularios u otros mecanismos `POST`.
+Fuzear los parámetros `POST` requiere un enfoque ligeramente diferente al difuminar los parámetros `GET`. En lugar de agregar valores directamente a la *URL*, usaremos [[00 - Herramientas#FFUF|ffuf]] para <mark style="background: #FFB86CA6;">enviar los payloads dentro del cuerpo de la solicitud</mark>. Esto nos permite probar cómo la aplicación maneja los datos enviados a través de formularios u otros mecanismos `POST`.
 
 Nuestra aplicación de destino también cuenta con un parámetro POST llamado "`y`" dentro del `post.php` guion. Vamos a investigarlo con `curl` para ver su comportamiento predeterminado:
 ```shell-session
