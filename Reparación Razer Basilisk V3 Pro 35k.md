@@ -1,4 +1,4 @@
-![[Pasted image 20251222140151.png]]
+![[Rueda_Basilisk.png]]
 
 # Enlaces
 https://www.youtube.com/watch?v=AR9x18ydEYUç

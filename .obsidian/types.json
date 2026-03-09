@@ -46,6 +46,7 @@
     "TQ_show_urgency": "checkbox",
     "Fecha de actualización": "date",
     "excalidraw-embed-md": "checkbox",
-    "excalidraw-export-internal-links": "checkbox"
+    "excalidraw-export-internal-links": "checkbox",
+    "TQ_show_toolbar": "checkbox"
   }
 }

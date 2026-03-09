@@ -4945,13 +4945,13 @@ var CSSManager = class {
 var TagManager = class {
   constructor(knownTags) {
     this.renderedTags = /* @__PURE__ */ new Set();
-    const normalized = Object.entries(knownTags || {}).reduce((acc, [tagName, order]) => {
+    const normalized = [];
+    for (const [tagName, order] of Object.entries(knownTags || {})) {
       const normalizedName = normalizeTagName(tagName);
       if (normalizedName) {
-        acc.push([normalizedName, order]);
+        normalized.push([normalizedName, order]);
       }
-      return acc;
-    }, []);
+    }
     this.tagsMap = new Map(normalized);
   }
   getTagsMap() {
@@ -4977,35 +4977,53 @@ var TagManager = class {
   }
   collectTagPaths(metadataCache) {
     const paths = /* @__PURE__ */ new Set();
-    Object.keys(metadataCache.getTags()).map((tag) => normalizeTagName(tag)).filter((tag) => tag.length > 0 && !tag.match(/\/$/)).forEach((tag) => {
+    for (const rawTag of Object.keys(metadataCache.getTags())) {
+      const tag = normalizeTagName(rawTag);
+      if (!tag) {
+        continue;
+      }
       const chunks = tag.split("/");
       let combined = "";
       for (const chunk of chunks) {
         combined = combined ? `${combined}/${chunk}` : chunk;
         paths.add(combined);
       }
-    });
+    }
     return Array.from(paths).sort((a2, b2) => {
       const depthDiff = a2.split("/").length - b2.split("/").length;
       return depthDiff !== 0 ? depthDiff : a2.localeCompare(b2);
     });
   }
   buildOrders(tags) {
-    var _a, _b;
+    var _a, _b, _c;
     const nextMap = /* @__PURE__ */ new Map();
     const parentMaxOrder = /* @__PURE__ */ new Map();
     for (const tag of tags) {
-      const parentIndex = tag.lastIndexOf("/");
-      const parentKey = parentIndex === -1 ? "" : tag.slice(0, parentIndex);
       const previousOrder = this.tagsMap.get(tag);
-      const order = previousOrder != null ? previousOrder : ((_a = parentMaxOrder.get(parentKey)) != null ? _a : 0) + 1;
+      if (previousOrder === void 0) {
+        continue;
+      }
+      const parentKey = this.getParentKey(tag);
+      parentMaxOrder.set(
+        parentKey,
+        Math.max((_a = parentMaxOrder.get(parentKey)) != null ? _a : 0, previousOrder)
+      );
+    }
+    for (const tag of tags) {
+      const parentKey = this.getParentKey(tag);
+      const previousOrder = this.tagsMap.get(tag);
+      const order = previousOrder != null ? previousOrder : ((_b = parentMaxOrder.get(parentKey)) != null ? _b : 0) + 1;
       nextMap.set(tag, order);
       parentMaxOrder.set(
         parentKey,
-        Math.max((_b = parentMaxOrder.get(parentKey)) != null ? _b : 0, order)
+        Math.max((_c = parentMaxOrder.get(parentKey)) != null ? _c : 0, order)
       );
     }
     return nextMap;
+  }
+  getParentKey(tag) {
+    const parentIndex = tag.lastIndexOf("/");
+    return parentIndex === -1 ? "" : tag.slice(0, parentIndex);
   }
   hasChanged(nextMap) {
     if (nextMap.size !== this.tagsMap.size) {
@@ -5070,6 +5088,8 @@ var _ColoredTagsPlugin = class extends import_obsidian3.Plugin {
     this.tagColorMap = /* @__PURE__ */ new Map();
     this.baseViewTagApplier = new BaseViewTagApplier();
     this.propertiesTagApplier = new PropertiesTagApplier();
+    this.saveKnownTagsPromise = null;
+    this.saveKnownTagsQueued = false;
   }
   async onload() {
     await this.loadSettings();
@@ -5113,10 +5133,28 @@ var _ColoredTagsPlugin = class extends import_obsidian3.Plugin {
     });
   }
   async saveKnownTags() {
-    const hasChanges = await this.tagManager.updateKnownTags(
-      this.app.metadataCache
-    );
-    if (hasChanges) {
+    this.saveKnownTagsQueued = true;
+    if (this.saveKnownTagsPromise) {
+      await this.saveKnownTagsPromise;
+      if (this.saveKnownTagsQueued) {
+        await this.saveKnownTags();
+      }
+      return;
+    }
+    this.saveKnownTagsPromise = this.flushKnownTagsUpdates().finally(() => {
+      this.saveKnownTagsPromise = null;
+    });
+    await this.saveKnownTagsPromise;
+  }
+  async flushKnownTagsUpdates() {
+    while (this.saveKnownTagsQueued) {
+      this.saveKnownTagsQueued = false;
+      const hasChanges = await this.tagManager.updateKnownTags(
+        this.app.metadataCache
+      );
+      if (!hasChanges) {
+        continue;
+      }
       this.settings.knownTags = this.tagManager.exportKnownTags();
       await this.saveData(this.settings);
     }
