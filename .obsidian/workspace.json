@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "aaa4ac749404f12d",
+        "id": "5ae1fc9a090b86c8",
         "type": "tabs",
         "children": [
           {
-            "id": "8407f6b9562c3b8b",
+            "id": "c77f3d5e81e267ed",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows 11 Pro Optimized Setup.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Windows 11 Pro Optimized Setup"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -113,13 +109,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows 11 Pro Optimized Setup.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Windows 11 Pro Optimized Setup"
+              "title": "Esquema"
             }
           },
           {
@@ -214,10 +209,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a5984c00f83c5aee",
+  "active": "c77f3d5e81e267ed",
   "lastOpenFiles": [
-    "OPTIMIZAR WINDOWS 11 PRO.md",
     "Windows 11 Pro Optimized Setup.md",
+    "OPTIMIZAR WINDOWS 11 PRO.md",
     "🔴⚔️ Red Team/CWEE Path.md",
     "TFG/TO-DO.md",
     "04 - Archivos/Images/Rueda_Basilisk.png",

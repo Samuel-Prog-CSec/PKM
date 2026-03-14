@@ -1,6 +1,24 @@
 https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
-`Win + r` -> `services.msc` -> Experiencia del usuario y telemetría asociada -> `Click derecho` -> Propiedades -> Tipo de inicio -> **Deshabilitado**
+`Win + r` -> `services.msc` -> *Experiencia del usuario y telemetría asociada* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+<mark style="background: #FFB86CA6;">Si no usamos impresora en Windows</mark>: `Win + r` -> `services.msc` -> *Cola de impresión* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+<mark style="background: #FFB86CA6;">Si no usamos impresora en Windows</mark>: `Win + r` -> `services.msc` -> *Extensiones y notificaciones de impresora* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Control parental* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+<mark style="background: #FFB86CA6;">Si no usamos Microsoft Edge</mark>: `Win + r` -> `services.msc` -> *Microsoft Update Service (edgeupdate)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+<mark style="background: #FFB86CA6;">Si no usamos Microsoft Edge</mark>: `Win + r` -> `services.msc` -> *Microsoft Update Service (edgeupdatem)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio de administración de radio* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio de geolocalización* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio de Windows Insider* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Telefonía* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` -> *SvcHostSplitThresholdInKB* -> **67108864** (64 GB de RAM instalada * 1024 * 1024)
 
@@ -12,14 +30,24 @@ Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` 
 
 ---
 
-# Windows 11 limpio (nueva versión - AtlasOS)
-https://www.youtube.com/watch?v=wmFD2EhMNpE&t=114s
-https://www.youtube.com/watch?v=xrUKHbf7LLw
+# Usar drivers SSD en Windows 11
+Windows 11 "traduce" comunicación del SSD a formato para discos más viejos, ralentizando velocidad de los discos más rápidos. Para desbloquear el driver oculto:
+1. El primer comando **activa la anulación de la gestión de funciones**: 
+	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 735209102 /t REG_DWORD /d 1 /f`
+2. El segundo comando **habilita la siguiente clave necesaria**:
+	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 1853569164 /t REG_DWORD /d 1 /f`
+3. Y el tercero **completa la configuración**:
+	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 156965516 /t REG_DWORD /d 1 /f`
+
+## ¿Cómo sabemos si ha funcionado? 
+Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de dispositivos. El disco SSD ya no aparece bajo la categoría habitual de *Unidades de disco*, sino que ahora se muestra bajo **Discos de almacenamiento**.
+> [!important]+
+> Doble clic sobre el SSD en esa nueva ubicación. Controlador -> Detalles del controlador, debería aparrecer el nombre del archivo: `nvmedisk.sys`. <mark style="background: #FF5582A6;">Si está eso, ya está corriendo con el motor de Windows Server</mark>. Si sigue estando `disk.sys` o `stornvme.sys`, el *cambio no se ha aplicado*.
 
 ---
 
 # Terminal
-[Customize Your Windows Terminal with Themes, Fonts & Oh My Posh (2025 Guide)](https://www.youtube.com/watch?v=9zodIcv_7-M)
+
 
 ---
 
@@ -61,11 +89,11 @@ Controlar la configuración 3D -> Configuración global -> Sincronización verti
 - Triple búfer -> *si está sincronización vertical desactivada* -> **Desactivado**
 
 ## NVIDIA APP
-- RTX Dynamic Vibrance -> Activado
-- Anulación de DLSS -> Recomendado
-- Anulación de DLSS - Modo Super Resolución -> DLAA (100%)
-- Factores de DSR -> 2.25 DL y 60-80% (suavidad)
-- Escalado en imagen -> Si esta activo DLSS SUper resolution -> Desactivado
+- RTX Dynamic Vibrance -> **Activado**
+- Anulación de DLSS -> **Recomendado**
+- Anulación de DLSS - Modo Super Resolución -> **DLAA (100%)**
+- Factores de DSR -> **2.25 DL y 60-80% (suavidad)**
+- Escalado en imagen -> *Si esta activo DLSS Super resolution* -> **Desactivado**
 
 ---
 
