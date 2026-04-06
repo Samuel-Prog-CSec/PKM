@@ -36,3 +36,14 @@ Creada la lista de tareas para el Sprint 2, comenzamos con el mantenimiento de t
 # Mitad Sprint 4
 ![[Backlog_Primera_Semana_Sprint_4.png]]
 ![[Primera_Semana_Sprint_4.png]]
+
+---
+
+# Inicio Sprint 5
+![[Inicio_Sprint_5.png]]
+
+---
+
+# Mitad Sprint 5
+![[Backlog_Primera_Semana_Sprint_5.png]]
+![[Primera_Semana_Sprint_5.png]]

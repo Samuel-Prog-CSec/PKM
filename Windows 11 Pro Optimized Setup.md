@@ -1,3 +1,4 @@
+# 1. Configuración SO
 https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
 `Win + r` -> `services.msc` -> *Experiencia del usuario y telemetría asociada* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
@@ -18,19 +19,31 @@ https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
 `Win + r` -> `services.msc` -> *Servicio de Windows Insider* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
+`Win + r` -> `services.msc` -> *Servicio biométrico de Windows* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
 `Win + r` -> `services.msc` -> *Telefonía* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Windows Search* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio informe errores de Windows* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` -> *SvcHostSplitThresholdInKB* -> **67108864** (64 GB de RAM instalada * 1024 * 1024)
 
+<mark style="background: #ADCCFFA6;">Eliminar más servicios ocultos de telemetría</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ndu` -> *Start* -> **4 (Hexadecimal)** (APAGADO)
+
 <mark style="background: #ADCCFFA6;">Liberar RAM porque obliga a borrar DLLs al cerrar una app</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer` -> Crear nuevo valor `DWORD (32 bits)` -> Nombrarlo `AlwaysUnloadDll` -> **Establecer valor a 1** (*Hexadecimal*)
 
+Si tenemos +16 GB de RAM, es interesante desactivar la compresión de memoria en RAM: `sudo Disable-MMAgent -MemoryCompression`
+
 <mark style="background: #ADCCFFA6;">Configuración de Ethernet</mark>: Configuración (Sistema) -> Red e Internet -> Configuración de red avanzada -> Ethernet -> Más opciones de adaptador (Editar) -> *Configurar...* -> Administración de energía -> **Desactivar todo** | Opciones avanzadas -> Ethernet de consumo eficiente de energía -> **Desactivado** | Ethernet ecológico -> **Desactivado** |  Gigabit Lite -> **Desactivado** | Power Saving Mode -> **Desactivado** | Velocidad de enlace WOL y Apagado -> **Sin reducción de velocidad** | Velocidad y Dúplex -> **2.5 Gbps Full Dúplex**
+
+<mark style="background: #ADCCFFA6;">Liberar uso de CPU de temas de paquetes de red</mark>: `sudo netsh int ip set global taskoffload=enabled`
 
 <mark style="background: #ADCCFFA6;">Configuración de arranque</mark>: *msconfig* -> Arranque -> **Todo desactivado en opciones de arranque** -> Click en la unidad de disco principal -> Opciones avanzadas... -> Número de procesadores -> **Desactivado y puesto a 1** | Cantidad máxima de memoria -> **Desactivado y puesto a la mitad de la cantidad que tenga instalada el equipo**
 
 ---
 
-# Usar drivers SSD en Windows 11
+# 2. Usar drivers SSD en Windows 11
 Windows 11 "traduce" comunicación del SSD a formato para discos más viejos, ralentizando velocidad de los discos más rápidos. Para desbloquear el driver oculto:
 1. El primer comando **activa la anulación de la gestión de funciones**: 
 	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 735209102 /t REG_DWORD /d 1 /f`
@@ -46,19 +59,33 @@ Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de disp
 
 ---
 
-# Terminal
+# 3. Terminal
+## Estética
+[Dibujos ASCII](https://steamcommunity.com/groups/asciiartamalgamation/discussions/8/3008934419468905029/)
 
+## Herramientas
+[Herramientas terminal de Windows útiles](https://www.youtube.com/watch?v=6vuEzC3FfdY)
+
+## Fuentes
+Instalar [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip).
+
+## YASB
+Instalar [YABS](https://github.com/amnweb/yasb?tab=readme-ov-file) e importar configuración y CSS de GitHub.
+- [Cava](https://github.com/karlstav/cava.git) puede dar problemas para usarlo, se necesita usar la configuración de GitHub y pegarlo en `C:\Usuarios\Samuel\.config\cava\config.yaml`. También hay que instalar Cava. El antivirus puede que pida permisos para usarlo (audio y micro).
+
+## GlaveVM
+Instalar [GlaveVM](https://github.com/glzr-io/glazewm/tree/main) e importar la configuración de GitHub.
 
 ---
 
-# Customización de Brave Browser
+# 4. Customización de Brave Browser
 https://www.youtube.com/watch?v=xrUKHbf7LLw
 https://www.youtube.com/watch?v=tSfDZiK3eHk
 https://youtu.be/W6cKFliWW6Q
 
 ---
 
-# Optimizar GPU (PC Sobremesa)
+# 5. Optimizar GPU (PC Sobremesa)
 Controlar la configuración 3D -> Configuración global -> Modo de control de energía -> **Máximo rendimiento preferido**
 Controlar la configuración 3D -> Configuración global -> Frecuencia de actualización preferida -> **La más alta disponible**
 Controlar la configuración 3D -> Configuración global -> Sincronización vertical -> **Desactivado**
@@ -97,11 +124,11 @@ Controlar la configuración 3D -> Configuración global -> Sincronización verti
 
 ---
 
-# Optimizar BIOS
+# 6. Optimizar BIOS
 - Find CPU settings and enable **Intel VT-x/EPT** (or AMD-V/RVI) and **VT-d**, if available.
 
 ---
 
-# Optimizar Teclado / Ratón
+# 7. Optimizar Teclado / Ratón
 - **Reducir input lag del teclado**: ajustes de teclado (`Teclado`) -> Retraso de la repetición y Velocidad de la repetición -> **al máximo** (*Corto* y *Rápida*).
 - **Reducir input lag ratón**: ajustes de ratón (`Ratón`) -> Opciones de puntero -> Establecer velocidad de puntero en el **tick número 6**/11 && **Desactivar precisión de puntero**.

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "CoCloud",
       "BoBxRfid",
       "TiScriptPlus",
       "LiScriptEngine",
-      "OcProject16",
-      "TiLockCog"
+      "OcProject16"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -111,5 +111,6 @@
     "iconName": "BoBxlWindows",
     "iconColor": "#009dff"
   },
-  "TFG/RFID": "BoBxRfid"
+  "TFG/RFID": "BoBxRfid",
+  "TFG/SonarCloud": "CoCloud"
 }

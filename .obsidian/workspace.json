@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5ae1fc9a090b86c8",
+        "id": "1b267f5d52f710fa",
         "type": "tabs",
         "children": [
           {
-            "id": "c77f3d5e81e267ed",
+            "id": "b642f8028211754f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "TFG/Planificación/Progreso Sprints.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Progreso Sprints"
             }
           }
         ]
@@ -209,23 +213,32 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c77f3d5e81e267ed",
+  "active": "d0426677ca4befe9",
   "lastOpenFiles": [
+    "TFG/Planificación/Progreso Sprints.md",
+    "04 - Archivos/Images/TFG/Planificación/Backlog_Primera_Semana_Sprint_5.png",
+    "04 - Archivos/Images/TFG/Planificación/Primera_Semana_Sprint_5.png",
     "Windows 11 Pro Optimized Setup.md",
+    "TFG/TO-DO.md",
+    "REVISAR ENLACES.md",
+    "TFG/Metodologías/Estrategia de calidad y mantenimiento.md",
+    "TFG/SonarCloud/Progreso.md",
+    "TFG/Planificación/Dudas Sprint 2.md",
+    "04 - Archivos/Images/TFG/Planificación/Inicio_Sprint_5.png",
+    "04 - Archivos/Images/TFG/SonarCloud/Sprint_4_Overall_Code.png",
+    "04 - Archivos/Images/TFG/SonarCloud/Sprint_4_New_Code.png",
+    "04 - Archivos/Images/TFG/SonarCloud",
+    "Sprint_3_Overall.md",
+    "04 - Archivos/Images/TFG/SonarCloud/Sprint_3_Overall_Code.png",
+    "04 - Archivos/Images/TFG/SonarCloud/Sprint_3_New_Code.png",
+    "TFG/SonarCloud",
+    "🔴⚔️ Red Team/002 - Evaluación de vulnerabilidades/Estándares de evaluación.md",
     "OPTIMIZAR WINDOWS 11 PRO.md",
     "🔴⚔️ Red Team/CWEE Path.md",
-    "TFG/TO-DO.md",
     "04 - Archivos/Images/Rueda_Basilisk.png",
-    "TFG/Planificación/Dudas Sprint 2.md",
     "04 - Archivos/Images/TFG/Planificación/Primera_Semana_Sprint_4.png",
     "04 - Archivos/Images/TFG/Planificación/Backlog_Primera_Semana_Sprint_4.png",
     "05 - PENDIENTES/Hacking (ORGANIZAR)/👾 Malware/Enlaces.md",
-    "Pasted image 20260204195344.png",
-    "Pasted image 20260204195342.png",
-    "Pasted image 20260204195339.png",
-    "TFG/Planificación/Progreso Sprints.md",
-    "04 - Archivos/Images/TFG/Planificación/Primera_Semana_Sprint_3.png",
-    "04 - Archivos/Images/TFG/Planificación/Backlog_Primera_Semana_Sprint_3.png",
     "02 - Areas/Ingenieria/BI/006 - Dashboards.md",
     "Fuzzing/01 - Directorios y archivos.md",
     "Fuzzing/05 - Filtrando la salida.md",
@@ -241,22 +254,12 @@
     "02 - Areas/Ingenieria/BI/005 - Análisis de datos.md",
     "02 - Areas/Ingenieria/BI/003 - Modelado dimensional.md",
     "02 - Areas/Ingenieria/BI/002 - Implantación de sistemas BI.md",
-    "04 - Archivos/Images/BI/TEMA_3/SCD_Tipo_7.png",
-    "04 - Archivos/Images/BI/TEMA_3/SCD_Tipo_6.png",
     "04 - Archivos/Images/BI/TEMA_3",
     "04 - Archivos/Images/BI/TEMA_5",
     "04 - Archivos/Images/BI",
-    "02 - Areas/Desarrollo web/CSS/Herramientas para estilos.md",
     "02 - Areas/Ingenieria/BI/Inteligencia del negocio.base",
-    "Sin título.md",
-    "REVISAR ENLACES.md",
-    "Reparación Razer Basilisk V3 Pro 35k.md",
-    "Build Obsidian REFERENCIAS.md",
-    "Arch Linux Custom.md",
     "TFG/RFID",
     "TFG/Metodologías",
-    "02 - Areas/Ingenieria/GPSI",
-    "TFG/Seguridad",
     "SO's/Logs y eventos/Sin título.canvas",
     "Sin título.canvas",
     "Enumeración/Sin título.canvas"
