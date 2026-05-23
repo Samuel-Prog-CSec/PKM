@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "TiSettingsDollar",
+      "TiBusinessplan",
       "CoCloud",
       "BoBxRfid",
-      "TiScriptPlus",
-      "LiScriptEngine",
-      "OcProject16"
+      "TiScriptPlus"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -77,10 +77,6 @@
   "🔵🛡️ Blue Team/000 - Manejo de incidentes": "RaCrackedShield",
   "🔵🛡️ Blue Team/004 - Threat Intelligence": "BoBxsRadiation",
   "🔴⚔️ Red Team/Red-Team.base": "🔴",
-  "🔴⚔️ Red Team/CWEE Path.md": {
-    "iconName": "TiListCheck",
-    "iconColor": "#37ff00"
-  },
   "02 - Areas/Ingenieria/BI": "TiReportSearch",
   "Redes": "TiNetwork",
   "02 - Areas/Desarrollo web/JWT": "TiLockShare",
@@ -112,5 +108,6 @@
     "iconColor": "#009dff"
   },
   "TFG/RFID": "BoBxRfid",
-  "TFG/SonarCloud": "CoCloud"
+  "TFG/SonarCloud": "CoCloud",
+  "02 - Areas/Ingenieria/Sistemas-Empresariales": "TiSettingsDollar"
 }

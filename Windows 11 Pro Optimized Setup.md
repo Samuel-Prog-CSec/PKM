@@ -1,6 +1,9 @@
-# 1. Configuración SO
+# 1. Configuración Windows 11 Pro (SO)
 https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
+Si tenemos +16 GB de RAM, es interesante desactivar la compresión de memoria en RAM: `sudo Disable-MMAgent -MemoryCompression`
+
+## 1.1 Servicios
 `Win + r` -> `services.msc` -> *Experiencia del usuario y telemetría asociada* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 <mark style="background: #FFB86CA6;">Si no usamos impresora en Windows</mark>: `Win + r` -> `services.msc` -> *Cola de impresión* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
@@ -9,11 +12,13 @@ https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
 `Win + r` -> `services.msc` -> *Control parental* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
-<mark style="background: #FFB86CA6;">Si no usamos Microsoft Edge</mark>: `Win + r` -> `services.msc` -> *Microsoft Update Service (edgeupdate)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+<mark style="background: #FFB86CA6;">Si no usamos Microsoft Edge</mark>: `Win + r` -> `services.msc` -> *Microsoft Edge Update Service (edgeupdate)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
-<mark style="background: #FFB86CA6;">Si no usamos Microsoft Edge</mark>: `Win + r` -> `services.msc` -> *Microsoft Update Service (edgeupdatem)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+<mark style="background: #FFB86CA6;">Si no usamos Microsoft Edge</mark>: `Win + r` -> `services.msc` -> *Microsoft Edge Update Service (edgeupdatem)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 `Win + r` -> `services.msc` -> *Servicio de administración de radio* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Hora de la red de telefonía móvil* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 `Win + r` -> `services.msc` -> *Servicio de geolocalización* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
@@ -25,25 +30,50 @@ https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
 `Win + r` -> `services.msc` -> *Windows Search* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
+`Win + r` -> `services.msc` -> *Servicio de enumeración de dispositivos de tarjeta inteligente* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Partida guardada en Xbox Live* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio de historial de archivos* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio Asistente para la compatibilidad de programas* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Tarjeta inteligente* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Detección SSDP* -> `Doble click` -> Tipo de inicio -> **Manual**
+
+`Win + r` -> `services.msc` -> *WalletService* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Carpetas de trabajo* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servidor* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Servicio FrameServer de la Cámara de Windows* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Adquisición de imágenes de Windows (WIA)* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
+`Win + r` -> `services.msc` -> *Filtro de teclado de Microsoft* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+
 `Win + r` -> `services.msc` -> *Servicio informe errores de Windows* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
+## 1.2 Editor del registro
 Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` -> *SvcHostSplitThresholdInKB* -> **67108864** (64 GB de RAM instalada * 1024 * 1024)
 
 <mark style="background: #ADCCFFA6;">Eliminar más servicios ocultos de telemetría</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ndu` -> *Start* -> **4 (Hexadecimal)** (APAGADO)
 
 <mark style="background: #ADCCFFA6;">Liberar RAM porque obliga a borrar DLLs al cerrar una app</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer` -> Crear nuevo valor `DWORD (32 bits)` -> Nombrarlo `AlwaysUnloadDll` -> **Establecer valor a 1** (*Hexadecimal*)
 
-Si tenemos +16 GB de RAM, es interesante desactivar la compresión de memoria en RAM: `sudo Disable-MMAgent -MemoryCompression`
-
+## 1.3 Configuración de red
 <mark style="background: #ADCCFFA6;">Configuración de Ethernet</mark>: Configuración (Sistema) -> Red e Internet -> Configuración de red avanzada -> Ethernet -> Más opciones de adaptador (Editar) -> *Configurar...* -> Administración de energía -> **Desactivar todo** | Opciones avanzadas -> Ethernet de consumo eficiente de energía -> **Desactivado** | Ethernet ecológico -> **Desactivado** |  Gigabit Lite -> **Desactivado** | Power Saving Mode -> **Desactivado** | Velocidad de enlace WOL y Apagado -> **Sin reducción de velocidad** | Velocidad y Dúplex -> **2.5 Gbps Full Dúplex**
 
 <mark style="background: #ADCCFFA6;">Liberar uso de CPU de temas de paquetes de red</mark>: `sudo netsh int ip set global taskoffload=enabled`
 
+## 1.4 Arranque y disco
 <mark style="background: #ADCCFFA6;">Configuración de arranque</mark>: *msconfig* -> Arranque -> **Todo desactivado en opciones de arranque** -> Click en la unidad de disco principal -> Opciones avanzadas... -> Número de procesadores -> **Desactivado y puesto a 1** | Cantidad máxima de memoria -> **Desactivado y puesto a la mitad de la cantidad que tenga instalada el equipo**
 
----
+<mark style="background: #ADCCFFA6;">Limpieza automática de disco</mark>: Configuración -> Sistema -> Almacenamiento -> Sensor de almacenamiento (*Activado*) -> Limpieza automática de contenido de usuario (*Activado*) -> **Ejecutar sensor de almacenamiento (Mensualmente)** -> **Eliminar archivos de la papelera de reciclaje si llevan en esta más de: (14 días)** -> **Eliminar archivos de carpeta de Descargas si no se han abierto durante más de: (14 días)**
 
-# 2. Usar drivers SSD en Windows 11
+### 1.4.1 Usar drivers SSD en Windows 11
 Windows 11 "traduce" comunicación del SSD a formato para discos más viejos, ralentizando velocidad de los discos más rápidos. Para desbloquear el driver oculto:
 1. El primer comando **activa la anulación de la gestión de funciones**: 
 	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 735209102 /t REG_DWORD /d 1 /f`
@@ -52,14 +82,14 @@ Windows 11 "traduce" comunicación del SSD a formato para discos más viejos, ra
 3. Y el tercero **completa la configuración**:
 	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 156965516 /t REG_DWORD /d 1 /f`
 
-## ¿Cómo sabemos si ha funcionado? 
+#### ¿Cómo sabemos si ha funcionado? 
 Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de dispositivos. El disco SSD ya no aparece bajo la categoría habitual de *Unidades de disco*, sino que ahora se muestra bajo **Discos de almacenamiento**.
 > [!important]+
 > Doble clic sobre el SSD en esa nueva ubicación. Controlador -> Detalles del controlador, debería aparrecer el nombre del archivo: `nvmedisk.sys`. <mark style="background: #FF5582A6;">Si está eso, ya está corriendo con el motor de Windows Server</mark>. Si sigue estando `disk.sys` o `stornvme.sys`, el *cambio no se ha aplicado*.
 
 ---
 
-# 3. Terminal
+# 2. Terminal
 ## Estética
 [Dibujos ASCII](https://steamcommunity.com/groups/asciiartamalgamation/discussions/8/3008934419468905029/)
 
@@ -78,14 +108,14 @@ Instalar [GlaveVM](https://github.com/glzr-io/glazewm/tree/main) e importar la c
 
 ---
 
-# 4. Customización de Brave Browser
+# 3. Customización de Brave Browser
 https://www.youtube.com/watch?v=xrUKHbf7LLw
 https://www.youtube.com/watch?v=tSfDZiK3eHk
 https://youtu.be/W6cKFliWW6Q
 
 ---
 
-# 5. Optimizar GPU (PC Sobremesa)
+# 4. Optimizar GPU (PC Sobremesa)
 Controlar la configuración 3D -> Configuración global -> Modo de control de energía -> **Máximo rendimiento preferido**
 Controlar la configuración 3D -> Configuración global -> Frecuencia de actualización preferida -> **La más alta disponible**
 Controlar la configuración 3D -> Configuración global -> Sincronización vertical -> **Desactivado**
@@ -124,11 +154,11 @@ Controlar la configuración 3D -> Configuración global -> Sincronización verti
 
 ---
 
-# 6. Optimizar BIOS
+# 5. Optimizar BIOS
 - Find CPU settings and enable **Intel VT-x/EPT** (or AMD-V/RVI) and **VT-d**, if available.
 
 ---
 
-# 7. Optimizar Teclado / Ratón
+# 6. Optimizar Teclado / Ratón
 - **Reducir input lag del teclado**: ajustes de teclado (`Teclado`) -> Retraso de la repetición y Velocidad de la repetición -> **al máximo** (*Corto* y *Rápida*).
 - **Reducir input lag ratón**: ajustes de ratón (`Ratón`) -> Opciones de puntero -> Establecer velocidad de puntero en el **tick número 6**/11 && **Desactivar precisión de puntero**.
