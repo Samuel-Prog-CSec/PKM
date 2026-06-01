@@ -20,7 +20,7 @@ Area: "[[Sistemas-Empresariales.base|Sistemas-Empresariales]]"
 
 ### 1. Distinguir los conceptos de dato, información y conocimiento [2]p144-147
 
-Los <mark style="background: #ADCCFFA6;">tres conceptos forman una jerarquía ascendente</mark> (*DIC*) en la que cada nivel se construye sobre el anterior añadiendo contexto y aplicabilidad.
+Los <mark style="background: #ADCCFFA6;">tres conceptos forman una jerarquía ascendente</mark> (*DIC*) en la que cada nivel <mark style="background: #FFB86CA6;">se construye sobre el anterior añadiendo contexto y aplicabilidad</mark>.
 
 - **Dato**: cantidad matemática, símbolo o combinación que representa un hecho **sin contexto interpretativo**. Es la materia prima del SI. Por sí solo no transmite significado.
 - **Información**: dato combinado con **suficiente contexto para que aporte significado a un humano**. 
@@ -31,7 +31,7 @@ Los <mark style="background: #ADCCFFA6;">tres conceptos forman una jerarquía as
 **Itami** clasifica la <mark style="background: #FFB8EBA6;">información empresarial en tres tipos según el flujo respecto a la organización</mark>:
 
 - <mark style="background: #ADCCFFA6;">Información externa o ambiental</mark>: <mark style="background: #FFB86CA6;">entra desde fuera</mark>. Según el *modelo de Laudon*, se divide en dos capas: **entorno inmediato** (con quienes la empresa interactúa a diario) y **entorno remoto** (factores estructurales). El *modelo de Jakobiak* distingue <mark style="background: #8000E1A6;">siete tipologías de información crítica</mark>.
-- <mark style="background: #ADCCFFA6;">Información interna</mark>: <mark style="background: #FFB86CA6;">generada y circulada dentro de la propia empresa</mark> por su funcionamiento. Cornella distingue **información operacional** (rutinaria, sustrato de los TPS) y **conocimiento** (fusión de interna y externa que genera ventajas). Se distingue además por formalidad: formal (informes, BBDD) o informal (conversaciones, correos).
+- <mark style="background: #ADCCFFA6;">Información interna</mark>: <mark style="background: #FFB86CA6;">generada y circulada dentro de la propia empresa</mark> por su funcionamiento. *Cornella* distingue **información operacional** (<mark style="background: #FFB8EBA6;">rutinaria</mark>) y **conocimiento**. Se distingue además por formalidad: **formal** (informes, BBDD) o **informal** (conversaciones, correos).
 - <mark style="background: #ADCCFFA6;">Información corporativa</mark>: la que la empresa <mark style="background: #FFB86CA6;">lanza al exterior de forma deliberada</mark> para controlar canales y contenidos. *Cornella* contrapone aquí la **imaginería corporativa** a la inteligencia competitiva.
 
 ### 5. Niveles de planificación: estratégica, operativa y táctica/gerencial [1]3.3
@@ -47,11 +47,7 @@ La planificación se estructura en **tres niveles** <mark style="background: #FF
 La <mark style="background: #8000E1A6;">transición del primero al segundo está ligada a la evolución de los SI</mark>.
 
 - <mark style="background: #ADCCFFA6;">Modelo vertical o tradicional</mark> (*Anthony*, 1965): **pirámide jerárquica**. El <mark style="background: #FFB86CA6;">flujo es unidireccional y rígido</mark>: la **información sube** (de operarios a alta dirección) y las **órdenes bajan**. <mark style="background: #8000E1A6;">Comunicación horizontal débil</mark> entre departamentos. <mark style="background: #FFB8EBA6;">Produce cuellos de botella, demoras y distorsión</mark>. Los SI son **aplicaciones aisladas por departamento** (*silos*): cada área tiene su software, sus datos y sus procesos sin integración.
-- <mark style="background: #ADCCFFA6;">Modelo horizontal o por procesos</mark>: estructura en **red**. La información y las órdenes fluyen **multidireccionalmente**. <mark style="background: #FFB8EBA6;">Orientado al cliente y al resultado global</mark>, no a la tarea departamental. Pocos niveles directivos. Los SI están **integrados** (ERP, CRM, SCM) bajo base de datos común.
-
-*Castells* llama al modelo horizontal **empresa-red**, caracterizada por siete tendencias: 1) organización por proceso, no por tarea; 2) jerarquía plana; 3) gestión en equipo; 4) resultados medidos por satisfacción del cliente; 5) recompensas por resultados del equipo; 6) maximización de contactos con proveedores y clientes; 7) información y formación en todos los niveles. La información circula en redes entre empresas, dentro de la empresa y entre personas.
-
-*Drucker* lo resume: introducir información como elemento estructural **elimina muchos niveles de dirección** porque los mandos intermedios dejan de ser necesarios cuando todos comparten la misma «partitura».
+- <mark style="background: #ADCCFFA6;">Modelo horizontal o por procesos</mark>: estructura en **red**. La información y las órdenes fluyen **multidireccionalmente**. <mark style="background: #FFB8EBA6;">Orientado al cliente y al resultado global</mark>, no a la tarea departamental.<mark style="background: #8000E1A6;"> Pocos niveles directivos</mark>. Los SI están **integrados** (ERP, CRM, SCM) bajo <mark style="background: #FFB86CA6;">base de datos común</mark>. La <mark style="background: #ADCCFFA6;">información circula en redes entre empresas, dentro de la empresa y entre personas.</mark>
 
 ### 11. Cuatro componentes de un SI y papel de cada uno [2]p20-22
 
@@ -124,7 +120,7 @@ Los **EIS** (*Executive Information Systems*) son **sistemas computerizados espe
 
 ### 1 (ERP). Por qué y cómo surgieron los ERP [5]1.1
 
-Los **ERP** <mark style="background: #ADCCFFA6;">surgen como respuesta a la fragmentación de los SI departamentales del modelo vertical (o de pirámide)</mark>: cada área tenía su software incomunicado, lo que <mark style="background: #FFB8EBA6;">producía duplicación de datos</mark>, errores por <mark style="background: #FFB8EBA6;">desincronización</mark>, altos costes de mantenimiento y <mark style="background: #FFB8EBA6;">visión parcial del negocio</mark>.
+Los **ERP** <mark style="background: #ADCCFFA6;">surgen como respuesta a la fragmentación de los SI departamentales del modelo vertical (o tradicional)</mark>: cada área tenía su software incomunicado, lo que <mark style="background: #FFB8EBA6;">producía duplicación de datos</mark>, errores por <mark style="background: #FFB8EBA6;">desincronización</mark>, altos costes de mantenimiento y <mark style="background: #FFB8EBA6;">visión parcial del negocio</mark>.
 
 **Tres factores** impulsaron su aparición en *los 90*:
 
@@ -250,32 +246,33 @@ Convierte los datos operativos en **conocimiento accionable**: es el puente entr
 ## Tema 3 — Implantación de ERPs
 
 ### 1. Enumerar los 6 componentes del ciclo de vida de implantación de un ERP así como las fases posteriores [7]2
-
-Según *Rodríguez*/*Joana*, el ciclo se compone de <mark style="background: #ADCCFFA6;">cuatro fases básicas más dos procesos continuos</mark>.
-
 **Cuatro fases básicas**:
 
-1. <mark style="background: #FFB8EBA6;">Adopción</mark>: decisión de comprar un sistema integrado paquetizado frente a alternativas (desarrollo a medida).
-2. <mark style="background: #FFB8EBA6;">Selección</mark>: elegir qué ERP concreto, qué módulos y qué partes requieren adaptación.
-3. <mark style="background: #FFB8EBA6;">Implantación</mark>: parametrización del sistema, desarrollos específicos e integración con sistemas heredados.
-4. <mark style="background: #FFB8EBA6;">Puesta en marcha</mark>: arranque, estabilización, corrección de errores y adopción efectiva.
+1. <mark style="background: #ADCCFFA6;">Adopción</mark>: decisión de comprar un <mark style="background: #FFB8EBA6;">sistema integrado paquetizado</mark> frente a alternativas (*desarrollo a medida*).
+2. <mark style="background: #ADCCFFA6;">Selección</mark>: <mark style="background: #FFB8EBA6;">elegir</mark> qué ERP concreto, qué módulos y qué partes requieren adaptación.
+3. <mark style="background: #ADCCFFA6;">Implantación</mark>.
+4. <mark style="background: #ADCCFFA6;">Puesta en marcha</mark>.
 
-**Dos procesos transversales** (continuos durante todo el ciclo):
+**Dos procesos transversales** (<mark style="background: #FFB86CA6;">continuos durante todo el ciclo</mark>):
 
-5. **Gestión del cambio**: adaptación de organización, procesos y personas a la nueva tecnología.
-6. **Gestión del proyecto**: planificar, organizar, dirigir y administrar para asegurar los objetivos.
+5. <mark style="background: #ADCCFFA6;">Gestión del cambio</mark>: <mark style="background: #FFB8EBA6;">adaptación</mark> de organización, procesos y personas <mark style="background: #8000E1A6;">a la nueva tecnología</mark>.
+6. <mark style="background: #ADCCFFA6;">Gestión del proyecto</mark>: <mark style="background: #FFB8EBA6;">planificar, organizar, dirigir y administrar</mark> para asegurar los objetivos.
 
-**Fases posteriores** (Pastor y Esteves, 1999): <mark style="background: #FFB86CA6;">mantenimiento</mark> (correctivo y evolutivo), <mark style="background: #FFB86CA6;">evolución</mark> (*patches* y *releases*), <mark style="background: #FFB86CA6;">migración</mark> a nueva versión y <mark style="background: #FFB86CA6;">adquisición de nuevos módulos</mark> para cubrir nuevas áreas.
+**Fases posteriores**:
+- <mark style="background: #ADCCFFA6;">Mantenimiento</mark> (correctivo y evolutivo).
+- <mark style="background: #ADCCFFA6;">Evolución</mark> (*patches* y *releases*).
+- <mark style="background: #ADCCFFA6;">Migración</mark> a nueva versión.
+- <mark style="background: #ADCCFFA6;">Adquisición de nuevos módulos</mark> para cubrir nuevas áreas.
 
 ### 2. Enumerar las principales razones que tienen los directivos para adoptar un ERP [7]p17
 
 Según las encuestas entre directivos, **tres razones principales**:
 
-- <mark style="background: #FFB8EBA6;">Mejorar la exactitud y disponibilidad de la información</mark> (que toda la empresa hable el mismo idioma y use los mismos datos).
-- <mark style="background: #FFB8EBA6;">Mejorar la información para la toma de decisiones directivas</mark> (acceso ágil a información agregada y consistente).
-- <mark style="background: #FFB8EBA6;">Reducir costes y mejorar la eficiencia</mark> (eliminar tareas duplicadas, automatizar rutinas).
+- <mark style="background: #ADCCFFA6;">Mejorar la exactitud y disponibilidad de la información </mark>(que<mark style="background: #FFB86CA6;"> toda la empresa hable el mismo idioma </mark>y use los <mark style="background: #FFB8EBA6;">mismos datos</mark>).
+- <mark style="background: #ADCCFFA6;">Mejorar la información para la toma de decisiones directivas</mark> (<mark style="background: #FFB8EBA6;">acceso ágil a información</mark> agregada y consistente).
+- <mark style="background: #ADCCFFA6;">Reducir costes y mejorar la eficiencia</mark> (<mark style="background: #FFB8EBA6;">eliminar tareas duplicadas</mark>, automatizar rutinas).
 
-Desde IT, el ERP debería **eliminar silos de información** y **reducir costes de mantenimiento**, repartiendo los costes de desarrollo y actualización entre muchos clientes a través del paquete estándar.
+Desde IT, el *ERP* debería **eliminar silos de información** y **reducir costes de mantenimiento**.
 
 ### 7. Describir qué aspectos debe cubrir la fase de análisis de la situación actual en la implantación de un ERP [7]5.3
 
@@ -294,14 +291,14 @@ A diferencia de los proyectos clásicos, en ERP el análisis del «*as-is*» es 
 
 ### 9. Conocer los factores de éxito en la etapa de puesta en marcha del ERP [7]p45-46
 
-Según el estudio de **Esteves y Pastor (2004)**, los factores de éxito en la puesta en marcha (preparación final + *go live*) son:
+Según el estudio de **Esteves y Pastor**, los factores de éxito en la puesta en marcha son:
 
-- <mark style="background: #ADCCFFA6;">El papel del jefe de proyecto</mark>: liderazgo, anticipación, dirección firme bajo presión.
+- <mark style="background: #ADCCFFA6;">El papel del jefe de proyecto</mark>: <mark style="background: #FFB8EBA6;">liderazgo</mark>, anticipación, dirección firme bajo presión.
 - <mark style="background: #ADCCFFA6;">La comunicación efectiva</mark>: hacia dentro del equipo y hacia toda la organización afectada.
-- <mark style="background: #ADCCFFA6;">La anticipación preventiva de problemas</mark>: detectar y mitigar riesgos antes de que se materialicen.
-- <mark style="background: #ADCCFFA6;">El apoyo continuado de la alta dirección</mark>: respaldo visible y constante del *sponsor*, no sólo en el discurso inicial.
+- <mark style="background: #ADCCFFA6;">La anticipación preventiva de problemas</mark>: <mark style="background: #FFB86CA6;">detectar y mitigar riesgos</mark> antes de que se materialicen.
+- <mark style="background: #ADCCFFA6;">El apoyo continuado de la alta dirección</mark>: respaldo visible y constante del *sponsor*, <mark style="background: #FFB86CA6;">no sólo en el discurso inicial</mark>.
 
-Complemento desde el lado del usuario: <mark style="background: #FFB86CA6;">buen soporte cercano</mark> con escalado claro, <mark style="background: #FFB86CA6;">procedimiento ágil de resolución de incidencias</mark> y <mark style="background: #FFB86CA6;">monitorización del arranque</mark> con comunicación objetiva de éxitos y problemas.
+**Complemento desde el lado del usuario**: <mark style="background: #FFB86CA6;">buen soporte cercano</mark> con escalado claro, <mark style="background: #FFB86CA6;">procedimiento ágil de resolución de incidencias</mark> y <mark style="background: #FFB86CA6;">monitorización del arranque</mark> con comunicación objetiva de éxitos y problemas.
 
 ---
 

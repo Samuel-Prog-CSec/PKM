@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "56f235925ef127d6",
+        "id": "791f13b20f0929e8",
         "type": "tabs",
         "children": [
           {
-            "id": "08c258c65c8ccede",
+            "id": "4b653f2ac61c243a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Examen - Respuestas a preguntas seleccionadas"
             }
           }
         ]
@@ -92,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240
+    "width": 240,
+    "collapsed": true
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -109,12 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de Examen - Respuestas a preguntas seleccionadas"
             }
           },
           {
@@ -193,10 +199,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269
+    "width": 269,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templater-obsidian:Templater": false,
       "bases:Crear nueva base": false,
       "switcher:Abrir selector rápido": false,
       "canvas:Crear nuevo lienzo": false,
@@ -205,12 +213,12 @@
       "command-palette:Abrir paleta de comandos": false,
       "graph:Abrir vista gráfica": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "callout-manager:Insert Callout": false,
-      "templater-obsidian:Templater": false
+      "callout-manager:Insert Callout": false
     }
   },
-  "active": "08c258c65c8ccede",
+  "active": "4b653f2ac61c243a",
   "lastOpenFiles": [
+    "02 - Areas/Ingenieria/BI/Inteligencia del negocio.base",
     "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
     "02 - Areas/Ingenieria/Sistemas-Empresariales/Tema 3 - Implantación de ERPs.md",
     "02 - Areas/Ingenieria/Sistemas-Empresariales/Tema 2 - Soluciones de negocio.md",
