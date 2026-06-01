@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "OcDatabase16",
+      "OcCodeReview16",
       "TiSettingsDollar",
       "TiBusinessplan",
-      "CoCloud",
-      "BoBxRfid",
-      "TiScriptPlus"
+      "CoCloud"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -53,8 +53,6 @@
   "05 - PENDIENTES/VARIOS": "TiReportSearch",
   "01 - Proyectos/GO": "TiBrandGolang",
   "03 - Recursos/🛠️ Tools/Nmap": "TiEyeSearch",
-  "02 - Areas/Ingenieria/Bases de datos": "LiDatabase",
-  "02 - Areas/Ingenieria/Bases de datos/MongoDB.md": "BoBxlMongodb",
   "05 - PENDIENTES/VARIOS/Pintura-Revisar.md": "BoBxPaint",
   "03 - Recursos/🛠️ Tools/John The Ripper": "RaScythe",
   "03 - Recursos/🛠️ Tools/Tcpdump": "TiSpy",
@@ -109,5 +107,7 @@
   },
   "TFG/RFID": "BoBxRfid",
   "TFG/SonarCloud": "CoCloud",
-  "02 - Areas/Ingenieria/Sistemas-Empresariales": "TiSettingsDollar"
+  "02 - Areas/Ingenieria/Sistemas-Empresariales": "TiSettingsDollar",
+  "02 - Areas/Ingenieria/Sistemas-Empresariales/Laboratorios": "OcCodeReview16",
+  "02 - Areas/Ingenieria/Bases de Datos": "OcDatabase16"
 }

@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: Orden de lectura
+    filters:
+      and:
+        - Area == link("Laboratorios.base", "Laboratorios")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC

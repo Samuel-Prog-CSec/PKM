@@ -36,13 +36,6 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "02 - Areas/Ingenieria/Bases de datos/Bases de datos.base",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
         "pattern": "03 - Recursos/Biblioteca/Biblioteca.base",
         "patternType": "STRICT"
       },
@@ -192,6 +185,34 @@
         "type": "FILES",
         "pattern": "🔴⚔️ Red Team/AI Hacking/AI Pentesting.base",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Areas/Ingenieria/Sistemas-Empresariales/Sistemas-Empresariales.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Areas/Ingenieria/Sistemas-Empresariales/Laboratorios/Laboratorios.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Areas/Ingenieria/Sistemas-Empresariales/Laboratorios/00 - Plan de lectura 3 días (BORRAR antes del examen).md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [
@@ -221,13 +242,6 @@
         "type": "FILES_AND_DIRECTORIES",
         "pattern": "",
         "patternType": "WILDCARD"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "DIRECTORIES",
-        "pattern": "/",
-        "patternType": "STRICT"
       }
     ],
     "frontMatter": [
