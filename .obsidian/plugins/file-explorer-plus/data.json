@@ -50,13 +50,6 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/Fuzzing/Fuzzing web.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
         "pattern": "Windows 11 Pro Optimized Setup.md",
         "patternType": "STRICT"
       },
@@ -79,13 +72,6 @@
         "active": true,
         "type": "FILES",
         "pattern": "🔴⚔️ Red Team/Hacking web/XPath Injection/Inyección XPath.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/XSS/Cross-Site Scripting (XSS).md",
         "patternType": "STRICT"
       },
       {

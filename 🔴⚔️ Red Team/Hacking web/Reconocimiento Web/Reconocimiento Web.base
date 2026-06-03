@@ -1,0 +1,44 @@
+views:
+  - type: table
+    name: Todas
+    filters:
+      Area == link("Reconocimiento Web.base", "Reconocimiento Web")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 360
+      file.tags: 320
+  - type: table
+    name: Recon
+    filters:
+      and:
+        - Area == link("Reconocimiento Web.base", "Reconocimiento Web")
+        - file.hasTag("Recon")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 360
+      file.tags: 320
+  - type: table
+    name: Fuzzing
+    filters:
+      and:
+        - Area == link("Reconocimiento Web.base", "Reconocimiento Web")
+        - file.hasTag("Fuzzing")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 360
+      file.tags: 320

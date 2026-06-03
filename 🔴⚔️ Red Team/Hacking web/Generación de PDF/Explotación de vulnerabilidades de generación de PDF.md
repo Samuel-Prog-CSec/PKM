@@ -11,7 +11,7 @@ Area: "[[Vulnerabilidades de generación de PDF]]"
 ---
 
 # Ejecución de código JavaScript
-El primer exploit que exploraremos es la inyección de código *JavaScript*, ya que la **ejecución del código *JavaScript* inyectado permite más vectores de ataque**. Debido a que la biblioteca de generación de *PDF* representa la entrada *HTML*, podría ejecutar nuestro código *JavaScript* inyectado. Además, <mark style="background: #ADCCFFA6;">con la biblioteca de generación de *PDF* ejecutándose en el servidor, el payload también se ejecutaría en el servidor</mark>, por lo que este tipo de vulnerabilidad también se denomina [[Cross-Site Scripting (XSS)|Server-Side XSS]].
+El primer exploit que exploraremos es la inyección de código *JavaScript*, ya que la **ejecución del código *JavaScript* inyectado permite más vectores de ataque**. Debido a que la biblioteca de generación de *PDF* representa la entrada *HTML*, podría ejecutar nuestro código *JavaScript* inyectado. Además, <mark style="background: #ADCCFFA6;">con la biblioteca de generación de *PDF* ejecutándose en el servidor, el payload también se ejecutaría en el servidor</mark>, por lo que este tipo de vulnerabilidad también se denomina [[00 - Introducción a XSS|Server-Side XSS]].
 
 Para demostrar `Server-Side XSS` echemos un vistazo a un ejemplo de aplicación web para tomar notas. Al hacer clic en el icono de la impresora, la aplicación web genera un *PDF* imprimible que contiene todas nuestras notas:
 ![Tres tarjetas de texto: colores predeterminado, azul claro y ámbar, cada una con texto lorem ipsum. Vista en miniatura a la izquierda.](https://academy.hackthebox.com/storage/modules/204/pdf_js_2.png)

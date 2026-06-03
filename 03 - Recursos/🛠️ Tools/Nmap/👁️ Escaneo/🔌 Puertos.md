@@ -28,7 +28,7 @@ Podemos encontrar más información sobre las técnicas de escaneo de puertos en
 Por defecto, `Nmap` <mark style="background: #8000E1A6;">escanea los 1000 puertos TCP principales</mark> con el escaneo *SYN* (`-sS`). Este escaneo *SYN* está configurado solo de forma predeterminada cuando lo ejecutamos como *root* debido a los <mark style="background: #FF5582A6;">permisos de socket necesarios</mark> para crear paquetes TCP sin procesar. De lo contrario, el **escaneo TCP** (`-sT`) se realiza de forma predeterminada. Esto significa que si no definimos puertos y métodos de escaneo, estos parámetros se configuran automáticamente. Podemos definir los puertos uno por uno (`-p 22,25,80,139,445`), por rango (`-p 22-445`), por puertos superiores (`--top-ports=10`) de las bases de datos que han sido firmadas como más frecuencia, escaneando todos los puertos (`-p-`) pero también definiendo un escaneo rápido de puertos, que contiene los 100 puertos principales (`-F`).
 
 ## Rastrear los paquetes
-Si rastreamos los paquetes que `Nmap` envía, veremos el flag `RST` en `TCP port 21` que nuestro objetivo nos envía de vuelta. Para tener una vista clara del escaneo *SYN*, deshabilitamos las solicitudes de echo ICMP (`-Pn`), resolución [[🧭 DNS]] (`-n`), y escaneo de ping *ARP* (`--disable-arp-ping`).
+Si rastreamos los paquetes que `Nmap` envía, veremos el flag `RST` en `TCP port 21` que nuestro objetivo nos envía de vuelta. Para tener una vista clara del escaneo *SYN*, deshabilitamos las solicitudes de echo ICMP (`-Pn`), resolución [[02 - DNS - fundamentos|DNS]] (`-n`), y escaneo de ping *ARP* (`--disable-arp-ping`).
 ```shell-session
 $ sudo nmap 10.129.2.28 -p 21 --packet-trace -Pn -n --disable-arp-ping
 

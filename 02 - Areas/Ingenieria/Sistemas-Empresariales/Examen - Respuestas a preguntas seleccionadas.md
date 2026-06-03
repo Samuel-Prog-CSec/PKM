@@ -50,69 +50,61 @@ La <mark style="background: #8000E1A6;">transición del primero al segundo está
 - <mark style="background: #ADCCFFA6;">Modelo horizontal o por procesos</mark>: estructura en **red**. La información y las órdenes fluyen **multidireccionalmente**. <mark style="background: #FFB8EBA6;">Orientado al cliente y al resultado global</mark>, no a la tarea departamental.<mark style="background: #8000E1A6;"> Pocos niveles directivos</mark>. Los SI están **integrados** (ERP, CRM, SCM) bajo <mark style="background: #FFB86CA6;">base de datos común</mark>. La <mark style="background: #ADCCFFA6;">información circula en redes entre empresas, dentro de la empresa y entre personas.</mark>
 
 ### 11. Cuatro componentes de un SI y papel de cada uno [2]p20-22
-
-Watson formaliza el SI como **sistema sociotécnico** con cuatro componentes interdependientes en dos sub-sistemas.
-
 **Sub-sistema técnico**:
 
-- **Tecnología**: hardware (PC, servidores, móviles), software (aplicaciones, BBDD) y telecomunicaciones (redes, internet). Su papel: **dar soporte a la captación, procesamiento, almacenamiento y distribución de información**. Es el componente más visible pero un SI puede existir sin él (banca china del XIX con papel y libros).
-- **Procesos**: conjunto estructurado de pasos para llevar a cabo una actividad de negocio. Su papel: **mapear las acciones secuenciales** que un individuo o grupo debe ejecutar para completar una actividad (ej. flujo de aprovisionamiento: revisar stock → cotizar → seleccionar proveedor → pedir → recibir → pagar). Regla de oro: diseñar primero el proceso y después el software.
+- <mark style="background: #ADCCFFA6;">Tecnología</mark>: <mark style="background: #FFB8EBA6;">hardware</mark> (PC, servidores, móviles), <mark style="background: #FFB8EBA6;">software</mark> (aplicaciones, BBDD) y <mark style="background: #FFB8EBA6;">telecomunicaciones</mark> (redes, internet). Su papel: dar soporte a la <mark style="background: #FFB86CA6;">captación, procesamiento, almacenamiento y distribución de información</mark>. <mark style="background: #FF5582A6;">Un SI puede existir sin él</mark>.
+- <mark style="background: #ADCCFFA6;">Procesos</mark>: conjunto estructurado de <mark style="background: #FFB86CA6;">pasos para llevar a cabo una actividad de negocio</mark>. Su papel: <mark style="background: #FFB8EBA6;">mapear las acciones secuenciales</mark> que un individuo o grupo debe ejecutar para completar una actividad. **Regla de oro**: diseñar <mark style="background: #FF5582A6;">primero el proceso y después el software</mark>.
 
 **Sub-sistema social**:
 
-- **Personas**: gestores que definen los objetivos y usuarios que operan el sistema. Su papel: **aportar habilidades, actitudes y juicio**. Un SI fracasa con frecuencia porque los usuarios carecen de habilidades o tienen actitud negativa; por eso son indispensables formación y comunicación de beneficios.
-- **Estructura**: relaciones organizativas — jerarquía, líneas de reporte, sistema de incentivos. Su papel: **crear los incentivos** que aseguran la adopción del sistema. Sin recompensas alineadas, el sistema queda infrautilizado.
+- <mark style="background: #ADCCFFA6;">Personas</mark>: gestores que <mark style="background: #FFB86CA6;">definen los objetivos y usuarios que operan</mark> el sistema. Su papel: <mark style="background: #FFB8EBA6;">aportar habilidades, actitudes y juicio</mark>. Un SI <mark style="background: #FF5582A6;">fracasa con frecuencia porque los usuarios carecen de habilidades o tienen actitud negativa</mark>; por eso son <mark style="background: #8000E1A6;">indispensables formación y comunicación de beneficios</mark>.
+- <mark style="background: #ADCCFFA6;">Estructura</mark>: relaciones organizativas. Su papel: <mark style="background: #FFB86CA6;">crear los incentivos</mark> que <mark style="background: #FFB8EBA6;">aseguran la adopción del sistema</mark>. Sin recompensas alineadas, el <mark style="background: #8000E1A6;">sistema queda infrautilizado</mark>.
 
-**Interdependencia**: un cambio en un componente arrastra a los demás. El caso clásico es el de la nómina automática que fracasa pese a tener tecnología impecable porque las personas no confiaban (no daban su número de cuenta) y los procesos no contemplaban la corrección de errores. La mayoría de los fracasos se concentra en el componente «personas».
+**Interdependencia**: un <mark style="background: #ADCCFFA6;">cambio en un componente arrastra a los demás</mark>.
 
 ### 13. Características de los TPS [3]3.2
 
-Los **TPS** (*Transaction Processing Systems*) son los **pilares del SI empresarial**. Recogen las operaciones diarias —ventas, compras, pagos, facturación, nóminas— que sostienen el negocio.
+Los **TPS** (*Transaction Processing Systems*) son los **pilares del SI empresarial**. <mark style="background: #ADCCFFA6;">Recogen las operaciones diarias</mark> que sostienen el negocio.
 
 **Características**:
 
-- Cubren los procesos **más definidos y estructurados** de la organización, los del nivel operativo.
-- Tratan **operaciones que se repiten muchas veces** con gran similitud entre todas.
-- Las actividades se separan en **etapas (procedimientos) bien comprendidas** y descriptibles en detalle.
-- Existen **muy pocas excepciones** a los procedimientos normales.
-- **Gran volumen** de transacciones, **intensivos en E/S**.
-- **Cálculos y procesos simples**.
-- **Mayor velocidad y exactitud** que los procedimientos manuales.
+- <mark style="background: #FFB86CA6;">Cubren los procesos del nivel operativo</mark>.
+- Tratan <mark style="background: #FFB8EBA6;">operaciones que se repiten muchas veces</mark>.
+- Las <mark style="background: #FFB86CA6;">actividades se separan en etapas (procedimientos)</mark> bien comprendidas.
+- Existen <mark style="background: #FFB86CA6;">muy pocas excepciones</mark>.
+- <mark style="background: #FFB86CA6;">Intensivos en E/S</mark>.
+- <mark style="background: #FFB8EBA6;">Cálculos y procesos simples</mark>.
+- <mark style="background: #8000E1A6;">Mayor velocidad y exactitud</mark> que los procedimientos manuales.
 
 **Salidas**: producen dos tipos de output:
-
-- **Documentos de transacciones**, que pueden ser **de acción** (billete de avión, cheque) o **de información** (justificante, lista de cargos de tarjeta).
-- **Consultas sobre la base de datos** mediante SGBD y lenguajes 4GL.
-
-Ejemplos: facturación, contabilidad, nóminas, recepción de pedidos. Sin TPS sólidos, los SI superiores (MIS, DSS, EIS) no tienen datos sobre los que trabajar.
+- <mark style="background: #ADCCFFA6;">Documentos de transacciones</mark>.
+- <mark style="background: #ADCCFFA6;">Consultas sobre la base de datos</mark>.
 
 ### 14. Características de los MIS [3]3.3
 
-Los **MIS** (*Management Information Systems*) son **sistemas basados en ordenador que proporcionan información a usuarios con necesidades similares**, principalmente directivos, para que tomen decisiones y resuelvan problemas.
+Los **MIS** (*Management Information Systems*) son <mark style="background: #ADCCFFA6;">sistemas basados en ordenador que proporcionan información a usuarios con necesidades similares</mark>, principalmente directivos.
 
 **Características**:
 
-- Se apoyan en las **bases de datos corporativas** alimentadas por los TPS.
-- Sirven de apoyo a las **decisiones estructuradas** (los directivos conocen de antemano los factores a considerar).
-- Generan **informes periódicos** en formato predefinido (semanal, mensual, trimestral).
-- Pueden incorporar la **administración por excepción**: comparar desempeño real con estándares y avisar cuando se sale del intervalo aceptable. Se aplica de cuatro formas: informe solo cuando hay excepción, secuencia que destaca excepciones, agrupación por área, o mostrando variación respecto a la norma.
-- Estructuran la información en función de **decisiones definidas a priori**, lo que es su fortaleza y su limitación.
+- Se <mark style="background: #FFB86CA6;">apoyan en las bases de datos corporativas</mark> alimentadas por los *TPS*.
+- Sirven de <mark style="background: #FFB86CA6;">apoyo a las decisiones estructuradas</mark>.
+- Generan <mark style="background: #FFB8EBA6;">informes periódicos</mark>.
+- Pueden incorporar la **administración por excepción**.
+- Estructuran la información en función de <mark style="background: #FFB86CA6;">decisiones definidas a priori</mark>, lo que es su <mark style="background: #8000E1A6;">fortaleza y su limitación</mark>.
 
-**Niveles**: cubren los tres (estratégico, táctico, operativo) pero resultan **más adecuados para el táctico-operativo**. Para la alta dirección y decisiones no estructuradas no sirven, porque su estructura se define a priori. Esta limitación motivó el desarrollo posterior de DSS y EIS.
+**Niveles**: cubren los tres (estratégico, táctico, operativo) pero <mark style="background: #ADCCFFA6;">resultan más adecuados para el táctico-operativo</mark>. <mark style="background: #FF5582A6;">Para la alta dirección y decisiones no estructuradas no sirven</mark>, porque su estructura se define a priori.
 
 ### 16. Características de los EIS [3]3.5
 
-Los **EIS** (*Executive Information Systems*) son **sistemas computerizados específicamente diseñados para la alta dirección**. Mientras los DSS apoyan principalmente planificación, los EIS soportan **actividades de control**: detectar problemas y oportunidades.
+Los **EIS** (*Executive Information Systems*) son sistemas computerizados <mark style="background: #ADCCFFA6;">específicamente diseñados para la alta dirección</mark>.
 
 **Características esenciales**:
 
-- **Capacidad de acceso y gestión de información**: tanto interna como externa, **estructurada y no estructurada**, **cuantitativa y cualitativa**, sin intermediarios.
-- **Presentación**: combina datos de fuentes diversas en un mismo informe, con capacidad de **filtrar, comprimir y agregar** información, y de **profundizar (drill-down)** bajo demanda. Adaptada al usuario.
-- **Orientación a los factores críticos de éxito (CSF)**: información sobre las **variables clave del negocio**. Diseñado para evolución constante.
-- **Capacidad de comunicación y organización del tiempo**: correo, agenda, calendario integrados.
-- **Facilidad de uso**: curva de aprendizaje mínima (los ejecutivos no son técnicos); uso directo sin intermediarios.
-
-**Modos de uso**: a) **acceso de lectura** a la situación actual y tendencias; b) **herramienta de análisis personalizado** (ratios, extrapolaciones, modelos simulados).
+- <mark style="background: #ADCCFFA6;">Capacidad de acceso y gestión de información</mark>.
+- <mark style="background: #ADCCFFA6;">Presentación</mark>: <mark style="background: #FFB86CA6;">combina datos de fuentes diversas en un mismo informe</mark>, con <mark style="background: #FFB8EBA6;">capacidad de filtrar, comprimir y agregar</mark> información, y de profundizar (*drill-down*) bajo demanda.
+- <mark style="background: #ADCCFFA6;">Orientación a los factores críticos de éxito (CSF)</mark>: información sobre las <mark style="background: #FFB8EBA6;">variables clave del negocio</mark>.
+- <mark style="background: #ADCCFFA6;">Capacidad de comunicación y organización del tiempo</mark>.
+- <mark style="background: #ADCCFFA6;">Facilidad de uso</mark>: <mark style="background: #FFB86CA6;">curva de aprendizaje mínima</mark> (los ejecutivos no son técnicos).
 
 ---
 
@@ -190,56 +182,49 @@ Una solución SCM <mark style="background: #ADCCFFA6;">da soporte a los cinco pr
 - **Determinar dónde almacenar** los productos terminados.
 - **Identificar el transporte óptimo**.
 - **Planificación de la demanda**.
-- **Gestión del flujo de productos** a través de centros de distribución y almacenes, <mark style="background: #FFB8EBA6;">asegurando entregas eficientes en los lugares adecuados</mark>.
+- **Gestión del flujo de productos**, <mark style="background: #FFB8EBA6;">asegurando entregas eficientes en los lugares adecuados</mark>.
 
 ---
 
 ### 16 (CRM). Definir CRM desde el punto de vista empresarial y tecnológico [6]3.1,3.2
 
-CRM tiene **dos significados complementarios**:
+**Dos significados complementarios**:
 
-**Desde el punto de vista empresarial**: CRM es una **estrategia de negocio construida para mejorar el servicio de atención al cliente**, cuyo objetivo es **aprender más sobre las necesidades y comportamientos de los clientes para desarrollar fuertes relaciones de colaboración**. Es una actitud, una **cultura de centralización en el cliente** por parte de toda la organización. La AEMR lo define como «conjunto de estrategias de negocio, marketing, comunicación e infraestructuras tecnológicas, diseñadas con el objetivo de construir una relación duradera con los clientes, identificando, comprendiendo y satisfaciendo sus necesidades». Kotler: «proceso de construcción y conservación de relaciones rentables con los clientes mediante la entrega de un valor superior y mayor satisfacción».
+- <mark style="background: #ADCCFFA6;">Empresarial</mark>: **estrategia de negocio centrada en el cliente** para construir relaciones duraderas, identificando, comprendiendo y satisfaciendo sus necesidades. Es una <mark style="background: #FFB86CA6;">cultura de centralización en el cliente</mark> de toda la organización.
+- <mark style="background: #ADCCFFA6;">Tecnológico</mark>: **sistema informático que aporta la tecnología** para implantar ese modelo, integrando funciones administrativas/financieras, logística, producción y RRHH situando al cliente en posición central.
 
-**Desde el punto de vista tecnológico**: los sistemas CRM aportan **la tecnología para implantar un modelo organizativo de gestión empresarial que integre las funciones administrativas/financieras, logística, producción y RRHH, situando al cliente en posición central**. Permiten un aprendizaje constante de preferencias y comportamientos y dan soporte operativo a la estrategia.
-
-**Las dos dimensiones son inseparables**: sin la estrategia, la tecnología CRM es una agenda glorificada; sin la tecnología, la estrategia es inejecutable a escala. La implantación exige cambio cultural y tecnológico simultáneos.
+Ambas son **inseparables**: sin estrategia, la tecnología es una agenda glorificada; sin tecnología, la estrategia es inejecutable a escala.
 
 ### 18 (CRM). Objetivos principales del CRM [6]3.2
 
-1. **Satisfacción del cliente**: que el cliente perciba que es **valorado de forma especial y tratado de forma individualizada**, con los productos y servicios que requiere. Es el objetivo más inmediato.
-2. **Fidelización**: convertir clientes ocasionales en **fieles a largo plazo** que prefieran nuestros productos frente a la competencia. Se construye con tiempo y sensibilidad hacia el cliente.
-3. **Incremento de los ingresos**: una base de clientes fieles compra más, más a menudo y atrae nuevos. El CRM identifica oportunidades de *upselling* y *cross-selling*.
-4. **Incremento del margen de beneficio**: la mejor segmentación, fidelización y optimización **incrementan el margen por cliente**; un cliente fiel cuesta menos de mantener que uno nuevo de captar.
+1. <mark style="background: #FFB8EBA6;">Satisfacción del cliente</mark>: que se sienta valorado y tratado de forma individualizada.
+2. <mark style="background: #FFB8EBA6;">Fidelización</mark> a largo plazo frente a la competencia.
+3. <mark style="background: #FFB8EBA6;">Incremento de los ingresos</mark> (*upselling*, *cross-selling*).
+4. <mark style="background: #FFB8EBA6;">Incremento del margen de beneficio</mark> por cliente (un cliente fiel cuesta menos de mantener que uno nuevo de captar).
 
 ### 20 (CRM). Tareas del CRM operacional [6]3.3.1
 
-El CRM operacional es la **parte más técnica**: abarca desde la identificación de clientes potenciales hasta el servicio posventa. Tareas:
+Parte técnica, desde la identificación de potenciales hasta el servicio posventa:
 
-- **Automatización de la fuerza de ventas** (núcleo más importante): información del mercado y competencia a los agentes, coordinación del equipo comercial, información de productos y clientes, informes actualizados del estado de operaciones, evaluación del rendimiento (ofertas, campañas, productos, zonas, agentes), automatización de tareas de rutina.
-- **Automatización de marketing**: planificar, ejecutar y mejorar en tiempo real campañas. Construcción/gestión de campañas, medición de operaciones ganadas/perdidas, gestión de oportunidades, información de la competencia, distribución de publicaciones.
-- **Help desk y gestión de áreas de soporte**: aplicaciones para resolver incidencias técnicas sobre el producto.
-- **Gestión del servicio al cliente**: funciones técnicas con más contacto directo con el cliente.
-- **Call center**: centralización de llamadas con integración a la ficha del cliente.
-- **Gestión de incentivos** al equipo comercial (comisiones, premios).
-- **Gestión de relaciones con socios**: contratos, niveles de servicio (SLA), gestión de casos.
-- **Gestión de calidad** de procesos comerciales y de atención.
-- **Métricas CRM**: variables de negocio como **satisfacción de clientes** y **tiempo de entrega**.
+- <mark style="background: #FFB8EBA6;">Automatización de la fuerza de ventas</mark> (núcleo): información de mercado/competencia/productos/clientes, coordinación del equipo, informes del estado de operaciones, evaluación del rendimiento.
+- <mark style="background: #FFB8EBA6;">Automatización de marketing</mark>: campañas, oportunidades, medición de ganadas/perdidas.
+- <mark style="background: #FFB8EBA6;">Help desk</mark> y gestión de áreas de soporte (incidencias técnicas).
+- <mark style="background: #FFB8EBA6;">Gestión del servicio al cliente</mark>.
+- **Call center**, **gestión de incentivos** al equipo, **gestión de socios** (contratos, SLA), **gestión de calidad** y **métricas CRM** (satisfacción, tiempo de entrega).
 
 ### 21 (CRM). Tareas del CRM analítico [6]3.3.2
 
-El CRM analítico **analiza la información proporcionada por el CRM operacional para comprender mejor el comportamiento de los clientes**. Tareas:
+<mark style="background: #ADCCFFA6;">Analiza la información del CRM operacional para entender el comportamiento del cliente</mark>:
 
-- **Análisis del comportamiento del cliente**: identificar patrones de compra, frecuencia, canales preferidos, momentos del ciclo de vida.
-- **Diseño de estrategias de marketing**: campañas dirigidas, personalizadas, optimizadas por segmento y canal.
-- **Predicción de ventas**: estimación de demanda futura por producto, región o cliente.
-- **Segmentación de clientes**: agrupación por comportamiento, valor económico o riesgo de abandono.
-- **Scoring** de clientes y *leads*: puntuaciones para priorizar actividad comercial.
-- **Análisis de campañas**: evaluar qué funcionó, en qué segmento y con qué canal.
-- **Predicción de *churn***: identificar clientes con riesgo elevado de abandono para anticipar acciones de retención.
+- <mark style="background: #FFB8EBA6;">Análisis del comportamiento</mark>: patrones de compra, frecuencia, canales.
+- <mark style="background: #FFB8EBA6;">Diseño de estrategias de marketing</mark> dirigidas y personalizadas.
+- <mark style="background: #FFB8EBA6;">Predicción de ventas</mark>.
+- <mark style="background: #FFB8EBA6;">Segmentación</mark> por comportamiento, valor o riesgo.
+- **Scoring** de clientes y *leads*.
+- **Análisis de campañas** (qué funcionó y dónde).
+- **Predicción de *churn***.
 
-**Tecnologías de soporte**: usa **minería de datos** (clustering para segmentar, clasificación para predecir churn, reglas de asociación para productos complementarios) y se apoya en **BI** (cuadros de mando, OLAP). Requiere integración del CRM con telefonía avanzada, correo, web, reconocimiento de voz.
-
-Convierte los datos operativos en **conocimiento accionable**: es el puente entre la cantidad de interacciones diarias y la calidad de las decisiones estratégicas.
+Usa <mark style="background: #FFB86CA6;">minería de datos</mark> y <mark style="background: #FFB86CA6;">BI</mark>. Convierte los datos operativos en **conocimiento accionable**.
 
 ---
 
@@ -298,221 +283,150 @@ Según el estudio de **Esteves y Pastor**, los factores de éxito en la puesta e
 - <mark style="background: #ADCCFFA6;">La anticipación preventiva de problemas</mark>: <mark style="background: #FFB86CA6;">detectar y mitigar riesgos</mark> antes de que se materialicen.
 - <mark style="background: #ADCCFFA6;">El apoyo continuado de la alta dirección</mark>: respaldo visible y constante del *sponsor*, <mark style="background: #FFB86CA6;">no sólo en el discurso inicial</mark>.
 
-**Complemento desde el lado del usuario**: <mark style="background: #FFB86CA6;">buen soporte cercano</mark> con escalado claro, <mark style="background: #FFB86CA6;">procedimiento ágil de resolución de incidencias</mark> y <mark style="background: #FFB86CA6;">monitorización del arranque</mark> con comunicación objetiva de éxitos y problemas.
-
 ---
 
 ## Tema 5 (I) — Inteligencia de negocio (BI + Data Mining)
 
 ### 4. Componentes básicos de BI [8]p41
 
-Cano identifica los **seis componentes** que aparecen en todo proyecto de BI:
+<mark style="background: #ADCCFFA6;">Seis componentes</mark> (*Cano*):
 
-1. **Problemática empresarial** a la que se quiere dar respuesta (punto de partida; sin problema claro, BI es ejercicio académico).
-2. **Equipo de personas o una persona** que lleve a cabo el análisis (con criterio de negocio para formular preguntas e interpretar resultados).
-3. **Información de los sistemas internos** (operacionales/transaccionales): base interna del análisis.
-4. **Información externa**: contexto que lo interno por sí solo no puede aportar.
-5. **Datawarehouse**: base de datos analítica donde se integra la información.
-6. **Aplicación de Business Intelligence**: herramientas de análisis y visualización (cuadros de mando, OLAP, *query & reporting*, minería de datos).
-
-La ausencia de cualquiera de ellos compromete los resultados.
+1. **Problemática empresarial** a resolver.
+2. **Equipo de personas** que lleva el análisis.
+3. **Información de los sistemas internos** (*operacionales*).
+4. **Información externa**.
+5. **Datawarehouse**.
+6. **Aplicación de BI** (`OLAP`, *query & reporting*, minería de datos, dashboards).
 
 ### 5. Características del esquema estrella [8]p79
 
-Modelo de datos analítico estándar en BI. Recibe su nombre porque visualmente se asemeja a una estrella: una tabla central rodeada de tablas radiales.
+<mark style="background: #ADCCFFA6;">Modelo analítico estándar</mark> en BI:
 
-**Características**:
+- Una **tabla de hechos central** (*fact table*): <mark style="background: #FFB86CA6;">métricas cuantitativas `+` claves foráneas</mark> a las dimensiones.
+- **Una sola tabla por dimensión**: <mark style="background: #FFB8EBA6;">contexto descriptivo</mark> (cliente, producto, tiempo, tienda).
+- **Clave de la tabla de hechos** = <mark style="background: #FFB86CA6;">concatenación</mark> de las <mark style="background: #FFB8EBA6;">claves de las dimensiones</mark>.
+- **Relación 1:N** entre<mark style="background: #FFB8EBA6;"> dimensión y tabla de hechos</mark>.
+- **Desnormalización**: <mark style="background: #FFB8EBA6;">redundancia controlada en dimensiones</mark> → menos *joins* → <mark style="background: #FFB86CA6;">consultas más rápidas</mark>.
 
-- **Una tabla de hechos central** (*fact table*): contiene las métricas cuantitativas del negocio (importes, cantidades, márgenes) y las claves foráneas hacia las dimensiones. Cada fila es una observación.
-- **Una sola tabla por dimensión**: las tablas de dimensiones rodean a la tabla de hechos y aportan el **contexto descriptivo** (cliente, producto, tiempo, tienda). Responden al «quién, dónde, cuándo, qué».
-- **La clave de la tabla de hechos se forma por concatenación** de las claves de las distintas dimensiones.
-- **Relación 1:N** entre cada dimensión y la tabla de hechos.
-- **Desnormalización**: acepta cierta **redundancia en las dimensiones** para minimizar *joins* y acelerar consultas.
-
-**Variantes**: cuando se unen distintos esquemas estrella que comparten dimensiones se forma un **esquema galaxia**. Si se normalizan las dimensiones rompiéndolas en sub-tablas se obtiene un **esquema copo de nieve** (más eficiente en espacio, más lento en consultas). La estrella es el **estándar de oro** en BI moderno porque el almacenamiento es barato y lo que importa es la velocidad de consulta.
+**Variantes**: <mark style="background: #ADCCFFA6;">galaxia</mark> (varios esquemas estrella que <mark style="background: #FFB8EBA6;">comparten dimensiones</mark>); <mark style="background: #ADCCFFA6;">copo de nieve</mark> (<mark style="background: #FFB86CA6;">dimensiones normalizadas en sub-tablas</mark>; menos espacio pero <mark style="background: #FFB8EBA6;">más lento</mark>).
 
 ### 8. Concepto de jerarquía en una dimensión, facilidades y ejemplo [8]p83
 
-**Concepto**: estructura lógica que **organiza los datos de una dimensión en niveles sucesivos de detalle**, del más general al más específico. Cada nivel está contenido dentro del superior, como una matrioshka.
+**Concepto**: <mark style="background: #ADCCFFA6;">estructura lógica que organiza una dimensión en niveles sucesivos de detalle</mark>, de lo <mark style="background: #FFB86CA6;">general a lo específico</mark>.
 
 **Facilidades**:
 
-- **Navegación intuitiva** mediante **drill-down** (profundizar) y **roll-up** (agregar) sin generar nuevos informes.
-- **Uso de un solo informe para distintos niveles** de análisis.
-- **Análisis de causa-raíz**: si las ventas en España caen, drill-down para ver qué comunidad falla, qué ciudad y qué tienda.
-- **Orden visual**: arriba lo agregado, abajo el detalle bajo demanda.
+- <mark style="background: #ADCCFFA6;">Drill-down</mark> (<mark style="background: #FFB86CA6;">profundizar</mark>) y <mark style="background: #ADCCFFA6;">roll-up</mark> (<mark style="background: #FFB86CA6;">agregar</mark>) <mark style="background: #FFB8EBA6;">sin generar nuevos informes</mark>.
+- <mark style="background: #8000E1A6;">Un solo informe</mark> para distintos niveles.
+- <mark style="background: #ADCCFFA6;">Análisis de causa-raíz</mark>.
 
-**Ejemplo — dimensión Geografía**:
-
-```
-Nivel 1 (Top):    Continente (Europa)
-Nivel 2:          País (España)
-Nivel 3:          Ciudad (Madrid)
-Nivel 4 (Base):   Tienda específica
-```
-
-En el dashboard se ve una sola barra «Europa: 1.000.000 €». Doble clic → países; clic en España → ciudades; clic en Madrid → tiendas. Como un telescopio que permite ver desde el planeta entero hasta una hormiga.
-
-Otra jerarquía típica: **temporal** (Año → Trimestre → Mes → Día).
+**Ejemplo — dimensión Geografía**: Continente (Europa) → País (España) → Ciudad (Madrid) → Tienda. Otra típica: **Tiempo** (Año → Trimestre → Mes → Día).
 
 ### 10. Componentes de BI y relacionarlos gráficamente [8]p93-94
 
-Flujo arquitectónico de los componentes técnicos:
-
 ```
-       FUENTES
-   (operacionales / departamentales / externas)
+FUENTES (operacionales / departamentales / externas)
             │
             ▼
-          ETL
-   (Extract → Transform → Load)
+ETL (Extract → Transform → Load)
             │
             ▼
-   DATAWAREHOUSE + Datamarts + Metadata
+DATAWAREHOUSE + Datamarts + Metadata
             │
             ▼
-   HERRAMIENTAS ANALÍTICAS
-   (OLAP, Query & Reporting,
-    Minería de datos, Dashboards)
+HERRAMIENTAS ANALÍTICAS --> (OLAP, Query & Reporting, Minería de datos, Dashboards)
             │
             ▼
        USUARIO FINAL
 ```
 
-**Recorrido**: las fuentes aportan datos brutos; el ETL los extrae, limpia, transforma y carga (60-80% del esfuerzo del proyecto); el datawarehouse (con datamarts y metadata) los almacena de forma orientada al análisis; las herramientas analíticas los explotan para entregar información elaborada al usuario final. La metadata acompaña al DW haciendo todo el flujo trazable y auditable.
-
 ### 11. Fuentes de información de BI [8]p95-96
-
-Tres tipos:
-
-- **Sistemas operacionales** (transaccionales internos): **ERP, CRM, SCM**. Aportan la mayor parte de los datos del DW: cada pedido, venta o movimiento de almacén alimenta el repositorio. Son la base estructurada del BI.
-- **Sistemas de información departamentales**: aplicaciones específicas de cada área no integradas en el ERP corporativo. Ejemplos: **previsiones** de ventas (hojas de cálculo del departamento comercial), **presupuestos** financieros, planes de producción. Suelen estar dispersos en aplicaciones heterogéneas.
-- **Información externa**: datos que vienen de fuera para contextualizar lo interno. Ejemplos: **estudios de mercado**, **datos poblacionales**, indicadores macroeconómicos, datos meteorológicos, índices sectoriales, datos de competidores. Se compran a proveedores especializados (Nielsen, INE) o se extraen de fuentes públicas.
-
-La combinación de las tres fuentes permite responder preguntas que ninguna por separado podría resolver.
+- <mark style="background: #ADCCFFA6;">Sistemas operacionales</mark> (*transaccionales*): <mark style="background: #FFB8EBA6;">ERP, CRM, SCM</mark>.
+- <mark style="background: #ADCCFFA6;">SI departamentales</mark>: previsiones de ventas, <mark style="background: #FFB8EBA6;">presupuestos</mark>, <mark style="background: #FFB8EBA6;">planes de producción</mark>.
+- <mark style="background: #ADCCFFA6;">Información externa</mark>: <mark style="background: #FFB8EBA6;">estudios de mercado</mark>, datos poblacionales, <mark style="background: #FFB8EBA6;">indicadores macroeconómicos</mark>.
 
 ### 16. Características de las herramientas ETL [8]p110
-
-Una herramienta ETL profesional debe ofrecer **siete características**:
-
-- **Interfaz gráfica**: entorno visual para diseñar flujos sin programar todo a mano.
-- **Gestión de metadatos** integrada: documenta qué datos se mueven, con qué transformaciones.
-- **Soporte para extracción**: desde múltiples fuentes (BBDD, ficheros, APIs, SAP, mainframes).
-- **Soporte para transformación**: funciones de limpieza, agregación, derivación de campos, aplicación de reglas de negocio.
-- **Soporte para carga** en el DW: carga incremental y masiva, gestión de claves subrogadas.
-- **Acceso remoto a datos**: conexión a fuentes distribuidas geográficamente.
-- **Administración**: monitorización, gestión de errores, *logs*, alertas, planificación de trabajos.
-
-Estas características diferencian una herramienta profesional (Informatica, Talend, IBM DataStage, Microsoft SSIS) de un conjunto de scripts hechos a mano.
+- <mark style="background: #ADCCFFA6;">Interfaz gráfica</mark>.
+- <mark style="background: #ADCCFFA6;">Gestión de metadatos</mark> integrada.
+- Soporte para <mark style="background: #ADCCFFA6;">extracción de múltiples fuentes</mark>.
+- Soporte para <mark style="background: #ADCCFFA6;">transformación</mark> (<mark style="background: #FFB8EBA6;">limpieza, agregación, derivación</mark>).
+- Soporte para <mark style="background: #ADCCFFA6;">carga en el DW</mark> (<mark style="background: #FFB86CA6;">incremental y masiva</mark>).
+- <mark style="background: #ADCCFFA6;">Acceso remoto a datos</mark>.
+- <mark style="background: #ADCCFFA6;">Administración</mark>: <mark style="background: #FFB8EBA6;">monitorización</mark>, *logs*, alertas, planificación.
 
 ### 18. Características de un datawarehouse [8]p114-115
+- <mark style="background: #ADCCFFA6;">Orientado a un área</mark> (*problemas de negocio*): <mark style="background: #FFB8EBA6;">cada parte resuelve un problema</mark> definido por los decisores.
+- <mark style="background: #ADCCFFA6;">Integrado</mark>: medidas, códigos y formatos <mark style="background: #FFB8EBA6;">comunes</mark>.
+- <mark style="background: #ADCCFFA6;">Indexado al tiempo</mark>: <mark style="background: #FFB8EBA6;">mantiene información histórica</mark> referida a unidades temporales.
+- <mark style="background: #ADCCFFA6;">No volátil</mark>: se <mark style="background: #FFB8EBA6;">actualiza periódicamente</mark> (<mark style="background: #FF5582A6;">no en tiempo real</mark>); los <mark style="background: #8000E1A6;">datos se acumulan, no se sobrescriben</mark>.
 
-**Bill Inmon** definió las **cuatro características esenciales** que diferencian un DW de una BD transaccional:
-
-- **Orientado a un área (problemas de negocio)**: cada parte del DW está construida para **resolver un problema definido por los decisores** (hábitos de compra, calidad de productos, productividad de fabricación). La información se organiza en torno a **áreas** (ventas, clientes, transporte). Provee visión completa y concisa, obviando lo irrelevante.
-- **Integrado**: la información se transforma en **medidas, códigos y formatos comunes**. Permite estandarización: misma moneda, código único de cliente, formatos de fecha homogéneos. Sin integración el DW sería una colección heterogénea imposible de cruzar.
-- **Indexado en el tiempo**: **mantiene información histórica** referida a unidades temporales (horas, días, semanas, meses, años). El DW conserva la evolución completa con sello temporal, permitiendo analizar tendencias y estacionalidad.
-- **No volátil**: los usuarios **no mantienen la información** como en un entorno transaccional. Se almacena para la toma de decisiones y se **actualiza periódicamente** (cargas nocturnas/semanales), no continuamente. Los datos se acumulan, no se sobrescriben: las cifras de un trimestre cerrado no cambian.
-
-Adicionalmente, **soporta la toma de decisiones**: éste es su propósito esencial. Kimball complementa señalando que la información del DW debe ser consistente, separable y combinable.
+Soporta la **toma de decisiones** (<mark style="background: #FFB86CA6;">propósito esencial</mark>).
 
 ### 21. Qué es el metadata en un datawarehouse [8]p120
 
-El metadata es el **repositorio de información sobre la información** almacenada en el DW: datos que describen otros datos. Es lo que hace que el DW sea **explorable, comprensible y auditable**.
+<mark style="background: #ADCCFFA6;">Repositorio de información sobre la información</mark> almacenada en el DW. *Para cada dato contiene*:
 
-Para cada elemento del DW, la metadata contiene:
+- <mark style="background: #ADCCFFA6;">Significado y atributos</mark>.
+- <mark style="background: #ADCCFFA6;">Origen</mark>: de <mark style="background: #FFB86CA6;">qué sistema procede</mark> y qué <mark style="background: #FFB8EBA6;">transformaciones</mark> ha sufrido.
+- <mark style="background: #ADCCFFA6;">Responsables</mark>: <mark style="background: #FFB86CA6;">propietario</mark> de negocio y <mark style="background: #FFB8EBA6;">custodio técnico</mark>.
 
-- **Significado y atributos**: qué representa el dato (¿«importe de venta» incluye IVA?), unidades de medida, valores válidos, reglas de negocio.
-- **Origen**: de qué sistema procede (ERP, CRM, hoja de cálculo), qué transformaciones ha sufrido en el ETL, relaciones con otros datos.
-- **Responsables**: propietario (qué área de negocio lo gobierna), custodio técnico (qué equipo de IT lo mantiene), política de calidad y actualización.
-
-Sin metadata, un DW se convierte rápidamente en un **cementerio de datos sin contexto**: los analistas no saben qué significa cada campo, los auditores no pueden trazar de dónde viene cada cifra. La metadata es lo que permite que el DW sea un **activo gestionable a largo plazo**.
+Hace que el DW sea **explorable, comprensible y auditable**.
 
 ### 23. Funcionalidades de las herramientas OLAP [8]p126
 
-Las herramientas **OLAP** (*Online Analytical Processing*) permiten **analizar la información a distintos niveles de agregación y sobre múltiples dimensiones** de forma rápida e interactiva.
+<mark style="background: #ADCCFFA6;">Analizar información a distintos niveles de agregación y sobre múltiples dimensiones</mark> de forma <mark style="background: #8000E1A6;">rápida e interactiva</mark>:
 
-**Funcionalidades principales**:
+- **Análisis multidimensional**: cruzar <mark style="background: #FFB8EBA6;">varias dimensiones</mark> (tiempo × producto × geografía × cliente).
+- **Distintos niveles de agregación** aprovechando <mark style="background: #FFB86CA6;">jerarquías</mark>.
+- **Consultas ad-hoc** <mark style="background: #FFB86CA6;">rápidas</mark>.
+- **Rotación, drill-down, roll-up, dicing** sobre el cubo.
+- **Cálculos derivados**.
 
-- **Análisis multidimensional**: cruzar varias dimensiones simultáneamente (tiempo × producto × geografía × cliente × canal).
-- **Distintos niveles de agregación**: navegación entre niveles aprovechando las **jerarquías** de cada dimensión.
-- **Consultas ad-hoc rápidas**: el usuario formula consultas sobre la marcha sin pedir nuevos informes a IT.
-- **Rotación de dimensiones** (*slicing & dicing*): reorganizar los ejes para distintas perspectivas.
-- **Profundización y agregación** (*drill-down*, *roll-up*) a través de jerarquías.
-- **Cálculos derivados**: ratios, porcentajes, comparaciones, varianzas.
-
-Cumplen la regla **FASMI** (*Fast Analysis of Shared Multidimensional Information*). Tipos: **ROLAP** (acceso a BD relacional, sin límite de tamaño, más lento), **MOLAP** (almacén multidimensional propio, más rápido pero limitado) y **HOLAP** (híbrido).
+<mark style="background: #ADCCFFA6;">Tipos</mark>: **ROLAP** (`BD relacional`, <mark style="background: #FFB86CA6;">sin límite de tamaño</mark>, <mark style="background: #FFB8EBA6;">más lento</mark>), **MOLAP** (<mark style="background: #FFB86CA6;">almacén propio</mark>, <mark style="background: #FFB8EBA6;">más rápido</mark> pero limitado), **HOLAP** (<mark style="background: #FFB86CA6;">híbrido</mark>).
 
 ### 24. Cubo OLAP y operaciones [8]p127-129
 
-**Definición**: estructura multidimensional donde **cada eje del cubo es una dimensión** (tiempo, producto, geografía, cliente) y el **interior contiene los hechos** o medidas (unidades vendidas, importe). Cada celda es la intersección de un valor concreto de cada dimensión. Aunque se llama «cubo», puede tener más de tres dimensiones (un hipercubo).
+**Definición**: <mark style="background: #ADCCFFA6;">estructura multidimensional donde cada eje es una dimensión</mark> y las<mark style="background: #FFB86CA6;"> celdas contienen los hechos</mark> o medidas. <mark style="background: #8000E1A6;">Puede tener más de 3 dimensiones</mark> (*hipercubo*).
 
-**Operaciones sobre el cubo**:
+**Operaciones**:
 
-- **Pivoting / slicing (rotación)**: **cambiar el orden de las dimensiones** en los ejes para verlo desde otro ángulo (pasar de «ventas por cliente» a «ventas por libro»).
-- **Dicing (selección)**: **seleccionar sólo algunas celdas** del cubo, filtrar un subconjunto («ventas al Cliente 2, de Libros 1 y 2, en el Año 1»).
-- **Roll-up**: **agregar a un nivel superior** de la jerarquía, eliminando detalle (ver el total por cliente en todos los años).
-- **Drill-down**: **bajar a más detalle** dentro de una jerarquía (de materia → libros individuales dentro de la materia). Operación inversa al roll-up.
-
-Estas operaciones permiten al usuario **explorar libremente desde cualquier ángulo y a cualquier nivel** sin generar informes nuevos.
+- <mark style="background: #ADCCFFA6;">Pivoting / slicing</mark>: <mark style="background: #FFB86CA6;">rotar</mark> — <mark style="background: #FFB8EBA6;">cambiar el orden de las dimensiones</mark> en los ejes.
+- <mark style="background: #ADCCFFA6;">Dicing</mark>: <mark style="background: #FFB8EBA6;">seleccionar un subconjunto</mark> de celdas (*filtrar*).
+- <mark style="background: #ADCCFFA6;">Roll-up</mark>: <mark style="background: #FFB8EBA6;">agregar a un nivel superior</mark> de la jerarquía.
+- <mark style="background: #ADCCFFA6;">Drill-down</mark>: bajar a <mark style="background: #FFB8EBA6;">más detalle</mark>.
 
 ### 26. Las 2 características de la minería de datos interesantes para la empresa [9]
-
-Kurt Thearling identifica dos capacidades fundamentales:
-
-**1. Predicción automatizada de tendencias y comportamientos** (*automated prediction of trends and behaviors*). Automatiza el proceso de encontrar **información predictiva** en grandes BBDD. Preguntas que antes requerían análisis manual extenso se responden directamente de los datos. Ejemplos: **targeted marketing** (identificar los clientes más propensos a responder a una campaña), **predicción de bancarrota**, identificación de segmentos de población que responderán similarmente. Algoritmos típicos: redes neuronales, árboles de decisión, regresión.
-
-**2. Descubrimiento automatizado de patrones previamente desconocidos** (*automated discovery of previously unknown patterns*). Las herramientas barren las BBDD identificando **patrones ocultos** en un solo paso. La clave es que son patrones que los expertos podrían no detectar porque están **fuera de sus expectativas**. Ejemplos: análisis de ventas retail para identificar productos no relacionados que se compran juntos (pañales y cerveza los viernes), **detección de fraude** en tarjetas, identificación de datos anómalos. Algoritmos típicos: reglas de asociación, clustering, detección de anomalías.
-
-Ambas convierten **grandes volúmenes de datos en ventaja competitiva** sin equipos enormes de analistas manuales, libres de los sesgos cognitivos de los expertos humanos.
+1. <mark style="background: #ADCCFFA6;">Predicción automatizada de tendencias y comportamientos</mark>: <mark style="background: #FFB86CA6;">automatiza la búsqueda de información predictiva</mark> en grandes `BBDD`. Ejemplos: *targeted marketing*, predicción de bancarrota.
+2. <mark style="background: #ADCCFFA6;">Descubrimiento automatizado de patrones desconocidos</mark>: <mark style="background: #FFB86CA6;">identifica patrones ocultos</mark> que los <mark style="background: #FFB8EBA6;">expertos no detectarían por estar fuera de sus expectativas</mark>. Ejemplos: productos comprados juntos (pañales y cerveza), detección de fraude.
 
 ### 27. Técnica de modelización en minería de datos + ejemplo [9]
 
-**Concepto**: modelizar consiste en **construir un modelo en una situación donde se conoce la respuesta y aplicarlo después a otra donde no se conoce**. Thearling lo ilustra con el buscador de galeones hundidos: estudia dónde se encontraron galeones en el pasado, qué características compartían esas zonas (corrientes, rutas, eventos), construye un modelo y navega a las zonas con mayor probabilidad.
-
-En la minería automatizada el principio es el mismo: los ordenadores cargan información de situaciones con respuestas conocidas y el software **destila las características que van al modelo**. Una vez construido, se aplica a situaciones donde la respuesta no se conoce.
+**Concepto**: <mark style="background: #ADCCFFA6;">construir un modelo en una situación donde se conoce la respuesta y aplicarlo a otra donde no se conoce</mark>. El software destila las características de los casos conocidos y arma el modelo.
 
 **Ejemplo — captación de clientes en una telco**:
 
 | | Clientes actuales | Prospectos |
 | - | - | - |
-| Información general (demográficos: edad, sexo, crédito) | **Conocida** | **Conocida** |
-| Información propietaria (consumo de larga distancia) | **Conocida** | **Objetivo a predecir** |
+| Información general (demográficos) | Conocida | Conocida |
+| Información propietaria (consumo) | **Conocida** | **Objetivo a predecir** |
 
-La telco conoce todo de sus clientes actuales (incluido cuánto gastan), y solo conoce demografía de prospectos. El objetivo es **inferir el consumo probable de los prospectos a partir de su demografía**, usando como puente el modelo aprendido de los actuales.
-
-Un modelo simple: «El 98 % de mis clientes que ganan más de 60.000 $/año gastan más de 80 $/mes en larga distancia». Se aplica a la demografía de los prospectos y se identifican los más valiosos para concentrar la inversión en marketing.
+La telco conoce el consumo de sus clientes actuales y solo la demografía de los prospectos. Aprende un modelo del tipo «el 98 % de los que ganan más de 60.000 $/año gastan más de 80 $/mes en larga distancia» y lo aplica a la demografía de los prospectos para identificar a los más valiosos.
 
 **Validación**: se reserva una parte de los datos conocidos (*holdout*) sin usarla en construcción, y se comprueba que el modelo predice correctamente sobre esa parte aislada.
 
 ### 29. Clasificación y clustering [9]
 
-Ambas dividen un conjunto en grupos mutuamente exclusivos, pero parten de premisas distintas según el algoritmo conozca o no las categorías de antemano.
+Ambas dividen un conjunto en grupos exclusivos; difieren en si las categorías son conocidas de antemano.
 
-**Clasificación (aprendizaje supervisado)**. Usa **datos etiquetados** para **entrenar un modelo que asigne nuevos datos a categorías ya definidas**.
-
-- **Objetivo**: predecir a qué categoría pertenece un nuevo registro.
-- **Conocimiento previo**: clases conocidas («spam»/«no spam», «solvente»/«insolvente»).
-- **Variables**: concretas predefinidas por el experto.
-- **Algoritmos**: árboles de decisión (CART, CHAID), regresión logística, SVM, redes neuronales.
-- **Ejemplo**: detección de spam.
-
-**Clustering (aprendizaje no supervisado)**. Trabaja con **datos no etiquetados** para encontrar **agrupaciones naturales basadas en la similitud**.
-
-- **Objetivo**: agrupar objetos similares en clusters sin etiquetas previas.
-- **Conocimiento previo**: ninguno; el algoritmo descubre los grupos.
-- **Variables**: todas las disponibles, sin preselección del experto.
-- **Algoritmos**: K-means, agrupamiento jerárquico, DBSCAN.
-- **Ejemplo**: segmentación de clientes.
-
-| Característica | **Clasificación** | **Clustering** |
-| - | - | - |
-| Tipo de aprendizaje | Supervisado | No supervisado |
-| Datos | Etiquetados | Sin etiquetas |
-| Conocimiento previo | Clases conocidas | Grupos por descubrir |
-| Variables | Concretas predefinidas | Todas las disponibles |
-| Finalidad | Predecir clase | Descubrir patrones |
-| Ejemplo | Detección de spam | Segmentación de clientes |
+| Característica      | **Clasificación**                               | **Clustering**              |
+| ------------------- | ----------------------------------------------- | --------------------------- |
+| Tipo de aprendizaje | Supervisado                                     | No supervisado              |
+| Datos               | Etiquetados                                     | Sin etiquetas               |
+| Conocimiento previo | Clases conocidas                                | Grupos por descubrir        |
+| Variables           | Concretas predefinidas                          | Todas las disponibles       |
+| Finalidad           | Predecir clase                                  | Descubrir patrones          |
+| Algoritmos          | Árboles (CART, CHAID), regresión logística, SVM | K-means, jerárquico, DBSCAN |
+| Ejemplo             | Detección de spam                               | Segmentación de clientes    |
 
 ---
 

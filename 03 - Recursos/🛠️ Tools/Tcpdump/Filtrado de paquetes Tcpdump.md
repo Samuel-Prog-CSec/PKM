@@ -114,7 +114,7 @@ $ sudo tcpdump -i eth0 proto 17
 Usando el filtro `port`, debemos tener en cuenta lo que buscamos y cómo funciona ese protocolo. Algunos protocolos estándar como [[HTTP]] o [[HTTPS]] solo utilizan los puertos 80 y 443 con el protocolo de transporte de TCP. Con esto en mente, hay que imaginar los puertos como una forma sencilla de establecer conexiones y protocolos como TCP y UDP para determinar si utilizan un método establecido. Los puertos por sí solos se pueden utilizar para cualquier cosa, por lo que el filtrado en el puerto 80 mostrará todo el tráfico sobre ese número de puerto. Sin embargo, si buscamos capturar todo el tráfico HTTP, utilizando `tcp port 80` nos aseguraremos de que solo veamos tráfico HTTP.
 
 > [!danger]
-> Con protocolos que utilizan tanto TCP como UDP para diferentes funciones, como [[🧭 DNS]], podemos filtrar mirando una u otra `TCP/UDP port 53` o filtrar por `port 53`. Al hacer esto, veremos que cualquier tráfico utiliza ese puerto, independientemente del protocolo de transporte.
+> Con protocolos que utilizan tanto TCP como UDP para diferentes funciones, como [[02 - DNS - fundamentos|DNS]], podemos filtrar mirando una u otra `TCP/UDP port 53` o filtrar por `port 53`. Al hacer esto, veremos que cualquier tráfico utiliza ese puerto, independientemente del protocolo de transporte.
 
 ```shell-session
 $ sudo tcpdump -i eth0 tcp port 443
