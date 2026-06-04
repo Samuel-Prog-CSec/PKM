@@ -1,61 +1,54 @@
-# Structured Query Language (SQL)
+---
+tags:
+  - Bases de Datos
+  - SQL
+Fecha de actualización: 2026-06-04
+Nota previa: "[[Introducción a las bases de datos]]"
+Nota siguiente: "[[💬 Sentencias SQL]]"
+Area: "[[Bases de Datos.base|Bases de Datos]]"
+---
+---
 
-La **sintaxis de SQL** puede variar de un RDBMS a otro. Sin embargo, todos deben cumplir con el estándar ISO para lenguaje de consulta estructurado (SQL, en castellano). En los ejemplos de la carpeta [[🐬 MySQL]]  se seguirá la sintaxis **MySQL/MariaDB**. SQL se puede utilizar para realizar las siguientes acciones:
-- Recuperar datos 
-- Actualizar datos 
-- Eliminar datos 
-- Crear nuevas tablas y bases de datos 
-- Agregar o eliminar usuarios 
-- Asignar permisos a estos usuarios
+<mark style="background: #ADCCFFA6;">MySQL y su fork MariaDB son los `RDBMS` de referencia para aprender SQL injection</mark>: son los más desplegados en la web (todo el stack LAMP/LEMP, WordPress, etc.) y su dialecto es el que asumen la mayoría de payloads "genéricos". Dominar la sintaxis desde el lado del desarrollador es imprescindible para atacarla: un inyector escribe exactamente las mismas consultas que un programador, solo que desde el lado equivocado del parámetro. Esta nota cubre los fundamentos de [[Introducción a las bases de datos|MySQL como DBMS]]; la manipulación de datos vive en [[💬 Sentencias SQL]].
 
-La utilidad `mysql` es usada **para autenticar e interactuar con una BD MySQL/MariaDB**. El parámetro `-u` se usa para indicar el nombre de usuario y el parámetro `-p` para la contraseña. **La contraseña debe pasarse vacía**, de modo que se nos solicite ingresar la contraseña y no la pasemos directamente en la línea de comandos, ya que podría almacenarse en texto sin formato en el archivo `bash_history`.
+# SQL: estándar y dialecto
 
-```shell
-mysql -u root -p
+La sintaxis SQL varía entre `RDBMS`, pero todos siguen el estándar ISO/IEC 9075. Los ejemplos asumen sintaxis **MySQL/MariaDB**. Con SQL se puede recuperar, actualizar y borrar datos, crear tablas y bases de datos, gestionar usuarios y asignar permisos. <mark style="background: #FFB8EBA6;">Esas dos últimas capacidades —gestión de usuarios y permisos— son las que convierten un SQLi en algo más que robo de datos</mark>: si la cuenta de la aplicación las tiene, el atacante también.
 
+# Conexión: el cliente `mysql`
+
+La utilidad `mysql` autentica e interactúa con la base de datos. `-u` indica el usuario y `-p` la contraseña. <mark style="background: #FF5582A6;">El flag `-p` se pasa vacío para que la contraseña se solicite por prompt y no quede registrada en `bash_history`</mark> —un detalle operativo que también aplica a tu propia higiene durante un engagement.
+
+```shell-session
+$ mysql -u root -p
 Enter password: <password>
-...SNIP...
+mysql>
 ```
 
-Nuevamente, también es posible usar la contraseña directamente en el comando, aunque esto debe evitarse, ya que podría provocar que la contraseña se guarde en los registros y el historial de la terminal:
+Sin host explícito, conecta a `localhost`. Para un host y puerto remotos se usan `-h` y `-P`:
 
-```shell
-mysql -u root -p<password>
-
-...SNIP...
-
-mysql> 
-```
-==Nota: No deberían haber espacios entre '-p' y la contraseña.==
-
-En los dos ejemplos anteriores, iniciaríamos sesión como **superusuario (o "root")** Podemos ver qué privilegios tenemos usando el comando [SHOW GRANTS](https://dev.mysql.com/doc/refman/8.0/en/show-grants.html) que analizaremos más adelante.
-**Cuando no especificamos un host**, se utilizará de manera predeterminada el servidor `localhost`. Podemos especificar un host y un puerto remotos utilizando los parámetros `-h` y `-P`.
-
-```shell
-mysql -u root -h docker.hackthebox.eu -P 3306 -p 
-
-Enter password: 
-...SNIP...
-
-mysql> 
-```
-==**Nota**: El puerto MySQL/MariaDB predeterminado es (**3306**), pero se puede configurar con otro puerto. Se especifica utilizando una «P» mayúscula, a diferencia de la «p» minúscula que se utiliza para las contraseñas.== 
-
-
-# Creating a database
-Una vez que iniciamos sesión en la base de datos mediante la utilidad `mysql`, podemos comenzar a usar consultas SQL para interactuar con el DBMS. Por ejemplo, se puede crear una nueva base de datos dentro del DBMS MySQL utilizando la instrucción [CREATE DATABASE](https://dev.mysql.com/doc/refman/5.7/en/create-database.html).
-
-```MySQL
-mysql> CREATE DATABASE users;
-
-Query OK, 1 row affected (0.02 sec)
+```shell-session
+$ mysql -u root -h 10.10.10.5 -P 3306 -p
 ```
 
-MySQL espera que las consultas de línea de comandos **finalicen con un punto y coma**. El ejemplo anterior creó una nueva base de datos llamada `users`. Podemos ver la lista de bases de datos con [SHOW DATABASES](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html), y podemos cambiar a la base de datos `users` con la declaración `USE`:
+> [!warning]+
+> El puerto por defecto de MySQL/MariaDB es el **3306**. Ojo con las mayúsculas: `-P` (mayúscula) es el puerto, `-p` (minúscula) es la contraseña; confundirlas es un error clásico. Además, **no debe haber espacio** entre `-p` y la contraseña si la pasas inline (`-pPassword123`).
 
-```MySQL
+> [!info]+
+> **Óptica de pentest**: un `3306` abierto a Internet (búscalo en Shodan/`nmap -p3306`) es un hallazgo por sí mismo. Tras conectar, `SELECT VERSION();` revela motor y versión exactos —`fingerprinting` que decide qué payloads usar—. Distinguir MySQL de MariaDB importa: comparten dialecto casi por completo, pero divergen en funciones concretas y en el comportamiento de ciertos vectores de explotación.
+
+# Crear y seleccionar bases de datos
+
+Tras autenticar, las consultas SQL interactúan con el DBMS. `CREATE DATABASE` crea una base de datos nueva; cada consulta de línea de comandos **termina en punto y coma**.
+
+```sql
+CREATE DATABASE users;
+```
+
+`SHOW DATABASES` lista las bases existentes y `USE` cambia a una de ellas:
+
+```shell-session
 mysql> SHOW DATABASES;
-
 +--------------------+
 | Database           |
 +--------------------+
@@ -67,20 +60,17 @@ mysql> SHOW DATABASES;
 +--------------------+
 
 mysql> USE users;
-
 Database changed
 ```
 
-==Las instrucciones SQL **no distinguen entre mayúsculas y minúsculas**, lo que significa que `USE users;` y `use users;` hacen referencia al mismo comando. Sin embargo, el **nombre de la base de datos distingue entre mayúsculas y minúsculas**, por lo que no podemos escribir "USE USERS;" en lugar de "USE users;". Por lo tanto, es una buena práctica **especificar las instrucciones en mayúsculas** para evitar confusiones.==
-
+> [!important]+
+> Las cuatro primeras bases —`information_schema`, `mysql`, `performance_schema`, `sys`— son **bases del sistema**, presentes en toda instalación. <mark style="background: #FF5582A6;">`information_schema` es la pieza central de la enumeración por SQLi</mark>: contiene los metadatos (nombres de bases, tablas y columnas) que un atacante consulta para mapear la estructura antes de exfiltrar. Volveremos a ella al estudiar la enumeración.
 
 # Tablas
-Los DBMS **almacenan datos en forma de tablas**. Una tabla se compone de filas horizontales y columnas verticales. La intersección de una fila y una columna se denomina **celda**. Cada tabla se crea con un conjunto fijo de columnas, donde cada columna es de un tipo de datos particular. 
 
-Un **tipo de dato define qué tipo de valor debe contener una columna**. Algunos ejemplos comunes son `numbers`, `strings`, `date`, `time` y `binary data`. También puede haber tipos de datos específicos de los DBMS. Se puede encontrar una lista completa de los tipos de datos en MySQL [aquí](https://dev.mysql.com/doc/refman/8.0/en/data-types.html). 
-Por ejemplo, podemos crear una tabla llamada `logins` para almacenar datos de usuario, utilizando la consulta SQL [CREATE TABLE](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html):
+Un DBMS almacena los datos en tablas de filas (horizontales) y columnas (verticales); la intersección es una celda. Cada columna tiene un **tipo de dato** que define qué valores admite (`numbers`, `strings`, `date`, `time`, `binary data`, y tipos específicos del motor). `CREATE TABLE` define una tabla; primero el nombre, luego cada columna como `nombre tipo`, separadas por comas:
 
-```SQL
+```sql
 CREATE TABLE logins (
     id INT,
     username VARCHAR(100),
@@ -88,63 +78,43 @@ CREATE TABLE logins (
     date_of_joining DATETIME
     );
 ```
-==Primero se especifica el **nombre de la tabla** y luego (entre paréntesis) **especificamos cada columna** por su nombre y su tipo de datos, separados por comas. Después del nombre y el tipo, podemos especificar propiedades específicas.==
-```MySQL
-mysql> CREATE TABLE logins (
-    ->     id INT,
-    ->     username VARCHAR(100),
-    ->     password VARCHAR(100),
-    ->     date_of_joining DATETIME
-    ->     );
-Query OK, 0 rows affected (0.03 sec)
-```
 
-Se puede obtener una **lista de las tablas de la base de datos actual** mediante la instrucción `SHOW TABLES`. Además, se utiliza la palabra clave `DESCRIBE` para enumerar la estructura de la tabla con sus campos y tipos de datos:
+<mark style="background: #FFB8EBA6;">En modo estricto (`STRICT_TRANS_TABLES`, por defecto desde MySQL 5.7.5) un `VARCHAR(100)` rechaza con error las entradas de más de 100 caracteres; sin modo estricto, las **trunca silenciosamente**</mark> —una restricción de longitud que, en un parámetro vulnerable, puede truncar o romper un payload largo (un *gotcha* a recordar al construir inyecciones extensas). `SHOW TABLES` lista las tablas de la base actual y `DESCRIBE` muestra su estructura:
 
-```MySQL
+```shell-session
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_users |
++-----------------+
+| logins          |
++-----------------+
+
 mysql> DESCRIBE logins;
-
 +-----------------+--------------+
 | Field           | Type         |
 +-----------------+--------------+
 | id              | int          |
 | username        | varchar(100) |
 | password        | varchar(100) |
-| date_of_joining | date         |
+| date_of_joining | datetime     |
 +-----------------+--------------+
-4 rows in set (0.00 sec)
 ```
 
+## Propiedades de columnas
 
-## Propiedades de las tablas
-Dentro de la consulta `CREATE TABLE`, hay muchas [propiedades](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) que se pueden configurar para la tabla y cada columna. 
-Por ejemplo, podemos configurar la columna `id` para que se incremente automáticamente utilizando la palabra clave `AUTO_INCREMENT`, que **incrementa automáticamente el id** en uno cada vez que se agrega un nuevo elemento a la tabla:
+Dentro de `CREATE TABLE` se configuran propiedades por columna que conviene reconocer, porque condicionan cómo se comporta una inyección contra esa tabla:
 
-```SQL
-id INT NOT NULL AUTO_INCREMENT,
-```
+| Propiedad | Efecto |
+| --------- | ------ |
+| `AUTO_INCREMENT` | Incrementa el valor en uno por cada inserción (típico en `id`). |
+| `NOT NULL` | La columna nunca queda vacía: campo obligatorio. |
+| `UNIQUE` | Impide valores duplicados (p. ej. dos usuarios con el mismo `username`). |
+| `DEFAULT` | Valor por defecto si no se especifica; p. ej. `DEFAULT NOW()` para la fecha actual. |
+| `PRIMARY KEY` | Identifica unívocamente cada registro; clave de las relaciones entre tablas. |
 
-La restricción `NOT NULL` **garantiza que una columna en particular nunca quede vacía** (es decir, que sea un ==campo obligatorio==). También podemos utilizar la restricción `UNIQUE` para garantizar que **el elemento insertado sea siempre único**.
+La definición final, combinando todo:
 
-```SQL
-username VARCHAR(100) UNIQUE NOT NULL,
-```
-
-Otra palabra clave importante es la palabra clave `DEFAULT`, que se utiliza para **especificar el valor predeterminado**. Por ejemplo, dentro de la columna `date_of_joining`, podemos establecer el valor predeterminado en `Now()`, que ==en MySQL devuelve la fecha y hora actuales==:
-
-```SQL
-date_of_joining DATETIME DEFAULT NOW(),
-```
-
-Por último, una de las propiedades más importantes es la `PRIMARY KEY`, que podemos utilizar **para identificar de forma única cada registro de la tabla**, haciendo referencia a todos los datos de un registro dentro de una tabla para bases de datos relacionales. Podemos hacer que la columna id sea la CLAVE PRINCIPAL de esta tabla:
-
-```SQL
-PRIMARY KEY (id)
-```
-
-Combinando las distintas palabras clave para mejorar la tabla del principio, quedaría de la siguiente manera:
-
-```SQL
+```sql
 CREATE TABLE logins (
     id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(100) UNIQUE NOT NULL,
@@ -153,3 +123,8 @@ CREATE TABLE logins (
     PRIMARY KEY (id)
     );
 ```
+
+> [!important]+
+> Las sentencias SQL **no distinguen mayúsculas de minúsculas** (`USE users;` ≡ `use users;`), pero **los nombres de base de datos sí** en muchos sistemas de ficheros: `USE USERS;` falla si la base se llama `users`. Por convención se escriben las palabras clave en mayúscula para legibilidad.
+
+Con la estructura clara, el siguiente paso es manipular los datos —insertar, consultar, filtrar y ordenar— en [[💬 Sentencias SQL]], la base sobre la que se construye toda la lógica que un [[00 - Introducción a SQL Injection|SQL injection]] subvierte.

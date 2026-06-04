@@ -10,7 +10,7 @@ Area: "[[Inyección XPath]]"
 ---
 ---
 
-Discutiremos **cómo manipular consultas [[Inyección XPath#Fundamentos XPath|XPath]] de modo que accedamos a datos arbitrarios** de documentos *XML*, utilizando técnicas similares a [[💉🧲 Inyección de Unión]].
+Discutiremos **cómo manipular consultas [[Inyección XPath#Fundamentos XPath|XPath]] de modo que accedamos a datos arbitrarios** de documentos *XML*, utilizando técnicas similares a [[05 - Inyección UNION|la inyección UNIÓN en SQL]].
 
 Para demostrar la exfiltración de datos mediante [[Inyección XPath]] en un escenario base simple, consideremos una aplicación web que nos permite consultar datos sobre las calles de San Francisco. Podemos ingresar una consulta de búsqueda y elegir entre un nombre de calle largo y corto. La aplicación web muestra todas las calles de San Francisco que coinciden con nuestra consulta:
 ![Formulario de búsqueda del índice de calles de San Francisco con entrada "BAR". Opciones para nombre de calle largo o corto. Botón enviar. La lista de resultados incluye calles como BARCELONA AVE y LOMBARD ST.](https://academy.hackthebox.com/storage/modules/204/dataexfil_1.png)
@@ -65,7 +65,7 @@ Luego, la aplicación web ejecutará la siguiente consulta:
 /a/b/c/[contains(d/text(), 'SOMETHINGINVALID')]/fullstreetname | //text()
 ```
 
-Estamos agregando una segunda consulta con el `|` operador, similar a un [[💉🧲 Inyección de Unión]] basada en. La segunda consulta, `//text()`, devuelve todos los nodos de texto en el documento XML. Por tanto, la respuesta contiene todos los datos almacenados en el documento *XML*. Dependiendo del tamaño del documento *XML*, la respuesta puede ser bastante grande. Por lo tanto, puede llevar algún tiempo analizar los datos con atención. En nuestro ejemplo, podemos encontrar un conjunto de datos de usuario al final del documento después del conjunto de datos que contiene información sobre las calles de San Francisco:
+Estamos agregando una segunda consulta con el `|` operador, similar a un [[05 - Inyección UNION|la inyección UNIÓN en SQL]] basada en. La segunda consulta, `//text()`, devuelve todos los nodos de texto en el documento XML. Por tanto, la respuesta contiene todos los datos almacenados en el documento *XML*. Dependiendo del tamaño del documento *XML*, la respuesta puede ser bastante grande. Por lo tanto, puede llevar algún tiempo analizar los datos con atención. En nuestro ejemplo, podemos encontrar un conjunto de datos de usuario al final del documento después del conjunto de datos que contiene información sobre las calles de San Francisco:
 ![Solicitud y respuesta HTTP. Solicitud: LLEGAR a/index.php con los parámetros q=SOMETHINGINVALID y f=fullstreetname+//text() en xpath-exfil.htb. Respuesta: El contenido HTML incluye datos como "kgrenville", "Cuenta de prueba interna", "administrador" y "HTB{TESTFLAG}".](https://academy.hackthebox.com/storage/modules/204/dataexfil_4.png)
 
 De esta forma, aprovechamos con éxito la inyección XPath para exfiltrar todo el documento XML.

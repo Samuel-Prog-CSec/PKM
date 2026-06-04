@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "791f13b20f0929e8",
+        "id": "9cafc542eb93b62e",
         "type": "tabs",
         "children": [
           {
-            "id": "4b653f2ac61c243a",
+            "id": "14cfdac2e0e170b0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Examen - Respuestas a preguntas seleccionadas"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -96,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240,
-    "collapsed": true
+    "width": 240
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -199,8 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269,
-    "collapsed": true
+    "width": 269
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,45 +210,45 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "4b653f2ac61c243a",
+  "active": "14cfdac2e0e170b0",
   "lastOpenFiles": [
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/12 - MSSQL lectura de archivos.md.tmp.25152.b6a5395d9dd4",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/08 - PostgreSQL lectura y escritura de archivos.md.tmp.25152.ce59c430c1f6",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/01 - Decompilación de archivos Java.md.tmp.25152.88576e2bfaf3",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/03 - Live-debugging de aplicaciones Java.md.tmp.25152.15286c97a00a",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/04 - Búsqueda de errores SQL en los logs.md.tmp.25152.5d9733e3db06",
+    "02 - Areas/Ingenieria/Bases de Datos/SQL/🐬 MySQL/Consultas y operadores SQL.md.tmp.25152.ae3c353a065b",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/08 - Escritura de archivos.md.tmp.25152.14355b0a852b",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/08 - Escritura de archivos.md.tmp.25152.e07ff8cfefc4",
+    "03 - Recursos/🛠️ Tools/SQLMap/01 - Interpretación de la salida de SQLMap.md.tmp.25152.2495d51ee571",
+    "03 - Recursos/🛠️ Tools/SQLMap/06 - Explotación del sistema operativo con SQLMap.md.tmp.25152.c4b1dd05dfca",
+    "03 - Recursos/🛠️ Tools/SQLMap/06 - Explotación del sistema operativo con SQLMap.md.tmp.25152.54c0728ad8d7",
     "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/03 - XSS basado en DOM.md.tmp.16508.d58827159650",
-    "🔴⚔️ Red Team/Hacking web/XSS/08 - Prevención de XSS.md.tmp.16508.877e536d7441",
-    "🔴⚔️ Red Team/Hacking web/XSS/01 - XSS Almacenado.md.tmp.16508.0f3ebbdc7302",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/21 - Filtrado de la salida de fuzzing.md.tmp.16508.453c0aecfe43",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/10 - Crawling web.md.tmp.16508.55583c6ad62b",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/09 - Fingerprinting web.md.tmp.16508.e741eac84543",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/08 - Virtual Hosts.md.tmp.16508.ebaa1b3b1a26",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/07 - Certificate Transparency logs.md.tmp.16508.e6cdbd5e9b88",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/06 - Fuerza bruta de subdominios.md.tmp.16508.0c9eb4bea04c",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/03 - Enumeración DNS con dig.md.tmp.9576.4409d0ca423f",
-    "🔴⚔️ Red Team/Hacking web/XSS/08 - Prevención de XSS.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/07 - Robo de sesión.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/06 - Phishing.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/05 - Defacing.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/04 - Descubrimiento de XSS.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/03 - XSS basado en DOM.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/02 - XSS Reflejado.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/01 - XSS Almacenado.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/00 - Introducción a XSS.md",
-    "🔴⚔️ Red Team/Hacking web/JavaScript Deobfuscation/04 - Peticiones HTTP y decodificación.md",
-    "🔴⚔️ Red Team/Hacking web/JavaScript Deobfuscation/03 - Desofuscación y análisis de código.md",
-    "🔴⚔️ Red Team/Hacking web/JavaScript Deobfuscation/02 - Ofuscación avanzada.md",
-    "🔴⚔️ Red Team/Hacking web/JavaScript Deobfuscation/01 - Ofuscación de código JavaScript.md",
-    "🔴⚔️ Red Team/Hacking web/JavaScript Deobfuscation/00 - Introducción y código fuente.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/10 - Prevención de SQL Injection.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/09 - PostgreSQL ejecución de comandos.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/08 - PostgreSQL lectura y escritura de archivos.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/07 - SQL Injection de segundo orden.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/06 - SQL Injection basada en errores.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/05 - Bypass de caracteres comunes.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/04 - Búsqueda de errores SQL en los logs.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/03 - Live-debugging de aplicaciones Java.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/02 - Búsqueda de strings en el código.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/01 - Decompilación de archivos Java.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/00 - Introducción a PostgreSQL.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/14 - Defensa contra Blind SQL Injection.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/13 - Herramientas para Blind SQLi.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/12 - MSSQL lectura de archivos.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/11 - MSSQL robo de hashes NetNTLM.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/10 - MSSQL ejecución de comandos con xp_cmdshell.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/09 - Exfiltración Out-of-Band por DNS.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/08 - Extracción de datos time-based.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/07 - Diseño del oráculo temporal.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/06 - Identificar SQLi basada en tiempo.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/05 - Optimización de la extracción.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/04 - Extracción de datos boolean-based.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/03 - Diseño del oráculo booleano.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/02 - Identificar SQLi basada en booleanos.md",
     "recon-images-grid.jpeg",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/24 - Fuzzing de APIs.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/23 - APIs web e identificación de endpoints.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/22 - Validación de hallazgos.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/21 - Filtrado de la salida de fuzzing.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/20 - Fuzzing de vhosts y subdominios.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/19 - Fuzzing de parámetros y valores.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/18 - Fuzzing recursivo.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/17 - Fuzzing de directorios y archivos.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/16 - Herramientas de fuzzing.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/15 - Introducción al web fuzzing.md",
-    "🔴⚔️ Red Team/Hacking web/Reconocimiento Web/14 - Automatización del recon.md",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-form.png",
     "biblio-form-check.png",

@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("Bases de Datos.base", "Bases de Datos")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 360
+      file.tags: 320

@@ -1,0 +1,40 @@
+[     428ms] [ERROR] Access to script at 'https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447' from origin 'https://academy.hackthebox.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[     428ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447:0
+[     428ms] [ERROR] Failed to load resource: the server responded with a status of 499 () @ https://cdn.segment.com/analytics-next/bundles/ajs-destination.bundle.8e6b895db75187c55313.js:0
+[     428ms] [ERROR] Refused to execute script from 'https://cdn.segment.com/analytics-next/bundles/ajs-destination.bundle.8e6b895db75187c55313.js' because its MIME type ('image/png') is not executable. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[     519ms] [ERROR] [analytics.js] Failed to load Analytics.js ChunkLoadError: Loading chunk 50 failed.
+(error: https://cdn.segment.com/analytics-next/bundles/ajs-destination.bundle.8e6b895db75187c55313.js)
+    at Object.j (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:46360)
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:44727
+    at Array.reduce (<anonymous>)
+    at s.e (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:44692)
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:101680
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:33689
+    at Object.next (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:33794)
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:32710
+    at new Promise (<anonymous>)
+    at u (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:32455) @ https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:0
+[     944ms] [ERROR] Access to fetch at 'https://o4510906651770960.ingest.de.sentry.io/api/4510906661863511/envelope/?sentry_version=7&sentry_key=fb892fd0847f9826a165f9b701b69c08&sentry_client=sentry.javascript.nuxt%2F10.53.1' from origin 'https://academy.hackthebox.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[     944ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://o4510906651770960.ingest.de.sentry.io/api/4510906661863511/envelope/?sentry_version=7&sentry_key=fb892fd0847f9826a165f9b701b69c08&sentry_client=sentry.javascript.nuxt%2F10.53.1:0
+[    1109ms] [ERROR] Access to fetch at 'https://api.segment.io/v1/m' from origin 'https://academy.hackthebox.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[    1109ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.segment.io/v1/m:0
+[    1109ms] [ERROR] Error sending segment performance metrics TypeError: Failed to fetch
+    at o (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:23763)
+    at t.<anonymous> (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:22238)
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:33689
+    at Object.next (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:33794)
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:32710
+    at new Promise (<anonymous>)
+    at u (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:32455)
+    at t.send (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:22021)
+    at t.<anonymous> (https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:21894)
+    at https://fygapokei.hackthebox.com/htb-anal.js/v1/eLzeD0QoARKZ42pc8AGEUYpcFLpYkf0I/htb-anal.min.js:1:33689 @ https://academy.hackthebox.com/app/_nuxt/ksSi1_zO.js:8
+[    2639ms] [ERROR] Access to fetch at 'https://o4510906651770960.ingest.de.sentry.io/api/4510906661863511/envelope/?sentry_version=7&sentry_key=fb892fd0847f9826a165f9b701b69c08&sentry_client=sentry.javascript.nuxt%2F10.53.1' from origin 'https://academy.hackthebox.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[    2639ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://o4510906651770960.ingest.de.sentry.io/api/4510906661863511/envelope/?sentry_version=7&sentry_key=fb892fd0847f9826a165f9b701b69c08&sentry_client=sentry.javascript.nuxt%2F10.53.1:0
+[    2640ms] [ERROR] Access to fetch at 'https://o4510906651770960.ingest.de.sentry.io/api/4510906661863511/envelope/?sentry_version=7&sentry_key=fb892fd0847f9826a165f9b701b69c08&sentry_client=sentry.javascript.nuxt%2F10.53.1' from origin 'https://academy.hackthebox.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[    2640ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://o4510906651770960.ingest.de.sentry.io/api/4510906661863511/envelope/?sentry_version=7&sentry_key=fb892fd0847f9826a165f9b701b69c08&sentry_client=sentry.javascript.nuxt%2F10.53.1:0
+[    3104ms] [ERROR] Refused to execute script from 'https://consent.cookiebot.com/uc.js?cbid=c6744560-9be5-4645-9305-83ef9e0b993d' because its MIME type ('image/gif') is not executable. @ https://academy.hackthebox.com/app/module/33/section/178:0
+[    7755ms] [WARNING] [Intercom] Not available after waiting. @ https://academy.hackthebox.com/app/_nuxt/ksSi1_zO.js:8
+[    8345ms] [WARNING] [Intercom] Not available after waiting. @ https://academy.hackthebox.com/app/_nuxt/ksSi1_zO.js:8
+[    8485ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://academy.hackthebox.com/ads.js:0
+[    8486ms] [WARNING] AdBlock detection results: [Object, Object, Object, Object, Object] @ https://academy.hackthebox.com/app/_nuxt/ksSi1_zO.js:8

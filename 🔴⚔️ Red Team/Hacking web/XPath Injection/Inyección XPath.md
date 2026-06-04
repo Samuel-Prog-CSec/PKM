@@ -10,7 +10,7 @@ Area: "[[Web Pentesting.base|Web Pentesting]]"
 ---
 ---
 
-[Lenguaje de ruta XML (XPath)](https://www.w3.org/TR/xpath-3/), es un lenguaje de consulta para [Lenguaje de marcado extensible (XML)](https://datatracker.ietf.org/doc/html/rfc5364) de datos. Específicamente, podemos usar *XPath* para construir consultas *XPath* para datos almacenados en formato *XML*. Si la entrada del usuario se inserta en consultas *XPath* **sin una desinfección adecuada**, las vulnerabilidades [Inyección XPath](https://owasp.org/www-community/attacks/XPATH_Injection) surgen de manera similar a las vulnerabilidades de [[SQL Inyection]]
+[Lenguaje de ruta XML (XPath)](https://www.w3.org/TR/xpath-3/), es un lenguaje de consulta para [Lenguaje de marcado extensible (XML)](https://datatracker.ietf.org/doc/html/rfc5364) de datos. Específicamente, podemos usar *XPath* para construir consultas *XPath* para datos almacenados en formato *XML*. Si la entrada del usuario se inserta en consultas *XPath* **sin una desinfección adecuada**, las vulnerabilidades [Inyección XPath](https://owasp.org/www-community/attacks/XPATH_Injection) surgen de manera similar a las vulnerabilidades de [[00 - Introducción a SQL Injection|SQL Injection]]
 
 # Fundamentos XPath
 Para profundizar, primero debemos establecer una línea de base en la terminología *XPath*. Para ello, consideremos el siguiente documento *XML*:

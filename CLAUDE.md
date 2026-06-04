@@ -41,48 +41,48 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 
 ### Path CWES (Web Penetration Tester)
 
-| #   | Módulo HTB                          | Carpeta destino                                                       |
-| --- | ----------------------------------- | --------------------------------------------------------------------- |
-| 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*           |
-| 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*       |
-| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                            |
-| 4   | Information Gathering – Web Edition | `Hacking web/Information Gathering/`                                  |
-| 5   | Web Fuzzing                         | `Hacking web/Fuzzing/`                                                |
-| 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                     |
-| 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                    |
-| 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/`                    |
-| 9   | SQLMap Essentials                   | `Hacking web/💉🩸 SQL Injection/SQLMap/` *(crear)*                    |
-| 10  | Command Injections                  | `Hacking web/Command Injection/` *(crear)*                            |
-| 11  | File Upload Attacks                 | `Hacking web/File Upload/` *(crear)*                                  |
-| 12  | Server-side Attacks                 | `Hacking web/Server-side Attacks/` *(crear)*                          |
-| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/` *(crear)*                                |
-| 14  | Broken Authentication               | `Hacking web/Authentication/` *(crear)*                               |
-| 15  | Web Attacks                         | `Hacking web/Web Attacks/` *(crear; HTTP verb tampering, IDOR, XXE…)* |
-| 16  | File Inclusion                      | `Hacking web/File Inclusion/` *(crear)*                               |
-| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` *(crear)*                                      |
-| 18  | API Attacks                         | `Hacking web/API Attacks/` *(crear)*                                  |
-| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` *(crear)*                          |
-| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` *(crear)*                                   |
+| #   | Módulo HTB                          | Carpeta destino                                                       | Estado            |
+| --- | ----------------------------------- | --------------------------------------------------------------------- | ----------------- |
+| 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*           |                   |
+| 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*       |                   |
+| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                            | Pendiente         |
+| 4   | Information Gathering – Web Edition | `Hacking web/Information Gathering/`                                  | Completado        |
+| 5   | Web Fuzzing                         | `Hacking web/Fuzzing/`                                                | Completado        |
+| 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                     | Completado        |
+| 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                    | Completado        |
+| 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `02 - Areas/Ingeniería/Bases de Datos/`) | Completado |
+| 9   | SQLMap Essentials                   | `03 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection) | Completado |
+| 10  | Command Injections                  | `Hacking web/Command Injection/` *(crear)*                            | Pendiente         |
+| 11  | File Upload Attacks                 | `Hacking web/File Upload/` *(crear)*                                  | Pendiente         |
+| 12  | Server-side Attacks                 | `Hacking web/Server-side Attacks/` *(crear)*                          | Pendiente         |
+| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/` *(crear)*                                | Pendiente         |
+| 14  | Broken Authentication               | `Hacking web/Authentication/` *(crear)*                               | Pendiente         |
+| 15  | Web Attacks                         | `Hacking web/Web Attacks/` *(crear; HTTP verb tampering, IDOR, XXE…)* | Pendiente         |
+| 16  | File Inclusion                      | `Hacking web/File Inclusion/` *(crear)*                               | Pendiente         |
+| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` *(crear)*                                      | Pendiente         |
+| 18  | API Attacks                         | `Hacking web/API Attacks/` *(crear)*                                  | Pendiente         |
+| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` *(crear)*                          | Pendiente         |
+| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` *(crear)*                                   | Pendiente         |
 
 ### Path CWEE (Senior Web Penetration Tester)
 
-| # | Módulo HTB | Carpeta destino |
-| - | - | - |
-| 1 | Injection Attacks | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Injection Attacks/` |
-| 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` |
-| 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Advanced/` *(crear sub)* |
-| 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` *(crear)* |
-| 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` *(crear)* |
-| 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` *(crear)* |
-| 7 | HTTP Attacks | `Hacking web/HTTP/Attacks/` *(crear; smuggling, desync, cache poisoning)* |
-| 8 | Blind SQL Injection | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/` |
-| 9 | Intro to Whitebox Pentesting | `Hacking web/Whitebox/Intro/` *(crear)* |
-| 10 | Modern Web Exploitation Techniques | `Hacking web/Modern Exploitation/` *(crear)* |
-| 11 | Introduction to Deserialization Attacks | `Hacking web/Deserialization/Intro/` *(crear)* |
-| 12 | Whitebox Attacks | `Hacking web/Whitebox/Attacks/` *(crear)* |
-| 13 | Advanced SQL Injections | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/` |
-| 14 | Advanced Deserialization Attacks | `Hacking web/Deserialization/Advanced/` *(crear)* |
-| 15 | Parameter Logic Bugs | `Hacking web/Parameter Logic Bugs/` *(crear)* |
+| # | Módulo HTB | Carpeta destino | Estado |
+| - | - | - | - |
+| 1 | Injection Attacks | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Injection Attacks/` | Pendiente |
+| 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` | Pendiente |
+| 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Advanced/` *(crear sub)* | Pendiente |
+| 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` *(crear)* | Pendiente |
+| 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` *(crear)* | Pendiente |
+| 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` *(crear)* | Pendiente |
+| 7 | HTTP Attacks | `Hacking web/HTTP/Attacks/` *(crear; smuggling, desync, cache poisoning)* | Pendiente |
+| 8 | Blind SQL Injection | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/` | Completado |
+| 9 | Intro to Whitebox Pentesting | `Hacking web/Whitebox/Intro/` *(crear)* | Pendiente |
+| 10 | Modern Web Exploitation Techniques | `Hacking web/Modern Exploitation/` *(crear)* | Pendiente |
+| 11 | Introduction to Deserialization Attacks | `Hacking web/Deserialization/Intro/` *(crear)* | Pendiente |
+| 12 | Whitebox Attacks | `Hacking web/Whitebox/Attacks/` *(crear)* | Pendiente |
+| 13 | Advanced SQL Injections | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
+| 14 | Advanced Deserialization Attacks | `Hacking web/Deserialization/Advanced/` *(crear)* | Pendiente |
+| 15 | Parameter Logic Bugs | `Hacking web/Parameter Logic Bugs/` *(crear)* | Pendiente |
 
 Antes de crear una carpeta nueva, **siempre verificar** con `ls` o `Glob` que no existe ya bajo otro nombre — el vault tiene cierta inconsistencia histórica (carpetas con emoji vs sin emoji).
 
