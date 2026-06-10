@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9cafc542eb93b62e",
+        "id": "30df741b2f64cb27",
         "type": "tabs",
         "children": [
           {
-            "id": "14cfdac2e0e170b0",
+            "id": "b244516198908304",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02 - Areas/Ingenieria/GPSI/003 - SCRUM.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "003 - SCRUM"
             }
           }
         ]
@@ -29,7 +33,7 @@
       {
         "id": "62094ecb6430a30c",
         "type": "tabs",
-        "dimension": 75.626204238921,
+        "dimension": 77.75891341256367,
         "children": [
           {
             "id": "a5984c00f83c5aee",
@@ -74,12 +78,12 @@
         ]
       },
       {
-        "id": "d0debabd7b604d7b",
+        "id": "d0d8a705e89c8835",
         "type": "tabs",
-        "dimension": 24.373795761079,
+        "dimension": 22.241086587436328,
         "children": [
           {
-            "id": "d0426677ca4befe9",
+            "id": "0a9d4c318e16e67c",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -109,13 +113,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
+                "file": "02 - Areas/Ingenieria/GPSI/003 - SCRUM.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Examen - Respuestas a preguntas seleccionadas"
+              "title": "Esquema de 003 - SCRUM"
             }
           },
           {
@@ -194,7 +198,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269
+    "width": 269,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,49 +210,49 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "graph:Abrir vista gráfica": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "callout-manager:Insert Callout": false
+      "callout-manager:Insert Callout": false,
+      "graph:Abrir vista gráfica": false
     }
   },
-  "active": "14cfdac2e0e170b0",
+  "active": "a5984c00f83c5aee",
   "lastOpenFiles": [
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/12 - MSSQL lectura de archivos.md.tmp.25152.b6a5395d9dd4",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/08 - PostgreSQL lectura y escritura de archivos.md.tmp.25152.ce59c430c1f6",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/01 - Decompilación de archivos Java.md.tmp.25152.88576e2bfaf3",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/03 - Live-debugging de aplicaciones Java.md.tmp.25152.15286c97a00a",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/04 - Búsqueda de errores SQL en los logs.md.tmp.25152.5d9733e3db06",
-    "02 - Areas/Ingenieria/Bases de Datos/SQL/🐬 MySQL/Consultas y operadores SQL.md.tmp.25152.ae3c353a065b",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/08 - Escritura de archivos.md.tmp.25152.14355b0a852b",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/08 - Escritura de archivos.md.tmp.25152.e07ff8cfefc4",
-    "03 - Recursos/🛠️ Tools/SQLMap/01 - Interpretación de la salida de SQLMap.md.tmp.25152.2495d51ee571",
-    "03 - Recursos/🛠️ Tools/SQLMap/06 - Explotación del sistema operativo con SQLMap.md.tmp.25152.c4b1dd05dfca",
-    "03 - Recursos/🛠️ Tools/SQLMap/06 - Explotación del sistema operativo con SQLMap.md.tmp.25152.54c0728ad8d7",
-    "02 - Areas/Ingenieria/Sistemas-Empresariales/Examen - Respuestas a preguntas seleccionadas.md",
+    "02 - Areas/Ingenieria/GPSI/003 - SCRUM.md",
     "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/10 - Prevención de SQL Injection.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/09 - PostgreSQL ejecución de comandos.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/08 - PostgreSQL lectura y escritura de archivos.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/07 - SQL Injection de segundo orden.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/06 - SQL Injection basada en errores.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/05 - Bypass de caracteres comunes.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/04 - Búsqueda de errores SQL en los logs.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/03 - Live-debugging de aplicaciones Java.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/02 - Búsqueda de strings en el código.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/01 - Decompilación de archivos Java.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/00 - Introducción a PostgreSQL.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/14 - Defensa contra Blind SQL Injection.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/13 - Herramientas para Blind SQLi.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/12 - MSSQL lectura de archivos.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/11 - MSSQL robo de hashes NetNTLM.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/10 - MSSQL ejecución de comandos con xp_cmdshell.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/09 - Exfiltración Out-of-Band por DNS.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/08 - Extracción de datos time-based.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/07 - Diseño del oráculo temporal.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/06 - Identificar SQLi basada en tiempo.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/05 - Optimización de la extracción.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/04 - Extracción de datos boolean-based.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/03 - Diseño del oráculo booleano.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/02 - Identificar SQLi basada en booleanos.md",
+    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/SQL Injection.base",
+    "🔴⚔️ Red Team/Hacking web/Web Pentesting.base",
+    "02 - Areas/Ingenieria/GPSI/001 - Planificación Estratégica de SI.md",
+    "02 - Areas/Ingenieria/GPSI/004 - Estimación del Software.md",
+    "02 - Areas/Ingenieria/GPSI/002 - Planificación de Proyectos Software.md",
+    "🔴⚔️ Red Team/Hacking web/XPath Injection/Explotación a ciegas.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/08 - Phishing.md.tmp.19524.ea76b3d02e30",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/04 - Content Security Policy (CSP).md.tmp.19524.e9d8b9e9df92",
+    "🔴⚔️ Red Team/Hacking web/XSS/03 - XSS basado en DOM.md.tmp.19524.edb154c8bc64",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/05 - Bypass de CSP.md.tmp.19524.0242b9a788d1",
+    "🔴⚔️ Red Team/Hacking web/CSRF/00 - Primitivas y entorno de explotación.md.tmp.19524.5acd6e7e6af7",
+    "🔴⚔️ Red Team/Hacking web/CSRF/05 - Bypass de SameSite y defensas de cabecera.md.tmp.19524.e2649185d9b3",
+    "🔴⚔️ Red Team/Hacking web/CSRF/02 - Same-Origin Policy y CORS.md.tmp.19524.56cd5eb9ea13",
+    "🔴⚔️ Red Team/Hacking web/XSS/05 - Evasión y ofuscación de XSS.md.tmp.19524.68edb621fd13",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/07 - Herramientas para XSS.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/06 - Evasión de filtros XSS y ofuscación.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/05 - Bypass de CSP.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/04 - Content Security Policy (CSP).md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/03 - Pivote a aplicaciones internas.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/02 - Enumeración de APIs internas.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/01 - Ataques desde la sesión de la víctima.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/00 - Introducción a la explotación XSS avanzada.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/07 - Herramientas para CSRF y CORS.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/06 - Tokens CSRF débiles y CSRF con JSON.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/05 - Bypass de SameSite y defensas de cabecera.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/04 - Bypass de tokens CSRF vía CORS.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/03 - CORS Misconfigurations.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/02 - Same-Origin Policy y CORS.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/01 - Fundamentos y defensas de CSRF.md",
+    "🔴⚔️ Red Team/Hacking web/CSRF/00 - Primitivas y entorno de explotación.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/06 - Herramientas para XSS.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/05 - Evasión y ofuscación de XSS.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/07 - Defacing.md",
+    "🔴⚔️ Red Team/Hacking web/XSS/08 - Phishing.md",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-form.png",

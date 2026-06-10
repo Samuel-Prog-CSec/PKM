@@ -17,7 +17,7 @@ El tercer tipo, también no persistente, es el `DOM-based XSS`. Mientras el [[02
 
 En una To-Do app vulnerable, al añadir un ítem notas tres cosas en las DevTools:
 
-- En la pestaña **Network**, **no se hace ninguna petición HTTP** — la entrada no sale del navegador.
+- En la pestaña **Network**, en este lab **no se genera ninguna petición HTTP** al añadir el ítem — la entrada no sale del navegador. (En una SPA real sí habrá tráfico hacia su API; lo definitorio del DOM XSS es que **tu entrada** no llega al servidor, no que no haya peticiones.)
 - El parámetro en la URL usa un **hashtag** (`#task=...`): un parámetro del lado cliente que el navegador procesa localmente (<mark style="background: #FFB86CA6;">el fragmento tras `#` ni siquiera se envía al servidor</mark>, así que un WAF de servidor no lo ve).
 - En el código fuente (`CTRL+U`) tu entrada **no aparece**: el JS actualiza la página *después* de cargarse. Para ver el DOM renderizado usas el inspector (`CTRL+SHIFT+C`).
 

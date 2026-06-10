@@ -5,8 +5,8 @@ tags:
   - Pentesting/Explotacion
   - XSS
 Fecha de actualización: 2026-06-02
-Nota previa: "[[05 - Defacing]]"
-Nota siguiente: "[[07 - Robo de sesión]]"
+Nota previa: "[[07 - Defacing]]"
+Nota siguiente: "[[09 - Robo de sesión]]"
 Area: "[[XSS.base|XSS]]"
 ---
 ---
@@ -70,6 +70,6 @@ Username: test | Password: test
 ```
 
 > [!important]+ Por qué el phishing client-side es tan potente
-> A diferencia del phishing por correo, aquí <mark style="background: #FF5582A6;">el formulario falso vive en el **dominio legítimo**</mark>: la URL es real, el certificado `TLS` es válido y el candado del navegador es verde. La víctima no tiene ninguna de las señales típicas de phishing para sospechar. Por eso un XSS en una app de confianza convierte el phishing en algo casi indetectable para el usuario. `BeEF` (Browser Exploitation Framework) automatiza este tipo de *hooking* del navegador de la víctima para ataques más elaborados.
+> A diferencia del phishing por correo, aquí <mark style="background: #FF5582A6;">el formulario falso vive en el **dominio legítimo**</mark>: la URL es real, el certificado `TLS` es válido y el candado del navegador es verde. La víctima no tiene ninguna de las señales típicas de phishing para sospechar. Por eso un XSS en una app de confianza convierte el phishing en algo casi indetectable para el usuario. `BeEF` (Browser Exploitation Framework) automatiza este tipo de *hooking* del navegador de la víctima para ataques más elaborados. En un escenario moderno, el formulario inyectado puede hacer de **proxy inverso** (estilo `evilginx`/`modlishka`): reenvía las credenciales al login real para capturar también el **segundo factor** y la cookie de sesión que devuelve, derrotando el MFA basado en OTP. El XSS *in-domain* elimina la única señal —un dominio sospechoso— que delataría ese proxy.
 
-Inyectar formularios roba credenciales, pero hay un atajo que ni siquiera las necesita: robar directamente la **sesión** ya iniciada. Eso es [[07 - Robo de sesión]].
+Inyectar formularios roba credenciales, pero hay un atajo que ni siquiera las necesita: robar directamente la **sesión** ya iniciada. Eso es [[09 - Robo de sesión]].

@@ -5,7 +5,7 @@ tags:
   - Pentesting/Reporting
   - XSS
 Fecha de actualización: 2026-06-02
-Nota previa: "[[07 - Robo de sesión]]"
+Nota previa: "[[09 - Robo de sesión]]"
 Nota siguiente:
 Area: "[[XSS.base|XSS]]"
 ---
@@ -38,14 +38,14 @@ La XSS se ancla en dos puntos: un [[03 - XSS basado en DOM|`Source`]] (la entrad
 
 Ninguna capa basta por sí sola. Sobre el servidor:
 
-- **`Content-Security-Policy`**: la capa moderna clave. Una buena `CSP` (`script-src 'self'`, sin `unsafe-inline`, con *nonces*) <mark style="background: #FFB86CA6;">neutraliza la mayoría de XSS aunque exista la inyección</mark>, porque el navegador se niega a ejecutar scripts no autorizados. Su punto débil: un `unsafe-inline` la anula (aunque, con un *nonce* o *hash* presente, los navegadores **ignoran** `unsafe-inline` por compatibilidad — CSP3). El *bypass* real de una CSP por lo demás estricta son los **gadgets JSONP** en `'self'` o en dominios permitidos; la mitigación moderna es `strict-dynamic` + *nonces* (investigación de Google *"CSP Is Dead, Long Live CSP"*).
-- **`HttpOnly` y `Secure`** en las cookies: `HttpOnly` impide que `document.cookie` lea la cookie (mata el [[07 - Robo de sesión|robo de sesión]]); `Secure` la restringe a HTTPS.
+- **`Content-Security-Policy`**: la capa moderna clave. Una buena `CSP` (`script-src 'self'`, sin `unsafe-inline`, con *nonces*) <mark style="background: #FFB86CA6;">neutraliza la mayoría de XSS aunque exista la inyección</mark>, porque el navegador se niega a ejecutar scripts no autorizados (su funcionamiento y sus bypasses se desarrollan en [[04 - Content Security Policy (CSP)]] y [[05 - Bypass de CSP]]). Su punto débil: un `unsafe-inline` la anula (aunque, con un *nonce* o *hash* presente, los navegadores **ignoran** `unsafe-inline` por compatibilidad — CSP3). El *bypass* real de una CSP por lo demás estricta son los **gadgets JSONP** en `'self'` o en dominios permitidos; la mitigación moderna es `strict-dynamic` + *nonces* (investigación de Google *"CSP Is Dead, Long Live CSP"*).
+- **`HttpOnly` y `Secure`** en las cookies: `HttpOnly` impide que `document.cookie` lea la cookie (mata el [[09 - Robo de sesión|robo de sesión]]); `Secure` la restringe a HTTPS.
 - **Cabeceras** como `X-Content-Type-Options: nosniff` y HTTPS en todo el dominio.
-- **WAF**: detecta y bloquea inyecciones en las peticiones (aunque es evadible — ver la [[02 - Ofuscación avanzada|ofuscación de payloads]]).
+- **WAF**: detecta y bloquea inyecciones en las peticiones (aunque es evadible — ver la [[05 - Evasión y ofuscación de XSS|ofuscación de payloads]]).
 
 > [!important]+ El modelo mental: capas, no balas de plata
 > <mark style="background: #8000E1A6;">La seguridad frente a XSS es defensa en profundidad</mark>: validar → sanitizar/codificar por contexto → CSP → cookies `HttpOnly` → WAF. Si una capa falla, otra contiene el daño. Como pentester, tu trabajo es encontrar el hueco entre capas; como defensor, no confiar en una sola. Practicar ambos lados —ofensivo y defensivo— es lo que da una protección fiable.
 
 ---
 
-Con esto cerramos XSS: <mark style="background: #8000E1A6;">qué es, sus tres tipos ([[01 - XSS Almacenado|almacenado]], [[02 - XSS Reflejado|reflejado]], [[03 - XSS basado en DOM|DOM]]), cómo descubrirla, explotarla (defacing, phishing, robo de sesión) y prevenirla</mark>. El primitivo —ejecución de JavaScript arbitrario en el navegador de la víctima— es simple, pero su impacto, bien encadenado, llega al *Account Takeover* completo. La lectura de payloads ofuscados que aparecen en estos ataques se apoya en la [[00 - Introducción y código fuente|desofuscación de JavaScript]].
+Con esto cerramos XSS: <mark style="background: #8000E1A6;">qué es, sus tres tipos ([[01 - XSS Almacenado|almacenado]], [[02 - XSS Reflejado|reflejado]], [[03 - XSS basado en DOM|DOM]]), cómo descubrirla, explotarla (defacing, phishing, robo de sesión) y prevenirla</mark>. El primitivo —ejecución de JavaScript arbitrario en el navegador de la víctima— es simple, pero su impacto, bien encadenado, llega al *Account Takeover* completo y al [[00 - Introducción a la explotación XSS avanzada|pivote a la red interna de la víctima]]. La lectura de payloads ofuscados que aparecen en estos ataques se apoya en la [[00 - Introducción y código fuente|desofuscación de JavaScript]].

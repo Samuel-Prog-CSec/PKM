@@ -1,104 +1,113 @@
-# 1. Introducción y Filosofía
-<mark style="background: #ADCCFFA6;">Scrum no se basa en seguir un plan rígido</mark>, sino en el **control empírico** (basado en la experiencia) y la <mark style="background: #FFB86CA6;">adaptación continua</mark>.
+---
+tags:
+  - GPSI
+  - Scrum
+  - Agil
+Fecha de actualización: 2026-06-09
+Nota previa: "[[002 - Planificación de Proyectos Software]]"
+Nota siguiente:
+Area: "[[GPSI.base|GPSI]]"
+---
+---
 
-## El Manifiesto Ágil (Valores Clave)
-Es vital recordar que en Scrum <mark style="background: #FFB8EBA6;">se valora más lo de la izquierda que lo de la derecha</mark>:
-- **Individuos e interacciones** > sobre procesos y herramientas.
-- **Software funcionando** > sobre documentación extensiva.
-- **Colaboración con el cliente** > sobre negociación contractual.
-- **Respuesta ante el cambio** > sobre seguir un plan.
+# Introducción y filosofía
 
-## Pilares del funcionamiento
-- **Desarrollo Incremental:** Al final de cada iteración (*Sprint*) <mark style="background: #FFB8EBA6;">se entrega una parte operativa del producto</mark>.
-- **Desarrollo Evolutivo:** Se <mark style="background: #FFB86CA6;">acepta la inestabilidad</mark> como premisa.
-- **Auto-organización:** Los <mark style="background: #ADCCFFA6;">equipos deciden _cómo_ hacer el trabajo</mark> (<mark style="background: #FF5582A6;">no son auto-dirigidos</mark>, sino auto-organizados).
+<mark style="background: #ADCCFFA6;">Scrum no se basa en seguir un plan rígido, sino en el control empírico (basado en la experiencia) y la adaptación continua</mark> a la <mark style="background: #FFB8EBA6;">evolución del proyecto.</mark> **Comparte los principios del desarrollo ágil**, recogidos en el **Manifiesto Ágil**, donde se valora más lo de la izquierda que lo de la derecha:
+
+- **Individuos e interacciones** > <mark style="background: #8000E1A6;">procesos</mark> y <mark style="background: #8000E1A6;">herramientas</mark>.
+- **Software funcionando** > <mark style="background: #8000E1A6;">documentación</mark> extensiva.
+- **Colaboración con el cliente** > negociación <mark style="background: #8000E1A6;">contractual</mark>.
+- **Respuesta ante el cambio** > seguir un <mark style="background: #8000E1A6;">plan</mark>.
+
+Se apoya en <mark style="background: #FFB86CA6;">varias prácticas</mark>: **revisión de las iteraciones** (<mark style="background: #FFB8EBA6;">al final de cada sprint</mark>, con todos los implicados), **desarrollo incremental** (cada <mark style="background: #FFB8EBA6;">iteración entrega una parte de producto operativa</mark>, inspeccionable), **desarrollo evolutivo** (<mark style="background: #FFB8EBA6;">acepta la inestabilidad</mark> como premisa) y **auto-organización**: <mark style="background: #FF5582A6;">los equipos son auto-organizados, no auto-dirigidos</mark> — deciden *cómo* hacer el trabajo, pero <mark style="background: #8000E1A6;">dentro de un marco</mark>. Para que la auto-organización funcione como control eficaz es imprescindible la <mark style="background: #ADCCFFA6;">colaboración abierta de cada miembro según sus capacidades, no según su rol</mark>.
 
 ---
 
-# 2. Roles en Scrum (La Metáfora del Cerdo y la Gallina)
-En tus diapositivas se usa esta metáfora clásica para distinguir el nivel de implicación.
-> [!info]+
-> **La Metáfora:** En un plato de huevos con jamón, la <mark style="background: #FFB86CA6;">gallina</mark> está **involucrada** (<mark style="background: #FFB8EBA6;">pone el huevo</mark>), pero el <mark style="background: #FFB86CA6;">cerdo</mark> está **comprometido** (<mark style="background: #FFB8EBA6;">se deja la piel</mark>).
+# Roles (la metáfora del cerdo y la gallina)
 
-## A. Roles Comprometidos ("Cerdos")
-Son los que <mark style="background: #ADCCFFA6;">construyen el producto</mark>.
-1. **Propietario del Producto (Product Owner - PO):**
-    - **Representa** a la <mark style="background: #FFB86CA6;">voz del cliente y los interesados</mark>.
-    - **Responsabilidad clave:** <mark style="background: #8000E1A6;">Maximizar el valor </mark>del producto y el **Retorno de la Inversión (ROI)**.
-    - **Tareas:** Gestiona la <mark style="background: #FFB8EBA6;">financiación</mark>, <mark style="background: #FFB8EBA6;">decide la funcionalidad</mark>, prioriza la Pila del Producto y <mark style="background: #FFB8EBA6;">acepta/rechaza el trabajo</mark>. Es una **sola persona**.
-2. **Equipo de Desarrollo (Team):**
-    - **Responsabilidad:** <mark style="background: #FFB86CA6;">Transformar la pila en un incremento funcional</mark>.
-    - **Características:** <mark style="background: #FFB8EBA6;">Auto-gestionado</mark>, <mark style="background: #FFB8EBA6;">auto-organizado</mark> y **multifuncional** (tienen todas las habilidades necesarias).
-    - Nadie les dice cómo convertir los requisitos en código.
-3. **Scrum Manager (Scrum Master):**
-    - **Responsabilidad:** <mark style="background: #FFB86CA6;">Asegurar que Scrum se entiende y se aplica</mark>. Es un "líder al servicio".
-    - **Tareas:** <mark style="background: #FFB8EBA6;">Elimina impedimentos</mark> (trabas), <mark style="background: #FFB8EBA6;">facilita reuniones</mark>, <mark style="background: #FFB8EBA6;">protege al equipo</mark> de interrupciones externas y hace _coaching_.
+> [!info]+ La metáfora
+> En un plato de huevos con jamón, la **gallina** está *involucrada* (pone el huevo) pero el **cerdo** está *comprometido* (se deja la piel). Distingue el nivel de implicación en el proyecto.
 
-## B. Roles Involucrados ("Gallinas")
-1. **Interesados (Stakeholders):** <mark style="background: #FFB86CA6;">Clientes</mark>, <mark style="background: #FFB86CA6;">usuarios</mark>, <mark style="background: #FFB86CA6;">comerciales</mark>. <mark style="background: #ADCCFFA6;">Aportan feedback y deseos</mark>, pero <mark style="background: #FF5582A6;">no intervienen en el día a día</mark> del Sprint.
+## Roles comprometidos ("cerdos") — construyen el producto
+
+- **Propietario del Producto (*Product Owner*)**: <mark style="background: #ADCCFFA6;">representa la voz del cliente y de todos los interesados</mark>. Su responsabilidad clave es <mark style="background: #FFB86CA6;">maximizar el valor del producto y el retorno de la inversión (ROI)</mark>. Gestiona la financiación, decide la funcionalidad, prioriza la *Pila de Producto* y acepta o rechaza el trabajo. <mark style="background: #FF5582A6;">Es una sola persona</mark>.
+- **Equipo de Desarrollo**: <mark style="background: #ADCCFFA6;">transforma la pila en un incremento funcional</mark>. Es <mark style="background: #FFB86CA6;">auto-gestionado, auto-organizado y multifuncional</mark> (tiene todas las <mark style="background: #8000E1A6;">habilidades necesarias</mark>). Nadie le dice cómo convertir los requisitos en código.
+- **Scrum Manager** (*Scrum Master*): responsable de <mark style="background: #ADCCFFA6;">que Scrum se entienda y aplique</mark>. Es un "*líder al servicio*": <mark style="background: #FFB86CA6;">elimina impedimentos</mark>, <mark style="background: #FFB86CA6;">facilita las reuniones</mark>, <mark style="background: #FFB86CA6;">protege al equipo de interrupciones</mark>, hace *coaching* e introduce <mark style="background: #FFB8EBA6;">Scrum en la cultura</mark> de la empresa.
+
+## Roles involucrados ("gallinas")
+
+- **Interesados (*stakeholders*)**: clientes, usuarios, dirección comercial y gerencial. Aportan *feedback*, <mark style="background: #FFB8EBA6;">sugerencias y colaboración</mark>, pero <mark style="background: #FF5582A6;">no intervienen en el día a día del sprint</mark>.
+
+> [!warning]+ Terminología del examen
+> Tus diapositivas usan el término **"Scrum Manager"**. Aunque en la industria se dice "Scrum Master", en el examen emplea el término de tus apuntes.
 
 ---
 
-# 3. Artefactos (Componentes)
-## 3.1. Pila de Producto (Product Backlog)
-Es el <mark style="background: #ADCCFFA6;">inventario de **todo** lo que podría necesitar el producto</mark> (funcionalidades, mejoras, parches).
-- **Propiedad:** Dueño y señor absoluto: **Product Owner**.
-- **Características:**
-    - Es un **documento vivo**: <mark style="background: #FFB86CA6;">Nunca se cierra</mark>, evoluciona constantemente.
-    - Está **priorizada** por valor de negocio.
-- **Campos de cada ítem:** <mark style="background: #FFB8EBA6;">Identificador</mark>, <mark style="background: #FFB8EBA6;">Descripción</mark>, <mark style="background: #FFB8EBA6;">Prioridad</mark> y <mark style="background: #FFB8EBA6;">Estimación</mark>. (Puede incluir también: Criterios de validación, Observaciones, etc.).
+# Artefactos (componentes)
 
-## 3.2. Pila del Sprint (Sprint Backlog)
-Es el <mark style="background: #ADCCFFA6;">subconjunto de la Pila de Producto seleccionado para _ese_ Sprint concreto</mark>, más el plan para entregarlo.
-- **Propiedad:** **Equipo de Desarrollo**.
-- **Detalle:** Se <mark style="background: #FFB86CA6;">desglosa en tareas técnicas</mark> concretas de entre **2 y 16 horas**.
-- **Regla de oro:** <mark style="background: #FF5582A6;">Solo el equipo puede modificarla durante el Sprint</mark>.
+| Artefacto | Qué es | Propiedad |
+| - | - | - |
+| **Pila de Producto** (*Product Backlog*) | Inventario priorizado de **todo** lo que podría necesitar el producto (funcionalidades, mejoras, tecnología, errores). | *Product Owner* |
+| **Pila del Sprint** (*Sprint Backlog*) | Subconjunto de la pila seleccionado para *ese* sprint, descompuesto en tareas. | Equipo de Desarrollo |
+| **Incremento** | Suma de los elementos completados en el sprint (más los anteriores). | Equipo |
 
-## 3.3. Incremento
-La <mark style="background: #ADCCFFA6;">suma de todos los elementos de la Pila de Producto completados durante un Sprint</mark> y el valor de los incrementos de todos los Sprints anteriores. Debe estar **"Terminado"** (usar), operativo e inspeccionable.
+<mark style="background: #ADCCFFA6;">La Pila de Producto es un documento vivo: nunca se da por cerrada</mark>, crece y evoluciona, y está priorizada por valor de negocio. Cada ítem incluye al menos **identificador, descripción, prioridad y estimación** (opcionalmente criterios de validación, persona asignada, sprint, módulo…).
+
+La **Pila del Sprint** descompone las funcionalidades en tareas de **2 a 16 horas** (si una tarea dura más, se divide), la realiza el equipo en conjunto y <mark style="background: #FF5582A6;">solo el equipo puede modificarla durante el sprint</mark>. Es visible para todos, idealmente en una pizarra en el espacio físico del equipo. El **Incremento** debe estar <mark style="background: #8000E1A6;">"Terminado": operativo, usable e inspeccionable.</mark>
 
 ---
 
-# 4. Eventos (Reuniones)
-## 4.1. Planificación del Sprint (Sprint Planning)
-Se realiza <mark style="background: #FFB86CA6;">al inicio</mark>. Se divide en dos partes claras:
-- **Parte 1 (El QUÉ):** El **Product Owner** presenta los <mark style="background: #ADCCFFA6;">ítems prioritarios y el equipo pregunta dudas</mark>. Se define el **Objetivo del Sprint**.
-- **Parte 2 (El CÓMO):** El **Equipo** desglosa los ítems en <mark style="background: #ADCCFFA6;">tareas técnicas y estima tiempos</mark>. Se <mark style="background: #8000E1A6;">auto-asignan las tareas</mark>.
-    - _Nota:_ El **Scrum Manager** actúa <mark style="background: #FFB8EBA6;">solo como moderador</mark>.
+# Eventos (reuniones)
 
-## 4.2. Reunión Diaria (Daily Scrum)
-<mark style="background: #ADCCFFA6;">Reunión breve (máx. 15 min) para sincronizarse</mark>. Cada miembro <mark style="background: #FFB8EBA6;">responde a 3 preguntas</mark>:
-1. ¿Qué hice ayer?
-2. ¿Qué haré hoy?
-3. ¿Tengo algún impedimento?
+```mermaid
+flowchart LR
+    PB["Pila de Producto"] --> PL["Planificación del Sprint"]
+    PL --> SB["Pila del Sprint"]
+    SB --> SP["SPRINT<br/>Reunión diaria (máx. 15 min)"]
+    SP --> INC["Incremento"]
+    INC --> RV["Revisión del Sprint"]
+    RV -.->|feedback| PB
+```
 
-## 4.3. Seguimiento del Sprint (Burndown Chart)
-Es un <mark style="background: #ADCCFFA6;">gráfico</mark> que muestra el **trabajo pendiente vs. tiempo**.
-- **Eje Y**: *Esfuerzo* restante.
-- **Eje X**: *Días* del Sprint.
-- Sirve <mark style="background: #8000E1A6;">para ver si llegamos a tiempo</mark>. Es una herramienta de _seguimiento diario_.
+**Planificación del Sprint** — jornada previa al sprint, en dos partes:
 
-## 4.4. Revisión del Sprint (Sprint Review)
-<mark style="background: #FFB86CA6;">Al final del Sprint</mark>. El **equipo** <mark style="background: #ADCCFFA6;">presenta (*demo*) el incremento al **PO** y a los interesados</mark>. Se revisa <mark style="background: #FFB8EBA6;">qué se ha hecho y qué no</mark>.
+- *Parte 1 — el QUÉ* (1–4 h): el **Product Owner** presenta los ítems de mayor prioridad con suficiente detalle; el equipo pregunta y propone alternativas. Se define el **Objetivo del Sprint** (frase que sintetiza el valor a entregar).
+- *Parte 2 — el CÓMO* (hasta fin de jornada): el **equipo** desglosa cada funcionalidad en tareas, estima tiempos y **se auto-asigna** las tareas según conocimientos e interés. El **Scrum Manager** actúa solo como **moderador**.
 
----
+**Reunión diaria (*Daily*)** — sincronización breve (<mark style="background: #FFB8EBA6;">máximo 15 minutos</mark>) en la que cada miembro responde: ¿qué hice ayer?, ¿qué haré hoy?, ¿tengo impedimentos?
 
-# 5. Técnica de Estimación: Planning Poker
-Es una *adaptación* del **método Delphi** para <mark style="background: #ADCCFFA6;">estimar en grupo y evitar sesgos</mark>. **Procedimiento:**
-1. El **PO** explica una <mark style="background: #FFB86CA6;">historia de usuario</mark>.
-2. El **equipo** <mark style="background: #FFB86CA6;">discute dudas</mark>.
-3. <mark style="background: #FFB8EBA6;">Cada miembro selecciona una carta</mark> (con números tipo serie de *Fibonacci*: 1, 2, 3, 5, 8...) que representa el esfuerzo, **boca abajo**.
-4. Se voltean todas a la vez.
-5. <mark style="background: #FFB8EBA6;">Si hay consenso, esa es la estimación</mark>. Si hay dispersión (ej. uno saca un 3 y otro un 20), <mark style="background: #FFB86CA6;">discuten los extremos y repiten la votación</mark>.
+**Revisión del Sprint (*Sprint Review*)** — al final del sprint, el equipo presenta (*demo*) el incremento al Product Owner y a los interesados, y se revisa qué se hizo y qué no.
 
-> [!important]+
-> **Cartas especiales**:
-> - **? (Interrogación):** <mark style="background: #CACFD9A6;">Falta información</mark>, no puedo estimar.
-> - **Taza de café:** Necesito un <mark style="background: #CACFD9A6;">descanso</mark>.
+**Seguimiento — *Burndown Chart*** — gráfico de **trabajo pendiente** (eje Y: esfuerzo restante) frente a **tiempo** (eje X: días del sprint). Sirve para ver, día a día, si se llegará a tiempo.
+
+> [!info]+ Matiz para el examen
+> Las diapositivas tratan tres reuniones (Planificación, Diaria y Revisión) más el *burndown*. El Scrum estándar añade además la **Retrospectiva** (mejora del proceso al cerrar el sprint), pero **no** aparece destacada en tus apuntes; cíñete a lo que pidan en clase.
 
 ---
 
-# ⚠️ Ojo para el examen (Detalles de tus diapositivas):
-- **Duración de tareas:** En la Pila del Sprint, las tareas deben desglosarse para durar entre **2 y 16 horas**. Si una tarea dura más, debe dividirse.
-- **Responsabilidad compartida:** En el equipo Scrum, no hay "mi tarea", el objetivo del Sprint es responsabilidad conjunta de todo el equipo.
-- **Scrum Manager vs Master:** Tus diapositivas usan el término **"Scrum Manager"**. Aunque en la industria se usa "Master", en el examen usa el término de tus apuntes.
+# Técnica de estimación: Planning Poker
+
+Es una **adaptación del método Delphi** (juicio de expertos) a la gestión ágil, cuyo objetivo es <mark style="background: #ADCCFFA6;">alcanzar una estimación por consenso</mark> a partir de las estimaciones individuales, combinando opinión experta y analogía. Procedimiento:
+
+1. El **Product Owner** presenta una historia de usuario y se discuten los detalles dudosos.
+2. Cada estimador elige en secreto la **carta** (números tipo serie de **Fibonacci**: 1, 2, 3, 5, 8…) que representa el esfuerzo.
+3. Todas las cartas se **muestran a la vez** (para que unas estimaciones no condicionen a otras).
+4. Si hay **gran dispersión** (uno dice 2, otro 20) se discuten los extremos y se repite la votación; si hay **consenso**, esa es la estimación.
+
+> [!important]+ Cartas especiales
+> - **? (interrogación):** falta información, no puedo estimar.
+> - **Taza de café:** necesito un descanso.
+
+---
+
+# Condiciones de éxito
+
+Para que Scrum funcione hacen falta: **autonomía** del equipo, **respeto**, **responsabilidad y autodisciplina**, **foco** en la tarea, y **transparencia y visibilidad** del desarrollo. Las responsabilidades quedan repartidas: el funcionamiento de Scrum recae en el **Scrum Manager**, la gestión del producto en el **Product Owner**, y la auto-organización y el uso de prácticas ágiles en los **miembros del equipo**. En el equipo no existe "mi tarea": el objetivo del sprint es **responsabilidad conjunta** de todos.
+
+> [!tip]+ Pistas para el examen
+> - Equipos **auto-organizados ≠ auto-dirigidos**.
+> - El **Product Owner** es **una sola persona** y busca **maximizar el valor / ROI**; prioriza la Pila de Producto.
+> - **Solo el equipo** modifica la **Pila del Sprint** durante el sprint; sus tareas duran **2–16 h**.
+> - La **Daily** dura **máx. 15 min** y responde a **3 preguntas**.
+> - **Planning Poker** = Delphi adaptado, cartas Fibonacci a la vez para evitar sesgos; cartas especiales **?** y **café**.
+> - En el examen, **"Scrum Manager"** (no "Master").

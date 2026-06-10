@@ -71,7 +71,7 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 1 | Injection Attacks | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Injection Attacks/` | Pendiente |
 | 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` | Pendiente |
 | 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Advanced/` *(crear sub)* | Pendiente |
-| 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` *(crear)* | Pendiente |
+| 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` | Completado |
 | 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` *(crear)* | Pendiente |
 | 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` *(crear)* | Pendiente |
 | 7 | HTTP Attacks | `Hacking web/HTTP/Attacks/` *(crear; smuggling, desync, cache poisoning)* | Pendiente |

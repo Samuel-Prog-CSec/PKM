@@ -5,8 +5,8 @@ tags:
   - Pentesting/Explotacion
   - XSS
 Fecha de actualización: 2026-06-02
-Nota previa: "[[04 - Descubrimiento de XSS]]"
-Nota siguiente: "[[06 - Phishing]]"
+Nota previa: "[[06 - Herramientas para XSS]]"
+Nota siguiente: "[[08 - Phishing]]"
 Area: "[[XSS.base|XSS]]"
 ---
 ---
@@ -47,6 +47,6 @@ Para el mensaje, los grupos suelen reemplazar **todo** el `body`. Conviene prepa
 `document.getElementsByTagName('body')[0]` selecciona el primer (y único) `body`, e `innerHTML` reescribe su contenido entero. Combinando los tres payloads, la página queda *defaced* para cualquier visitante. En el código fuente, el original sigue ahí y los payloads aparecen **al final** —porque el JS reescribe el aspecto al ejecutarse—; si la inyección estuviera en mitad del documento, habría que contar con los scripts que vienen después.
 
 > [!important]+ Qué es realmente el defacing en un pentest
-> El defacing tiene poco valor de negocio por sí mismo —más allá del daño reputacional, no roba nada—. <mark style="background: #8000E1A6;">Su utilidad real en una evaluación es como **prueba visual** del impacto</mark>: una captura de la web alterada demuestra de forma incontestable que puedes ejecutar JavaScript arbitrario en el navegador de **todos** los usuarios. <mark style="background: #FF5582A6;">Ese mismo primitivo —ejecución de JS arbitrario— es el que habilita los ataques serios</mark>: inyectar formularios de [[06 - Phishing|phishing]] o robar sesiones. El defacing es la demo suave; el payload de verdad viene después.
+> El defacing tiene poco valor de negocio por sí mismo —más allá del daño reputacional, no roba nada—. <mark style="background: #8000E1A6;">Su utilidad real en una evaluación es como **prueba visual** del impacto</mark>: una captura de la web alterada demuestra de forma incontestable que puedes ejecutar JavaScript arbitrario en el navegador de **todos** los usuarios. <mark style="background: #FF5582A6;">Ese mismo primitivo —ejecución de JS arbitrario— es el que habilita los ataques serios</mark>: inyectar formularios de [[08 - Phishing|phishing]] o robar sesiones. El defacing es la demo suave; el payload de verdad viene después.
 
-El primer ataque con impacto real es el phishing: inyectar un formulario de login falso para robar credenciales. Eso es [[06 - Phishing]].
+El primer ataque con impacto real es el phishing: inyectar un formulario de login falso para robar credenciales. Eso es [[08 - Phishing]].
