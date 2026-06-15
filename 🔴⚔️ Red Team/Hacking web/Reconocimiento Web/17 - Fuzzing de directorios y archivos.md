@@ -1,7 +1,6 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Enumeracion
   - Fuzzing
 Fecha de actualización: 2026-06-02
@@ -68,6 +67,18 @@ Extensiones que más interesan según el stack: `.php`, `.asp`/`.aspx`, `.jsp` (
 
 > [!warning]+ Los backups son oro
 > <mark style="background: #FF5582A6;">Encontrar `config.php.bak`, `.env`, `index.php~` o `database.sql` puede entregar credenciales, claves de API o código fuente directamente</mark>. Prueba siempre variantes de backup sobre los archivos que ya conoces: si existe `config.php`, busca `config.php.bak`, `config.php.old`, `config.php~`, `.config.php.swp`. El `.git/` expuesto es otro clásico: si responde, puedes reconstruir todo el repositorio.
+
+# Rutas conocidas de alto valor
+
+No todo es fuerza bruta: hay rutas concretas que casi siempre merece comprobar directamente, porque su solo hallazgo entrega código o estructura sin adivinar nada.
+
+- <mark style="background: #FF5582A6;">**Sourcemaps `.js.map`**</mark>: si un bundle JS minificado conserva su *source map*, recuperas el **código fuente original** —nombres de variables, comentarios, endpoints internos y a veces secretos *hardcodeados*—. Prueba `main.js.map`/`app.js.map`, o ábrelos desde las DevTools del navegador. Para reconstruir el árbol completo: `unwebpack-sourcemap` o `sourcemapper`.
+- **`.git/` expuesto** → con `git-dumper` reconstruyes el repositorio entero (código, historial y secretos en *commits* viejos). `.svn/` y `.hg/` tienen equivalentes.
+- **`.DS_Store`** (servidores que sirven ficheros de macOS): lista los nombres del directorio, mapeando su estructura <mark style="background: #8000E1A6;">sin fuerza bruta</mark> (`ds_store_exp`).
+- **`.well-known/`**: `security.txt` (canal de contacto del programa), `change-password`, `openid-configuration` (revela endpoints OAuth/OIDC).
+- **CI/CD y entorno**: `.env`, `docker-compose.yml`, `.gitlab-ci.yml`, `.github/workflows/` — credenciales y arquitectura.
+
+Estas rutas se verifican mejor con plantillas que adivinando: la categoría `exposures/` de [[26 - Escaneo dirigido con nuclei|nuclei]] las cubre de forma sistemática.
 
 # Flags útiles
 

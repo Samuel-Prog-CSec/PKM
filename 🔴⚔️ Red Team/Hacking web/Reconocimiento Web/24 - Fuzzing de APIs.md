@@ -1,12 +1,11 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Enumeracion
   - Fuzzing
 Fecha de actualización: 2026-06-02
 Nota previa: "[[23 - APIs web e identificación de endpoints]]"
-Nota siguiente:
+Nota siguiente: "[[25 - Cloud asset recon]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
 ---
@@ -72,4 +71,6 @@ Una vez tienes endpoints y parámetros, fuzzear sus **valores** expone las clase
 
 ---
 
-Con esto cerramos el recorrido: del **reconocimiento pasivo** ([[00 - Reconocimiento web|WHOIS, DNS, subdominios]]) al **descubrimiento activo por fuzzing** de directorios, parámetros, vhosts y APIs. <mark style="background: #8000E1A6;">El fuzzing no es un fin en sí mismo: es la fase que convierte un objetivo opaco en un mapa de endpoints y parámetros sobre el que aplicar las técnicas de explotación</mark> —inyección, autenticación, lógica— del resto del path.
+Con esto cerramos el **recorrido clásico**: del **reconocimiento pasivo** ([[00 - Reconocimiento web|WHOIS, DNS, subdominios]]) al **descubrimiento activo por fuzzing** de directorios, parámetros, vhosts y APIs. <mark style="background: #8000E1A6;">El fuzzing no es un fin en sí mismo: es la fase que convierte un objetivo opaco en un mapa de endpoints y parámetros sobre el que aplicar las técnicas de explotación</mark> —inyección, autenticación, lógica— del resto del path.
+
+Tres notas complementan el sub-tema con lo que el material clásico no cubre y la práctica actual exige: el [[25 - Cloud asset recon|recon de activos en la nube]], el [[26 - Escaneo dirigido con nuclei|escaneo dirigido con nuclei]] y la [[27 - Evasión en recon y fuzzing|evasión de WAF y rate-limits]] durante el descubrimiento.

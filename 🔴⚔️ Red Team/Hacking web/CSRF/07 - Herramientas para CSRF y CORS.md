@@ -1,13 +1,12 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Enumeracion
   - CSRF
   - CORS
 Fecha de actualización: 2026-06-08
 Nota previa: "[[06 - Tokens CSRF débiles y CSRF con JSON]]"
-Nota siguiente:
+Nota siguiente: "[[08 - Clickjacking]]"
 Area: "[[CSRF.base|CSRF]]"
 ---
 ---
@@ -60,7 +59,7 @@ Corsy/CORScanner (barrido)  →  Burp Repeater (confirmar lógica de validación
                             →  Interactsh/Collaborator (recibir exfil)
 ```
 
-Las técnicas de CSRF se potencian enormemente cuando hay un XSS de por medio: el XSS elimina la barrera same-site y abre el pivote a la red interna. Eso es el siguiente sub-tema: [[00 - Introducción a la explotación XSS avanzada]].
+Más allá del instrumental, queda un ataque hermano del CSRF que logra acciones no intencionadas incluso cuando los tokens anti-CSRF las bloquean: el [[08 - Clickjacking]].
 
 > [!info]+ Fuentes y repos
 > - [Corsy](https://github.com/s0md3v/Corsy) · [CORScanner](https://github.com/chenjj/CORScanner) · [XSRFProbe](https://github.com/0xInfection/XSRFProbe)

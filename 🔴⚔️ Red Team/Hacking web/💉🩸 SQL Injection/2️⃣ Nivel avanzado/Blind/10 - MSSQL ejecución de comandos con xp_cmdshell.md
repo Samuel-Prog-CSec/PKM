@@ -74,7 +74,7 @@ C:\Windows\system32>
 ```
 
 > [!info]+
-> El one-liner de codificación (UTF-16LE → Base64 → `-enc`) es **reutilizable** para cualquier payload PowerShell, no solo aquí: evade comillas y filtros básicos. Es la misma técnica que [[SQLMap.base|SQLMap]] automatiza con `--os-shell` contra MSSQL. Y si ya tienes credenciales, `impacket-mssqlclient` ofrece [[00 - Introducción a MSSQL|`enable_xp_cmdshell`]] directamente.
+> El one-liner de codificación (UTF-16LE → Base64 → `-enc`) es **reutilizable** para cualquier payload PowerShell, no solo aquí: evade comillas y filtros básicos —es la misma [[07 - Ofuscación avanzada de comandos|ofuscación por codificación]] que se emplea para evadir WAFs en command injection—. Es la misma técnica que [[SQLMap.base|SQLMap]] automatiza con `--os-shell` contra MSSQL. Y si ya tienes credenciales, `impacket-mssqlclient` ofrece [[00 - Introducción a MSSQL|`enable_xp_cmdshell`]] directamente.
 
 > [!warning]+
 > **OPSEC**: <mark style="background: #FF5582A6;">`sqlservr.exe` lanzando `cmd.exe`/`powershell.exe` es una de las firmas que todo EDR moderno detecta</mark>. Reactivar `xp_cmdshell` y soltar un `nc.exe` es ruidosísimo. En un engagement con Blue Team activo, considera vías más sigilosas y limpia tras de ti (`sp_configure 'xp_cmdshell','0'`). En bug bounty, demuestra el RCE con un comando inocuo (`whoami`, una petición OOB) y no establezcas shell salvo autorización.

@@ -55,6 +55,6 @@ La consulta de la reverse shell "cuelga" (el servidor espera a que termine la fu
 > **OPSEC y realidad 2026**: el RCE vía PostgreSQL exige superusuario o privilegios de fichero/programa —cada vez menos frecuentes en despliegues endurecidos—. Cuando se da (cuenta de app sobreprivilegiada, un clásico), limpia siempre: `DROP FUNCTION`, `lo_unlink`, borra la `.so` y las tablas temporales. Una reverse shell desde `postgres` y un `gcc`/`.so` recién escrito son señales que cualquier EDR detecta.
 
 > [!info]+
-> **RCE por SQLi según motor**: PostgreSQL (`COPY FROM PROGRAM`, extensiones C), [[10 - MSSQL ejecución de comandos con xp_cmdshell|MSSQL]] (`xp_cmdshell`, OLE Automation, CLR), MySQL ([[08 - Escritura de archivos|web shell vía `INTO OUTFILE`]], UDF `lib_mysqludf_sys`). El patrón es siempre el mismo: abusar de una función del motor que toca el SO, condicionado a privilegios.
+> **RCE por SQLi según motor**: PostgreSQL (`COPY FROM PROGRAM`, extensiones C), [[10 - MSSQL ejecución de comandos con xp_cmdshell|MSSQL]] (`xp_cmdshell`, OLE Automation, CLR), MySQL ([[08 - Escritura de archivos|web shell vía `INTO OUTFILE`]], UDF `lib_mysqludf_sys`). El patrón es siempre el mismo: abusar de una función del motor que toca el SO, condicionado a privilegios. El objetivo final —ejecución de comandos en el servidor— coincide con el de una [[00 - Introducción a Command Injection|command injection]] directa, alcanzado por otra vía.
 
 Tras ver todo lo que una SQLi avanzada permite, el cierre del path es cómo prevenirla: [[10 - Prevención de SQL Injection]].

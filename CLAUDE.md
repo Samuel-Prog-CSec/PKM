@@ -15,7 +15,7 @@ El objetivo paralelo es que el material sirva indefinidamente como referencia pr
 
 - **Idioma de las notas: español**. Mantener en inglés (envueltos en backticks: `` `payload` ``) los términos técnicos consolidados de la industria — *false positive*, *wordlist*, *HTTP response splitting*, *web shell*, etc. — y los nombres de herramientas, parámetros y APIs.
 - **Zettelkasten**: cada nota es atómica, trata un único concepto/técnica/ataque, y se enlaza por contexto con notas vecinas mediante los campos `Nota previa` / `Nota siguiente` del frontmatter y referencias `[[ ]]` en el cuerpo. Las MOC viven en archivos `.base` de Obsidian.
-- **Densidad objetivo: 1000–1500 palabras de *teoría* por nota**. La cuenta de palabras excluye callouts, bloques de código, enlaces y referencias, y cualquier sintaxis de Obsidian o formato. Si el contenido original de HTB es más corto, **enriquecer**; si una sección es desproporcionada, **dividir en varias notas**.
+- **Densidad orientativa, no obligatoria.** Referencia: notas *conceptuales* (explican un mecanismo, ataque o defensa) ~1000–1500 palabras de teoría; notas *técnicas/operativas* (payloads, comandos, herramientas) menos, primando la densidad de payloads sobre la prosa. La cuenta excluye callouts, código, enlaces y sintaxis de Obsidian. **El límite inferior es solo una referencia**: si la nota explica bien el concepto y está completa, quedarse por debajo es perfectamente asumible. **Nunca añadir contenido redundante o de relleno para alcanzar un número** — no aporta valor. **Importa más respetar el límite superior** (~1500): si una nota se dispara, **dividirla** en varias atómicas. Si una nota conceptual se queda genuinamente corta de contenido útil, enriquecer con sustancia real; si no la hay, dejarla.
 - **Voz profesional, no académica**. Notas escritas para un pentester que necesita ejecutar — frases cortas, ejemplos concretos, advertencias accionables. Evitar relleno motivacional, recapitulaciones obvias o frases tipo "como veremos a continuación…".
 
 ## Estructura del vault
@@ -46,13 +46,13 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*           |                   |
 | 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*       |                   |
 | 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                            | Pendiente         |
-| 4   | Information Gathering – Web Edition | `Hacking web/Information Gathering/`                                  | Completado        |
-| 5   | Web Fuzzing                         | `Hacking web/Fuzzing/`                                                | Completado        |
+| 4   | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` (notas 00-14)                       | Completado        |
+| 5   | Web Fuzzing                         | `Hacking web/Reconocimiento Web/` (notas 15-24, tag `Fuzzing`)        | Completado        |
 | 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                     | Completado        |
 | 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                    | Completado        |
 | 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `02 - Areas/Ingeniería/Bases de Datos/`) | Completado |
 | 9   | SQLMap Essentials                   | `03 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection) | Completado |
-| 10  | Command Injections                  | `Hacking web/Command Injection/` *(crear)*                            | Pendiente         |
+| 10  | Command Injections                  | `Hacking web/Command Injection/`                                      | Completado        |
 | 11  | File Upload Attacks                 | `Hacking web/File Upload/` *(crear)*                                  | Pendiente         |
 | 12  | Server-side Attacks                 | `Hacking web/Server-side Attacks/` *(crear)*                          | Pendiente         |
 | 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/` *(crear)*                                | Pendiente         |
@@ -126,8 +126,6 @@ Las marcas usan la sintaxis `<mark style="background: COLOR;">texto</mark>`. **C
 | Gris claro | `#CACFD9A6` | Apenas usado — información de baja prioridad. Evitar salvo necesidad real. |
 
 Una nota saturada de marcas pierde el sistema. Marcar **lo importante**, no todo. Como referencia: una nota de 1200 palabras tiene típicamente 4–8 marcas.
-
-> El subdirectorio `Hacking web/💉🩸 SQL Injection/Nuevo-Formato/` usa una variante con ==highlight== (resaltado único de Obsidian) y énfasis con `**bold**`/`***bold italic***`. Cuando trabajes dentro de esa carpeta, sigue la convención anterior que hemos definido, marcas con colores. Refactoriza el formato.
 
 ### Callouts
 

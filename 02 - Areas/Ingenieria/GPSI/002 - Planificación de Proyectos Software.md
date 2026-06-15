@@ -3,38 +3,32 @@ tags:
   - GPSI
   - Gestion-Proyectos
   - PMBOK
-Fecha de actualización: 2026-06-09
+Fecha de actualización: 2026-06-13
 Nota previa: "[[001 - Planificación Estratégica de SI]]"
 Nota siguiente: "[[003 - SCRUM]]"
 Area: "[[GPSI.base|GPSI]]"
 ---
 ---
 
-## Conceptos fundamentales
+> [!note]+ Foco de examen
+> El profesor prioriza: **conceptos** (diap. 4-6), **estructura PMBOK** (16, 19-20) con los *Apuntes PMBOK 6* (5 grupos / 10 áreas), **conclusiones de PMBOK 7** (71), **estimación** (76-77) y, sobre todo, **TODAS las preguntas tipo PMP** (87-112). El recorrido detallado de los 49 procesos (diap. 21-63) **no entra como tal**, pero ayuda a responder las preguntas PMP, así que va resumido.
 
-Hay que distinguir bien **proyecto** y **operación**, porque se gestionan de forma distinta.
+## Conceptos fundamentales
 
 | Concepto | Definición | Ejemplo |
 | - | - | - |
 | **Proyecto** | Esfuerzo **temporal** para crear un producto/servicio **único**. | Desarrollar una app. |
 | **Operación** | Función **permanente y repetitiva** de la organización. | Mantenimiento de servidores. |
 
-Operaciones → gestión de procesos de negocio; proyectos → **gestión de proyectos**. La gestión de proyectos es la aplicación de conocimientos, habilidades, herramientas y técnicas a las actividades de un proyecto para satisfacer sus requisitos. Gestionar implica identificar requisitos, atender a los **interesados** (*stakeholders*) y **equilibrar demandas concurrentes**: el "triángulo de hierro" ampliado a seis variables — **alcance, tiempo, costes, calidad, recursos y riesgos**. <mark style="background: #FFB86CA6;">Si una de ellas cambia, afecta a las demás.</mark>
+Proyecto y operación **se parecen** (ambos los realizan personas, con recursos limitados, y se planifican, ejecutan y controlan), pero el proyecto es **temporal y único**. La <mark style="background: #ADCCFFA6;">**gestión de proyectos** aplica conocimientos, habilidades, herramientas y técnicas para satisfacer los requisitos del proyecto</mark>. Implica identificar requisitos, atender a los **interesados** y **equilibrar demandas concurrentes**: el "triángulo de hierro" ampliado a seis variables — **alcance, tiempo, costes, calidad, recursos y riesgos**. <mark style="background: #FFB86CA6;">Si una cambia, afecta a las demás.</mark>
 
 ## Naturaleza de los proyectos software
 
-El software es **complejo, abstracto** y se desarrolla con **requisitos incompletos y cambiantes**; las tecnologías abarcan un dominio muy amplio y cambian rápido, y a veces el proyecto se parece más a una investigación. El **cambio es inevitable** y se percibe (erróneamente) como fácil de hacer.
+El software es **complejo, abstracto** y con **requisitos incompletos y cambiantes**. El <mark style="background: #ADCCFFA6;">informe CHAOS (Standish Group)</mark> es el estudio más famoso sobre el fracaso de proyectos TI (en 2009, ~32 % de éxito). *Crítica*: mide el éxito solo por tiempo/presupuesto/requisitos, ignorando calidad, riesgo y satisfacción del cliente.
 
-El <mark style="background: #ADCCFFA6;">informe CHAOS (Standish Group) es el estudio más famoso sobre el fracaso de los proyectos TI</mark>. La edición 2009 daba un **32 %** de éxito (frente al 35 % de 2006 y solo el **16 % de 1994**); un 44 % fueron deficientes (retraso, sobrecoste o menos requisitos) y un 24 % fracasaron.
+## PMBOK 6: estructura
 
-> [!warning]+ La crítica al informe CHAOS
-> Mide el éxito **solo** por tiempo, presupuesto y requisitos, ignorando **calidad, riesgo y satisfacción del cliente**. Además se cita siempre el dato de **1994** (el peor, más sensacionalista) y se suman fracasos + deficientes para concluir que "el 84 % de los proyectos fallan", dando una imagen falsamente catastrófica del sector.
-
-Existen dos grandes familias de métodos de gestión: **basados en planes** (PMBOK) y **ágiles** ([[003 - SCRUM|Scrum]], tratado en el Tema 3).
-
-## PMBOK 6
-
-El **PMBOK** (*Project Management Body of Knowledge*) es la guía de referencia del **PMI** (*Project Management Institute*); no es una metodología rígida sino un marco de buenas prácticas adaptable. La **versión 6** (septiembre de 2017) se organiza en tres partes: el **marco conceptual**, el **rol del director de proyecto** y las **áreas de conocimiento**. Su núcleo son **5 grupos de procesos × 10 áreas de conocimiento = 49 procesos**.
+El **PMBOK** (del **PMI**) es un **marco de buenas prácticas** (no una metodología rígida). La **v6** (2017) tiene tres partes (marco conceptual, rol del director, áreas de conocimiento) y su núcleo son <mark style="background: #ADCCFFA6;">**5 grupos de procesos × 10 áreas de conocimiento = 49 procesos**</mark>.
 
 ```mermaid
 flowchart LR
@@ -49,75 +43,84 @@ flowchart LR
 | - | - |
 | **1. Inicio** | Definir el proyecto y obtener su aprobación. |
 | **2. Planificación** | Establecer el plan detallado (qué, cómo, cuándo, cuánto). |
-| **3. Ejecución** | Llevar a cabo el plan y producir los entregables. |
-| **4. Monitoreo y Control** | Supervisar el avance y corregir desviaciones. |
-| **5. Cierre** | Finalizar formalmente y documentar lecciones aprendidas. |
+| **3. Ejecución** | Integrar personas y recursos para producir los entregables. |
+| **4. Monitoreo y Control** | Dar seguimiento al avance y corregir desviaciones. |
+| **5. Cierre** | Formalizar la aceptación y terminar ordenadamente. |
 
-Las **10 áreas de conocimiento** atraviesan esos grupos: Integración, Alcance, Cronograma (tiempo), Costos, Calidad, Recursos, Comunicaciones, Riesgos, Adquisiciones e Interesados.
+Las **10 áreas de conocimiento** atraviesan esos grupos: Integración, Alcance, Cronograma, Costos, Calidad, Recursos, Comunicaciones, Riesgos, Adquisiciones e Interesados.
 
-### Recorrido por los 5 grupos
-
-**Inicio (2 procesos).** Se *desarrolla el acta de constitución* (*project charter*): documento corto (1–2 páginas) que **autoriza formalmente** el proyecto y da autoridad al director; describe necesidades, objetivos, hitos, supuestos y restricciones a alto nivel. Y se *identifica a los interesados*: es lo **primero** que hace el director tras ser nombrado; un interesado es cualquiera que influya en el proyecto (positiva o negativamente).
-
-**Planificación (el grupo más grande).** Es **iterativo**, no lineal. Se *desarrolla el plan para la dirección del proyecto*, que integra todos los planes subsidiarios (alcance, cronograma, costes, calidad, recursos, comunicaciones, riesgos, adquisiciones, interesados) y las **líneas base**. La secuencia central del alcance y el cronograma es:
-
-```mermaid
-flowchart LR
-    R["Recopilar requisitos"] --> A["Definir alcance"] --> W["Crear EDT/WBS"]
-    W --> D["Definir actividades"] --> S["Secuenciar"] --> RE["Estimar recursos"]
-    RE --> DU["Estimar duración"] --> CR["Desarrollar cronograma"] --> PR["Determinar presupuesto"]
-```
-
-La **EDT/WBS** es la **descomposición jerárquica** del trabajo total, clave para no olvidar nada. *Determinar el presupuesto* crea la **línea base de costes** con la que después se medirá el desempeño. En riesgos, *planificar la respuesta* asigna un **propietario** responsable de cada riesgo.
-
-**Ejecución.** <mark style="background: #FF5582A6;">Es donde se consume la mayor parte del tiempo, presupuesto y recursos.</mark> Se *dirige y gestiona el trabajo* (implementando los cambios aprobados), se *gestiona el conocimiento* (lecciones aprendidas), se *gestiona la calidad* mediante **auditorías** (asegurar que se siguen los procesos), se *adquieren, desarrollan y dirigen* los recursos del equipo y se *efectúan las adquisiciones* (seleccionar proveedores y firmar contratos).
-
-**Monitoreo y Control.** Compara el plan (líneas base) con la realidad. El proceso estrella es el *control integrado de cambios*: **nada se modifica sin pasar por aquí**. Dos pares que se confunden en el examen:
-
-- *Controlar el alcance* → prevenir la **corrupción del alcance** (cambios no controlados).
-- <mark style="background: #FF5582A6;">*Validar el alcance* → conseguir la **aceptación formal** del cliente sobre los entregables. No es testear (eso es calidad), es que el cliente firme el OK.</mark>
-- *Controlar las adquisiciones* → solo el **administrador de contratos** puede autorizar o rechazar cambios contractuales.
-
-**Cierre.** *Cerrar el proyecto o fase* (cierre administrativo): verificar y transferir el producto, obtener la **aceptación formal**, cerrar contratos, redactar el informe de cierre y las **lecciones aprendidas**, y **archivar la información histórica**. No se omite ni aunque el proyecto se cancele.
-
-> [!info]+ El orden de los grupos (diagrama de Rita)
-> Según el *Proceso de Rita* (Mulcahy), <mark style="background: #FFB8EBA6;">**Planificación es el único grupo de procesos que tiene un orden interno asignado**</mark>; el resto agrupan actividades sin secuencia estricta. Los **5 grupos están presentes en todo proyecto**; el director decide cuánta atención dar a cada uno.
+> [!info]+ Recorrido por los 5 grupos (contexto; no entra el detalle)
+> - **Inicio**: *acta de constitución* (autoriza el proyecto y da autoridad al director) e *identificar interesados* (lo primero tras nombrar al director).
+> - **Planificación** (el mayor, iterativo): plan para la dirección, recopilar requisitos → definir alcance → **EDT/WBS** → secuenciar → estimar → cronograma → **presupuesto** (línea base de costes).
+> - **Ejecución**: <mark style="background: #FF5582A6;">consume la mayor parte del tiempo y recursos</mark>; dirigir el trabajo, gestionar la calidad (auditorías), adquisiciones.
+> - **Monitoreo y Control**: control integrado de cambios; *controlar el alcance* (evitar la corrupción) vs *validar el alcance* (aceptación formal del cliente, no es testear).
+> - **Cierre**: aceptación formal, lecciones aprendidas, archivar (no se omite ni aunque se cancele).
 
 ## PMBOK 7
 
-La versión 7 supone un **cambio de paradigma**: <mark style="background: #8000E1A6;">pasa de un enfoque basado en *procesos* a uno basado en **Principios** y **Dominios de Desempeño**</mark>, centrado en la **Entrega de Valor**. Define **12 principios fundamentales**:
+Cambia de enfoque: de *procesos* a **principios** y **dominios de desempeño**, centrado en la **entrega de valor**. Sus **12 principios** (en una línea): administración, equipo, interesados, valor, pensamiento holístico, liderazgo, adaptación (*tailoring*), calidad, complejidad, riesgo, adaptabilidad/resiliencia y cambio. <mark style="background: #FFB8EBA6;">Conclusión clave: dice **qué** saber pero no **cómo**; conviene leer la v6 para el detalle.</mark>
 
-1. **Administración** (*stewardship*): ética, diligencia, cumplimiento legal.
-2. **Equipo**: cultura de colaboración y respeto.
-3. **Interesados**: no solo gestionarlos, **involucrarlos** activamente.
-4. **Valor**: es el objetivo final.
-5. **Pensamiento holístico/sistémico**: ver el proyecto como un sistema conectado.
-6. **Liderazgo**: motivar, influir, acompañar.
-7. **Adaptación** (*tailoring*): no hay talla única; adaptar el método a cada proyecto.
-8. **Calidad**: en el proceso y en el producto.
-9. **Complejidad**: saber gestionarla.
-10. **Riesgo**: minimizar amenazas, maximizar oportunidades.
-11. **Adaptabilidad y resiliencia**: responder al cambio del entorno.
-12. **Cambio**: facilitar la transición hacia estados futuros.
+## Técnicas de gestión
 
-PMBOK 7 dice **qué** saber sin decir **cómo**; se recomienda leer la v6 para el detalle de las definiciones que la v7 ya no describe.
+- **Estimación**: tres etapas, **tamaño** (líneas de código o puntos de función) → **esfuerzo** → **calendario**; el <mark style="background: #ADCCFFA6;">**cono de incertidumbre**</mark> (oscilación **1 a 16** al inicio, se reduce al avanzar). Detalle en [[004 - Estimación del Software]].
+- **Gestión de riesgos**: aumentar oportunidades y reducir amenazas (ver [[005 - Gestión de Riesgos en Proyectos Software]]).
+- **Desarrollo Global de Software (DGS)**: equipos distribuidos; reto de las **3 C** (Comunicación, Coordinación, Control).
+- **Calidad**: de **proceso** (CMMI, ISO 33000) y de **producto** (ISO 25000).
 
-## Técnicas de gestión de proyectos software
+## Preguntas tipo PMP (las más importantes)
 
-**Estimación.** Tiene tres etapas encadenadas: estimar el **tamaño** (líneas de código o **puntos de función** — la etapa más compleja) → estimar el **esfuerzo** (personas-día, a partir del tamaño y datos históricos) → estimar el **calendario**. La idea clave es el <mark style="background: #ADCCFFA6;">**cono de incertidumbre**</mark>: al inicio la oscilación es enorme (**de 1 a 16**) y se reduce a medida que avanza el proyecto (tras la especificación de requisitos baja a ~1 a 2). Modelos habituales: **Puntos de Función, COCOMO II, SLIM**.
+Son las preguntas de ejemplo resueltas de las diapositivas (las que el profe marca como importantes). Intenta responderlas; las **soluciones están en el desplegable del final**.
 
-**Gestión de riesgos.** <mark style="background: #ADCCFFA6;">Un riesgo es un evento o condición incierta que, si ocurre, tiene un efecto positivo o negativo sobre los objetivos del proyecto.</mark> La gestión busca **aumentar la probabilidad e impacto de las oportunidades** y **reducir los de las amenazas**, priorizando con probabilidad × impacto y asignando un propietario a cada respuesta.
+**1.** Un director con muy poca experiencia es asignado a un nuevo proyecto en una **organización matricial**. Puede esperar que las comunicaciones resulten:
+A. Simples. · B. Abiertas y precisas. · C. Complejas. · D. Difíciles de automatizar.
 
-**Desarrollo Global de Software (DGS).** Equipos distribuidos por distintos países y continentes. Su reto se resume en las **3 C** (Conchuir): **Comunicación, Coordinación y Control**.
+**2.** Son características de un proyecto, **EXCEPTO**:
+A. Es temporal. · B. Tiene comienzo y final definitivos. · C. Tiene actividades interrelacionadas. · D. Se repite cada mes.
 
-**Calidad del software.** Dos ramas: calidad de **proceso** (**CMMI**, **ISO 33000**) y calidad de **producto** (**ISO 25000**), ambas apoyadas en la **medición** (métricas). Estándares de gestión: **IEEE 1058** e **ISO/IEC 16326**. Herramientas: **MS Project / ProjectLibre** (planificación), **JIRA / Redmine** (*issue management*), **COCOMO / SLIM** (estimación).
+**3.** ¿Cuál describe **MEJOR** las principales restricciones de un proyecto?
+A. Alcance, número de recursos y costo. · B. Alcance, costo y tiempo. · C. Alcance, tiempo, costo, calidad, riesgo, recursos y satisfacción del cliente. · D. Tiempo, costo y número de cambios.
 
-> [!tip]+ Pistas para el examen (preguntas tipo PMP)
-> - **Organización matricial** → las comunicaciones se vuelven **complejas**.
-> - Lo que **NO** es característica de un proyecto: "se repite cada mes" (eso es una operación).
-> - Mejor lista de **restricciones**: alcance, tiempo, costo, **calidad, riesgo, recursos y satisfacción del cliente**.
-> - El **presupuesto detallado** se crea en **Planificación**; el **enunciado del alcance**, también en Planificación (no en Inicio).
-> - Tras el cronograma y presupuesto iniciales, lo **SIGUIENTE** es *determinar los requisitos de comunicaciones* (antes que los riesgos).
-> - El grupo que consume **más** tiempo y recursos es la **Ejecución**.
-> - Las **lecciones aprendidas** sirven sobre todo como **registros históricos** para proyectos futuros.
-> - Un trabajo **repetitivo** (p. ej. manufactura) **no** lleva acta de constitución → es un proceso, no un proyecto.
+**4.** ¿En qué grupo de procesos se crea el **presupuesto detallado**?
+A. Iniciación. · B. Antes del proceso de dirección. · C. Planificación. · D. Ejecución.
+
+**5.** El equipo acaba de completar el cronograma inicial y el presupuesto. Lo **SIGUIENTE** que debes hacer es:
+A. Identificar los riesgos. · B. Comenzar iteraciones. · C. Determinar los requisitos de comunicaciones. · D. Crear un diagrama de barras (Gantt).
+
+**6.** ¿Qué grupo de procesos consume **MÁS** tiempo y recursos?
+A. Planificación. · B. Diseño. · C. Integración. · D. Ejecución.
+
+**7.** Acciones que se realizan en la **iniciación**, **EXCEPTO**:
+A. Identificar y documentar las necesidades del negocio. · B. Crear un enunciado del alcance. · C. Dividir un proyecto grande en fases. · D. Acumular y evaluar información histórica.
+
+**8.** ¿Qué grupos de procesos deben estar incluidos en **TODOS** los proyectos?
+A. Planificación, ejecución y cierre. · B. Iniciación, planificación y ejecución. · C. Iniciación, planificación, ejecución, seguimiento y control, y cierre. · D. Planificación, ejecución, y seguimiento y control.
+
+**9.** Cometido **MÁS** apropiado en el **cierre** del proyecto:
+A. Trabajar con el cliente para determinar los criterios de aceptación. · B. Recolectar información histórica de proyectos anteriores. · C. Confirmar que todos los requisitos del proyecto se han cumplido. · D. Obtener la aprobación formal de los planes de gestión.
+
+**10.** Un director lleva su segundo proyecto (que crece cada día) y se entera de un proyecto similar realizado el año pasado. ¿Qué debe hacer?
+A. Contactar al otro director para pedirle asistencia. · B. Obtener registros históricos y orientación de la PMO. · C. Esperar a ver si el proyecto se ve impactado por el crecimiento del alcance. · D. Asegurarse de que el alcance sea acordado por todos los interesados.
+
+**11.** El ciclo de vida del proyecto difiere del proceso de la dirección de proyectos en que el proceso de la dirección…:
+A. Es igual para todos los proyectos. · B. No incorpora una metodología. · C. Es diferente para cada industria. · D. Puede generar muchos proyectos.
+
+**12.** Un equipo que **manufactura** un nuevo producto tiene problemas para crear el acta de constitución. ¿La **MEJOR** descripción del verdadero problema?
+A. No se han identificado los objetivos. · B. Están trabajando en un proceso y no un proyecto. · C. No se ha establecido una fecha de finalización. · D. No han identificado el producto.
+
+**13.** ¿Cuál es el **MEJOR** uso de las **lecciones aprendidas**?
+A. Registros históricos para proyectos futuros. · B. Registro de planificación para el proyecto actual. · C. Informar al equipo de lo que ha hecho el director. · D. Informar al equipo sobre el plan de dirección.
+
+> [!success]- ✅ Soluciones (ábrelo solo al corregir)
+> **1·C** — en una organización matricial intervienen personas de toda la organización → comunicaciones **complejas**.
+> **2·D** — "se repite cada mes" es propio de una **operación**, no de un proyecto (temporal y único).
+> **3·C** — la lista más completa de restricciones (alcance, tiempo, costo, calidad, riesgo, recursos y satisfacción del cliente).
+> **4·C** — el presupuesto **detallado** se establece en **Planificación**.
+> **5·C** — primero se determinan los **requisitos de comunicaciones** (antes que los riesgos).
+> **6·D** — la **Ejecución** consume la mayor parte del tiempo y los recursos.
+> **7·B** — el **enunciado del alcance** se crea en Planificación, no en la iniciación.
+> **8·C** — los **cinco grupos** de procesos están en todos los proyectos.
+> **9·C** — en el cierre se **confirma que todos los requisitos se han cumplido** (los criterios de aceptación y la info histórica son de la iniciación).
+> **10·B** — la **PMO** aporta registros históricos y orientación de varios proyectos.
+> **11·A** — el proceso de dirección usa la **misma metodología** para cualquier industria; el ciclo de vida sí varía.
+> **12·B** — manufacturar es un trabajo continuo (**proceso**), no un proyecto → no lleva acta de constitución.
+> **13·A** — su mejor uso es como **registros históricos** para futuros proyectos.

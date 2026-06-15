@@ -64,20 +64,6 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/Generación de PDF/Vulnerabilidades de generación de PDF.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/XPath Injection/Inyección XPath.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
         "pattern": "🔴⚔️ Red Team/Hacking Wi-Fi/Wi-Fi Pentesting.base",
         "patternType": "STRICT"
       },
@@ -121,20 +107,6 @@
         "active": true,
         "type": "FILES",
         "pattern": "🔴⚔️ Red Team/Red-Team.base",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
-        "pattern": "02 - Areas/Desarrollo web/React/Introducción.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
-        "pattern": "02 - Areas/Desarrollo web/HTML/Introducción a HTML.md",
         "patternType": "STRICT"
       },
       {

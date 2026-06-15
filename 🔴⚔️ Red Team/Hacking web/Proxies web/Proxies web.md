@@ -2,7 +2,6 @@
 tags:
   - Introduccion
   - Web/Red-Team
-  - Pentesting
 Fecha de actualización: 2025-11-08
 Nota previa:
 Nota siguiente:

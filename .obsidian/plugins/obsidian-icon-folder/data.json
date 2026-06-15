@@ -65,9 +65,7 @@
   "🔴⚔️ Red Team/Pentesting/Break Password": "TiPasswordUser",
   "🔴⚔️ Red Team/Hacking Wi-Fi": "LiWifi",
   "🔴⚔️ Red Team/Hacking web": "TiSpider",
-  "🔴⚔️ Red Team/Hacking web/Generación de PDF": "TiPdf",
   "🔴⚔️ Red Team/Hacking web/Proxies web": "OcLinkExternal16",
-  "🔴⚔️ Red Team/Hacking web/XPath Injection": "BoBxInjection",
   "🔴⚔️ Red Team/AI Hacking": "OcCopilot96",
   "🔵🛡️ Blue Team/(2) Análisis de red": "LiNetwork",
   "🔵🛡️ Blue Team/002 - Manejo de logs": "LiLogs",
@@ -76,11 +74,6 @@
   "🔴⚔️ Red Team/Red-Team.base": "🔴",
   "02 - Areas/Ingenieria/BI": "TiReportSearch",
   "Redes": "TiNetwork",
-  "02 - Areas/Desarrollo web/JWT": "TiLockShare",
-  "02 - Areas/Desarrollo web/HTML": "BoBxlHtml5",
-  "02 - Areas/Desarrollo web/CSS": "BoBxlCss3",
-  "02 - Areas/Desarrollo web/React": "BoBxlReact",
-  "02 - Areas/Desarrollo web/Tailwind CSS": "BoBxlTailwindCss",
   "Reparación Razer Basilisk V3 Pro 35k.md": {
     "iconName": "LiMouse",
     "iconColor": "#00ff11"

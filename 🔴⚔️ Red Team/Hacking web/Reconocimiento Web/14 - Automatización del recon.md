@@ -1,7 +1,6 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Enumeracion
   - Recon
 Fecha de actualización: 2026-06-02
@@ -75,7 +74,8 @@ Reconoces aquí, encadenadas, técnicas de notas anteriores: [[01 - WHOIS|WHOIS]
 > En bug bounty actual conviven dos enfoques:
 > - **Pipeline de herramientas atómicas** (ProjectDiscovery): `subfinder | dnsx | httpx | nuclei`, encadenadas con `anew` (acumula solo lo nuevo) y `notify` (alerta a Slack/Discord). Modular y combinable a tu gusto.
 > - **Frameworks orquestadores todo-en-uno**: `reconFTW`, `Osmedeus`, `reNgine` automatizan el flujo completo —subdominios, resolución, fingerprinting, fuzzing, *nuclei*— en un comando, ideales para recon continuo y monitorización de superficie.
-> Para escala masiva, `axiom` distribuye el trabajo entre múltiples VMs efímeras.
+> Para escala masiva, `axiom` distribuye el trabajo entre múltiples VMs efímeras —su uso para evadir *rate-limits* está en [[27 - Evasión en recon y fuzzing]]—.
+> El escaneo dirigido con `nuclei` se detalla en [[26 - Escaneo dirigido con nuclei]], y el recon de activos en la nube en [[25 - Cloud asset recon]].
 
 > [!warning]+ La automatización da amplitud, no profundidad
 > <mark style="background: #8000E1A6;">Las herramientas encuentran lo evidente a gran escala; los bugs jugosos suelen requerir análisis manual</mark>. No confíes ciegamente en la salida automatizada: genera falsos positivos, pierde lógica de negocio y no entiende el contexto. Úsala para acotar la superficie y priorizar, luego profundiza a mano sobre lo prometedor.

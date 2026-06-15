@@ -5,7 +5,7 @@ tags:
   - Seguridad/Prevencion-Vulnerabilidad
 Fecha de actualización: 2026-06-04
 Nota previa: "[[09 - PostgreSQL ejecución de comandos]]"
-Nota siguiente:
+Nota siguiente: "[[11 - Inyección en ORMs]]"
 Area: "[[SQL Injection.base|SQL Injection]]"
 ---
 ---
@@ -48,4 +48,6 @@ Tras el cambio, el payload `'/**/and/**/1=1--` deja de funcionar. <mark style="b
 > [!important]+
 > El cierre conceptual del path completo: <mark style="background: #8000E1A6;">SQLi nace siempre de mezclar código y datos; parametrizar los separa y la elimina</mark>. Todo lo demás —privilegio mínimo, WAF, ocultar errores— reduce el impacto cuando algo se escapa, pero no sustituye la parametrización. En 2026, la SQLi que el pentester encuentra vive justo en los huecos donde no se parametrizó: [[Consultas y operadores SQL|identificadores como `ORDER BY`]], [[07 - SQL Injection de segundo orden|datos releídos de la BD]] y APIs con entrada por rutas inesperadas.
 
-Con esto se completa el recorrido de SQL injection, desde los [[00 - Introducción a SQL Injection|fundamentos]] hasta la explotación avanzada en tres motores. La habilidad que perdura es la del principio: encontrar la inyección donde sobrevive y superar las defensas reales.
+Con esto se completa el recorrido clásico de SQL injection, desde los [[00 - Introducción a SQL Injection|fundamentos]] hasta la explotación avanzada en tres motores. La habilidad que perdura es la del principio: encontrar la inyección donde sobrevive y superar las defensas reales.
+
+Y la defensa más extendida hoy —el `ORM`, que parametriza por defecto— tiene sus propios huecos donde la inyección reaparece pese a "estar protegidos": [[11 - Inyección en ORMs]].

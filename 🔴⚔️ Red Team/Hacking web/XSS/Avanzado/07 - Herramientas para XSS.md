@@ -1,12 +1,11 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Explotacion
   - XSS
 Fecha de actualización: 2026-06-08
 Nota previa: "[[06 - Evasión de filtros XSS y ofuscación]]"
-Nota siguiente:
+Nota siguiente: "[[08 - DOM Clobbering]]"
 Area: "[[XSS Avanzado.base|XSS Avanzado]]"
 ---
 ---
@@ -49,6 +48,8 @@ Explotar (avanzado): payload a medida (XHR/Fetch)
 ```
 
 <mark style="background: #8000E1A6;">La explotación avanzada de XSS es, sobre todo, programación de payloads a medida</mark>: las herramientas asisten (ofuscar, recibir datos, evaluar CSP), pero el núcleo es el JavaScript que escribes para actuar en el contexto de la víctima. Con esto se cierra el recorrido de XSS avanzado y CSRF: del `alert(1)` al pivote completo hacia la red interna.
+
+Tres vectores modernos que el módulo clásico de HTB no cubre amplían el sub-tema, atacando el XSS a través de las abstracciones de la web actual: [[08 - DOM Clobbering]], [[09 - Prototype Pollution hacia XSS]] y [[10 - XSS en frameworks modernos]].
 
 > [!info]+ Fuentes y repos
 > - [BeEF](https://github.com/beefproject/beef) · [Hackvertor](https://github.com/hackvertor/hackvertor)

@@ -1,7 +1,6 @@
 ---
 tags:
   - Web/Red-Team
-  - Pentesting
   - Pentesting/Reporting
   - XSS
 Fecha de actualización: 2026-06-02
