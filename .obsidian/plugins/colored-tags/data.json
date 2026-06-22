@@ -21,6 +21,8 @@
     "escaneo": 7,
     "estimacion": 34,
     "excalidraw": 2,
+    "file-inclusion": 39,
+    "file-upload": 40,
     "fuzzing": 20,
     "gestion-proyectos": 31,
     "gestion-riesgos": 38,

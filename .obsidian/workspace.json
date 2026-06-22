@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2567d2d21b671ca0",
+        "id": "df56da0473f5edd0",
         "type": "tabs",
         "children": [
           {
-            "id": "b7ea1688b55c3ec3",
+            "id": "8944b904a46ed17b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Areas/Ingenieria/GPSI/002 - Planificación de Proyectos Software.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "002 - Planificación de Proyectos Software"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -96,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240,
-    "collapsed": true
+    "width": 240
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -106,7 +101,7 @@
       {
         "id": "4804e00b54e49735",
         "type": "tabs",
-        "dimension": 42.38532110091742,
+        "dimension": 42.357723577235774,
         "children": [
           {
             "id": "493c843bd0f9665f",
@@ -114,13 +109,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 - Areas/Ingenieria/GPSI/003 - SCRUM.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de 003 - SCRUM"
+              "title": "Esquema"
             }
           },
           {
@@ -161,7 +155,7 @@
       {
         "id": "670bf0020afcab0e",
         "type": "tabs",
-        "dimension": 24.4954128440367,
+        "dimension": 28.211382113821138,
         "children": [
           {
             "id": "3e2e9f160d67cf90",
@@ -183,7 +177,7 @@
       {
         "id": "f7749b6223e3ef3c",
         "type": "tabs",
-        "dimension": 33.11926605504587,
+        "dimension": 29.43089430894309,
         "children": [
           {
             "id": "8b107ad643ff1169",
@@ -199,8 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269,
-    "collapsed": true
+    "width": 280
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,44 +209,44 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "b7ea1688b55c3ec3",
+  "active": "8944b904a46ed17b",
   "lastOpenFiles": [
-    "02 - Areas/Ingenieria/GPSI/004 - Estimación del Software.md",
-    "02 - Areas/Ingenieria/GPSI/004.3 - Test y ejercicios de práctica (examen).md",
-    "02 - Areas/Ingenieria/GPSI/002 - Planificación de Proyectos Software.md",
-    "02 - Areas/Ingenieria/GPSI/005 - Gestión de Riesgos en Proyectos Software.md",
-    "02 - Areas/Ingenieria/GPSI/003 - SCRUM.md",
-    "02 - Areas/Ingenieria/GPSI/004.0 - Guía para resolver ejercicios de Puntos de Función.md",
-    "02 - Areas/Ingenieria/GPSI/004.1 - Ejercicio PF - Eventos fantásticos.md",
-    "02 - Areas/Ingenieria/GPSI/001 - Planificación Estratégica de SI.md",
-    "02 - Areas/Desarrollo web/React/Componentes/Componentes.md",
-    "🔴⚔️ Red Team/Red-Team.base",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/10 - Prevención de SQL Injection.md",
-    "🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/SQL Injection.base",
-    "🔴⚔️ Red Team/Hacking web/Web Pentesting.base",
-    "🔴⚔️ Red Team/Hacking web/XPath Injection/Explotación a ciegas.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/08 - Phishing.md.tmp.19524.ea76b3d02e30",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/04 - Content Security Policy (CSP).md.tmp.19524.e9d8b9e9df92",
-    "🔴⚔️ Red Team/Hacking web/XSS/03 - XSS basado en DOM.md.tmp.19524.edb154c8bc64",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/05 - Bypass de CSP.md.tmp.19524.0242b9a788d1",
-    "🔴⚔️ Red Team/Hacking web/CSRF/00 - Primitivas y entorno de explotación.md.tmp.19524.5acd6e7e6af7",
-    "🔴⚔️ Red Team/Hacking web/CSRF/05 - Bypass de SameSite y defensas de cabecera.md.tmp.19524.e2649185d9b3",
-    "🔴⚔️ Red Team/Hacking web/CSRF/02 - Same-Origin Policy y CORS.md.tmp.19524.56cd5eb9ea13",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/07 - Herramientas para XSS.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/06 - Evasión de filtros XSS y ofuscación.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/05 - Bypass de CSP.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/04 - Content Security Policy (CSP).md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/03 - Pivote a aplicaciones internas.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/02 - Enumeración de APIs internas.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/01 - Ataques desde la sesión de la víctima.md",
-    "🔴⚔️ Red Team/Hacking web/XSS/Avanzado/00 - Introducción a la explotación XSS avanzada.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/07 - Herramientas para CSRF y CORS.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/06 - Tokens CSRF débiles y CSRF con JSON.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/05 - Bypass de SameSite y defensas de cabecera.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/04 - Bypass de tokens CSRF vía CORS.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/03 - CORS Misconfigurations.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/02 - Same-Origin Policy y CORS.md",
-    "🔴⚔️ Red Team/Hacking web/CSRF/01 - Fundamentos y defensas de CSRF.md",
+    "CLAUDE.md.tmp.12788.bb11c286a2db",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/11 - Arsenal de herramientas para File Inclusion.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/11 - Arsenal de herramientas para File Inclusion.md.tmp.12788.90cd555baeba",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/10 - Prevención de File Inclusion.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/10 - Prevención de File Inclusion.md.tmp.12788.2f98653ab321",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/09 - Evasión de WAF y restricciones del servidor.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/09 - Evasión de WAF y restricciones del servidor.md.tmp.12788.d57dfba6509e",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/08 - Detección y fuzzing automatizado.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/08 - Detección y fuzzing automatizado.md.tmp.12788.55ab1b618f5a",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/07 - Log Poisoning y envenenamiento de sesiones.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/07 - Log Poisoning y envenenamiento de sesiones.md.tmp.12788.ae9c784a75e5",
+    "03 - Recursos/Biblioteca/libroMERN_draft.pdf",
+    "03 - Recursos/Biblioteca/Biblioteca.base",
+    "03 - Recursos/Biblioteca/libroMERN_draft.pdf.crdownload",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/06 - LFI + File Upload a RCE.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/06 - LFI + File Upload a RCE.md.tmp.12788.bd09223a5449",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/05 - Remote File Inclusion (RFI).md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/05 - Remote File Inclusion (RFI).md.tmp.12788.1c0fee92112f",
+    "🔴⚔️ Red Team/Hacking web/File Upload/05 - Validación de tipo - Content-Type y magic bytes.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/04 - Bypass de whitelist y doble extensión.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/03 - Bypass de blacklist de extensiones.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/02 - Bypass de validación en cliente.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/01 - Explotación básica - web shells y reverse shells.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/00 - Introducción a los File Upload Attacks.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/04 - PHP wrappers II - RCE y filter chains.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/03 - PHP wrappers I - php filter y disclosure de código.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/02 - Bypasses básicos - traversal, null byte y encoding.md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/01 - Local File Inclusion (LFI).md",
+    "🔴⚔️ Red Team/Hacking web/File Inclusion/00 - Introducción a File Inclusion.md",
+    "fileinclusion_full.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/06 - Uploads limitados - SVG, polyglots y metadatos.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/zz_avtest2.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/zz_avtest.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/07 - Vectores avanzados - procesamiento, ZIP Slip y race conditions.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/10 - Arsenal de herramientas para File Upload.md",
+    "🔴⚔️ Red Team/Hacking web/File Upload/08 - Detección y metodología en entornos reales.md",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-form.png",

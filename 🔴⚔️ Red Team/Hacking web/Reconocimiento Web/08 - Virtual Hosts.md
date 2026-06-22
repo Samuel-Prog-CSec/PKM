@@ -84,7 +84,7 @@ Flags relevantes:
 `feroxbuster` (en Rust, muy rápido) y `ffuf` (fuzzeando la cabecera `Host`) hacen lo mismo. El detalle fino —cómo filtrar la respuesta por defecto del servidor para eliminar falsos positivos— es el núcleo del [[20 - Fuzzing de vhosts y subdominios]].
 
 > [!warning]+ Falsos positivos y baseline
-> El servidor responde **a todo** con su vhost por defecto, así que un barrido ingenuo marca como "encontrados" todos los nombres. La clave es establecer una *baseline* (tamaño/código de la respuesta por defecto) y filtrar todo lo que coincida con ella. `ffuf -fs <tamaño>` y los filtros de `gobuster` existen precisamente para esto — se detalla en [[20 - Fuzzing de vhosts y subdominios]] y [[21 - Filtrado de la salida]].
+> El servidor responde **a todo** con su vhost por defecto, así que un barrido ingenuo marca como "encontrados" todos los nombres. La clave es establecer una *baseline* (tamaño/código de la respuesta por defecto) y filtrar todo lo que coincida con ella. `ffuf -fs <tamaño>` y los filtros de `gobuster` existen precisamente para esto — se detalla en [[20 - Fuzzing de vhosts y subdominios]] y [[21 - Filtrado de la salida de fuzzing]].
 
 > [!warning]+ Ruido y autorización
 > El `VHost fuzzing` genera mucho tráfico y lo detectan IDS y WAF con facilidad. Confirma autorización y alcance antes de lanzarlo.

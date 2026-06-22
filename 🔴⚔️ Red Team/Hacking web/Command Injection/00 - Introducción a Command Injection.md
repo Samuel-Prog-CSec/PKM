@@ -16,7 +16,7 @@ El patrón es siempre el mismo: una aplicación toma entrada controlada por el u
 
 # La familia de las inyecciones
 
-Las inyecciones son el **riesgo nº 3** del [[OWASP|OWASP Top 10]] (categoría [`A03:2021-Injection`](https://owasp.org/www-project-top-ten/)), tras años encabezando la lista como nº 1. El descenso no refleja que sean raras, sino que los frameworks modernos las mitigan por defecto mejor que antes. <mark style="background: #FFB8EBA6;">Cuando aparecen hoy, suelen estar en el código que se salió del framework</mark>: una llamada manual a la shell, un binario legacy, un microservicio escrito a mano.
+Las inyecciones son el **riesgo nº 3** del OWASP Top 10 (categoría [`A03:2021-Injection`](https://owasp.org/www-project-top-ten/)), tras años encabezando la lista como nº 1. El descenso no refleja que sean raras, sino que los frameworks modernos las mitigan por defecto mejor que antes. <mark style="background: #FFB8EBA6;">Cuando aparecen hoy, suelen estar en el código que se salió del framework</mark>: una llamada manual a la shell, un binario legacy, un microservicio escrito a mano.
 
 La raíz conceptual la comparten todas: <mark style="background: #8000E1A6;">entrada de usuario que el intérprete malinterpreta como parte de la query o el código a ejecutar</mark>, en lugar de como un simple dato. Cambiar el resultado previsto por otro útil para el atacante es la esencia de toda inyección.
 

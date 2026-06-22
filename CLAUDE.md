@@ -53,12 +53,12 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `02 - Areas/Ingeniería/Bases de Datos/`) | Completado |
 | 9   | SQLMap Essentials                   | `03 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection) | Completado |
 | 10  | Command Injections                  | `Hacking web/Command Injection/`                                      | Completado        |
-| 11  | File Upload Attacks                 | `Hacking web/File Upload/` *(crear)*                                  | Pendiente         |
-| 12  | Server-side Attacks                 | `Hacking web/Server-side Attacks/` *(crear)*                          | Pendiente         |
+| 11  | File Upload Attacks                 | `Hacking web/File Upload/`                                            | Completado        |
+| 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`) | Completado |
 | 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/` *(crear)*                                | Pendiente         |
 | 14  | Broken Authentication               | `Hacking web/Authentication/` *(crear)*                               | Pendiente         |
 | 15  | Web Attacks                         | `Hacking web/Web Attacks/` *(crear; HTTP verb tampering, IDOR, XXE…)* | Pendiente         |
-| 16  | File Inclusion                      | `Hacking web/File Inclusion/` *(crear)*                               | Pendiente         |
+| 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                         | Completado        |
 | 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` *(crear)*                                      | Pendiente         |
 | 18  | API Attacks                         | `Hacking web/API Attacks/` *(crear)*                                  | Pendiente         |
 | 19  | Attacking Common Applications       | `Hacking web/Common Applications/` *(crear)*                          | Pendiente         |

