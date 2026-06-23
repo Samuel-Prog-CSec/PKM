@@ -23,7 +23,7 @@ En 2026 la SQL injection es escasa pero no extinta: el reto profesional ya no es
 - Parámetros que alimentan `ORDER BY`, `LIMIT` o nombres de columna —los que [[Consultas y operadores SQL|sobreviven a prepared statements]].
 
 > [!important]+
-> No basta con probar el parámetro obvio. <mark style="background: #FF5582A6;">Muchos SQLi modernos viven en parámetros secundarios</mark> (un `sort=`, un `filter=`, un campo JSON anidado) que el desarrollador parametrizó mal porque "no parecían peligrosos". Mapea **todos** los puntos de entrada con un proxy ([[Interceptación solicitudes|Burp/caido]]) antes de fuzzear; el [[19 - Fuzzing de parámetros y valores|fuzzing de parámetros]] ayuda a descubrir los que la aplicación acepta pero no documenta.
+> No basta con probar el parámetro obvio. <mark style="background: #FF5582A6;">Muchos SQLi modernos viven en parámetros secundarios</mark> (un `sort=`, un `filter=`, un campo JSON anidado) que el desarrollador parametrizó mal porque "no parecían peligrosos". Mapea **todos** los puntos de entrada con un proxy ([[02 - Interceptación de peticiones|Burp/caido]]) antes de fuzzear; el [[19 - Fuzzing de parámetros y valores|fuzzing de parámetros]] ayuda a descubrir los que la aplicación acepta pero no documenta.
 
 # El contexto de inyección
 

@@ -19,7 +19,7 @@ Antes de inyectar nada, mapear la superficie y localizar parámetros candidatos 
 
 | Herramienta | Rol |
 | - | - |
-| **Burp Suite Pro** / **Caido** | Proxy, `Repeater`, `Intruder`. El núcleo del trabajo manual; [[Interceptación solicitudes\|interceptar y replay]] |
+| **Burp Suite Pro** / **Caido** | Proxy, `Repeater`, `Intruder`. El núcleo del trabajo manual; [[02 - Interceptación de peticiones\|interceptar y replay]] |
 | **ffuf** | Fuzzing de parámetros y valores; el más rápido para barridos |
 | **nuclei** | Plantillas de command injection para escaneo masivo en bug bounty |
 | **interactsh** / **Burp Collaborator** | Canal OOB para confirmar [[01 - Detección de Command Injection\|inyección ciega]] |

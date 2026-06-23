@@ -75,7 +75,7 @@ mutation { createPost(title: "X", body: "...") { id title } }
 Comunes a todos los tipos:
 
 - **Documentación / especificaciones**: lo más fiable. Busca `Swagger`/`OpenAPI` (`/swagger.json`, `/openapi.json`, `/api-docs`, `/v2/api-docs`, `/swagger-ui/`), `RAML` o el `WSDL`. <mark style="background: #FF5582A6;">Un `swagger.json` expuesto te entrega todos los endpoints y parámetros en bandeja</mark> — fuzzéalos como rutas con [[17 - Fuzzing de directorios y archivos|`ffuf`]].
-- **Análisis de tráfico**: con [[Proxies web|Burp/Caido]] o las DevTools del navegador, intercepta las peticiones reales que la app hace a su API y observa endpoints, parámetros y formatos.
+- **Análisis de tráfico**: con [[00 - Introducción a los proxies web|Burp/Caido]] o las DevTools del navegador, intercepta las peticiones reales que la app hace a su API y observa endpoints, parámetros y formatos.
 - **Análisis de JavaScript**: el front-end consume la API, así que sus `js_files` contienen las rutas. Extráelas con `LinkFinder` (ver [[11 - Spidering con Scrapy]]).
 - **Fuzzing de nombres de parámetros**: igual que con directorios, `ffuf`/`arjun` con `wordlists` de API descubren parámetros y endpoints no documentados.
 

@@ -16,7 +16,7 @@ El crawling manual no escala. Para mapear un sitio entero se automatiza con herr
 
 | Herramienta | Descripción |
 | - | - |
-| `Burp Suite Spider` | Crawler activo del proxy de pentest más usado; mapea apps y descubre contenido oculto (ver [[Proxies web]]) |
+| `Burp Suite Spider` | Crawler activo del proxy de pentest más usado; mapea apps y descubre contenido oculto (ver [[00 - Introducción a los proxies web]]) |
 | `OWASP ZAP` | Escáner open-source con componente *spider*, modo manual y automático |
 | `Scrapy` | Framework Python para construir crawlers a medida; extracción estructurada y escalable |
 | `Apache Nutch` | Crawler Java extensible y escalable para *crawls* masivos |

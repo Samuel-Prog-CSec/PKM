@@ -45,7 +45,7 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | --- | ----------------------------------- | --------------------------------------------------------------------- | ----------------- |
 | 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*           |                   |
 | 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*       |                   |
-| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                            | Pendiente         |
+| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                            | Completado        |
 | 4   | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` (notas 00-14)                       | Completado        |
 | 5   | Web Fuzzing                         | `Hacking web/Reconocimiento Web/` (notas 15-24, tag `Fuzzing`)        | Completado        |
 | 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                     | Completado        |
@@ -55,8 +55,8 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 10  | Command Injections                  | `Hacking web/Command Injection/`                                      | Completado        |
 | 11  | File Upload Attacks                 | `Hacking web/File Upload/`                                            | Completado        |
 | 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`) | Completado |
-| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/` *(crear)*                                | Pendiente         |
-| 14  | Broken Authentication               | `Hacking web/Authentication/` *(crear)*                               | Pendiente         |
+| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/`                                          | Completado        |
+| 14  | Broken Authentication               | `Hacking web/Authentication/`                                         | Completado        |
 | 15  | Web Attacks                         | `Hacking web/Web Attacks/` *(crear; HTTP verb tampering, IDOR, XXE…)* | Pendiente         |
 | 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                         | Completado        |
 | 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` *(crear)*                                      | Pendiente         |
@@ -70,7 +70,7 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | - | - | - | - |
 | 1 | Injection Attacks | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Injection Attacks/` | Pendiente |
 | 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` | Pendiente |
-| 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Advanced/` *(crear sub)* | Pendiente |
+| 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Avanzado/` | Completado |
 | 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` | Completado |
 | 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` *(crear)* | Pendiente |
 | 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` *(crear)* | Pendiente |

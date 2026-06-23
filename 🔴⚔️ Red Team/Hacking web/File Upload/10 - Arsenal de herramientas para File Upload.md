@@ -17,7 +17,7 @@ El resto del sub-tema enseña la vulnerabilidad a bajo nivel —imprescindible p
 
 | Herramienta | Rol | Estado |
 | - | - | - |
-| **Burp Suite Pro** / **Caido** | Proxy, `Repeater`, `Intruder`. Núcleo del trabajo manual ([[Interceptación solicitudes\|interceptar y replay]]) | Activo |
+| **Burp Suite Pro** / **Caido** | Proxy, `Repeater`, `Intruder`. Núcleo del trabajo manual ([[02 - Interceptación de peticiones\|interceptar y replay]]) | Activo |
 | **ffuf** | Fuzzing de extensiones, Content-Types y magic bytes | Activo |
 | **nuclei** | Escaneo masivo de endpoints y CVEs de upload en bug bounty | Muy activo |
 | **katana** + **gau** + **LinkFinder** | Descubrir endpoints de subida ocultos en el JavaScript (y `.js.map`) | Activos |

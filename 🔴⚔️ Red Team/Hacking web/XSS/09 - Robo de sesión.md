@@ -66,7 +66,7 @@ En la página de login, abrimos el editor de `Storage` (`Shift+F9` en Firefox), 
 
 > [!important]+ `HttpOnly`: la defensa que mata este ataque
 > El robo de cookie vía `document.cookie` tiene un talón de Aquiles que HTB apenas menciona: <mark style="background: #FF5582A6;">si la cookie de sesión tiene el flag `HttpOnly`, **`document.cookie` no puede leerla**</mark> y todo este ataque falla. En aplicaciones modernas las cookies de sesión casi siempre son `HttpOnly`, así que el cookie-stealing clásico está en gran parte muerto. Dos matices que lo mantienen vivo:
-> - <mark style="background: #FFB86CA6;">Los tokens en `localStorage`/`sessionStorage` (JWT de muchas SPA) **sí** son legibles por JS</mark> — son el nuevo objetivo de exfiltración.
+> - <mark style="background: #FFB86CA6;">Los tokens en `localStorage`/`sessionStorage` (los [[01 - Introducción a JWT|JWT]] de muchas SPA) **sí** son legibles por JS</mark> — son el nuevo objetivo de exfiltración. La robustez de esos tokens de sesión (entropía, fixation, forja) se analiza en [[10 - Ataques a tokens de sesión]].
 > - Aunque no puedas **robar** la cookie `HttpOnly`, el XSS sigue ejecutándose **dentro** de la sesión de la víctima: puedes lanzar peticiones autenticadas (la cookie viaja sola) y actuar como ella sin necesidad de robar nada. `HttpOnly` frena el robo, no el abuso — esa idea es la base de la [[00 - Introducción a la explotación XSS avanzada|explotación XSS avanzada]].
 
 Hemos visto cómo encontrar y explotar XSS de todas las formas. El último paso —y el que cierra el círculo— es cómo **prevenirla**: [[10 - Prevención de XSS]].

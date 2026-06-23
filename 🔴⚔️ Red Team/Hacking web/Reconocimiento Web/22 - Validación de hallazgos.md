@@ -23,7 +23,7 @@ El fuzzing lanza una red amplia y genera pistas, pero <mark style="background: #
 
 La vía más fiable es manual, en tres pasos:
 
-1. **Reproducir la petición**: reenviar con `curl`, el navegador o un proxy ([[Proxies web|Burp/Caido]]) la misma petición que disparó la respuesta rara durante el fuzzing.
+1. **Reproducir la petición**: reenviar con `curl`, el navegador o un proxy ([[00 - Introducción a los proxies web|Burp/Caido]]) la misma petición que disparó la respuesta rara durante el fuzzing.
 2. **Analizar la respuesta**: examinar con cuidado en busca de mensajes de error, contenido inesperado o comportamiento que se desvíe de lo normal.
 3. **Explotación / PoC**: si pinta bien, demostrar la vulnerabilidad en un entorno controlado, con autorización.
 

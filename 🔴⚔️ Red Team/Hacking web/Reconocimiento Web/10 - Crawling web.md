@@ -32,7 +32,7 @@ Un crawler no solo lista URLs; cosecha datos de valor:
 > Un dato aislado rara vez importa; el valor está en **conectar puntos**. Imagina que entre los enlaces extraídos varios apuntan a `/files/`. Lo visitas manualmente y descubres que el *directory listing* está activo, exponiendo backups y documentos internos. Ese hallazgo no salía de mirar un enlace suelto: salió de detectar el patrón. Cruza siempre los comentarios, los metadatos y las rutas entre sí.
 
 > [!info]+ Herramientas de crawling
-> El crawling lo hacen `Burp Suite Spider` y `OWASP ZAP` (en proxies interactivos — ver [[Proxies web]]), y en CLI moderna `katana` (ProjectDiscovery), `hakrawler` y `gospider`, que vuelcan todas las URLs de un objetivo para alimentar el resto del pipeline. El enfoque programable con `Scrapy` se ve en [[11 - Spidering con Scrapy]].
+> El crawling lo hacen `Burp Suite Spider` y `OWASP ZAP` (en proxies interactivos — ver [[00 - Introducción a los proxies web]]), y en CLI moderna `katana` (ProjectDiscovery), `hakrawler` y `gospider`, que vuelcan todas las URLs de un objetivo para alimentar el resto del pipeline. El enfoque programable con `Scrapy` se ve en [[11 - Spidering con Scrapy]].
 
 # `robots.txt`
 

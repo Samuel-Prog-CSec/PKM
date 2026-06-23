@@ -75,7 +75,7 @@ Si esto ya devuelve `invalid input`, el `;` está en la lista. Se repite con cad
 - ¿Bloquea el nombre del comando? → [[06 - Bypass de comandos en blacklist]].
 
 > [!important]+ Hazlo en Repeater, una variable cada vez
-> Igual que en la [[01 - Detección de SQL Injection|detección de SQLi]], el aislamiento se hace en [[Interceptación solicitudes|Repeater]] cambiando **un** elemento por petición. Cambiar varios a la vez te deja sin saber cuál disparó el bloqueo. Anota qué pasa y qué no — ese inventario es el que conviertes en payload de evasión.
+> Igual que en la [[01 - Detección de SQL Injection|detección de SQLi]], el aislamiento se hace en [[05 - Repeater - repetir y modificar peticiones|Repeater]] cambiando **un** elemento por petición. Cambiar varios a la vez te deja sin saber cuál disparó el bloqueo. Anota qué pasa y qué no — ese inventario es el que conviertes en payload de evasión.
 
 # Por qué las blacklists están condenadas
 

@@ -67,7 +67,7 @@ Una vez tienes endpoints y parámetros, fuzzear sus **valores** expone las clase
 - **`SSRF`**: inyectar URLs en parámetros para que el servidor haga peticiones a recursos internos.
 
 > [!info]+ Herramientas de API fuzzing
-> Más allá de `ffuf`: `kiterunner` usa `wordlists` construidas de especificaciones reales (rutas + método + content-type), mucho más certeras que una lista de rutas plana. `RESTler` (Microsoft) hace *stateful fuzzing* siguiendo las dependencias entre endpoints (sequence fuzzing automatizado). Para el trabajo manual de secuencias y reenvío, [[Proxies web|Burp/Caido]] siguen siendo el estándar. El tratamiento a fondo de estos ataques es el módulo dedicado de [[API Attacks]].
+> Más allá de `ffuf`: `kiterunner` usa `wordlists` construidas de especificaciones reales (rutas + método + content-type), mucho más certeras que una lista de rutas plana. `RESTler` (Microsoft) hace *stateful fuzzing* siguiendo las dependencias entre endpoints (sequence fuzzing automatizado). Para el trabajo manual de secuencias y reenvío, [[00 - Introducción a los proxies web|Burp/Caido]] siguen siendo el estándar. El tratamiento a fondo de estos ataques es el módulo dedicado de [[API Attacks]].
 
 ---
 

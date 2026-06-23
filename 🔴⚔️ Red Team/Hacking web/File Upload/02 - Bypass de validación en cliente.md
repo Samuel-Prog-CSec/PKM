@@ -20,7 +20,7 @@ Hay dos formas de evadirla. Conviene conocer las dos porque, según el caso, una
 
 El más fiable y el que se usa por defecto en un engagement. <mark style="background: #FF5582A6;">Se ignora por completo el front-end: se sube una imagen legítima y se reescribe la petición en vuelo.</mark>
 
-1. Interceptar con [[Interceptación solicitudes|Burp/Caido]] una subida normal de imagen. La petición va a `/upload.php` como `multipart/form-data`.
+1. Interceptar con [[02 - Interceptación de peticiones|Burp/Caido]] una subida normal de imagen. La petición va a `/upload.php` como `multipart/form-data`.
 2. En la petición, los dos campos a tocar son `filename="HTB.png"` y el contenido del fichero al final.
 3. Cambiar `filename` a `shell.php` y el contenido por el del [[01 - Explotación básica - web shells y reverse shells|web shell]].
 4. Reenviar. Si el back-end no valida, responde `File successfully uploaded`.

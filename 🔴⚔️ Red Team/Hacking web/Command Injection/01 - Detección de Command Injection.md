@@ -21,7 +21,7 @@ Antes de inyectar, hay que saber dónde mirar. Cualquier funcionalidad que inter
 - **Administración**: backups, gestión de usuarios del sistema, tareas programadas, "ejecutar script".
 - **Otros**: generación de informes, envío de correo (`sendmail`), operaciones `git`, comandos `kubectl`/`docker` en paneles de DevOps.
 
-<mark style="background: #FF5582A6;">Mapea todos los parámetros que alimenten estos flujos con un proxy ([[Interceptación solicitudes|Burp/Caido]]) antes de fuzzear</mark>. Incluye cabeceras y campos JSON, no solo el input obvio del formulario.
+<mark style="background: #FF5582A6;">Mapea todos los parámetros que alimenten estos flujos con un proxy ([[02 - Interceptación de peticiones|Burp/Caido]]) antes de fuzzear</mark>. Incluye cabeceras y campos JSON, no solo el input obvio del formulario.
 
 # Detección directa (output-based)
 

@@ -10,7 +10,7 @@ Area: "[[SQL Injection.base|SQL Injection]]"
 ---
 ---
 
-El primer uso práctico de una SQL injection no es ejecutar consultas completas, sino **alterar la lógica** de la consulta existente para que devuelva lo que nos interesa. El caso canónico es el bypass de autenticación: lograr iniciar sesión sin conocer la contraseña, abusando del operador `OR`. Asume que ya hemos confirmado el punto de inyección y su contexto siguiendo la [[01 - Detección de SQL Injection|metodología de detección]].
+El primer uso práctico de una SQL injection no es ejecutar consultas completas, sino **alterar la lógica** de la consulta existente para que devuelva lo que nos interesa. El caso canónico es el [[09 - Bypass de autenticación - modificación de parámetros|bypass de autenticación]]: lograr iniciar sesión sin conocer la contraseña, abusando del operador `OR`. Asume que ya hemos confirmado el punto de inyección y su contexto siguiendo la [[01 - Detección de SQL Injection|metodología de detección]].
 
 # El escenario: un login vulnerable
 

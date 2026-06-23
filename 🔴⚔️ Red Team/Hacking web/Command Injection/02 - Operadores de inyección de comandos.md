@@ -66,7 +66,7 @@ Al probar `127.0.0.1; whoami` en el `Host Checker`, la aplicación lo rechaza co
 
 ## Saltar la validación con un proxy
 
-El procedimiento estándar: interceptar con [[Interceptación solicitudes|Burp o Caido]] una petición legítima (con una IP válida), enviarla a *Repeater* (`CTRL+R`), sustituir el valor por el payload `127.0.0.1; whoami`, **URL-encodearlo** (`CTRL+U` en Burp) y enviarla. La respuesta ahora trae la salida de `ping` **y** de `whoami`: inyección confirmada en el back-end, saltándonos por completo el filtro de cliente.
+El procedimiento estándar: interceptar con [[02 - Interceptación de peticiones|Burp o Caido]] una petición legítima (con una IP válida), enviarla a *Repeater* (`CTRL+R`), sustituir el valor por el payload `127.0.0.1; whoami`, **URL-encodearlo** (`CTRL+U` en Burp) y enviarla. La respuesta ahora trae la salida de `ping` **y** de `whoami`: inyección confirmada en el back-end, saltándonos por completo el filtro de cliente.
 
 > [!important]+ URL-encoding no es opcional
 > Caracteres como `&`, `;` o `+` tienen significado propio dentro de una query string o un cuerpo `x-www-form-urlencoded`. Si no los codificas, el payload se parte o se interpreta mal **antes** de llegar a la aplicación. Codifica siempre los metacaracteres del operador (`;`→`%3b`, `&&`→`%26%26`); el espacio a `+` o `%20`.
