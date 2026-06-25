@@ -4,7 +4,7 @@ tags:
   - React
   - Frontend
 Fecha de actualización: 2026-06-22
-Nota previa: "[[React.js, SPA y Virtual DOM]]"
+Nota previa: "[[00-React.js, SPA y Virtual DOM]]"
 Nota siguiente: "[[Componentes de React (tipos y ciclo de vida)]]"
 Area: "[[React.js.base|React.js]]"
 ---

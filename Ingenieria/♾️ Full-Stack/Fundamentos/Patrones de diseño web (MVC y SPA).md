@@ -16,7 +16,7 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 
 <mark style="background: #ADCCFFA6;">MVC es el patrón de referencia de la mayoría de frameworks y librerías web.</mark> Separa la aplicación en tres capas con responsabilidades distintas:
 
-- **Modelo**: trabaja con los datos. Contiene los mecanismos de acceso y actualización de la información y conecta directamente con la base de datos, normalmente a través de **mapeadores de datos** que representan los datos como objetos para facilitar su manipulación (en MERN, la librería [[Mongoose y el patrón ODM en Express|mongoose]]).
+- **Modelo**: trabaja con los datos. Contiene los mecanismos de acceso y actualización de la información y conecta directamente con la base de datos, normalmente a través de **mapeadores de datos** que representan los datos como objetos para facilitar su manipulación (en MERN, la librería [[04-Mongoose y el patrón ODM en Express|mongoose]]).
 - **Vista**: todo el código que produce la visualización a través de interfaces gráficas de usuario; en última instancia, código **HTML**. La vista trabaja con los datos, pero no accede a ellos directamente, sino **a través de los modelos**.
 - **Controlador**: contiene el código que responde a las acciones que el usuario solicita desde la vista. <mark style="background: #8000E1A6;">Es el enlace entre la vista y el modelo, y concentra gran parte de la lógica de la aplicación.</mark>
 

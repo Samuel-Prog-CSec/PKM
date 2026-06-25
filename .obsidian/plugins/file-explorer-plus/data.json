@@ -178,6 +178,69 @@
         "type": "FILES",
         "pattern": "02 - Areas/Ingenieria/GPSI/GPSI.base",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/♾️ Full-Stack/MongoDB/MongoDB.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/♾️ Full-Stack/Full-Stack.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/♾️ Full-Stack/Node.js/Node.js.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/♾️ Full-Stack/React.js/React.js.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/♾️ Full-Stack/Express.js/Express.js.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/Sistemas-Empresariales/Sistemas-Empresariales.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/Sistemas-Empresariales/Laboratorios/00 - Plan de lectura 3 días (BORRAR antes del examen).md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/Sistemas-Empresariales/Laboratorios/Laboratorios.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/♾️ Full-Stack/Fundamentos/Fundamentos.base",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

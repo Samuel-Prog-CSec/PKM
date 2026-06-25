@@ -14,10 +14,10 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 
 # Las cuatro piezas
 
-- **MongoDB** — base de datos NoSQL orientada a documentos. Alternativa a las relacionales: en lugar de registros y tablas, guarda **documentos BSON** (representación binaria de JSON). Ventajas: escalabilidad, rapidez y eficiencia con grandes volúmenes de datos. → [[MongoDB y el modelo NoSQL documental]]
-- **Express.js** — framework ligero para Node.js. Provee la infraestructura de **enrutamiento**, sesiones, cookies, etc. Montar una API REST con Express es rápido y sencillo. → [[Express.js, framework y middleware]]
-- **React.js** — librería front-end de código abierto creada y mantenida por Facebook. Construye interfaces en una sola página mediante **componentes**. Su **Virtual DOM** hace que solo se rerendericen las partes que cambian, mejorando la eficiencia. → [[React.js, SPA y Virtual DOM]]
-- **Node.js** — entorno de ejecución de JavaScript del lado del servidor, con un modelo **asíncrono y dirigido por eventos**. Destaca por su manejo de E/S, rapidez, soporte de protocolos web y escalabilidad en número de conexiones. Su gestor de paquetes **npm** da acceso a un enorme ecosistema; de hecho, Express y React se distribuyen como paquetes npm. → [[Node.js, entorno de ejecución del servidor]]
+- **MongoDB** — base de datos NoSQL orientada a documentos. Alternativa a las relacionales: en lugar de registros y tablas, guarda **documentos BSON** (representación binaria de JSON). Ventajas: escalabilidad, rapidez y eficiencia con grandes volúmenes de datos. → [[00-MongoDB y el modelo NoSQL documental]]
+- **Express.js** — framework ligero para Node.js. Provee la infraestructura de **enrutamiento**, sesiones, cookies, etc. Montar una API REST con Express es rápido y sencillo. → [[00-Express.js, framework y middleware]]
+- **React.js** — librería front-end de código abierto creada y mantenida por Facebook. Construye interfaces en una sola página mediante **componentes**. Su **Virtual DOM** hace que solo se rerendericen las partes que cambian, mejorando la eficiencia. → [[00-React.js, SPA y Virtual DOM]]
+- **Node.js** — entorno de ejecución de JavaScript del lado del servidor, con un modelo **asíncrono y dirigido por eventos**. Destaca por su manejo de E/S, rapidez, soporte de protocolos web y escalabilidad en número de conexiones. Su gestor de paquetes **npm** da acceso a un enorme ecosistema; de hecho, Express y React se distribuyen como paquetes npm. → [[00-Node.js, entorno de ejecución del servidor]]
 
 # Cómo se reparten en la arquitectura
 

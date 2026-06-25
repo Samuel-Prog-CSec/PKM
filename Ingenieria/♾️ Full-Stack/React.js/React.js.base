@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("React.js.base", "React.js")
+    filters: Area == link("React.js.base", "React.js")
     order:
       - file.name
       - file.tags

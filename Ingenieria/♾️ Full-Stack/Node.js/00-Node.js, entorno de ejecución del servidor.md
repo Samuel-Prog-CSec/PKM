@@ -1,16 +1,16 @@
 ---
 tags:
   - Full-Stack
-  - Node.js
   - Backend
+  - NodeJS
 Fecha de actualización: 2026-06-22
-Nota previa: "[[CRUD y filtros en MongoDB]]"
-Nota siguiente: "[[package.json y el gestor de paquetes npm]]"
+Nota previa: "[[01-CRUD y filtros en MongoDB]]"
+Nota siguiente: "[[01-package.json y el gestor de paquetes npm]]"
 Area: "[[Node.js.base|Node.js]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">Node.js es un entorno de ejecución de JavaScript del lado del servidor</mark> que permite desplegar y configurar aplicaciones de back-end con facilidad. Está pensado para el manejo de comunicaciones asíncronas, la entrada/salida y los protocolos de red, y se ha convertido en todo un ecosistema gracias al gestor de paquetes [[package.json y el gestor de paquetes npm|npm]].
+<mark style="background: #ADCCFFA6;">Node.js es un entorno de ejecución de JavaScript del lado del servidor</mark> que permite desplegar y configurar aplicaciones de back-end con facilidad. Está pensado para el manejo de comunicaciones asíncronas, la entrada/salida y los protocolos de red, y se ha convertido en todo un ecosistema gracias al gestor de paquetes [[01-package.json y el gestor de paquetes npm|npm]].
 
 # El motor V8 y el modelo de ejecución
 
@@ -43,7 +43,7 @@ server.listen(8000);
 Línea a línea: se importa el módulo `http`; `createServer` recibe una función con dos parámetros, la **petición** (`req`) y la **respuesta** (`res`); `res.writeHead(200, …)` escribe en la cabecera el **código de estado 200** y el tipo de contenido `text/plain`; `res.end('Hola Mundo')` envía la respuesta; y `server.listen(8000)` fija el **puerto** de escucha. Se ejecuta con `node holamundo.js` y se visita en `localhost:8000`.
 
 > [!info]+ Por qué importa este patrón
-> Este `req`/`res` y el `listen(puerto)` son exactamente lo que [[Express.js, framework y middleware|Express.js]] abstrae y amplía. Express no sustituye a Node: se ejecuta **sobre** él, simplificando el enrutamiento y el manejo de peticiones.
+> Este `req`/`res` y el `listen(puerto)` son exactamente lo que [[00-Express.js, framework y middleware|Express.js]] abstrae y amplía. Express no sustituye a Node: se ejecuta **sobre** él, simplificando el enrutamiento y el manejo de peticiones.
 
 # Módulos
 
@@ -54,7 +54,7 @@ var modulo = require('modulo');   // CommonJS (sintaxis clásica de Node)
 import modulo from 'modulo';      // ES6 (frameworks modernos, React…)
 ```
 
-<mark style="background: #FFB8EBA6;">Hay módulos nativos incluidos en Node</mark> (como `http` o `fs`) que no requieren instalación; el resto se instalan con [[package.json y el gestor de paquetes npm|npm]] y se cargan igual.
+<mark style="background: #FFB8EBA6;">Hay módulos nativos incluidos en Node</mark> (como `http` o `fs`) que no requieren instalación; el resto se instalan con [[01-package.json y el gestor de paquetes npm|npm]] y se cargan igual.
 
 # El event loop en una frase
 

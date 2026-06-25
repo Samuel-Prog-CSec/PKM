@@ -55,7 +55,7 @@ db.users.updateMany({ age: { $lt: 18 } }, { $set: { status: "minor" } })
 db.users.deleteMany({ status: "reject" })
 ```
 
-<mark style="background: #FFB8EBA6;">Todas estas operaciones pueden ejecutarse de forma masiva</mark> (secuencialmente sobre una colección bajo una misma función). La sintaxis y los filtros se amplían en [[CRUD y filtros en MongoDB]]; su integración en una API REST con Express, en [[CRUD, métodos HTTP y códigos de estado]].
+<mark style="background: #FFB8EBA6;">Todas estas operaciones pueden ejecutarse de forma masiva</mark> (secuencialmente sobre una colección bajo una misma función). La sintaxis y los filtros se amplían en [[01-CRUD y filtros en MongoDB]]; su integración en una API REST con Express, en [[03-CRUD, métodos HTTP y códigos de estado]].
 
 # Propiedades de los métodos HTTP
 

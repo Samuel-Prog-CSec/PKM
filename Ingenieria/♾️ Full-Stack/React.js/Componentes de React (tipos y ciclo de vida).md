@@ -4,7 +4,7 @@ tags:
   - React
   - Frontend
 Fecha de actualización: 2026-06-22
-Nota previa: "[[JSX]]"
+Nota previa: "[[01-JSX]]"
 Nota siguiente: "[[Propiedades y estado en React]]"
 Area: "[[React.js.base|React.js]]"
 ---

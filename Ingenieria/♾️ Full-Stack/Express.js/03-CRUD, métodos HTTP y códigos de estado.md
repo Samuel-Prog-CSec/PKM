@@ -5,8 +5,8 @@ tags:
   - HTTP
   - REST
 Fecha de actualización: 2026-06-22
-Nota previa: "[[Rutas, manejadores y Express Router]]"
-Nota siguiente: "[[Mongoose y el patrón ODM en Express]]"
+Nota previa: "[[02-Rutas, manejadores y Express Router]]"
+Nota siguiente: "[[04-Mongoose y el patrón ODM en Express]]"
 Area: "[[Express.js.base|Express.js]]"
 ---
 ---

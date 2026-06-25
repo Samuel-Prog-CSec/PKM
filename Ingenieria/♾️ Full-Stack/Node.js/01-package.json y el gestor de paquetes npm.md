@@ -1,11 +1,11 @@
 ---
 tags:
   - Full-Stack
-  - Node.js
   - npm
+  - NodeJS
 Fecha de actualización: 2026-06-22
-Nota previa: "[[Node.js, entorno de ejecución del servidor]]"
-Nota siguiente: "[[Express.js, framework y middleware]]"
+Nota previa: "[[00-Node.js, entorno de ejecución del servidor]]"
+Nota siguiente: "[[00-Express.js, framework y middleware]]"
 Area: "[[Node.js.base|Node.js]]"
 ---
 ---
@@ -76,4 +76,4 @@ $ npm ls --depth 0                  # lista los paquetes del proyecto
 > [!info]+ Módulos nativos
 > Algunos módulos vienen incluidos en Node (`http`, `fs`, `path`…) y **no requieren npm**. Para usar cualquier módulo, instalado o nativo: `require('modulo')`.
 
-Express y React, por ejemplo, se distribuyen como paquetes npm. → [[Express.js, framework y middleware]]
+Express y React, por ejemplo, se distribuyen como paquetes npm. → [[00-Express.js, framework y middleware]]

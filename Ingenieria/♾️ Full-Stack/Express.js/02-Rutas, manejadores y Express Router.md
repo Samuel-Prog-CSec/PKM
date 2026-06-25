@@ -5,8 +5,8 @@ tags:
   - REST
   - Backend
 Fecha de actualización: 2026-06-22
-Nota previa: "[[APIs REST (principios y características)]]"
-Nota siguiente: "[[CRUD, métodos HTTP y códigos de estado]]"
+Nota previa: "[[01-APIs REST (principios y características)]]"
+Nota siguiente: "[[03-CRUD, métodos HTTP y códigos de estado]]"
 Area: "[[Express.js.base|Express.js]]"
 ---
 ---

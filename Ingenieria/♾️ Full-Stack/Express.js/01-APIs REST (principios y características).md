@@ -5,8 +5,8 @@ tags:
   - REST
   - Backend
 Fecha de actualización: 2026-06-22
-Nota previa: "[[Express.js, framework y middleware]]"
-Nota siguiente: "[[Rutas, manejadores y Express Router]]"
+Nota previa: "[[00-Express.js, framework y middleware]]"
+Nota siguiente: "[[02-Rutas, manejadores y Express Router]]"
 Area: "[[Express.js.base|Express.js]]"
 ---
 ---
@@ -42,13 +42,13 @@ Ejemplo: `https://api.example.com/users/12?activo=true`.
 
 # APIs públicas y privadas
 
-<mark style="background: #FFB86CA6;">Las APIs REST pueden ser públicas (consumibles por terceros) o privadas, y pueden requerir autenticación previa para acceder a sus recursos.</mark> → [[Seguridad de APIs REST (tokens y JWT)]]
+<mark style="background: #FFB86CA6;">Las APIs REST pueden ser públicas (consumibles por terceros) o privadas, y pueden requerir autenticación previa para acceder a sus recursos.</mark> → [[05-Seguridad de APIs REST (tokens y JWT)]]
 
 Una arquitectura típica separa el **back-end** (la API REST con la lógica de negocio y el acceso a recursos) del **front-end** (independiente, que consume esa API). Es la base de la pila MERN: React consume la API REST de Express.
 
 # Sin estado, en detalle
 
-<mark style="background: #FFB86CA6;">Que REST sea *stateless* significa que cada petición debe contener toda la información necesaria para procesarse;</mark> el servidor no recuerda peticiones anteriores. La consecuencia práctica: la autenticación viaja en **cada** petición (p. ej. un token en la cabecera), no en una "sesión" guardada en el servidor. → [[Seguridad de APIs REST (tokens y JWT)]]
+<mark style="background: #FFB86CA6;">Que REST sea *stateless* significa que cada petición debe contener toda la información necesaria para procesarse;</mark> el servidor no recuerda peticiones anteriores. La consecuencia práctica: la autenticación viaja en **cada** petición (p. ej. un token en la cabecera), no en una "sesión" guardada en el servidor. → [[05-Seguridad de APIs REST (tokens y JWT)]]
 
 Ventaja: cualquier instancia del servidor puede atender cualquier petición, lo que facilita el **escalado horizontal** (balanceo entre varios servidores).
 

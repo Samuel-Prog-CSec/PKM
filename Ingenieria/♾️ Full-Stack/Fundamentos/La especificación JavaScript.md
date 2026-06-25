@@ -5,7 +5,7 @@ tags:
   - Introduccion
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Operaciones CRUD, HTTP y SQL]]"
-Nota siguiente: "[[MongoDB y el modelo NoSQL documental]]"
+Nota siguiente: "[[00-MongoDB y el modelo NoSQL documental]]"
 Area: "[[Fundamentos.base|Fundamentos]]"
 ---
 ---

@@ -5,8 +5,8 @@ tags:
   - REST
   - Seguridad
 Fecha de actualización: 2026-06-22
-Nota previa: "[[Mongoose y el patrón ODM en Express]]"
-Nota siguiente: "[[React.js, SPA y Virtual DOM]]"
+Nota previa: "[[04-Mongoose y el patrón ODM en Express]]"
+Nota siguiente: "[[00-React.js, SPA y Virtual DOM]]"
 Area: "[[Express.js.base|Express.js]]"
 ---
 ---

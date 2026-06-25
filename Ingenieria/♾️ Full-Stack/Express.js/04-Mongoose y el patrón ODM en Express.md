@@ -5,8 +5,8 @@ tags:
   - Mongoose
   - MongoDB
 Fecha de actualización: 2026-06-22
-Nota previa: "[[CRUD, métodos HTTP y códigos de estado]]"
-Nota siguiente: "[[Seguridad de APIs REST (tokens y JWT)]]"
+Nota previa: "[[03-CRUD, métodos HTTP y códigos de estado]]"
+Nota siguiente: "[[05-Seguridad de APIs REST (tokens y JWT)]]"
 Area: "[[Express.js.base|Express.js]]"
 ---
 ---
@@ -70,7 +70,7 @@ var UserSchema = new Schema({
 
 <mark style="background: #FFB8EBA6;">Con `ref` se relacionan modelos (p. ej. `User` ↔ `Post`), de forma análoga a las claves ajenas entre tablas relacionales.</mark> Un post referencia a su usuario; un usuario guarda un array de referencias a sus posts.
 
-Definidos esquemas y modelos, mongoose aporta funciones para **validar, guardar, eliminar y consultar** datos, apoyándose por debajo en las operaciones de [[CRUD y filtros en MongoDB|MongoDB]]. La conexión a la base de datos se establece con `mongoose.connect(...)`. → [[📶📡 Conexión con MongoDB]]
+Definidos esquemas y modelos, mongoose aporta funciones para **validar, guardar, eliminar y consultar** datos, apoyándose por debajo en las operaciones de [[01-CRUD y filtros en MongoDB|MongoDB]]. La conexión a la base de datos se establece con `mongoose.connect(...)`. → [[📶📡 Conexión con MongoDB]]
 
 # Métodos del modelo (las operaciones CRUD)
 

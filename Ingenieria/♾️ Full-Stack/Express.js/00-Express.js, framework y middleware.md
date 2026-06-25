@@ -4,8 +4,8 @@ tags:
   - Express
   - Backend
 Fecha de actualización: 2026-06-22
-Nota previa: "[[package.json y el gestor de paquetes npm]]"
-Nota siguiente: "[[APIs REST (principios y características)]]"
+Nota previa: "[[01-package.json y el gestor de paquetes npm]]"
+Nota siguiente: "[[01-APIs REST (principios y características)]]"
 Area: "[[Express.js.base|Express.js]]"
 ---
 ---
@@ -40,7 +40,7 @@ app.get('/:name', function (req, res) {
 // GET /Jesus  →  "¡Hola Jesus!"
 ```
 
-<mark style="background: #8000E1A6;">Frente al servidor `http` puro de Node, Express elimina el código repetitivo y aporta enrutado, parámetros, middleware y utilidades de respuesta.</mark> Por eso se ejecuta **sobre** [[Node.js, entorno de ejecución del servidor|Node.js]], no en su lugar.
+<mark style="background: #8000E1A6;">Frente al servidor `http` puro de Node, Express elimina el código repetitivo y aporta enrutado, parámetros, middleware y utilidades de respuesta.</mark> Por eso se ejecuta **sobre** [[00-Node.js, entorno de ejecución del servidor|Node.js]], no en su lugar.
 
 # Middleware: el corazón de Express
 
@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
 });
 ```
 
-<mark style="background: #FFB86CA6;">Toda petición en Express atraviesa una cadena de middlewares antes de llegar a su manejador final.</mark> Express integra middlewares para *logging*, parseo de JSON (`express.json()`), servir ficheros estáticos (`express.static`), cookies, etc. El propio enrutado ([[Rutas, manejadores y Express Router|Express Router]]) es un sistema de middleware.
+<mark style="background: #FFB86CA6;">Toda petición en Express atraviesa una cadena de middlewares antes de llegar a su manejador final.</mark> Express integra middlewares para *logging*, parseo de JSON (`express.json()`), servir ficheros estáticos (`express.static`), cookies, etc. El propio enrutado ([[02-Rutas, manejadores y Express Router|Express Router]]) es un sistema de middleware.
 
 # Tipos de middleware
 

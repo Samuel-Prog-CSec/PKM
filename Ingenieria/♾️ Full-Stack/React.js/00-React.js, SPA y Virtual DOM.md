@@ -4,8 +4,8 @@ tags:
   - React
   - Frontend
 Fecha de actualización: 2026-06-22
-Nota previa: "[[Seguridad de APIs REST (tokens y JWT)]]"
-Nota siguiente: "[[JSX]]"
+Nota previa: "[[05-Seguridad de APIs REST (tokens y JWT)]]"
+Nota siguiente: "[[01-JSX]]"
 Area: "[[React.js.base|React.js]]"
 ---
 ---
@@ -16,7 +16,7 @@ Area: "[[React.js.base|React.js]]"
 
 <mark style="background: #ADCCFFA6;">Un componente es una "pieza de software" independiente que contiene su propio comportamiento, un estado y el contenido a renderizar (la vista).</mark> Se establecen jerarquías y relaciones entre componentes para que se comuniquen. Una aplicación React tiene además un **estado global** que repercute en el estado individual de cada componente: por eso React está **orientado a componentes**. → [[Componentes de React (tipos y ciclo de vida)]]
 
-Los componentes se construyen con la sintaxis **JSX**, que permite anidar elementos y crear componentes tan pequeños o grandes como haga falta. → [[JSX]]
+Los componentes se construyen con la sintaxis **JSX**, que permite anidar elementos y crear componentes tan pequeños o grandes como haga falta. → [[01-JSX]]
 
 # El Virtual DOM
 

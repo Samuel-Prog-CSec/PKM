@@ -5,13 +5,13 @@ tags:
   - CRUD
   - NoSQL
 Fecha de actualización: 2026-06-22
-Nota previa: "[[MongoDB y el modelo NoSQL documental]]"
-Nota siguiente: "[[Node.js, entorno de ejecución del servidor]]"
+Nota previa: "[[00-MongoDB y el modelo NoSQL documental]]"
+Nota siguiente: "[[00-Node.js, entorno de ejecución del servidor]]"
 Area: "[[MongoDB.base|MongoDB]]"
 ---
 ---
 
-Operaciones CRUD sobre MongoDB desde la **shell** (`mongo`). Es la base sobre la que luego trabajan el ODM [[Mongoose y el patrón ODM en Express|mongoose]] y la API REST. Para la correspondencia conceptual CRUD↔SQL↔HTTP, ver [[Operaciones CRUD, HTTP y SQL]].
+Operaciones CRUD sobre MongoDB desde la **shell** (`mongo`). Es la base sobre la que luego trabajan el ODM [[04-Mongoose y el patrón ODM en Express|mongoose]] y la API REST. Para la correspondencia conceptual CRUD↔SQL↔HTTP, ver [[Operaciones CRUD, HTTP y SQL]].
 
 # Comandos básicos de la shell
 
@@ -119,4 +119,4 @@ Equivale al `SELECT name, email` de SQL (frente al `SELECT *`, que sería un `fi
 > Create = `insertOne`/`insertMany` · Read = `find`/`findOne` · Update = `updateOne`/`updateMany`/`replaceOne` (con `$set`) · Delete = `deleteOne`/`deleteMany`. Un filtro es un objeto `{ campo: valor }` o `{ campo: { $op: valor } }`. Operadores de comparación con prefijo `$`: `$gt`, `$gte`, `$lt`, `$lte`, `$in`, `$nin`, `$ne`…
 
 > [!info]+ De la shell al ODM
-> En la aplicación MERN no se usa la shell directamente: [[Mongoose y el patrón ODM en Express|mongoose]] envuelve estas operaciones en métodos sobre modelos (`Model.find()`, `Model.create()`…) y añade esquema y validación. Ver también [[💽🧬 Modelos en Mongoose]] y [[📶📡 Conexión con MongoDB]].
+> En la aplicación MERN no se usa la shell directamente: [[04-Mongoose y el patrón ODM en Express|mongoose]] envuelve estas operaciones en métodos sobre modelos (`Model.find()`, `Model.create()`…) y añade esquema y validación. Ver también [[💽🧬 Modelos en Mongoose]] y [[📶📡 Conexión con MongoDB]].

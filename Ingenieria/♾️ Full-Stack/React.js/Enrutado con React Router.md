@@ -13,7 +13,7 @@ Area: "[[React.js.base|React.js]]"
 <mark style="background: #ADCCFFA6;">React Router es la librería de enrutado del cliente: asocia rutas (URLs) a los componentes y páginas que la aplicación renderiza según dónde se encuentre el usuario.</mark>
 
 > [!warning]+ React Router ≠ Express Router
-> En el back-end, [[Rutas, manejadores y Express Router|Express Router]] maneja rutas a **recursos** que el cliente solicita por **HTTP**. React Router maneja rutas en el **cliente**, asociadas a **componentes** que se renderizan en el navegador. Misma palabra, lados opuestos de la arquitectura.
+> En el back-end, [[02-Rutas, manejadores y Express Router|Express Router]] maneja rutas a **recursos** que el cliente solicita por **HTTP**. React Router maneja rutas en el **cliente**, asociadas a **componentes** que se renderizan en el navegador. Misma palabra, lados opuestos de la arquitectura.
 
 La librería es `react-router`, con dos *add-ons*: **`react-router-dom`** (web) y `react-router-native` (móvil).
 
