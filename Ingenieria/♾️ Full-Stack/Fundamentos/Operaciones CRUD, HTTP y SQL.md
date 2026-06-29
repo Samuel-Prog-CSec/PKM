@@ -10,7 +10,7 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">CRUD es el acrónimo de Create, Read, Update, Delete: las cuatro maneras básicas de operar sobre información almacenada.</mark> Son la base de cualquier desarrollo del lado del servidor —de ahí lo de "el corazón del back-end"—. Aunque normalmente se refieren a operaciones sobre una base de datos, también se aplican a funciones de nivel superior. A bajo nivel, las funciones concretas dependen del lenguaje y del sistema gestor de base de datos.
+<mark style="background: #ADCCFFA6;">CRUD es el acrónimo de Create, Read, Update, Delete: las cuatro maneras básicas de operar sobre información almacenada.</mark>. Aunque normalmente se refieren a operaciones sobre una base de datos, también se aplican a funciones de nivel superior. A bajo nivel, las funciones concretas dependen del lenguaje y del sistema gestor de base de datos.
 
 # Las cuatro operaciones
 
@@ -30,7 +30,7 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 | **Update** | `UPDATE` | `PUT` / `PATCH` | `updateOne` / `updateMany` / `replaceOne` |
 | **Delete** | `DELETE` | `DELETE` | `deleteOne` / `deleteMany` |
 
-<mark style="background: #FFB8EBA6;">`PUT` reemplaza el recurso completo; `PATCH` lo actualiza parcialmente.</mark> El libro asocia Update con `PUT`; en la práctica, `PATCH` es la opción para modificaciones parciales.
+<mark style="background: #FFB8EBA6;">`PUT` reemplaza el recurso completo; `PATCH` lo actualiza parcialmente.</mark>
 
 > [!warning]+ No confundir los niveles
 > CRUD es un **concepto**. SQL, HTTP y las funciones de MongoDB son **implementaciones** de ese concepto en tres planos distintos: lenguaje de consulta relacional, protocolo de transporte web y API de un motor NoSQL. Una misma operación Read puede ser a la vez un `SELECT`, un `GET` y un `find`.

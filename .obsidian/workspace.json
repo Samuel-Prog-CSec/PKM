@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ce9dd2b95ab64aef",
+        "id": "4ada2d0d4e08d9df",
         "type": "tabs",
         "children": [
           {
-            "id": "ffacc135f869a79d",
+            "id": "a30161e1ed25f24c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -109,12 +109,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de 01-APIs REST (principios y características)"
             }
           },
           {
@@ -193,7 +194,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280
+    "width": 280,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,44 +211,44 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "a5984c00f83c5aee",
+  "active": "a30161e1ed25f24c",
   "lastOpenFiles": [
-    "Ingenieria/♾️ Full-Stack/MongoDB/01-CRUD y filtros en MongoDB.md",
+    "Sin título.md",
+    "Agent-skills-TFG.png",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/Front-end, back-end y full-stack.md",
+    "Ingenieria/♾️ Full-Stack/Examen de práctica (MERN Full-Stack).md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/Patrones de diseño web (MVC y SPA).md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/Operaciones CRUD, HTTP y SQL.md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/La pila MERN.md",
     "Ingenieria/♾️ Full-Stack/MongoDB/00-MongoDB y el modelo NoSQL documental.md",
-    "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
-    "Ingenieria/♾️ Full-Stack/Express.js/05-Seguridad de APIs REST (tokens y JWT).md",
     "Ingenieria/♾️ Full-Stack/Express.js/04-Mongoose y el patrón ODM en Express.md",
     "Ingenieria/♾️ Full-Stack/Express.js/03-CRUD, métodos HTTP y códigos de estado.md",
     "Ingenieria/♾️ Full-Stack/Express.js/02-Rutas, manejadores y Express Router.md",
+    "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
     "Ingenieria/♾️ Full-Stack/Express.js/00-Express.js, framework y middleware.md",
     "Ingenieria/♾️ Full-Stack/Node.js/01-package.json y el gestor de paquetes npm.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Prerrequisitos/03 - Docker para Odoo.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Prerrequisitos/01 - Python para Odoo.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Laboratorios.base",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Prerrequisitos/02 - Ejercicios Python resueltos.md",
-    "Ingenieria/Sistemas-Empresariales/Sistemas-Empresariales.base",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Operaciones CRUD, HTTP y SQL.md",
-    "Ingenieria/Bases de Datos/Introducción a las bases de datos.md",
-    "Ingenieria/♾️ Full-Stack/Full-Stack.base",
     "Ingenieria/♾️ Full-Stack/Node.js/00-Node.js, entorno de ejecución del servidor.md",
-    "Ingenieria/♾️ Full-Stack/React.js/00-React.js, SPA y Virtual DOM.md",
-    "Ingenieria/♾️ Full-Stack/React.js/01-JSX.md",
+    "Ingenieria/♾️ Full-Stack/MongoDB/01-CRUD y filtros en MongoDB.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/07 - Servicios web XML-RPC.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/06 - Operativa compra-venta.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/05 - Administración funcional.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/04 - Instalación con Docker.md",
+    "Ingenieria/♾️ Full-Stack/React.js/Consumo de APIs REST con axios.md",
     "Ingenieria/♾️ Full-Stack/React.js/Componentes de React (tipos y ciclo de vida).md",
-    "Ingenieria/♾️ Full-Stack/React.js/React.js.base",
+    "Ingenieria/♾️ Full-Stack/React.js/01-JSX.md",
+    "Ingenieria/♾️ Full-Stack/React.js/00-React.js, SPA y Virtual DOM.md",
+    "Ingenieria/♾️ Full-Stack/React.js/Reducers y Redux.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Prerrequisitos/01 - Python para Odoo.md",
+    "Ingenieria/♾️ Full-Stack/Express.js/Express.js.base",
+    "skills-lock.json",
     "Ingenieria/♾️ Full-Stack/MongoDB/MongoDB.base",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/12 - Proxying de apps móviles.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/11 - OPSEC y evasión de detección.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/13 - Flujo profesional y alternativas modernas.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/11 - Flujo profesional y alternativas modernas.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/10 - Extensiones y BApp Store.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/09 - Escáner de vulnerabilidades - Burp y ZAP Scanner.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/08 - Fuzzing web - Burp Intruder y ZAP Fuzzer.md",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/07 - Proxying de herramientas.md",
+    "Ingenieria/♾️ Full-Stack/Full-Stack.base",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Laboratorios.base",
+    "Ingenieria/Sistemas-Empresariales/Sistemas-Empresariales.base",
+    "Ingenieria/♾️ Full-Stack/React.js/React.js.base",
     "🔴⚔️ Red Team/Hacking web/Proxies web/Proxies web.base",
     "htb110.json",
     "🔴⚔️ Red Team/Hacking web/Authentication/01 - Enumeración de usuarios.md.tmp.23096.bf004a9dae93",
-    "🔴⚔️ Red Team/Hacking web/Brute Forcing/04 - Generación de wordlists.md.tmp.23096.f682e4f70f14",
-    "htb170.json",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-form.png",
@@ -256,7 +258,6 @@
     "04 - Archivos/Images/SIEA/biblio-sesion-detalle.png",
     "04 - Archivos/Images/SIEA/biblio-form-resumen.png",
     "04 - Archivos/Images/SIEA/odoo-06-rfq-form.png",
-    "04 - Archivos/Images/SIEA/odoo-06-producto-stock.png",
     "SO's/Logs y eventos/Sin título.canvas",
     "Sin título.canvas",
     "Enumeración/Sin título.canvas"

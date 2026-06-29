@@ -25,8 +25,21 @@ Area: "[[React.js.base|React.js]]"
 
 ```jsx
 class MiBoton extends React.Component {
-  constructor(props) { super(props); this.state = { styles: { background: 'blue' } }; }
-  render() { return <button {...this.props} style={this.state.styles} />; }
+	constructor(props) 
+	{ 
+		super(props); 
+		this.state = 
+		{ 
+			styles: 
+			{ 
+					background: 'blue' 
+			} 
+		}; 
+	}
+	render() 
+	{ 
+		return <button {...this.props} style={this.state.styles} />; 
+	}
 }
 ```
 

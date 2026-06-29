@@ -11,17 +11,17 @@ Area: "[[Express.js.base|Express.js]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">Un ODM (Object Document Mapper) es un mapeador que traduce entre un modelo de objetos y una base de datos de documentos</mark> (como MongoDB), igual que un **ORM** (Object Relational Mapper) lo hace con una base de datos relacional. Aporta un **alto nivel de abstracción**: se manipulan los datos como objetos, sin escribir consultas a mano, logrando independencia entre los modelos y la fuente de datos. → [[🗺️ ODM y ORM]]
+<mark style="background: #ADCCFFA6;">Un ODM (Object Document Mapper) es un mapeador que traduce entre un modelo de objetos y una base de datos de documentos</mark> (como MongoDB), igual que un **ORM** (Object Relational Mapper) lo hace con una base de datos relacional. Aporta un **alto nivel de abstracción**: se manipulan los datos como objetos, sin escribir consultas a mano, logrando independencia entre los modelos y la fuente de datos.
 
 # ¿Qué es un modelo?
 
-<mark style="background: #ADCCFFA6;">Un modelo es la representación de un tipo de contenido con la que se trabaja a alto nivel mediante objetos.</mark> Los modelos se crean a partir de **esquemas**, que definen los atributos, sus tipos y comportamiento adicional (validación, valores por defecto…). Para guardar o recuperar datos se opera sobre objetos de un modelo previamente definido. → [[¿Qué es un modelo❓]]
+<mark style="background: #ADCCFFA6;">Un modelo es la representación de un tipo de contenido con la que se trabaja a alto nivel mediante objetos.</mark> Los modelos se crean a partir de **esquemas**, que definen los atributos, sus tipos y comportamiento adicional (validación, valores por defecto…). Para guardar o recuperar datos se opera sobre objetos de un modelo previamente definido.
 
 Renunciar a los ODM y a los modelos es posible, pero se pierden ventajas de mantenibilidad, validación de datos, optimización y *agnosticismo* respecto al motor.
 
 # mongoose: el ODM de MERN
 
-<mark style="background: #8000E1A6;">mongoose es una librería JavaScript que implementa un ODM y se sitúa, en el back-end, entre MongoDB y Express.</mark> Es la capa **Modelo** del patrón [[Patrones de diseño web (MVC y SPA)|MVC]]. Define esquemas con **datos fuertemente tipados**; a partir de un esquema crea un **modelo**, y ese modelo se asigna a un documento MongoDB. Se instala como dependencia:
+<mark style="background: #8000E1A6;">mongoose es una librería JavaScript que implementa un ODM y se sitúa, en el back-end, entre MongoDB y Express.</mark> Es la capa **Modelo** del patrón [[Patrones de diseño web (MVC y SPA)|MVC]]. Define esquemas con **datos fuertemente tipados**. A partir de un esquema crea un **modelo**, y ese modelo se asigna a un documento MongoDB. Se instala como dependencia:
 
 ```shell-session
 $ npm install mongoose --save
@@ -43,7 +43,7 @@ var PostSchema = new Schema({
 module.exports = mongoose.model('Post', PostSchema);
 ```
 
-`mongoose.model('Post', PostSchema)` deriva el modelo `Post` del esquema. Los modelos suelen guardarse como ficheros `.js` en un directorio `/models`. → [[💽🧬 Modelos en Mongoose]]
+`mongoose.model('Post', PostSchema)` deriva el modelo `Post` del esquema. Los modelos suelen guardarse como ficheros `.js` en un directorio `/models`.
 
 # SchemaTypes
 
@@ -70,7 +70,7 @@ var UserSchema = new Schema({
 
 <mark style="background: #FFB8EBA6;">Con `ref` se relacionan modelos (p. ej. `User` ↔ `Post`), de forma análoga a las claves ajenas entre tablas relacionales.</mark> Un post referencia a su usuario; un usuario guarda un array de referencias a sus posts.
 
-Definidos esquemas y modelos, mongoose aporta funciones para **validar, guardar, eliminar y consultar** datos, apoyándose por debajo en las operaciones de [[01-CRUD y filtros en MongoDB|MongoDB]]. La conexión a la base de datos se establece con `mongoose.connect(...)`. → [[📶📡 Conexión con MongoDB]]
+Definidos esquemas y modelos, mongoose aporta funciones para **validar, guardar, eliminar y consultar** datos, apoyándose por debajo en las operaciones de [[01-CRUD y filtros en MongoDB|MongoDB]]. La conexión a la base de datos se establece con `mongoose.connect(...)`.
 
 # Métodos del modelo (las operaciones CRUD)
 

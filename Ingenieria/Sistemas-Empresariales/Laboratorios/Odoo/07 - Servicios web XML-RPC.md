@@ -103,15 +103,37 @@ print(common.about(True))
 
 Un único método para todo: `execute_kw(db, uid, pwd, modelo, método, args, kw=None)`. El `método` es una de las operaciones del ORM y `args` lleva sus parámetros. <mark style="background: #ADCCFFA6;">Un dominio es una lista de criterios `[['campo', 'operador', 'valor'], ...]`</mark>; varias condiciones en la lista se combinan con AND por defecto.
 
-| Operador | Significado |
-| - | - |
-| `=`, `!=` | igualdad / desigualdad |
-| `>`, `<`, `>=`, `<=` | comparación |
-| `like`, `ilike` | subcadena (ilike = sin distinguir mayúsculas) |
-| `in`, `not in` | pertenencia a una lista |
-| `'&'`, `'|'`, `'!'` | AND / OR / NOT explícitos (notación prefija) |
+| Operador             | Significado                                   |
+| -------------------- | --------------------------------------------- |
+| `=`, `!=`            | igualdad / desigualdad                        |
+| `>`, `<`, `>=`, `<=` | comparación                                   |
+| `like`, `ilike`      | subcadena (ilike = sin distinguir mayúsculas) |
+| `in`, `not in`       | pertenencia a una lista                       |
+| `'&'` ,`'\|'` ,`'!'` | AND / OR / NOT explícitos (notación prefija)  |
 
-Operaciones (`método`): `search`, `search_count`, `read`, `search_read`, `fields_get`, `create`, `write`, `unlink`.
+```
+models.execute_kw(db, uid, pwd, modelo, método, args [, kwargs])
+```
+
+|Posición|Qué es|Ejemplo|
+|---|---|---|
+|`db, uid, pwd`|el «bloque credencial» (se repite en cada llamada)|`"junio26", uid, "admin"`|
+|`modelo`|`str`: el modelo Odoo|`'purchase.order'`|
+|`método`|`str`: la operación del ORM|`'search_read'`|
+|`args`|`list`: los parámetros posicionales del método|`[[]]`|
+|`kwargs`|`dict` opcional: parámetros con nombre|`{'fields': ['name']}`|
+
+### Las operaciones del ORM (el `método`)
+
+| Método                        | Recibe                  | Devuelve           |
+| ----------------------------- | ----------------------- | ------------------ |
+| `search`                      | un dominio              | `list` de **ids**  |
+| `search_count`                | un dominio              | `int` (cuántos)    |
+| `read`                        | ids + `fields`          | `list` de **dict** |
+| `search_read` (find completo) | dominio + `fields`      | `list` de **dict** |
+| `create`                      | un `dict` de valores    | el **id** nuevo    |
+| `write` (es un update)        | ids + `dict` de valores | `True`             |
+| `unlink` (es un delete)       | ids                     | `True`             |
 
 ```python
 ids   = obj.execute_kw(db, uid, pwd, 'res.partner', 'search', [[['is_company','=',True]]])
@@ -227,6 +249,57 @@ for p in models.execute_kw(dbname, uid, pwd, 'product.template', 'search_read',
 
 > [!info]+
 > `"{0:<10}"` alinea a la izquierda en 10 caracteres, `"{2:>8}"` a la derecha en 8: así salen las columnas cuadradas. `default_code` es la "Internal Reference" y `list_price` el "Sales Price" — nombres internos que solo descubres con el modo desarrollador.
+
+## ¿Cómo descubrir los nombres técnicos de los `fields`?
+### Método 1 — Modo desarrollador (en la web)
+
+Es lo que pide explícitamente el enunciado del examen. Actívalo en _Settings → Activate the developer mode_. Con él activo, tienes dos vías:
+
+- **Pasar el ratón** por encima de un campo en un formulario → un tooltip muestra su _nombre técnico_ y su tipo.
+- _Settings → Technical → Database Structure → Models_ → busca `purchase.order` (o el modelo) → pestaña _Fields_: la lista completa de campos con nombre, etiqueta y tipo.
+
+### Método 2 — `fields_get` (la forma del programador)
+
+El servicio `object` tiene un método, `fields_get`, que **te describe todos los campos de un modelo**. Le pides solo lo que te interesa (la etiqueta y el tipo):
+
+```Python
+campos = models.execute_kw(dbname, uid, pwd, 'purchase.order', 'fields_get',
+                           [], {'attributes': ['string', 'type']})
+```
+
+Devuelve un `dict` `{nombre_tecnico: {'string': etiqueta, 'type': tipo}}`. Filtrando los 4 del enunciado en tu `junio26` sale **exactamente** esto:
+
+```
+name             type=char         label=Order Reference
+partner_id       type=many2one     label=Vendor
+amount_total     type=monetary     label=Total
+date_approve     type=datetime     label=Confirmation Date
+```
+
+#### Función para filtrar los `label`
+```Python
+label = ['Confirmation Date', 'Total', 'Vendor'] # Los que nos digan en el enunciado
+
+for n, info in campos.items():
+    if info['string'] in label:
+        print(label[label.index(info['string'])], ' -> ', n, info['type'])
+```
+
+## Tipo Odoo → qué devuelve por XML-RPC
+
+Esta es la chuleta que de verdad importa. El **tipo** del campo decide el valor que recibes en Python:
+
+| Tipo (Odoo)             | Devuelve si tiene valor       | Si está vacío |
+| ----------------------- | ----------------------------- | ------------- |
+| `char`, `text`, `html`  | `str`                         | `False`       |
+| `integer`               | `int`                         | `0`           |
+| `float`, `monetary`     | `float`                       | `0.0`         |
+| `boolean`               | `True` / `False`              | `False`       |
+| `date`                  | `str` `'YYYY-MM-DD'`          | `False`       |
+| `datetime`              | `str` `'YYYY-MM-DD HH:MM:SS'` | `False`       |
+| `selection`             | `str` (la clave interna)      | `False`       |
+| `many2one`              | `[id, "nombre"]` (lista)      | `False`       |
+| `one2many`, `many2many` | `[id, id, …]` (lista de ids)  | `[]`          |
 
 ## Ejercicio tipo examen — órdenes de compra en 4 columnas
 

@@ -77,3 +77,157 @@ Los **hooks** (React 16.8) son funciones que permiten "enganchar" el estado y el
 
 > [!tip]+ Las más difíciles
 > Las preguntas **3** (idempotencia), **12** (semver `^`), **18** (401 vs 403), **21** (firma del JWT), **27** (dependencias de `useEffect`) y **28** (Express vs React Router) son las de mayor dificultad: repásalas si fallaste alguna.
+
+---
+
+# Clave — Fundamentos
+
+1. **F1 → a)** Front-end domina HTML, CSS y JavaScript.
+2. **F2 → a)** Cliente y servidor se comunican por HTTP.
+3. **F3 → c)** El perfil full-stack lo popularizó Facebook.
+4. **F4 → b)** El back-end gestiona la lógica y las transacciones.
+5. **F5 → c)** Patrón = solución reutilizable a un problema recurrente.
+6. **F6 → c)** La Vista produce el HTML de la interfaz.
+7. **F7 → b)** El Modelo conecta con la BBDD vía mapeadores.
+8. **F8 → a)** SPA = Single Page Application.
+9. **F9 → c)** Flux: flujo de datos unidireccional, pensado para React.
+10. **F10 → a)** Read = `SELECT`.
+11. **F11 → b)** Delete = `DELETE`.
+12. **F12 → c)** Solo `GET` es seguro (no modifica el servidor).
+13. **F13 → c)** `PATCH` = actualización parcial (`PUT` sería total).
+14. **F14 → a)** ECMAScript = la especificación estándar de JavaScript.
+15. **F15 → c)** ES6 (ES2015) trajo clases, módulos, `let`/`const`, arrow functions.
+16. **F16 → d)** Un transpilador (Babel) traduce ES6+/JSX a código compatible.
+17. **F17 → c)** Una promesa representa un valor futuro.
+18. **F18 → d)** `async`/`await` (ES2017) da aspecto secuencial al código asíncrono.
+19. **F19 → a)** MERN usa JavaScript en cliente y servidor.
+20. **F20 → b)** MEAN = MERN con Angular en lugar de React.
+21. **F21 → b)** POST no es idempotente (duplica); DELETE sí lo es.
+22. **F22 → c)** Front y back son apps independientes que hablan por HTTP/JSON.
+23. **F23 → a)** Las transacciones ACID no son una ventaja de "JS en todo" (de hecho son típicas del modelo relacional, no del documental).
+24. **F24 → b)** En el MVC moderno las vistas manejan eventos de interacción.
+25. **F25 → a)** Create, Read, Update, Delete.
+26. **F26 → c)** CRUD es concepto; SQL/HTTP/Mongo son implementaciones.
+27. **F27 → d)** La tríada base del front-end: HTML, CSS y JavaScript.
+28. **F28 → b)** La orientación a eventos de JS lo hace apto para la interfaz.
+29. **F29 → d)** `PUT` reemplaza el recurso completo.
+30. **F30 → a)** Web tradicional = página HTML completa por interacción, con recarga.
+
+# Clave — MongoDB
+
+1. **M1 → a)** MongoDB es NoSQL orientada a documentos.
+2. **M2 → c)** Colecciones y documentos.
+3. **M3 → d)** `_id` es la clave primaria.
+4. **M4 → d)** MongoDB genera un `ObjectId`.
+5. **M5 → a)** `insertMany` inserta varios.
+6. **M6 → c)** `findOne` devuelve el primero.
+7. **M7 → b)** `$in` = el campo está en un array de valores.
+8. **M8 → b)** `$inc` incrementa un número.
+9. **M9 → c)** `$push` añade a un array.
+10. **M10 → b)** `.sort()` ordena.
+11. **M11 → c)** El segundo argumento de `find` es la proyección.
+12. **M12 → b)** Fija `status` a "minor" en los `age < 18`.
+13. **M13 → c)** Atlas = DBaaS (base de datos en la Nube).
+14. **M14 → d)** Compass = herramienta gráfica (GUI).
+15. **M15 → b)** *Capped* = tamaño fijo; borra lo más antiguo al llenarse.
+16. **M16 → d)** *Referencing* guarda el `_id` de otro documento.
+17. **M17 → b)** BSON = representación binaria de JSON.
+18. **M18 → c)** Relacional NO es una familia NoSQL (es la trampa).
+19. **M19 → c)** El esquema dinámico permite documentos heterogéneos.
+20. **M20 → b)** `$and` exige que se cumplan todas las condiciones.
+
+# Clave — Node.js
+
+1. **N1 → b)** Node se construye sobre el motor V8.
+2. **N2 → d)** Modelo asíncrono y dirigido por eventos.
+3. **N3 → a)** El *event loop* atiende eventos y dispara callbacks.
+4. **N4 → b)** Al ser de un solo hilo, una tarea CPU-intensiva bloquea todo.
+5. **N5 → d)** El módulo nativo `http` crea servidores.
+6. **N6 → a)** `req`/`res` = request/response (petición/respuesta).
+7. **N7 → d)** `server.listen(8000)` fija el puerto.
+8. **N8 → b)** `require('x')` (CommonJS).
+9. **N9 → b)** `fs` es nativo; no necesita npm.
+10. **N10 → d)** `package.json` es el manifiesto.
+11. **N11 → d)** `npm init` crea el `package.json`.
+12. **N12 → d)** `dependencies` = producción; `devDependencies` = desarrollo.
+13. **N13 → b)** El número MAYOR indica cambios incompatibles.
+14. **N14 → c)** `~` admite solo parches.
+15. **N15 → c)** `package-lock.json` fija versiones exactas y reproduce la instalación.
+16. **N16 → d)** Los paquetes locales van a `/node_modules`.
+17. **N17 → d)** `node_modules/` pesa mucho y se reconstruye con `npm install`.
+18. **N18 → c)** `-g` instala de forma global.
+19. **N19 → a)** npm y su ecosistema impulsaron a Node.
+20. **N20 → a)** Node destaca en aplicaciones intensivas en E/S.
+
+# Clave — Express.js
+
+1. **E1 → b)** Express = framework ligero para Node.
+2. **E2 → b)** `app.listen(3000)` arranca el servidor en el puerto.
+3. **E3 → d)** `:name` es un parámetro de ruta.
+4. **E4 → a)** `res.json()` envía JSON.
+5. **E5 → c)** Sin método de `res`, la petición se queda colgada.
+6. **E6 → a)** REST = Representational State Transfer.
+7. **E7 → c)** Los recursos se identifican por URIs.
+8. **E8 → b)** `express.Router()` crea una "miniaplicación" modular.
+9. **E9 → a)** Se monta con `app.use('/posts', posts)`.
+10. **E10 → b)** `/posts/123` (sin acciones ni formato en la ruta).
+11. **E11 → d)** Filtrar/ordenar/paginar va en la query string.
+12. **E12 → b)** `req.params` contiene los parámetros de ruta.
+13. **E13 → b)** El cuerpo llega en `req.body` (con `express.json()`).
+14. **E14 → a)** `POST` crea un recurso.
+15. **E15 → b)** `201 Created` para una creación correcta.
+16. **E16 → d)** `204 No Content` tras un DELETE sin cuerpo.
+17. **E17 → d)** `4xx` = error del cliente.
+18. **E18 → d)** El cliente envía `Accept` para indicar el formato deseado.
+19. **E19 → d)** `406 Not Acceptable` si no puede servir ningún formato.
+20. **E20 → a)** ODM = mapeador objeto ↔ base de datos documental.
+21. **E21 → c)** `ref` relaciona modelos (como una clave ajena).
+22. **E22 → b)** `populate()` sustituye el `_id` por el documento completo.
+23. **E23 → d)** `process.env.VARIABLE`.
+24. **E24 → d)** `dotenv` carga el `.env`.
+25. **E25 → a)** El `.env` lleva credenciales; no debe subirse al repositorio.
+26. **E26 → a)** El cliente envía el token en cada petición (en la cabecera).
+27. **E27 → b)** JWT = Header + Payload + Signature.
+28. **E28 → d)** El payload solo está codificado en Base64URL, no cifrado.
+29. **E29 → b)** CORS controla las peticiones entre orígenes distintos.
+30. **E30 → d)** `express.json()` parsea el cuerpo JSON.
+
+# Clave — React.js
+
+1. **R1 → b)** React es una librería para construir interfaces (SPA).
+2. **R2 → d)** El DOM es el árbol jerárquico de etiquetas de la interfaz.
+3. **R3 → c)** Isomorfismo = renderizar HTML en servidor y cliente.
+4. **R4 → c)** `create-react-app` genera el esqueleto.
+5. **R5 → c)** Babel transpila JSX/JS moderno a código compatible.
+6. **R6 → a)** Declarativo = describes la UI según el estado; React actualiza el DOM.
+7. **R7 → c)** Flujo unidireccional: de padres a hijos vía props.
+8. **R8 → d)** Las expresiones JS van entre llaves `{ }`.
+9. **R9 → c)** Cada elemento de una lista necesita una `key` única.
+10. **R10 → b)** Los Fragmentos devuelven varios elementos sin nodo extra.
+11. **R11 → a)** Un componente funcional es `function X(props) { return ...; }`.
+12. **R12 → a)** Un *Pure Component* solo se rerenderiza si cambian sus props.
+13. **R13 → d)** Un HOC envuelve un componente y lo devuelve con más funcionalidad.
+14. **R14 → a)** El **montaje** inserta el componente en el DOM por primera vez.
+15. **R15 → a)** `componentDidMount` para peticiones tras el primer render.
+16. **R16 → b)** `shouldComponentUpdate` puede saltar el render devolviendo `false`.
+17. **R17 → c)** El contenido envuelto llega por `children`.
+18. **R18 → a)** `defaultProps` define valores por defecto.
+19. **R19 → c)** `propTypes` declara y valida el tipo de cada prop.
+20. **R20 → d)** El estado se modifica con `this.setState()`.
+21. **R21 → d)** *Lifting state up* = mover el estado al ancestro común.
+22. **R22 → c)** React compara por referencia; mutar en el sitio impide el rerender.
+23. **R23 → a)** Para web se usa `react-router-dom`.
+24. **R24 → c)** `Switch` renderiza solo la primera ruta coincidente.
+25. **R25 → a)** `Link` crea el hipervínculo de navegación.
+26. **R26 → d)** axios = cliente HTTP basado en promesas.
+27. **R27 → a)** Los datos llegan en `res.data`.
+28. **R28 → c)** reactstrap aporta componentes de Bootstrap.
+29. **R29 → a)** Los hooks llegan en React 16.8 y dan estado/ciclo de vida a componentes funcionales.
+30. **R30 → a)** Un *custom hook* reutiliza lógica sin añadir componentes al árbol.
+
+> [!tip]+ Preguntas marcadas como difíciles (🔴)
+> **Fundamentos**: F9, F12, F13, F18, F21, F23, F24, F26, F29, F30.
+> **MongoDB**: M7, M8, M9, M11, M12, M15, M16, M18, M19, M20.
+> **Node.js**: N3, N4, N6, N9, N12, N13, N14, N15, N17, N20.
+> **Express.js**: E5, E9, E11, E16, E18, E19, E21, E22, E27, E28.
+> **React.js**: R3, R5, R6, R9, R12, R13, R15, R16, R21, R22.

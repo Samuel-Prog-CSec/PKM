@@ -30,10 +30,6 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 
 <mark style="background: #FFB8EBA6;">El cliente (React) y el servidor (Node + Express + MongoDB) se implementan como aplicaciones independientes</mark> que se comunican por HTTP intercambiando JSON. Es la materialización del modelo [[Patrones de diseño web (MVC y SPA)|SPA + API]] del apartado anterior.
 
-# MERN frente a otros stacks
-
-<mark style="background: #ADCCFFA6;">MEAN es un stack equivalente que usa Angular en lugar de React</mark> para el front-end. Existen otras combinaciones (MEVN con Vue, etc.). La popularidad de JavaScript y de React, sobre la base sólida de MongoDB, Express y Node, hace de MERN uno de los stacks más demandados y atractivos.
-
 # Por qué un solo lenguaje
 
 La gran ventaja de MERN es usar **JavaScript de extremo a extremo**: el mismo lenguaje en el navegador (React), en el servidor (Node + Express) y en el formato de datos (MongoDB habla JSON/BSON). Esto permite:
@@ -51,10 +47,6 @@ La gran ventaja de MERN es usar **JavaScript de extremo a extremo**: el mismo le
 | **MEVN** | Vue | MongoDB + Express + Node |
 
 Los tres comparten **MongoDB + Express + Node**; solo cambia la librería/framework de front-end. La base "JavaScript en todo" es la seña de identidad común.
-
-# El proyecto guía
-
-El libro construye con MERN una aplicación de **microblogging** (usuarios que publican *posts*): React para la interfaz, Express para la API REST, MongoDB para almacenar usuarios y posts, y Node como entorno de ejecución. Es el hilo conductor que conecta todas las piezas del temario.
 
 > [!important]+ Para el examen
 > **MERN** = **M**ongoDB + **E**xpress.js + **R**eact.js + **N**ode.js. Front-end: **React**. Back-end: **Node + Express**. Datos: **MongoDB**. Lenguaje común: **JavaScript** en cliente y servidor. Diferencia con **MEAN**: Angular sustituye a React.
