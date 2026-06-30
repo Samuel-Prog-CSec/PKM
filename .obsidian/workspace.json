@@ -4,20 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "4ada2d0d4e08d9df",
+        "id": "90bd80b4ea658dde",
         "type": "tabs",
         "children": [
           {
-            "id": "a30161e1ed25f24c",
+            "id": "30b50c85593d277b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/09 - Modelos y tipos de campo.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "09 - Modelos y tipos de campo"
+            }
+          },
+          {
+            "id": "7a88e80cbb5f07c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/10 - Relaciones entre modelos.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "10 - Relaciones entre modelos"
+            }
+          },
+          {
+            "id": "e2cc83a00c780be0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/11 - Herencia de modelos y de vistas.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "11 - Herencia de modelos y de vistas"
+            }
+          },
+          {
+            "id": "67975c86f8027b42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/12 - Vistas XML.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "12 - Vistas XML"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -92,7 +139,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240
+    "width": 240,
+    "collapsed": true
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -211,16 +259,17 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "a30161e1ed25f24c",
+  "active": "e2cc83a00c780be0",
   "lastOpenFiles": [
-    "Sin título.md",
-    "Agent-skills-TFG.png",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Front-end, back-end y full-stack.md",
-    "Ingenieria/♾️ Full-Stack/Examen de práctica (MERN Full-Stack).md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Patrones de diseño web (MVC y SPA).md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Operaciones CRUD, HTTP y SQL.md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/La pila MERN.md",
-    "Ingenieria/♾️ Full-Stack/MongoDB/00-MongoDB y el modelo NoSQL documental.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/10 - Relaciones entre modelos.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/09 - Modelos y tipos de campo.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/12 - Vistas XML.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/11 - Herencia de modelos y de vistas.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/08 - Estructura de un módulo y scaffold.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/07 - Servicios web XML-RPC.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/06 - Operativa compra-venta.md",
+    "Ingenieria/♾️ Full-Stack/React.js/00-React.js, SPA y Virtual DOM.md",
+    "Ingenieria/♾️ Full-Stack/Express.js/05-Seguridad de APIs REST (tokens y JWT).md",
     "Ingenieria/♾️ Full-Stack/Express.js/04-Mongoose y el patrón ODM en Express.md",
     "Ingenieria/♾️ Full-Stack/Express.js/03-CRUD, métodos HTTP y códigos de estado.md",
     "Ingenieria/♾️ Full-Stack/Express.js/02-Rutas, manejadores y Express Router.md",
@@ -229,16 +278,16 @@
     "Ingenieria/♾️ Full-Stack/Node.js/01-package.json y el gestor de paquetes npm.md",
     "Ingenieria/♾️ Full-Stack/Node.js/00-Node.js, entorno de ejecución del servidor.md",
     "Ingenieria/♾️ Full-Stack/MongoDB/01-CRUD y filtros en MongoDB.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/07 - Servicios web XML-RPC.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/06 - Operativa compra-venta.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/05 - Administración funcional.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/04 - Instalación con Docker.md",
-    "Ingenieria/♾️ Full-Stack/React.js/Consumo de APIs REST con axios.md",
-    "Ingenieria/♾️ Full-Stack/React.js/Componentes de React (tipos y ciclo de vida).md",
-    "Ingenieria/♾️ Full-Stack/React.js/01-JSX.md",
-    "Ingenieria/♾️ Full-Stack/React.js/00-React.js, SPA y Virtual DOM.md",
-    "Ingenieria/♾️ Full-Stack/React.js/Reducers y Redux.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Prerrequisitos/01 - Python para Odoo.md",
+    "Ingenieria/♾️ Full-Stack/MongoDB/00-MongoDB y el modelo NoSQL documental.md",
+    "Guion_exposicion_factura_electronica.md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/La especificación JavaScript.md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/Operaciones CRUD, HTTP y SQL.md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/La pila MERN.md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/Patrones de diseño web (MVC y SPA).md",
+    "Ingenieria/♾️ Full-Stack/Fundamentos/Front-end, back-end y full-stack.md",
+    "Sin título.md",
+    "Agent-skills-TFG.png",
+    "Ingenieria/♾️ Full-Stack/Examen de práctica (MERN Full-Stack).md",
     "Ingenieria/♾️ Full-Stack/Express.js/Express.js.base",
     "skills-lock.json",
     "Ingenieria/♾️ Full-Stack/MongoDB/MongoDB.base",

@@ -10,14 +10,14 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">Un patrón de diseño es una solución reutilizable a un problema típico y recurrente del desarrollo de software.</mark> En el desarrollo web su uso es prácticamente inevitable: casi cualquier framework o tecnología impone, de forma intrínseca, uno de estos patrones. El objetivo es hacer la aplicación **más robusta y mantenible**, controlando la **cohesión** y el **acoplamiento** y favoreciendo la **reutilización de código**.
+<mark style="background: #ADCCFFA6;">Un patrón de diseño es una solución reutilizable a un problema típico y recurrente del desarrollo de software.</mark> El objetivo es hacer la aplicación **más robusta y mantenible**, controlando la **cohesión** y el **acoplamiento** y favoreciendo la **reutilización de código**.
 
 # El patrón MVC (Modelo-Vista-Controlador)
 
 <mark style="background: #ADCCFFA6;">MVC es el patrón de referencia de la mayoría de frameworks y librerías web.</mark> Separa la aplicación en tres capas con responsabilidades distintas:
 
-- **Modelo**: trabaja con los datos. Contiene los mecanismos de acceso y actualización de la información y conecta directamente con la base de datos, normalmente a través de **mapeadores de datos** que representan los datos como objetos para facilitar su manipulación (en MERN, la librería [[04-Mongoose y el patrón ODM en Express|mongoose]]).
-- **Vista**: todo el código que produce la visualización a través de interfaces gráficas de usuario; en última instancia, código **HTML**. La vista trabaja con los datos, pero no accede a ellos directamente, sino **a través de los modelos**.
+- **Modelo**: trabaja con los datos. Contiene los mecanismos de acceso y actualización de la información y conecta directamente con la base de datos, normalmente a través de **mapeadores de datos**.
+- **Vista**: todo el código que produce la visualización a través de interfaces gráficas de usuario. La vista trabaja con los datos, pero no accede a ellos directamente, sino **a través de los modelos**.
 - **Controlador**: contiene el código que responde a las acciones que el usuario solicita desde la vista. <mark style="background: #8000E1A6;">Es el enlace entre la vista y el modelo, y concentra gran parte de la lógica de la aplicación.</mark>
 
 > [!info]+ MVC ha evolucionado

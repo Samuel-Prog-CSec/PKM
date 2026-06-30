@@ -20,7 +20,7 @@ Toda aplicación web se reparte entre dos mitades que se comunican por red, norm
 
 <mark style="background: #ADCCFFA6;">Un desarrollador front-end trabaja del lado del cliente: todo lo que el usuario ve y con lo que interactúa al navegar por la aplicación.</mark> Domina la estructura y el diseño de las vistas y atiende a estándares de **usabilidad, legibilidad, accesibilidad** y diseño *responsive*.
 
-<mark style="background: #FFB8EBA6;">Su preocupación por la lógica de negocio es mínima</mark>: solo la estrictamente necesaria para las propias vistas. Las transacciones —operaciones sobre datos persistentes, autenticación, pagos— no ocurren en el lado del cliente. En la pila MERN, el front-end se construye con **React.js**.
+<mark style="background: #FFB8EBA6;">Su preocupación por la lógica de negocio es mínima</mark>: solo la estrictamente necesaria para las propias vistas. Las transacciones no ocurren en el lado del cliente. En la pila MERN, el front-end se construye con **React.js**.
 
 Tecnologías típicas: `HTML`, `CSS` (y preprocesadores como Sass), `JavaScript`, y librerías/frameworks de interfaz como React, Angular o Vue.
 
@@ -38,7 +38,7 @@ En la práctica, los límites se difuminan: <mark style="background: #FFB8EBA6;"
 
 <mark style="background: #ADCCFFA6;">Un desarrollador full-stack es responsable de la implementación de la aplicación tanto en su parte cliente como en el servidor</mark>: desde la configuración del servidor y la lógica de la aplicación hasta la maquetación y el diseño de cara al usuario final. El perfil fue **popularizado por el departamento de ingeniería de Facebook**.
 
-<mark style="background: #FFB86CA6;">Es difícil ser un buen full-stack: resulta casi inviable dominar a la vez todas las tecnologías de cliente y servidor.</mark> Por eso, en la práctica, el full-stack **suele especializarse más en una de las dos partes**, pero con conocimiento suficiente de la otra como para diseñar, desarrollar y desplegar la aplicación completa. Estos perfiles abundan en **pequeñas y medianas empresas**, donde una sola persona se encarga de todo el desarrollo web.
+<mark style="background: #FFB86CA6;">Es difícil ser un buen full-stack: resulta casi inviable dominar a la vez todas las tecnologías de cliente y servidor.</mark> Por eso, en la práctica, el full-stack **suele especializarse más en una de las dos partes**, pero con conocimiento suficiente de la otra como para diseñar, desarrollar y desplegar la aplicación completa. 
 
 # El recorrido de una petición
 
@@ -54,7 +54,7 @@ El front-end domina los pasos 1 y 5; el back-end, del 2 al 4; el full-stack enti
 
 # Más allá del cliente y el servidor
 
-Un desarrollador full-stack moderno suele rozar también el **DevOps**: despliegue, variables de entorno, integración continua (CI/CD) y monitorización. No se le exige ser experto en todo, sino tener criterio para mover una funcionalidad de principio a fin —diseño, cliente, servidor, datos y despliegue—. De ahí que en MERN usar **un solo lenguaje (JavaScript)** en ambos lados reduzca la carga cognitiva y haga el perfil más alcanzable que en stacks con lenguajes distintos a cada lado.
+Un desarrollador full-stack moderno suele rozar también el **DevOps**. No se le exige ser experto en todo, sino tener criterio para mover una funcionalidad de principio a fin.
 
 > [!important]+ Clave de examen
 > "Define desarrollador front-end, back-end y full-stack" se responde con tres ideas y un criterio:

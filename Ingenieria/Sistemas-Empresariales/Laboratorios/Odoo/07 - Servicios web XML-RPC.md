@@ -109,7 +109,7 @@ Un único método para todo: `execute_kw(db, uid, pwd, modelo, método, args, kw
 | `>`, `<`, `>=`, `<=` | comparación                                   |
 | `like`, `ilike`      | subcadena (ilike = sin distinguir mayúsculas) |
 | `in`, `not in`       | pertenencia a una lista                       |
-| `'&'` ,`'\|'` ,`'!'` | AND / OR / NOT explícitos (notación prefija)  |
+| `'&'` , `\|` ,`'!'`  | AND / OR / NOT explícitos (notación prefija)  |
 
 ```
 models.execute_kw(db, uid, pwd, modelo, método, args [, kwargs])
@@ -329,8 +329,31 @@ for o in ordenes:
 > [!warning]+ El gotcha que tira a todo el mundo: los Many2one
 > Un campo `Many2one` (como `partner_id`) **no** devuelve texto: `search_read` lo entrega como lista `[id, "nombre"]`. <mark style="background: #FF5582A6;">Para imprimir el proveedor necesitas `o['partner_id'][1]`, no `o['partner_id']`</mark>. Y si la orden no tiene proveedor el valor es `False`; de ahí el `if o['partner_id'] else '-'`. Igual con las fechas que pueden venir vacías: <mark style="background: #FFB8EBA6;">`date_approve` solo se rellena al **confirmar** el pedido</mark> — las RFQ en borrador lo tienen a `False`.
 
-> [!info]+ Cómo descubrir el modelo y los campos
-> Activa el **modo desarrollador** ([[05 - Administración funcional#Modo desarrollador]]). Con él, al pasar el ratón sobre un campo del formulario de la orden ves su nombre técnico; o ve a `Settings → Technical → Database Structure → Models`, busca `purchase.order` y revisa sus campos. Equivalencias del enunciado: `Vendor` = `partner_id`, `Total` = `amount_total`, `Confirmation Date` = `date_approve`, nombre/código = `name`. Necesitas la app `Purchase` instalada.
+### Salida con columnas ordenas en Python
+Anatomía de un especificador: `{índice:alineación_ancho}`
+```
+{ 0  :  <  12 }
+  │     │   │
+  │     │   └── ancho total del campo (en caracteres)
+  │     └────── alineación: < = izquierda, > = derecha, ^ = centrado
+  └──────────── índice del argumento en .format()
+```
+
+La cabecera queda así *(representando espacios con ·)*:
+
+`Pedido······ Proveedor··················· ·······Total Confirmacion`
+
+¿**Por qué Total va a la derecha (>) y el resto a la izquierda**? Es convención visual: los <mark style="background: #FFB8EBA6;">textos (nombres, códigos) se alinean a la izquierda</mark>; los <mark style="background: #FFB8EBA6;">números a la derecha</mark>. Así los decimales quedan alineados entre sí:
+
+Pedido       Proveedor                    Total Confirmacion
+P0001        Lumber Inc                  250.00 2024-01-15
+P0002        Azure Interior            12400.50 2024-01-20
+
+¿**Cómo dimensionar columnas para un examen nuevo**?
+
+1. <mark style="background: #ADCCFFA6;">Mira los datos reales</mark>. El ancho debe ser ≥ al valor más largo que puede aparecer en esa columna.
+2. <mark style="background: #ADCCFFA6;">Cabecera vs. datos</mark>: a veces la cabecera es más larga que los datos (o al revés). El ancho tiene que cubrir los dos.
+3. <mark style="background: #ADCCFFA6;">Números con decimales</mark>: si usas `{2:>12.2f}` en lugar de `{2:>12}`, Python formatea el float con 2 decimales y lo alinea a la derecha en 12 caracteres. El `.2f` es el especificador de número.
 
 ## Ejercicio tipo examen — copia y renombrado de BD con confirmación
 

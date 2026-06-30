@@ -32,8 +32,6 @@ Area: "[[Fundamentos.base|Fundamentos]]"
 
 # Por qué un solo lenguaje
 
-La gran ventaja de MERN es usar **JavaScript de extremo a extremo**: el mismo lenguaje en el navegador (React), en el servidor (Node + Express) y en el formato de datos (MongoDB habla JSON/BSON). Esto permite:
-
 - **Reutilizar código** y modelos de datos entre cliente y servidor.
 - **Compartir formato**: los datos viajan como JSON por toda la pila, sin traducciones entre lenguajes.
 - **Un único ecosistema** de paquetes (npm) y un solo conjunto de herramientas.
