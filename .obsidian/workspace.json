@@ -4,63 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "90bd80b4ea658dde",
+        "id": "f568bb035d698ed0",
         "type": "tabs",
         "children": [
           {
-            "id": "30b50c85593d277b",
+            "id": "9a648412e566c506",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/09 - Modelos y tipos de campo.md",
+                "file": "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09 - Modelos y tipos de campo"
+              "title": "WebSerial y WebSockets"
             }
           },
           {
-            "id": "7a88e80cbb5f07c9",
+            "id": "9614b32ef662e9be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/10 - Relaciones entre modelos.md",
+                "file": "TFG/Dudas Tecnología/Patrones Diseño.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 - Relaciones entre modelos"
+              "title": "Patrones Diseño"
             }
           },
           {
-            "id": "e2cc83a00c780be0",
+            "id": "eeeb8516089e5c24",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/11 - Herencia de modelos y de vistas.md",
-                "mode": "preview",
+                "file": "TFG/Dudas Tecnología/Docker.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - Herencia de modelos y de vistas"
-            }
-          },
-          {
-            "id": "67975c86f8027b42",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/12 - Vistas XML.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "12 - Vistas XML"
+              "title": "Docker"
             }
           }
         ],
@@ -97,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Node.js",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -157,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
+                "file": "Ingenieria/♾️ Full-Stack/Fundamentos/Front-end, back-end y full-stack.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de 01-APIs REST (principios y características)"
+              "title": "Esquema de Front-end, back-end y full-stack"
             }
           },
           {
@@ -259,12 +245,24 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "e2cc83a00c780be0",
+  "active": "eeeb8516089e5c24",
   "lastOpenFiles": [
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/10 - Relaciones entre modelos.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/09 - Modelos y tipos de campo.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/12 - Vistas XML.md",
+    "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
+    "TFG/Dudas Tecnología/Docker.md",
+    "TFG/Dudas Tecnología/Patrones Diseño.md",
+    "TFG/Dudas Tema 2/Dudas Tema 2.md",
+    "Preguntas TFG.md",
+    "Agent-skills-TFG.png",
+    "Guion_exposicion_factura_electronica.md",
     "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/11 - Herencia de modelos y de vistas.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/10 - Relaciones entre modelos.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/16 - Informes QWeb.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/15 - Campos computados y onchange.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/14 - Seguridad y datos demo.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/13 - Acciones y menús.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/09 - Modelos y tipos de campo.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/04 - Instalación con Docker.md",
+    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/12 - Vistas XML.md",
     "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/08 - Estructura de un módulo y scaffold.md",
     "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/07 - Servicios web XML-RPC.md",
     "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/06 - Operativa compra-venta.md",
@@ -276,18 +274,6 @@
     "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
     "Ingenieria/♾️ Full-Stack/Express.js/00-Express.js, framework y middleware.md",
     "Ingenieria/♾️ Full-Stack/Node.js/01-package.json y el gestor de paquetes npm.md",
-    "Ingenieria/♾️ Full-Stack/Node.js/00-Node.js, entorno de ejecución del servidor.md",
-    "Ingenieria/♾️ Full-Stack/MongoDB/01-CRUD y filtros en MongoDB.md",
-    "Ingenieria/♾️ Full-Stack/MongoDB/00-MongoDB y el modelo NoSQL documental.md",
-    "Guion_exposicion_factura_electronica.md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/La especificación JavaScript.md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Operaciones CRUD, HTTP y SQL.md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/La pila MERN.md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Patrones de diseño web (MVC y SPA).md",
-    "Ingenieria/♾️ Full-Stack/Fundamentos/Front-end, back-end y full-stack.md",
-    "Sin título.md",
-    "Agent-skills-TFG.png",
-    "Ingenieria/♾️ Full-Stack/Examen de práctica (MERN Full-Stack).md",
     "Ingenieria/♾️ Full-Stack/Express.js/Express.js.base",
     "skills-lock.json",
     "Ingenieria/♾️ Full-Stack/MongoDB/MongoDB.base",

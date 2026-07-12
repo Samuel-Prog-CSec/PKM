@@ -23,14 +23,14 @@ El objetivo paralelo es que el material sirva indefinidamente como referencia pr
 Raíz PARA + carpetas temáticas:
 
 ```
-01 - Proyectos/         (proyectos activos con fecha límite)
-02 - Areas/             (áreas de conocimiento permanentes — Desarrollo web, Ingeniería, SOs)
-03 - Recursos/          (Biblioteca, Lenguajes, Templates, 🛠️ Tools)
-04 - Archivos/          (imágenes y adjuntos)
-05 - PENDIENTES/        (inbox)
-🔴⚔️ Red Team/          (todo el contenido ofensivo, incluido Hacking web)
-🔵🛡️ Blue Team/         (defensivo)
-Redes/                  (fundamentos de redes)
+01 - Proyectos/         (proyectos activos con fecha límite, no aplica para CWES/CWEE)
+02 - Recursos/          (Biblioteca, Lenguajes, Templates, 🛠️ Tools)
+03 - Archivos/          (imágenes y adjuntos, también Escalidraw)
+04 - PENDIENTES/        (inbox, no aplica para CWES/CWEE)
+Ingenieria/             (fundamentos y conocimientos relacionados con la ingeniería de software, bases de datos, criptografía, etc.)
+🔴⚔️ Red Team/         (todo el contenido ofensivo, incluido Hacking web)
+🔵🛡️ Blue Team/        (defensivo: SOC analyst, analisis de malware y redes, etc.)
+Redes/                  (fundamentos de redes, utilidades, protocolos, etc. Interesante para Pentesting y Bug Bounty)
 TFG/                    (trabajo fin de grado — no tocar salvo petición)
 ```
 
@@ -98,7 +98,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion        # fase del pentesting que aplica
   - <tag-tema-específico>         # p. ej. Pentesting/Enumeracion, XSS, SQLi
-Fecha de actualización: 2026-05-11
+Fecha de actualización: 11-05-2026
 Nota previa: "[[Nombre nota anterior]]"
 Nota siguiente: "[[Nombre nota siguiente]]"
 Area: "[[XSS.base|XSS]]"     # ← .base Level 2 del sub-tema, NO Level 1 (Web Pentesting.base)
@@ -107,7 +107,7 @@ Area: "[[XSS.base|XSS]]"     # ← .base Level 2 del sub-tema, NO Level 1 (Web P
 ```
 
 Reglas:
-- `Fecha de actualización`: siempre en formato `YYYY-MM-DD`, fecha real en la que se crea/edita la nota.
+- `Fecha de actualización`: siempre en formato `DD-MM-YYYY`, fecha real en la que se crea/edita la nota.
 - `Nota previa` / `Nota siguiente`: alias entre comillas (`"[[ ]]"`), forman la cadena Zettelkasten dentro de un tema. La primera nota del tema tiene `Nota previa` vacía; la última, `Nota siguiente` vacía.
 - `Area`: enlace al `.base` **Level 2** del sub-tema, no al Level 1. Ejemplos: XSS → `[[XSS.base|XSS]]`; SQLi → `[[SQL Injection.base|SQL Injection]]`; Fuzzing → `[[Fuzzing.base|Fuzzing]]`. El Level 1 (`Web Pentesting.base`) agrega Level 2, no notas. Las notas legacy con `Area` apuntando a Level 1 son **deuda a migrar** cuando se trabaje su sub-tema. Ver sección "Vista `.base`" más abajo para la jerarquía completa.
 - `tags`: tema + fase pentesting. Reusar tags existentes antes de inventar nuevos (`grep` en el vault para confirmar).
@@ -122,14 +122,14 @@ Las marcas usan la sintaxis `<mark style="background: COLOR;">texto</mark>`. **C
 | Rosa claro | `#FFB8EBA6` | Matices, detalles importantes, condiciones, probabilidades. |
 | Naranja | `#FFB86CA6` | Impacto, criticidad, lo que un atacante consigue/un defensor pierde. |
 | Morado | `#8000E1A6` | Reformulaciones / consecuencias destacables, "esto significa que…". |
-| Coral-rojo | `#FF5582A6` | Hallazgos accionables durante un pentest, "esto importa para los próximos pasos". |
+| Coral-rojo | `#FF5582A6` | Hallazgos accionables durante un pentest, "esto importa para los próximos pasos". También útil para destacar información crítica (errores, resultados) o restricciones muy importantes. |
 | Gris claro | `#CACFD9A6` | Apenas usado — información de baja prioridad. Evitar salvo necesidad real. |
 
-Una nota saturada de marcas pierde el sistema. Marcar **lo importante**, no todo. Como referencia: una nota de 1200 palabras tiene típicamente 4–8 marcas.
+Una nota saturada de marcas pierde el sistema. Marcar **lo importante**, no todo.
 
 ### Callouts
 
-Para mini-notas aclaratorias, avisos y curiosidades, usar callouts de Obsidian. Los más usados:
+Para mini-notas aclaratorias, avisos y curiosidades, usar callouts de Obsidian. Puedes crear callouts personalizados siempre que quieras o lo necesites o explorar los que ya hay. Los más usados:
 
 ```markdown
 > [!important]+
@@ -143,6 +143,9 @@ Para mini-notas aclaratorias, avisos y curiosidades, usar callouts de Obsidian. 
 
 > [!info]+
 > Contexto adicional, historia, RFC, CVE relevante.
+
+> [!fail]+
+> Cuando interpretamos salida de una herramienta y queremos resaltar lo que indica fallo o error o que se ha hecho mal algo.
 ```
 
 El sufijo `+` deja el callout expandido por defecto; `-` lo colapsa. **Las palabras dentro de callouts no cuentan** para el objetivo de 1000–1500 — son contexto complementario.
@@ -164,7 +167,7 @@ $ ffuf -u http://target/FUZZ -w wordlist.txt
 
 ### Enlaces internos
 
-- Referencias a otras notas del vault: `[[Nombre exacto de la nota]]` o con alias `[[Nombre|alias]]`.
+- Referencias a otras notas del vault: `[[Nombre exacto de la nota]]` o con alias `[[Nombre|alias]]`. También se puede refenciar a apartandos concretos de otra nota con `[[Nombre#Apartado]]`, como eso queda feo de leer, habría que añadir también un alias, quedando algo como `[[Nombre#Apartado|Alias]]`.
 - Las notas siguientes/previas se encadenan en el frontmatter; los enlaces "tematicos" (XSS → menciona `[[HTTP]]`) van en el cuerpo.
 - Si una nota referencia un concepto que **todavía no existe**, crear el wikilink igualmente (`[[Deserialización Java]]`) — Obsidian lo mostrará como nota fantasma y servirá de TODO.
 
@@ -182,14 +185,14 @@ $ ffuf -u http://target/FUZZ -w wordlist.txt
 
 Usar para comparativas (herramientas, tipos de vulnerabilidad, payloads por contexto). Mantener cabeceras concisas. Si una tabla pasa de 8 filas, considerar si conviene una lista o múltiples tablas más pequeñas.
 
-## Flujo de extracción HTB → nota (con Playwright MCP)
+## Flujo de extracción HTB → nota (usando la agent skill agent-browser, para saber cómo utilizar el navegador)
 
 El usuario inicia sesión en HTB Academy desde su navegador. La extracción de un módulo se ejecuta en **3 fases iterativas** (más una Fase 0 de planificación). **No avanzar** a la siguiente fase sin terminar la actual.
 
 ### Fase 0 — Planificación (una vez por módulo)
 
 1. **Negociar el módulo**. El usuario dice "vamos con `Web Fuzzing`" o equivalente. Identificar el módulo en el path y la carpeta destino del mapeo de arriba.
-2. **Navegar con Playwright MCP**. Abrir el módulo, listar todos sus capítulos (nombres, URLs, número total).
+2. **Navegar con un browser (usando la agent skill mencionada)**. Abrir el módulo, listar todos sus capítulos (nombres, URLs, número total).
 3. **Presentar al usuario el plan** y esperar confirmación:
    - Nº de capítulos HTB y mapeo capítulo → nota(s): 1:1, M:1 (varios cortos comparten tema), 1:N (uno enorme se divide).
    - Cadena Zettelkasten propuesta (`prev`/`next`).
@@ -310,7 +313,7 @@ Existe `03 - Recursos/Templates/Template para proyectos.md` con el frontmatter v
 tags:
   - Web/Red-Team
   - <tag-tema>
-Fecha de actualización: YYYY-MM-DD
+Fecha de actualización: DD-MM-YYYY
 Nota previa: "[[<previa>]]"
 Nota siguiente: "[[<siguiente>]]"
 Area: "[[<MOC>.base|<MOC display>]]"
@@ -432,7 +435,7 @@ $ obsidian commands                           # listar comandos disponibles
 $ obsidian command id="<command-id>"
 ```
 
-**Skills oficiales instaladas** (plugin `obsidian@obsidian-skills`, autor Steph Ango — fundador de Obsidian):
+**Skills oficiales instaladas** (plugin `obsidian@obsidian-skills`, autor Steph Ango — fundador de Obsidian). Cárgalas todas siempre antes de empezar a crear notas y a investigar. Es siempre lo primero de todo que debes hacer. Skills Obsidian:
 
 - `obsidian-cli` — Cómo usar la CLI correctamente, patrones idiomáticos, escapes seguros.
 - `obsidian-markdown` — Crear/editar markdown con sintaxis Obsidian (wikilinks, callouts, embeds).
