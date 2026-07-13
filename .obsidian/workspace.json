@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -245,9 +245,10 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "eeeb8516089e5c24",
+  "active": "9614b32ef662e9be",
   "lastOpenFiles": [
     "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
+    "TFG/Dudas Tecnología/Redis.md.tmp.15652.b8f3a43370ce",
     "TFG/Dudas Tecnología/Docker.md",
     "TFG/Dudas Tecnología/Patrones Diseño.md",
     "TFG/Dudas Tema 2/Dudas Tema 2.md",
@@ -273,7 +274,6 @@
     "Ingenieria/♾️ Full-Stack/Express.js/02-Rutas, manejadores y Express Router.md",
     "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
     "Ingenieria/♾️ Full-Stack/Express.js/00-Express.js, framework y middleware.md",
-    "Ingenieria/♾️ Full-Stack/Node.js/01-package.json y el gestor de paquetes npm.md",
     "Ingenieria/♾️ Full-Stack/Express.js/Express.js.base",
     "skills-lock.json",
     "Ingenieria/♾️ Full-Stack/MongoDB/MongoDB.base",
@@ -283,7 +283,6 @@
     "Ingenieria/♾️ Full-Stack/React.js/React.js.base",
     "🔴⚔️ Red Team/Hacking web/Proxies web/Proxies web.base",
     "htb110.json",
-    "🔴⚔️ Red Team/Hacking web/Authentication/01 - Enumeración de usuarios.md.tmp.23096.bf004a9dae93",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-form.png",

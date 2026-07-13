@@ -81,8 +81,13 @@ Sin _multi-stage_, tu imagen de Docker se quedaría con los "andamios y la hormi
 ---
 
 ## 4. Cosas interesantes para comentar
-
 **a) El "baile de arranque" de MongoDB (lo más técnico y lucido).**
+> [!info]+ Qué es *replica set*
+> Un **replica set** (o conjunto de réplicas) es un grupo de servidores de base de datos conectados entre sí que mantienen exactamente la misma copia de la información sincronizada en tiempo real. Su objetivo fundamental es garantizar la **alta disponibilidad** (que el servicio nunca se interrumpa si falla un equipo) y la **redundancia de datos** (evitar pérdidas de información si un disco duro se rompe o un centro de datos pierde conexión).
+
+> [!hacker]+ El truco del "nodo único"
+> Configurar un _replica set de un solo nodo_ es un atajo muy común en arquitectura. Aunque al tener una sola máquina no ganas protección contra fallos de hardware, **activas funciones de MongoDB que solo existen dentro de los conjuntos de réplicas**. La más importante es el **oplog (_operations log_)**, un historial interno donde se escribe en milisegundos cada modificación, además de permitir usar **transacciones multidocumento** (operaciones complejas de lectura y escritura coordinadas).
+
 Queríamos usar **transacciones** en Mongo, que exigen un *replica set*, y a la vez **autenticación**. Combinar ambas cosas en Docker es sorprendentemente delicado, así que hay una **cadena de 3 servicios de inicialización idempotentes**:
 1. Uno genera una vez un *keyfile* (clave de autenticación interna del replica set).
 2. Otro crea el usuario root aprovechando la "*localhost exception*" de Mongo (comparte el *network namespace* del contenedor Mongo para que `127.0.0.1` sea realmente local).

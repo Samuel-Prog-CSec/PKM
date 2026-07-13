@@ -63,6 +63,9 @@ Tarjeta RFID → RC522 → ESP8266 (firma HMAC) → USB serie
 Este es probablemente **el punto más fuerte** de esta parte para la defensa. El problema: el navegador es un **puente poco fiable** (cualquiera podría abrir la consola y emitir un `rfid_scan_from_client` falso). ¿Cómo garantizamos que un escaneo viene de verdad del sensor físico?
 
 **Con un HMAC (firma criptográfica) calculado en el propio firmware:**
+`HMAC = hash( clave + hash( clave + mensaje ) )` | `Mensaje = UID + contador`
+*HMAC = Hash-based Message Authentication Code*
+- Se le llama "firma" de forma coloquial, pero **técnicamente HMAC es un MAC simétrico**: las dos partes comparten la misma clave, así que **cualquiera que la tenga puede tanto crear como verificar un HMAC**.
 - El ESP8266 firma cada escaneo: `HMAC-SHA256(secreto, UID + ":" + contador)`. El **secreto solo está en el firmware y en el servidor**, nunca en el navegador.
 - El navegador **solo reenvía la firma**, no la calcula ni conoce el secreto. Es un mero transportista.
 - El backend **recalcula la firma** y la compara con `timingSafeEqual` (comparación en tiempo constante, contra *timing attacks*).
