@@ -57,10 +57,10 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`) | Completado |
 | 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/`                                          | Completado        |
 | 14  | Broken Authentication               | `Hacking web/Authentication/`                                         | Completado        |
-| 15  | Web Attacks                         | `Hacking web/Web Attacks/` *(crear; HTTP verb tampering, IDOR, XXE…)* | Pendiente         |
+| 15  | Web Attacks                         | `Hacking web/Web Attacks/` (verb tampering, IDOR, XXE · notas 00-20)  | Completado        |
 | 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                         | Completado        |
-| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` *(crear)*                                      | Pendiente         |
-| 18  | API Attacks                         | `Hacking web/API Attacks/` *(crear)*                                  | Pendiente         |
+| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` (notas 00-07)                                  | Completado        |
+| 18  | API Attacks                         | `Hacking web/API Attacks/` (OWASP API Top 10 2023 · notas 00-12)      | Completado        |
 | 19  | Attacking Common Applications       | `Hacking web/Common Applications/` *(crear)*                          | Pendiente         |
 | 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` *(crear)*                                   | Pendiente         |
 
@@ -72,12 +72,12 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` | Pendiente |
 | 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Avanzado/` | Completado |
 | 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` | Completado |
-| 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` *(crear)* | Pendiente |
-| 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` *(crear)* | Pendiente |
-| 7 | HTTP Attacks | `Hacking web/HTTP/Attacks/` *(crear; smuggling, desync, cache poisoning)* | Pendiente |
+| 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` | Completado |
+| 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` | Completado |
+| 7 | HTTP Attacks | `Hacking web/HTTP/Attacks/` | Completado |
 | 8 | Blind SQL Injection | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/` | Completado |
 | 9 | Intro to Whitebox Pentesting | `Hacking web/Whitebox/Intro/` *(crear)* | Pendiente |
-| 10 | Modern Web Exploitation Techniques | `Hacking web/Modern Exploitation/` *(crear)* | Pendiente |
+| 10 | Modern Web Exploitation Techniques | `Hacking web/Modern Exploitation/` (DNS rebinding · second-order · WebSockets · notas 00-17) | Completado |
 | 11 | Introduction to Deserialization Attacks | `Hacking web/Deserialization/Intro/` *(crear)* | Pendiente |
 | 12 | Whitebox Attacks | `Hacking web/Whitebox/Attacks/` *(crear)* | Pendiente |
 | 13 | Advanced SQL Injections | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
@@ -98,7 +98,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion        # fase del pentesting que aplica
   - <tag-tema-específico>         # p. ej. Pentesting/Enumeracion, XSS, SQLi
-Fecha de actualización: 11-05-2026
+Fecha de actualización: 2026-05-11
 Nota previa: "[[Nombre nota anterior]]"
 Nota siguiente: "[[Nombre nota siguiente]]"
 Area: "[[XSS.base|XSS]]"     # ← .base Level 2 del sub-tema, NO Level 1 (Web Pentesting.base)
@@ -107,7 +107,7 @@ Area: "[[XSS.base|XSS]]"     # ← .base Level 2 del sub-tema, NO Level 1 (Web P
 ```
 
 Reglas:
-- `Fecha de actualización`: siempre en formato `DD-MM-YYYY`, fecha real en la que se crea/edita la nota.
+- `Fecha de actualización`: siempre en formato `YYYY-MM-DD` (ISO 8601), fecha real en la que se crea/edita la nota.
 - `Nota previa` / `Nota siguiente`: alias entre comillas (`"[[ ]]"`), forman la cadena Zettelkasten dentro de un tema. La primera nota del tema tiene `Nota previa` vacía; la última, `Nota siguiente` vacía.
 - `Area`: enlace al `.base` **Level 2** del sub-tema, no al Level 1. Ejemplos: XSS → `[[XSS.base|XSS]]`; SQLi → `[[SQL Injection.base|SQL Injection]]`; Fuzzing → `[[Fuzzing.base|Fuzzing]]`. El Level 1 (`Web Pentesting.base`) agrega Level 2, no notas. Las notas legacy con `Area` apuntando a Level 1 son **deuda a migrar** cuando se trabaje su sub-tema. Ver sección "Vista `.base`" más abajo para la jerarquía completa.
 - `tags`: tema + fase pentesting. Reusar tags existentes antes de inventar nuevos (`grep` en el vault para confirmar).
@@ -313,7 +313,7 @@ Existe `03 - Recursos/Templates/Template para proyectos.md` con el frontmatter v
 tags:
   - Web/Red-Team
   - <tag-tema>
-Fecha de actualización: DD-MM-YYYY
+Fecha de actualización: YYYY-MM-DD
 Nota previa: "[[<previa>]]"
 Nota siguiente: "[[<siguiente>]]"
 Area: "[[<MOC>.base|<MOC display>]]"

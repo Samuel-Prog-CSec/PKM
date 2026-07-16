@@ -17,7 +17,7 @@ Puntos clave:
 - Solo en **navegadores Chromium**.
 
 ### WebSockets (Socket.IO)
-Un **WebSocket** es un canal de comunicación **bidireccional y persistente** entre navegador y servidor sobre una única conexión. A diferencia de HTTP (petición → respuesta, el cliente siempre inicia), el WebSocket permite que **el servidor empuje datos al cliente en cualquier momento** (*push*). Es lo que hace posible el "tiempo real".
+Un **WebSocket** es un canal de comunicación **bidireccional y persistente** entre navegador y servidor sobre una única conexión TCP. A diferencia de HTTP (petición → respuesta, el cliente siempre inicia), el WebSocket permite que **el servidor empuje datos al cliente en cualquier momento** (*push*). Es lo que hace posible el "tiempo real".
 
 Usamos **Socket.IO**, una biblioteca sobre WebSockets que añade reconexión automática, *rooms* (salas), *namespaces*, *fallback* a *long-polling* si el WebSocket falla, y ACKs.
 

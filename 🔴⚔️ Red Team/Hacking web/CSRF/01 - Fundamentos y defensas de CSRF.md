@@ -43,7 +43,7 @@ Antes de escribir un exploit, confirma que el endpoint reúne las condiciones. <
 
 ## Tokens CSRF
 
-<mark style="background: #ADCCFFA6;">Un token CSRF es un valor único, aleatorio e impredecible que debe acompañar a toda petición que cambie estado</mark>, normalmente como campo oculto en el formulario. El backend lo verifica antes de ejecutar la acción. Como el atacante no puede adivinar el valor, no puede construir una petición cross-site que la aplicación acepte. Para ser efectivo, el token debe ser **impredecible**, estar **correctamente verificado** en el backend, **atado a la sesión** del usuario y **no viajar en una cookie** (si va en cookie, el navegador lo adjunta solo y la protección se desmorona). Es la defensa primaria recomendada.
+<mark style="background: #ADCCFFA6;">Un token CSRF es un valor único, aleatorio e impredecible que debe acompañar a toda petición que cambie estado</mark>, normalmente como campo oculto en el formulario. El backend lo verifica antes de ejecutar la acción. Como el atacante no puede adivinar el valor, no puede construir una petición cross-site que la aplicación acepte. Para ser efectivo, el token debe ser **impredecible**, estar **correctamente verificado** en el backend, **atado a la sesión** del usuario y **no viajar en una cookie** (si va en cookie, el navegador lo adjunta solo y la protección se desmorona). Es la defensa primaria recomendada. Frameworks como Django o Rails además **enmascaran** el token en cada respuesta (XOR con un valor aleatorio), de modo que su forma cambia en cada carga: así no se filtra por un canal lateral de compresión — ver [[06 - Ataques de compresión (CRIME y BREACH)|BREACH]].
 
 ## Validación de cabeceras: `Origin` y `Referer`
 

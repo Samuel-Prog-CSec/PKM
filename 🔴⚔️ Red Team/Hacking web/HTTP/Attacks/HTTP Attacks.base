@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("HTTP Attacks.base", "HTTP Attacks")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 400
+      file.tags: 320

@@ -42,5 +42,7 @@ Aquí está la diferencia clave con el almacenado: si el payload no persiste, ¿
 
 > [!warning]+ El reflected vive de la ingeniería social
 > A diferencia del almacenado —que dispara solo con visitar la página—, el reflected <mark style="background: #8000E1A6;">necesita que la víctima haga clic en tu enlace</mark>. En la práctica el payload se *URL-encodea* para que el enlace no levante sospechas, y a veces se oculta tras un acortador. La entrega es la mitad del ataque: un reflected XSS sin un vector de entrega creíble tiene impacto limitado, y por eso muchos programas lo pagan menos que un stored.
+>
+> **Excepción moderna**: si el reflejo se puede **cachear** ([[01 - Introducción a Web Cache Poisoning|web cache poisoning]]) o inyectar en la petición de otro usuario ([[06 - Introducción a HTTP Request Smuggling|request smuggling]]), el reflected se sirve a **todos** sin interacción — y entonces vale tanto como un stored. Incluso un reflected solo en una **cabecera** (inexplotable de forma clásica) se weaponiza así.
 
 El tercer tipo ni siquiera llega al servidor: se procesa entero en el navegador. Es el [[03 - XSS basado en DOM]].

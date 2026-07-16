@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "f568bb035d698ed0",
+        "id": "bbf45e659bdffa2d",
         "type": "tabs",
         "children": [
           {
-            "id": "9a648412e566c506",
+            "id": "95f993499b533637",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "WebSerial y WebSockets"
-            }
-          },
-          {
-            "id": "9614b32ef662e9be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TFG/Dudas Tecnología/Patrones Diseño.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Patrones Diseño"
-            }
-          },
-          {
-            "id": "eeeb8516089e5c24",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TFG/Dudas Tecnología/Docker.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Docker"
+              "title": "Nueva pestaña"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -125,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240,
-    "collapsed": true
+    "width": 240
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -245,44 +211,45 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "9614b32ef662e9be",
+  "active": "95f993499b533637",
   "lastOpenFiles": [
-    "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
-    "TFG/Dudas Tecnología/Redis.md.tmp.15652.b8f3a43370ce",
-    "TFG/Dudas Tecnología/Docker.md",
-    "TFG/Dudas Tecnología/Patrones Diseño.md",
-    "TFG/Dudas Tema 2/Dudas Tema 2.md",
-    "Preguntas TFG.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/17 - Herramientas, detección y prevención de WebSockets.md.tmp.34556.fd6ae1eba632",
+    "🔴⚔️ Red Team/Hacking web/Web Attacks/07 - Identificación de IDORs.md.tmp.34556.dc65ec5ee6bb",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/15 - Explotación de SQLi vía WebSockets.md.tmp.34556.a039ab980ddf",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/16 - Cross-Site WebSocket Hijacking (CSWH).md.tmp.34556.b6341362b558",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/10 - Second-Order Command Injection.md.tmp.34556.b7f6f837c315",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/08 - Second-Order IDOR (blackbox).md.tmp.34556.0c8578e2ae94",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/04 - DNS Rebinding para bypass de Same-Origin Policy.md.tmp.34556.ae9de3dffe00",
+    "🔴⚔️ Red Team/Hacking web/Web Attacks/12 - Detección, evasión y prevención de IDOR.md.tmp.34556.8a01bc4ae2b4",
+    "🔴⚔️ Red Team/Hacking web/Web Attacks/08 - Enumeración masiva de IDOR.md.tmp.34556.3869bafb7aae",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/03 - DNS Rebinding para bypass de filtros SSRF.md.tmp.34556.2acc25cad18d",
+    "🔴⚔️ Red Team/Hacking web/Web Attacks/04 - Detección, evasión y prevención de Verb Tampering.md.tmp.34556.3293096591d8",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/17 - Herramientas, detección y prevención de WebSockets.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/16 - Cross-Site WebSocket Hijacking (CSWH).md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/15 - Explotación de SQLi vía WebSockets.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/14 - Explotación de XSS vía WebSockets.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/13 - Análisis de WebSockets en Burp.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/12 - Introducción a los WebSockets.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/11 - Detección, herramientas y prevención de ataques de segundo orden.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/10 - Second-Order Command Injection.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/09 - Second-Order LFI.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/08 - Second-Order IDOR (blackbox).md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/07 - Second-Order IDOR (whitebox).md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/06 - Introducción a los ataques de segundo orden.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/05 - Herramientas, detección y prevención de DNS Rebinding.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/04 - DNS Rebinding para bypass de Same-Origin Policy.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/03 - DNS Rebinding para bypass de filtros SSRF.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/02 - Bypasses básicos de filtros SSRF.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/01 - Introducción a DNS Rebinding.md",
+    "🔴⚔️ Red Team/Hacking web/Modern Exploitation/00 - Introducción a Modern Web Exploitation Techniques.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/07 - Herramientas para GraphQL.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/06 - Detección, evasión y prevención de GraphQL.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/05 - Mutations.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/04 - Denegación de servicio (DoS) y Batching.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/03 - Injection Attacks.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/02 - IDOR en GraphQL.md",
+    "🔴⚔️ Red Team/Hacking web/GraphQL/01 - Information Disclosure.md",
     "Agent-skills-TFG.png",
-    "Guion_exposicion_factura_electronica.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/11 - Herencia de modelos y de vistas.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/10 - Relaciones entre modelos.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/16 - Informes QWeb.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/15 - Campos computados y onchange.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/14 - Seguridad y datos demo.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/13 - Acciones y menús.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/09 - Modelos y tipos de campo.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/04 - Instalación con Docker.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/12 - Vistas XML.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/Módulos/08 - Estructura de un módulo y scaffold.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/07 - Servicios web XML-RPC.md",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Odoo/06 - Operativa compra-venta.md",
-    "Ingenieria/♾️ Full-Stack/React.js/00-React.js, SPA y Virtual DOM.md",
-    "Ingenieria/♾️ Full-Stack/Express.js/05-Seguridad de APIs REST (tokens y JWT).md",
-    "Ingenieria/♾️ Full-Stack/Express.js/04-Mongoose y el patrón ODM en Express.md",
-    "Ingenieria/♾️ Full-Stack/Express.js/03-CRUD, métodos HTTP y códigos de estado.md",
-    "Ingenieria/♾️ Full-Stack/Express.js/02-Rutas, manejadores y Express Router.md",
-    "Ingenieria/♾️ Full-Stack/Express.js/01-APIs REST (principios y características).md",
-    "Ingenieria/♾️ Full-Stack/Express.js/00-Express.js, framework y middleware.md",
-    "Ingenieria/♾️ Full-Stack/Express.js/Express.js.base",
-    "skills-lock.json",
-    "Ingenieria/♾️ Full-Stack/MongoDB/MongoDB.base",
-    "Ingenieria/♾️ Full-Stack/Full-Stack.base",
-    "Ingenieria/Sistemas-Empresariales/Laboratorios/Laboratorios.base",
-    "Ingenieria/Sistemas-Empresariales/Sistemas-Empresariales.base",
-    "Ingenieria/♾️ Full-Stack/React.js/React.js.base",
-    "🔴⚔️ Red Team/Hacking web/Proxies web/Proxies web.base",
-    "htb110.json",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-form.png",
