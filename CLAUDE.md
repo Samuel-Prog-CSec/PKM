@@ -61,15 +61,15 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                         | Completado        |
 | 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` (notas 00-07)                                  | Completado        |
 | 18  | API Attacks                         | `Hacking web/API Attacks/` (OWASP API Top 10 2023 · notas 00-12)      | Completado        |
-| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` *(crear)*                          | Pendiente         |
+| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` — **subcarpeta por app** (30 notas)  | Completado ✅ (2026-07-16) |
 | 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` *(crear)*                                   | Pendiente         |
 
 ### Path CWEE (Senior Web Penetration Tester)
 
 | # | Módulo HTB | Carpeta destino | Estado |
 | - | - | - | - |
-| 1 | Injection Attacks | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Injection Attacks/` | Pendiente |
-| 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` | Pendiente |
+| 1 | Injection Attacks | ⚠️ **NO es SQLi** (XPath+LDAP+PDF) → 3 carpetas hermanas `Hacking web/{XPath Injection,LDAP Injection,PDF Injection}/` (9+7+5 notas) · el "Attacking LDAP" del módulo 19 quedó como nota-puente en `Common Applications/Misc/` enlazando a `LDAP Injection/` (no fusionado) | Completado ✅ (2026-07-16) |
+| 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` (MongoDB · notas 00-09) | Completado ✅ (2026-07-16) |
 | 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Avanzado/` | Completado |
 | 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` | Completado |
 | 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` | Completado |

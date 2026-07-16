@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("Common Applications.base", "Common Applications")
+    order:
+      - file.name
+      - file.folder
+      - file.tags
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      file.name: 340
+      file.folder: 260
+      file.tags: 220
