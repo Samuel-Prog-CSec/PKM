@@ -87,6 +87,9 @@ Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de disp
 > [!important]+
 > Doble clic sobre el SSD en esa nueva ubicación. Controlador -> Detalles del controlador, debería aparrecer el nombre del archivo: `nvmedisk.sys`. <mark style="background: #FF5582A6;">Si está eso, ya está corriendo con el motor de Windows Server</mark>. Si sigue estando `disk.sys` o `stornvme.sys`, el *cambio no se ha aplicado*.
 
+## 1.5 Windows 11 Privacidad
+[Herramienta para eliminar app de IA y telemetría](https://hixec.com/winzard/)
+
 ---
 
 # 2. Terminal

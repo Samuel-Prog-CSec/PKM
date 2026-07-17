@@ -92,4 +92,7 @@ Un vector que los desarrolladores suelen pasar por alto. Muchas funciones cargan
 > - [HackTricks — LFI/RFI](https://book.hacktricks.xyz/pentesting-web/file-inclusion)
 > - [PayloadsAllTheThings — File Inclusion](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
 
+> [!important]+ LFI vía API
+> La LFI afecta a APIs igual que a webs. Patrón típico: un endpoint que recibe una ruta/fichero (`/api/download/<file>`) y la pasa a `include`/`fopen`/`readFile` sin canonicalizar. Se descubre con **fuzzing de endpoints** (`ffuf` + `common-api-endpoints`) y se explota con *path traversal* **URL-encodeado** para colarse por los filtros: `/api/download/..%2f..%2f..%2fetc%2fpasswd`. Escala igual con [[04 - PHP wrappers II - RCE y filter chains|filter chains]] y `phar://`. Defensa real: allowlist `id→ruta` + canonicalización contra el directorio base.
+
 Cuando la app filtra los `../` o ciertos caracteres, hay que recurrir a los [[02 - Bypasses básicos - traversal, null byte y encoding|bypasses de filtros]].

@@ -3,7 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
-  - Server-Side
+  - Server-Side/SSRF
 Fecha de actualización: 2026-07-15
 Nota previa: "[[06 - Unrestricted Access to Sensitive Business Flows (API6)]]"
 Nota siguiente: "[[08 - Security Misconfiguration (API8)]]"

@@ -68,7 +68,7 @@ El flujo de detección con **DOM Invader** (Burp) es sistemático: activarlo, na
 - Mantener librerías al día (jQuery ≥ 3.4, Lodash parcheado).
 
 > [!warning]+ No es solo XSS
-> La prototype pollution es un **primitivo**, no un fin: además de XSS, según el gadget puede derivar en bypass de autorización, DoS o, en Node.js, RCE *server-side*. Aquí la tratamos por su salida a XSS, pero al encontrarla en un parámetro conviene mapear **todos** los gadgets disponibles —su impacto puede escalar mucho.
+> La prototype pollution es un **primitivo**, no un fin: además de XSS, según el gadget puede derivar en bypass de autorización, DoS o, en Node.js, RCE *server-side*. Aquí la tratamos por su salida a XSS, pero al encontrarla en un parámetro conviene mapear **todos** los gadgets disponibles —su impacto puede escalar mucho. Ver [[00 - Introducción a Prototype Pollution|la familia completa]] y, para la explotación en Node.js (bypass de autorización, DoS, RCE), [[01 - Prototype Pollution server-side]].
 
 > [!info]+ Fuentes
 > - [PortSwigger — Client-side prototype pollution](https://portswigger.net/web-security/prototype-pollution)

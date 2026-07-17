@@ -98,4 +98,7 @@ SELECT @@version;        -- MSSQL / MySQL
 > [!important]+
 > <mark style="background: #8000E1A6;">La detección manual sigue siendo imprescindible</mark>: las herramientas automáticas fallan ante contextos raros (JSON anidado, parámetros que requieren encoding doble, inyección de segundo orden) y generan ruido que dispara WAFs y *rate limits*. Detecta a mano, confirma el contexto, y solo entonces lanza la herramienta afinada al punto exacto.
 
+> [!important]+ SQLi en APIs y web services
+> Las APIs sufren SQLi igual que un formulario; cambia el **envoltorio** (JSON, XML, SOAP), no el *sink*. Ventaja para el atacante: el **WSDL/OpenAPI** entrega los nombres y tipos de parámetro exactos a atacar, y los errores de API (un `<soap:Fault>` verboso, un *stack trace* JSON) suelen filtrar más que una web. Caso real: [SQLi en un WSDL del DoD (HackerOne #390359)](https://hackerone.com/reports/390359). Fuzzea **todo** parámetro identificado, incluso los que no parecen tocar la base de datos.
+
 Con un punto de inyección confirmado y el contexto claro, el primer uso práctico es alterar la consulta a nuestro favor: [[02 - Subvertir la lógica de consulta]].

@@ -10,7 +10,7 @@ Area: "[[Common Applications.base|Common Applications]]"
 ---
 ---
 
-Como en [[01 - Ataques a WordPress|WordPress]] y [[01 - Ataques a Drupal|Drupal]], la vía principal de RCE en Joomla es <mark style="background: #FFB86CA6;">entrar al backend admin y abusar de la edición de plantillas</mark>. Las credenciales suelen salir de la fase de enumeración (leaks, defaults como `admin:admin`).
+Como en [[04 - RCE como administrador en WordPress|WordPress]] y [[01 - Ataques a Drupal|Drupal]], la vía principal de RCE en Joomla es <mark style="background: #FFB86CA6;">entrar al backend admin y abusar de la edición de plantillas</mark>. Las credenciales suelen salir de la fase de enumeración (leaks, defaults como `admin:admin`).
 
 # Abusar de funcionalidad: editar una plantilla
 

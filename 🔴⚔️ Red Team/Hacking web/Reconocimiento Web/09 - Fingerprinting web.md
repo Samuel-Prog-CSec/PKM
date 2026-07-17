@@ -97,6 +97,6 @@ Hallazgos accionables: servidor Apache **desactualizado** (mapeable a `CVE`), Wo
 > - **Cookies de framework**: `PHPSESSID` (PHP), `JSESSIONID` (Java), `laravel_session`, `csrftoken` (Django), `ci_session` (CodeIgniter) delatan el stack sin necesidad de más sondeo.
 
 > [!important]+ De la versión al exploit
-> El objetivo final del fingerprinting es el salto a la explotación: una vez tienes `software + versión`, `searchsploit <software> <versión>`, la base de datos de `CVE` y `nuclei` te dicen qué vulnerabilidades conocidas aplican. Un `Apache 2.4.41` o un `WordPress` con plugins viejos son puntos de partida directos.
+> El objetivo final del fingerprinting es el salto a la explotación: una vez tienes `software + versión`, `searchsploit <software> <versión>`, la base de datos de `CVE` y `nuclei` te dicen qué vulnerabilidades conocidas aplican. Un `Apache 2.4.41` o un [[01 - Enumeración de WordPress|`WordPress`]] con plugins viejos son puntos de partida directos.
 
 Con el objetivo caracterizado, toca mapear su contenido navegándolo de forma estructurada: el [[10 - Crawling web]].

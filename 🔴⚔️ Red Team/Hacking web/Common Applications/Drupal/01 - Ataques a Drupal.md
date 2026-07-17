@@ -10,7 +10,7 @@ Area: "[[Common Applications.base|Common Applications]]"
 ---
 ---
 
-Conseguir shell en Drupal no es tan directo como editar un tema PHP (como en [[01 - Ataques a WordPress|WordPress]]). Hay tres vías: abusar del **PHP Filter**, subir un **módulo con backdoor**, o explotar una **CVE de core (Drupalgeddon)**.
+Conseguir shell en Drupal no es tan directo como editar un tema PHP (como en [[04 - RCE como administrador en WordPress|WordPress]]). Hay tres vías: abusar del **PHP Filter**, subir un **módulo con backdoor**, o explotar una **CVE de core (Drupalgeddon)**.
 
 # Abusar del módulo PHP Filter
 

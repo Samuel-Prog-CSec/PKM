@@ -57,4 +57,7 @@ Crea una imagen con una URL vacía; al fallar la carga, el atributo `onerror` <m
 > - **`DOM Invader`** (integrado en el navegador de Burp Suite) automatiza el rastreo de *sources* a *sinks*, encontrando DOM XSS que a mano es tedioso.
 > - Los frameworks modernos (React, Angular, Vue) escapan la salida por defecto, pero <mark style="background: #FFB86CA6;">reintroduces DOM XSS al usar escotillas como `dangerouslySetInnerHTML` (React) o `bypassSecurityTrustHtml` (Angular)</mark> — los primeros sitios a mirar en una SPA.
 
+> [!important]+ XSS vía API — depende del sink del cliente
+> Una respuesta JSON con `Content-Type: application/json` **no ejecuta** script por sí sola. Pero <mark style="background: #FF5582A6;">el XSS reaparece cuando (a) la API devuelve `Content-Type: text/html` o se carga directa en el navegador, o (b) un cliente SPA renderiza el valor con `innerHTML` en vez de `textContent`</mark> — payload almacenado vía API, ejecutado en el cliente. Las migraciones de render servidor→cliente reexponen datos que se creían "seguros". Al auditar una API, no descartes XSS: rastrea dónde el front pinta la respuesta. Fuente: [Rapid7 — XSS in JSON](https://www.rapid7.com/blog/post/2022/05/04/xss-in-json-old-school-attacks-for-modern-applications/).
+
 Conocidos los tres tipos, el siguiente paso es **encontrarlos** de forma sistemática: el [[04 - Descubrimiento de XSS]].

@@ -92,4 +92,7 @@ gopher://127.0.0.1:25/_MAIL%20FROM:attacker%40academy.htb%0ARCPT%20To:victim%40a
 > - [PortSwigger — Exploiting SSRF](https://portswigger.net/web-security/ssrf) · [Gopherus](https://github.com/tarunkant/Gopherus)
 > - [HackTricks — SSRF (gopher, schemes)](https://book.hacktricks.xyz/pentesting-web/ssrf-server-side-request-forgery) · [PayloadsAllTheThings — SSRF](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery)
 
+> [!important]+ SSRF vía API — el bug de más rendimiento en bug bounty
+> Las APIs son el hábitat natural del SSRF: parámetros que aceptan URLs — `url`, `callback`, `webhook`, `redirect_uri`, `image_url`, `dest`, `feed` — dejan apuntar el servidor a `169.254.169.254` (metadata cloud) o a hosts internos. <mark style="background: #FFB86CA6;">Ojo al encoding</mark>: si `?id=http://...` devuelve "parámetro inválido", prueba a **Base64-encodear** la URL — muchos backends la esperan en un formato concreto. CVEs recientes del patrón: **CVE-2024-52588** (webhooks de Strapi), **CVE-2024-5526** (Grafana OnCall). Fuente: [YesWeHack — SSRF guide](https://www.yeswehack.com/learn-bug-bounty/server-side-request-forgery-ssrf). El caso web-service equivalente es el [[04 - Ataques a xmlrpc.php|pingback de WordPress]].
+
 Todo lo anterior asume que **vemos la respuesta**. Cuando no es así, entramos en el terreno restringido pero explotable de la [[04 - Blind SSRF]].

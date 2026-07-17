@@ -103,4 +103,7 @@ Los vectores ciegos clásicos: **SVG → SSRF/XXE** (si el server devuelve una i
 > - [Intigriti — Exploiting PDF generators (SSRF)](https://www.intigriti.com/researchers/blog/hacking-tools/exploiting-pdf-generators-a-complete-guide-to-finding-ssrf-vulnerabilities-in-pdf-generators)
 > - [Synacktiv — Persistent PHP payloads in PNGs (IDAT)](https://www.synacktiv.com/en/publications/persistent-php-payloads-in-pngs-how-to-inject-php-code-in-an-image-and-keep-it-there) · [interactsh](https://github.com/projectdiscovery/interactsh)
 
+> [!important]+ Subida vía API — sin navegador, sin validación de cliente
+> Cuando la subida va por API, los bytes suelen llegar **Base64 dentro de JSON o XML** (p. ej. una acción SOAP `uploadFile`), así que <mark style="background: #8000E1A6;">todas las validaciones de cliente (extensión, MIME del navegador) son irrelevantes</mark> — solo defienden la allowlist server-side, los *magic bytes* y la canonicalización de ruta. Un `backdoor.php` con `system($_REQUEST['cmd'])` subido a `/api/upload/` y accesible en `/uploads/backdoor.php` es RCE directo; un `../` en el nombre suministrado → escritura arbitraria. Fuente: [PortSwigger — File upload](https://portswigger.net/web-security/file-upload).
+
 Localizada y confirmada la vulnerabilidad, la [[09 - Prevención de File Upload Attacks|prevención]] cierra el ciclo del informe; y el [[10 - Arsenal de herramientas para File Upload|arsenal]] automatiza toda esta metodología.

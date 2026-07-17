@@ -5,7 +5,7 @@ tags:
   - Pentesting/Enumeracion
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Introducción y metodología]]"
-Nota siguiente: "[[00 - Descubrimiento y enumeración de WordPress]]"
+Nota siguiente: "[[00 - Estructura y roles de WordPress]]"
 Area: "[[Common Applications.base|Common Applications]]"
 ---
 ---
@@ -60,4 +60,4 @@ $ cat web_discovery.xml | ./aquatone -nmap
 > [!important]+ El escáner es input, no sustituto
 > <mark style="background: #FF5582A6;">Todos estos escaneos son datos de entrada para el testing **manual**</mark>. Las vulnerabilidades más severas y únicas salen del análisis a mano, no del scanner. No empieces a atacar el primer host que veas: termina el descubrimiento, anota app + versión de cada objetivo, y ataca con criterio. La fase de enumeración se apoya en el módulo de [[00 - Reconocimiento Web|reconocimiento web]] (fuzzing de vhosts, directorios, parámetros).
 
-Con el inventario de aplicaciones listo, empezamos por la más extendida de la web: [[00 - Descubrimiento y enumeración de WordPress|WordPress]].
+Con el inventario de aplicaciones listo, empezamos por la más extendida de la web: [[00 - Estructura y roles de WordPress|WordPress]].

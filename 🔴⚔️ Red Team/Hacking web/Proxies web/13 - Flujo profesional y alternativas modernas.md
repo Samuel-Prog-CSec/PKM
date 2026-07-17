@@ -30,7 +30,7 @@ El módulo enseña las features; esta nota es cómo se **usan de verdad** en un 
 
 | Feature | Qué aporta |
 | - | - |
-| <mark style="background: #FFB86CA6;">**DOM Invader**</mark> | Integrado en el navegador de Burp: detecta [[04 - Descubrimiento de XSS\|DOM XSS]], [[09 - Prototype Pollution hacia XSS\|prototype pollution]] y sinks del lado cliente automáticamente |
+| <mark style="background: #FFB86CA6;">**DOM Invader**</mark> | Integrado en el navegador de Burp: detecta [[04 - Descubrimiento de XSS\|DOM XSS]], [[09 - Prototype Pollution hacia XSS\|prototype pollution client-side]] y sinks del lado cliente automáticamente. La [[01 - Prototype Pollution server-side\|PP server-side]] no la ve DOM Invader: necesita la [[03 - Detección, herramientas y prevención\|SSPP Scanner]] |
 | **Bambdas** | Scripts Java cortos para filtrar/resaltar/transformar tráfico sin extensión completa |
 | **Burp AI** (Pro) | Explica vulnerabilidades, sugiere payloads y automatiza tareas repetitivas |
 | **Organizer** | Guarda peticiones interesantes para retomarlas, con notas |

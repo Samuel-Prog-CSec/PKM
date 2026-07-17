@@ -61,8 +61,8 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                         | Completado        |
 | 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` (notas 00-07)                                  | Completado        |
 | 18  | API Attacks                         | `Hacking web/API Attacks/` (OWASP API Top 10 2023 · notas 00-12)      | Completado        |
-| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` — **subcarpeta por app** (30 notas)  | Completado ✅ (2026-07-16) |
-| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` *(crear)*                                   | Pendiente         |
+| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` — **subcarpeta por app** (~36 notas; **WordPress ampliado a 8 con el módulo 17**)  | Completado ✅ (2026-07-16) |
+| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` (notas 00-04 · 5 notas)                    | Completado ✅ (2026-07-17) |
 
 ### Path CWEE (Senior Web Penetration Tester)
 
@@ -83,6 +83,15 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 13 | Advanced SQL Injections | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
 | 14 | Advanced Deserialization Attacks | `Hacking web/Deserialization/Advanced/` *(crear)* | Pendiente |
 | 15 | Parameter Logic Bugs | `Hacking web/Parameter Logic Bugs/` *(crear)* | Pendiente |
+
+### Módulos extra (fuera de los paths CWES/CWEE)
+
+Extraídos por complementar módulos ya hechos con técnicas/herramientas/escenarios nuevos:
+
+| Módulo HTB | Destino | Estado |
+| - | - | - |
+| 17 · Hacking WordPress | **Fusionado** en `Common Applications/WordPress/` (2→8 notas granulares: estructura/roles, enumeración, login/brute, plugins, RCE admin, detección/evasión, arsenal, hardening) | Completado ✅ (2026-07-17) |
+| 160 · Web Service & API Attacks | `Hacking web/Web Services/` (SOAP/WSDL/SOAPAction/Command Injection/xmlrpc · 7 notas) + `Hacking web/ReDoS/` (net-new · 2 notas). Su grupo "API Attacks" (vulns clásicas vía endpoint API) se **distribuyó como enriquecimientos** a las carpetas canónicas (SQLi, File Upload, File Inclusion, XSS, SSRF, Web Attacks/XXE) | Completado ✅ (2026-07-17) |
 
 Antes de crear una carpeta nueva, **siempre verificar** con `ls` o `Glob` que no existe ya bajo otro nombre — el vault tiene cierta inconsistencia histórica (carpetas con emoji vs sin emoji).
 

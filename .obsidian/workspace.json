@@ -4,20 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "1b57d47f14a5eeed",
+        "id": "181bf55c9c04585d",
         "type": "tabs",
         "children": [
           {
-            "id": "1a5d1d0983909059",
+            "id": "a2afdc99d792998c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "TFG/Dudas Tecnología/Patrones Diseño.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Patrones Diseño"
+            }
+          },
+          {
+            "id": "2b0f6ddd854bb01d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WebSerial y WebSockets"
+            }
+          },
+          {
+            "id": "3c207336cb722801",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TFG/Dudas Tecnología/Redis.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Redis"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -92,7 +125,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240
+    "width": 240,
+    "collapsed": true
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -211,8 +245,12 @@
       "graph:Abrir vista gráfica": false
     }
   },
-  "active": "1a5d1d0983909059",
+  "active": "3c207336cb722801",
   "lastOpenFiles": [
+    "TFG/Dudas Tecnología/WebSerial y WebSockets.md",
+    "TFG/Dudas Tecnología/Patrones Diseño.md",
+    "TFG/Dudas Tecnología/Redis.md",
+    "Windows 11 Pro Optimized Setup.md",
     "CLAUDE.md.tmp.13552.898af1a6155b",
     "🔴⚔️ Red Team/Hacking web/Common Applications/WordPress/01 - Ataques a WordPress.md.tmp.13552.790c491dfe51",
     "🔴⚔️ Red Team/Hacking web/Common Applications/WordPress/01 - Ataques a WordPress.md.tmp.13552.e0d0703465b7",
@@ -223,7 +261,6 @@
     "🔴⚔️ Red Team/Hacking web/Common Applications/Endurecimiento de aplicaciones.md.tmp.13552.5705acd4107f",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Misc/Other Notable Applications.md.tmp.13552.3deea88895a4",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Misc/Attacking Applications Connecting to Services.md.tmp.13552.d7750e915d9e",
-    "🔴⚔️ Red Team/Hacking web/Common Applications/Misc/Web Mass Assignment Vulnerabilities.md.tmp.13552.fa9df7fc6a20",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Endurecimiento de aplicaciones.md",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Misc/Other Notable Applications.md",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Misc/Attacking Applications Connecting to Services.md",
@@ -246,9 +283,6 @@
     "🔴⚔️ Red Team/Hacking web/Common Applications/Splunk/01 - Ataques a Splunk.md",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Jenkins/01 - Ataques a Jenkins.md",
     "🔴⚔️ Red Team/Hacking web/Common Applications/Tomcat/01 - Ataques a Tomcat.md",
-    "🔴⚔️ Red Team/Hacking web/Common Applications/Joomla/01 - Ataques a Joomla.md",
-    "🔴⚔️ Red Team/Hacking web/Common Applications/Drupal/01 - Ataques a Drupal.md",
-    "🔴⚔️ Red Team/Hacking web/Common Applications/Splunk/00 - Descubrimiento y enumeración de Splunk.md",
     "Agent-skills-TFG.png",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",

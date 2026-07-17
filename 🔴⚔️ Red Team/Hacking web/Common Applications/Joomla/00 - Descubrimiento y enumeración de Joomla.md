@@ -4,13 +4,13 @@ tags:
   - Joomla
   - Pentesting/Enumeracion
 Fecha de actualización: 2026-07-16
-Nota previa: "[[01 - Ataques a WordPress]]"
+Nota previa: "[[07 - Hardening de WordPress]]"
 Nota siguiente: "[[01 - Ataques a Joomla]]"
 Area: "[[Common Applications.base|Common Applications]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">Joomla es un CMS open-source en PHP + MySQL</mark> (~3,5% del mercado CMS, ~2,5M de sitios). Como [[00 - Descubrimiento y enumeración de WordPress|WordPress]], se extiende con plantillas y extensiones. Lo usan eBay, Harvard o el gobierno del Reino Unido.
+<mark style="background: #ADCCFFA6;">Joomla es un CMS open-source en PHP + MySQL</mark> (~3,5% del mercado CMS, ~2,5M de sitios). Como [[00 - Estructura y roles de WordPress|WordPress]], se extiende con plantillas y extensiones. Lo usan eBay, Harvard o el gobierno del Reino Unido.
 
 # Fingerprinting
 

@@ -94,3 +94,6 @@ Cerramos con el [[20 - Herramientas para XXE|arsenal de herramientas]] para auto
 - Wallarm — [XXE that can bypass WAF protection](https://lab.wallarm.com/xxe-that-can-bypass-waf-protection-98f679452ce0/)
 - YesWeHack — [The ultimate bug bounty guide to exploiting XXE](https://www.yeswehack.com/learn-bug-bounty/xml-external-entity-guide-xxe)
 - Ambrotd — [XXE-Notes (WAF bypass)](https://github.com/Ambrotd/XXE-Notes)
+
+> [!important]+ XXE en APIs y SOAP modernas
+> Todo cuerpo XML es un vector XXE — incluido **SOAP** (el `<soap:Body>` es XML) y cualquier API que parsee XML. Dos técnicas modernas clave: (1) con el **Content Type Converter de Burp**, reenvía una petición **JSON como `Content-Type: text/xml`**; si el servidor la parsea como XML, tienes XXE donde la app "no usaba XML". (2) Cuando **no controlas el `DOCTYPE`** (tu input solo se inserta en un XML que construye el servidor), usa **XInclude**: `<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>`. Fuente: [PortSwigger — XXE](https://portswigger.net/web-security/xxe). Contexto web-service completo en [[05 - Detección y evasión en Web Services]].
