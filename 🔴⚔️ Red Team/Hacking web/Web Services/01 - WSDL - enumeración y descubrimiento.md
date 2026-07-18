@@ -5,7 +5,7 @@ tags:
   - Pentesting/Enumeracion
 Fecha de actualización: 2026-07-17
 Nota previa: "[[00 - Introducción a Web Services y APIs]]"
-Nota siguiente: "[[02 - SOAPAction Spoofing]]"
+Nota siguiente: "[[02 - SOAP Action Spoofing]]"
 Area: "[[Web Services.base|Web Services]]"
 ---
 ---
@@ -63,9 +63,9 @@ Lo jugoso para el atacante es el `types` + `operation`. En el lab, el WSDL delat
 </wsdl:operation>
 ```
 
-<mark style="background: #FFB86CA6;">Una operación `ExecuteCommand` con un parámetro `cmd`</mark> — el WSDL acaba de regalarnos el nombre de la acción y su parámetro. Aunque esa operación esté restringida, saber que existe habilita el ataque de [[02 - SOAPAction Spoofing]].
+<mark style="background: #FFB86CA6;">Una operación `ExecuteCommand` con un parámetro `cmd`</mark> — el WSDL acaba de regalarnos el nombre de la acción y su parámetro. Aunque esa operación esté restringida, saber que existe habilita el ataque de [[02 - SOAP Action Spoofing]].
 
 > [!important]+ El WSDL es *information disclosure* de manual
 > Exponer el WSDL revela operaciones administrativas o internas que el atacante no debería conocer (`ExecuteCommand`, `admin_*`, `debug_*`…). Aunque estén protegidas, el mapa completo de la API es el primer paso de cualquier ataque. Trátalo como el `swagger.json` de una API REST: si lo encuentras, ya tienes medio trabajo hecho.
 
-Con el contrato en mano y las operaciones identificadas, el siguiente paso es interactuar con ellas — y abusar de cómo el servicio decide qué operación ejecutar: [[02 - SOAPAction Spoofing]].
+Con el contrato en mano y las operaciones identificadas, el siguiente paso es interactuar con ellas — y abusar de cómo el servicio decide qué operación ejecutar: [[02 - SOAP Action Spoofing]].

@@ -1,3 +1,12 @@
+---
+tags:
+  - Redes
+  - Protocolos
+Fecha de actualización: 2026-07-18
+Area: "[[Protocolos de red.base|Protocolos de red]]"
+---
+---
+
 El **protocolo de transferencia de archivos (FTP)** es uno de los protocolos más antiguos de Internet. El FTP se ejecuta dentro de la **capa de aplicación** de la pila de protocolos TCP/IP. 
 
 Imaginemos que queremos subir archivos locales a un servidor y descargar otros archivos utilizando el protocolo FTP. En una **conexión FTP, se abren dos canales**. Primero, el ==cliente y el servidor establecen un canal de control a través del puerto `TCP 21`==. El cliente envía comandos al servidor y el servidor devuelve códigos de estado. Luego, ambos participantes de la comunicación pueden ==establecer el canal de datos a través del puerto `TCP 20`==. Este canal se utiliza exclusivamente para la transmisión de datos y el protocolo vigila los errores durante este proceso. Si se interrumpe una conexión durante la transmisión, el transporte se puede reanudar después de restablecer el contacto.
@@ -17,4 +26,4 @@ Por lo general, **necesitamos credenciales para usar FTP en un servidor**. Sin e
 - 🗃️ **Servidores FTP**:
 	- [[📂🖥️🌐 vsFTPd]]
 	- [[⚠️⚙️ Ajustes peligrosos]]
-- [[🔎👣2️⃣1️⃣ FTP]]
+- [[04 - FTP|Footprinting de FTP (ofensivo)]]

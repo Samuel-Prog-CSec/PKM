@@ -4,10 +4,13 @@ Este repositorio es el **segundo cerebro digital** de Samuel: un *vault* de Obsi
 
 ## Misión actual
 
-Construir y mantener el corpus de notas necesario para las dos certificaciones web de Hack The Box Academy, en este orden:
+Construir y mantener el corpus de notas para las certificaciones de Hack The Box Academy que persigue Samuel. Tres paths en juego:
 
-1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos, 279 secciones, dificultad media.
-2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, 245 secciones, dificultad alta. Cubre white-box, deserialización, ataques HTTP avanzados y *parameter logic bugs*.
+1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos, 279 secciones, dificultad media. *(path web base — prácticamente completo)*
+2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, 245 secciones, dificultad alta. Cubre white-box, deserialización, ataques HTTP avanzados y *parameter logic bugs*. *(en curso — faltan whitebox, deserialización y parameter logic bugs)*
+3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos, ~250 secciones, dificultad media. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting sobre entornos empresariales.
+
+> **Foco actual: parón temporal en las certis web (CWES/CWEE) para trabajar CPTS.** ✅ **Trío de red/enumeración completado (2026-07-18)**: `Network Enumeration with Nmap` (→ Tools), `Footprinting` y `Vulnerability Assessment`. Próximo net-new: File Transfers / Shells & Payloads / Password Attacks / Attacking Common Services / Pivoting / Active Directory / Privesc / Reporting. Detalle en "Path CPTS (Penetration Tester)" del mapeo.
 
 El objetivo paralelo es que el material sirva indefinidamente como referencia profesional, no sólo durante el estudio.
 
@@ -28,7 +31,7 @@ Raíz PARA + carpetas temáticas:
 03 - Archivos/          (imágenes y adjuntos, también Escalidraw)
 04 - PENDIENTES/        (inbox, no aplica para CWES/CWEE)
 Ingenieria/             (fundamentos y conocimientos relacionados con la ingeniería de software, bases de datos, criptografía, etc.)
-🔴⚔️ Red Team/         (todo el contenido ofensivo, incluido Hacking web)
+🔴⚔️ Red Team/         (todo el contenido ofensivo: Hacking web + Pentesting/CPTS)
 🔵🛡️ Blue Team/        (defensivo: SOC analyst, analisis de malware y redes, etc.)
 Redes/                  (fundamentos de redes, utilidades, protocolos, etc. Interesante para Pentesting y Bug Bounty)
 TFG/                    (trabajo fin de grado — no tocar salvo petición)
@@ -51,7 +54,7 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                     | Completado        |
 | 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                    | Completado        |
 | 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `02 - Areas/Ingeniería/Bases de Datos/`) | Completado |
-| 9   | SQLMap Essentials                   | `03 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection) | Completado |
+| 9   | SQLMap Essentials                   | `02 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection) | Completado |
 | 10  | Command Injections                  | `Hacking web/Command Injection/`                                      | Completado        |
 | 11  | File Upload Attacks                 | `Hacking web/File Upload/`                                            | Completado        |
 | 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`) | Completado |
@@ -83,6 +86,60 @@ Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, int
 | 13 | Advanced SQL Injections | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
 | 14 | Advanced Deserialization Attacks | `Hacking web/Deserialization/Advanced/` *(crear)* | Pendiente |
 | 15 | Parameter Logic Bugs | `Hacking web/Parameter Logic Bugs/` *(crear)* | Pendiente |
+
+### Path CPTS (Penetration Tester)
+
+Path "Penetration Tester" de HTB Academy — **28 módulos**, ~250 secciones, del reconocimiento al reporting sobre infraestructura empresarial. Certificación **generalista** (red, infra, AD, privesc, web, reporting), no solo web.
+
+Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta por el trabajo CWES/CWEE y **se reutiliza tal cual**. CPTS aporta net-new sobre todo **red, infraestructura, Active Directory, escalada de privilegios y reporting**.
+
+**Ubicación del contenido net-new**:
+- Conocimiento de pentest → `🔴⚔️ Red Team/Pentesting/`, en **carpetas numeradas por fase / orden lógico del pentest** (`000 - Fases del Pentesting`, `001 - Footprinting`, `002 - Evaluación de vulnerabilidades`, …). Los números de módulos aún no extraídos son **tentativos** — se confirman al llegar.
+- **Herramientas** (Nmap, Metasploit, …) → `02 - Recursos/🛠️ Tools/` como cualquier herramienta, **NO** bajo Pentesting. Su MOC es un `.base` Level 2 propio en la carpeta de la herramienta (patrón `SQLMap.base`).
+- Footprinting es **autocontenido** (1 nota ofensiva por servicio en `001 - Footprinting/`) y **cross-linkea** a la nota de **fundamentos del protocolo** (Redes = "cómo funciona"; Footprinting = "cómo enumerar/atacar"). **Cada protocolo de red tiene su nota de fundamentos en `Redes/Protocolos/`** (indexadas por `Protocolos de red.base`; creadas/rellenadas al hacer Footprinting: FTP, SMB, NFS, DNS, SMTP, IMAP-POP3, SNMP, IPMI, SSH, Rsync, R-services, RDP, WinRM, WMI). Los **motores de BBDD** (MySQL, MSSQL, Oracle) van a `Ingeniería/Bases de Datos/` (no a Redes), indexados por `Bases de Datos.base`.
+
+| #  | Módulo HTB | Carpeta destino | Estado |
+| -- | ---------- | --------------- | ------ |
+| 1  | Penetration Testing Process | `Pentesting/000 - Fases del Pentesting/` (enriquece las notas de fases existentes) | Legacy parcial |
+| 2  | Getting Started | *(se salta / cherry-pick — primer generalista, contenido cubierto en otros módulos)* | — |
+| 3  | Network Enumeration with Nmap | `02 - Recursos/🛠️ Tools/Nmap/` (herramienta → Tools; 10 notas 00-09 + `Nmap.base`) | ✅ Completado (2026-07-18) |
+| 4  | Footprinting | `Pentesting/001 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingeniería/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
+| 5  | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` | ✅ Contenido web |
+| 6  | Vulnerability Assessment | `Pentesting/002 - Evaluación de vulnerabilidades/` (7 notas 00-06 + `.base`; **Nessus** [4 notas] y **OpenVAS** [2 notas] → `02 - Recursos/🛠️ Tools/`, como Nmap) | ✅ Completado (2026-07-18) |
+| 7  | File Transfers | `Pentesting/003 - Transferencia de archivos/` *(tentativo)* | Pendiente |
+| 8  | Shells & Payloads | `Pentesting/004 - Shells y Payloads/` *(tentativo; ver `Pentesting/Payloads/`)* | Pendiente |
+| 9  | Using the Metasploit Framework | `02 - Recursos/🛠️ Tools/Metasploit/` (herramienta → Tools; ya hay notas) | Pendiente (parcial) |
+| 10 | Password Attacks | `Pentesting/005 - Ataques a contraseñas/` *(tentativo; ver `Pentesting/Break Password/`)* | Pendiente |
+| 11 | Attacking Common Services | `Pentesting/006 - Ataque a servicios comunes/` *(tentativo)* | Pendiente |
+| 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/007 - Pivoting y túneles/` *(tentativo)* | Pendiente |
+| 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/` *(36 secc · posible área propia · a confirmar)* | Pendiente |
+| 14 | Using Web Proxies | `Hacking web/Proxies web/` | ✅ Contenido web |
+| 15 | Attacking Web Applications with Ffuf | `Hacking web/Reconocimiento Web/` (Fuzzing) | ✅ Contenido web |
+| 16 | Login Brute Forcing | `Hacking web/Brute Forcing/` | ✅ Contenido web |
+| 17 | SQL Injection Fundamentals | `Hacking web/💉🩸 SQL Injection/` | ✅ Contenido web |
+| 18 | SQLMap Essentials | `02 - Recursos/🛠️ Tools/SQLMap/` | ✅ Contenido web |
+| 19 | Cross-Site Scripting (XSS) | `Hacking web/XSS/` | ✅ Contenido web |
+| 20 | File Inclusion | `Hacking web/File Inclusion/` | ✅ Contenido web |
+| 21 | File Upload Attacks | `Hacking web/File Upload/` | ✅ Contenido web |
+| 22 | Command Injections | `Hacking web/Command Injection/` | ✅ Contenido web |
+| 23 | Web Attacks | `Hacking web/Web Attacks/` | ✅ Contenido web |
+| 24 | Attacking Common Applications | `Hacking web/Common Applications/` | ✅ Contenido web |
+| 25 | Linux Privilege Escalation | `Pentesting/008 - Escalada de privilegios Linux/` *(tentativo)* | Pendiente |
+| 26 | Windows Privilege Escalation | `Pentesting/009 - Escalada de privilegios Windows/` *(tentativo)* | Pendiente |
+| 27 | Documentation & Reporting | `Pentesting/010 - Documentación y reporting/` *(tentativo)* | Pendiente |
+| 28 | Attacking Enterprise Networks | `Pentesting/011 - Ataque a redes empresariales/` *(capstone · tentativo)* | Pendiente |
+
+#### CPTS — estándares de calidad extra (todo módulo CPTS net-new)
+
+Estos módulos de red/infra **llevan años sin actualizarse** (algunos 6+ años). Tratar el contenido HTB como **borrador de partida**, no como verdad actual:
+
+1. **Revisar como pentester experto (2026).** Contrastar cada técnica/herramienta/flag con el estado del arte. Si HTB propone algo obsoleto o hay una vía mejor / más sigilosa / más fiable hoy, **actualizar y ampliar** (no traducir a ciegas). Señalar explícitamente cuando una técnica está desfasada.
+2. **Detección y evasión (más a fondo que HTB).** En real hay EDR/IDS/IPS, firewalls modernos, rate-limiting y logging que el lab ignora. Cada tema cubre **cómo se detecta** (telemetría/logs que deja el atacante) y **cómo se evade** hoy (timing, fragmentación, decoys, living-off-the-land, blending con tráfico legítimo). Material abundante → **nota dedicada `Detección y evasión`**; si es poco → sección embebida.
+3. **Arsenal de herramientas (net-new obligatorio).** Cada módulo cierra con **nota dedicada `Arsenal de herramientas`**: el set profesional actual para automatizar/asistir **detección, evasión, explotación y registro** del tema, con el *cómo* (comando de ejemplo, cuándo usar cada una, alternativa a la de HTB). Orientado a jornadas reales de pentest / bug bounty.
+4. **Fuentes actuales y citadas.** Enriquecer con fuentes vigentes de referencia (nmap.org, PortSwigger, HackTricks, SANS, RFCs, advisories, blogs de investigación recientes). **Citarlas en la nota** e indicar en el texto qué parte viene de qué fuente cuando haya varias.
+5. **Elementos gráficos.** Priorizar diagramas/tablas que expliquen mejor que un párrafo denso (máquinas de estado, flujos de protocolo, matrices de flags). Incrustar imagen HTB solo si aporta de verdad y **verificar siempre que renderiza**. Se admiten diagramas propios (Mermaid, `.canvas`) o de fuentes citadas.
+
+El patrón de los **3 ejes — detección · evasión · herramientas** + fuentes + gráficos es el estándar CPTS (y del vault en general).
 
 ### Módulos extra (fuera de los paths CWES/CWEE)
 
@@ -197,6 +254,12 @@ Usar para comparativas (herramientas, tipos de vulnerabilidad, payloads por cont
 ## Flujo de extracción HTB → nota (usando la agent skill agent-browser, para saber cómo utilizar el navegador)
 
 El usuario inicia sesión en HTB Academy desde su navegador. La extracción de un módulo se ejecuta en **3 fases iterativas** (más una Fase 0 de planificación). **No avanzar** a la siguiente fase sin terminar la actual.
+
+> [!important]+ Atajo de extracción vía API (mucho más rápido que snapshots del navegador)
+> Con Chrome logueado en HTB Academy, en vez de leer el DOM sección a sección se puede pedir el contenido directamente a la API interna con un `fetch` desde la pestaña (JS en el navegador, usa las cookies de sesión). Descubierto y validado el 2026-07-18 con el trío de red:
+> - **Lista de secciones**: `GET /api/v3/modules/<módulo>/sections` → JSON `{data:[{group, sections:[{id, title, page, type}]}]}`. Da los **IDs reales** (no son contiguos ni siguen el orden de visualización — no los adivines).
+> - **Contenido de una sección**: `GET /api/v2/modules/<módulo>/sections/<id>?language=en` → campo `.data.content` con el **markdown completo** (encabezados, bloques de código, tablas y URLs de imágenes intactos).
+> - *Gotcha*: el filtro de seguridad de la herramienta puede **bloquear** trozos con material tipo credencial/clave. Si pasa, saca solo los encabezados (`content.split('\n').filter(l=>/^#/.test(l))`) para el esquema y redacta desde el conocimiento experto + el outline.
 
 ### Fase 0 — Planificación (una vez por módulo)
 
@@ -476,6 +539,6 @@ $ obsidian command id="<command-id>"
 - Antes de crear un tag nuevo, hacer `grep` en el vault por el tag deseado o variantes.
 - Antes de enlazar a una nota, comprobar que el nombre exacto coincide (los wikilinks rotos en Obsidian son silenciosos).
 - Cuando extraiga un módulo HTB completo, **resumir al usuario el plan de fragmentación antes de escribir**, salvo en módulos cortos (<8 secciones).
-- No tocar `TFG/` salvo petición explícita. Tampoco `🔵🛡️ Blue Team/` ni `Redes/` salvo que la tarea lo requiera.
+- No tocar `TFG/` salvo petición explícita. Tampoco `🔵🛡️ Blue Team/` salvo que la tarea lo requiera. **`Redes/`**: se puede **leer y enlazar** libremente (Footprinting de CPTS cross-linkea a `Redes/Protocolos/`); modificar sus notas solo si la tarea lo pide.
 - Si encuentro inconsistencia en el vault (notas con frontmatter incompleto, enlaces rotos, MOCs desactualizadas), **flaggear al usuario** — no "limpiar" silenciosamente.
-- El campo `Fecha de actualización` se rellena con la fecha real del día (hoy es `2026-05-11`); convertir fechas relativas siempre a absolutas.
+- El campo `Fecha de actualización` se rellena con la fecha real del día (obtener del sistema; p. ej. hoy `2026-07-18`); convertir fechas relativas siempre a absolutas.

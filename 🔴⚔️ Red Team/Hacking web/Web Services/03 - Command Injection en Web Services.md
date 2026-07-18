@@ -4,7 +4,7 @@ tags:
   - Web-Services
   - Pentesting/Explotacion
 Fecha de actualización: 2026-07-17
-Nota previa: "[[02 - SOAPAction Spoofing]]"
+Nota previa: "[[02 - SOAP Action Spoofing]]"
 Nota siguiente: "[[04 - Ataques a xmlrpc.php]]"
 Area: "[[Web Services.base|Web Services]]"
 ---

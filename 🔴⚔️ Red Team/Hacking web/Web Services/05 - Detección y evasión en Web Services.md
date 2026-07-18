@@ -29,7 +29,7 @@ Dónde buscar SOAP/WSDL en un objetivo:
 Lo que hace a SOAP jugoso es que su superficie es **XML-céntrica** y distinta de REST:
 
 - <mark style="background: #ADCCFFA6;">**XXE**: el cuerpo SOAP es XML → cualquier parámetro es punto de inyección de entidades externas</mark> ([[14 - Introducción a XXE|XXE en Web Attacks]]). El vector #1.
-- **SOAPAction Spoofing**: bypass de autorización cuando el perímetro enruta por la cabecera y el backend ejecuta la operación del `Body` ([[02 - SOAPAction Spoofing]]).
+- **SOAPAction Spoofing**: bypass de autorización cuando el perímetro enruta por la cabecera y el backend ejecuta la operación del `Body` ([[02 - SOAP Action Spoofing]]).
 - **XML Signature Wrapping (XSW)**: en WS-Security, la firma referencia *qué* se firma pero no *dónde* está en el árbol; se reubica el elemento firmado y se inyecta uno malicioso con el ID que la app procesa, manteniendo la firma válida → bypass de autenticación ([IBM: XSW](https://www.ibm.com/think/topics/xml-signature-wrapping)). Sigue vivo: [CoreWCF GHSA-gqv6-pwcg-87r8](https://github.com/CoreWCF/CoreWCF/security/advisories/GHSA-gqv6-pwcg-87r8).
 - **UsernameToken sin nonce/timestamp** → **replay attacks**.
 

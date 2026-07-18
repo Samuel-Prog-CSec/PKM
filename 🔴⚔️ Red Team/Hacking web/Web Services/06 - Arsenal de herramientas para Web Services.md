@@ -39,4 +39,4 @@ Herramientas actuales para atacar web services SOAP/WSDL. Como el testing de SOA
 - **`python-zeep`** — cliente SOAP en Python; parsea el WSDL y expone las operaciones como métodos, ideal para automatizar PoCs y fuzzing programático.
 
 > [!info]+ Reparto por propósito
-> **Descubrir** el servicio → WSDL Wizard, `ffuf`, dorks. **Parsear el contrato** → Wsdler, `python-zeep`, SoapUI. **Explotar** → Burp Repeater/Intruder + Content Type Converter (XXE), scripts Python ([[02 - SOAPAction Spoofing]]). **Escanear** → ReadyAPI. Ningún escáner genérico sustituye el trabajo manual sobre el WSDL.
+> **Descubrir** el servicio → WSDL Wizard, `ffuf`, dorks. **Parsear el contrato** → Wsdler, `python-zeep`, SoapUI. **Explotar** → Burp Repeater/Intruder + Content Type Converter (XXE), scripts Python ([[02 - SOAP Action Spoofing]]). **Escanear** → ReadyAPI. Ningún escáner genérico sustituye el trabajo manual sobre el WSDL.
