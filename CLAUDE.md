@@ -10,7 +10,7 @@ Construir y mantener el corpus de notas para las certificaciones de Hack The Box
 2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, 245 secciones, dificultad alta. Cubre white-box, deserialización, ataques HTTP avanzados y *parameter logic bugs*. *(en curso — faltan whitebox, deserialización y parameter logic bugs)*
 3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos, ~250 secciones, dificultad media. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting sobre entornos empresariales.
 
-> **Foco actual: parón temporal en las certis web (CWES/CWEE) para trabajar CPTS.** ✅ **Trío de red/enumeración completado (2026-07-18)**: `Network Enumeration with Nmap` (→ Tools), `Footprinting` y `Vulnerability Assessment`. Próximo net-new: File Transfers / Shells & Payloads / Password Attacks / Attacking Common Services / Pivoting / Active Directory / Privesc / Reporting. Detalle en "Path CPTS (Penetration Tester)" del mapeo.
+> **Foco actual: parón temporal en las certis web (CWES/CWEE) para trabajar CPTS.** ✅ **Trío de red/enumeración (2026-07-18)**: `Network Enumeration with Nmap` (→ Tools), `Footprinting`, `Vulnerability Assessment`. ✅ **Trío explotación/credenciales (2026-07-18)**: `Shells & Payloads` (→ `004`), `Using the Metasploit Framework` (→ Tools, **rehecho desde 0**), `Password Attacks` (→ `005`; **John the Ripper** y **Hashcat** → Tools). Próximo net-new: File Transfers / Attacking Common Services / Pivoting / Active Directory / Privesc / Reporting. Detalle en "Path CPTS (Penetration Tester)" del mapeo.
 
 El objetivo paralelo es que el material sirva indefinidamente como referencia profesional, no sólo durante el estudio.
 
@@ -95,7 +95,7 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 
 **Ubicación del contenido net-new**:
 - Conocimiento de pentest → `🔴⚔️ Red Team/Pentesting/`, en **carpetas numeradas por fase / orden lógico del pentest** (`000 - Fases del Pentesting`, `001 - Footprinting`, `002 - Evaluación de vulnerabilidades`, …). Los números de módulos aún no extraídos son **tentativos** — se confirman al llegar.
-- **Herramientas** (Nmap, Metasploit, …) → `02 - Recursos/🛠️ Tools/` como cualquier herramienta, **NO** bajo Pentesting. Su MOC es un `.base` Level 2 propio en la carpeta de la herramienta (patrón `SQLMap.base`).
+- **Herramientas** (Nmap, Metasploit, John the Ripper, Hashcat, …) → `02 - Recursos/🛠️ Tools/` como cualquier herramienta, **NO** bajo Pentesting. Su MOC es un `.base` Level 2 propio en la carpeta de la herramienta (patrón `SQLMap.base`).
 - Footprinting es **autocontenido** (1 nota ofensiva por servicio en `001 - Footprinting/`) y **cross-linkea** a la nota de **fundamentos del protocolo** (Redes = "cómo funciona"; Footprinting = "cómo enumerar/atacar"). **Cada protocolo de red tiene su nota de fundamentos en `Redes/Protocolos/`** (indexadas por `Protocolos de red.base`; creadas/rellenadas al hacer Footprinting: FTP, SMB, NFS, DNS, SMTP, IMAP-POP3, SNMP, IPMI, SSH, Rsync, R-services, RDP, WinRM, WMI). Los **motores de BBDD** (MySQL, MSSQL, Oracle) van a `Ingeniería/Bases de Datos/` (no a Redes), indexados por `Bases de Datos.base`.
 
 | #  | Módulo HTB | Carpeta destino | Estado |
@@ -107,12 +107,12 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 5  | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` | ✅ Contenido web |
 | 6  | Vulnerability Assessment | `Pentesting/002 - Evaluación de vulnerabilidades/` (7 notas 00-06 + `.base`; **Nessus** [4 notas] y **OpenVAS** [2 notas] → `02 - Recursos/🛠️ Tools/`, como Nmap) | ✅ Completado (2026-07-18) |
 | 7  | File Transfers | `Pentesting/003 - Transferencia de archivos/` *(tentativo)* | Pendiente |
-| 8  | Shells & Payloads | `Pentesting/004 - Shells y Payloads/` *(tentativo; ver `Pentesting/Payloads/`)* | Pendiente |
-| 9  | Using the Metasploit Framework | `02 - Recursos/🛠️ Tools/Metasploit/` (herramienta → Tools; ya hay notas) | Pendiente (parcial) |
-| 10 | Password Attacks | `Pentesting/005 - Ataques a contraseñas/` *(tentativo; ver `Pentesting/Break Password/`)* | Pendiente |
+| 8  | Shells & Payloads | `Pentesting/004 - Shells y Payloads/` (13 notas 00-12 + `.base`; incl. detección/evasión + arsenal) | ✅ Completado (2026-07-18) |
+| 9  | Using the Metasploit Framework | `02 - Recursos/🛠️ Tools/Metasploit/` (**rehecho desde 0**: 14 notas 00-13 + `Metasploit.base`, patrón Nmap) | ✅ Completado (2026-07-18) |
+| 10 | Password Attacks | `Pentesting/005 - Ataques a contraseñas/` (19 notas 00-18 + `.base`; **John the Ripper** y **Hashcat** → `Tools/` con `.base` propio) | ✅ Completado (2026-07-18) |
 | 11 | Attacking Common Services | `Pentesting/006 - Ataque a servicios comunes/` *(tentativo)* | Pendiente |
 | 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/007 - Pivoting y túneles/` *(tentativo)* | Pendiente |
-| 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/` *(36 secc · posible área propia · a confirmar)* | Pendiente |
+| 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/` *(36 secc · posible área propia · a confirmar; ⚠️ PtH/PtT/NTDS.dit ya en `005` con tag `Active-Directory` → cross-linkear/reubicar al llegar)* | Pendiente |
 | 14 | Using Web Proxies | `Hacking web/Proxies web/` | ✅ Contenido web |
 | 15 | Attacking Web Applications with Ffuf | `Hacking web/Reconocimiento Web/` (Fuzzing) | ✅ Contenido web |
 | 16 | Login Brute Forcing | `Hacking web/Brute Forcing/` | ✅ Contenido web |

@@ -20,7 +20,7 @@ Con el escaneo terminado, se exporta como **`.pdf`**, **`.html`** o **`.csv`**. 
 <mark style="background: #FFB86CA6;">Además del informe, se pueden exportar los resultados crudos en formato `.nessus` (XML)</mark> para archivarlos o **pasarlos a otras herramientas**. El caso clásico:
 
 - **`EyeWitness`** — toma capturas de todas las aplicaciones web que Nessus identificó, acelerando enormemente el triaje visual.
-- Import en **[[Ⓜ️🧨 Metasploit|Metasploit]]** (`db_import`) para cruzar hallazgos con módulos de explotación.
+- Import en **[[Metasploit.base|Metasploit]]** (`db_import`) para cruzar hallazgos con módulos de explotación.
 - Archivado para comparativas entre escaneos sucesivos (ver qué se corrigió).
 
 # Interpretar (el paso que no es automático)

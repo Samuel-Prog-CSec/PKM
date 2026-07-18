@@ -10,7 +10,7 @@ Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">`Hydra` (THC-Hydra) es un cracker de logins de red en paralelo</mark>: lanza muchos intentos simultáneos contra un servicio vivo y soporta decenas de protocolos. En un PKM de web, sus dos módulos clave son `http-get` (Basic Auth) y `http-post-form` (formularios de login). El resto —SSH, RDP, FTP, BBDD— lo convierte en la navaja para pivoting una vez dentro de la red.
+<mark style="background: #ADCCFFA6;">`Hydra` (THC-Hydra) es un cracker de logins de red en paralelo</mark>: lanza muchos intentos simultáneos contra un servicio vivo y soporta decenas de protocolos. En un PKM de web, sus dos módulos clave son `http-get` (Basic Auth) y `http-post-form` (formularios de login). El resto —SSH, RDP, FTP, BBDD— lo convierte en la navaja para los [[03 - Ataques remotos a servicios de red|ataques a servicios de la red interna]] una vez dentro.
 
 # Anatomía del comando
 

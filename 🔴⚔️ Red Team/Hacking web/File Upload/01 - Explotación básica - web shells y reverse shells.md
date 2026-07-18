@@ -52,6 +52,9 @@ En un engagement real, los web shells clásicos tienen un problema: <mark style=
 - **[p0wny-shell](https://github.com/flozz/p0wny-shell)**: web shell PHP de un solo fichero, ligera y con prompt cómodo.
 - **[antak](https://github.com/samratashok/nishang)** (Nishang): web shell ASPX con aspecto de PowerShell, para stacks Windows/.NET.
 
+> [!info]+ Sub-tema dedicado
+> El despliegue de web shells (Laudanum, Antak, PHP), su [[08 - Shells interactivas - upgrade a TTY|estabilización]] a shell interactiva y su [[11 - Detección, prevención y evasión|detección/evasión]] se cubren a fondo en el sub-tema [[Shells y Payloads.base|Shells y Payloads]] del path CPTS. Aquí las vemos en el contexto concreto de una subida de archivos.
+
 # Reverse shells
 
 Una reverse shell fuerza al servidor a conectarse de vuelta a nuestro listener, dando una sesión más interactiva. Flujo:

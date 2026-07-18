@@ -85,7 +85,7 @@ En una command injection **directa** vemos la salida del comando en la respuesta
 
 # Por qué importa para el pentest
 
-El impacto de una command injection es máximo por definición: ejecución arbitraria con los privilegios del proceso web (a menudo `www-data`, pero no es raro encontrar `root` en *appliances* y dispositivos IoT). Desde ahí, el camino habitual es <mark style="background: #FFB86CA6;">enumerar el sistema, establecer una reverse shell, escalar privilegios y pivotar a la red interna</mark>. En bug bounty, una RCE confirmada es de las recompensas más altas del programa.
+El impacto de una command injection es máximo por definición: ejecución arbitraria con los privilegios del proceso web (a menudo `www-data`, pero no es raro encontrar `root` en *appliances* y dispositivos IoT). Desde ahí, el camino habitual es <mark style="background: #FFB86CA6;">enumerar el sistema, establecer una [[03 - Reverse shells|reverse shell]], escalar privilegios y pivotar a la red interna</mark>. En bug bounty, una RCE confirmada es de las recompensas más altas del programa.
 
 El reto profesional actual no es explotar la inyección en un lab limpio —eso es trivial—, sino **encontrarla** entre las defensas modernas (WAF, *allow-lists*, ejecución sin shell) y **evadir** los filtros cuando existe pero está parcialmente protegida. Ese es el recorrido de este sub-tema: primero la [[01 - Detección de Command Injection|detección]] rigurosa, después los [[02 - Operadores de inyección de comandos|operadores]] de explotación, y por último el bloque de [[03 - Identificación de filtros y defensas|evasión de filtros]] que ocupa la mayor parte del módulo.
 

@@ -87,7 +87,7 @@ $ naabu -host target -silent | httpx -silent -tech-detect | nuclei -severity cri
 
 # Registro e integración
 
-- **`db_import target.xml`** en [[Ⓜ️🧨 Metasploit|Metasploit]] puebla `hosts`/`services` para todo el engagement.
+- **`db_import target.xml`** en [[Metasploit.base|Metasploit]] puebla `hosts`/`services` para todo el engagement.
 - El XML de Nmap alimenta Faraday, DefectDojo o dashboards propios para el [[Documentación y reporting|informe]].
 
 > [!important]+ Workflow de referencia

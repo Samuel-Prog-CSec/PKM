@@ -68,7 +68,7 @@ $ sudo nmap 10.129.2.28 -p$ports -sCV -oA target_deep
 
 # Enfoque profesional 2026
 
-- **Importar a otras herramientas**: el XML se carga en `Metasploit` con `db_import target.xml` (puebla la base de `hosts`/`services` para el resto del engagement — ver [[Ⓜ️🧨 Metasploit|Metasploit]]), y lo consumen Faraday, DefectDojo o dashboards propios.
+- **Importar a otras herramientas**: el XML se carga en `Metasploit` con `db_import target.xml` (puebla la base de `hosts`/`services` para el resto del engagement — ver [[Metasploit.base|Metasploit]]), y lo consumen Faraday, DefectDojo o dashboards propios.
 - **Parsers dedicados**: `nmap-parse-output` (XML → CSV/lista de puertos/HTML moderno), `nmaptocsv`, o un `xmlstarlet` rápido baten al `grep` sobre `.gnmap` cuando hay muchos hosts. Ver [[09 - Arsenal de herramientas de escaneo]].
 - **Reanudar**: `--resume target.gnmap` continúa un escaneo interrumpido; `--append-output` no pisa ficheros previos.
 - **Higiene de evidencia**: nombra los ficheros por objetivo/fase (`enum_dmz_tcp`, `enum_dmz_udp`) y consérvalos — son la trazabilidad del test y la base del [[Documentación y reporting|informe]].
