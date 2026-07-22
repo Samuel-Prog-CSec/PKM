@@ -126,9 +126,18 @@ $ ffuf -u http://target/FUZZ -w wordlist.txt
   ```
 - Propias / del lab personal: ruta relativa.
   ```markdown
-  ![Captura del payload ejecutándose](04 - Archivos/Images/<contexto>/captura.png)
+  ![Captura del payload ejecutándose](03 - Archivos/Images/<contexto>/captura.png)
   ```
 - **Criterio**: incluir solo si aporta valor (diagramas, screenshots de UI relevante, matrices). Una captura de terminal trivial → bloque de código, no imagen.
+- **Verificar que renderiza**: tras incrustar, comprobar que la imagen/diagrama se ve (URL viva, ruta correcta). Una imagen rota resta más de lo que una buena aporta.
+- **Diagramas**: se admiten propios (Mermaid, `.canvas`) o de fuentes citadas. Un buen gráfico (máquina de estados, flujo de protocolo, matriz) explica mejor que un párrafo denso — "todo entra mejor por los ojos".
+
+## Fuentes y atribución
+
+Al enriquecer con contenido de fuera de HTB, **citar la fuente** para poder reconsultarla más tarde:
+
+- Usar fuentes **actuales y de referencia** de la comunidad (PortSwigger, HackTricks, nmap.org, SANS, RFCs, advisories, blogs de investigación recientes). Evitar fuentes desactualizadas.
+- **Atribución por-fuente**: si una nota mezcla varias fuentes, indicar en el texto **qué parte viene de cuál** (enlace inline, o callout `> [!info]+ Fuente: <url>`), no una lista genérica al final.
 
 ## Tablas
 
@@ -167,7 +176,8 @@ Esta carpeta es un experimento del usuario con formato más limpio. No mezclar e
 - [ ] 1000–1500 palabras de teoría (excluyendo callouts/código/enlaces/sintaxis).
 - [ ] 4–8 marks con colores correctamente asignados.
 - [ ] Bloques de código con lenguaje.
-- [ ] Imágenes solo si aportan valor.
+- [ ] Imágenes solo si aportan valor y **renderizan** correctamente.
+- [ ] Fuentes externas citadas y atribuidas por-fuente.
 - [ ] Enlaces `[[ ]]` apuntan a notas reales (o son fantasmas intencionales).
 - [ ] Tags reutilizados, no inventados sin razón.
 - [ ] Nota encadenada con `prev`/`next` correctamente (ver `zettelkasten-linking` skill).

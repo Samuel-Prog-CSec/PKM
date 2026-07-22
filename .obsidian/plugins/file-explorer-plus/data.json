@@ -241,6 +241,20 @@
         "type": "FILES",
         "pattern": "Ingenieria/♾️ Full-Stack/Fundamentos/Fundamentos.base",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Recursos/Biblioteca/Librería.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "🔴⚔️ Red Team/Active Directory/Active Directory.base",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

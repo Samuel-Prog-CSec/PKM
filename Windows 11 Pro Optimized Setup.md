@@ -90,6 +90,10 @@ Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de disp
 ## 1.5 Windows 11 Privacidad
 [Herramienta para eliminar app de IA y telemetría](https://hixec.com/winzard/)
 
+## 1.6 Liberar 5GB de RAM de Windows 11 (SOLO SI SE TIENE UN BUEN SSD)
+`Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain` -> Valor `Start` -> **Valor = 4** | **Base = Hexadecimal**
+`Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters` -> Valor `EnablePrefetcher` -> **Valor = 0** | **Base = Hexadecimal**
+
 ---
 
 # 2. Terminal

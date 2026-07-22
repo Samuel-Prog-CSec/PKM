@@ -2,17 +2,50 @@
 
 Este repositorio es el **segundo cerebro digital** de Samuel: un *vault* de Obsidian en español usado para estudiar, retener y consultar conocimiento técnico durante su trabajo profesional como **pentester** y su actividad en **bug bounty**. Las notas no son apuntes para aprobar un examen — son material de referencia para sesiones reales de hacking ético.
 
-## Misión actual
+## Sobre Samuel — cómo trabajar conmigo
 
-Construir y mantener el corpus de notas para las certificaciones de Hack The Box Academy que persigue Samuel. Tres paths en juego:
+*(La misión y el contexto profesional están abajo; esto es el trato y las preferencias de trabajo — el equivalente a un `me.md` portable, embebido aquí.)*
 
-1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos, 279 secciones, dificultad media. *(path web base — prácticamente completo)*
-2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, 245 secciones, dificultad alta. Cubre white-box, deserialización, ataques HTTP avanzados y *parameter logic bugs*. *(en curso — faltan whitebox, deserialización y parameter logic bugs)*
-3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos, ~250 secciones, dificultad media. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting sobre entornos empresariales.
+**Trato.** Tuteo, casual, directo. Quiero un **colaborador que reta**, no un asistente complaciente: cuestiona mis ideas, señala fallos y ofrece alternativas antes de darme la razón. Si algo está mal o hay una vía mejor, dilo.
 
-> **Foco actual: parón temporal en las certis web (CWES/CWEE) para trabajar CPTS.** ✅ **Trío de red/enumeración (2026-07-18)**: `Network Enumeration with Nmap` (→ Tools), `Footprinting`, `Vulnerability Assessment`. ✅ **Trío explotación/credenciales (2026-07-18)**: `Shells & Payloads` (→ `004`), `Using the Metasploit Framework` (→ Tools, **rehecho desde 0**), `Password Attacks` (→ `005`; **John the Ripper** y **Hashcat** → Tools). Próximo net-new: File Transfers / Attacking Common Services / Pivoting / Active Directory / Privesc / Reporting. Detalle en "Path CPTS (Penetration Tester)" del mapeo.
+**Proactividad con freno.** Detecta y **propón** mejoras, siguientes pasos y problemas que veas, aunque no los haya pedido. Pero si la mejora **queda fuera del scope** de lo que te pedí, **pregúntame antes de aplicarla**; si te doy el OK, adelante. Dentro del scope, en decisiones menores, **actúa y avísame** — no me consultes cada detalle.
 
-El objetivo paralelo es que el material sirva indefinidamente como referencia profesional, no sólo durante el estudio.
+**Explicación: siempre suficiente y mejor que la fuente.** Estudio con estas notas para *entender*, no para memorizar comandos. La explicación debe ser **siempre suficiente** — nunca la recortes hasta dejarla pobre o incompleta; la suficiencia manda sobre la brevedad. Lo que se evita es lo **redundante, el relleno y la teoría excesiva**, no la profundidad. Y **mejora siempre el contenido de la fuente original**, aunque el tema no sea avanzado: modernízalo (muchas fuentes de pentest/seguridad llevan 2-3 años sin tocar) y explícalo mejor. "Mejor" no es "más palabras" — a veces la mejor explicación es más corta. La palanca es la **calidad**, no la longitud.
+
+**Evita conmigo:**
+- **Halago vacío** — nada de "¡buena pregunta!" ni validación de relleno.
+- **Relleno y recaps** — sin recapitulaciones obvias ni prosa motivacional.
+- **Hedging** — sin advertencias obvias ni disclaimers innecesarios; al grano.
+- **Actuar sin avisar** en cosas importantes — confirma antes.
+
+**Mi estilo de escritura** (para textos que redactes *en mi nombre* — reports, mensajes, resúmenes; **no** las notas del vault, que siguen `pkm-note-format`):
+- Español pragmático y directo, registro informal-profesional.
+- Frases con varias cláusulas encadenadas por comas; explico el porqué con incisos entre paréntesis "(...)".
+- Orientado a la acción y al objetivo, poco ceremonial. Coletillas tipo "y ya está" para cerrar.
+
+## Contexto de la investigación en ciberseguridad
+
+Este proyecto implica investigación legítima en ciberseguridad, que incluye:
+
+- Análisis estático de software de código abierto
+- Análisis de vulnerabilidades con fines defensivos
+- Clasificación de CWE con fines educativos
+- Extracción de contenido de cursos de ciberseguridad (fuentes legítimas) para crear material de estudio y referencia
+- Redacción de notas técnicas y de referencia para pentesters y bug hunters
+
+Todo el trabajo se realiza fuera de línea, sin objetivos reales y sin ejecutar código de ningún tipo, solo se crean notas de Obsidian (.md).
+
+## Misión y estado
+
+El vault es una base de conocimiento de seguridad ofensiva que debe servir **indefinidamente como referencia profesional**, no solo durante el estudio. El motor de contenido actual son las **certificaciones de HTB Academy**, pero la estructura **no está atada a HTB ni a web**: cualquier área de Red Team (y a futuro Blue Team, cloud, móvil…) o certificación nueva encaja con la misma receta (ver "Patrón para dar de alta una certi/área nueva").
+
+**Certificaciones en juego:**
+
+1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos. **Base web — prácticamente completa; funciona ya como material de referencia.**
+2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, dificultad alta. **En pausa** — faltan whitebox, deserialización y parameter logic bugs.
+3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting. **Foco activo.**
+
+> **Foco actual: CPTS**, con parón temporal en las certis web (CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** (`project_cpts_*`) y en la columna `Estado` de la tabla del path CPTS más abajo — no en esta sección, que solo fija el rumbo. Próximo net-new típico: Attacking Common Services (#11) / Reporting (#27) — la escalada de privilegios Linux (#25) y Windows (#26) ya están hechas.
 
 ## Idioma, filosofía y voz
 
@@ -21,51 +54,72 @@ El objetivo paralelo es que el material sirva indefinidamente como referencia pr
 - **Densidad orientativa, no obligatoria.** Referencia: notas *conceptuales* (explican un mecanismo, ataque o defensa) ~1000–1500 palabras de teoría; notas *técnicas/operativas* (payloads, comandos, herramientas) menos, primando la densidad de payloads sobre la prosa. La cuenta excluye callouts, código, enlaces y sintaxis de Obsidian. **El límite inferior es solo una referencia**: si la nota explica bien el concepto y está completa, quedarse por debajo es perfectamente asumible. **Nunca añadir contenido redundante o de relleno para alcanzar un número** — no aporta valor. **Importa más respetar el límite superior** (~1500): si una nota se dispara, **dividirla** en varias atómicas. Si una nota conceptual se queda genuinamente corta de contenido útil, enriquecer con sustancia real; si no la hay, dejarla.
 - **Voz profesional, no académica**. Notas escritas para un pentester que necesita ejecutar — frases cortas, ejemplos concretos, advertencias accionables. Evitar relleno motivacional, recapitulaciones obvias o frases tipo "como veremos a continuación…".
 
+## Estándares de calidad — los 3 ejes (todo el vault)
+
+Aplican a **cualquier tema/módulo net-new**, no solo a CPTS (donde son más críticos: los módulos de red/infra de HTB llevan años sin actualizarse y hay que tratarlos como **borrador de partida**, no como verdad de 2026). El patrón **detección · evasión · arsenal + fuentes + gráficos** es el estándar del vault:
+
+1. **Investigar y profundizar SIEMPRE (como profesional, 2026).** Para **todo** contenido de **todo** módulo —no solo los desfasados— contrastar cada técnica/herramienta/flag con **fuentes oficiales y de confianza** y con el estado del arte, para explicar mejor, profundizar y ampliar. Si además la fuente propone algo obsoleto o hay una vía mejor / más sigilosa / más fiable hoy, **actualizar y modernizar** (nunca traducir a ciegas). Señalar explícitamente lo desfasado. La **mecánica** (jerarquía de fuentes primarias/oficiales, cita por-claim, subagente en background para paralelizar) → skill **`pkm-research`**.
+2. **Detección y evasión (más a fondo que la fuente).** En real hay EDR/IDS/IPS, WAF, firewalls modernos, rate-limiting y logging que el lab ignora. Cada tema cubre **cómo se detecta** (telemetría/logs que deja el atacante) y **cómo se evade** hoy (timing, fragmentación, decoys, living-off-the-land, blending con tráfico legítimo). **Por defecto → nota dedicada `Detección y evasión`** (net-new); **excepción** (¿HTB ya cubre el tema?): si HTB lo trae, respetar su formato e **investigar a fondo para modernizar/ampliar** — no forzar nota aparte.
+3. **Arsenal de herramientas.** Cada módulo net-new cierra con **nota dedicada `Arsenal de herramientas`**: el set profesional actual para automatizar/asistir detección, evasión, explotación y registro del tema, con el *cómo* (comando de ejemplo, cuándo usar cada una, alternativa a la de la fuente). Misma regla de forma que el eje 2: nota dedicada por defecto; si HTB ya trae sus herramientas, respetar su formato y modernizar.
+4. **Fuentes actuales y citadas** (nmap.org, PortSwigger, HackTricks, SANS, RFCs, advisories, blogs de investigación recientes). Citarlas en la nota e indicar qué parte viene de qué fuente cuando haya varias. Ver `pkm-research` (jerarquía de confianza) y `pkm-note-format` § Fuentes (cómo atribuir por-fuente).
+5. **Elementos gráficos.** Priorizar diagramas/tablas sobre párrafos densos (máquinas de estado, flujos de protocolo, matrices de flags). Imagen incrustada solo si aporta de verdad y **verificar siempre que renderiza**. Se admiten diagramas propios (Mermaid, `.canvas`) o de fuentes citadas.
+
 ## Estructura del vault
 
 Raíz PARA + carpetas temáticas:
 
 ```
-01 - Proyectos/         (proyectos activos con fecha límite, no aplica para CWES/CWEE)
+01 - Proyectos/         (proyectos activos con fecha límite, no usado por el flujo de extracción HTB)
 02 - Recursos/          (Biblioteca, Lenguajes, Templates, 🛠️ Tools)
 03 - Archivos/          (imágenes y adjuntos, también Escalidraw)
-04 - PENDIENTES/        (inbox, no aplica para CWES/CWEE)
+04 - PENDIENTES/        (inbox, no usado por el flujo de extracción HTB)
 Ingenieria/             (fundamentos y conocimientos relacionados con la ingeniería de software, bases de datos, criptografía, etc.)
-🔴⚔️ Red Team/         (todo el contenido ofensivo: Hacking web + Pentesting/CPTS)
+🔴⚔️ Red Team/         (todo el contenido ofensivo: Hacking web + Pentesting/CPTS + Hacking Active Directory)
 🔵🛡️ Blue Team/        (defensivo: SOC analyst, analisis de malware y redes, etc.)
 Redes/                  (fundamentos de redes, utilidades, protocolos, etc. Interesante para Pentesting y Bug Bounty)
-TFG/                    (trabajo fin de grado — no tocar salvo petición)
 ```
 
-Todo el contenido CWES/CWEE va dentro de `🔴⚔️ Red Team/Hacking web/`, integrado por **tema** (no por módulo HTB). Las carpetas temáticas existentes son la base; se crean carpetas nuevas sólo cuando un tema todavía no existe.
+El contenido se integra por **tema/área** (no por módulo HTB). Todo lo web va dentro de `🔴⚔️ Red Team/Hacking web/`; el pentest generalista (CPTS) en `🔴⚔️ Red Team/Pentesting/`. Las carpetas temáticas existentes son la base; se crean carpetas nuevas sólo cuando un tema todavía no existe.
 
-*Nota*: Las carpetas PARA se irán eliminando, la única que se mantendrá será la de "Recursos", el resto irán desapareciendo, las áreas principales de conocimiento se quedarán en el directorio raíz. Estas son: Red Team, Blue Team, Redes, Ingeniería y Recursos.
+*Nota (migración en curso)*: las **áreas principales de conocimiento ya viven en la raíz** (`🔴⚔️ Red Team/`, `🔵🛡️ Blue Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/`, `03 - Archivos`). Las carpetas PARA numeradas restantes (`01 - Proyectos`, `04 - PENDIENTES`) se irán eliminando; la única que se mantiene con su nombre es Recursos y Archivos. **Ojo**: la carpeta de ingeniería en disco es `Ingenieria/` (sin tilde), aunque en prosa se escriba "Ingeniería".
+
 ## Mapeo módulos HTB → carpetas del PKM
+
+### Patrón para dar de alta una certi/área nueva
+
+Las certis/áreas futuras (no solo web) siguen esta receta — evita re-improvisar de cero cada vez:
+
+1. **Ubicar por *tema/área*, no por módulo.** El conocimiento va a su área de la raíz (`🔴⚔️ Red Team/`, `🔵🛡️ Blue Team/`, `Redes/`, `Ingenieria/`). Las **herramientas** siempre a `02 - Recursos/🛠️ Tools/` con su `.base` Level 2 propio (patrón `Nmap.base` / `SQLMap.base`), **nunca** bajo el área temática.
+2. **Reutilizar antes de crear.** Una certi nueva suele solaparse con lo ya hecho (los módulos web de CPTS se reutilizan tal cual). Mapear primero qué módulos ya están cubiertos y cuáles son net-new.
+3. **Fundamentos ≠ ofensiva.** "Cómo funciona" (protocolo, motor BBDD, lenguaje) → `Redes/` o `Ingenieria/`; "cómo enumerar/atacar" → el área ofensiva. Cross-linkear ambos (patrón Footprinting ↔ `Redes/Protocolos/`).
+4. **Aplicar los 3 ejes** (detección · evasión · arsenal + fuentes + gráficos — ver "Estándares de calidad" arriba) a cada módulo net-new.
+5. **Registrar el mapeo** módulo→carpeta en una tabla nueva aquí, con columna `Estado`. El progreso vivo va a **memoria**, no a la misión.
+6. **`.base` Level 2 por sub-tema** en cuanto haya notas reales; Level 1 solo si el área agrupa varios sub-temas. No crear `.base` vacíos por adelantado.
 
 ### Path CWES (Web Penetration Tester)
 
-| #   | Módulo HTB                          | Carpeta destino                                                       | Estado            |
-| --- | ----------------------------------- | --------------------------------------------------------------------- | ----------------- |
-| 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*           |                   |
-| 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*       |                   |
-| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                            | Completado        |
-| 4   | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` (notas 00-14)                       | Completado        |
-| 5   | Web Fuzzing                         | `Hacking web/Reconocimiento Web/` (notas 15-24, tag `Fuzzing`)        | Completado        |
-| 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                     | Completado        |
-| 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                    | Completado        |
-| 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `02 - Areas/Ingeniería/Bases de Datos/`) | Completado |
-| 9   | SQLMap Essentials                   | `02 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection) | Completado |
-| 10  | Command Injections                  | `Hacking web/Command Injection/`                                      | Completado        |
-| 11  | File Upload Attacks                 | `Hacking web/File Upload/`                                            | Completado        |
-| 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`) | Completado |
-| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/`                                          | Completado        |
-| 14  | Broken Authentication               | `Hacking web/Authentication/`                                         | Completado        |
-| 15  | Web Attacks                         | `Hacking web/Web Attacks/` (verb tampering, IDOR, XXE · notas 00-20)  | Completado        |
-| 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                         | Completado        |
-| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` (notas 00-07)                                  | Completado        |
-| 18  | API Attacks                         | `Hacking web/API Attacks/` (OWASP API Top 10 2023 · notas 00-12)      | Completado        |
-| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` — **subcarpeta por app** (~36 notas; **WordPress ampliado a 8 con el módulo 17**)  | Completado ✅ (2026-07-16) |
-| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` (notas 00-04 · 5 notas)                    | Completado ✅ (2026-07-17) |
+| #   | Módulo HTB                          | Carpeta destino                                                                                                      | Estado                    |
+| --- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*                                                          | -                         |
+| 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*                                                      | -                         |
+| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                                                                           | Completado                |
+| 4   | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` (notas 00-14)                                                                      | Completado                |
+| 5   | Web Fuzzing                         | `Hacking web/Reconocimiento Web/` (notas 15-24, tag `Fuzzing`)                                                       | Completado                |
+| 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                                                                    | Completado                |
+| 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                                                                   | Completado                |
+| 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `Ingenieria/Bases de Datos/`)   | Completado                |
+| 9   | SQLMap Essentials                   | `02 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection)                                       | Completado                |
+| 10  | Command Injections                  | `Hacking web/Command Injection/`                                                                                     | Completado                |
+| 11  | File Upload Attacks                 | `Hacking web/File Upload/`                                                                                           | Completado                |
+| 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`)                                        | Completado                |
+| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/`                                                                                         | Completado                |
+| 14  | Broken Authentication               | `Hacking web/Authentication/`                                                                                        | Completado                |
+| 15  | Web Attacks                         | `Hacking web/Web Attacks/` (verb tampering, IDOR, XXE · notas 00-20)                                                 | Completado                |
+| 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                                                                        | Completado                |
+| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` (notas 00-07)                                                                                 | Completado                |
+| 18  | API Attacks                         | `Hacking web/API Attacks/` (OWASP API Top 10 2023 · notas 00-12)                                                     | Completado                |
+| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` — **subcarpeta por app** (~36 notas; **WordPress ampliado a 8 con el módulo 17**) | Completado ✅ (2026-07-16) |
+| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` (notas 00-04 · 5 notas)                                                                    | Completado ✅ (2026-07-17) |
 
 ### Path CWEE (Senior Web Penetration Tester)
 
@@ -96,25 +150,25 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 **Ubicación del contenido net-new**:
 - Conocimiento de pentest → `🔴⚔️ Red Team/Pentesting/`, en **carpetas numeradas por fase / orden lógico del pentest** (`000 - Fases del Pentesting`, `001 - Footprinting`, `002 - Evaluación de vulnerabilidades`, …). Los números de módulos aún no extraídos son **tentativos** — se confirman al llegar.
 - **Herramientas** (Nmap, Metasploit, John the Ripper, Hashcat, …) → `02 - Recursos/🛠️ Tools/` como cualquier herramienta, **NO** bajo Pentesting. Su MOC es un `.base` Level 2 propio en la carpeta de la herramienta (patrón `SQLMap.base`).
-- Footprinting es **autocontenido** (1 nota ofensiva por servicio en `001 - Footprinting/`) y **cross-linkea** a la nota de **fundamentos del protocolo** (Redes = "cómo funciona"; Footprinting = "cómo enumerar/atacar"). **Cada protocolo de red tiene su nota de fundamentos en `Redes/Protocolos/`** (indexadas por `Protocolos de red.base`; creadas/rellenadas al hacer Footprinting: FTP, SMB, NFS, DNS, SMTP, IMAP-POP3, SNMP, IPMI, SSH, Rsync, R-services, RDP, WinRM, WMI). Los **motores de BBDD** (MySQL, MSSQL, Oracle) van a `Ingeniería/Bases de Datos/` (no a Redes), indexados por `Bases de Datos.base`.
+- Footprinting es **autocontenido** (1 nota ofensiva por servicio en `001 - Footprinting/`) y **cross-linkea** a la nota de **fundamentos del protocolo** (Redes = "cómo funciona"; Footprinting = "cómo enumerar/atacar"). **Cada protocolo de red tiene su nota de fundamentos en `Redes/Protocolos/`** (indexadas por `Protocolos de red.base`; creadas/rellenadas al hacer Footprinting: FTP, SMB, NFS, DNS, SMTP, IMAP-POP3, SNMP, IPMI, SSH, Rsync, R-services, RDP, WinRM, WMI). Los **motores de BBDD** (MySQL, MSSQL, Oracle) van a `Ingenieria/Bases de Datos/` (no a Redes), indexados por `Bases de Datos.base`.
 
 | #  | Módulo HTB | Carpeta destino | Estado |
 | -- | ---------- | --------------- | ------ |
 | 1  | Penetration Testing Process | `Pentesting/000 - Fases del Pentesting/` (enriquece las notas de fases existentes) | Legacy parcial |
 | 2  | Getting Started | *(se salta / cherry-pick — primer generalista, contenido cubierto en otros módulos)* | — |
 | 3  | Network Enumeration with Nmap | `02 - Recursos/🛠️ Tools/Nmap/` (herramienta → Tools; 10 notas 00-09 + `Nmap.base`) | ✅ Completado (2026-07-18) |
-| 4  | Footprinting | `Pentesting/001 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingeniería/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
+| 4  | Footprinting | `Pentesting/001 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingenieria/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
 | 5  | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` | ✅ Contenido web |
 | 6  | Vulnerability Assessment | `Pentesting/002 - Evaluación de vulnerabilidades/` (7 notas 00-06 + `.base`; **Nessus** [4 notas] y **OpenVAS** [2 notas] → `02 - Recursos/🛠️ Tools/`, como Nmap) | ✅ Completado (2026-07-18) |
-| 7  | File Transfers | `Pentesting/003 - Transferencia de archivos/` *(tentativo)* | Pendiente |
+| 7  | File Transfers | `Pentesting/003 - Transferencia de archivos/` (12 notas 00-11 + `.base`; misc/protegidas/catching/LotL + detección/evasión + arsenal) | ✅ Completado (2026-07-19) |
 | 8  | Shells & Payloads | `Pentesting/004 - Shells y Payloads/` (13 notas 00-12 + `.base`; incl. detección/evasión + arsenal) | ✅ Completado (2026-07-18) |
 | 9  | Using the Metasploit Framework | `02 - Recursos/🛠️ Tools/Metasploit/` (**rehecho desde 0**: 14 notas 00-13 + `Metasploit.base`, patrón Nmap) | ✅ Completado (2026-07-18) |
 | 10 | Password Attacks | `Pentesting/005 - Ataques a contraseñas/` (19 notas 00-18 + `.base`; **John the Ripper** y **Hashcat** → `Tools/` con `.base` propio) | ✅ Completado (2026-07-18) |
 | 11 | Attacking Common Services | `Pentesting/006 - Ataque a servicios comunes/` *(tentativo)* | Pendiente |
-| 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/007 - Pivoting y túneles/` *(tentativo)* | Pendiente |
-| 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/` *(36 secc · posible área propia · a confirmar; ⚠️ PtH/PtT/NTDS.dit ya en `005` con tag `Active-Directory` → cross-linkear/reubicar al llegar)* | Pendiente |
+| 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/007 - Pivoting y túneles/` (16 notas 00-15 + `.base`; **Ligolo-ng** net-new, detección/evasión, arsenal; rpivot plegado en arsenal) | ✅ Completado (2026-07-19) |
+| 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/Enumeración y Ataques/` (**área propia** · 6 sub-temas Level-2 · 27 notas 00-26 · Linux/Windows unificados por técnica; las 5 notas AD de `005` [NTLM-Kerberos/PtH/PtT/Pass the Certificate/NTDS.dit] **cross-linkeadas, no movidas**) | ✅ Completado (2026-07-21) |
 | 14 | Using Web Proxies | `Hacking web/Proxies web/` | ✅ Contenido web |
-| 15 | Attacking Web Applications with Ffuf | `Hacking web/Reconocimiento Web/` (Fuzzing) | ✅ Contenido web |
+| 15 | Attacking Web Applications with Ffuf | `Hacking web/Reconocimiento Web/` (Fuzzing, metodología) + `02 - Recursos/🛠️ Tools/Ffuf/` (8 notas 00-07 + `Ffuf.base`, referencia de la herramienta) | ✅ Contenido web + tool (2026-07-19) |
 | 16 | Login Brute Forcing | `Hacking web/Brute Forcing/` | ✅ Contenido web |
 | 17 | SQL Injection Fundamentals | `Hacking web/💉🩸 SQL Injection/` | ✅ Contenido web |
 | 18 | SQLMap Essentials | `02 - Recursos/🛠️ Tools/SQLMap/` | ✅ Contenido web |
@@ -124,22 +178,14 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 22 | Command Injections | `Hacking web/Command Injection/` | ✅ Contenido web |
 | 23 | Web Attacks | `Hacking web/Web Attacks/` | ✅ Contenido web |
 | 24 | Attacking Common Applications | `Hacking web/Common Applications/` | ✅ Contenido web |
-| 25 | Linux Privilege Escalation | `Pentesting/008 - Escalada de privilegios Linux/` *(tentativo)* | Pendiente |
-| 26 | Windows Privilege Escalation | `Pentesting/009 - Escalada de privilegios Windows/` *(tentativo)* | Pendiente |
+| 25 | Linux Privilege Escalation | `Pentesting/008 - Escalada de privilegios Linux/` (25 notas 00-24 + `.base`; detección/evasión + arsenal net-new; CVEs 2021-2025 [PwnKit, Baron Samedit, Dirty Pipe, Looney Tunables, GameOver(lay), sudo 2025, nf_tables] y escapes de contenedores [runc, K8s] modernizados) | ✅ Completado (2026-07-22) |
+| 26 | Windows Privilege Escalation | `Pentesting/009 - Escalada de privilegios Windows/` (26 notas 00-25 + `.base`; familia Potato [GodPotato/PrintSpoofer], UAC, CLFS/PrintNightmare/SeriousSAM modernizados; detección/evasión + arsenal net-new) | ✅ Completado (2026-07-22) |
 | 27 | Documentation & Reporting | `Pentesting/010 - Documentación y reporting/` *(tentativo)* | Pendiente |
 | 28 | Attacking Enterprise Networks | `Pentesting/011 - Ataque a redes empresariales/` *(capstone · tentativo)* | Pendiente |
 
-#### CPTS — estándares de calidad extra (todo módulo CPTS net-new)
+#### CPTS — estándares de calidad extra
 
-Estos módulos de red/infra **llevan años sin actualizarse** (algunos 6+ años). Tratar el contenido HTB como **borrador de partida**, no como verdad actual:
-
-1. **Revisar como pentester experto (2026).** Contrastar cada técnica/herramienta/flag con el estado del arte. Si HTB propone algo obsoleto o hay una vía mejor / más sigilosa / más fiable hoy, **actualizar y ampliar** (no traducir a ciegas). Señalar explícitamente cuando una técnica está desfasada.
-2. **Detección y evasión (más a fondo que HTB).** En real hay EDR/IDS/IPS, firewalls modernos, rate-limiting y logging que el lab ignora. Cada tema cubre **cómo se detecta** (telemetría/logs que deja el atacante) y **cómo se evade** hoy (timing, fragmentación, decoys, living-off-the-land, blending con tráfico legítimo). Material abundante → **nota dedicada `Detección y evasión`**; si es poco → sección embebida.
-3. **Arsenal de herramientas (net-new obligatorio).** Cada módulo cierra con **nota dedicada `Arsenal de herramientas`**: el set profesional actual para automatizar/asistir **detección, evasión, explotación y registro** del tema, con el *cómo* (comando de ejemplo, cuándo usar cada una, alternativa a la de HTB). Orientado a jornadas reales de pentest / bug bounty.
-4. **Fuentes actuales y citadas.** Enriquecer con fuentes vigentes de referencia (nmap.org, PortSwigger, HackTricks, SANS, RFCs, advisories, blogs de investigación recientes). **Citarlas en la nota** e indicar en el texto qué parte viene de qué fuente cuando haya varias.
-5. **Elementos gráficos.** Priorizar diagramas/tablas que expliquen mejor que un párrafo denso (máquinas de estado, flujos de protocolo, matrices de flags). Incrustar imagen HTB solo si aporta de verdad y **verificar siempre que renderiza**. Se admiten diagramas propios (Mermaid, `.canvas`) o de fuentes citadas.
-
-El patrón de los **3 ejes — detección · evasión · herramientas** + fuentes + gráficos es el estándar CPTS (y del vault en general).
+Todos los módulos CPTS net-new siguen los **3 ejes del vault** (detección · evasión · arsenal + fuentes + gráficos) — son especialmente críticos aquí porque los módulos de red/infra de HTB llevan años sin actualizarse. Ver la sección **"Estándares de calidad — los 3 ejes"** al principio del documento.
 
 ### Módulos extra (fuera de los paths CWES/CWEE)
 
@@ -154,29 +200,30 @@ Antes de crear una carpeta nueva, **siempre verificar** con `ls` o `Glob` que no
 
 ## Convenciones de nota
 
+> **Fuente autoritativa: skill `pkm-note-format`** — frontmatter, glosario de colores con ejemplos, callouts, bloques de código (lenguaje declarado siempre), enlaces, imágenes, voz/estilo y checklist final. Se activa al crear/editar cualquier nota. Aquí queda solo lo esencial (siempre en contexto); el detalle vive en la skill.
+
 ### Frontmatter
 
-Toda nota empieza con este bloque YAML, seguido inmediatamente de dos líneas `---` (la primera cierra el YAML, la segunda es regla horizontal visible):
+Bloque YAML inicial, seguido de **dos** líneas `---` (la primera cierra el YAML; la segunda es regla horizontal visible):
 
 ```yaml
 ---
 tags:
-  - Web/Red-Team
-  - Pentesting/Explotacion        # fase del pentesting que aplica
-  - <tag-tema-específico>         # p. ej. Pentesting/Enumeracion, XSS, SQLi
+  - <tag-área>                 # p. ej. Web/Red-Team, Pentesting, Active-Directory, Linux
+  - <tag-fase>                 # fase del pentest: Pentesting/Enumeracion, /Explotacion, /Post-Explotacion
+  - <tag-tema>                 # p. ej. XSS, SQLi, Fuzzing, Pivoting
 Fecha de actualización: 2026-05-11
 Nota previa: "[[Nombre nota anterior]]"
 Nota siguiente: "[[Nombre nota siguiente]]"
-Area: "[[XSS.base|XSS]]"     # ← .base Level 2 del sub-tema, NO Level 1 (Web Pentesting.base)
+Area: "[[XSS.base|XSS]]"       # ← .base Level 2 del sub-tema, NO Level 1
 ---
 ---
 ```
 
-Reglas:
-- `Fecha de actualización`: siempre en formato `YYYY-MM-DD` (ISO 8601), fecha real en la que se crea/edita la nota.
-- `Nota previa` / `Nota siguiente`: alias entre comillas (`"[[ ]]"`), forman la cadena Zettelkasten dentro de un tema. La primera nota del tema tiene `Nota previa` vacía; la última, `Nota siguiente` vacía.
-- `Area`: enlace al `.base` **Level 2** del sub-tema, no al Level 1. Ejemplos: XSS → `[[XSS.base|XSS]]`; SQLi → `[[SQL Injection.base|SQL Injection]]`; Fuzzing → `[[Fuzzing.base|Fuzzing]]`. El Level 1 (`Web Pentesting.base`) agrega Level 2, no notas. Las notas legacy con `Area` apuntando a Level 1 son **deuda a migrar** cuando se trabaje su sub-tema. Ver sección "Vista `.base`" más abajo para la jerarquía completa.
-- `tags`: tema + fase pentesting. Reusar tags existentes antes de inventar nuevos (`grep` en el vault para confirmar).
+- `Fecha de actualización`: siempre `YYYY-MM-DD` (ISO 8601), fecha real del día.
+- `Nota previa` / `Nota siguiente`: alias entre comillas (`"[[ ]]"`); forman la cadena Zettelkasten. La cabecera del tema tiene `prev` vacío; la cola, `next` vacío. Mantenimiento de la cadena → skill `zettelkasten-linking`.
+- `Area`: enlace al `.base` **Level 2** del sub-tema, **nunca** al Level 1 (ver "Vista `.base`" más abajo). Notas legacy apuntando a Level 1 = deuda a migrar.
+- `tags`: área + fase + tema. **Reusar** tags existentes antes de inventar (`grep` / `obsidian tags`). El primer tag **no es siempre** `Web/Red-Team` — depende del área de la nota (una nota de red/AD/privesc no es web).
 
 ### Marcas con colores (glosario semántico)
 
@@ -193,67 +240,27 @@ Las marcas usan la sintaxis `<mark style="background: COLOR;">texto</mark>`. **C
 
 Una nota saturada de marcas pierde el sistema. Marcar **lo importante**, no todo.
 
-### Callouts
+### Callouts, código, enlaces, imágenes y tablas
 
-Para mini-notas aclaratorias, avisos y curiosidades, usar callouts de Obsidian. Puedes crear callouts personalizados siempre que quieras o lo necesites o explorar los que ya hay. Los más usados:
+Detalle completo en la skill `pkm-note-format`. Recordatorios siempre-on:
 
-```markdown
-> [!important]+
-> Texto del callout — aclaración, advertencia o nota lateral.
+- **Callouts** de Obsidian (`> [!important]+`, `> [!warning]+`, `> [!success]+`, `> [!info]+`, `> [!fail]+`) para matices/avisos. Las palabras dentro de callouts **no cuentan** para las 1000–1500 de teoría.
+- **Bloques de código**: siempre con lenguaje declarado (` ```shell-session `, ` ```http `, ` ```sql `, ` ```python `, …).
+- **Enlaces** `[[ ]]` a notas reales o fantasmas intencionales (sirven de TODO).
+- **Imágenes**: HTB por URL pública (`academy.hackthebox.com/storage/...`); capturas propias en `03 - Archivos/Images/<contexto>/`. Solo si aportan valor.
+- **Tablas** para comparativas, ≤8 filas.
 
-> [!success]+
-> Cuando interpretamos salida de una herramienta y queremos resaltar lo que indica éxito.
+> [!warning]+ Excepción Nuevo-Formato
+> En `🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/Nuevo-Formato/` **no** se usan marks de color: usar `"==highlight=="` y `"**bold**"`". Resto de convenciones igual. (Detalle en `pkm-note-format`.)
 
-> [!warning]+
-> Cuando hay un *gotcha* o algo que rompe un payload, evade un WAF, etc.
+## Flujo de extracción HTB → nota
 
-> [!info]+
-> Contexto adicional, historia, RFC, CVE relevante.
-
-> [!fail]+
-> Cuando interpretamos salida de una herramienta y queremos resaltar lo que indica fallo o error o que se ha hecho mal algo.
-```
-
-El sufijo `+` deja el callout expandido por defecto; `-` lo colapsa. **Las palabras dentro de callouts no cuentan** para el objetivo de 1000–1500 — son contexto complementario.
-
-### Bloques de código
-
-Siempre con lenguaje declarado para que Obsidian aplique syntax highlighting:
-
-- Comandos de shell: ` ```shell-session ` (con `$` o `#` antes del comando).
-- HTML: ` ```html `
-- JavaScript: ` ```javascript ` o ` ```js `
-- SQL: ` ```sql `
-- HTTP requests/responses: ` ```http `
-- PHP, Python, Bash, Go: lenguaje correspondiente.
-
-```shell-session
-$ ffuf -u http://target/FUZZ -w wordlist.txt
-```
-
-### Enlaces internos
-
-- Referencias a otras notas del vault: `[[Nombre exacto de la nota]]` o con alias `[[Nombre|alias]]`. También se puede refenciar a apartandos concretos de otra nota con `[[Nombre#Apartado]]`, como eso queda feo de leer, habría que añadir también un alias, quedando algo como `[[Nombre#Apartado|Alias]]`.
-- Las notas siguientes/previas se encadenan en el frontmatter; los enlaces "tematicos" (XSS → menciona `[[HTTP]]`) van en el cuerpo.
-- Si una nota referencia un concepto que **todavía no existe**, crear el wikilink igualmente (`[[Deserialización Java]]`) — Obsidian lo mostrará como nota fantasma y servirá de TODO.
-
-### Imágenes
-
-- Las imágenes de HTB Academy se incrustan **directamente desde su URL pública**:
-  ```markdown
-  ![Descripción accesible breve de la imagen](https://academy.hackthebox.com/storage/modules/XXX/imagen.jpg)
-  ```
-  Esto preserva el ancho de banda local y mantiene la atribución implícita.
-- Capturas propias (TFG, proyectos, lab personal) se guardan en `04 - Archivos/Images/<contexto>/` y se referencian con la ruta relativa.
-- **Criterio para incluir una imagen HTB**: incluirla solo si aporta valor real — diagramas, screenshots de payloads ejecutándose, matrices conceptuales, capturas de UI específicas. Una captura de terminal trivial que se puede expresar como bloque de código → no incluir.
-
-### Tablas
-
-Usar para comparativas (herramientas, tipos de vulnerabilidad, payloads por contexto). Mantener cabeceras concisas. Si una tabla pasa de 8 filas, considerar si conviene una lista o múltiples tablas más pequeñas.
-
-## Flujo de extracción HTB → nota (usando la agent skill agent-browser, para saber cómo utilizar el navegador)
-
-El usuario inicia sesión en HTB Academy desde su navegador. La extracción de un módulo se ejecuta en **3 fases iterativas** (más una Fase 0 de planificación). **No avanzar** a la siguiente fase sin terminar la actual.
+> **Fuente autoritativa: skill `htb-extraction-workflow`** — Fase 0-3 detalladas, reglas de transformación, criterios de relleno/enriquecimiento y anti-patrones. Para conducir el navegador (tu Chrome logueado), la skill `claude-in-chrome` + `fetch` a la API interna de HTB (ver callout). El usuario inicia sesión en HTB Academy; la extracción se ejecuta en **Fase 0 (planificación) + 3 fases iterativas**, sin avanzar sin cerrar la actual. Resumen:
+>
+> - **Fase 0 — Planificar** (1 vez/módulo): identificar módulo + carpeta destino (mapeo de arriba), listar capítulos, presentar **plan de fragmentación** (1:1 / M:1 / 1:N, cadena `prev`/`next`, carpetas, `.base` Level 2, tags) y **esperar confirmación** salvo módulos cortos (<8 secc).
+> - **Fase 1 — Extraer** capítulo a capítulo en **corte vertical** (una nota entera antes de la siguiente): traducir al español (términos técnicos en `backticks`), eliminar relleno HTB, enriquecer con contexto profesional (WAF, rate-limiting, CVEs, herramientas actuales), aplicar formato PKM, encadenar Zettelkasten.
+> - **Fase 2 — Sellar cada nota**: `[[wikilinks]]` internos + pulir redacción antes de avanzar.
+> - **Fase 3 — Cierre de módulo (NUNCA se omite)**: revisión cruzada con TODO el PKM, integrar enlaces cross-módulo, actualizar MOCs `.base` Level 1/2, reportar (sin `git commit`).
 
 > [!important]+ Atajo de extracción vía API (mucho más rápido que snapshots del navegador)
 > Con Chrome logueado en HTB Academy, en vez de leer el DOM sección a sección se puede pedir el contenido directamente a la API interna con un `fetch` desde la pestaña (JS en el navegador, usa las cookies de sesión). Descubierto y validado el 2026-07-18 con el trío de red:
@@ -261,65 +268,7 @@ El usuario inicia sesión en HTB Academy desde su navegador. La extracción de u
 > - **Contenido de una sección**: `GET /api/v2/modules/<módulo>/sections/<id>?language=en` → campo `.data.content` con el **markdown completo** (encabezados, bloques de código, tablas y URLs de imágenes intactos).
 > - *Gotcha*: el filtro de seguridad de la herramienta puede **bloquear** trozos con material tipo credencial/clave. Si pasa, saca solo los encabezados (`content.split('\n').filter(l=>/^#/.test(l))`) para el esquema y redacta desde el conocimiento experto + el outline.
 
-### Fase 0 — Planificación (una vez por módulo)
-
-1. **Negociar el módulo**. El usuario dice "vamos con `Web Fuzzing`" o equivalente. Identificar el módulo en el path y la carpeta destino del mapeo de arriba.
-2. **Navegar con un browser (usando la agent skill mencionada)**. Abrir el módulo, listar todos sus capítulos (nombres, URLs, número total).
-3. **Presentar al usuario el plan** y esperar confirmación:
-   - Nº de capítulos HTB y mapeo capítulo → nota(s): 1:1, M:1 (varios cortos comparten tema), 1:N (uno enorme se divide).
-   - Cadena Zettelkasten propuesta (`prev`/`next`).
-   - Carpeta(s) destino (ruta absoluta) y carpetas a crear.
-   - `.base` **Level 2** del sub-tema (a usar o a crear antes de Fase 1).
-   - Tags propuestos (reusar antes de inventar).
-
-### Fase 1 — Extracción capítulo a capítulo (iterativo, en orden ascendente)
-
-Para cada capítulo, completar **una nota entera antes de pasar a la siguiente** (corte vertical):
-
-1. Extraer texto + URLs de imágenes + bloques de código del capítulo.
-2. **Traducir al español** preservando términos técnicos en inglés con backticks.
-3. **Eliminar relleno HTB**: introducciones motivacionales, "in this module you will learn…", reformulaciones triviales, transiciones obvias, recapitulaciones, "as we saw earlier…", elogios genéricos.
-4. **Enriquecer con contexto profesional**: cuándo aparece la técnica en un pentest real, herramientas alternativas, *gotchas* de producción (WAF, rate limiting, sanitización moderna, cookies `SameSite`), CVE relevantes, definiciones de conceptos asumidos.
-5. **Alcanzar 1000–1500 palabras de teoría**. Si era corto y no hay nada que enriquecer → fusionar con la siguiente sección. Si es enorme → dividir.
-6. **Aplicar formato del PKM**: frontmatter (`Area` → `.base` Level 2), marks semánticos, callouts, bloques de código con lenguaje, imágenes HTB cuando aporten.
-7. **Encadenar Zettelkasten**: rellenar `Nota previa`/`Nota siguiente` de la nueva **y actualizar `Nota siguiente` de la nota anterior** para apuntar a ella.
-
-### Fase 2 — Cierre del capítulo (al terminar cada nota de Fase 1)
-
-Antes de pasar al siguiente capítulo:
-
-1. **Re-leer la nota recién creada** y añadir `[[wikilinks]]` en el cuerpo donde un concepto ya tiene nota propia (módulo actual + sub-tema actual).
-2. **Mejorar redacción, explicaciones, ejemplos** con el contexto adquirido. Se permite **modificar capítulos anteriores del mismo módulo** si surge una mejora obvia (renombrar un término para alinear, añadir una referencia cruzada).
-3. **No avanzar al siguiente capítulo** hasta sellar el actual.
-
-### Fase 3 — Cierre del módulo (obligatoria antes de dar el módulo por terminado)
-
-Aplica siempre, también al primer módulo del path aunque haya poco PKM con el que cruzar. **No se omite** aunque ya hayas enlazado oportunísticamente durante Fases 1 y 2 — es la pasada explícita y exhaustiva.
-
-1. **Revisión cruzada con el resto del PKM**: para cada nota del módulo, buscar enlaces a notas de **otros módulos / otros sub-temas / otras áreas**. Herramientas: `obsidian backlinks`, `obsidian search:context`, `Grep` sobre conceptos clave.
-2. **Integrar los enlaces** en el cuerpo de las notas reescribiendo párrafos cuando aporte coherencia. No basta con añadir `[[X]]` sueltos — la referencia debe encajar en el flujo.
-3. **Mejorar redacción a nivel global del módulo** con la perspectiva completa: detectar repeticiones entre capítulos, ajustar definiciones que ahora se ven incoherentes, refinar la cadena `prev`/`next` si el orden óptimo cambió.
-4. **Actualizar la MOC `.base` Level 2** del sub-tema (filtro, columnas, vistas). Si apareció un sub-tema nuevo, comprobar también el Level 1.
-5. **Reportar al usuario**: notas creadas, carpetas tocadas, MOCs Level 1/2 modificadas, enlaces cross-módulo añadidos (cuantitativo), pendientes (notas fantasma). No hacer `git commit` — esperar instrucción explícita.
-
-> **Atajo permitido**: los enlaces cross-módulo de Fase 3 se pueden empezar oportunísticamente en Fases 1 o 2 cuando salten a la vista. **Pero Fase 3 nunca se omite** — es el sello del módulo dentro del grafo del PKM.
-
-### Criterios de "relleno" a eliminar
-
-- Introducciones de tipo "este módulo enseña X" / "veremos cómo Y".
-- Repeticiones de definiciones ya dadas en notas previas.
-- "Conclusiones" que solo resumen lo dicho.
-- Frases auto-referenciales al curso HTB que no aplican al PKM ("complete the skills assessment", "this section is graded").
-- Listas de prerrequisitos genéricos.
-- "Tips" o "best practices" obvias para alguien con experiencia.
-
-### Criterios para añadir contexto propio
-
-- Cuando el original asume conocimiento que conviene explicitar (referencia un concepto sin definirlo).
-- Cuando hay un *gotcha* en producción que HTB omite por estar en lab controlado (WAFs, rate limiting, sanitización moderna, cookies `SameSite`).
-- Cuando existe una herramienta más usada en bug bounty actual que la del módulo (p. ej. `caido` vs Burp, `nuclei` para fuzzing dirigido).
-- Cuando una CVE famosa o un hallazgo real de bug bounty ilustra el concepto.
-- Cuando la explicación se beneficia de un diagrama mental o una tabla comparativa que el original no tiene.
+*(Fases 0–3 paso a paso, reglas de transformación, criterios de relleno a eliminar y de contexto propio a añadir, herramientas del vault y anti-patrones → skill `htb-extraction-workflow`.)*
 
 ## Vista `.base` (MOCs de Obsidian) — jerarquía de 2 niveles
 
@@ -376,24 +325,17 @@ views:
 - Cuando aparece un Level 2 nuevo bajo una carpeta de tema grande, verificar que el filtro del Level 1 lo recoge (puede requerir actualizar la cláusula `file.folder.startsWith(...)`).
 - Notas legacy con `Area` apuntando al Level 1 (p. ej. `Web Pentesting.base`) son **deuda a migrar**. Al crear el Level 2 correspondiente, migrar `Area` de **todas** las notas del sub-tema en lote (`obsidian property:set` o `Edit` directo del frontmatter).
 
-## Plantilla base (Templater)
+## Decisiones estructurales (ADR)
 
-Existe `03 - Recursos/Templates/Template para proyectos.md` con el frontmatter vacío. Para crear una nota a mano siguiendo la convención, copiar este esqueleto:
+Las decisiones estructurales del vault que se **ejecutan** (reorganizaciones, nuevas convenciones, fusiones/divisiones de temas, renombrados masivos) se registran como **ADR** (*Architecture Decision Record*) para no perder el **porqué** ni las **alternativas descartadas** —lo que la memoria y este archivo capturan peor—.
 
-```markdown
----
-tags:
-  - Web/Red-Team
-  - <tag-tema>
-Fecha de actualización: YYYY-MM-DD
-Nota previa: "[[<previa>]]"
-Nota siguiente: "[[<siguiente>]]"
-Area: "[[<MOC>.base|<MOC display>]]"
----
----
+- Lo automatiza la skill **`pkm-design-grilling`** como paso final del interrogatorio (idea tomada de `grill-with-docs` de aihero.dev).
+- **Ubicación**: `02 - Recursos/Decisiones estructurales/NNN - <título>.md`. Son **notas meta**: exentas de la cadena Zettelkasten y de `Area`.
+- **Formato**: contexto → decisión → alternativas descartadas → consecuencias. Escueto (media pantalla) y solo cuando hubo alternativas reales que descartar; si no, basta memoria/CLAUDE.md.
 
-<contenido aquí>
-```
+## Plantilla base
+
+Plantilla vacía en `02 - Recursos/Templates/Template para proyectos.md` (Templater). Para crear una nota a mano, usar el esqueleto de frontmatter de "Convenciones de nota" (arriba); el formato completo lo posee la skill `pkm-note-format`.
 
 ## Plugins, skills y MCP disponibles
 
@@ -404,12 +346,13 @@ Estas se activan automáticamente cuando la descripción coincide con la tarea. 
 - `htb-extraction-workflow` — Playbook completo para extraer un módulo de HTB Academy con Playwright MCP: precondiciones, plan de fragmentación, transformaciones obligatorias, corte vertical (nota completa antes de pasar a la siguiente), MOC, reporte. Se activa al mencionar "extraer módulo X", "vamos con X de HTB", etc.
 - `pkm-note-format` — Referencia del formato exacto: frontmatter, glosario de colores hex con ejemplos, callouts, bloques de código con lenguaje, imágenes, voz/estilo, checklist final. Se activa al crear/editar cualquier nota del vault.
 - `zettelkasten-linking` — Procedimientos de mantenimiento de la cadena `Nota previa`/`Nota siguiente` para las 6 operaciones (crear al final, insertar, borrar, renombrar, dividir, fusionar). Evita romper enlaces silenciosamente.
-- `pkm-design-grilling` — Interrogatorio dirigido antes de cualquier decisión estructural del PKM (reorganizar carpetas, crear MOCs, fusionar temas, renombrados masivos). 8–20 preguntas categorizadas por motivación, alcance, convenciones, reversibilidad y modelo mental antes de proponer plan. Adaptación PKM de `/grill-me` de aihero.dev.
+- `pkm-design-grilling` — Interrogatorio dirigido antes de cualquier decisión estructural del PKM (reorganizar carpetas, crear MOCs, fusionar temas, renombrados masivos). 8–20 preguntas categorizadas por motivación, alcance, convenciones, reversibilidad y modelo mental antes de proponer plan. Adaptación PKM de `/grill-me` de aihero.dev. Ahora también **registra la decisión ejecutada como ADR** en `02 - Recursos/Decisiones estructurales/` (idea de `grill-with-docs`).
 - `pkm-structure-audit` — Auditoría de salud del vault: wikilinks rotos, cadenas Zettelkasten rotas, densidad de notas fuera de rango, taxonomía de tags duplicada, MOCs `.base` obsoletas, frontmatter inconsistente. Produce informe priorizado sin tocar archivos. Adaptación PKM de `/improve-codebase-architecture` de aihero.dev.
+- `pkm-research` — Investigación con **fuentes primarias/oficiales** y cita por-fuente; materializa el eje 1/eje 4. La usa `htb-extraction-workflow` en el enriquecimiento (Fase 1.2) y es invocable a demanda para pentest/bug bounty. Adaptación PKM de `/research` de aihero.dev.
 
 ### Plugins ya instalados a nivel usuario (`~/.claude/settings.json`)
 
-- `playwright@claude-plugins-official` — MCP para HTB Academy. **Núcleo del flujo de extracción.**
+- `playwright@claude-plugins-official` — MCP de navegador. **Alternativa** de extracción; el método principal hoy es `claude-in-chrome` sobre el Chrome logueado + `fetch` a la API interna de HTB (markdown limpio — ver "Flujo de extracción").
 - `superpowers@claude-plugins-official` — skills generales de desarrollo, brainstorming, debugging.
 - `claude-md-management@claude-plugins-official` — gestión de este propio archivo.
 - `context7@claude-plugins-official` — documentación de librerías y frameworks.
@@ -541,4 +484,5 @@ $ obsidian command id="<command-id>"
 - Cuando extraiga un módulo HTB completo, **resumir al usuario el plan de fragmentación antes de escribir**, salvo en módulos cortos (<8 secciones).
 - No tocar `TFG/` salvo petición explícita. Tampoco `🔵🛡️ Blue Team/` salvo que la tarea lo requiera. **`Redes/`**: se puede **leer y enlazar** libremente (Footprinting de CPTS cross-linkea a `Redes/Protocolos/`); modificar sus notas solo si la tarea lo pide.
 - Si encuentro inconsistencia en el vault (notas con frontmatter incompleto, enlaces rotos, MOCs desactualizadas), **flaggear al usuario** — no "limpiar" silenciosamente.
-- El campo `Fecha de actualización` se rellena con la fecha real del día (obtener del sistema; p. ej. hoy `2026-07-18`); convertir fechas relativas siempre a absolutas.
+- El campo `Fecha de actualización` se rellena con la fecha real del día en formato ISO `YYYY-MM-DD` (obtener del sistema); convertir fechas relativas siempre a absolutas.
+- Tras **ejecutar una decisión estructural** (reorg, convención nueva, fusión/división, renombrado masivo), registrar un **ADR** en `02 - Recursos/Decisiones estructurales/` — ver «Decisiones estructurales (ADR)».

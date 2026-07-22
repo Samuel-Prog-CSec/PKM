@@ -32,6 +32,10 @@
       "Bash(obsidian:*)"
     ]
   },
+  "skillOverrides": {
+    "grill-me": "off",
+    "handoff": "off"
+  },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
     "document-skills@anthropic-agent-skills": true

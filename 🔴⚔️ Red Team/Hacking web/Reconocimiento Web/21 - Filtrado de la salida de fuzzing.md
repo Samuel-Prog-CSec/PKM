@@ -85,6 +85,7 @@ $ ffuf -u http://IP:PORT/post.php -X POST -d "y=FUZZ" -w common.txt -mc all
 > $ ffuf -u http://IP/ -H "Host: FUZZ.target.htb" -w subs.txt -ac
 > ```
 > Es lo que convierte un vhost o un soft-404 imposibles de filtrar a mano en un escaneo limpio sin calcular el `-fs` manualmente.
+> El detalle de `-ac`/`-acc`/`-ach` y el flujo anti-ruido completo, en la [[05 - Matching y filtrado de resultados|referencia de ffuf en Tools]].
 
 # El flujo de trabajo
 

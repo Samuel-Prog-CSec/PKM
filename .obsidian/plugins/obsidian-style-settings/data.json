@@ -89,16 +89,7 @@
   "anuppuccin-theme-settings@@anp-rainbow-subfolder-color-toggle": true,
   "anuppuccin-theme-settings@@anp-translucency-opacity": 0.15,
   "anuppuccin-theme-settings@@anp-depth-tab-opacity": 0.6,
-  "soft-paper-dark-settings@@sp-compact-all": true,
-  "soft-paper-dark-settings@@sp-compact-bases": true,
-  "soft-paper-dark-settings@@sp-compact-explorer": true,
-  "soft-paper-dark-settings@@sp-compact-explorer-extra": true,
-  "soft-paper-dark-settings@@sp-compact-settings": true,
-  "soft-paper-dark-settings@@sp-compact-body": true,
-  "soft-paper-dark-settings@@sp-compact-properties": true,
-  "soft-paper-dark-settings@@sp-compact-panes": true,
-  "soft-paper-dark-settings@@sp-status-bar-blue": true,
-  "soft-paper-dark-settings@@sp-hide-scrollbars": false,
   "soft-paper-dark-settings@@sp-rainbow-folders": true,
-  "soft-paper-dark-settings@@sp-settings-transparent-80": false
+  "soft-paper-dark-settings@@sp-hide-scrollbars": false,
+  "soft-paper-dark-settings@@sp-compact-settings": true
 }

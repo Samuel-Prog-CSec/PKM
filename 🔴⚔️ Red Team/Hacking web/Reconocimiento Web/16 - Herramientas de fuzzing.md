@@ -68,4 +68,7 @@ $ ffuf -u https://target/ -H "Host: FUZZ.target" -w subs.txt   # fuzz de vhost
 
 Mover el marcador `FUZZ` de sitio es lo que convierte a `ffuf` en una sola herramienta para todas las técnicas del tema. Con `-w lista:KEYWORD` puedes incluso definir varias posiciones con nombres propios.
 
+> [!info]+ Referencia completa de ffuf (Tools)
+> Esta nota presenta `ffuf` a nivel de **metodología**. La referencia profunda de la herramienta —modos `clusterbomb`/`pitchfork`/`sniper`, todos los matchers/filtros, autocalibración, `-request` desde Burp, rendimiento y evasión de WAF— vive en su sub-tema dedicado de Tools: [[00 - Introducción a ffuf|ffuf · referencia completa]].
+
 Con el entorno listo, la primera técnica —y la más usada— es descubrir directorios y archivos ocultos: [[17 - Fuzzing de directorios y archivos]].

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiLibrary",
       "OcDatabase16",
       "OcCodeReview16",
       "TiSettingsDollar",
-      "TiBusinessplan",
-      "CoCloud"
+      "TiBusinessplan"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -77,28 +77,17 @@
     "iconName": "LiMouse",
     "iconColor": "#00ff11"
   },
-  "TFG": "BoBxRfid",
-  "TFG/Supabase": "TiBrandSupabase",
-  "TFG/Planificación": "BoBxTask",
   "Arch Linux Custom.md": {
     "iconName": "TiTerminal2",
     "iconColor": "#ed06fe"
   },
-  "TFG/Redis": "OcCache16",
-  "TFG/TO-DO.md": {
-    "iconName": "TiChecks",
-    "iconColor": "#00ff1e"
-  },
-  "TFG/Seguridad": "TiLockCog",
   "02 - Areas/Ingenieria/GPSI": "OcProject16",
-  "TFG/Metodologías": "TiScriptPlus",
   "Windows 11 Pro Optimized Setup.md": {
     "iconName": "BoBxlWindows",
     "iconColor": "#009dff"
   },
-  "TFG/RFID": "BoBxRfid",
-  "TFG/SonarCloud": "CoCloud",
   "02 - Areas/Ingenieria/Sistemas-Empresariales": "TiSettingsDollar",
   "02 - Areas/Ingenieria/Sistemas-Empresariales/Laboratorios": "OcCodeReview16",
-  "02 - Areas/Ingenieria/Bases de Datos": "OcDatabase16"
+  "02 - Areas/Ingenieria/Bases de Datos": "OcDatabase16",
+  "02 - Recursos/Biblioteca/Librería.base": "LiLibrary"
 }

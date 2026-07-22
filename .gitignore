@@ -1,0 +1,3 @@
+# Configuración del plugin Book Search: contiene la API key de Google Books
+# en texto plano. Se ignora para que la clave no acabe en el historial de git.
+.obsidian/plugins/obsidian-book-search-plugin/data.json

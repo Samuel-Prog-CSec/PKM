@@ -79,6 +79,43 @@ Cuando el usuario haya respondido las preguntas clave:
 2. **Proponer un plan concreto** con pasos numerados, archivos afectados (rutas absolutas) y operaciones (move/rename/edit/create).
 3. **Identificar puntos de no-retorno** del plan (ej. "después del paso 4, las cadenas Zettelkasten quedan rotas hasta el paso 7 — si abortamos en medio, hay que recoser").
 4. **Pedir confirmación explícita** antes de ejecutar el primer paso.
+5. **Registrar la decisión (ADR)**: si la decisión se **ejecuta** (no se descarta), dejar constancia del **porqué** en un ADR — es lo que la memoria y el `CLAUDE.md` capturan peor: las **alternativas descartadas** y el razonamiento. Ver "Registro de decisiones (ADR)".
+
+## Registro de decisiones (ADR)
+
+Las decisiones estructurales ejecutadas se registran como **ADR** (*Architecture Decision Record*) — idea tomada de `grill-with-docs` de aihero.dev. Capturan el porqué de forma permanente y versionada en git, incluidas las **alternativas descartadas** (que la memoria no guarda bien).
+
+- **Ubicación**: `02 - Recursos/Decisiones estructurales/NNN - <título corto>.md` (NNN incremental: `001`, `002`…). Crear la carpeta al primer ADR.
+- Son **notas meta**: **exentas** de la cadena Zettelkasten (`Nota previa`/`Nota siguiente`) y de `Area`. Frontmatter mínimo:
+
+```yaml
+---
+tags:
+  - PKM/Decisiones
+Fecha de actualización: YYYY-MM-DD
+Estado: Aceptada          # o: Reemplazada por [[NNN - ...]]
+---
+```
+
+- **Cuerpo** (media pantalla, no un ensayo):
+
+```markdown
+## Contexto
+Qué fricción/problema motivó la decisión (2-4 líneas).
+
+## Decisión
+Qué se decidió, en concreto.
+
+## Alternativas descartadas
+- Opción X — por qué no.
+- Opción Y — por qué no.
+
+## Consecuencias
+Qué mejora, qué se rompe/complica, qué se migra, impacto en `CLAUDE.md`/MOCs.
+```
+
+- Si una decisión **reemplaza** a otra, marcar la vieja `Estado: Reemplazada por [[NNN - ...]]` y enlazarlas.
+- **Escueto**: si no hay alternativas reales que descartar, quizá **no** merece ADR — basta memoria/`CLAUDE.md`.
 
 ## Anti-patrones
 
@@ -86,6 +123,7 @@ Cuando el usuario haya respondido las preguntas clave:
 - ❌ Hacer las preguntas pero ignorar las respuestas al proponer el plan.
 - ❌ Más de 25 preguntas — significa que la decisión es demasiado grande para una sola sesión, dividirla.
 - ❌ Hacer preguntas que se pueden responder leyendo el código/vault directamente (`Grep` primero, preguntar después).
+- ❌ Escribir un ADR extenso o para decisiones triviales — es media pantalla y solo cuando hubo alternativas reales que descartar.
 
 ## Ejemplo abreviado
 

@@ -14,7 +14,7 @@ Area: "[[Protocolos de red.base|Protocolos de red]]"
 
 - **Shell** remota cifrada.
 - **Transferencia de ficheros**: `scp` y `sftp`.
-- **Túneles / port forwarding** (local, remoto y dinámico/SOCKS) — clave para pivoting.
+- **Túneles / port forwarding** (local, remoto y dinámico/SOCKS) — clave para [[02 - Local y dynamic port forwarding con SSH|pivoting]].
 
 # El handshake (por qué importa al auditar)
 

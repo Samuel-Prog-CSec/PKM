@@ -4,8 +4,8 @@
   "accentColor": "",
   "baseFontSize": 18,
   "enabledCssSnippets": [
-    "custom-rainbow-colors",
-    "custom-background"
+    "custom-background",
+    "custom-rainbow-colors"
   ],
   "nativeMenus": false,
   "showViewHeader": true,

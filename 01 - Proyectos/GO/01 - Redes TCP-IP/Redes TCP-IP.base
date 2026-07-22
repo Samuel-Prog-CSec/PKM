@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("Redes TCP-IP.base", "Redes TCP-IP")
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 360
+      file.tags: 320

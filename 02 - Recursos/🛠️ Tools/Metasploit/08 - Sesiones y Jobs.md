@@ -68,6 +68,6 @@ meterpreter > run autoroute -s 172.16.5.0/24    # añade ruta por esta sesión
 msf6 > use auxiliary/server/socks_proxy          # SOCKS para el resto de tools
 ```
 
-<mark style="background: #FF5582A6;">Esto convierte un único host comprometido en un trampolín hacia segmentos que no eran alcanzables</mark> — el detalle completo pertenece al futuro módulo de *Pivoting, Tunneling & Port Forwarding*.
+<mark style="background: #FF5582A6;">Esto convierte un único host comprometido en un trampolín hacia segmentos que no eran alcanzables</mark> — el detalle completo, con `autoroute`, `socks_proxy` y `portfwd`, en [[04 - Tunneling con Meterpreter]].
 
 El agente que hace posible casi todo esto —upgrade, pivoting, post-explotación— es [[09 - Meterpreter|Meterpreter]].

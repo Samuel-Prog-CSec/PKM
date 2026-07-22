@@ -264,6 +264,10 @@ pre code {
   color: var(--dracula-string);
 }
 
+.cm-hmd-codeblock.cm-comment {
+  color: var(--dracula-Comment);
+}
+
 /* Preview */
 
 code {
@@ -427,7 +431,7 @@ button.mod-cta {
 
 .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
   background-color: var(--interactive-accent);
-  color: var(--text-on-accent);
+  color: var(--text-normal);
 }
 
 /* searchbar */
