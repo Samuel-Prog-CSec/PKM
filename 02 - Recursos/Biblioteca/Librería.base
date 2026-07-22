@@ -1,13 +1,25 @@
 views:
-  - type: table
-    name: Tabla
-    filters:
-      and:
-        - file.folder == "02 - Recursos/Biblioteca/Book-notes"
   - type: cards
     name: Vista
     filters:
       and:
         - file.folder == "02 - Recursos/Biblioteca/Book-notes"
-    imageAspectRatio: 1.7
-    image: file.file
+    order:
+      - file.name
+      - Autores
+      - Estado
+    imageAspectRatio: 1.55
+    image: Portada
+    cardSize: 210
+  - type: table
+    name: Tabla
+    filters:
+      and:
+        - file.folder == "02 - Recursos/Biblioteca/Book-notes"
+    order:
+      - file.name
+      - Autores
+      - Editorial
+      - Año
+      - Estado
+      - Rating

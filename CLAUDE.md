@@ -102,42 +102,42 @@ Las certis/áreas futuras (no solo web) siguen esta receta — evita re-improvis
 | --- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------- |
 | 1   | Web Requests                        | `Hacking web/Web Requests/` *(lo saltamos, no lo tratamos)*                                                          | -                         |
 | 2   | Introduction to Web Applications    | `Hacking web/Web Applications/` *(lo saltamos, no lo tratamos)*                                                      | -                         |
-| 3   | Using Web Proxies                   | `Hacking web/Proxies web/`                                                                                           | Completado                |
-| 4   | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` (notas 00-14)                                                                      | Completado                |
-| 5   | Web Fuzzing                         | `Hacking web/Reconocimiento Web/` (notas 15-24, tag `Fuzzing`)                                                       | Completado                |
-| 6   | JavaScript Deobfuscation            | `Hacking web/JavaScript Deobfuscation/` *(crear)*                                                                    | Completado                |
-| 7   | Cross-Site Scripting (XSS)          | `Hacking web/XSS/`                                                                                                   | Completado                |
-| 8   | SQL Injection Fundamentals          | `Hacking web/💉🩸 SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `Ingenieria/Bases de Datos/`)   | Completado                |
+| 3   | Using Web Proxies                   | `Hacking web/01 - Proxies web/`                                                                                           | Completado                |
+| 4   | Information Gathering – Web Edition | `Hacking web/02 - Reconocimiento Web/` (notas 00-14)                                                                      | Completado                |
+| 5   | Web Fuzzing                         | `Hacking web/02 - Reconocimiento Web/` (notas 15-24, tag `Fuzzing`)                                                       | Completado                |
+| 6   | JavaScript Deobfuscation            | `Hacking web/03 - JavaScript Deobfuscation/` *(crear)*                                                                    | Completado                |
+| 7   | Cross-Site Scripting (XSS)          | `Hacking web/04 - XSS/`                                                                                                   | Completado                |
+| 8   | SQL Injection Fundamentals          | `Hacking web/05 - SQL Injection/1️⃣ Introducción/` (fundamentos DB/SQL en `Ingenieria/Bases de Datos/`)   | Completado                |
 | 9   | SQLMap Essentials                   | `02 - Recursos/🛠️ Tools/SQLMap/` (herramienta → Tools, NO bajo SQL Injection)                                       | Completado                |
-| 10  | Command Injections                  | `Hacking web/Command Injection/`                                                                                     | Completado                |
-| 11  | File Upload Attacks                 | `Hacking web/File Upload/`                                                                                           | Completado                |
-| 12  | Server-side Attacks                 | `Hacking web/{SSRF,SSTI,SSI,XSLT}/` (4 carpetas hermanas · tag `Server-Side`)                                        | Completado                |
-| 13  | Login Brute Forcing                 | `Hacking web/Brute Forcing/`                                                                                         | Completado                |
-| 14  | Broken Authentication               | `Hacking web/Authentication/`                                                                                        | Completado                |
-| 15  | Web Attacks                         | `Hacking web/Web Attacks/` (verb tampering, IDOR, XXE · notas 00-20)                                                 | Completado                |
-| 16  | File Inclusion                      | `Hacking web/File Inclusion/`                                                                                        | Completado                |
-| 17  | Attacking GraphQL                   | `Hacking web/GraphQL/` (notas 00-07)                                                                                 | Completado                |
-| 18  | API Attacks                         | `Hacking web/API Attacks/` (OWASP API Top 10 2023 · notas 00-12)                                                     | Completado                |
-| 19  | Attacking Common Applications       | `Hacking web/Common Applications/` — **subcarpeta por app** (~36 notas; **WordPress ampliado a 8 con el módulo 17**) | Completado ✅ (2026-07-16) |
-| 20  | Bug Bounty Hunting Process          | `Hacking web/Bug Bounty/` (notas 00-04 · 5 notas)                                                                    | Completado ✅ (2026-07-17) |
+| 10  | Command Injections                  | `Hacking web/06 - Command Injection/`                                                                                     | Completado                |
+| 11  | File Upload Attacks                 | `Hacking web/07 - File Upload/`                                                                                           | Completado                |
+| 12  | Server-side Attacks                 | `Hacking web/{12 - SSRF,13 - SSTI,14 - SSI,15 - XSLT}/` (4 carpetas hermanas · tag `Server-Side`)                                        | Completado                |
+| 13  | Login Brute Forcing                 | `Hacking web/09 - Brute Forcing/`                                                                                         | Completado                |
+| 14  | Broken Authentication               | `Hacking web/10 - Authentication/`                                                                                        | Completado                |
+| 15  | Web Attacks                         | `Hacking web/11 - Web Attacks/` (verb tampering, IDOR, XXE · notas 00-20)                                                 | Completado                |
+| 16  | File Inclusion                      | `Hacking web/08 - File Inclusion/`                                                                                        | Completado                |
+| 17  | Attacking GraphQL                   | `Hacking web/16 - GraphQL/` (notas 00-07)                                                                                 | Completado                |
+| 18  | API Attacks                         | `Hacking web/17 - API Attacks/` (OWASP API Top 10 2023 · notas 00-12)                                                     | Completado                |
+| 19  | Attacking Common Applications       | `Hacking web/19 - Common Applications/` — **subcarpeta por app** (~36 notas; **WordPress ampliado a 8 con el módulo 17**) | Completado ✅ (2026-07-16) |
+| 20  | Bug Bounty Hunting Process          | `Hacking web/30 - Bug Bounty/` (notas 00-04 · 5 notas)                                                                    | Completado ✅ (2026-07-17) |
 
 ### Path CWEE (Senior Web Penetration Tester)
 
 | # | Módulo HTB | Carpeta destino | Estado |
 | - | - | - | - |
-| 1 | Injection Attacks | ⚠️ **NO es SQLi** (XPath+LDAP+PDF) → 3 carpetas hermanas `Hacking web/{XPath Injection,LDAP Injection,PDF Injection}/` (9+7+5 notas) · el "Attacking LDAP" del módulo 19 quedó como nota-puente en `Common Applications/Misc/` enlazando a `LDAP Injection/` (no fusionado) | Completado ✅ (2026-07-16) |
-| 2 | Introduction to NoSQL Injection | `Hacking web/❌💉🩸 NoSQL Injection/` (MongoDB · notas 00-09) | Completado ✅ (2026-07-16) |
-| 3 | Attacking Authentication Mechanisms | `Hacking web/Authentication/Avanzado/` | Completado |
-| 4 | Advanced XSS and CSRF Exploitation | `Hacking web/XSS/Avanzado/` + `Hacking web/CSRF/` | Completado |
-| 5 | HTTPs/TLS Attacks | `Hacking web/HTTPs-TLS/` | Completado |
-| 6 | Abusing HTTP Misconfigurations | `Hacking web/HTTP/Misconfigurations/` | Completado |
-| 7 | HTTP Attacks | `Hacking web/HTTP/Attacks/` | Completado |
-| 8 | Blind SQL Injection | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Blind/` | Completado |
+| 1 | Injection Attacks | ⚠️ **NO es SQLi** (XPath+LDAP+PDF) → 3 carpetas hermanas `Hacking web/{22 - XPath Injection,21 - LDAP Injection,23 - PDF Injection}/` (9+7+5 notas) · el "Attacking LDAP" del módulo 19 quedó como nota-puente en `19 - Common Applications/Misc/` enlazando a `21 - LDAP Injection/` (no fusionado) | Completado ✅ (2026-07-16) |
+| 2 | Introduction to NoSQL Injection | `Hacking web/20 - NoSQL Injection/` (MongoDB · notas 00-09) | Completado ✅ (2026-07-16) |
+| 3 | Attacking Authentication Mechanisms | `Hacking web/10 - Authentication/Avanzado/` | Completado |
+| 4 | Advanced XSS and CSRF Exploitation | `Hacking web/04 - XSS/Avanzado/` + `Hacking web/24 - CSRF/` | Completado |
+| 5 | HTTPs/TLS Attacks | `Hacking web/26 - HTTPs-TLS/` | Completado |
+| 6 | Abusing HTTP Misconfigurations | `Hacking web/25 - HTTP/Misconfigurations/` | Completado |
+| 7 | HTTP Attacks | `Hacking web/25 - HTTP/Attacks/` | Completado |
+| 8 | Blind SQL Injection | `Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Blind/` | Completado |
 | 9 | Intro to Whitebox Pentesting | `Hacking web/Whitebox/Intro/` *(crear)* | Pendiente |
-| 10 | Modern Web Exploitation Techniques | `Hacking web/Modern Exploitation/` (DNS rebinding · second-order · WebSockets · notas 00-17) | Completado |
+| 10 | Modern Web Exploitation Techniques | `Hacking web/28 - Modern Exploitation/` (DNS rebinding · second-order · WebSockets · notas 00-17) | Completado |
 | 11 | Introduction to Deserialization Attacks | `Hacking web/Deserialization/Intro/` *(crear)* | Pendiente |
 | 12 | Whitebox Attacks | `Hacking web/Whitebox/Attacks/` *(crear)* | Pendiente |
-| 13 | Advanced SQL Injections | `Hacking web/💉🩸 SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
+| 13 | Advanced SQL Injections | `Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
 | 14 | Advanced Deserialization Attacks | `Hacking web/Deserialization/Advanced/` *(crear)* | Pendiente |
 | 15 | Parameter Logic Bugs | `Hacking web/Parameter Logic Bugs/` *(crear)* | Pendiente |
 
@@ -158,7 +158,7 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 2  | Getting Started | *(se salta / cherry-pick — primer generalista, contenido cubierto en otros módulos)* | — |
 | 3  | Network Enumeration with Nmap | `02 - Recursos/🛠️ Tools/Nmap/` (herramienta → Tools; 10 notas 00-09 + `Nmap.base`) | ✅ Completado (2026-07-18) |
 | 4  | Footprinting | `Pentesting/001 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingenieria/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
-| 5  | Information Gathering – Web Edition | `Hacking web/Reconocimiento Web/` | ✅ Contenido web |
+| 5  | Information Gathering – Web Edition | `Hacking web/02 - Reconocimiento Web/` | ✅ Contenido web |
 | 6  | Vulnerability Assessment | `Pentesting/002 - Evaluación de vulnerabilidades/` (7 notas 00-06 + `.base`; **Nessus** [4 notas] y **OpenVAS** [2 notas] → `02 - Recursos/🛠️ Tools/`, como Nmap) | ✅ Completado (2026-07-18) |
 | 7  | File Transfers | `Pentesting/003 - Transferencia de archivos/` (12 notas 00-11 + `.base`; misc/protegidas/catching/LotL + detección/evasión + arsenal) | ✅ Completado (2026-07-19) |
 | 8  | Shells & Payloads | `Pentesting/004 - Shells y Payloads/` (13 notas 00-12 + `.base`; incl. detección/evasión + arsenal) | ✅ Completado (2026-07-18) |
@@ -167,17 +167,17 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 11 | Attacking Common Services | `Pentesting/006 - Ataque a servicios comunes/` *(tentativo)* | Pendiente |
 | 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/007 - Pivoting y túneles/` (16 notas 00-15 + `.base`; **Ligolo-ng** net-new, detección/evasión, arsenal; rpivot plegado en arsenal) | ✅ Completado (2026-07-19) |
 | 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/Enumeración y Ataques/` (**área propia** · 6 sub-temas Level-2 · 27 notas 00-26 · Linux/Windows unificados por técnica; las 5 notas AD de `005` [NTLM-Kerberos/PtH/PtT/Pass the Certificate/NTDS.dit] **cross-linkeadas, no movidas**) | ✅ Completado (2026-07-21) |
-| 14 | Using Web Proxies | `Hacking web/Proxies web/` | ✅ Contenido web |
-| 15 | Attacking Web Applications with Ffuf | `Hacking web/Reconocimiento Web/` (Fuzzing, metodología) + `02 - Recursos/🛠️ Tools/Ffuf/` (8 notas 00-07 + `Ffuf.base`, referencia de la herramienta) | ✅ Contenido web + tool (2026-07-19) |
-| 16 | Login Brute Forcing | `Hacking web/Brute Forcing/` | ✅ Contenido web |
-| 17 | SQL Injection Fundamentals | `Hacking web/💉🩸 SQL Injection/` | ✅ Contenido web |
+| 14 | Using Web Proxies | `Hacking web/01 - Proxies web/` | ✅ Contenido web |
+| 15 | Attacking Web Applications with Ffuf | `Hacking web/02 - Reconocimiento Web/` (Fuzzing, metodología) + `02 - Recursos/🛠️ Tools/Ffuf/` (8 notas 00-07 + `Ffuf.base`, referencia de la herramienta) | ✅ Contenido web + tool (2026-07-19) |
+| 16 | Login Brute Forcing | `Hacking web/09 - Brute Forcing/` | ✅ Contenido web |
+| 17 | SQL Injection Fundamentals | `Hacking web/05 - SQL Injection/` | ✅ Contenido web |
 | 18 | SQLMap Essentials | `02 - Recursos/🛠️ Tools/SQLMap/` | ✅ Contenido web |
-| 19 | Cross-Site Scripting (XSS) | `Hacking web/XSS/` | ✅ Contenido web |
-| 20 | File Inclusion | `Hacking web/File Inclusion/` | ✅ Contenido web |
-| 21 | File Upload Attacks | `Hacking web/File Upload/` | ✅ Contenido web |
-| 22 | Command Injections | `Hacking web/Command Injection/` | ✅ Contenido web |
-| 23 | Web Attacks | `Hacking web/Web Attacks/` | ✅ Contenido web |
-| 24 | Attacking Common Applications | `Hacking web/Common Applications/` | ✅ Contenido web |
+| 19 | Cross-Site Scripting (XSS) | `Hacking web/04 - XSS/` | ✅ Contenido web |
+| 20 | File Inclusion | `Hacking web/08 - File Inclusion/` | ✅ Contenido web |
+| 21 | File Upload Attacks | `Hacking web/07 - File Upload/` | ✅ Contenido web |
+| 22 | Command Injections | `Hacking web/06 - Command Injection/` | ✅ Contenido web |
+| 23 | Web Attacks | `Hacking web/11 - Web Attacks/` | ✅ Contenido web |
+| 24 | Attacking Common Applications | `Hacking web/19 - Common Applications/` | ✅ Contenido web |
 | 25 | Linux Privilege Escalation | `Pentesting/008 - Escalada de privilegios Linux/` (25 notas 00-24 + `.base`; detección/evasión + arsenal net-new; CVEs 2021-2025 [PwnKit, Baron Samedit, Dirty Pipe, Looney Tunables, GameOver(lay), sudo 2025, nf_tables] y escapes de contenedores [runc, K8s] modernizados) | ✅ Completado (2026-07-22) |
 | 26 | Windows Privilege Escalation | `Pentesting/009 - Escalada de privilegios Windows/` (26 notas 00-25 + `.base`; familia Potato [GodPotato/PrintSpoofer], UAC, CLFS/PrintNightmare/SeriousSAM modernizados; detección/evasión + arsenal net-new) | ✅ Completado (2026-07-22) |
 | 27 | Documentation & Reporting | `Pentesting/010 - Documentación y reporting/` *(tentativo)* | Pendiente |
@@ -194,7 +194,7 @@ Extraídos por complementar módulos ya hechos con técnicas/herramientas/escena
 | Módulo HTB | Destino | Estado |
 | - | - | - |
 | 17 · Hacking WordPress | **Fusionado** en `Common Applications/WordPress/` (2→8 notas granulares: estructura/roles, enumeración, login/brute, plugins, RCE admin, detección/evasión, arsenal, hardening) | Completado ✅ (2026-07-17) |
-| 160 · Web Service & API Attacks | `Hacking web/Web Services/` (SOAP/WSDL/SOAPAction/Command Injection/xmlrpc · 7 notas) + `Hacking web/ReDoS/` (net-new · 2 notas). Su grupo "API Attacks" (vulns clásicas vía endpoint API) se **distribuyó como enriquecimientos** a las carpetas canónicas (SQLi, File Upload, File Inclusion, XSS, SSRF, Web Attacks/XXE) | Completado ✅ (2026-07-17) |
+| 160 · Web Service & API Attacks | `Hacking web/18 - Web Services/` (SOAP/WSDL/SOAPAction/Command Injection/xmlrpc · 7 notas) + `Hacking web/29 - ReDoS/` (net-new · 2 notas). Su grupo "API Attacks" (vulns clásicas vía endpoint API) se **distribuyó como enriquecimientos** a las carpetas canónicas (SQLi, File Upload, File Inclusion, XSS, SSRF, Web Attacks/XXE) | Completado ✅ (2026-07-17) |
 
 Antes de crear una carpeta nueva, **siempre verificar** con `ls` o `Glob` que no existe ya bajo otro nombre — el vault tiene cierta inconsistencia histórica (carpetas con emoji vs sin emoji).
 
@@ -251,7 +251,7 @@ Detalle completo en la skill `pkm-note-format`. Recordatorios siempre-on:
 - **Tablas** para comparativas, ≤8 filas.
 
 > [!warning]+ Excepción Nuevo-Formato
-> En `🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/Nuevo-Formato/` **no** se usan marks de color: usar `"==highlight=="` y `"**bold**"`". Resto de convenciones igual. (Detalle en `pkm-note-format`.)
+> En `🔴⚔️ Red Team/Hacking web/05 - SQL Injection/Nuevo-Formato/` **no** se usan marks de color: usar `"==highlight=="` y `"**bold**"`". Resto de convenciones igual. (Detalle en `pkm-note-format`.)
 
 ## Flujo de extracción HTB → nota
 
@@ -269,6 +269,12 @@ Detalle completo en la skill `pkm-note-format`. Recordatorios siempre-on:
 > - *Gotcha*: el filtro de seguridad de la herramienta puede **bloquear** trozos con material tipo credencial/clave. Si pasa, saca solo los encabezados (`content.split('\n').filter(l=>/^#/.test(l))`) para el esquema y redacta desde el conocimiento experto + el outline.
 
 *(Fases 0–3 paso a paso, reglas de transformación, criterios de relleno a eliminar y de contexto propio a añadir, herramientas del vault y anti-patrones → skill `htb-extraction-workflow`.)*
+
+## Biblioteca personal (libros en PDF)
+
+> **Fuente autoritativa: skill `pkm-library-workflow`** — procedimiento completo para catalogar un PDF nuevo, esquema de frontmatter, extracción de portada y por qué estas notas se tratan distinto al resto del vault.
+
+`02 - Recursos/Biblioteca/` cataloga los libros de seguridad que Samuel ya tiene en PDF (`PDF/`, notas en `Book-notes/`, MOC `Librería.base`). **No se usa el plugin Book Search** (Google Books API): sus 503 persistentes son un fallo real e intermitente del backend de Google (`reason: backendFailed`, confirmado contra la API directamente), no arreglable con API key propia — ver ADR `005 - Catálogo de la Biblioteca personal`. En su lugar, los metadatos se extraen del propio PDF (portada + copyright) y se verifican por contraste contra Open Library (gratis, sin key); si no hay portada real ahí, se extrae directamente de la página de portada del PDF con `PyMuPDF`. Estas notas van **sin cadena Zettelkasten** (como las ADR) — son fichas de catálogo, no notas de concepto.
 
 ## Vista `.base` (MOCs de Obsidian) — jerarquía de 2 niveles
 
@@ -298,7 +304,7 @@ views:
 
 ### Level 2 — Índice de sub-tema concreto
 
-- **Ubicación**: dentro de la sub-carpeta del sub-tema (ej. `🔴⚔️ Red Team/Hacking web/XSS/XSS.base`).
+- **Ubicación**: dentro de la sub-carpeta del sub-tema (ej. `🔴⚔️ Red Team/Hacking web/04 - XSS/XSS.base`).
 - **Función**: índice de las notas atómicas del sub-tema. A este `.base` apuntan las notas vía su propiedad `Area`.
 - **Filtro estándar**: `Area == link("<este .base>.base", "<alias>")`. Desacopla el listado de la ubicación física de la nota — robusto ante reorganizaciones.
 
@@ -349,6 +355,7 @@ Estas se activan automáticamente cuando la descripción coincide con la tarea. 
 - `pkm-design-grilling` — Interrogatorio dirigido antes de cualquier decisión estructural del PKM (reorganizar carpetas, crear MOCs, fusionar temas, renombrados masivos). 8–20 preguntas categorizadas por motivación, alcance, convenciones, reversibilidad y modelo mental antes de proponer plan. Adaptación PKM de `/grill-me` de aihero.dev. Ahora también **registra la decisión ejecutada como ADR** en `02 - Recursos/Decisiones estructurales/` (idea de `grill-with-docs`).
 - `pkm-structure-audit` — Auditoría de salud del vault: wikilinks rotos, cadenas Zettelkasten rotas, densidad de notas fuera de rango, taxonomía de tags duplicada, MOCs `.base` obsoletas, frontmatter inconsistente. Produce informe priorizado sin tocar archivos. Adaptación PKM de `/improve-codebase-architecture` de aihero.dev.
 - `pkm-research` — Investigación con **fuentes primarias/oficiales** y cita por-fuente; materializa el eje 1/eje 4. La usa `htb-extraction-workflow` en el enriquecimiento (Fase 1.2) y es invocable a demanda para pentest/bug bounty. Adaptación PKM de `/research` de aihero.dev.
+- `pkm-library-workflow` — Catalogar un PDF nuevo en la Biblioteca personal (`02 - Recursos/Biblioteca/`): extracción de metadatos del propio PDF, verificación por contraste contra Open Library, fallback de portada con `PyMuPDF`, esquema de frontmatter de las notas de catálogo (sin cadena Zettelkasten). Se activa al mencionar "añade este libro", "cataloga este PDF", etc.
 
 ### Plugins ya instalados a nivel usuario (`~/.claude/settings.json`)
 
