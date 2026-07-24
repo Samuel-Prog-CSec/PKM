@@ -33,7 +33,7 @@ Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 | `Wappalyzer` | Extensión/servicio que perfila tecnologías web (CMS, frameworks, analítica) |
 | `BuiltWith` | Perfilador con informes detallados del stack |
 | `WhatWeb` | CLI con gran base de firmas |
-| `Nmap` | Escáner versátil; con `NSE` hace fingerprinting de servicio/SO (ver [[🔌 Puertos]]) |
+| `Nmap` | Escáner versátil; con `NSE` hace fingerprinting de servicio/SO (ver [[02 - Escaneo de puertos y hosts|escaneo de puertos]]) |
 | `Netcraft` | Informes de tecnología, hosting y postura de seguridad |
 | `wafw00f` | Detecta e identifica `WAF` |
 

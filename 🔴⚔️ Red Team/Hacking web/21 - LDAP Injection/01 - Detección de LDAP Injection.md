@@ -44,7 +44,7 @@ Cualquier entrada que alimente un `search filter`: usuario y contraseña del log
 | `*)(uid=*` / `)(\|(&` | ❌ | ❌ | ✅ |
 | Comodín `*` amplía resultados | a veces | ❌ | ✅ |
 
-Confirmar con sintaxis propia de LDAP (comodín `*`, cierre de paréntesis `)(`) descarta los otros motores y fija el vector — mismo criterio en espejo que la [[01 - Detección de XPath Injection|detección de XPath]].
+Confirmar con sintaxis propia de LDAP (comodín `*`, cierre de paréntesis `)(`) descarta los otros motores y fija el vector — mismo criterio en espejo que la [[01 - Detección de XPath Injection|detección de XPath]] y la [[02 - Detección de NoSQL injection|de NoSQL]].
 
 > [!info]+ WAF y realidad en 2026
 > Igual que XPath, <mark style="background: #8000E1A6;">los WAF rara vez traen firmas específicas de LDAP</mark>: poco bloqueo, pero también un bug poco frecuente y con baja concienciación entre desarrolladores. La detección es manual (proxy + prueba de caracteres de control); las herramientas confirman y automatizan, no descubren el punto → [[05 - Arsenal de herramientas LDAP]].

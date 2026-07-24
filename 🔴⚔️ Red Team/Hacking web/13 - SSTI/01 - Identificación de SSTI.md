@@ -36,7 +36,10 @@ flowchart TD
     Q3 -->|Sí| FM["Freemarker / Velocity / Mako (Java/Python)"]
     Q3 -->|No| Q4{"¿{7*7} = 49?"}
     Q4 -->|Sí| SMARTY["Smarty (PHP)"]
-    Q4 -->|No| NO["Probablemente no vulnerable"]
+    Q4 -->|No| Q5{"¿#{7*7} o *{7*7} = 49?"}
+    Q5 -->|"#{7*7}"| SLIM["Slim / Pug (Ruby/Node)"]
+    Q5 -->|"*{7*7}"| THYME["Thymeleaf (Java)"]
+    Q5 -->|No| NO["Probablemente no vulnerable"]
 ```
 
 <mark style="background: #FF5582A6;">La prueba clave para los dos motores más comunes</mark>: si `{{7*7}}` devuelve `49`, es Jinja2 **o** Twig; para distinguirlos se inyecta `{{7*'7'}}`:
@@ -54,6 +57,9 @@ flowchart TD
 | `{7*7}` → `49` | | **Smarty** | PHP |
 | `#{7*7}` → `49` | | **Slim / Pug** (interpolación `#{}`) | Ruby / Node |
 | `*{7*7}` → `49` | | **Thymeleaf** | Java |
+
+> [!info]+ Desambiguar el trío que comparte `${7*7}` (Freemarker / Velocity / Mako)
+> Los tres dan `49` a `${7*7}` pero tienen payloads de RCE **totalmente distintos** (ver [[04 - Evasión de filtros y sandbox en SSTI|Otros motores]]), así que "es uno de estos tres" no basta para elegir payload. Un segundo test los separa: `${7*'7'}` → **error** en Freemarker (no multiplica string × int), **`49`** en Velocity. Mako se delata por su sintaxis Python embebida (`${...}` junto a bloques `<% ... %>`).
 
 > [!important]+ Si no se refleja: SSTI a ciegas
 > Si `{{7*7}}` no aparece evaluado en la respuesta pero sospechas SSTI (el input va a una plantilla de email, PDF o log), considera **SSTI ciega**: payloads con retardo medible o, mejor, interacción **OOB** (que el payload fuerce una petición a tu `interactsh`/Collaborator). Mismo oráculo que la [[04 - Blind SSRF|SSRF ciega]].

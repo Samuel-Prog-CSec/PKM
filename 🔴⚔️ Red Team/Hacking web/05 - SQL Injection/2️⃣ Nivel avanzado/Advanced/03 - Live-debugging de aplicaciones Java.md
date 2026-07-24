@@ -21,7 +21,7 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8000 -jar
 Listening for transport dt_socket at address: 8000
 ```
 
-<mark style="background: #FFB8EBA6;">`suspend=y` hace que la app espere a que el depurador se conecte antes de arrancar</mark>. Como el puerto suele estar en `localhost`, se reenvía por SSH:
+<mark style="background: #FFB8EBA6;">`suspend=y` hace que la app espere a que el depurador se conecte antes de arrancar</mark>. Como el puerto suele estar en `localhost`, se reenvía por SSH ([[02 - Local y dynamic port forwarding con SSH|local port forwarding]]):
 
 ```shell-session
 $ ssh -L 8000:127.0.0.1:8000 student@10.10.10.x

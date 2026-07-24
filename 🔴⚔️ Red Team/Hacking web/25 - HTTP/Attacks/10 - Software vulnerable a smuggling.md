@@ -45,6 +45,13 @@ Enviadas por una sola conexión, la **segunda** respuesta llega con `404` en vez
 > - **0.CL**: la inversa (el front ignora el CL).
 > - **Client-side desync**: el desync ocurre entre el **navegador de la víctima** y el servidor, explotable <mark style="background: #FFB8EBA6;">**sin** proxy intermedio y sin acceso a la conexión de la víctima</mark>, disparado con JavaScript desde una web del atacante.
 > - **Connection-state attacks** (`first-request routing`, `first-request validation`): el front-end aplica reglas solo a la **primera** petición de una conexión.
+
+> [!danger]+ Estado del arte 2025: "HTTP/1.1 Must Die" (Kettle, Black Hat USA / DEF CON 2025)
+> La investigación de smuggling más importante desde 2022 ([HTTP/1.1 Must Die](https://portswigger.net/research/http1-must-die), James Kettle, ago 2025) abre una familia nueva basada en la cabecera **`Expect`**:
+> - **Expect-based desyncs**: un simple `Expect: 100-continue` provoca **0.CL** en muchos servidores; ofuscándolo (`Expect: y 100-continue`, o con *obsolete line folding*) se logra **CL.0**, sin tocar `Transfer-Encoding`. Víctimas reales: T-Mobile, GitLab, Netlify, Akamai.
+> - **Early-response gadgets**: para escapar del "deadlock" del 0.CL hace falta un endpoint que responda **antes** de leer el cuerpo; el nombre reservado de Windows `/con` en IIS es el gadget canónico.
+> - **Double-desync chaining**: encadenar dos peticiones para convertir un 0.CL en un CL.0 *weaponizado* contra la víctima.
+> - Caso estrella: un desync HTTP/1.1 interno de **Cloudflare** (Tier 1→Tier 2) expuso <mark style="background: #FFB86CA6;">**>24 millones de sitios**</mark> a takeover. `CVE-2025-32094` (Akamai — `Expect` + *obsolete line folding* → CL.0) es el ejemplo con CVE asignada. Conclusión de Kettle: **HTTP/2 de extremo a extremo** es la única defensa real, no un mitigante entre varios.
 > Son de lo más rentable en bug bounty actual y ninguno aparece en el material original.
 
 > [!warning] Ejemplos reales de software vulnerable
@@ -53,4 +60,5 @@ Enviadas por una sola conexión, la **segunda** respuesta llega con `404` en vez
 ## Referencias
 
 - [PortSwigger — Browser-Powered Desync Attacks (Kettle, 2022)](https://portswigger.net/research/browser-powered-desync-attacks)
+- [PortSwigger — HTTP/1.1 Must Die (Kettle, 2025)](https://portswigger.net/research/http1-must-die) · [CVE-2025-32094 (Akamai)](https://nvd.nist.gov/vuln/detail/CVE-2025-32094)
 - [Gunicorn 20.0.4 request smuggling (grenfeldt.dev)](https://grenfeldt.dev/2021/04/01/gunicorn-20.0.4-request-smuggling/)

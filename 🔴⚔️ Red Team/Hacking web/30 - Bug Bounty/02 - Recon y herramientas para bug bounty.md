@@ -17,6 +17,7 @@ El módulo original no cubre la parte que más determina el éxito en bug bounty
 | Fase | Herramientas | Qué hace |
 | - | - | - |
 | Enum de subdominios | `subfinder`, `amass`, `assetfinder`, `chaos` | Descubre subdominios (pasivo) |
+| Enum vía certificados | `crt.sh` (CT logs), `tlsx` | Subdominios y hosts internos que aparecen en los certificados — de las técnicas de recon más rentables (ver [[01 - Infraestructura de Clave Pública (PKI)|CT logs]]) |
 | Resolución y sondeo | `dnsx`, `httpx` | Resuelve y filtra los vivos; tecnología, título, status |
 | Puertos | `naabu` | Escaneo rápido de puertos |
 | Descubrimiento de contenido | `ffuf`, `feroxbuster`, `katana`, `gau`, `waybackurls`, `waymore` | Directorios, endpoints y URLs históricas |

@@ -16,8 +16,8 @@ Cuando la aplicación **refleja** los resultados de la consulta, la extracción 
 
 Un buscador envía `GET /index.php?q=<término>`, y el servidor filtra por ese valor:
 
-```javascript
-db.types.find({name: $_GET['q']})
+```php
+$collection->find(["name" => $_GET['q']]);
 ```
 
 # Volcar la colección con `$regex`

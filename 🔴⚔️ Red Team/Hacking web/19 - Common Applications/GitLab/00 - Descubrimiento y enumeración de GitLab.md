@@ -38,9 +38,9 @@ Merece la pena peinarlos: código de producción, credenciales hardcodeadas, cla
 Email has already been taken
 ```
 
-<mark style="background: #FF5582A6;">Funciona incluso con el registro deshabilitado</mark> (la página `/users/sign_up` sigue accesible aunque no puedas completar el registro). Con la lista de usuarios → *password spraying* o reutilización de credenciales de leaks ([[00 - Enumeración y ataques a osTicket|Dehashed]]). El **2FA está desactivado por defecto**.
+<mark style="background: #FF5582A6;">Funciona incluso con el registro deshabilitado</mark> (la página `/users/sign_up` sigue accesible aunque no puedas completar el registro). Con la lista de usuarios → [[04 - Password spraying, stuffing y defaults|password spraying]] o reutilización de credenciales de leaks (Dehashed). El **2FA está desactivado por defecto**.
 
 > [!info]+ Herramientas y modernización
-> Para secretos en repos e historial: <mark style="background: #ADCCFFA6;">`gitleaks` y `trufflehog`</mark>. Para vulns: `nuclei -tags gitlab`. GitLab arrastra CVEs serias (12.9.0, 11.4.7, CE 13.10.3…) — la crítica actual es **CVE-2021-22205** (RCE no auth), en [[01 - Ataques a GitLab]]. Defensa: 2FA obligatorio, `Fail2Ban`, y restringir IPs de acceso.
+> Para secretos en repos e historial: <mark style="background: #ADCCFFA6;">`gitleaks` y `trufflehog`</mark>. Para vulns: `nuclei -tags gitlab`. GitLab arrastra CVEs serias —p. ej. **CVE-2020-10977** (lectura de ficheros → RCE encadenada en < 12.9.1)—, pero la de referencia es **CVE-2021-22205** (RCE no autenticada vía ExifTool, parcheada en 13.8.8 / 13.9.6 / 13.10.3), en [[01 - Ataques a GitLab]]. Defensa: 2FA obligatorio, `Fail2Ban`, y restringir IPs de acceso.
 
 Con la versión o el acceso, a la explotación: [[01 - Ataques a GitLab]].

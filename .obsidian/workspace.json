@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "001f978fd9fd4ca5",
+        "id": "c1aa9d7370db05ed",
         "type": "tabs",
         "children": [
           {
-            "id": "46cc35b9512ff591",
+            "id": "6ccd65d628a91318",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Redes",
+                "query": "path:\"03 - Archivos/Excalidraw/\" ",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -109,13 +109,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 - Recursos/Biblioteca/Book-notes/Black Hat Go.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Black Hat Go"
+              "title": "Esquema"
             }
           },
           {
@@ -208,24 +207,35 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "callout-manager:Insert Callout": false,
       "graph:Abrir vista gráfica": false,
-      "obsidian-book-search-plugin:Create new book note": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "markdown-importer:Abrir el importador de Markdown": false
     }
   },
   "active": "a5984c00f83c5aee",
   "lastOpenFiles": [
+    "03 - Archivos/Excalidraw/Drawing 2026-07-23 17.51.46.excalidraw.md",
+    "03 - Archivos/Excalidraw/proceso_resolucion_dns.md",
+    "Excalidraw/Drawing 2026-07-23 17.47.33.excalidraw.md",
+    "🔵🛡️ Blue Team/002 - Manejo de logs/Sysmon.md",
+    "Excalidraw",
+    "🔴⚔️ Red Team/Hacking web/04 - XSS/00 - Introducción a XSS.md",
+    "🔴⚔️ Red Team/Hacking web/04 - XSS/01 - XSS Almacenado.md",
+    "Ingenieria/BI/001 - El dato como activo y fundamentos de BI.md",
+    "02 - Recursos/Templates/Template para proyectos.md",
+    "🔴⚔️ Red Team/Hacking web/21 - LDAP Injection/01 - Detección de LDAP Injection.md.tmp.26324.c5bf86ab5e2c",
+    "🔴⚔️ Red Team/Hacking web/22 - XPath Injection/06 - Evasión de filtros y WAF en XPath.md.tmp.26324.208fd4859f2c",
+    "🔴⚔️ Red Team/Hacking web/01 - Proxies web/11 - OPSEC y evasión de detección.md.tmp.26324.3d3c402cf010",
+    "🔴⚔️ Red Team/Hacking web/10 - Authentication/00 - Introducción a la autenticación.md.tmp.26324.c23b781e1a9e",
+    "🔴⚔️ Red Team/Hacking web/10 - Authentication/05 - Bypass de protecciones anti-fuerza-bruta.md.tmp.26324.dbb254bb98b9",
+    "🔴⚔️ Red Team/Hacking web/02 - Reconocimiento Web/19 - Fuzzing de parámetros y valores.md.tmp.26324.8fc987e318f1",
+    "🔴⚔️ Red Team/Hacking web/02 - Reconocimiento Web/19 - Fuzzing de parámetros y valores.md.tmp.26324.e5c62777bd3e",
+    "🔴⚔️ Red Team/Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Advanced/03 - Live-debugging de aplicaciones Java.md.tmp.26324.1a38e6e2368a",
+    "🔴⚔️ Red Team/Hacking web/05 - SQL Injection/1️⃣ Introducción/08 - Escritura de archivos.md.tmp.26324.19747d4b16a5",
+    "open redirect.md",
+    "Windows 11 Pro Optimized Setup.md",
     "02 - Recursos/Biblioteca/Book-notes/Hacks, Leaks, and Revelations.md",
-    "02 - Recursos/Biblioteca/Librería.base",
-    "02 - Recursos/Biblioteca/Book-notes/Evading EDR.md.tmp.19920.828a740f25d6",
-    "02 - Recursos/Biblioteca/Book-notes/Evading EDR.md.tmp.19920.e627de688b59",
-    "02 - Recursos/Biblioteca/Book-notes/Ethical Hacking.md.tmp.19920.f4f008cb567d",
-    "02 - Recursos/Biblioteca/Book-notes/Python Web Penetration Testing Cookbook.md.tmp.19920.ad14340c4520",
-    "02 - Recursos/Biblioteca/Book-notes/Python Web Penetration Testing Cookbook.md.tmp.19920.7e0334e355ed",
-    "02 - Recursos/Biblioteca/Book-notes/Windows Security Internals.md.tmp.19920.3f09250dde48",
-    "02 - Recursos/Biblioteca/Book-notes/The Android Malware Handbook.md.tmp.19920.1ffd17aa3103",
-    "02 - Recursos/Biblioteca/Book-notes/Real-World Bug Hunting.md.tmp.19920.8c4150fa5cb5",
     "02 - Recursos/Biblioteca/Book-notes/Evading EDR.md",
     "03 - Archivos/Images/Biblioteca/Windows Security Internals.jpg",
     "03 - Archivos/Images/Biblioteca/Real-World Bug Hunting.jpg",
@@ -233,7 +243,6 @@
     "03 - Archivos/Images/Biblioteca/Evading EDR.jpg",
     "03 - Archivos/Images/Biblioteca/Python Web Penetration Testing Cookbook.jpg",
     "03 - Archivos/Images/Biblioteca/The Android Malware Handbook.jpg",
-    "03 - Archivos/Images/Biblioteca",
     "02 - Recursos/Biblioteca/Book-notes/Ethical Hacking.md",
     "02 - Recursos/Biblioteca/Book-notes/Python Web Penetration Testing Cookbook.md",
     "02 - Recursos/Biblioteca/Book-notes/Windows Security Internals.md",
@@ -248,15 +257,6 @@
     "02 - Recursos/Biblioteca/Book-notes/Cyberjutsu.md",
     "02 - Recursos/Biblioteca/Book-notes/Linux Basics for Hackers.md",
     "02 - Recursos/Biblioteca/Book-notes/The Art of Mac Malware.md",
-    "02 - Recursos/Biblioteca/Book-notes/Malware Data Science.md",
-    "02 - Recursos/Biblioteca/Book-notes/Black Hat Go.md",
-    "02 - Recursos/Decisiones estructurales/004 - Numeración de carpetas de primer nivel en Hacking web por orden de estudio.md",
-    "🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/04 - Ejemplos de reportes (XSS, CSRF, RCE).md",
-    "🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/02 - Recon y herramientas para bug bounty.md",
-    "🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/03 - Escribir un buen reporte.md",
-    "🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/01 - Reglas, legalidad y conducta.md",
-    "🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/00 - Programas de bug bounty y scope.md",
-    "🔴⚔️ Red Team/Hacking web/29 - ReDoS/01 - Explotación, detección y mitigación de ReDoS.md",
     "Agent-skills-TFG.png",
     "recon-images-grid.jpeg",
     "04 - Archivos/Images/SIEA/biblio-ampliacion-lista.png",

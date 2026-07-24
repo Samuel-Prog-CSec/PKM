@@ -48,7 +48,7 @@ La raíz es **broken access control**; la referencia directa solo lo hace explot
 
 ## 1. Control de acceso a nivel de objeto (imprescindible)
 
-Implementar un `RBAC` y **mapearlo a todos los objetos**. En cada petición, el back-end decide en función del **token de sesión**, nunca de datos que envía el cliente:
+Implementar un `RBAC` y **mapearlo a todos los objetos**. En cada petición, el back-end decide en función del **token de sesión**, nunca de datos que envía el cliente (el ejemplo usa la sintaxis de **Firestore Security Rules** a modo ilustrativo; en un backend REST como Express/Django/Spring el mismo control vive en el middleware de autorización):
 
 ```text
 match /api/profile/{userId} {

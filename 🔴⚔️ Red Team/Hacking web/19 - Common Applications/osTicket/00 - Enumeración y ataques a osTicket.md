@@ -28,7 +28,7 @@ CVEs escasas; una reseñable: **CVE-2020-24881** (SSRF, v1.14.1) → acceso a re
 
 Escenario real de externo:
 
-1. OSINT / leaks con **Dehashed** → credenciales en claro de empleados (`kevin:Fish1ng_s3ason!`).
+1. OSINT / leaks con **Dehashed** → credenciales en claro de empleados (`kevin:Fish1ng_s3ason!`); reutilizarlas contra el login es [[04 - Password spraying, stuffing y defaults|credential stuffing]].
 2. El login de osTicket **acepta email** además de usuario → probar `kevin@inlanefreight.local`.
 3. Dentro de la cola del agente de soporte: <mark style="background: #8000E1A6;">tickets cerrados que filtran resets de contraseña</mark> — el agente envió por el portal la "contraseña estándar de nuevos empleados".
 4. Esa contraseña estándar + [[00 - Introducción al brute forcing|password spraying]] (con `linkedin2username` para la lista de usuarios) contra el portal VPN → acceso.

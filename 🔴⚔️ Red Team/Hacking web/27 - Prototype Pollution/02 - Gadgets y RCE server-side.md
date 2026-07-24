@@ -54,6 +54,13 @@ Confirmado el sink, se escala a RCE según el método disponible:
 
 - **`NODE_OPTIONS`** con `--require /ruta` carga un módulo arbitrario al arrancar el hijo; combinado con un fichero que controles (un `upload`, un log envenenado) da ejecución.
 
+> [!important]+ RCE sin tocar el disco: `--import` con `data:` URI (pruébala primero)
+> Desde **Node 19+**, `--import` acepta una **`data:` URI inline**, así que no hace falta plantar ningún fichero — RCE directa incluso contra un contenedor read-only:
+> ```json
+> {"__proto__":{"NODE_OPTIONS":"--import=\"data:text/javascript,import{exec}from 'node:child_process';exec('id')\""}}
+> ```
+> Es estrictamente más potente que `--require` (que exige un fichero controlado). Técnica de **Gareth Heyes / PortSwigger (2023)** que **sigue viva** en Node 20/22/24: el equipo de Node trata el prototype pollution en core como *by-design* y no lo parchea, así que el gadget vía variable de entorno persiste aunque el hardening reciente de `child_process` haya cerrado otros vectores. Fuente: [PortSwigger — Prototype pollution in Node without the filesystem](https://portswigger.net/research/exploiting-prototype-pollution-in-node-without-the-filesystem).
+
 # Gadgets en motores de plantillas
 
 Los *template engines* compilan la plantilla a una función JavaScript, leyendo opciones de compilación de un objeto: otro punto perfecto para propiedades heredadas. Es la frontera con la [[00 - Motores de plantillas e introducción a SSTI|SSTI]]: allí el atacante controla la **plantilla**; aquí, una **opción de compilación** heredada del prototipo —mismo sink de código, distinto camino—.
@@ -70,7 +77,7 @@ EJS usa `opts.outputFunctionName` como nombre de la función en el cuerpo del te
 
 ## Pug/Jade — `block`
 
-Pug lee bloques de la configuración durante la compilación:
+Pug compila la plantilla a una **función JavaScript** a partir de un AST; al contaminar `block` con un nodo `{"type":"Text","line":"..."}`, la propiedad `line` se **concatena sin escapar** en el código generado, que luego se evalúa — igual que en EJS, pero el gadget entra por el AST en vez de por `outputFunctionName`:
 
 ```json
 {"__proto__":{"block":{"type":"Text","line":"process.mainModule.require('child_process').execSync('id')"}}}

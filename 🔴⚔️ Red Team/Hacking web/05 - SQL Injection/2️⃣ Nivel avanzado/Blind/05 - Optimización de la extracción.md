@@ -31,7 +31,7 @@ for i in range(1, length + 1):
 print()
 ```
 
-<mark style="background: #ADCCFFA6;">Cada pregunta descarta la mitad del espacio restante</mark>, así que localizar un carácter entre 128 valores cuesta `log₂(128) = 7` peticiones en lugar de hasta 95. El volcado de `maria` baja de ~4.128 peticiones (1.005 s) a **256 peticiones (~61 s)**.
+<mark style="background: #ADCCFFA6;">Cada pregunta descarta la mitad del espacio restante</mark>, así que localizar un carácter entre 128 valores cuesta `log₂(128) = 7` peticiones en lugar de hasta 95. El volcado de `maria` baja de **miles de peticiones a un puñado de cientos** (≈13× menos): la extracción lineal previa gastaba decenas de intentos por carácter, la bisección solo 7.
 
 # SQL-Anding (extracción bit a bit)
 

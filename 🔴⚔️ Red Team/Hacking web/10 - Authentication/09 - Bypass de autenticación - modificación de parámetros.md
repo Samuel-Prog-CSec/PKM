@@ -24,7 +24,7 @@ GET /admin.php?user_id=183 HTTP/1.1
 Cookie: PHPSESSID=<válida>
 ```
 
-Si `user_id` identifica al usuario y puedes <mark style="background: #FFB86CA6;">adivinar o forzar el ID del administrador</mark>, accedes con sus privilegios. El ID admin se obtiene con [[02 - Fuerza bruta de contraseñas en el login|fuerza bruta]] del parámetro. Es la frontera con [[IDOR]]: el `user_id` controlable es un *Insecure Direct Object Reference* aplicado a la autenticación.
+Si `user_id` identifica al usuario y puedes <mark style="background: #FFB86CA6;">adivinar o forzar el ID del administrador</mark>, accedes con sus privilegios. El ID admin se obtiene con [[02 - Fuerza bruta de contraseñas en el login|fuerza bruta]] del parámetro. Es la frontera con [[06 - Introducción a IDOR|IDOR]]: el `user_id` controlable es un *Insecure Direct Object Reference* aplicado a la autenticación.
 
 # La clase completa: confiar en el cliente
 

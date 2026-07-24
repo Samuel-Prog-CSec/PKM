@@ -48,7 +48,7 @@ La vía a RCE explota que las funciones de array de Twig (`filter`, `map`, `sort
 ```
 
 > [!warning]+ Depende del sandbox de Twig
-> Estos payloads funcionan con el sandbox **desactivado** (lo común si la app no lo activó). Con el `SandboxPolicy` global activo y Twig parcheado (post-`CVE-2022-23614`), pasar `'system'` como *string-callback* falla —se exige un `Closure`—; ahí hay que recurrir a [[04 - Evasión de filtros y sandbox en SSTI|bypasses del sandbox]].
+> Estos payloads funcionan con el sandbox **desactivado** (lo común si la app no lo activó). Con el `SandboxPolicy` global activo, pasar `'system'` como *string-callback* falla —bajo sandbox se exige un `Closure`—; ahí hay que recurrir a [[04 - Evasión de filtros y sandbox en SSTI|bypasses del sandbox]].
 
 En Twig **1.x**, otra vía conocida usa `_self.env`:
 

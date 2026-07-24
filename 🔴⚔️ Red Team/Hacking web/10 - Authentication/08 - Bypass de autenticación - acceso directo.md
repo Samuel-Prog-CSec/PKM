@@ -53,7 +53,7 @@ Más allá del lab, el acceso directo es endémico en:
 > [!warning]+ Redirección ≠ control de acceso
 > El error de diseño raíz: tratar una **redirección** como si fuera un control de acceso. Una redirección es una sugerencia al navegador, no una barrera al servidor. <mark style="background: #8000E1A6;">El control de acceso debe denegar y **cortar** la entrega de datos en el servidor</mark>, no confiar en que el cliente siga el `Location`. Probar siempre: pedir el recurso directo, e interceptar la respuesta para ver qué viaja en el cuerpo de los `3xx`.
 
-Esta clase se solapa con el control de **autorización** ([[IDOR]]): aquí se salta el "¿estás logueado?"; en IDOR, el "¿puedes ver *este* recurso?". La siguiente nota ataca el otro bypass: confiar en un [[09 - Bypass de autenticación - modificación de parámetros|parámetro]].
+Esta clase se solapa con el control de **autorización** ([[06 - Introducción a IDOR|IDOR]]): aquí se salta el "¿estás logueado?"; en IDOR, el "¿puedes ver *este* recurso?". La siguiente nota ataca el otro bypass: confiar en un [[09 - Bypass de autenticación - modificación de parámetros|parámetro]].
 
 > [!info]+ Fuentes
 > - [OWASP WSTG — Testing for Bypassing Authentication Schema](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema)

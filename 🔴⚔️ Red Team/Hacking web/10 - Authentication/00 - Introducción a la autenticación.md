@@ -13,7 +13,7 @@ Area: "[[Authentication.base|Authentication]]"
 
 <mark style="background: #ADCCFFA6;">La autenticación es el proceso de verificar que una entidad es quien dice ser</mark> ([RFC 4949](https://datatracker.ietf.org/doc/rfc4949/)). Es la primera línea de defensa de cualquier aplicación, y por eso uno de los focos de superficie más rentables. Romperla es lo que cataloga OWASP como **A07:2021 – Identification and Authentication Failures**, una de las categorías más recurrentes del Top 10.
 
-No confundir con la **autorización**, que decide *qué* puede hacer una identidad ya verificada. La autenticación ocurre antes y responde a "¿eres tú?"; la autorización responde a "¿puedes hacer esto?". Saltarse la primera ([[08 - Bypass de autenticación - acceso directo|bypass de autenticación]]) y saltarse la segunda ([[IDOR]]) son fallos distintos con notas distintas.
+No confundir con la **autorización**, que decide *qué* puede hacer una identidad ya verificada. La autenticación ocurre antes y responde a "¿eres tú?"; la autorización responde a "¿puedes hacer esto?". Saltarse la primera ([[08 - Bypass de autenticación - acceso directo|bypass de autenticación]]) y saltarse la segunda ([[06 - Introducción a IDOR|IDOR]]) son fallos distintos con notas distintas.
 
 ![Comparativa autenticación vs. autorización: la autenticación verifica identidad con credenciales y ocurre primero; la autorización determina acceso según políticas y ocurre después.](https://academy.hackthebox.com/storage/modules/269/auth_vs_auth.png)
 
@@ -35,6 +35,14 @@ Toda autenticación se apoya en uno o varios de estos factores:
 
 > [!info]+ El modelo de factores está siendo sustituido por passkeys
 > La industria migra hacia `passkeys` (FIDO2/WebAuthn): credenciales criptográficas ligadas al dispositivo y al origen, **resistentes a phishing** porque no hay secreto que teclear ni reutilizar. Donde hay passkeys, la fuerza bruta y el phishing clásico dejan de aplicar. Pero la realidad de 2026 sigue dominada por contraseña + MFA, y ahí <mark style="background: #FFB86CA6;">los ataques de hoy no rompen la contraseña, rompen el segundo factor</mark>: [[04 - Fuerza bruta de códigos 2FA y MFA|fuerza bruta de OTP]], *MFA fatigue* (spam de push hasta que la víctima acepta) y robo de [[10 - Ataques a tokens de sesión|tokens de sesión]] que saltan el MFA por completo.
+
+> [!warning]+ Passkeys no son inatacables: por dónde se rompe un despliegue WebAuthn
+> Que una app soporte passkeys no la vuelve inmune — la superficie se mueve, no desaparece:
+> - **Downgrade a contraseña**: el RP ofrece passkey pero mantiene un *fallback* débil (contraseña, OTP por SMS, un "¿problemas para entrar?"). El atacante fuerza ese camino y evita la passkey por completo. Es **el** vector por el que un pentest suele "romper" un despliegue de passkeys en 2026.
+> - **Enumeración de usuarios**: si el servidor responde distinto (o devuelve un `allowCredentials` no vacío) según exista o no la cuenta, se enumeran usuarios antes de tocar la criptografía.
+> - **RP ID / `origin` mal configurado**: un `rpId` demasiado amplio o una validación de `origin` laxa en el servidor rompen la garantía anti-phishing que es toda la gracia de WebAuthn.
+>
+> Regla al auditar: busca siempre el **camino de recuperación/fallback** — ahí vive la debilidad, no en la passkey en sí.
 
 # Superficie de ataque por factor
 

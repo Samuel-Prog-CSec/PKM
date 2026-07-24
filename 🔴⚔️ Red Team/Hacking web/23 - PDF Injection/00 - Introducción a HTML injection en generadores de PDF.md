@@ -28,8 +28,12 @@ Las librerías parsean el HTML, lo renderizan (aplicando CSS para el diseño) y 
 | `mPDF`, `TCPDF` | PHP |
 | `PDFKit`, `html2pdf` | Ruby / JS wrappers |
 | `PD4ML` | Java |
+| `Puppeteer`, `Playwright` | Chromium headless (Node) — **el estándar de facto en 2026** |
 
 Como el motor procesa etiquetas `<img>`, `<iframe>`, `<link>` o `<script>` **en el servidor**, cualquiera de ellas inyectada en el HTML del PDF se ejecuta con los privilegios del backend.
+
+> [!warning]+ Modernización 2026: `wkhtmltopdf` está muerto — el motor real hoy es Chromium headless
+> `wkhtmltopdf` (WebKit/Qt) lleva años sin desarrollo: el repo está archivado y **toda la organización en GitHub fue archivada en jul-2024** (ya ni admite parches de seguridad). El motor dominante en stacks Node modernos es **Puppeteer/Playwright** (Chromium headless vía CDP). Impacto para el fingerprinting de la [[01 - Detección y fingerprinting|nota 01]]: un PDF de Puppeteer/Playwright **no** lleva la firma `Creator: wkhtmltopdf` / `Producer: Qt`, sino <mark style="background: #FFB86CA6;">`Creator: Chromium` / `Producer: Skia/PDF mNNN`</mark>. Y cambia la superficie: en vez de un WebKit congelado de 2013 corres contra un Chromium parcheado (menos RCE por motor viejo), pero el mismo `<iframe src="file://">` / `fetch()` interno sigue dando SSRF/LFI, mitigable con los flags de sandbox de Chromium.
 
 # El escenario típico: la factura
 

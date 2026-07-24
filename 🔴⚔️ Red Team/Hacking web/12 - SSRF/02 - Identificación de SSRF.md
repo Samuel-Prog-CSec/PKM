@@ -21,7 +21,7 @@ Cualquier entrada que el servidor use para construir una petición saliente es c
 - Generadores de PDF / capturas de pantalla.
 - Previsualización de enlaces (link unfurling).
 - Cabeceras reflejadas hacia peticiones internas (`Referer`, `X-Forwarded-For` mal usados).
-- Parsers XML ([[Web Attacks|XXE]] → SSRF).
+- Parsers XML ([[16 - XXE a RCE, SSRF y DoS|XXE]] → SSRF).
 
 Antes de nada, determina **qué porción de la URL controlas** (completa, solo host, solo ruta): decide tus opciones.
 

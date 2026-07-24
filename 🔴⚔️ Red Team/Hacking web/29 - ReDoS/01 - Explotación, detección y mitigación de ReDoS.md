@@ -47,7 +47,7 @@ En CI/CD: **Semgrep** trae un analizador de ReDoS por anti-patrones (+ la regla 
 
 1. <mark style="background: #ADCCFFA6;">**Motor de tiempo lineal (lo mejor): RE2**</mark> — autómata sin backtracking ni backreferences, inmune por construcción. `re2js`, `Go regexp`, `Rust regex`. Fue la solución de Cloudflare ([regular-expressions.info](https://www.regular-expressions.info/redos.html)).
 2. **Límite de longitud** del input **antes** de la regex.
-3. **Timeouts de regex**: `matchTimeout` en .NET, `Regexp.timeout` en Ruby 3.2+, la JEP en camino para Java.
+3. **Timeouts de regex**: `matchTimeout` en .NET, `Regexp.timeout` en Ruby 3.2+. **Java no tiene timeout nativo** — el `JEP 8260688` ("Predictable regex performance") lleva en *draft* desde 2021 sin avance; el workaround real en producción es correr el matching en un hilo aparte y cancelarlo (`Matcher` respeta `Thread.interrupted()` durante el backtracking).
 4. **Grupos atómicos `(?>...)` / cuantificadores posesivos `a++`, `a*+`** — fijan lo casado y prohíben rebobinar (PCRE, Java, Ruby, y **Python 3.11+**).
 5. **Reescribir el patrón** para eliminar ambigüedad: anclar, hacer el *trim* de espacios por separado, evitar cuantificadores anidados/solapados.
 6. <mark style="background: #8000E1A6;">**Nunca aceptar regex suministrada por el usuario**</mark>.

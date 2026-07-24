@@ -20,7 +20,7 @@ En bug bounty, la técnica es la mitad; la otra mitad es **operar dentro de las 
 
 La diferencia entre *hacking* ético y delito es el **permiso**, y en bug bounty ese permiso lo define la política del programa.
 
-- <mark style="background: #ADCCFFA6;">**Safe harbor**</mark> es la cláusula por la que la organización se compromete a **no tomar acciones legales** contra la investigación de buena fe realizada **dentro del scope y las reglas**. El estándar de facto es el [**disclose.io** Gold Standard Safe Harbor](https://disclose.io/) — busca su presencia en la política antes de tocar nada.
+- <mark style="background: #ADCCFFA6;">**Safe harbor**</mark> es la cláusula por la que la organización se compromete a **no tomar acciones legales** contra la investigación de buena fe realizada **dentro del scope y las reglas**. Conviene distinguir dos referencias que a menudo se confunden: **[disclose.io](https://disclose.io/)** define el checklist de *Safe Harbor* (Full/Partial) que adoptan muchos programas, y **HackerOne** publica su propio *Gold Standard Safe Harbor* (GSSH) para sus programas. Busca la presencia de alguno en la política antes de tocar nada.
 - En EE. UU., la [política del DOJ de 2022 sobre la CFAA](https://www.justice.gov/archives/opa/pr/department-justice-announces-new-policy-charging-cases-under-computer-fraud-and-abuse-act) dejó de perseguir la *good-faith security research*, pero <mark style="background: #FFB86CA6;">el safe harbor solo te cubre si te ciñes al scope</mark>. Un test fuera de los dominios/reglas autorizados pierde esa protección.
 - Cuidado con acciones intrínsecamente destructivas o que afecten a terceros (DoS, ingeniería social a empleados, acceso a datos reales de usuarios) — casi siempre explícitamente prohibidas.
 

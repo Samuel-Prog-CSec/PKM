@@ -24,8 +24,8 @@ Estos son los operadores que sirven para inyectar un comando adicional sobre el 
 | Pipe | `\|` | `%7c` | Ambos (solo se ve la salida del 2º) |
 | AND | `&&` | `%26%26` | Ambos (el 2º solo si el 1º tiene éxito) |
 | OR | `\|\|` | `%7c%7c` | El 2º solo si el 1º falla |
-| Sub-shell | `` `` `` | `%60%60` | Ambos (solo Linux) |
-| Sub-shell | `$()` | `%24%28%29` | Ambos (solo Linux) |
+| Sub-shell | `` `` `` | `%60%60` | Solo Linux/bash (en PowerShell el backtick es escape, no abre sub-shell) |
+| Sub-shell | `$()` | `%24%28%29` | Linux/bash **y** Windows/PowerShell (subexpression operator; no en `cmd.exe`) |
 
 La forma de uso es siempre: *entrada esperada* (p. ej. una IP) + *operador* + *nuestro comando*. Sobre el `Host Checker`, el payload `127.0.0.1; whoami` produce en el back-end:
 
@@ -73,13 +73,13 @@ El procedimiento estándar: interceptar con [[02 - Interceptación de peticiones
 
 # Operadores en otras inyecciones
 
-La idea de "metacarácter que rompe el contexto" es transversal a toda la familia de inyecciones, y por eso el mismo reflejo sirve para [[00 - Introducción a SQL Injection|SQLi]], [[Inyección XPath|XPath Injection]] o `LDAP`. Una referencia rápida de qué caracteres prueban cada clase:
+La idea de "metacarácter que rompe el contexto" es transversal a toda la familia de inyecciones, y por eso el mismo reflejo sirve para [[00 - Introducción a SQL Injection|SQLi]], [[00 - Introducción a XPath Injection|XPath Injection]] o `LDAP`. Una referencia rápida de qué caracteres prueban cada clase:
 
 | Tipo de inyección | Operadores típicos |
 | - | - |
 | OS Command Injection | `;` `&` `\|` `&&` `\|\|` |
 | [[00 - Introducción a SQL Injection\|SQL Injection]] | `'` `;` `--` `/* */` |
-| [[Inyección XPath\|XPath Injection]] | `'` `or` `and` `not` `substring` |
+| [[00 - Introducción a XPath Injection\|XPath Injection]] | `'` `or` `and` `not` `substring` |
 | LDAP Injection | `*` `(` `)` `&` `\|` |
 | Code Injection | `'` `;` `$()` `${}` `#{}` `%{}` |
 | Header Injection (`CRLF`) | `\n` `\r\n` `%0d` `%0a` `%09` |

@@ -25,7 +25,7 @@ Probamos el argumento `username` de la query `user` con una comilla simple. El e
 { user(username: "x'") { username } }
 ```
 
-Como el error muestra la consulta SQL, montamos una [[05 - Inyección UNION|inyección UNION]]. El tipo `UserObject` tiene **6 campos** (columnas), así que el `UNION SELECT` necesita 6 columnas. <mark style="background: #FFB8EBA6;">El campo que pides en la query GraphQL determina qué columna del UNION se refleja</mark>: `username` es el 3º campo → la 3ª columna del UNION aparece en la respuesta. Como GraphQL solo devuelve la primera fila, usamos `GROUP_CONCAT` para sacar varias a la vez:
+Como el error muestra la consulta SQL, montamos una [[05 - Inyección UNION|inyección UNION]]. En este lab el tipo `UserObject` expone **6 campos** y la tabla subyacente tiene justo 6 columnas, así que el `UNION SELECT` necesita 6 — pero <mark style="background: #FFB86CA6;">esa coincidencia es del laboratorio, no una regla</mark>: el resolver puede hacer `SELECT *` sobre una tabla con más columnas que campos GraphQL, o exponer campos calculados. En un target real, determina el número de columnas con el método estándar (`ORDER BY N` incremental hasta el error, o padding con `NULL`), no contando campos del esquema. <mark style="background: #FFB8EBA6;">El campo que pides en la query GraphQL determina qué columna del UNION se refleja</mark>: `username` es el 3º campo → la 3ª columna del UNION aparece en la respuesta. Como GraphQL solo devuelve la primera fila, usamos `GROUP_CONCAT` para sacar varias a la vez:
 
 ```graphql
 {

@@ -42,7 +42,7 @@ El reconocimiento se divide en dos metodologías con un compromiso fundamental e
 | `Service Enumeration` | Determinar versiones exactas de servicios | `nmap -sV` para saber si corre Apache 2.4.50 o Nginx 1.18.0 | `nmap` | Bajo: registrable, pero rara vez alerta |
 | `Web Spidering` | Rastrear el sitio para mapear páginas, directorios y archivos | Burp Spider / OWASP ZAP Spider mapeando la estructura | Burp Suite, OWASP ZAP, Scrapy | Bajo-Medio: detectable si el *crawler* no imita tráfico legítimo |
 
-El `port scanning` y el `service enumeration` con `nmap` son la puerta de entrada clásica al recon activo de un host — el detalle operativo de esas técnicas vive en [[🔌 Puertos|el escaneo de puertos con Nmap]].
+El `port scanning` y el `service enumeration` con `nmap` son la puerta de entrada clásica al recon activo de un host — el detalle operativo de esas técnicas vive en [[02 - Escaneo de puertos y hosts|el escaneo de puertos con Nmap]].
 
 ## Reconocimiento pasivo
 
@@ -76,7 +76,7 @@ Este sub-tema recorre el recon web de lo más pasivo a lo más activo, y termina
 1. **Inteligencia de dominio** — [[01 - WHOIS]] (registro) y la familia DNS: [[02 - DNS - fundamentos]], [[03 - Enumeración DNS con dig]], [[04 - Transferencias de zona DNS]].
 2. **Expansión de superficie** — [[05 - Enumeración de subdominios]], [[06 - Fuerza bruta de subdominios]], [[07 - Certificate Transparency logs]] y [[08 - Virtual Hosts]].
 3. **Caracterización del objetivo** — [[09 - Fingerprinting web]], [[10 - Crawling web]] y [[11 - Spidering con Scrapy]].
-4. **Fuentes externas** — [[12 - Search Engine Discovery]] y [[13 - Web Archives]].
+4. **Fuentes externas y automatización** — [[12 - Search Engine Discovery]], [[13 - Web Archives]] y el [[14 - Automatización del recon|encadenado de todo el pipeline]].
 5. **Fuzzing** — la evolución activa del recon: forzar al servidor a revelar directorios, parámetros, *vhosts* y endpoints de API que no enlaza en ninguna parte. Empieza en [[15 - Introducción al web fuzzing]].
 
 La primera parada es el protocolo `WHOIS`: la vía más rápida para saber quién está detrás de un dominio y qué infraestructura lo sostiene.

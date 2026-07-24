@@ -11,7 +11,7 @@ Area: "[[GraphQL.base|GraphQL]]"
 ---
 ---
 
-La autorización rota —en particular [[06 - Introducción a IDOR|IDOR]]— es tan común en GraphQL como en REST. Y GraphQL lo agrava: además de acceder a **objetos** ajenos, la naturaleza de "pide los campos que quieras" permite <mark style="background: #FFB86CA6;">sacar campos sensibles que la UI nunca muestra</mark>.
+La autorización rota —el [[06 - Introducción a IDOR|IDOR]] web, o [[01 - Broken Object Level Authorization (API1)|BOLA]] en el mundo API— es tan común en GraphQL como en REST. Y GraphQL lo agrava: además de acceder a **objetos** ajenos, la naturaleza de "pide los campos que quieras" permite <mark style="background: #FFB86CA6;">sacar campos sensibles que la UI nunca muestra</mark>.
 
 # Identificar el IDOR
 

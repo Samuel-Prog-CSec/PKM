@@ -83,9 +83,9 @@ Esto se automatiza con una wordlist de plugins conocidos (`ffuf`, `wfuzz` o dire
 ```shell-session
 $ curl -s http://blog.inlanefreight.com/wp-content/plugins/mail-masta/ | html2text
 ****** Index of /wp-content/plugins/mail-masta ******
-[[DIR]] inc/         2020-05-13 18:01 -
-[[DIR]] lib/         2020-05-13 18:01 -
-[[TXT]] readme.txt   2020-05-13 18:01 2.2K
+[DIR] inc/         2020-05-13 18:01 -
+[DIR] lib/         2020-05-13 18:01 -
+[TXT] readme.txt   2020-05-13 18:01 2.2K
 ```
 
 <mark style="background: #FFB86CA6;">El Directory Indexing expone ficheros con código vulnerable o datos sensibles</mark> que de otro modo no descubrirías. `html2text` convierte el listado HTML en algo legible.

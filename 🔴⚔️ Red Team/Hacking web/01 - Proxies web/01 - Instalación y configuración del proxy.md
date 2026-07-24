@@ -10,7 +10,7 @@ Area: "[[Proxies web.base|Proxies web]]"
 ---
 ---
 
-Antes de interceptar nada hay que poner el proxy entre el navegador y el objetivo. Burp y ZAP vienen **preinstalados** en Kali, Parrot y PwnBox; si no, se descargan de su web o como `JAR` multiplataforma (`java -jar burpsuite.jar`). Lo que importa no es instalarlos, sino los dos pasos que todo el mundo olvida: **enrutar el navegador** por el proxy y **confiar en su certificado CA**.
+Antes de interceptar nada hay que poner el proxy entre el navegador y el objetivo. Burp y ZAP vienen **preinstalados** en Kali, Parrot y PwnBox; si no, se descargan de su web o como `JAR` multiplataforma (`java -jar burpsuite.jar`). Lo que importa no es instalarlos, sino los dos pasos que todo el mundo olvida: **enrutar el navegador** por el proxy y **confiar en su certificado CA** (la [[01 - Infraestructura de Clave Pública (PKI)|cadena de confianza X.509]] que esto aprovecha es la misma que estudia la nota de PKI).
 
 # Arranque de Burp
 

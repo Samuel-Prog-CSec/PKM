@@ -58,7 +58,7 @@ has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is pres
 > [!important]+ Enviar ≠ leer: la raíz del CSRF
 > Que la petición **se envíe** (autenticada) aunque no se pueda **leer** la respuesta es exactamente lo que habilita el CSRF: para cambiar estado (`/promote`) no necesitas la respuesta, solo que la petición llegue con la sesión de la víctima. La SOP no detiene un CSRF clásico; lo detienen `SameSite` y los tokens.
 
-Además, la SOP tiene **excepciones por diseño**: las etiquetas `img`, `video`, `script` y `link` pueden cargar recursos cross-origin (por eso puedes incrustar una imagen de otro dominio). Esta exención de `<script>` habilita `JSONP` y los ataques `XSSI` (leer datos cross-origin servidos como JS); en CSP, un endpoint JSONP dentro de una allowlist de `script-src` se convierte en gadget de bypass, como veremos en el nivel avanzado.
+Además, la SOP tiene **excepciones por diseño**: las etiquetas `img`, `video`, `script` y `link` pueden cargar recursos cross-origin (por eso puedes incrustar una imagen de otro dominio). Esta exención de `<script>` habilita `JSONP` y los ataques `XSSI` (leer datos cross-origin servidos como JS); en CSP, un endpoint JSONP dentro de una allowlist de `script-src` se convierte en gadget de bypass, como veremos en el [[05 - Bypass de CSP|nivel avanzado]].
 
 # CORS
 

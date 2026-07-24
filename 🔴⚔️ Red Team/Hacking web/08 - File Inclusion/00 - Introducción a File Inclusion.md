@@ -39,6 +39,9 @@ No todas las funciones vulnerables son iguales. <mark style="background: #8000E1
 | **.NET** `@Html.Partial()` / `Response.WriteFile()` | ✅ | ❌ | ❌ |
 | **.NET** `include` | ✅ | ✅ | ✅ |
 
+> [!info]+ Las filas "ejecuta + URL remota" son casos límite
+> Las combinaciones de máximo riesgo (`Java import`, `.NET include` cargando una URL remota) son construcciones específicas de esos frameworks, poco habituales en apps reales — el caso dominante sigue siendo el `include()` de PHP. Los ejemplos de código de abajo ilustran los sinks realmente frecuentes (PHP, NodeJS, `<jsp:include>`, `@Html.Partial()`); trata las filas exóticas como recordatorio de que la clase existe en otros stacks, no como algo que vayas a encontrar a diario.
+
 > [!important]+ La columna «URL remota» depende de la configuración
 > En PHP el ✅ de `include`/`require` exige `allow_url_include = On` (**Off por defecto** → por eso la RFI con ejecución es rara); el de `file_get_contents`/`fopen`/`file` exige `allow_url_fopen` (**On por defecto** → el SSRF vía estas funciones es mucho más accesible). Las filas de NodeJS/Java/.NET son representativas; los *sinks* exactos por lenguaje están en [[08 - Detección y fuzzing automatizado|detección white-box]].
 

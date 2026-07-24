@@ -17,7 +17,7 @@ Las <mark style="background: #ADCCFFA6;">`API` (Application Programming Interfac
 | Estilo | Características | Nota ofensiva |
 | - | - | - |
 | **REST** | El más común. Cliente-servidor, **stateless**, métodos HTTP (`GET`/`POST`/`PUT`/`DELETE`), respuestas `JSON`/`XML` | Foco de este módulo |
-| **SOAP** | Basado en `XML`, muy estandarizado (seguridad, transacciones) | Superficie de [[14 - Introducción a XXE\|XXE]] |
+| **SOAP** | Basado en `XML`, muy estandarizado (seguridad, transacciones) | Módulo propio: [[00 - Introducción a Web Services y APIs\|Web Services]]; superficie de [[14 - Introducción a XXE\|XXE]] |
 | **GraphQL** | Endpoint único, query tipada; el cliente pide **exactamente** los campos que necesita | Módulo propio: [[00 - Introducción a GraphQL\|Attacking GraphQL]] |
 | **gRPC** | `Protocol Buffers`, alto rendimiento, microservicios | Requiere proto/reflection para atacar |
 

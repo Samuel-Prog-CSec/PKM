@@ -69,7 +69,7 @@ Cada caso enlaza con su técnica: [[02 - Operadores de inyección de comandos|co
 
 # Forzar la divulgación del directorio de uploads
 
-Cuando no vemos dónde aterriza el fichero, provocar **errores** suele revelarlo: subir un nombre que ya existe, un nombre de 5.000 caracteres, o —en Windows— caracteres reservados (`| < > * ?`) y nombres reservados (`CON`, `NUL`, `LPT1`). La convención **8.3** de Windows incluso permite referenciar/sobrescribir ficheros (`WEB~1.CON` apunta a `web.conf`). En su defecto, una LFI o el XXE de SVG leen el código fuente para localizar el directorio y el esquema de nombres.
+Cuando no vemos dónde aterriza el fichero, provocar **errores** suele revelarlo: subir un nombre que ya existe, un nombre de 5.000 caracteres, o —en Windows— caracteres reservados (`| < > * ?`) y nombres reservados (`CON`, `NUL`, `LPT1`). La convención **8.3** de Windows incluso permite referenciar/sobrescribir ficheros (`WEB~1.CON` es el nombre corto 8.3 de `web.config`). En su defecto, una LFI o el XXE de SVG leen el código fuente para localizar el directorio y el esquema de nombres.
 
 # Race conditions (TOCTOU)
 

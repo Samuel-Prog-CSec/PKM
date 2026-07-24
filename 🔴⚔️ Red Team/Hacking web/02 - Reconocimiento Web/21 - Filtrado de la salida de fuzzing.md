@@ -80,6 +80,7 @@ $ ffuf -u http://IP:PORT/post.php -X POST -d "y=FUZZ" -w common.txt -mc all
 > El problema recurrente de las notas anteriores —el servidor que responde `200` a **todo** (soft-404, *wildcard*, vhost por defecto)— se resuelve con la **auto-calibración** de `ffuf`, que HTB apenas menciona:
 > - `-ac`: antes de empezar, `ffuf` lanza unas peticiones a rutas aleatorias inexistentes, aprende cómo es la respuesta "falsa" (tamaño, palabras, líneas) y <mark style="background: #FF5582A6;">filtra automáticamente todo lo que se le parezca</mark>.
 > - `-acc "<valor>"`: calibración personalizada con cadenas concretas.
+> - `-ach`: aplica la auto-calibración usando también las **cabeceras** de la respuesta falsa, no solo el cuerpo (útil cuando el soft-404 varía en cabeceras pero no en tamaño).
 > ```shell-session
 > $ ffuf -u http://IP/FUZZ -w wordlist.txt -ac
 > $ ffuf -u http://IP/ -H "Host: FUZZ.target.htb" -w subs.txt -ac

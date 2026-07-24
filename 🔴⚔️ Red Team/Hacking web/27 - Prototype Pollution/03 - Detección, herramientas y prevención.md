@@ -48,7 +48,7 @@ Con la propiedad, la respuesta sale indentada; sin ella, compacta.
 
 Del lado defensivo, en orden de contundencia:
 
-- <mark style="background: #8000E1A6;">`Object.freeze(Object.prototype)`</mark> congela el prototipo global: cualquier escritura falla en silencio. La mitigación más contundente y barata.
+- <mark style="background: #8000E1A6;">`Object.freeze(Object.prototype)`</mark> congela el prototipo global. Matiz: la escritura contaminante **falla en silencio solo en modo *sloppy*** (CommonJS sin `'use strict'`); en **modo estricto** (ESM, `'use strict'`, dentro de `class` — cada vez más habitual en Node) lanza `TypeError`. Útil saberlo: un `500`/excepción no capturada al probar `__proto__` contra un target ya "frozen" es en sí mismo un **indicador** de esta mitigación. Aun así, es la más contundente y barata.
 - **Flag de Node** `--disable-proto=delete` (elimina `__proto__` como vía de acceso) o `--disable-proto=throw` (lanza excepción).
 - **Objetos sin prototipo** para datos clave-valor del usuario: `Object.create(null)` o `Map` no heredan de `Object.prototype`, así que `__proto__` pasa a ser una clave normal inofensiva.
 - **Validación con JSON schema** del cuerpo entrante: rechaza propiedades no esperadas, incluidas `__proto__`/`constructor`.

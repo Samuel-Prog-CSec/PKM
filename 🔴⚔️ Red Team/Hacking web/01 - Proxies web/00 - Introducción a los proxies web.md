@@ -37,7 +37,7 @@ HTB enseña Burp y ZAP. El profesional actual conviene que conozca las cuatro:
 | **Caido** | Freemium (Rust) | UX moderna, proyectos grandes; en auge en bug bounty |
 | **mitmproxy** | Libre, CLI/TUI | Scripting en Python, tráfico móvil y no-navegador |
 
-<mark style="background: #8000E1A6;">`Burp Suite` es la herramienta principal y el resto del módulo gira en torno a ella</mark>, con `ZAP` como alternativa libre en paralelo (nacido en OWASP, su equipo lo trasladó en 2024 al *Software Security Project*; lo verás también como "ZAP by Checkmarx"). Pero `Caido` y `mitmproxy` ganan terreno y los cubre [[13 - Flujo profesional y alternativas modernas|la nota de flujo profesional]].
+<mark style="background: #8000E1A6;">`Burp Suite` es la herramienta principal y el resto del módulo gira en torno a ella</mark>, con `ZAP` como alternativa libre en paralelo (nacido en OWASP; en **2023** su equipo lo trasladó al *Software Security Project* de la Linux Foundation, y en **2024** se incorporó a Checkmarx —de ahí "ZAP by Checkmarx"—). Pero `Caido` y `mitmproxy` ganan terreno y los cubre [[13 - Flujo profesional y alternativas modernas|la nota de flujo profesional]].
 
 # Burp: Community vs. Professional
 

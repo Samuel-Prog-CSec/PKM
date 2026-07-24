@@ -37,11 +37,13 @@ Para confirmar que se ejecuta código antes de subir un shell completo, sube una
 <?php system($_REQUEST['cmd']); ?>
 ```
 
-`$_REQUEST` acepta el parámetro `cmd` por `GET`, `POST` o cookie, así que `shell.php?cmd=id` ejecuta `id`. En `.NET`/ASP clásico el equivalente es:
+`$_REQUEST` acepta el parámetro `cmd` por `GET`, `POST` o cookie, así que `shell.php?cmd=id` ejecuta `id`. En **Classic ASP** (IIS legacy, VBScript) el equivalente es:
 
 ```asp
-<% eval request('cmd') %>
+<% eval request("cmd") %>
 ```
+
+Ese payload es **Classic ASP**, no ASP.NET — no compila en un `.aspx` moderno (que es C#/VB.NET). Contra un stack .NET real (la mayoría hoy), el web shell va en C#/VB.NET: lo práctico es usar **Antak** (ver abajo) o un `.aspx` con `System.Diagnostics.Process.Start`.
 
 > [!tip]+ Ver la salida en crudo
 > Con un web shell mínimo en el navegador, usa **source-view** (`CTRL+U`): muestra la salida del comando sin que el HTML la reformatee.

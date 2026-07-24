@@ -18,12 +18,12 @@ Un proxy es ruidoso por defecto. <mark style="background: #ADCCFFA6;">Tu tráfic
 El `User-Agent` por defecto del navegador de Burp, o el de `curl`/`python-requests` cuando [[07 - Proxying de herramientas|proxyficas herramientas]], grita "automatización". Más sutil: <mark style="background: #FFB8EBA6;">el **orden y el casing** de las cabeceras, y la ausencia de las que un navegador real siempre manda</mark> (`Sec-Fetch-*`, `Accept-Language`, `sec-ch-ua`). Un WAF compara tu juego de cabeceras con el de un Chrome real y nota la diferencia.
 
 ## La huella TLS: JA3 / JA4 — la frontera dura
-El golpe que casi nadie ve venir: <mark style="background: #FF5582A6;">falsear el `User-Agent` **no cambia tu huella TLS**.</mark> En el `ClientHello` del handshake, tu librería TLS expone su lista de cipher suites, extensiones y curvas en un orden característico. Eso se hashea en una firma:
+El golpe que casi nadie ve venir: <mark style="background: #FF5582A6;">falsear el `User-Agent` **no cambia tu huella TLS**.</mark> En el [[02 - Handshake TLS 1.2 y 1.3|`ClientHello` del handshake]], tu librería TLS expone su lista de cipher suites, extensiones y curvas en un orden característico. Eso se hashea en una firma:
 
 - **`JA3`** (Salesforce): el estándar veterano, aún muy desplegado. Hashea los campos del `ClientHello`.
 - **`JA4`** (FoxIO/John Althouse): el sucesor, más robusto — resiste la **randomización del orden de extensiones** que los navegadores modernos introdujeron para romper JA3.
 
-<mark style="background: #FFB86CA6;">Cloudflare (Bot Management Enterprise), Akamai, DataDome y PerimeterX usan JA3/JA4 para detectar un stack TLS de Burp o Python **al principio del handshake, antes de ver un solo byte de la petición**.</mark> Por eso un UA y unas cabeceras perfectas no bastan: si tu JA3 dice "esto no es Chrome", te marcan igual. Es el motivo nº1 por el que un scraper/scanner "bien camuflado" sigue recibiendo `403`.
+<mark style="background: #FFB86CA6;">Cloudflare (Bot Management Enterprise), Akamai, DataDome y HUMAN Security (ex-PerimeterX) usan JA3/JA4 para detectar un stack TLS de Burp o Python **al principio del handshake, antes de ver un solo byte de la petición**.</mark> Por eso un UA y unas cabeceras perfectas no bastan: si tu JA3 dice "esto no es Chrome", te marcan igual. Es el motivo nº1 por el que un scraper/scanner "bien camuflado" sigue recibiendo `403`.
 
 ## Ruido del scanner y de Collaborator
 - El [[09 - Escáner de vulnerabilidades - Burp y ZAP Scanner|active scan]] dispara ráfagas de payloads, rutas de fuzzing y *canary markers* — una firma DAST inconfundible en los logs.

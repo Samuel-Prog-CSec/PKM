@@ -38,10 +38,10 @@ En PRTG < 18.2.39, <mark style="background: #FF5582A6;">el campo *Parameter* de 
    ```
 4. **Save** → **Test** (la notificación se encola y ejecuta).
 
-Es **command injection ciega** (no hay salida). Se verifica el resultado — p. ej. confirmar el admin local con CrackMapExec:
+Es **command injection ciega** (no hay salida). Se verifica el resultado — p. ej. confirmar el admin local con **NetExec** (`nxc`; sucesor de CrackMapExec, que quedó archivado en dic-2023 por un fork hostil — misma sintaxis):
 
 ```shell-session
-$ sudo crackmapexec smb 10.129.201.50 -u prtgadm1 -p Pwn3d_by_PRTG!
+$ nxc smb 10.129.201.50 -u prtgadm1 -p Pwn3d_by_PRTG!
 SMB  10.129.201.50  445  APP03  [+] APP03\prtgadm1:Pwn3d_by_PRTG! (Pwn3d!)
 ```
 

@@ -34,9 +34,9 @@ username=admin&password=secret
 
 Los parámetros son las pasarelas para interactuar con la lógica de la app. Manipularlos descubre fallos:
 
-- <mark style="background: #FFB86CA6;">Alterar un `id` de producto o de pedido puede dar acceso a datos de otros usuarios</mark> (`IDOR`).
+- <mark style="background: #FFB86CA6;">Alterar un `id` de producto o de pedido puede dar acceso a datos de otros usuarios</mark> ([[06 - Introducción a IDOR|IDOR]]).
 - Un parámetro oculto (`?debug=1`, `?admin=true`) puede desbloquear features o funciones administrativas.
-- Inyectar payloads en un parámetro expone [[00 - Introducción a XSS|XSS]], [[00 - Introducción a SQL Injection|SQLi]], `LFI`, `SSRF` y demás. El fuzzing localiza el parámetro y el punto de inyección; la explotación ya es cosa de cada técnica.
+- Inyectar payloads en un parámetro expone [[00 - Introducción a XSS|XSS]], [[00 - Introducción a SQL Injection|SQLi]], [[00 - Introducción a File Inclusion|LFI]], [[00 - Introducción a los ataques server-side|SSRF]] y demás. El fuzzing localiza el parámetro y el punto de inyección; la explotación ya es cosa de cada técnica.
 
 Hay **dos objetivos** distintos: descubrir **nombres** de parámetros que la app acepta pero no documenta, y fuzzear **valores** de un parámetro conocido para dar con el que dispara un comportamiento distinto.
 

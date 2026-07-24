@@ -14,7 +14,7 @@ Area: "[[Common Applications.base|Common Applications]]"
 
 # Fingerprinting
 
-- **Puerto 8080** por defecto (Tomcat); **puerto 5000** para la comunicación master ↔ agentes (*slaves*).
+- **Puerto 8080** por defecto (Tomcat); **puerto 50000** para la comunicación entre el *controller* y los agentes (puerto *inbound*/JNLP; HTB y material antiguo lo llaman "master ↔ slaves").
 - La **página de login** es inconfundible: `http://jenkins:8080/login?from=%2F`.
 - La configuración de seguridad vive en `/configureSecurity/`.
 

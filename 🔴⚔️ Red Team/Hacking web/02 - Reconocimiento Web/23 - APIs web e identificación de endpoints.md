@@ -68,7 +68,7 @@ mutation { createPost(title: "X", body: "...") { id title } }
 ```
 
 > [!important]+ Introspección: GraphQL se autodescribe
-> La función más explotable de GraphQL es la **introspección**: <mark style="background: #FF5582A6;">una query especial al endpoint devuelve el esquema completo</mark> —todos los tipos, campos, queries y mutations disponibles—. Si la introspección está habilitada (por defecto en desarrollo y en bastantes despliegues mal configurados; los frameworks modernos como Apollo v3+ la desactivan en producción — pruébala siempre, pero no la des por hecha), tienes el mapa entero de la API sin documentación. Herramientas como `InQL` y `graphql-voyager` la visualizan; `graphw00f` identifica **qué motor** GraphQL corre por detrás (Apollo, Hasura, Graphene…), y `clairvoyance` reconstruye el esquema incluso con la introspección **deshabilitada**. Es la base del pentest de [[GraphQL]].
+> La función más explotable de GraphQL es la **introspección**: <mark style="background: #FF5582A6;">una query especial al endpoint devuelve el esquema completo</mark> —todos los tipos, campos, queries y mutations disponibles—. Si la introspección está habilitada (por defecto en desarrollo y en bastantes despliegues mal configurados; los frameworks modernos como Apollo v3+ la desactivan en producción — pruébala siempre, pero no la des por hecha), tienes el mapa entero de la API sin documentación. Herramientas como `InQL` y `graphql-voyager` la visualizan; `graphw00f` identifica **qué motor** GraphQL corre por detrás (Apollo, Hasura, Graphene…), y `clairvoyance` reconstruye el esquema incluso con la introspección **deshabilitada**. Es la base del pentest de [[00 - Introducción a GraphQL|GraphQL]].
 
 # Métodos de descubrimiento
 

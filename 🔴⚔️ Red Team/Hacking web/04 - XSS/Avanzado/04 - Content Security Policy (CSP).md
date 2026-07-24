@@ -41,8 +41,12 @@ Esta política instruye al navegador a cargar JavaScript **solo** del mismo orig
 | `default-src` | Fallback para las directivas no especificadas |
 | `frame-ancestors` | Quién puede enmarcar la página (anti-`Clickjacking`) |
 | `form-action` | Destinos de envío de formularios |
+| `require-trusted-types-for 'script'` + `trusted-types` | Fuerza que los sinks DOM peligrosos (`innerHTML`, `document.write`…) solo acepten objetos `TrustedHTML` verificados, no strings crudos → mata el DOM XSS por sink |
 
 <mark style="background: #FFB8EBA6;">`connect-src` importa especialmente al atacante</mark>: una CSP que lo restrinja a `'self'` impide exfiltrar datos a un servidor externo aunque el XSS ejecute — la exfiltración, no solo la ejecución, es objetivo de la CSP.
+
+> [!important]+ Trusted Types: mitigación DOM-XSS universal desde 2026
+> `require-trusted-types-for 'script'` + `trusted-types <política>` es la defensa de navegador diseñada específicamente contra el **DOM XSS por sink**: obliga a que `innerHTML`/`outerHTML`/`document.write()`/`eval` reciban objetos `TrustedHTML`/`TrustedScript` verificados por una política, no strings crudos del atacante. Era "solo Chrome/Edge" desde 2020, pero <mark style="background: #FF5582A6;">desde el **24 de febrero de 2026** tiene soporte cross-browser completo</mark> (Firefox 148 fue el último; Safari lo trae desde su v26). Consecuencia: ya no basta con "abrirlo en Firefox" para esquivarlo — si la app la implementa bien, el DOM XSS por sink queda cerrado en los 4 motores. Fuente: [MDN — Trusted Types](https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API) · [caniuse](https://caniuse.com/trusted-types).
 
 ## Valores de directiva
 

@@ -86,7 +86,6 @@ Si el motor no ejecuta JS, se usan etiquetas que embeben ficheros:
 ```html
 <iframe src="file:///etc/passwd" width="800" height="500"></iframe>
 <object data="file:///etc/passwd" width="800" height="500"></object>
-<portal src="file:///etc/passwd" width="800" height="500"></portal>
 ```
 
 Algunos motores muestran el `iframe` con `file://` vacío. <mark style="background: #FF5582A6;">El truco que lo desbloquea: combinar SSRF + redirección</mark>. Se levanta un redirector propio que responde con una cabecera `Location: file://`:

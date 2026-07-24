@@ -22,11 +22,11 @@ db.users.find({$where: 'this.username == "' + req.body['username'] + '" && this.
 
 # Bypass de autenticación con JavaScript
 
-Con `$where: 'this.username === "<user>" && this.password === "<pass>"'`, se inyecta en `username` una expresión que hace toda la condición verdadera:
+Con `$where: 'this.username == "<user>" && this.password == "<pass>"'`, se inyecta en `username` una expresión que hace toda la condición verdadera:
 
 ```javascript
 username = " || true || ""=="
-// → this.username === "" || true || ""=="" && this.password === "..."
+// → this.username == "" || true || ""=="" && this.password == "..."
 ```
 
 <mark style="background: #ADCCFFA6;">Es JavaScript puro: `true ||` cortocircuita y la expresión entera es `true`</mark>, así que la consulta casa el primer documento y autenticamos. Se puede verificar en la consola del navegador antes de enviarlo.

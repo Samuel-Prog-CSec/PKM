@@ -81,7 +81,7 @@ El clásico *billion laughs* (o *XML bomb*) define entidades que se auto-referen
 ]>
 ```
 
-Cada nivel multiplica ×10 el anterior. <mark style="background: #FF5582A6;">Ya **no** funciona en servidores modernos</mark> (Apache, y los parsers actuales) porque protegen contra la auto-referencia y limitan la expansión de entidades. Consérvalo como prueba de concepto histórica, no como ataque real.
+Cada nivel multiplica ×10 el anterior. <mark style="background: #FF5582A6;">Ya **no** funciona en la mayoría de stacks modernos</mark> porque los **parsers XML actuales** (`libxml2`, Xerces con *secure processing*, MSXML) limitan por defecto la profundidad y la expansión de entidades. La protección vive en la **librería XML del backend**, no en el servidor web (Apache/nginx no parsean el cuerpo XML). Consérvalo como prueba de concepto histórica, no como ataque real.
 
 > [!info]+ Jerarquía de impacto realista
 > En un pentest 2026, prioriza así lo que un XXE te da: **(1)** lectura de ficheros/código fuente → **(2)** SSRF (metadatos cloud, red interna) → **(3)** robo de hash NetNTLM (Windows) → **(4)** RCE directo (`expect`, raro) → **(5)** DoS (obsoleto). Casi todo el valor está en los dos primeros.

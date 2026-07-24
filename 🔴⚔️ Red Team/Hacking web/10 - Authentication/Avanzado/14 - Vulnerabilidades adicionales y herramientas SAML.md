@@ -15,7 +15,7 @@ SAML es XML, y eso abre una segunda superficie además de los [[12 - Ataque de e
 
 # XXE en la SAMLResponse
 
-Si el SP usa un parser XML que resuelve entidades externas, la `SAMLResponse` es un vector de [[XXE]] directo. Inyectas la declaración `DOCTYPE` al principio del XML decodificado:
+Si el SP usa un parser XML que resuelve entidades externas, la `SAMLResponse` es un vector de [[14 - Introducción a XXE|XXE]] directo. Inyectas la declaración `DOCTYPE` al principio del XML decodificado:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -31,7 +31,7 @@ connect to [10.10.14.5] from 172.17.0.2 ...
 GET / HTTP/1.1
 ```
 
-<mark style="background: #FFB86CA6;">Suele ser ciego</mark> (la salida no se refleja), así que la exfiltración requiere las técnicas OOB de [[XXE|XXE blind]] (entidades parámetro externas, exfiltración por DNS/HTTP).
+<mark style="background: #FFB86CA6;">Suele ser ciego</mark> (la salida no se refleja), así que la exfiltración requiere las técnicas OOB de [[14 - Introducción a XXE|XXE blind]] (entidades parámetro externas, exfiltración por DNS/HTTP).
 
 # XSLT server-side injection
 
@@ -57,7 +57,13 @@ Una clase distinta del [[13 - Ataque de envoltura de firma XML (XSW)|XSW]]: no i
 <saml:NameID>admin<!---->@evil.com</saml:NameID>
 ```
 
-<mark style="background: #FFB86CA6;">la C14N elimina el comentario antes de verificar la firma (que sigue válida), pero el parser de la app lee solo el primer text-node y **trunca** el identificador a `admin`</mark> → te autenticas como ese usuario. Golpeó a Duo, Okta, OneLogin y Shibboleth (CVE-2018-0114 y familia) y PortSwigger lo reactualizó en 2025 (*The Fragile Lock*). Es ortogonal al XSW: pruébalo aunque el wrapping falle.
+<mark style="background: #FFB86CA6;">la C14N elimina el comentario antes de verificar la firma (que sigue válida), pero el parser de la app lee solo el primer text-node y **trunca** el identificador a `admin`</mark> → te autenticas como ese usuario. Golpeó a Duo, Okta, OneLogin y Shibboleth (CVE-2018-0114 y familia). Es ortogonal al XSW: pruébalo aunque el wrapping falle.
+
+> [!important]+ The Fragile Lock (Fedotkin, Black Hat EU 2025): dos bypass de firma más potentes que el comment injection
+> El paper [*The Fragile Lock*](https://portswigger.net/research/the-fragile-lock) (Zakhar Fedotkin, dic 2025) reactualizó el ataque a la firma SAML con dos técnicas que **no** requieren XSW ni comentarios:
+> - **Void Canonicalization**: declara un namespace con URI **relativa** (`xmlns:ns="1"`); `libxml2` no la resuelve al canonicalizar y devuelve **cadena vacía** en vez de fallar. Como el `SignatureValue` se calcula sobre el `SignedInfo` canonicalizado, una firma precalculada para "cadena vacía" valida **cualquier** assertion — Fedotkin lo llama *Golden SAML Response*.
+> - **Inconsistencia de parsers**: atributos duplicados con distinto namespace (`ID` vs `samlp:ID`) se resuelven distinto en el verificador de firma y en la lógica de negocio (REXML vs Nokogiri en Ruby-SAML) → firman un valor y leen otro.
+> - Afecta a **Ruby-SAML (< 1.18.0)**, PHP-SAML y `xmlseclibs` (fix 3.1.4); demo contra GitLab EE 17.8.4. Es el bypass SAML más moderno disponible hoy.
 
 # El tooling: SAML Raider
 

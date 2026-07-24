@@ -59,7 +59,7 @@ Si la app combina este filtro con uno de los anteriores, se encadenan las técni
 
 # La extensión añadida: bypasses obsoletos
 
-Cuando el código añade `.php` (`include($_GET['language'] . ".php")`), <mark style="background: #FFB86CA6;">en PHP moderno no hay forma de quitar esa extensión</mark> y quedamos restringidos a incluir ficheros `.php` —lo cual sigue sirviendo para leer código fuente, ver [[03 - PHP wrappers I - php filter y disclosure de código|PHP filters]]—. Dos técnicas clásicas la sorteaban, pero **solo funcionan en PHP < 5.3/5.4**; las documentamos porque aún hay servidores legacy:
+Cuando el código añade `.php` (`include($_GET['language'] . ".php")`), <mark style="background: #FFB86CA6;">en PHP moderno no hay forma de quitar esa extensión</mark> y quedamos restringidos a incluir ficheros `.php` —lo cual sigue sirviendo para leer código fuente, ver [[03 - PHP wrappers I - php filter y disclosure de código|PHP filters]]—. Dos técnicas clásicas la sorteaban, pero **solo funcionan en PHP antiguo (previo a 5.3.4)**; las documentamos porque aún hay servidores legacy:
 
 - **Path truncation**: en PHP antiguo, las cadenas se truncaban a 4096 caracteres y se eliminaban `/.` finales y barras múltiples. Anteponiendo un directorio inexistente y rellenando con `/./././...` hasta superar los 4096, la `.php` final quedaba truncada:
 
@@ -67,10 +67,10 @@ Cuando el código añade `.php` (`include($_GET['language'] . ".php")`), <mark s
 $ echo -n "noexiste/../../../etc/passwd/" && for i in {1..2048}; do echo -n "./"; done
 ```
 
-- **Null byte (`%00`)**: en PHP < 5.5, un null byte terminaba la cadena. `/etc/passwd%00` producía `/etc/passwd%00.php`, pero el intérprete cortaba en el nulo y abría `/etc/passwd`. <mark style="background: #8000E1A6;">Es el mismo principio de truncado por null byte que en los [[04 - Bypass de whitelist y doble extensión|file uploads]]</mark>: depende de que una capa en C interprete el `\0` como fin de cadena.
+- **Null byte (`%00`)**: en PHP **< 5.3.4** (`CVE-2006-7243`), un null byte terminaba la cadena. `/etc/passwd%00` producía `/etc/passwd%00.php`, pero el intérprete cortaba en el nulo y abría `/etc/passwd`. <mark style="background: #8000E1A6;">Es el mismo principio de truncado por null byte que en los [[04 - Bypass de whitelist y doble extensión|file uploads]]</mark>: depende de que una capa en C interprete el `\0` como fin de cadena.
 
 > [!important]+ Qué usar hoy
-> Path truncation y null byte están **parcheados** desde PHP 5.4/5.5. Contra una extensión añadida en un servidor moderno, el camino real no es quitar la `.php` sino **leer el código fuente** con `php://filter` (siguiente nota) o lograr **RCE** con [[04 - PHP wrappers II - RCE y filter chains|filter chains]]. Reserva los bypasses obsoletos para objetivos genuinamente antiguos.
+> Path truncation y null byte están **parcheados** desde PHP 5.3.4 (el null byte por `CVE-2006-7243`; el path truncation en la misma rama 5.3.x). Contra una extensión añadida en un servidor moderno, el camino real no es quitar la `.php` sino **leer el código fuente** con `php://filter` (siguiente nota) o lograr **RCE** con [[04 - PHP wrappers II - RCE y filter chains|filter chains]]. Reserva los bypasses obsoletos para objetivos genuinamente antiguos.
 
 > [!info]+ Fuentes
 > - [PortSwigger — File path traversal (filter bypass labs)](https://portswigger.net/web-security/file-path-traversal)

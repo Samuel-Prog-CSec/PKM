@@ -47,6 +47,6 @@ $ nmap -p- -sC -Pn 10.129.247.30 --open
 Navegando a `IP:8500` aparecen los directorios **`CFIDE`** y **`cfdocs`** en la raíz (indicador claro), y `/CFIDE/administrator/` carga el **login del ColdFusion 8 Administrator** → versión confirmada.
 
 > [!info]+ Versión → CVE
-> HTB lista CVEs de la época: **CVE-2020-24450** (command injection), **CVE-2020-24449** (lectura de ficheros), **CVE-2021-21087**, **CVE-2019-15909** (XSS). Pero el vector actual y más grave es <mark style="background: #FFB86CA6;">**CVE-2023-26360** (RCE no autenticada por deserialización)</mark> — ver [[01 - Ataques a ColdFusion]]. Herramientas: `nuclei -tags coldfusion`, `metasploit` (`auxiliary/scanner/http/coldfusion_version`).
+> HTB lista CVEs de la época: **CVE-2020-24450** (command injection), **CVE-2020-24449** (lectura de ficheros), **CVE-2021-21087**, **CVE-2019-15909** (XSS). Pero el vector actual y más grave es <mark style="background: #FFB86CA6;">**CVE-2023-26360** (RCE no autenticada vía *access control bypass*, CWE-284; en CISA KEV)</mark> — la RCE por deserialización WDDX es otra CVE (`CVE-2023-26359`/`CVE-2023-29300`), ver [[01 - Ataques a ColdFusion]]. Herramientas: `nuclei -tags coldfusion`, `metasploit` (`auxiliary/scanner/http/coldfusion_version`).
 
 A la explotación: [[01 - Ataques a ColdFusion]].

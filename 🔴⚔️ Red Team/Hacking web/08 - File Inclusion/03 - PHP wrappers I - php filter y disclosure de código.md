@@ -50,7 +50,7 @@ Después, leer cada fichero con el filtro base64, y <mark style="background: #FF
 El botín típico de esta fase: credenciales de base de datos en `config.php`/`.env`, claves de API, lógica de autenticación que revela otros fallos, y rutas que alimentan los siguientes ataques (dónde están los uploads, qué wrappers están activos).
 
 > [!info]+ Más allá de LFI
-> `php://filter` y los wrappers también son munición en **XXE** (el [[Web Attacks|módulo Web Attacks]] los usa para leer ficheros vía entidades externas) y aparecen en el [[06 - Uploads limitados - SVG, polyglots y metadatos|XXE por SVG]] de file upload. Dominarlos aquí se reaprovecha en todo el pentesting web.
+> `php://filter` y los wrappers también son munición en **XXE** (el [[14 - Introducción a XXE|módulo de XXE]] los usa para leer ficheros vía entidades externas) y aparecen en el [[06 - Uploads limitados - SVG, polyglots y metadatos|XXE por SVG]] de file upload. Dominarlos aquí se reaprovecha en todo el pentesting web.
 
 > [!info]+ Fuentes
 > - [PHP — php://filter](https://www.php.net/manual/en/wrappers.php.php) · [Conversion filters](https://www.php.net/manual/en/filters.convert.php)

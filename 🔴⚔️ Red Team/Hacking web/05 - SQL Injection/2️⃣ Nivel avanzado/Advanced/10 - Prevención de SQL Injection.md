@@ -36,7 +36,7 @@ Tras el cambio, el payload `'/**/and/**/1=1--` deja de funcionar. <mark style="b
 | ------------------- | -------------------------- | ------------------ |
 | Leer/escribir ficheros (`COPY`) | superuser, `pg_read/write_server_files` | no concederlo |
 | Ejecutar programas (`COPY FROM PROGRAM`) | superuser, `pg_execute_server_program` | no concederlo |
-| Cargar extensiones C | superuser, `CREATE` en `public` | revocar `CREATE` |
+| Cargar extensiones / funciones `LANGUAGE C` | solo `superuser` (`CREATE` en `public` **no** lo habilita) | no dar el rol `superuser` a la cuenta de la app |
 | Large objects (import/export) | superuser, permisos explícitos | no conceder |
 
 > [!important]+

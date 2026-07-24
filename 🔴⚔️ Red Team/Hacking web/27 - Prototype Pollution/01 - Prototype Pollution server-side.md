@@ -68,7 +68,7 @@ Si es vulnerable, la respuesta incluye la propiedad heredada:
 
 Antes siquiera de pensar en RCE, la contaminación ya permite **inyectar propiedades** que la lógica de negocio lee sin validar:
 
-- **Bypass de autorización**: si un control comprueba `user.isAdmin` y el objeto no la define explícitamente, `__proto__.isAdmin = true` la vuelve heredada y verdadera para todos. Igual con `role`, `verified`, `canEdit`…
+- **Bypass de autorización** ([[06 - Introducción a IDOR|control de acceso]]): si un control comprueba `user.isAdmin` y el objeto no la define explícitamente, `__proto__.isAdmin = true` la vuelve heredada y verdadera para todos. Igual con `role`, `verified`, `canEdit`…
 - **Alteración de comportamiento**: activar flags de debug, cambiar límites, saltarse validaciones que dependen de propiedades opcionales.
 - **DoS**: contaminar con un tipo inesperado una propiedad que el framework usa internamente tumba la app.
 

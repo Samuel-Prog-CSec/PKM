@@ -44,7 +44,7 @@ $ medusa -h www.example.com -U users.txt -P passwords.txt \
     -M web-form -m FORM:"username=^USER^&password=^PASS^:F=Invalid"
 ```
 
-Donde Medusa brilla de verdad es en **multi-host** (`-H servers.txt`): barrer la misma credencial contra muchas máquinas a la vez en la fase de [[03 - Pivote a aplicaciones internas|pivoting]] interno, tras comprometer un primer host.
+Donde Medusa brilla de verdad es en **multi-host** (`-H servers.txt`): barrer la misma credencial contra muchas máquinas a la vez en la fase de [[00 - Introducción al pivoting y los túneles|pivoting]] interno, tras comprometer un primer host.
 
 # Hydra vs. Medusa
 

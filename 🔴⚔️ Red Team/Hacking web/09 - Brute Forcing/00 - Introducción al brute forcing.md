@@ -25,7 +25,7 @@ HTB mezcla en una sola tabla técnicas que viven en mundos opuestos. La primera 
 | Herramientas | `Hydra`, `Medusa`, `ffuf`, `patator` | `hashcat`, `John the Ripper` |
 | Ruido | Altísimo: cada intento es una petición logueada | Cero: ocurre en tu máquina |
 
-<mark style="background: #8000E1A6;">Este módulo trata el ataque `online` contra logins web.</mark> Es el más limitado de los dos: contra un único usuario, las defensas modernas (lockout tras N fallos, MFA) hacen que probar millones de contraseñas sea inviable. Por eso el atacante real no fuerza bruta "a lo bestia" un solo usuario, sino que <mark style="background: #FFB8EBA6;">juega con el ángulo: pocas contraseñas contra muchos usuarios (`password spraying`), o credenciales filtradas reutilizadas (`credential stuffing`)</mark>. El crackeo offline de hashes pertenece a post-explotación y se cubre con [[hashcat]] aparte.
+<mark style="background: #8000E1A6;">Este módulo trata el ataque `online` contra logins web.</mark> Es el más limitado de los dos: contra un único usuario, las defensas modernas (lockout tras N fallos, MFA) hacen que probar millones de contraseñas sea inviable. Por eso el atacante real no fuerza bruta "a lo bestia" un solo usuario, sino que <mark style="background: #FFB8EBA6;">juega con el ángulo: pocas contraseñas contra muchos usuarios (`password spraying`), o credenciales filtradas reutilizadas (`credential stuffing`)</mark>. El crackeo offline de hashes pertenece a post-explotación y se cubre con [[00 - Introducción a Hashcat|hashcat]] aparte.
 
 # Taxonomía de ataques
 

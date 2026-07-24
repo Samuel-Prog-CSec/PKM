@@ -29,7 +29,7 @@ Como en el resto de inyecciones, lo que marca la diferencia es explotar **a pesa
 <mark style="background: #ADCCFFA6;">Como XPath, los WAF rara vez modelan sintaxis LDAP</mark>, así que la mayoría de `payloads` pasan sin bloqueo. Cuando sí hay una firma:
 
 - **Encoding en la capa HTTP**: URL-encoding y *double URL-encoding* del `payload` (`%28` = `(`, `%2a` = `*`).
-- **Escape hex de LDAP**: los valores admiten `\XX` (`\2a` = `*`). <mark style="background: #FFB86CA6;">Si un filtro naíf busca el carácter literal, la forma escapada lo esquiva</mark> y el servidor LDAP la decodifica.
+- **Escape hex de LDAP** (con un matiz que se malinterpreta a menudo): los valores admiten `\XX` (`\2a` = `*`), pero por [RFC 4515 §3](https://www.rfc-editor.org/rfc/rfc4515) el escape representa el **byte literal como dato**, no preserva la función de metacarácter. <mark style="background: #FF5582A6;">`(uid=\2a)` se evalúa como igualdad exacta contra la cadena `"*"`, no como comodín</mark> — no casa ningún usuario real. Por eso solo evade un filtro si hay una **decodificación intermedia no estándar** (la app decodifica `\XX` *antes* de construir el filtro); si quien lo procesa es el parser LDAP, la técnica no cuela un wildcard ni rompe la estructura.
 - **Lógica alternativa**: reescribir para evitar el token marcado (comodín → rangos, `|` → `!` anidado).
 
 > [!important]+ Principio de evasión

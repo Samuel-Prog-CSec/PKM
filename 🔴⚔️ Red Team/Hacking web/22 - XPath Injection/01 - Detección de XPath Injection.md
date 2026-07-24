@@ -53,7 +53,7 @@ Antes de explotar hay que saber qué carácter rompe la consulta:
 | `count(/*)`, `substring()`, `name()` | ❌ | ✅ | ❌ |
 | Sintaxis de filtro `*)(uid=*` | ❌ | ❌ | ✅ |
 
-<mark style="background: #8000E1A6;">Confirmar con funciones propias de XPath</mark> (`count`, `string-length`, `name`) descarta SQLi/LDAP y fija el vector antes de invertir esfuerzo. La [[01 - Detección de LDAP Injection|detección de LDAP]] aplica el mismo criterio en espejo.
+<mark style="background: #8000E1A6;">Confirmar con funciones propias de XPath</mark> (`count`, `string-length`, `name`) descarta SQLi/LDAP y fija el vector antes de invertir esfuerzo. La [[01 - Detección de LDAP Injection|detección de LDAP]] y la [[02 - Detección de NoSQL injection|detección de NoSQL]] aplican el mismo criterio en espejo.
 
 > [!info]+ WAF y realidad en 2026
 > A diferencia de la SQLi, <mark style="background: #FFB86CA6;">los WAF rara vez traen firmas específicas de XPath</mark>: menos ruido y menos bloqueo, pero el bug es intrínsecamente más raro. Las herramientas confirman y explotan, no descubren el punto de entrada — para eso, proxy + [[19 - Fuzzing de parámetros y valores|fuzzing de parámetros]].

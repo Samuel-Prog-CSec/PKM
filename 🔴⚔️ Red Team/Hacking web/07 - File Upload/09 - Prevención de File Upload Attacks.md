@@ -47,7 +47,7 @@ foreach (array($contentType, $MIMEtype) as $type) {
 
 Varias medidas combinadas reducen drásticamente el impacto aunque se cuele un fichero:
 
-- **Servir vía script controlado** (`download.php`) en vez de acceso directo, con autorización estricta (evita [[Web Attacks|IDOR]]) y validación de ruta (evita [[00 - Introducción a File Inclusion|LFI]]).
+- **Servir vía script controlado** (`download.php`) en vez de acceso directo, con autorización estricta (evita [[06 - Introducción a IDOR|IDOR]]) y validación de ruta (evita [[00 - Introducción a File Inclusion|LFI]]).
 - **Devolver `403`** a cualquier petición directa al directorio.
 - **Cabeceras de seguridad** al servir: `Content-Disposition: attachment`, `Content-Type` correcto y, crítico, `X-Content-Type-Options: nosniff` (frena el *MIME sniffing* del navegador).
 - **Randomizar el nombre** almacenado (UUID) y guardar el nombre original saneado en BD. <mark style="background: #8000E1A6;">Si el atacante no conoce la ruta ni el nombre, no puede invocar su fichero</mark> —y de paso anula la inyección en el nombre.

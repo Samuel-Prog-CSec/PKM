@@ -19,7 +19,7 @@ Area: "[[Web Attacks.base|Web Attacks]]"
 | Verbo | Descripción | Interés ofensivo |
 | - | - | - |
 | `HEAD` | Idéntico a `GET` pero la respuesta **solo** trae cabeceras, sin cuerpo | El servidor ejecuta la misma lógica que `GET`; sirve para disparar acciones "a ciegas" saltándose controles |
-| `PUT` | Escribe el payload en la ubicación indicada | Subida/sobrescritura de ficheros en el webroot → `RCE` |
+| `PUT` | Escribe el payload en la ubicación indicada | Subida/sobrescritura de ficheros en el webroot → `RCE` (mismo terreno que [[00 - Introducción a los File Upload Attacks\|File Upload]]) |
 | `DELETE` | Borra el recurso | Borrado no autorizado |
 | `OPTIONS` | Lista los métodos aceptados por el servidor | Enumeración de la superficie de ataque (cabecera `Allow`) |
 | `PATCH` | Modificación parcial del recurso | Escritura parcial |

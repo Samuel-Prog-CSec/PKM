@@ -60,7 +60,7 @@ $ curl -s "http://target/index.php?language=expect://id" | grep uid
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-<mark style="background: #ADCCFFA6;">`expect` está diseñado para ejecutar comandos</mark>, así que es el más directo cuando está disponible. El mismo wrapper reaparece en [[Web Attacks|XXE]].
+<mark style="background: #ADCCFFA6;">`expect` está diseñado para ejecutar comandos</mark>, así que es el más directo cuando está disponible. El mismo wrapper reaparece en [[16 - XXE a RCE, SSRF y DoS|XXE]].
 
 # PHP filter chains: RCE sin upload ni `allow_url_include`
 
@@ -83,7 +83,9 @@ La cadena generada (muy larga) se coloca en el parámetro vulnerable, y el coman
 ```
 
 > [!success]+ Por qué es la primera opción hoy
-> Frente a `data://`/`input://` (requieren `allow_url_include`) y al [[06 - LFI + File Upload a RCE|LFI+upload]] o el [[07 - Log Poisoning y envenenamiento de sesiones|log poisoning]] (requieren un fichero escribible o logs accesibles), <mark style="background: #FFB86CA6;">las filter chains no necesitan ninguna precondición salvo que el sink admita `php://filter`</mark>. En un objetivo PHP moderno y endurecido, suele ser la única vía a RCE. La misma primitiva sirve además como **oráculo de lectura ciega** (error-based): provoca errores distinguibles según el byte leído, útil cuando la LFI no devuelve contenido.
+> Frente a `data://`/`input://` (requieren `allow_url_include`) y al [[06 - LFI + File Upload a RCE|LFI+upload]] o el [[07 - Log Poisoning y envenenamiento de sesiones|log poisoning]] (requieren un fichero escribible o logs accesibles), <mark style="background: #FFB86CA6;">las filter chains apenas necesitan precondiciones: que el sink admita `php://filter`</mark>. En un objetivo PHP moderno y endurecido, suele ser la única vía a RCE. La misma primitiva sirve además como **oráculo de lectura ciega** (error-based): provoca errores distinguibles según el byte leído, útil cuando la LFI no devuelve contenido.
+>
+> Dos precondiciones reales que no hay que olvidar: (1) requiere la **extensión `iconv`** cargada en PHP — no garantizada en builds mínimos (ej. imágenes Alpine sin `php-iconv`); (2) el payload que genera `php_filter_chain_generator` es **enorme** y puede superar el límite de línea de petición (`LimitRequestLine` ~8 KB en Apache) — si el `?language=...` por `GET` falla, no asumas que es el WAF: **prueba por `POST`**, o usa herramientas que acortan la cadena (`wrapwrap`, `lightyear`).
 
 > [!info]+ Fuentes
 > - [Synacktiv — PHP filter chains: file read from error-based oracle](https://www.synacktiv.com/en/publications/php-filter-chains-file-read-from-error-based-oracle) y [How to use them](https://www.synacktiv.com/en/publications/php-filters-chain-what-is-it-and-how-to-use-it.html)

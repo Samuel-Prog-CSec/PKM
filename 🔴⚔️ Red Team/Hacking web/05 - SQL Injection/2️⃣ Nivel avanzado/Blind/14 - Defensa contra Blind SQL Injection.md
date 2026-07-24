@@ -57,4 +57,4 @@ REVOKE EXECUTE ON xp_dirtree FROM public
 > [!info]+
 > Defensa en profundidad adicional, igual que en la [[09 - Mitigación de SQL Injection|mitigación general]]: desactivar mensajes de error en producción (dificulta el [[02 - Identificar SQLi basada en booleanos|fingerprinting]]), un [[05 - Bypass de protecciones web con SQLMap|WAF]] como capa perimetral, y monitorizar peticiones DNS salientes anómalas desde el servidor de BD (delatan intentos de [[09 - Exfiltración Out-of-Band por DNS|exfiltración OOB]]).
 
-Con esto se cierra la SQLi a ciegas. El último módulo del path lleva la explotación al terreno white-box y a las técnicas más avanzadas: [[01 - Decompilación de archivos Java|SQLi avanzado]].
+Con esto se cierra la SQLi a ciegas. El último módulo del path lleva la explotación al terreno white-box y a las técnicas más avanzadas: [[00 - Introducción a PostgreSQL|SQLi avanzado]].

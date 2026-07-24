@@ -10,7 +10,7 @@ Area: "[[API Attacks.base|API Attacks]]"
 ---
 ---
 
-Las APIs consumen otras APIs para intercambiar datos, formando un ecosistema interconectado. `Unsafe Consumption of APIs` ocurre cuando <mark style="background: #ADCCFFA6;">una API **confía ciegamente** en los datos que recibe de otra API de terceros</mark>, relajando la validación "porque viene de una fuente reputada". Es la **cadena de suministro** aplicada a las APIs: `CWE-1357: Reliance on Insufficiently Trustworthy Component`.
+Las APIs consumen otras APIs para intercambiar datos, formando un ecosistema interconectado. `Unsafe Consumption of APIs` ocurre cuando <mark style="background: #ADCCFFA6;">una API **confía ciegamente** en los datos que recibe de otra API de terceros</mark>, relajando la validación "porque viene de una fuente reputada". Es la **cadena de suministro** aplicada a las APIs. OWASP mapea esta categoría a `CWE-20` (input validation), `CWE-200` (exposición de datos) y `CWE-319` (transmisión en claro); `CWE-1357: Reliance on Insufficiently Trustworthy Component` capta bien la idea de "componente poco fiable" pero **no es el CWE oficial** que OWASP asigna a API10:2023.
 
 # Los riesgos de la comunicación API↔API
 

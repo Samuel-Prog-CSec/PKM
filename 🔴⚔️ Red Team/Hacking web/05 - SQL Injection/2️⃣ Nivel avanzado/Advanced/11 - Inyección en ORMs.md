@@ -64,7 +64,7 @@ User.findOne({ where: { username: req.query.username } });
 // petición:  ?username[Op.ne]=  →  el operador "distinto de" salta la comprobación
 ```
 
-<mark style="background: #FF5582A6;">Pasar `req.query`/`req.body` directo a `where`, `update` o `create`</mark> abre dos problemas: *operator injection* (inyectar `Op.gt`, `Op.ne`, `Op.like`) y *mass assignment* (setear columnas como `isAdmin` que no estaban en el formulario). Es la versión SQL del clásico de [[00 - Introducción a NoSQL Injection|NoSQL injection]], y comparte raíz: confiar en la estructura de la entrada.
+<mark style="background: #FF5582A6;">Pasar `req.query`/`req.body` directo a `where`, `update` o `create`</mark> abre dos problemas: *operator injection* (inyectar `Op.gt`, `Op.ne`, `Op.like`) y *mass assignment* (setear columnas como `isAdmin` que no estaban en el formulario). Es la versión SQL del clásico de [[01 - Introducción a la NoSQL injection|NoSQL injection]], y comparte raíz: confiar en la estructura de la entrada.
 
 # Identificadores dinámicos
 
@@ -80,4 +80,4 @@ Aunque uses el ORM correctamente, <mark style="background: #FFB8EBA6;">ningún O
 > - [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection) · [OWASP — SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
 > - [PayloadsAllTheThings — HQL injection](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection) · docs de seguridad de Django (`raw()`/`extra()`), Sequelize (`Op`) y Prisma (`$queryRawUnsafe`).
 
-La inyección en ORMs cierra el panorama de SQLi moderna: la vulnerabilidad clásica vive ahora escondida bajo capas de abstracción que se asumen seguras. El siguiente territorio de inyección sin SQL es la [[00 - Introducción a NoSQL Injection|NoSQL injection]], que comparte la lógica de operator injection vista aquí.
+La inyección en ORMs cierra el panorama de SQLi moderna: la vulnerabilidad clásica vive ahora escondida bajo capas de abstracción que se asumen seguras. El siguiente territorio de inyección sin SQL es la [[01 - Introducción a la NoSQL injection|NoSQL injection]], que comparte la lógica de operator injection vista aquí.

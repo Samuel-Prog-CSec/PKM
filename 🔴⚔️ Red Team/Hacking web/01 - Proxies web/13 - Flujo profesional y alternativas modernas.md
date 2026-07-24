@@ -72,7 +72,7 @@ Más allá de Proxy/Repeater/Intruder/Scanner, conviene conocer cuatro utilidade
 <mark style="background: #FFB8EBA6;">Memorizar `CTRL+R`, `CTRL+I` y `CTRL+U` solos ya cambian tu velocidad</mark>: del historial a Repeater, a Intruder, y encodear payloads sin tocar el ratón.
 
 > [!info]+ Cierre del módulo
-> Burp/ZAP son tan básicos en el toolkit web como [[00 - Reconocimiento web|Nmap]], `hashcat`, `sqlmap` o [[15 - Introducción al web fuzzing|ffuf]]. Todo lo demás del PKM —[[01 - Detección de SQL Injection|SQLi]], [[00 - Introducción a XSS|XSS]], [[00 - Introducción a la autenticación|autenticación]], [[01 - Introducción a JWT|JWT]]— se ejecuta a través del proxy. Dominar Repeater + Intruder + scope es el cimiento sobre el que se apoya el resto.
+> Burp/ZAP son tan básicos en el toolkit web como [[00 - Introducción a Nmap|Nmap]], `hashcat`, `sqlmap` o [[15 - Introducción al web fuzzing|ffuf]]. Todo lo demás del PKM —[[01 - Detección de SQL Injection|SQLi]], [[00 - Introducción a XSS|XSS]], [[00 - Introducción a la autenticación|autenticación]], [[01 - Introducción a JWT|JWT]]— se ejecuta a través del proxy. Dominar Repeater + Intruder + scope es el cimiento sobre el que se apoya el resto.
 
 > [!info]+ Fuentes
 > - [PortSwigger — DOM Invader](https://portswigger.net/burp/documentation/desktop/tools/dom-invader) · [Bambdas](https://portswigger.net/burp/documentation/desktop/bambdas) · [Burp AI](https://portswigger.net/burp/ai)

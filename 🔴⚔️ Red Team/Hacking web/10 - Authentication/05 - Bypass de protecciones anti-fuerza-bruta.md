@@ -23,7 +23,7 @@ POST /login HTTP/1.1
 X-Forwarded-For: 13.37.4.2      ← un valor distinto por intento
 ```
 
-Es un fallo real y recurrente: [CVE-2020-35590](https://nvd.nist.gov/vuln/detail/CVE-2020-35590) (WordPress) es exactamente esto. Otras variantes (doble `X-Forwarded-For`, `X-Real-IP`, race conditions, variación de endpoint) y la rotación real de IP con `fireprox`, en [[05 - Defensas y evasión|el catálogo de Brute Forcing]].
+Es un fallo real y recurrente: [CVE-2020-35590](https://nvd.nist.gov/vuln/detail/CVE-2020-35590) —en el plugin **Limit Login Attempts Reloaded** (< 2.17.4) de WordPress, no en el core— es exactamente esto. Otras variantes (doble `X-Forwarded-For`, `X-Real-IP`, race conditions, variación de endpoint) y la rotación real de IP con `fireprox`, en [[05 - Defensas y evasión|el catálogo de Brute Forcing]].
 
 # CAPTCHA: cuándo no sirve de nada
 
@@ -39,7 +39,14 @@ El `CAPTCHA` convierte la fuerza bruta automatizada en una tarea manual. En teor
 
 Cuando el rate limiting es real e infranqueable por estas vías, el ataque cambia de eje: en vez de muchas contraseñas contra un usuario, pocas contra muchos ([[02 - Fuerza bruta de contraseñas en el login|password spraying]]).
 
+# Account lockout: un arma de doble filo
+
+La tercera defensa clásica es el **account lockout**: bloquear la cuenta tras N intentos fallidos. Frena la fuerza bruta online, pero mal calibrado se convierte en un vector ofensivo por sí mismo.
+
+> [!important]+ Lockout como DoS dirigido (OWASP WSTG-ATHN-03)
+> Si el lockout se dispara con **pocos intentos** y no hay CAPTCHA ni *backoff* progresivo, un atacante puede **bloquear a voluntad la cuenta de una víctima concreta** fallando su login repetidamente — <mark style="background: #FFB86CA6;">sin necesitar su contraseña</mark>. Es un DoS dirigido: bloquear al admin durante una ventana de ataque, o la cuenta de un competidor en pleno checkout. <mark style="background: #FF5582A6;">Es un hallazgo reportable en bug bounty</mark> aunque nunca comprometas la cuenta. Cómo probarlo: falla el login de una cuenta conocida N veces y comprueba si se bloquea, con qué umbral, y si reactivarla exige acción del usuario legítimo. El diseño correcto usa lockout **temporal con backoff exponencial** + CAPTCHA, no bloqueo permanente disparado a las primeras de cambio.
+
 > [!info]+ Fuentes
 > - [PortSwigger — Bypassing brute-force protection](https://portswigger.net/web-security/authentication/password-based)
-> - [CVE-2020-35590 — WordPress X-Forwarded-For rate limit bypass](https://nvd.nist.gov/vuln/detail/CVE-2020-35590)
+> - [CVE-2020-35590 — plugin *Limit Login Attempts Reloaded* (WordPress), X-Forwarded-For rate limit bypass](https://nvd.nist.gov/vuln/detail/CVE-2020-35590)
 > - Catálogo de evasión: [[05 - Defensas y evasión]]

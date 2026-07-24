@@ -56,7 +56,7 @@ invalid' or substring(/users/user[1]/username,1,1)='a' and '1'='1     → "admin
 
 # Basada en tiempo (cuando no hay oráculo booleano)
 
-Si la respuesta es **idéntica** devuelva o no datos, no hay oráculo... salvo el tiempo. <mark style="background: #FFB86CA6;">XPath no tiene función `sleep()`</mark>, así que se fuerza cómputo pesado: `count((//.)[count((//.))])` obliga al motor a iterar el documento de forma cuadrática/exponencial. Se encadena tras la condición a probar con `and`:
+Si la respuesta es **idéntica** devuelva o no datos, no hay oráculo... salvo el tiempo. <mark style="background: #FFB86CA6;">XPath no tiene función `sleep()`</mark>, así que se fuerza cómputo pesado: `count((//.)[count((//.))])` obliga al motor a evaluar `count(//.)` (todos los nodos del documento) **por cada** nodo del documento — coste **cuadrático** `O(N²)` si el motor no memoiza esa subexpresión constante (`libxml2` moderno a veces sí la optimiza, por eso conviene probar el retardo real antes de fiarse). Se encadena tras la condición a probar con `and`:
 
 ```xpath
 invalid' or substring(/users/user[1]/username,1,1)='a' and count((//.)[count((//.))]) and '1'='1

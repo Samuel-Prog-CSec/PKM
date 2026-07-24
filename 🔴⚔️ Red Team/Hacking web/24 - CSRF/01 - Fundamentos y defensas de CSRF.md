@@ -56,10 +56,10 @@ El atributo [`SameSite`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Heade
 | Valor | Comportamiento |
 | - | - |
 | `None` | Se envía con todas las peticiones cross-site (exige `Secure` → solo HTTPS) |
-| `Lax` | Solo en navegaciones top-level con método seguro (clic en enlace, `GET` de barra). No en subrecursos (`img`, `iframe`, `fetch`/XHR) ni en `POST`, aunque sea `GET` |
+| `Lax` | Solo en navegaciones top-level con método seguro (clic en enlace, `GET` de barra). **No** se envía en subrecursos (`img`, `iframe`, `fetch`/XHR) aunque usen `GET`, **ni** en peticiones top-level con método no seguro (`POST`) |
 | `Strict` | Nunca se envía en peticiones cross-site |
 
-<mark style="background: #FFB86CA6;">Los navegadores modernos aplican `Lax` por defecto</mark> si no se fija el atributo. Esto neutraliza por sí solo la mayoría de CSRF basados en `POST`, dejando vivos sobre todo los `GET` state-changing. Por eso el CSRF "de libro" casi ha desaparecido y la explotación real pasa por combinarlo con CORS o XSS.
+<mark style="background: #FFB86CA6;">Los navegadores basados en **Chromium** (Chrome, Edge, Opera) aplican `Lax` por defecto</mark> si no se fija el atributo. Esto neutraliza por sí solo la mayoría de CSRF basados en `POST`, dejando vivos sobre todo los `GET` state-changing. <mark style="background: #FF5582A6;">Firefox y Safari **no** comparten ese default</mark> (usan sus propios mecanismos anti-tracking — ETP/ITP): contra usuarios de esos navegadores, un CSRF `POST` "de libro" puede seguir vivo sin ningún bypass, así que pruébalo antes de asumir que hace falta CORS/XSS. Aun así, el CSRF clásico ha perdido mucho terreno y la explotación real suele pasar por combinarlo con CORS o XSS.
 
 > [!warning]+ La ventana "Lax+POST" de Chrome
 > Chrome aplica una excepción poco conocida: una cookie recién creada con `SameSite=Lax` (o sin atributo) **sí** se envía en peticiones `POST` top-level durante los **primeros 2 minutos** de vida. Pensada para compatibilidad con flujos de login `POST`, abre una ventana real para CSRF `POST` si consigues que la víctima inicie sesión justo antes de disparar el payload. Firefox y Safari no implementan esta excepción, así que el comportamiento depende del navegador.

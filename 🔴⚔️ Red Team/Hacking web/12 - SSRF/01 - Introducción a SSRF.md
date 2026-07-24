@@ -49,7 +49,7 @@ HTB ilustra la SSRF con un parámetro `dateserver` que trae disponibilidad de ot
 - **Generadores de PDF / capturas** (HTML→PDF con Headless Chrome, wkhtmltopdf) que cargan recursos en el contexto del servidor.
 - **Previsualizaciones de enlaces** (link unfurling) en chats y redes.
 - **Arquitecturas de microservicios**, donde un servicio llama a otro por URL.
-- **Parsers XML** con entidades externas: una [[Web Attacks|XXE]] suele degenerar en SSRF.
+- **Parsers XML** con entidades externas: una [[16 - XXE a RCE, SSRF y DoS|XXE]] suele degenerar en SSRF.
 
 > [!warning]+ SSRF ciega: otro juego
 > Si la respuesta de la petición forzada **no se nos devuelve**, estamos ante una [[04 - Blind SSRF|SSRF ciega]]: el impacto cae y la confirmación exige un canal **OOB** (Burp Collaborator / interactsh). No la descartes —sigue permitiendo barrer puertos internos y, a veces, atacar servicios a ciegas—.

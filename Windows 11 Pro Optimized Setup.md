@@ -91,8 +91,8 @@ Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de disp
 [Herramienta para eliminar app de IA y telemetría](https://hixec.com/winzard/)
 
 ## 1.6 Liberar 5GB de RAM de Windows 11 (SOLO SI SE TIENE UN BUEN SSD)
-`Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain` -> Valor `Start` -> **Valor = 4** | **Base = Hexadecimal**
-`Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters` -> Valor `EnablePrefetcher` -> **Valor = 0** | **Base = Hexadecimal**
+- `Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain` -> Valor `Start` -> **Valor = 4** | **Base = Hexadecimal**
+- `Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters` -> Valor `EnablePrefetcher` -> **Valor = 0** | **Base = Hexadecimal**
 
 ---
 
@@ -123,41 +123,39 @@ https://youtu.be/W6cKFliWW6Q
 ---
 
 # 4. Optimizar GPU (PC Sobremesa)
-Controlar la configuración 3D -> Configuración global -> Modo de control de energía -> **Máximo rendimiento preferido**
-Controlar la configuración 3D -> Configuración global -> Frecuencia de actualización preferida -> **La más alta disponible**
-Controlar la configuración 3D -> Configuración global -> Sincronización vertical -> **Desactivado**
-
 ## Configuración para maximizar calidad (panel de control NVIDIA)
-- Escalado de imagen ->  **Activar (`85%`)**
-- AA muestreado de fotogramas múltiples -> **Activado**
-- Antialiasing - FXAA -> **Activado**
-- Antialiasing - Modo -> **Mejorar la configuración de la aplicación**
+- Escalado de imagen ->  **Desactivado** _(renderiza por debajo de la resolución nativa y upscalea; pierde calidad real)_
+- AA muestreado de fotogramas múltiples -> **Desactivado** _(aproxima AA con menos muestras; redundante con DLAA y puede generar artefactos)_
+- Antialiasing - FXAA -> **Desactivado** _(difumina la imagen globalmente; contraproducente a 164 PPI y con DLAA activo)_
+- Antialiasing - Modo -> **Controlado por la aplicación** _(DLAA se encarga del AA vía driver; "Mejorar" puede generar conflictos con DLAA)_
 - Antialiasing - Corrección gama -> **Activado**
 - Antialiasing - Transparencia -> **8x (Supermuestreo)**
 - CUDA - Política de uso de memoria de la GPU -> **Usar la memoria del sistema como respaldo**
 - Compatibilidad con OpenGL GDI -> **Preferir compatibilidad**
-- Factores de DSR -> *Escalado DL* -> **Poner resolución del monitor (o un poco más)**
+- Factores de DSR -> *Escalado DL* -> **2.25 DL**
 - Filtrado anisotrópico -> **x16** u **x8**
 - Filtrado de texturas - Calidad -> **Alta calidad**
 - Filtrado de texturas - Diferencia de LOD -> **Fijación**
 - Frecuencia de actualización preferida (monitor) -> **La más alta disponible**
-- Modo baja latencia -> **Ultra**
+- Modo baja latencia -> **Activado (On)** _(Ultra causa micro-stuttering a 60Hz; On es el equilibrio correcto)_ | **Ultra** _(si el monitor es de más Hz)_
 - Modo de control de energia -> **Máximo rendimiento preferido**
 - Método actual Vulkan/OpenGL -> **Preferir nativo**
 - Oclusión ambiental -> **Calidad**
 - Optimización enlazada -> **Activado**
-- Sincronización vertical -> **Desactivado**
+- Sincronización vertical -> **Activado** _(obligatorio sin adaptive sync para evitar tearing)_ | **Desactivado** _(en monitores gaming de muchos Hz)_ -> Mejor desactivado en general
 - Suavidad de DSR -> **60% (puede variar dependiendo del monitor)**
-- Tamaño de la cache del sombreador -> **10 GB**
+- Tamaño de la cache del sombreador -> **10 GB** _(la mejor opción en general)_ | **Desactivado** _(algunos juegos pueden dar problemas con esta opción, si se da el caso, valorar desactivar)_
 - Tecnologia del monitor -> **Actualización fija**
-- Triple búfer -> *si está sincronización vertical desactivada* -> **Desactivado**
+- Triple búfer -> **Activado** *(si está sincronización vertical activada)* | **Desactivado** *(si está sincronización vertical desactivada)* -> Mejor desactivado en general
 
 ## NVIDIA APP
-- RTX Dynamic Vibrance -> **Activado**
+- RTX Dynamic Vibrance -> **Desactivado para trabajo / Activado (moderado) para gaming** _(altera la precisión de color; no recomendable para uso profesional)_
 - Anulación de DLSS -> **Recomendado**
-- Anulación de DLSS - Modo Super Resolución -> **DLAA (100%)**
+- Anulación de DLSS - Modo Super Resolución -> **DLAA (100%)** _(AA por IA a resolución nativa completa; máxima calidad)_
 - Factores de DSR -> **2.25 DL y 60-80% (suavidad)**
 - Escalado en imagen -> *Si esta activo DLSS Super resolution* -> **Desactivado**
+- RTX Video Super Resolution -> **Activado (Auto, prioridad Alta)** _(mejora vídeo en streaming upscaleando a resolución nativa con IA)_
+- RTX Video HDR -> **Activado solo con HDR habilitado en Windows** _(convierte vídeo SDR a HDR10 con IA)_
 
 ---
 

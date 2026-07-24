@@ -34,7 +34,7 @@ $result = $conn->query($query);
 
 # Qué es una inyección
 
-<mark style="background: #ADCCFFA6;">Una inyección ocurre cuando una aplicación interpreta la entrada del usuario como código en lugar de como una simple cadena</mark>, alterando el flujo del programa y ejecutándolo. En SQLi, se logra escapando los límites del dato con un carácter especial —típicamente la comilla simple (`'`)— y escribiendo SQL a continuación. El mismo principio gobierna otras inyecciones sobre lenguajes de consulta, como la [[Inyección XPath]] sobre documentos XML. Si la entrada no se **sanea** (eliminar o neutralizar los caracteres especiales que rompen la consulta), el código inyectado se ejecuta.
+<mark style="background: #ADCCFFA6;">Una inyección ocurre cuando una aplicación interpreta la entrada del usuario como código en lugar de como una simple cadena</mark>, alterando el flujo del programa y ejecutándolo. En SQLi, se logra escapando los límites del dato con un carácter especial —típicamente la comilla simple (`'`)— y escribiendo SQL a continuación. El mismo principio gobierna otras inyecciones sobre lenguajes de consulta, como la [[00 - Introducción a XPath Injection|Inyección XPath]] sobre documentos XML. Si la entrada no se **sanea** (eliminar o neutralizar los caracteres especiales que rompen la consulta), el código inyectado se ejecuta.
 
 # Anatomía de un SQL injection
 

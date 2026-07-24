@@ -24,14 +24,14 @@ Area: "[[Proxies web.base|Proxies web]]"
 | - | - | - |
 | <mark style="background: #FFB86CA6;">**Param Miner**</mark> | Descubre parámetros y cabeceras ocultos (cache poisoning, mass assignment) | [[09 - Bypass de autenticación - modificación de parámetros\|param tampering]] |
 | <mark style="background: #FFB86CA6;">**Turbo Intruder**</mark> | Fuzzing rapidísimo y scriptable; *single-packet attack* HTTP/2 | [[05 - Defensas y evasión\|race conditions]] |
-| **Autorize** | Reenvía cada petición con sesión de menor privilegio → detecta IDOR/bypass automáticamente | [[11 - Detección y metodología en autenticación\|authz testing]] |
+| **Autorize** | Reenvía cada petición con sesión de menor privilegio → detecta IDOR/bypass automáticamente | [[13 - Herramientas para IDOR\|authz testing]] |
 | **JWT Editor** | Editar, firmar y atacar JWT en Repeater/Intruder | [[06 - Herramientas JWT y prevención\|JWT]] |
 | **Active Scan++** | Extiende el scanner con checks adicionales | [[09 - Escáner de vulnerabilidades - Burp y ZAP Scanner\|scanner]] |
 | **Backslash Powered Scanner** | Descubre clases de vulnerabilidad **desconocidas** por comportamiento | — |
 | **Collaborator Everywhere** | Inyecta payloads OOB en todo el tráfico (SSRF/blind) | [[04 - Blind SSRF\|OOB]] |
 | **Hackvertor** | Transformaciones/encoding por etiquetas dentro de la petición | [[06 - Codificación y decodificación\|encoding]] |
 | **Retire.js** · **Software Vulnerability Scanner** | Detecta librerías JS y componentes vulnerables | — |
-| **InQL** | Auditoría de GraphQL | [[API Attacks\|APIs]] |
+| **InQL** | Auditoría de GraphQL | [[00 - Introducción a las API Attacks\|APIs]] |
 
 > [!important]+ Bambdas: el scripting moderno de Burp
 > Desde 2023 Burp incluye **Bambdas**: snippets de Java que filtran el proxy/historial, definen reglas de Match & Replace dinámicas o resaltan peticiones según lógica propia, sin escribir una extensión completa. <mark style="background: #8000E1A6;">Es la forma actual de personalizar Burp</mark> para un objetivo concreto (p. ej. resaltar toda petición con un parámetro `redirect` para cazar [[08 - Robo de tokens de acceso OAuth\|open redirects]]).

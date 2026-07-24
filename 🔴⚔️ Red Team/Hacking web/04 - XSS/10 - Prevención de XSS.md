@@ -20,6 +20,7 @@ La XSS se ancla en dos puntos: un [[03 - XSS basado en DOM|`Source`]] (la entrad
   let clean = DOMPurify.sanitize(dirty);
   ```
 - **No usar entrada directa** dentro de `<script>`, `<style>`, atributos o comentarios, y evitar los *sinks* peligrosos vistos en [[03 - XSS basado en DOM|DOM XSS]]: `innerHTML`, `outerHTML`, `document.write()`, y las funciones jQuery `html()`, `append()`, `after()`, etc.
+- **Trusted Types** (`require-trusted-types-for 'script'` en la CSP): a nivel de navegador, obliga a que esos mismos sinks rechacen strings crudos y solo acepten objetos `TrustedHTML` verificados por una política — cierra el DOM XSS por sink de raíz. Con soporte cross-browser completo desde 2026 (ver [[04 - Content Security Policy (CSP)|CSP]]).
 
 > [!warning]+ El front-end nunca es suficiente
 > <mark style="background: #FF5582A6;">La validación de front-end se salta trivialmente</mark> enviando una petición `GET`/`POST` a mano (con `curl` o Burp), sin pasar por el JavaScript del navegador. **Toda** validación cliente es cosmética para la seguridad: el control real va en el back-end. El front-end mejora la UX; no defiende.

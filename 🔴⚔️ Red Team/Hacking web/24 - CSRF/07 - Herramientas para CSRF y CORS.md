@@ -42,6 +42,9 @@ $ python3 cors_scan.py -u https://target.htb
 - **`CORScanner`** ([chenjj](https://github.com/chenjj/CORScanner)) hace lo mismo de forma multihilo, útil para superficies grandes.
 - **Burp Suite Pro** detecta CORS misconfigs en su escáner activo y es la opción cómoda si ya trabajas en Burp.
 
+> [!warning]+ Estado de mantenimiento (2026)
+> `Corsy` no recibe commits reales desde **nov-2021** y `CORScanner` está igual de frío: siguen sirviendo como **barrido rápido**, pero no sustituyen el test manual en Repeater que esta nota recomienda como método fiable. En cambio, `XSRFProbe` **resucitó**: tras años dormido se reescribió de cero y publicó **v3.0.0 en julio de 2026** — vuelve a ser una opción viva para auditar la calidad de los tokens CSRF.
+
 > [!warning]+ El escáner confirma el reflejo, tú confirmas el impacto
 > Un escáner CORS marca que el origen se refleja, pero <mark style="background: #FF5582A6;">el impacto real depende de **qué** datos hay tras ese endpoint y de si la cookie es `SameSite=None`</mark>. Una misconfig sobre un endpoint público sin datos sensibles es *informational*; la misma sobre `/profile` con `SameSite=None` es *high*. Verifica siempre exfiltrando datos reales en un PoC antes de reportar.
 

@@ -46,6 +46,6 @@ $ ldapsearch -H ldap://host:389 -D "cn=admin,dc=example,dc=com" -w secret123 -b 
 ```
 
 > [!info]+ Modernización
-> Los casos de 2025 del [[05 - Arsenal de herramientas LDAP|arsenal LDAP]] (Ivanti EPMM, Redash) prueban que la LDAP injection en apps corporativas sigue **muy viva**. Ante cualquier app con login "domain account" o `389`/`636` detrás, `*`/`*` es un test de 30 segundos.
+> El caso **Redash** (`GHSL-2024-009`) del [[05 - Arsenal de herramientas LDAP|arsenal LDAP]] prueba que la LDAP injection en apps corporativas sigue **muy viva** (ojo: el caso Ivanti EPMM de 2025 que a veces se cita junto a él **no** es LDAP injection, sino EL injection — ver la nota del arsenal). Ante cualquier app con login "domain account" o `389`/`636` detrás, `*`/`*` es un test de 30 segundos.
 
 Siguiente vulnerabilidad de lógica: [[Web Mass Assignment Vulnerabilities]].

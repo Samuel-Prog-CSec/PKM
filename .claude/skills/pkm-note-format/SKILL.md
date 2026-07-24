@@ -150,15 +150,6 @@ Para comparativas. Cabeceras cortas, ≤8 filas idealmente.
 | [[XSS Almacenado]] | Persiste en backend          | Sí           |
 ```
 
-## Subcarpeta `Nuevo-Formato` (excepción)
-
-Si la nota va dentro de `🔴⚔️ Red Team/Hacking web/💉🩸 SQL Injection/Nuevo-Formato/`, **NO usar marks con color**. Usar:
-- `==highlight==` (resaltado único de Obsidian) para destacar.
-- `**bold**` / `***bold italic***` para énfasis.
-- El resto de convenciones (frontmatter, callouts, bloques de código, enlaces) iguales.
-
-Esta carpeta es un experimento del usuario con formato más limpio. No mezclar estilos.
-
 ## Voz y estilo
 
 - Frases cortas, directas. Voz activa siempre que sea posible.

@@ -45,7 +45,7 @@ def oracle(query):
     r = requests.post("http://TARGET/index.php",
                       headers={"Content-Type": "application/json"},
                       data=json.dumps({"trackingNum": query}))
-    return "bmdyy" in r.text          # indicador positivo en la respuesta
+    return "trackingNum" in r.text    # indicador positivo: un envío válido devuelve el campo trackingNum
 
 # Verificar el oráculo con respuestas conocidas ANTES de volcar
 assert oracle("X") == False

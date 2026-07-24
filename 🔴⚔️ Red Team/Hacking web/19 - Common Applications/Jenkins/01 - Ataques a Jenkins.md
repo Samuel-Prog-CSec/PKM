@@ -43,8 +43,8 @@ println("${cmd.text}");
 # Vulnerabilidades conocidas
 
 > [!important]+ CVEs de Jenkins (version-específicas)
-> - **CVE-2018-1999002 + CVE-2019-1003000** — RCE **pre-auth** encadenando dos fallos: bypass de la ACL `Overall/Read` vía *dynamic routing* + *sandbox bypass* del Script Security → Groovy ejecuta un JAR. Afecta a 2.137.
-> - **Jenkins 2.150.2** — RCE autenticada vía Node.js para usuarios con permiso de crear/ejecutar JOBs (si los anónimos están habilitados, los tienen por defecto).
+> - **CVE-2018-1000861 + CVE-2019-1003000** — RCE **pre-auth** encadenando dos fallos (cadena de Orange Tsai): bypass de la ACL `Overall/Read` vía *dynamic routing* de Stapler + *sandbox bypass* del Script Security → Groovy ejecuta código. Afecta a Jenkins ≤ 2.153 / LTS ≤ 2.138.1. *(Ojo: `CVE-2018-1999002` es otra cosa — un arbitrary file read en Stapler; buscar el PoC por ese número no lleva a esta cadena.)*
+> - **RCE autenticada por diseño** (en **cualquier** versión, no una CVE de una build concreta): un usuario con permiso `Job/Configure` o `Job/Build` puede ejecutar comandos arbitrarios en el nodo — es la base de cómo funciona un pipeline de CI/CD (un `Pipeline` Groovy, un paso `sh`/`bat` en un *freestyle job*). Si los usuarios **anónimos** tienen esos permisos (config insegura), es RCE pre-auth de facto.
 
 > [!info]+ Modernización
 > El vector estrella actual es <mark style="background: #FF5582A6;">**CVE-2024-23897**</mark> (ver [[00 - Descubrimiento y enumeración de Jenkins|discovery]]): *arg injection* en el CLI → **lectura de ficheros arbitrarios**. Se leen los secrets de `/var/lib/jenkins/secrets/` y `credentials.xml`, se descifran offline, y de ahí a RCE (o a moverse por la red que Jenkins orquesta). La Script Console sigue siendo el camino post-auth más rápido. Herramientas: `msf exploit/multi/http/jenkins_script_console`, `nuclei -tags jenkins`, y los PoC públicos de CVE-2024-23897.

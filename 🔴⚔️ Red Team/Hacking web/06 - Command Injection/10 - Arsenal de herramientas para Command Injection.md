@@ -67,6 +67,9 @@ Cuando hay filtro o WAF, las técnicas manuales de las notas [[04 - Bypass de fi
 - **Bashfuscator** / **Invoke-Obfuscation**: generadores de payload ofuscado ([[08 - Herramientas de evasión y ofuscación|nota 08]]).
 - **wafw00f**: identifica el WAF para elegir el repertorio de bypass correcto.
 
+> [!info]+ Estado de mantenimiento (2026)
+> Al contrario que el arsenal de [[11 - Arsenal de herramientas para File Inclusion|File Inclusion]] (lleno de herramientas muertas), aquí el set está mayormente vivo: <mark style="background: #ADCCFFA6;">`commix` sigue activo</mark> (commits en 2026) y todo el stack de ProjectDiscovery (`ffuf`, `nuclei`, `interactsh`) es de lo más mantenido del ecosistema. Los dos rezagados son de ofuscación: `Bashfuscator` e `Invoke-Obfuscation`/`Invoke-DOSfuscation` (Daniel Bohannon) llevan años sin commits, pero la técnica sigue siendo válida y no hay reemplazo directo — úsalos sabiendo que son estáticos.
+
 ```shell-session
 $ commix --url="https://target.htb/ping.php" --data="ip=127.0.0.1" --tamper=space2ifs,uninitializedvariable
 ```

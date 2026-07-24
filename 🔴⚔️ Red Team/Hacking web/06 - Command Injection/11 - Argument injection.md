@@ -32,10 +32,11 @@ La clave es que <mark style="background: #8000E1A6;">muchos binarios tienen flag
 | `git` | `-c core.pager='sh -c ...'` · `--output=/path` · `--upload-pack` | RCE / escritura |
 | `curl` | `-o /var/www/shell.php` · `-K archivo_config` | escritura / leer config |
 | `find` | `-exec sh -c '...' \;` | RCE |
-| `zip` | `--unzip-command='sh -c ...'` | RCE |
+| `zip` | `archivo.zip fichero -T -TT 'sh -c ...'` (`-T` testea el zip recién creado, `-TT` = comando de test) | RCE |
 | `rsync` | `-e 'sh -c ...'` | RCE |
 | `wget` | `--use-askpass=script` · `-O /path` | RCE / escritura |
-| `sed`/`awk` | `-e 'system(...)'` · `-f script` | RCE / leer ficheros |
+| `awk` | `-e 'BEGIN{system("id")}'` · `-f script` | RCE / leer ficheros |
+| `sed` (GNU) | `-e '1e id'` · `s/re/x/e` (flag `e`) | RCE / leer ficheros |
 
 Ejemplo concreto con `tar`, el más célebre —una app que comprime un fichero con nombre controlado:
 

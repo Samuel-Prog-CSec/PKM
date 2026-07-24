@@ -81,10 +81,17 @@ Ambas técnicas son casos de un principio más amplio — la **cache key injecti
 > [!important] Web Cache Entanglement (Kettle, 2020)
 > James Kettle llevó esto al extremo en *Web Cache Entanglement*: cuando la caché **normaliza** la key (decodifica caracteres, quita parámetros, reordena) de forma distinta al servidor, aparecen la **cache key injection**, el **internal cache poisoning** y el envenenamiento de recursos "estáticos". La caza consiste en encontrar dónde caché y servidor **discrepan** en interpretar la misma petición. Es la referencia moderna imprescindible de este vector.
 
+> [!info]+ Estado del arte 2024: "Gotta Cache 'Em All" (Doyhenard, Black Hat USA 2024)
+> [Gotta Cache 'Em All](https://portswigger.net/research/gotta-cache-em-all) (Martin Doyhenard, ago 2024) generaliza la discrepancia caché↔origen con técnicas nuevas de alto impacto:
+> - **Delimitadores de extensión estática**: los CDN cachean por extensión reconocida (`.js`, `.css`); un delimitador que el CDN no reconoce cuela una extensión falsa — ej. `/myAccount$a.css` hace que el CDN cachee una página dinámica como si fuera estática. El `;` de Spring (`/myAccount;x=1`) es la técnica hermana.
+> - **Bypass de directorios estáticos por normalización divergente**: CloudFront/Azure/Imperva **normalizan** la ruta antes de aplicar las reglas de caché; Cloudflare/Google Cloud/Fastly **no** — la discrepancia permite envenenar rutas "estáticas".
+> - **Envenenamiento de ficheros estáticos** (`/robots.txt`, `/favicon.ico`, cacheados por defecto en Cloudflare) y **Cache-What-Where**: encadenar bugs "no explotables" (un open redirect vía `X-Forwarded-Host` que el navegador no puede enviar) con el cache poisoning para lograr *takeover* de dominio.
+
 <mark style="background: #FF5582A6;">La clave de detección: buscar cualquier lugar donde caché y servidor no coincidan al interpretar la petición</mark> — un carácter separador, un duplicado, un encoding, un puerto. `Param Miner` incluye pruebas específicas para estas discrepancias; lo vemos en [[05 - Detección, herramientas y prevención de Cache Poisoning]].
 
 ## Referencias
 
 - [PortSwigger — Web Cache Entanglement (James Kettle, 2020)](https://portswigger.net/research/web-cache-entanglement)
+- [PortSwigger — Gotta Cache 'Em All (Martin Doyhenard, 2024)](https://portswigger.net/research/gotta-cache-em-all)
 - [CVE-2020-28473 — Bottle parameter cloaking](https://nvd.nist.gov/vuln/detail/CVE-2020-28473)
 - [OWASP — HTTP Parameter Pollution](https://owasp.org/www-community/attacks/HTTP_Parameter_Pollution)

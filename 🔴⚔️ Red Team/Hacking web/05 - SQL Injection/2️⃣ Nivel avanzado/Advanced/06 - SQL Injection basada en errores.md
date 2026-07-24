@@ -20,7 +20,7 @@ La consulta vulnerable concatena `email` directamente, pero hay dos obstáculos:
 2. **Control de IP**: el *stacktrace* completo solo se devuelve si la IP del cliente es `127.0.1.1`; el resto recibe un `500` genérico.
 
 > [!important]+
-> El control de IP tiene un fallo clásico: <mark style="background: #FF5582A6;">la aplicación confía en la cabecera `X-Forwarded-For` para determinar la IP del cliente</mark>. Como esa cabecera la controla el cliente, basta añadir `X-Forwarded-For: 127.0.1.1` a la petición para hacerse pasar por local y desbloquear los errores detallados. No es un *Host header attack* (ese abusa de la cabecera `Host`), sino **IP spoofing vía cabecera de proxy**: la app jamás debe confiar en `X-Forwarded-For` para decisiones de seguridad —ver [[Abusing HTTP Misconfigurations]]—.
+> El control de IP tiene un fallo clásico: <mark style="background: #FF5582A6;">la aplicación confía en la cabecera `X-Forwarded-For` para determinar la IP del cliente</mark>. Como esa cabecera la controla el cliente, basta añadir `X-Forwarded-For: 127.0.1.1` a la petición para hacerse pasar por local y desbloquear los errores detallados. No es un *Host header attack* (ese abusa de la cabecera `Host`), sino **IP spoofing vía cabecera de proxy**: la app jamás debe confiar en `X-Forwarded-For` para decisiones de seguridad —ver [[00 - Introducción a las HTTP Misconfigurations|Abusing HTTP Misconfigurations]]—.
 
 Con la cabecera puesta y el payload `' or 1=1--@bluebird.htb`, el servidor devuelve el stacktrace (aquí: `Incorrect result size: expected 1, actual 362`, porque devolvió todas las filas). <mark style="background: #FFB86CA6;">Los errores ahora son visibles: el canal está abierto</mark>.
 
@@ -56,6 +56,9 @@ El error-based depende de funciones específicas del DBMS —parte del [[01 - De
 | PostgreSQL | `CAST((SELECT ...) AS INT)`, `query_to_xml(...)` |
 | MySQL/MariaDB | `extractvalue(1,concat(0x7e,(SELECT ...)))`, `updatexml(...)`, `exp(~(SELECT ...))` |
 | MSSQL | `CONVERT(int,(SELECT ...))`, `CAST(... AS INT)` |
+
+> [!warning]+ MySQL: `extractvalue`/`updatexml` truncan la salida a ~32 caracteres
+> El mensaje de error XPATH que generan `extractvalue()`/`updatexml()` tiene un límite de **~32 caracteres**, así que un hash o una versión larga sale **cortado** sin avisar. Para datos más largos, itera con `SUBSTRING(dato, N, 30)` sobre el valor antes de concatenarlo, o usa `exp(~(SELECT ...))` (provoca overflow y no trunca, aunque solo confirma booleano). PostgreSQL (`CAST`/`query_to_xml`) no sufre este límite.
 | Oracle | `CTXSYS.DRITHSX.SN(1,(SELECT ...))`, `XMLType((SELECT ...))`, `utl_inaddr.get_host_name` |
 
 > [!warning]+

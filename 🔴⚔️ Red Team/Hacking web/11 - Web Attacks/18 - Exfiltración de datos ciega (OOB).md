@@ -67,7 +67,7 @@ $ php -S 0.0.0.0:8000
 En nuestra terminal aparece la petición entrante con el `/etc/passwd` ya decodificado. <mark style="background: #8000E1A6;">Hemos exfiltrado un fichero sin ver **nada** en la respuesta de la app</mark>.
 
 > [!tip]+ Exfiltración por DNS
-> Si el `HTTP` saliente está filtrado pero el `DNS` no (muy común), coloca el base64 como **subdominio**: `BASE64.our.website.com`, y captura con `tcpdump`/un DNS autoritativo propio. En bug bounty, **Burp Collaborator** o **interactsh** automatizan este canal OOB (HTTP + DNS) sin montar infraestructura — ver [[20 - Herramientas para XXE|Herramientas]].
+> Si el `HTTP` saliente está filtrado pero el `DNS` no (muy común), coloca los datos como **subdominio**: `DATOS.our.website.com`, y captura con `tcpdump`/un DNS autoritativo propio. Codifica en **`base32`, no en `base64`**: el alfabeto base64 (`+ / =`) no es válido en una etiqueta DNS y el DNS es *case-insensitive* (destruiría la distinción mayús/minús de base64); base32 (`A-Z2-7`) sí sobrevive. En bug bounty, **Burp Collaborator** o **interactsh** automatizan este canal OOB (HTTP + DNS) sin montar infraestructura — ver [[20 - Herramientas para XXE|Herramientas]]. En bug bounty, **Burp Collaborator** o **interactsh** automatizan este canal OOB (HTTP + DNS) sin montar infraestructura — ver [[20 - Herramientas para XXE|Herramientas]].
 
 > [!warning]+ Límite del canal DNS
 > El DNS tiene un tope de longitud por etiqueta (63 chars) y por nombre (253). Para ficheros grandes hay que **fragmentar** el base64 en varias consultas. Por eso, si el HTTP saliente funciona, es el canal preferido; el DNS es el plan B cuando todo lo demás está bloqueado.

@@ -34,7 +34,7 @@ El ataque:
 if (isset($_POST['Submit'])) {
     $_SESSION['Username'] = $_POST['Username'];
     $_SESSION['Active']   = true;              // ← marcada activa ANTES de validar
-    if (login($Username, $_POST['Password'])) {
+    if (login($_POST['Username'], $_POST['Password'])) {
         header("Location: profile.php"); exit;
     } else {
         header("Location: login.php?failed=1"); exit;   // limpieza SOLO si se sigue esto

