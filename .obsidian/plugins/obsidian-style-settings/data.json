@@ -91,5 +91,9 @@
   "anuppuccin-theme-settings@@anp-depth-tab-opacity": 0.6,
   "soft-paper-dark-settings@@sp-rainbow-folders": true,
   "soft-paper-dark-settings@@sp-hide-scrollbars": false,
-  "soft-paper-dark-settings@@sp-compact-settings": true
+  "soft-paper-dark-settings@@sp-compact-settings": true,
+  "soft-paper-dark-settings@@sp-compact-bases": true,
+  "soft-paper-dark-settings@@sp-compact-explorer": true,
+  "soft-paper-dark-settings@@sp-compact-panes": true,
+  "soft-paper-dark-settings@@sp-hide-add-property": true
 }

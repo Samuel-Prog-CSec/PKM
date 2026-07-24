@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("JavaScript Deobfuscation.base", "JavaScript Deobfuscation")
+    filters: Area == link("JavaScript Deobfuscation.base", "JavaScript Deobfuscation")
     order:
       - file.name
       - file.tags

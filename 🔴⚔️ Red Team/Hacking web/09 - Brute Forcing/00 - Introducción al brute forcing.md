@@ -9,8 +9,6 @@ Nota previa:
 Nota siguiente: "[[01 - Tipos de ataque - diccionario, híbrido y máscara]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
----
-
 <mark style="background: #ADCCFFA6;">El `brute forcing` es probar credenciales o claves de forma sistemática hasta dar con la correcta.</mark> Es la última herramienta del cinturón: ruidosa, lenta y dependiente de la fuerza de la contraseña objetivo. Pero cuando el resto de vías falla —no hay vulnerabilidad conocida, el phishing no entra, no hay reutilización de credenciales evidente— sigue siendo el camino que abre la puerta. Esta nota fija el marco conceptual; las siguientes lo ejecutan con `Hydra`, `Medusa` y wordlists.
 
 # Online vs. offline: la distinción que lo cambia todo
@@ -28,18 +26,17 @@ HTB mezcla en una sola tabla técnicas que viven en mundos opuestos. La primera 
 <mark style="background: #8000E1A6;">Este módulo trata el ataque `online` contra logins web.</mark> Es el más limitado de los dos: contra un único usuario, las defensas modernas (lockout tras N fallos, MFA) hacen que probar millones de contraseñas sea inviable. Por eso el atacante real no fuerza bruta "a lo bestia" un solo usuario, sino que <mark style="background: #FFB8EBA6;">juega con el ángulo: pocas contraseñas contra muchos usuarios (`password spraying`), o credenciales filtradas reutilizadas (`credential stuffing`)</mark>. El crackeo offline de hashes pertenece a post-explotación y se cubre con [[00 - Introducción a Hashcat|hashcat]] aparte.
 
 # Taxonomía de ataques
+![[taxonomia_brute_force.png]]
 
-![Diagrama de flujo del bucle de fuerza bruta: generar combinación, aplicarla, comprobar éxito y repetir hasta lograr acceso.](https://academy.hackthebox.com/storage/modules/57/1n.png)
-
-| Método | En qué consiste | Cuándo usarlo |
-| - | - | - |
-| `Simple brute force` | Recorre todo el espacio de un charset y longitud dados | No hay info previa y sobran recursos (casi siempre offline) |
-| `Dictionary attack` | Prueba una lista precompilada (`rockyou.txt`, SecLists) | Se sospecha una contraseña común o débil — el caso base |
-| `Hybrid attack` | Diccionario + mutaciones (sufijos, `leet`, años) | La víctima parte de una palabra común y la "decora" |
-| `Mask attack` | Brute force acotado a un patrón conocido (`?u?l?l?l?d?d`) | Conoces la política de contraseñas o el formato |
-| `Credential stuffing` | Reutiliza pares `user:pass` filtrados en otros servicios | Tienes un volcado de brechas y sospechas reutilización |
-| `Password spraying` | Pocas contraseñas (1–3) contra muchos usuarios | Hay lockout: repartir intentos evita bloquear cuentas |
-| `Rainbow table` | Hashes precomputados para revertir rápido (offline) | Hashes sin `salt` y con algoritmo débil |
+| Método                | En qué consiste                                                                                                                                                                                                 | Cuándo usarlo                                               |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `Simple brute force`  | Recorre todo el espacio de un charset y longitud dados                                                                                                                                                          | No hay info previa y sobran recursos (casi siempre offline) |
+| `Dictionary attack`   | Prueba una lista precompilada ([RockYou](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou-75.txt), [SecLists](https://github.com/danielmiessler/SecLists/tree/master)) | Se sospecha una contraseña común o débil — el caso base     |
+| `Hybrid attack`       | Diccionario + mutaciones (sufijos, `leet`, años)                                                                                                                                                                | La víctima parte de una palabra común y la "decora"         |
+| `Mask attack`         | Brute force acotado a un patrón conocido (`?u?l?l?l?d?d`)                                                                                                                                                       | Conoces la política de contraseñas o el formato             |
+| `Credential stuffing` | Reutiliza pares `user:pass` filtrados en otros servicios                                                                                                                                                        | Tienes un volcado de brechas y sospechas reutilización      |
+| `Password spraying`   | Pocas contraseñas (1–3) contra muchos usuarios                                                                                                                                                                  | Hay lockout: repartir intentos evita bloquear cuentas       |
+| `Rainbow table`       | Hashes precomputados para revertir rápido (offline)                                                                                                                                                             | Hashes sin `salt` y con algoritmo débil                     |
 
 <mark style="background: #FF5582A6;">`Password spraying` y `credential stuffing` son los que de verdad funcionan hoy en un engagement</mark>: esquivan el lockout por diseño y aprovechan la reutilización masiva de contraseñas. Los detalla [[02 - Fuerza bruta de contraseñas en el login]] del sub-tema de autenticación.
 

@@ -8,8 +8,6 @@ Nota previa: "[[02 - Hydra]]"
 Nota siguiente: "[[04 - Generación de wordlists]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
----
-
 <mark style="background: #ADCCFFA6;">`Medusa` es el primo de [[02 - Hydra|Hydra]]: cracker de logins paralelo, modular y rápido.</mark> Hace lo mismo con flags distintos. Importa conocer los dos porque cada uno falla en cosas distintas, y porque para web ambos quedan por detrás de `ffuf` cuando hay tokens de por medio.
 
 # Sintaxis de Medusa
@@ -36,6 +34,13 @@ $ medusa [opciones_target] [opciones_credenciales] -M módulo [opciones_módulo]
 $ medusa -h IP -n PORT -u sshuser -P 2023-200_most_used_passwords.txt -M ssh -t 3
 ACCOUNT FOUND: [ssh] Host: IP User: sshuser Password: 1q2w3e4r5t [SUCCESS]
 ```
+Desglosemos cada componente:
+- `-h <IP>`: Especifica la dirección IP del sistema objetivo.
+- `-n <PORT>`: Define el puerto en el que el servicio SSH está escuchando (generalmente el puerto 22).
+- `-u sshuser`: Establece el nombre de usuario para el ataque de fuerza bruta.
+- `-P 2023-200_most_used_passwords.txt`: Apunta a Medusa a una lista de palabras (*wordlist*).
+- `-M ssh`: Selecciona el módulo `SSH` dentro de Medusa, <mark style="background: #FFB8EBA6;">adaptando el ataque específicamente para la autenticación [[SSH]]</mark>.
+- `-t 3`: Indica el número de intentos de inicio de sesión paralelos que se ejecutarán simultáneamente. Aumentar este número puede acelerar el ataque, pero también <mark style="background: #FF5582A6;">puede aumentar la probabilidad de ser detectado o de activar medidas de seguridad en el sistema objetivo</mark>.
 
 Para login web, el módulo `web-form`:
 
@@ -57,9 +62,33 @@ Donde Medusa brilla de verdad es en **multi-host** (`-H servers.txt`): barrer la
 
 <mark style="background: #FFB8EBA6;">La elección rara vez importa: ambos sirven para protocolos de red y formularios simples.</mark> El problema es que **ninguno** de los dos sabe leer un token `CSRF` rotativo ni seguir un flujo de varios pasos, que es justo lo que tiene cualquier login web moderno.
 
+# Medusa para servicios web
+<mark style="background: #ADCCFFA6;">Habiendo identificado el servidor [[📂🔄 FTP|FTP]], puedes proceder a aplicar fuerza bruta</mark> a su mecanismo de autenticación.
+
+Si exploramos el directorio `/home` en el sistema objetivo, vemos una carpeta `ftpuser`, lo que implica la probabilidad de que el nombre de usuario del servidor FTP sea `ftpuser`. Basándonos en esto, podemos modificar nuestro comando de Medusa en consecuencia:
+```shellsession
+Kronno23@htb[/htb]$ medusa -h 127.0.0.1 -u ftpuser -P 2020-200_most_used_passwords.txt -M ftp -t 5 
+
+Medusa v2.2 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net> 
+
+GENERAL: Parallel Hosts: 1 Parallel Logins: 5 
+GENERAL: Total Hosts: 1 
+GENERAL: Total Users: 1 
+GENERAL: Total Passwords: 197 
+... 
+ACCOUNT FOUND: [ftp] Host: 127.0.0.1 User: ... Password: ... [SUCCESS]
+... 
+GENERAL: Medusa has finished.
+```
+
+Tras descifrar con éxito la contraseña de FTP, se puede establecer una conexión FTP:
+```shellsession
+Kronno23@htb[/htb]$ ftp ftp://ftpuser:<FTPUSER_PASSWORD>@localhost
+```
+
 # `ffuf`: el brute force de login web actual
 
-Cuando el objetivo es un formulario HTTP, <mark style="background: #FFB86CA6;">`ffuf` supera a Hydra/Medusa</mark>: es el mismo fuzzer que ya usas en [[15 - Introducción al web fuzzing|recon]], con control total sobre petición, cabeceras, modo de combinación y filtros de respuesta. Sin token, un ataque de usuario×contraseña (`clusterbomb`) es directo:
+Cuando el objetivo es un formulario [[HTTP]], <mark style="background: #FFB86CA6;">`ffuf` supera a Hydra/Medusa</mark>: es el mismo fuzzer que ya usas en [[15 - Introducción al web fuzzing|recon]], con control total sobre petición, cabeceras, modo de combinación y filtros de respuesta. Sin token, un ataque de usuario×contraseña (`clusterbomb`) es directo:
 
 ```shell-session
 $ ffuf -request login.req -mode clusterbomb \

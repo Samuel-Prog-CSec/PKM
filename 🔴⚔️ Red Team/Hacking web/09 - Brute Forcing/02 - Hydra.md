@@ -8,8 +8,6 @@ Nota previa: "[[01 - Tipos de ataque - diccionario, híbrido y máscara]]"
 Nota siguiente: "[[03 - Medusa y alternativas modernas]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
----
-
 <mark style="background: #ADCCFFA6;">`Hydra` (THC-Hydra) es un cracker de logins de red en paralelo</mark>: lanza muchos intentos simultáneos contra un servicio vivo y soporta decenas de protocolos. En un PKM de web, sus dos módulos clave son `http-get` (Basic Auth) y `http-post-form` (formularios de login). El resto —SSH, RDP, FTP, BBDD— lo convierte en la navaja para los [[03 - Ataques remotos a servicios de red|ataques a servicios de la red interna]] una vez dentro.
 
 # Anatomía del comando
@@ -40,7 +38,9 @@ Tabla de servicios útiles (web arriba, pivoting abajo):
 
 # Basic HTTP Authentication (`http-get`)
 
-`Basic Auth` es un challenge-response rudimentario: el server responde `401` con `WWW-Authenticate`, el navegador pide credenciales y las manda en cada petición como `Authorization: Basic base64(user:pass)`.
+`Basic Auth` es un challenge-response rudimentario: el server responde `401` con la cabecera `WWW-Authenticate` que <mark style="background: #FFB86CA6;">solicita al navegador del usuario que presente un diálogo de inicio de sesión</mark>.
+
+Una vez que el usuario proporciona su nombre de usuario y contraseña, el navegador los concatena en una única cadena, separados por dos puntos. Esta <mark style="background: #FFB8EBA6;">cadena se codifica después usando Base64</mark> y se incluye en la cabecera `Authorization` de las peticiones posteriores, siguiendo el formato `Basic <encoded_credentials>`. El servidor decodifica las credenciales, las verifica con su base de datos y concede o deniega el acceso en consecuencia.
 
 ```http
 GET /protected HTTP/1.1
@@ -70,7 +70,7 @@ $ hydra [opciones] target http-post-form "path:params:condición"
   - `F=texto` → **fallo** si ese texto aparece (lo más común: `F=Invalid credentials`).
   - `S=texto` o `S=302` → **éxito** si aparece ese texto/redirección.
 
-Primero saca los nombres exactos de los campos (DevTools → Network, o interceptando con [[02 - Interceptación de peticiones|Burp]]). Con `username`/`password` y el mensaje de error confirmados:
+<mark style="background: #ADCCFFA6;">Primero saca los nombres exactos de los campos</mark> (DevTools (`F12`) → Network, o interceptando con [[02 - Interceptación de peticiones|Burp]]). <mark style="background: #FFB8EBA6;">Envía un intento de inicio de sesión de muestra con cualquier credencial</mark>. Esto te permitirá ver la solicitud POST enviada al servidor. Encuentra la solicitud correspondiente al envío del formulario y <mark style="background: #8000E1A6;">revisa los datos del formulario, las cabeceras y la respuesta del servidor</mark>. Con `username`/`password` y el mensaje de error confirmados:
 
 ```shell-session
 $ hydra -L top-usernames-shortlist.txt -P 2023-200_most_used_passwords.txt -f \
@@ -95,7 +95,7 @@ $ hydra -l administrator -x 6:8:a-zA-Z0-9 192.168.1.100 rdp
 Otros dos que arruinan un ataque:
 
 - <mark style="background: #FF5582A6;">`-t` alto dispara el rate limiting</mark>: bajar a `-t 4` (o menos) y no `-V` contra producción. Un barrido a 16 hilos te bloquea la IP y contamina el engagement. La evasión de estos controles va en [[05 - Defensas y evasión]].
-- **Falsos positivos por condición mal elegida**: si la app devuelve siempre `200` y solo cambia el cuerpo, una `S=302` mal puesta marca todo como éxito. Verifica siempre la credencial "encontrada" a mano antes de reportarla.
+- **Falsos positivos por condición mal elegida**: si la app devuelve siempre `200` y solo cambia el cuerpo, una `S=302` mal puesta marca todo como éxito. <mark style="background: #ADCCFFA6;">Verifica siempre la credencial "encontrada" a mano antes de reportarla</mark>.
 
 <mark style="background: #8000E1A6;">Por eso, en bug bounty actual, Hydra cede terreno frente a `ffuf` y Burp Intruder para web</mark>, y se reserva para los protocolos de red donde sigue siendo imbatible. La comparativa y el resto del arsenal, en [[06 - Arsenal de herramientas para Brute Forcing]].
 

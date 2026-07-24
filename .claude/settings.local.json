@@ -29,7 +29,10 @@
       "Bash(wc:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(obsidian:*)"
+      "Bash(obsidian:*)",
+      "Bash(python3:*)",
+      "Bash(pdftotext:*)",
+      "Agent"
     ]
   },
   "skillOverrides": {

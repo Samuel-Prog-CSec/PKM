@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("Esteganografía.base", "Esteganografía")
+    filters: Area == link("Esteganografía.base", "Esteganografía")
     order:
       - file.name
       - file.tags

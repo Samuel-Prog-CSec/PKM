@@ -93,7 +93,7 @@ miscanner/
 
 ## Instalar herramientas Go (montar el arsenal)
 
-Aquí hay otro cambio grande respecto al libro. `go get` **ya no instala binarios** (desde Go 1.17); ahora solo gestiona dependencias del módulo. Para instalar una herramienta se usa `go install` con versión explícita:
+Aquí hay otro cambio grande respecto al libro. `go get` **ya no instala binarios** (desde Go 1.18 — deprecado con aviso desde 1.16); ahora solo gestiona dependencias del módulo. Para instalar una herramienta se usa `go install` con versión explícita:
 
 ```shell-session
 $ go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest

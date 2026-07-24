@@ -12,7 +12,7 @@ Año: 2020
 ISBN: "978-1-59327-865-6"
 Portada: "https://covers.openlibrary.org/b/isbn/9781593278656-L.jpg"
 PDF: "[[blackhatgo.pdf]]"
-Estado: Pendiente
+Estado: En curso
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---
@@ -42,6 +42,10 @@ Arranca con la sintaxis y filosofía del lenguaje aplicadas a protocolos de red 
 ## Enlace
 
 [[blackhatgo.pdf|Abrir PDF]]
+
+## Curso derivado
+
+Este libro se está transformando en un curso de **Go ofensivo** (modernizado a Go 1.26) en `01 - Proyectos/GO`. Índice del curso: [[GO.base|GO]]. Bloque de fundamentos del lenguaje completo (14 notas 00-13): [[Fundamentos de Go.base|Fundamentos de Go]].
 
 ## Notas propias
 

@@ -1,12 +1,9 @@
 {
-  "cssTheme": "AnuPpuccin",
-  "theme": "obsidian",
+  "cssTheme": "Soft Paper",
+  "theme": "moonstone",
   "accentColor": "",
   "baseFontSize": 18,
-  "enabledCssSnippets": [
-    "custom-background",
-    "custom-rainbow-colors"
-  ],
+  "enabledCssSnippets": [],
   "nativeMenus": false,
   "showViewHeader": true,
   "showRibbon": true,

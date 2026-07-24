@@ -255,6 +255,48 @@
         "type": "FILES",
         "pattern": "🔴⚔️ Red Team/Active Directory/Active Directory.base",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "01 - Proyectos/GO/GO.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "🔴⚔️ Red Team/Hacking web/03 - JavaScript Deobfuscation/JavaScript Deobfuscation.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "🔴⚔️ Red Team/Hacking web/05 - SQL Injection/SQL Injection.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "🔴⚔️ Red Team/Hacking web/06 - Command Injection/Command Injection.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/Brute Forcing.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Check List Red Team.md",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [
