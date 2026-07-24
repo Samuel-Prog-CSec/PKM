@@ -15,7 +15,7 @@ Area: "[[AD Abuso de ACLs.base|Abuso de ACLs]]"
 
 # El derecho que lo habilita
 
-DCSync requiere dos derechos extendidos sobre el objeto del dominio: `DS-Replication-Get-Changes` y `DS-Replication-Get-Changes-All`. Los tienen Domain Admins, Enterprise Admins y los propios DCs… <mark style="background: #FF5582A6;">pero también cualquiera a quien se los hayan concedido</mark>, a menudo vía un `WriteDACL` abusado ([[14 - Tácticas de abuso de ACLs]]).
+DCSync requiere dos derechos extendidos sobre el objeto del dominio: `DS-Replication-Get-Changes` y `DS-Replication-Get-Changes-All`. Los tienen Domain Admins, Enterprise Admins y los propios DCs… <mark style="background: #FF5582A6;">pero también cualquiera a quien se los hayan concedido</mark>, a menudo vía un `WriteDACL` abusado, o directamente por `AllExtendedRights` sobre el objeto dominio ([[14 - Tácticas de abuso de ACLs]]).
 
 # Ejecutar el ataque
 
@@ -37,4 +37,4 @@ lsadump::dcsync /domain:inlanefreight.local /user:krbtgt    # mimikatz
 Es, en la práctica, el equivalente "en caliente" de volcar el [[09 - Ataque a Active Directory y NTDS.dit|NTDS.dit]] — mismo botín, sin apagar el DC ni copiar el fichero.
 
 > [!warning]+ Detección
-> DCSync genera el evento `4662` (operación sobre un objeto) con el GUID de replicación, <mark style="background: #FFB86CA6;">y lo delator es el origen</mark>: una petición de replicación desde algo que **no es un DC** es anómala por definición. `Microsoft Defender for Identity` la detecta con alta fiabilidad. No hay "DCSync sigiloso"; se compensa con el momento y el contexto. Detalle en [[25 - Detección y evasión en AD]].
+> DCSync genera el evento `4662` (operación sobre un objeto) con el GUID de replicación —si la SACL de auditoría del objeto dominio está activa—, <mark style="background: #FFB86CA6;">y lo delator es el origen</mark>: una petición de replicación desde algo que **no es un DC** es anómala por definición. `Microsoft Defender for Identity` la detecta con alta fiabilidad. No hay "DCSync sigiloso"; se compensa con el momento y el contexto. Detalle en [[25 - Detección y evasión en AD]].

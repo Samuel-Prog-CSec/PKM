@@ -1,7 +1,7 @@
 ---
 tags:
   - Pentesting/Vulnerabilidad
-  - Escaneo
+  - Escaneo/Vulnerabilidades
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente: "[[01 - Escaneo y configuración avanzada]]"
@@ -13,7 +13,7 @@ Area: "[[Nessus.base|Nessus]]"
 
 # Instalación y arranque
 
-Se descarga el paquete para tu sistema desde la [página de Tenable](https://www.tenable.com/downloads/nessus). La edición gratuita, **`Nessus Essentials`**, requiere solicitar un **código de activación** por correo (limitada a 16 IPs, suficiente para aprender y para labs).
+Se descarga el paquete para tu sistema desde la [página de Tenable](https://www.tenable.com/downloads/nessus). La edición gratuita, **`Nessus Essentials`**, requiere solicitar un **código de activación** por correo (limitada a **5 IPs**; el escalón de pago `Essentials Plus` sube a 20 IPs por ~$199/año). Suficiente para aprender y para labs pequeños.
 
 ```shell-session
 $ sudo dpkg -i Nessus-*-ubuntu*_amd64.deb     # instalar el paquete

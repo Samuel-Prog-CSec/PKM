@@ -28,10 +28,11 @@ $ gpp-decrypt <cadena cpassword>
 - **`PASSWD_NOTREQD`**: cuentas que admiten contraseña vacía.
 - **Scripts en SYSVOL y *shares***: credenciales *hardcodeadas* en `.bat`/`.ps1`. <mark style="background: #FF5582A6;">`Snaffler` las caza automáticamente</mark> por todos los *shares* legibles.
 - **Sniffing de LDAP**: las aplicaciones que autentican por *simple bind* mandan las credenciales en claro; capturarlas en red (o con un servidor LDAP falso) las expone.
+- **gMSA mal permisionadas**: si tu principal está en `msDS-GroupMSAMembership` (sobre-permiso frecuente conforme crece su adopción), `Get-ADServiceAccount -Identity <gmsa> -Properties msDS-ManagedPassword` o `gMSADumper.py` devuelve su contraseña actual en claro.
 
 # Abusos de grupos y coacción
 
-- **Grupos de Exchange** (`Exchange Windows Permissions`): históricamente con `WriteDACL` sobre el dominio → DCSync (`PrivExchange`, CVE-2019-0724). Revisa siempre su membresía.
+- **Grupos de Exchange** (`Exchange Windows Permissions`): históricamente con `WriteDACL` sobre el dominio → DCSync (**PrivExchange**, corregido en el ciclo de parches de Exchange de febrero 2019). Revisa siempre su membresía.
 - **Printer Bug** (`MS-PRN`/`SpoolSample`): otra coacción de autenticación, hermana de PetitPotam → relay ([[18 - Vulnerabilidades bleeding-edge]]).
 
 # DNS y reliquias
@@ -40,3 +41,6 @@ $ gpp-decrypt <cadena cpassword>
 
 > [!success]+ El orden de rentabilidad
 > En un dominio real, antes de exploits complejos revisa lo barato y fiable: <mark style="background: #FFB8EBA6;">GPP, descripciones, `PASSWD_NOTREQD` y `Snaffler` sobre los *shares*</mark> resuelven más engagements de los que parece. La enumeración con credenciales ([[04 - Enumeración con credenciales]]) ya deja muchos de estos a la vista.
+
+> [!warning]+ Huella
+> GPP, la lectura masiva de `description` y sobre todo `Snaffler` sobre shares dejan rastro (accesos a SYSVOL/shares en volumen, `5145`). Apunta a shares/objetos conocidos en vez de barrer todo. Telemetría en [[25 - Detección y evasión en AD]].

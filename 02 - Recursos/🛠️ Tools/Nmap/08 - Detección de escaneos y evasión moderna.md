@@ -23,7 +23,12 @@ Las técnicas de evasión de [[07 - Evasión de firewalls, IDS e IPS]] son de la
 
 ## Análisis de flujo (la nube te ve sin IDS)
 
-No hace falta un IDS clásico. **AWS GuardDuty** genera el hallazgo `Recon:EC2/Portscan` inspeccionando los **VPC Flow Logs**: detecta conexiones repetidas a puertos poco habituales (AWS, [*GuardDuty EC2 finding types*](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-ec2.html)). <mark style="background: #FFB8EBA6;">Un detalle explotable: GuardDuty no dispara este hallazgo para los puertos 80 y 443</mark> — de ahí que enumerar solo servicios web comunes sea inherentemente más silencioso en cloud. Azure Defender y GCP tienen equivalentes basados en logs de flujo.
+No hace falta un IDS clásico: la nube detecta escaneos desde los **logs de flujo** (VPC Flow Logs). Pero conviene no confundir dos hallazgos de **AWS GuardDuty** (AWS, [*GuardDuty EC2 finding types*](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-ec2.html)):
+
+- `Recon:EC2/Portscan` se dispara cuando **una instancia EC2 monitorizada escanea hacia fuera** — señal de que **esa** instancia ya está comprometida (post-explotación), **no** el atacante externo escaneando un target alojado en AWS.
+- `Recon:EC2/PortProbeUnprotectedPort` es el que aplica al escaneo **externo**: un puerto expuesto sondeado **desde una IP ya catalogada como maliciosa** en la *threat intel* de AWS. <mark style="background: #FFB8EBA6;">No dispara para los puertos 80 y 443</mark>, y **exige que tu IP figure como *known scanner/malicious*** — no salta por puro volumen.
+
+<mark style="background: #8000E1A6;">Consecuencia práctica: un pentester con una IP limpia escaneando un target en AWS probablemente no dispara ningún hallazgo EC2 de GuardDuty</mark>, sea cual sea el puerto — el riesgo real llega si operas desde una instancia ya comprometida o desde una IP con mala reputación. Azure Defender y GCP tienen equivalentes basados en logs de flujo.
 
 ## Detección por comportamiento / IA
 
@@ -48,7 +53,7 @@ Contra detección por umbral, bajar por debajo del umbral funciona: `-T0`/`-T1`,
 ## 3. Parecer tráfico legítimo (*blending*)
 
 - `--source-port 443`/`53` para imitar respuestas de servicios de confianza.
-- Escanear **solo puertos comunes** (recuerda: 80/443 no disparan GuardDuty) en vez de barridos completos.
+- Escanear **solo puertos comunes** en vez de barridos completos (el sondeo de 80/443, además, queda fuera del finding de GuardDuty).
 - Escanear **en horario laboral**, cuando tu tráfico se pierde entre el legítimo.
 - Salir desde **rangos con buena reputación** (cloud conocido) en vez de una IP residencial sospechosa.
 - Cambiar el *user-agent* de los scripts HTTP: `--script-args http.useragent="Mozilla/5.0..."` para no cantar en un WAF (appsecvenue, 2025).

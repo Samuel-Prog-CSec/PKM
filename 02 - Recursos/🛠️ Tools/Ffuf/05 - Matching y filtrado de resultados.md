@@ -36,7 +36,7 @@ $ ffuf -w wl.txt -u https://target/FUZZ -fw 12           # descarta las de 12 pa
 $ ffuf -w wl.txt -u https://target/FUZZ -fc 400-499      # rangos y listas
 ```
 
-<mark style="background: #ADCCFFA6;">El flujo profesional: `-mc all` para verlo TODO, identificar el patrón del ruido, y filtrarlo</mark> con `-fs`/`-fw`/`-fl`. Filtrar por `Size` mata el soft-404; por `Words`/`Lines` afina cuando el tamaño varía por un timestamp o un token.
+<mark style="background: #ADCCFFA6;">El flujo profesional: `-mc all` para verlo TODO, identificar el patrón del ruido, y filtrarlo</mark> con `-fs`/`-fw`/`-fl`. Filtrar por `Size` mata el soft-404; por `Words`/`Lines` afina cuando el tamaño varía por un timestamp o un token. Apilar varios matchers (o varios filtros) del mismo tipo los combina con `or` por defecto (basta que uno se cumpla); `-mmode and`/`-fmode and` exige que se cumplan **todos**.
 
 # Autocalibración: que ffuf aprenda el ruido
 

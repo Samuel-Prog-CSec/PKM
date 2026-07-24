@@ -83,7 +83,7 @@ $ sqlmap -u "..." --passwords --batch
 ```
 
 > [!info]+
-> El cracking integrado de SQLMap es cómodo para hashes débiles, pero limitado. <mark style="background: #FFB86CA6;">Para hashes serios, exporta (responde "store hashes to a temporary file") y usa [[John The Ripper]] o `hashcat`</mark> con reglas y GPU: mucho más rápido y flexible. SQLMap detecta el algoritmo, lo cual ya ahorra trabajo de identificación.
+> El cracking integrado de SQLMap es cómodo para hashes débiles, pero limitado. <mark style="background: #FFB86CA6;">Para hashes serios, exporta (responde "store hashes to a temporary file") y usa [[John the Ripper.base|John the Ripper]] o `hashcat`</mark> con reglas y GPU: mucho más rápido y flexible. SQLMap detecta el algoritmo, lo cual ya ahorra trabajo de identificación.
 
 > [!warning]+
 > `--all --batch` ejecuta **toda** la enumeración automáticamente. Es tentador pero contraproducente: tarda muchísimo, genera ruido masivo y deja el trabajo de encontrar lo relevante entre montañas de output. Enumera dirigido (`--current-db` → `--tables` → `--dump -T` de la tabla jugosa), no a lo bruto.

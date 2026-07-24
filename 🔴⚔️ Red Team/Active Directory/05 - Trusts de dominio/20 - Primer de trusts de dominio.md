@@ -25,6 +25,8 @@ Un trust se define por dos ejes:
 | Tree-root | Entre árboles de un bosque | Sí | Bidireccional |
 | External | Entre dominios de bosques distintos | No | Uni/bi |
 | Forest | Entre dos bosques | Sí | Uni/bi |
+| Shortcut | Entre dominios del mismo bosque (acorta rutas de autenticación largas) | Sí | Uni/bi |
+| Realm | Con un reino Kerberos no-Windows (MIT KRB5 / Unix) | Configurable | Uni/bi |
 
 # Por qué importan
 

@@ -32,7 +32,7 @@ Buena parte de estas técnicas ya está desarrollada en el módulo de footprinti
 - **ASN / netblocks**: `whois`, [bgp.he.net](https://bgp.he.net), `amass intel -org "<nombre>"`. Traduce el nombre de la empresa a rangos IP propios (no los cloud).
 - **DNS y subdominios**: *certificate transparency* (`crt.sh`), `subfinder`, `amass enum`, `dnsx`, y viewdns.info para históricos. <mark style="background: #FFB8EBA6;">La CT es hoy la fuente pasiva más rica</mark>: los certificados delatan subdominios internos (`vpn.`, `mail.`, `adfs.`, `sharepoint.`).
 - **OSINT de personal**: LinkedIn + `crosslinked`/`linkedin2username` para derivar el formato de usuario. Las **ofertas de empleo** son oro: piden "experiencia con Active Directory, Microsoft Defender for Identity, CrowdStrike" → te dicen qué te vas a encontrar dentro.
-- **Fugas y credenciales**: `DeHashed`, HaveIBeenPwned, `pwndb`, compilaciones de *breaches*. Alimentan spraying y *credential stuffing*.
+- **Fugas y credenciales**: `DeHashed`, HaveIBeenPwned, `IntelligenceX`/`LeakCheck` (`pwndb` está archivado desde 2022, ya no vale), compilaciones de *breaches*. Alimentan spraying y *credential stuffing*.
 - **Documentos y repos**: Google dorks (`site: filetype:`), GitHub/GitLab por secretos, metadatos de PDFs/Office (usuarios internos, rutas).
 
 <mark style="background: #8000E1A6;">Todo esto es un bucle</mark>: un subdominio revela un servicio, el servicio revela una tecnología, la tecnología revela usuarios, los usuarios revelan el formato — y el formato se convierte en tu primer diccionario de spraying.

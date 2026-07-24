@@ -14,7 +14,7 @@ Una URL `GET` suelta es la excepción. En un objetivo real la petición vulnerab
 
 # El flujo profesional: petición capturada con `-r`
 
-La forma más fiable es interceptar la petición real con [[Interceptación solicitudes|Burp o caido]], guardarla en un fichero y lanzarla con `-r`:
+La forma más fiable es interceptar la petición real con [[02 - Interceptación de peticiones|Burp o Caido]], guardarla en un fichero y lanzarla con `-r`:
 
 ```shell-session
 $ sqlmap -r req.txt
@@ -43,7 +43,7 @@ $ sqlmap ... --method PUT --data='id=1'
 `--cookie`, `--referer`, `-A/--user-agent` y `-H` fijan cabeceras. <mark style="background: #FFB8EBA6;">Para inyectar en una cabecera o cookie (no solo en parámetros), se marca con `*`</mark>: `--cookie="id=1*"`. Esto cubre los SQLi modernos que viven en `X-Forwarded-For`, `Referer` o cookies usadas en consultas de logging.
 
 > [!warning]+
-> <mark style="background: #FFB86CA6;">`--random-agent` es casi obligatorio hoy</mark>: por defecto SQLMap envía `User-Agent: sqlmap/x.x`, que muchísimos WAF/IPS bloquean al instante. `--random-agent` escoge un User-Agent de navegador real del repertorio interno. (`--mobile` imita un smartphone.) Es la primera medida de evasión, antes incluso de los [[05 - Bypass de protecciones web|tamper scripts]].
+> <mark style="background: #FFB86CA6;">`--random-agent` es casi obligatorio hoy</mark>: por defecto SQLMap envía `User-Agent: sqlmap/x.x`, que muchísimos WAF/IPS bloquean al instante. `--random-agent` escoge un User-Agent de navegador real del repertorio interno. (`--mobile` imita un smartphone.) Es la primera medida de evasión, antes incluso de los [[05 - Bypass de protecciones web con SQLMap|tamper scripts]].
 
 # Cuerpos JSON y XML (APIs modernas)
 
@@ -74,6 +74,6 @@ JSON data found in HTTP body. Do you want to process it? [Y/n/q] Y
 | `--proxy=http://127.0.0.1:8080` | Enruta todo el tráfico por Burp/caido para repetir y analizar a mano. |
 
 > [!important]+
-> `--proxy` hacia Burp/caido es la combinación más potente para depurar y para evasión: <mark style="background: #FF5582A6;">ves cada payload que SQLMap envía, puedes repetirlo manualmente y ajustar el [[05 - Bypass de protecciones web|tamper]] observando qué bloquea el WAF</mark>. `-v 3` cumple lo mismo en consola cuando no quieres levantar el proxy.
+> `--proxy` hacia Burp/caido es la combinación más potente para depurar y para evasión: <mark style="background: #FF5582A6;">ves cada payload que SQLMap envía, puedes repetirlo manualmente y ajustar el [[05 - Bypass de protecciones web con SQLMap|tamper]] observando qué bloquea el WAF</mark>. `-v 3` cumple lo mismo en consola cuando no quieres levantar el proxy.
 
 Con la petición bien construida, el siguiente control es **cuánto** y **cómo** ataca SQLMap: [[03 - Tuning del ataque]].

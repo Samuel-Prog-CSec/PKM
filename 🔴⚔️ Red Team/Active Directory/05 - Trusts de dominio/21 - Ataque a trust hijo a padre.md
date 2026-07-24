@@ -30,13 +30,16 @@ kerberos::golden /user:Administrator /domain:CHILD.inlanefreight.local /sid:<SID
 Desde **Linux**, impacket lo automatiza de punta a punta:
 
 ```shell-session
-$ raiseChild.py -target-exec <dc-raíz> CHILD.inlanefreight.local/administrator:Password123
+$ raiseChild.py -target-exec <dc-raíz> CHILD.inlanefreight.local/administrator:Password123   # tu resolver DNS debe alcanzar todo el camino hijo→raíz del bosque
 ```
 
 O manual: `ticketer.py -extra-sid <EA-519> …` + `secretsdump.py` contra el DC raíz. <mark style="background: #FF5582A6;">Con el ticket en memoria, un DCSync contra el DC raíz cierra el bosque.</mark>
 
+> [!info]+ OPSEC: usa AES y considera un Diamond Ticket
+> Forjar con el hash NTLM (`/krbtgt:<hash>`) fuerza **RC4**, justo lo que la [[25 - Detección y evasión en AD|detección]] marca. Usa la clave AES: `/aes256:<clave>` (mimikatz) o `-aesKey` (impacket `raiseChild`/`ticketer`). Para más sigilo, un **Diamond Ticket** (`Rubeus diamond /sids:<EA-519>`) parte de un TGT pedido legítimamente (hay `AS-REQ` real) y evade la heurística "TGT sin AS-REQ previo".
+
 > [!info]+ Por qué no lo para el filtrado de SIDs
-> El `SID filtering` descarta SIDs "extraños" en autenticaciones que cruzan un trust. Dentro de un mismo bosque **está deshabilitado por diseño** (los dominios se consideran de igual confianza), así que el ExtraSid pasa. Entre bosques suele estar activo — de ahí que [[22 - Abuso de trust cross-forest]] use otras vías.
+> El `SID filtering` descarta SIDs "extraños" en autenticaciones que cruzan un trust. Dentro de un mismo bosque **está deshabilitado por defecto** (los dominios se consideran de igual confianza), así que el ExtraSid pasa — se puede poner en cuarentena (`netdom trust /quarantine:yes`), pero casi nadie lo hace porque rompe los grupos universales del bosque. Entre bosques suele estar activo — de ahí que [[22 - Abuso de trust cross-forest]] use otras vías.
 
 > [!warning]+ Es también persistencia
 > Un Golden Ticket forjado con el hash de `krbtgt` sobrevive a cambios de contraseña de usuario y dura hasta que se rota `krbtgt` (dos veces). Es Pass-the-Ticket en su forma más potente ([[14 - Pass the Ticket (PtT)]]); su detección, en [[25 - Detección y evasión en AD]].

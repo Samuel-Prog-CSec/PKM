@@ -48,7 +48,7 @@ dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=4194304)" -attr s
 
 # WMI y PowerShell
 
-`wmic` (en desuso pero aún presente) y su relevo `Get-CimInstance` consultan el sistema; PowerShell accede a LDAP vía `[adsisearcher]` sin módulos. <mark style="background: #FFB8EBA6;">Ojo con la telemetría</mark>: el *Script Block Logging* y `AMSI` modernos registran casi todo en PowerShell 5+. El *downgrade* a v2 (`powershell -v 2`) evita ese logging si la v2 sigue instalada.
+`wmic` (en desuso pero aún presente) y su relevo `Get-CimInstance` consultan el sistema; PowerShell accede a LDAP vía `[adsisearcher]` sin módulos. <mark style="background: #FFB8EBA6;">Ojo con la telemetría</mark>: el *Script Block Logging* y `AMSI` modernos registran casi todo en PowerShell 5+. El *downgrade* a v2 (`powershell -v 2`) evita ese logging, pero requiere `.NET 3.5` + la *feature* PSv2 Engine (ninguno por defecto); en 2026 solo aplica a hosts legacy.
 
 > [!warning]+ LotL no es invisible, es "menos evidente"
 > No dejar binarios ≠ no dejar rastro. Un usuario de RRHH ejecutando `dsquery` o `net group "Domain Admins"` es una anomalía de comportamiento que un buen SOC marca. LotL reduce la superficie de detección, no la elimina. Las defensas del host las viste en [[03 - Enumeración de controles de seguridad]]; la telemetría concreta, en [[25 - Detección y evasión en AD]].

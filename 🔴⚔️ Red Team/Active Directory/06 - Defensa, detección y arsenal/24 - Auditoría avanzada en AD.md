@@ -20,7 +20,7 @@ El escáner de postura de AD de referencia. Puntúa el dominio, detecta misconfi
 $ PingCastle.exe --healthcheck
 ```
 
-<mark style="background: #FFB86CA6;">En 5 minutos te da un informe con las rutas de riesgo del dominio</mark> — de lo primero que conviene correr. (HTB lo etiqueta como "fin de soporte 2023", pero el proyecto sigue mantenido y activo en 2026.)
+<mark style="background: #FFB86CA6;">En 5 minutos te da un informe con las rutas de riesgo del dominio</mark> — de lo primero que conviene correr. (HTB lo etiqueta como "fin de soporte 2023", pero **Netwrix adquirió PingCastle en agosto 2024** — el repo se movió a `github.com/netwrix/pingcastle`, la edición community sigue gratis y el proyecto está muy activo en 2026.)
 
 # AD Explorer (Sysinternals)
 

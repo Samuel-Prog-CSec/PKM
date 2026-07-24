@@ -1,7 +1,7 @@
 ---
 tags:
   - Pentesting/Vulnerabilidad
-  - Escaneo
+  - Escaneo/Vulnerabilidades
 Fecha de actualización: 2026-07-18
 Nota previa: "[[02 - Interpretar y exportar resultados]]"
 Nota siguiente:

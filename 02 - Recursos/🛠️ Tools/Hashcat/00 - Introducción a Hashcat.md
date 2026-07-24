@@ -23,6 +23,7 @@ Area: "[[Hashcat.base|Hashcat]]"
 | `3` | Mask (fuerza bruta) | Genera candidatos por patrón (`?a?a?a...`) |
 | `6` | Hybrid Wordlist + Mask | palabra + sufijo por máscara |
 | `7` | Hybrid Mask + Wordlist | prefijo por máscara + palabra |
+| `9` | Association | candidato derivado de un *hint* asociado a cada hash (username, pista) |
 
 # Tipos de hash (`-m`)
 
@@ -36,7 +37,8 @@ Cada tipo de hash tiene un número. Los que aparecen en un pentest:
 | `1800` | sha512crypt (`$6$`, Linux) |
 | `3200` | bcrypt (`$2y$`) |
 | `5600` | **NetNTLMv2** (Responder) |
-| `13100` | **Kerberos krb5tgs** (Kerberoasting) |
+| `13100` | **Kerberos krb5tgs** RC4 (Kerberoasting) |
+| `19700` | **Kerberos krb5tgs** AES256 (Kerberoasting con RC4 deshabilitado) |
 | `18200` | Kerberos krb5asrep (AS-REP) |
 | `22000` | WPA/WPA2 |
 
@@ -66,7 +68,7 @@ $ hashcat -m 1000 hashes.txt --show
 
 # El potfile
 
-Como John, Hashcat guarda lo crackeado en `~/.hashcat/hashcat.potfile` y no lo repite. Si un hash "no sale" pero ya lo rompiste, está en el pot — `--show` lo revela.
+Como John, Hashcat guarda lo crackeado en `~/.local/share/hashcat/hashcat.potfile` (ruta XDG desde la 6.2.2; `~/.hashcat/hashcat.potfile` es la ubicación legacy) y no lo repite. Si un hash "no sale" pero ya lo rompiste, está en el pot — `--show` lo revela.
 
 # Rendimiento y OPSEC
 

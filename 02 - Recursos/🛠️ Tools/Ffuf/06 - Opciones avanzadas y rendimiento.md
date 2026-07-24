@@ -19,7 +19,8 @@ Los flags que convierten `ffuf` de "rápido y ruidoso" en "controlado y encajabl
 -rate 100        # tope de peticiones/segundo (0 = sin límite)
 -p 0.1           # retardo entre peticiones; acepta rango aleatorio: -p 0.1-2.0
 -timeout 10      # timeout por petición
--maxtime 300     # aborta todo el job a los N segundos
+-maxtime 300     # aborta TODO el proceso a los N segundos
+-maxtime-job 60  # aborta cada job individual (clave con -recursion, que lanza un job por dir)
 ```
 
 <mark style="background: #FFB86CA6;">`-rate` y `-p` no son solo cortesía: son la primera línea de evasión de *rate-limiting*</mark> y de no tumbar un objetivo frágil en producción. En bug bounty, respetar el rate del programa evita el baneo (ver [[07 - WAF, evasión y arsenal complementario]]).
@@ -55,11 +56,11 @@ $ ffuf -w wl.txt -u https://target/FUZZ \
 # Salida reutilizable
 
 ```shell-session
--o out.json -of json     # formatos: json, ejson, html, md, csv, all
+-o out.json -of json     # formatos: json, ejson, html, md, csv, ecsv, all
 -od ./responses/         # vuelca a disco el CUERPO de cada acierto (para revisar luego)
 -v                       # incluye la URL completa y redirecciones en la salida
 ```
 
-Guardar en `json` permite postprocesar con `jq` o alimentar otra herramienta; `-od` conserva las respuestas interesantes para análisis offline. La config repetida se externaliza en `~/.ffufrc` o `-config fichero`.
+Guardar en `json` permite postprocesar con `jq` o alimentar otra herramienta; `-od` conserva las respuestas interesantes para análisis offline. La config repetida se externaliza en `~/.config/ffuf/ffufrc` (o `~/.ffufrc` como *fallback*) o `-config fichero`.
 
 Con el rendimiento bajo control, el último eje —y el que HTB ignora— es sobrevivir a las defensas modernas: [[07 - WAF, evasión y arsenal complementario]].

@@ -20,13 +20,15 @@ No se protege lo que no se conoce. La base es un inventario vivo: cuentas privil
 
 | Control | Ataque que mitiga |
 | --- | --- |
-| `Protected Users` + Authentication Silos | PtH/PtT, delegación, robo de credenciales |
+| `Protected Users` + Authentication Silos | PtH, delegación, robo de credenciales (bloqueo total); PtT (parcial — TGT máx. 4h no renovable, no lo impide) |
 | `gMSA` (cuentas de servicio gestionadas) | [[11 - Kerberoasting]] (contraseñas de 120+ chars, rotadas solas) |
 | `LAPS` / LAPS v2 | Reutilización de admin local ([[10 - Password Spraying interno]]) |
 | Deshabilitar `LLMNR`/`NBT-NS` | [[06 - Envenenamiento LLMNR y NBT-NS]] |
 | `SMB signing` + LDAP signing/channel binding | NTLM relay |
 | Administración por niveles (tier 0/1/2) | Movimiento lateral, sesiones de DA en estaciones |
 | Rotar `krbtgt` (2×) | Golden Ticket ([[21 - Ataque a trust hijo a padre]]) |
+| Selective Authentication en trusts salientes | Kerberoasting cross-forest y foreign membership ([[22 - Abuso de trust cross-forest]]) |
+| SID filtering/quarantine + auditar `sIDHistory` + `EnableSidHistory` off tras migraciones | ExtraSids / SID History ([[21 - Ataque a trust hijo a padre]]) |
 
 <mark style="background: #FFB86CA6;">Casi cada ataque de esta área tiene un control que lo neutraliza</mark>; el problema es que rara vez están todos puestos.
 

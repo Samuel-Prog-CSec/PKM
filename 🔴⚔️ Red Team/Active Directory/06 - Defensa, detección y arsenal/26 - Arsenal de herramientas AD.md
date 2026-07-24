@@ -18,7 +18,7 @@ El set profesional 2026 para atacar AD, por fase. <mark style="background: #ADCC
 | Herramienta | Uso | Nota |
 | --- | --- | --- |
 | ⭐ `NetExec` (`nxc`) | barrido, enum de usuarios/grupos/shares, exec | <mark style="background: #FFB86CA6;">sustituye a `CrackMapExec` (abandonado 2023)</mark> |
-| ⭐ `BloodHound CE` + SharpHound / bloodhound-python | grafo de rutas a DA | CE, no el legacy |
+| ⭐ `BloodHound CE` + SharpHound / bloodhound-ce-python | grafo de rutas a DA | CE, no el legacy |
 | `PowerView` / `SharpView` | enum ofensiva desde Windows | |
 | `ldapsearch` / `ldeep` / `windapsearch` | consultas LDAP crudas | |
 | `enum4linux-ng` | enum sin credenciales | reescritura del viejo `enum4linux` |
@@ -40,7 +40,7 @@ El set profesional 2026 para atacar AD, por fase. <mark style="background: #ADCC
 | Herramienta | Uso |
 | --- | --- |
 | ⭐ `impacket` | GetUserSPNs, GetNPUsers, secretsdump, ticketer, psexec/wmiexec, raiseChild |
-| ⭐ `Rubeus` | kerberoasting, PtT, golden/silver tickets (Windows) |
+| ⭐ `Rubeus` | kerberoasting, PtT, golden/silver/**diamond** tickets (Windows) |
 | `mimikatz` | volcado de credenciales, DCSync, golden ticket |
 | `evil-winrm` | shell WinRM desde Linux |
 
@@ -50,7 +50,7 @@ El set profesional 2026 para atacar AD, por fase. <mark style="background: #ADCC
 | --- | --- |
 | `bloodyAD` / `dacledit.py` | modificar ACLs/objetos desde Linux |
 | `pywhisker` / `Whisker` | *shadow credentials* |
-| ⭐ `Certipy` | toda la familia ADCS (`ESC1`-`ESC16`) |
+| ⭐ `Certipy` | toda la familia ADCS (`ESC1`-`ESC17`) |
 
 # Auditoría (lado defensivo)
 

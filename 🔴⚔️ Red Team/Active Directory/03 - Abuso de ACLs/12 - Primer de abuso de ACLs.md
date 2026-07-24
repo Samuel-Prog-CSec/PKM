@@ -30,7 +30,9 @@ No todos los ACE son peligrosos. Los que convierten un permiso en escalada:
 | `WriteDACL` | Reescribir la propia ACL → auto-concederse `GenericAll` o DCSync. |
 | `WriteOwner` | Hacerse dueño del objeto → luego darse permisos. |
 | `ForceChangePassword` | Resetear la contraseña sin conocer la actual. |
-| `AddMember` / `Self` | Añadirse a un grupo. |
+| `AddSelf` / `Self` | Auto-añadirte a un grupo (solo a ti mismo). |
+| `AddMember` (`WriteProperty` sobre `member`) | Añadir a **cualquiera** a un grupo. |
+| `AllExtendedRights` | Todos los derechos extendidos: `ForceChangePassword` sobre usuarios, lectura de LAPS sobre equipos y, sobre el **dominio**, DCSync directo (sin pasar por `WriteDACL`). |
 | `DS-Replication-Get-Changes*` | Replicar el directorio → [[15 - DCSync]]. |
 
 # Por qué importan: las cadenas

@@ -42,7 +42,7 @@ Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 $ExecutionContext.SessionState.LanguageMode
 ```
 
-Si devuelve `ConstrainedLanguage`, <mark style="background: #FF5582A6;">PowerShell está capado</mark>: bloquea .NET arbitrario, COM y buena parte del tooling ofensivo. Suele ir de la mano de AppLocker. Vías de evasión: *downgrade* a PowerShell v2 (`powershell -v 2`) si sigue instalado —que además evita el *Script Block Logging* moderno— o *bypasses* de CLM conocidos.
+Si devuelve `ConstrainedLanguage`, <mark style="background: #FF5582A6;">PowerShell está capado</mark>: bloquea .NET arbitrario, COM y buena parte del tooling ofensivo. Suele ir de la mano de AppLocker. Vías de evasión: *downgrade* a PowerShell v2 (`powershell -v 2`) —que además evita el *Script Block Logging* moderno— o *bypasses* de CLM conocidos. Ojo: la v2 requiere `.NET Framework 3.5` (no instalado por defecto) y la *feature* opcional `PowerShell 2.0 Engine`; en un dominio con mínima higiene de parcheo esta vía ya casi no está disponible en 2026.
 
 # LAPS
 

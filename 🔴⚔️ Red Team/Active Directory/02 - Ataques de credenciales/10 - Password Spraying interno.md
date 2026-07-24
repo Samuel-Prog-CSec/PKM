@@ -51,6 +51,6 @@ $ nxc smb 172.16.5.0/23 -u administrator -H <hash> --local-auth | grep '[+]'
 Esto ya es *Pass-the-Hash* de admin local; el detalle en [[13 - Pass the Hash (PtH)]].
 
 > [!warning]+ La firma del spraying
-> Muchos `4625` (fallo de logon) desde un mismo origen en poco tiempo es el patrón que todo SIEM busca. <mark style="background: #ADCCFFA6;">Reparte en el tiempo, respeta la ventana</mark>, y si puedes usa Kerberos (Kerbrute genera `4768` con fallo, menos vigilado que el `4625` de SMB). Telemetría completa en [[25 - Detección y evasión en AD]].
+> Muchos `4625` (fallo de logon) desde un mismo origen en poco tiempo es el patrón que todo SIEM busca. <mark style="background: #ADCCFFA6;">Reparte en el tiempo, respeta la ventana</mark>, y si puedes usa Kerberos (un fallo de contraseña genera `4771` — *Kerberos pre-authentication failed*, código `0x18` —, **no** `4768`, que es el patrón de la *enumeración* de usuarios inexistentes). Kerberos suele estar menos vigilado que el `4625` de SMB, pero los SOC modernos cazan ráfagas de `4771`. Telemetría completa en [[25 - Detección y evasión en AD]].
 
 Un acierto reabre el bucle: con la nueva credencial, vuelve a [[04 - Enumeración con credenciales]] con más visibilidad.

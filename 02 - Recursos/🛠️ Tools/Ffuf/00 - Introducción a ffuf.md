@@ -72,7 +72,7 @@ backup     [Status: 301, Size: 0,    Words: 1,  Lines: 1,  Duration: 40ms]
 -c        # salida con color
 -v        # verbose: muestra la URL completa y redirecciones
 -s        # silent: solo el resultado, sin banner (ideal para pipes/scripts)
--of json  # formato de salida (json/ejson/html/md/csv/all) con -o fichero
+-of json  # formato de salida (json/ejson/html/md/csv/ecsv/all) con -o fichero
 ```
 
-`ffuf` lee config de `~/.ffufrc` o de `-config fichero.ffufrc` para no repetir flags. El siguiente paso es cómo alimentarlo: [[01 - Wordlists, keywords y modos de ffuf|wordlists, keywords y modos]].
+`ffuf` lee config de `~/.config/ffuf/ffufrc` (o `~/.ffufrc` como *fallback*) o de `-config fichero.ffufrc` para no repetir flags. El siguiente paso es cómo alimentarlo: [[01 - Wordlists, keywords y modos de ffuf|wordlists, keywords y modos]].

@@ -34,7 +34,7 @@ $ ffuf -w raft-medium-files.txt -u https://target/FUZZ \
 
 # Recursión
 
-`-recursion` re-lanza el fuzz automáticamente sobre cada directorio que encuentra, hasta `-recursion-depth`:
+`-recursion` re-lanza el fuzz automáticamente sobre cada directorio que encuentra, hasta `-recursion-depth`. Exige que la `-u` **termine** en `FUZZ` (si `FUZZ` va en medio de la ruta, `ffuf` se niega a arrancar):
 
 ```shell-session
 $ ffuf -w raft-medium-directories.txt -u https://target/FUZZ \
@@ -43,7 +43,7 @@ $ ffuf -w raft-medium-directories.txt -u https://target/FUZZ \
 ```
 
 > [!warning]+ La recursión explota el número de peticiones
-> Cada directorio nuevo dispara una wordlist entera. Con `-recursion-depth 2` y una lista mediana, pasas de miles a **cientos de miles** de peticiones — ruidoso y lento. Empieza sin recursión con una lista corta (`common.txt`), identifica los directorios interesantes y **recursa dirigido** sobre ellos con `-recursion-depth 1`. Para forced browsing recursivo serio, [[16 - Herramientas de fuzzing|feroxbuster]] lo hace mejor de fábrica.
+> Cada directorio nuevo dispara una wordlist entera. Con `-recursion-depth 2` y una lista mediana, pasas de miles a **cientos de miles** de peticiones — ruidoso y lento. Ojo: sin `-recursion-depth` (default `0`) la profundidad es **ilimitada** — pon siempre un tope explícito. Empieza sin recursión con una lista corta (`common.txt`), identifica los directorios interesantes y **recursa dirigido** sobre ellos con `-recursion-depth 1`. Para forced browsing recursivo serio, [[16 - Herramientas de fuzzing|feroxbuster]] lo hace mejor de fábrica.
 
 # El problema del soft-404
 

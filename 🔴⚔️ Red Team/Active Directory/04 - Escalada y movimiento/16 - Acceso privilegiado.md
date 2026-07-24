@@ -45,3 +45,6 @@ SQL> xp_cmdshell whoami
 
 > [!success]+ Empieza por el grafo
 > Antes de probar accesos, la *query* de BloodHound *"Find Computers where Domain Users can RDP"* o las aristas `CanPSRemote`/`SQLAdmin` te dicen exactamente dónde tienes ejecución con las credenciales actuales. Menos ruido, cero adivinar.
+
+> [!warning]+ Huella
+> El acceso legítimo también deja rastro: `4624` (logon tipo 10 por RDP, tipo 3 por WinRM), el log operacional de WinRM y, sobre todo, **activar `xp_cmdshell`** (deshabilitado por defecto desde SQL Server 2005) es un evento de alta fidelidad que audita cualquier SIEM. Usa cuentas ya validadas en el grafo y evita `xp_cmdshell` si hay otra vía. Ver [[25 - Detección y evasión en AD]].

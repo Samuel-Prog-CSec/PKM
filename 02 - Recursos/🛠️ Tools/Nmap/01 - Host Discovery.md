@@ -84,7 +84,8 @@ Cuando el ICMP echo está filtrado (lo normal en redes bien administradas y en c
 | `-PS<puertos>` | TCP SYN a esos puertos | El más útil contra hosts con ICMP filtrado (`-PS21,22,80,443,3389`). |
 | `-PA<puertos>` | TCP ACK | Atraviesa algunos firewalls sin estado. |
 | `-PU<puertos>` | UDP | Servicios UDP (53, 161). |
-| `-PR` | ARP | Por defecto en LAN; imbloqueable dentro del segmento. |
+| `-PY<puertos>` | SCTP INIT | Raro (SCTP); casi solo en entornos telco/SS7. |
+| *(automático)* | ARP (L2) | Nmap lo envía **siempre** en LAN Ethernet, sin flag; imbloqueable dentro del segmento. Se desactiva con `--disable-arp-ping`. |
 | `-PO` | Protocolos IP crudos | Descubrir por protocolo soportado. |
 
 <mark style="background: #FF5582A6;">Dos flags que cambian la vida en producción</mark>:

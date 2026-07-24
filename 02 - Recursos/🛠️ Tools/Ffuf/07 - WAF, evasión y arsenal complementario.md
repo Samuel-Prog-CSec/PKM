@@ -27,6 +27,7 @@ HTB enseña `ffuf` como si el objetivo no tuviera defensas. En producción hay W
 - **Detecta y esquiva la página de bloqueo**: filtra la respuesta del WAF (`-fr "Access Denied"`, `-fc 403,429`) para no confundirla con hallazgos, y si aparece `429`, baja el `-rate`.
 - **Auto-stop ante bloqueo**: `-sf` detiene el escaneo si >95% de las respuestas son `403` (el WAF ya bloquea; seguir es ruido inútil), `-se` para ante errores espurios, y `-sa` combina ambos.
 - **Rota cabeceras**: algunos WAF perfilan combinaciones de cabeceras; varía `User-Agent`/`Accept` o usa `-request` con una petición legítima de base.
+- **Codifica el payload al vuelo**: `-enc 'FUZZ:urlencode'` (o `b64encode`) —ffuf ≥2.1.0, vía la librería `pencode`— evade firmas de WAF que buscan el patrón en claro; encadenable para *double-encoding*.
 
 > [!warning]+ Sigilo real vs. autorización
 > En un pentest con alcance, avisa antes de fuzzear producción (puedes tumbar un servicio) y respeta el rate del cliente. En bug bounty, muchos programas **prohíben** el fuzzing agresivo o el uso de rotación de IP — léete las reglas. La evasión aquí es para no romper cosas y no generar falsos incidentes, no para saltarte un alcance.
@@ -39,7 +40,7 @@ HTB enseña `ffuf` como si el objetivo no tuviera defensas. En producción hay W
 | --- | --- | --- |
 | [feroxbuster](https://github.com/epi052/feroxbuster) | *Forced browsing* recursivo | Recursión automática e inteligente, Rust, rapidísimo |
 | [x8](https://github.com/Sh1Yo/x8) / [Arjun](https://github.com/s0md3v/Arjun) | Parámetros ocultos | Detectan params que cambian el comportamiento sutilmente |
-| [kiterunner](https://github.com/assetnote/kiterunner) | **Rutas de API** | Usa specs (Swagger) y wordlists de API; supera a ffuf en REST |
+| [kiterunner](https://github.com/assetnote/kiterunner) | **Rutas de API** | Usa specs (Swagger) y wordlists de API; supera a ffuf en REST. *Sin commits desde 2021* — sus wordlists (`routes-large.kite`) siguen útiles reproducidas con `ffuf` si el binario da guerra |
 | [param-miner](https://github.com/PortSwigger/param-miner) | Cabeceras / *cache poisoning* | Extensión de Burp, imbatible para params de cabecera |
 | Burp Intruder / Caido | Sesiones complejas, macros | Cuando hace falta re-login o encadenar tokens |
 

@@ -33,7 +33,7 @@ rpcclient $> enumdomusers
 Para LDAP a bajo nivel, `ldapsearch`, `windapsearch` o `ldeep` extraen usuarios, admins y —clásico— <mark style="background: #FFB8EBA6;">descripciones de cuenta con contraseñas dentro</mark>. Y el recolector del grafo desde Linux:
 
 ```shell-session
-$ bloodhound-python -u forend -p Klmcargo2 -d inlanefreight.local -ns 172.16.5.5 -c All
+$ bloodhound-ce-python -u forend -p Klmcargo2 -d inlanefreight.local -ns 172.16.5.5 -c All   # paquete bloodhound-ce (CE), NO bloodhound-python (legacy)
 ```
 
 # Desde Windows
@@ -58,10 +58,10 @@ Find-LocalAdminAccess                             # dónde soy admin local
 
 # BloodHound: la pieza central
 
-<mark style="background: #ADCCFFA6;">`BloodHound` modela AD como un grafo y calcula la ruta más corta desde donde estás hasta Domain Admin</mark>, incluyendo aristas invisibles a mano (ACLs abusables, sesiones, delegaciones). Recolectas con `SharpHound` (Windows) o `bloodhound-python` (Linux) y cargas el resultado en la GUI.
+<mark style="background: #ADCCFFA6;">`BloodHound` modela AD como un grafo y calcula la ruta más corta desde donde estás hasta Domain Admin</mark>, incluyendo aristas invisibles a mano (ACLs abusables, sesiones, delegaciones). Recolectas con `SharpHound` (Windows) o `bloodhound-ce-python`/`rusthound-ce` (Linux) y cargas el resultado en la GUI.
 
 > [!info]+ BloodHound CE, no el legacy
-> Desde 2023 la versión viva es **BloodHound Community Edition** (backend en contenedores, API REST, nuevas *queries*). Los ingestores antiguos y las *custom queries* legacy ya no aplican; usa `SharpHound`/`bloodhound-python` **CE-compatibles**. El análisis de sus rutas es la base de [[12 - Primer de abuso de ACLs]] y de los ataques que siguen.
+> Desde 2023 la versión viva es **BloodHound Community Edition** (backend en contenedores, API REST, nuevas *queries*). Los ingestores antiguos y las *custom queries* legacy ya no aplican. Ojo con el ingestor de Linux: `bloodhound-python` (paquete `bloodhound`) es **solo legacy 4.2/4.3**; para CE usa `bloodhound-ce-python` (`pip install bloodhound-ce`) o `rusthound-ce`. `SharpHound` sirve para ambos. El análisis de sus rutas es la base de [[12 - Primer de abuso de ACLs]] y de los ataques que siguen.
 
 <mark style="background: #FFB86CA6;">El grafo convierte "tengo un usuario cualquiera" en "sigue estos 3 saltos hasta DA"</mark> — por eso es la primera herramienta que corres tras conseguir credenciales.
 

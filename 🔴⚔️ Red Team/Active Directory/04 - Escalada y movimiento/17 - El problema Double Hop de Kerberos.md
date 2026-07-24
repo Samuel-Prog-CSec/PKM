@@ -19,7 +19,7 @@ WinRM autentica con un *network logon*: HOST-A verifica tu identidad contra el D
 # Workarounds
 
 - **Credenciales explícitas**: crea un `PSCredential` y pásalo con `-Credential` a cada comando dirigido a HOST-B. Tedioso pero funciona.
-- **CredSSP**: habilita la delegación de credenciales… pero <mark style="background: #FF5582A6;">CredSSP cachea tu contraseña en HOST-A de forma recuperable</mark> — riesgo de opsec, y por eso está desactivado por defecto.
+- **CredSSP**: habilita la delegación de credenciales… pero <mark style="background: #FF5582A6;">CredSSP cachea tu contraseña en HOST-A de forma recuperable</mark> (extraíble con `sekurlsa::` desde LSASS — riesgo de opsec, ver [[25 - Detección y evasión en AD]]), y por eso está desactivado por defecto.
 - **Inyectar un TGT (la vía ofensiva limpia)**: con la contraseña o el hash, solicita un TGT y ponlo en memoria (`Rubeus`, o Pass-the-Ticket → [[14 - Pass the Ticket (PtT)]]). Con un TGT válido en la sesión, Kerberos autentica el segundo salto sin cachear nada.
 
 > [!info]+ Te lo encontrarás constantemente

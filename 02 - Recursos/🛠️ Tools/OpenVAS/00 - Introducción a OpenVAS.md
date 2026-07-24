@@ -1,7 +1,7 @@
 ---
 tags:
   - Pentesting/Vulnerabilidad
-  - Escaneo
+  - Escaneo/Vulnerabilidades
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente: "[[01 - Escaneo y exportación]]"
@@ -9,7 +9,7 @@ Area: "[[OpenVAS.base|OpenVAS]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">`OpenVAS` (de Greenbone Networks) es el escáner de vulnerabilidades **open-source** de referencia</mark>, la alternativa gratuita a [[00 - Introducción a Nessus|Nessus]]. Es una parte del **Greenbone Vulnerability Manager** (`GVM`), también libre, y soporta escaneo **autenticado y no autenticado**.
+<mark style="background: #ADCCFFA6;">`OpenVAS` (de Greenbone AG, antes Greenbone Networks) es el escáner de vulnerabilidades **open-source** de referencia</mark>, la alternativa gratuita a [[00 - Introducción a Nessus|Nessus]]. Es una parte del **Greenbone Vulnerability Manager** (`GVM`), también libre, y soporta escaneo **autenticado y no autenticado**.
 
 # Instalación
 

@@ -42,7 +42,7 @@ Un `-p- -sV` puede tardar minutos. Tres formas de no quedarte a ciegas:
 
 ## Cómo deduce Nmap la versión
 
-<mark style="background: #FFB8EBA6;">Primero lee el *banner*</mark> que el servicio anuncia al conectar; si el banner no basta para identificarlo, pasa a un sistema de *matching* por firmas que envía sondas específicas — más preciso pero **más lento**. El detalle fino de la agresividad se controla con `--version-intensity <0-9>` (`0` = solo banners ligeros, `9` = todas las sondas; `--version-all` es el atajo a 9).
+<mark style="background: #FFB8EBA6;">Primero lee el *banner*</mark> que el servicio anuncia al conectar; si el banner no basta para identificarlo, pasa a un sistema de *matching* por firmas que envía sondas específicas — más preciso pero **más lento**. El detalle fino de la agresividad se controla con `--version-intensity <0-9>`: **por defecto es 7** (ya bastante agresivo — un `-sV` a secas no es un modo ligero), `0` = solo banners ligeros, `9` = todas las sondas. `--version-all` es el atajo a `9`; `--version-light`, a `2` (menos ruido).
 
 # El gotcha: Nmap se deja información
 

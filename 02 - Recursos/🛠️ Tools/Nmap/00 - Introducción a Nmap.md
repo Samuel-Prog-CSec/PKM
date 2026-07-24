@@ -13,7 +13,7 @@ Area: "[[Nmap.base|Nmap]]"
 <mark style="background: #ADCCFFA6;">`Nmap` (*Network Mapper*) es un escáner de red y herramienta de auditoría de seguridad open-source</mark>, escrito en C, C++, Python y Lua. Envía paquetes crudos (*raw packets*) para averiguar qué hosts están vivos, qué puertos y servicios exponen, qué versión corre cada uno y —cuando puede— qué sistema operativo. Es el estándar de facto de la fase de enumeración de infraestructura y el punto de partida de casi cualquier pentest de red.
 
 > [!info]+ Origen y versión
-> Creado por Gordon Lyon (*Fyodor*) y presentado en **Phrack #51 (1997)**. Hoy va por la rama **7.9x** (`7.95`, abril 2024 — verifica la última en [nmap.org](https://nmap.org)). El paquete de los repos del sistema suele ir **atrasado**; en un engagement, usa la build de `nmap.org` o una distro de seguridad al día. Referencia canónica: el libro *Nmap Network Scanning* del propio Lyon (parte disponible libre en [nmap.org/book](https://nmap.org/book/)).
+> Creado por Gordon Lyon (*Fyodor*) y presentado en **Phrack #51 (1997)**. Hoy va por la rama **7.9x** (`7.99`, marzo 2026 — verifica la última en [nmap.org](https://nmap.org)). El paquete de los repos del sistema suele ir **atrasado**; en un engagement, usa la build de `nmap.org` o una distro de seguridad al día. Referencia canónica: el libro *Nmap Network Scanning* del propio Lyon (parte disponible libre en [nmap.org/book](https://nmap.org/book/)).
 
 # Enumeración: el porqué antes que el cómo
 
@@ -84,7 +84,7 @@ sequenceDiagram
 ```shell-session
 $ sudo nmap -sS localhost
 
-Starting Nmap 7.95 ( https://nmap.org )
+Starting Nmap 7.99 ( https://nmap.org )
 Nmap scan report for localhost (127.0.0.1)
 Host is up (0.000010s latency).
 Not shown: 996 closed ports

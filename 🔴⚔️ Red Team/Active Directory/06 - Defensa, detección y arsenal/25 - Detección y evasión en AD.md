@@ -30,8 +30,10 @@ Todas las notas de esta área apuntan aquí. <mark style="background: #ADCCFFA6;
 | Recolección BloodHound | recon LDAP masivo (MDI) | `DCOnly`, *throttle* |
 | Abuso de ACLs | `5136` (objeto modificado) | Limpieza inmediata del cambio |
 | DCSync | `4662` de replicación desde un no-DC | Sin evasión limpia; timing y contexto |
-| Golden/Silver Ticket | `4769` anómalos, TGT sin AS-REQ previo | AES, tiempos realistas |
+| Golden/Silver Ticket | `4769` anómalos, TGT sin AS-REQ previo | AES, tiempos realistas. **Diamond/Sapphire** (Rubeus `diamond`, impacket `ticketer.py -request -impersonate`) evaden la heurística "TGT sin AS-REQ" al partir de un TGT/PAC legítimo |
 | Coacción + relay | autenticación de máquina inesperada | Objetivo puntual, no barridos |
+| Acceso RDP/WinRM/MSSQL | `4624` (tipo 10 RDP / tipo 3 WinRM), log operacional de WinRM, activar `xp_cmdshell` | Usa cuentas ya validadas en el grafo; evita `xp_cmdshell` si hay alternativa |
+| Snaffling / GPP / SYSVOL | `5145`/`5140` en volumen sobre shares | Apunta a shares conocidos, no barras todos |
 
 # Honeytokens: no muerdas el anzuelo
 

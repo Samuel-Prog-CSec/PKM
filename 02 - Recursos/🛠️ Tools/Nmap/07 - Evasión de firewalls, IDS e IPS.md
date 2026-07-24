@@ -89,18 +89,20 @@ $ ncat -nv --source-port 53 10.129.2.28 50000
 220 ProFTPd
 ```
 
-## DNS proxying (`--dns-server`)
+## DNS proxying (`--dns-servers`)
 
-Nmap resuelve por DNS por defecto. En una **DMZ**, los servidores DNS internos son más confiables que los de Internet; `--dns-server <ns>` fuerza tus consultas a través de ellos, útil para interactuar con hosts de la red interna desde una posición de confianza.
+Nmap resuelve por DNS por defecto. En una **DMZ**, los servidores DNS internos son más confiables que los de Internet; `--dns-servers <ns1,ns2,...>` (en **plural**, admite lista separada por comas) fuerza tus consultas a través de ellos, útil para interactuar con hosts de la red interna desde una posición de confianza.
 
 # Fragmentación y otros knobs
 
 HTB lo menciona de pasada, pero forma parte del arsenal nativo:
 
-- **`-f` / `-ff` / `--mtu <n>`**: fragmenta los paquetes en trozos de 8 (o `n`) bytes para partir la firma que busca el IDS.
+- **`-f` / `-f -f` / `--mtu <n>`**: fragmenta los paquetes para partir la firma que busca el IDS. `-f` = **8 bytes fijos**; `-f -f` (repetido) = **16 bytes fijos**; `--mtu <n>` fija un tamaño propio (**múltiplo de 8**). `-f`/`-f -f` y `--mtu` son excluyentes. (`-ff` concatenado suele funcionar por cómo Nmap agrupa los flags cortos, pero la forma documentada es `-f -f`.)
 - **`--data-length <n>`**: añade *padding* aleatorio para alterar el tamaño característico de las sondas de Nmap.
 - **`--spoof-mac <mac>`**: falsifica la MAC de origen (solo útil en la misma L2).
 - **`--scan-delay <t>` / `-T0`/`-T1`**: espacia las sondas para diluir el patrón temporal de *portscan* (ver [[05 - Rendimiento y timing]]).
+- **`--badsum`**: envía un *checksum* TCP/UDP inválido. Los stacks reales descartan el paquete, pero muchos IDS/firewalls que **no** validan el checksum sí responden — sirve para distinguir un host real de un dispositivo de inspección.
+- **`-6`**: escanea por **IPv6**. En redes *dual-stack* es frecuente que el firewall filtre IPv4 a conciencia y deje IPv6 mucho más abierto — un vector de evasión real, no exótico.
 
 > [!important]+ La mayoría de esto ya no basta en 2026
 > Fragmentación, decoys y `--badsum` funcionaban contra IDS de firma simple. <mark style="background: #FF5582A6;">Los NGFW e IDS modernos reensamblan paquetes, hacen análisis de flujo y correlacionan por comportamiento</mark>, así que estas técnicas por sí solas rara vez esquivan una defensa seria hoy. Lo que de verdad se usa en pentest actual —*low-and-slow*, blending con tráfico legítimo, alternativas a Nmap, OPSEC de infraestructura— está en [[08 - Detección de escaneos y evasión moderna]]. Para mapear ACLs de firewall a fondo, la herramienta dedicada es [[👣🏰 Firewalk|Firewalk]].

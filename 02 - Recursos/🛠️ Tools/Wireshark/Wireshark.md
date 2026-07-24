@@ -1,7 +1,7 @@
 ---
 tags:
-  - "#Windows"
-  - "#Linux"
+  - Windows
+  - Linux
   - Escaneo/Redes
 Fecha de actualización: 2025-07-30
 Nota siguiente: "[[Uso avanzado de Wireshark]]"
