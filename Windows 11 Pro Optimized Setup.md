@@ -142,7 +142,7 @@ https://youtu.be/W6cKFliWW6Q
 - Método actual Vulkan/OpenGL -> **Preferir nativo**
 - Oclusión ambiental -> **Calidad**
 - Optimización enlazada -> **Activado**
-- Sincronización vertical -> **Activado** _(obligatorio sin adaptive sync para evitar tearing)_ | **Desactivado** _(en monitores gaming de muchos Hz)_ -> Mejor desactivado en general
+- Sincronización vertical -> **Activado** _(obligatorio sin adaptive sync para evitar tearing)_ | **Desactivado** _(en monitores gaming de muchos Hz)_ -> Mejor desactivado en general (*y activarlo en el juego*)
 - Suavidad de DSR -> **60% (puede variar dependiendo del monitor)**
 - Tamaño de la cache del sombreador -> **10 GB** _(la mejor opción en general)_ | **Desactivado** _(algunos juegos pueden dar problemas con esta opción, si se da el caso, valorar desactivar)_
 - Tecnologia del monitor -> **Actualización fija**
