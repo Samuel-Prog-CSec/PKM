@@ -1,5 +1,7 @@
 # PKM — Segundo cerebro digital
 
+[![Licencia: CC BY-NC-SA 4.0](https://img.shields.io/badge/Licencia-CC%20BY--NC--SA%204.0-blue.svg?logo=creativecommons&logoColor=white)](LICENSE)
+
 Vault de [Obsidian](https://obsidian.md) donde guardo y organizo mi conocimiento técnico de
 seguridad ofensiva: hacking web, pentesting, Active Directory, redes, desarrollo ofensivo y
 seguridad de sistemas de IA. Son notas de referencia profesional escritas en español, con los
