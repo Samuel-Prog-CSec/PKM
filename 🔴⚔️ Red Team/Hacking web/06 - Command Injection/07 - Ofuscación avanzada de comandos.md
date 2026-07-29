@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "Frente a un WAF, las inserciones de la nota anterior (comillas, backslashes) ya no bastan: el WAF no busca la palabra exacta, busca patrones, y w'h'o'am'i es uno que reconoce"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[06 - Bypass de comandos en blacklist]]"
 Nota siguiente: "[[08 - Herramientas de evasión y ofuscación]]"

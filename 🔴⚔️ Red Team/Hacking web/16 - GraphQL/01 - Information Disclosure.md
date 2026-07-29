@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - GraphQL
+Descripción: "El primer paso contra cualquier GraphQL es el reconocimiento: identificar el endpoint, el motor, y —sobre todo— obtener el esquema completo mediante introspección, que nos…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[00 - Introducción a GraphQL]]"
 Nota siguiente: "[[02 - IDOR en GraphQL]]"

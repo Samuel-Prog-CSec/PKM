@@ -3,6 +3,7 @@ tags:
   - Pentesting/Explotacion
   - Metasploit
   - Payloads
+Descripción: "MSFvenom es el generador de payloads autónomo de Metasploit: produce el payload como un fichero independiente (.exe, .elf, .dll, script…) para entregarlo por cualquier vía y…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[10 - Escritura e importación de módulos]]"
 Nota siguiente: "[[12 - Detección y evasión]]"

@@ -3,10 +3,11 @@ tags:
   - Windows
   - Linux
   - Escaneo/Redes
+Descripción: "Las pestañas Estadísticas y Análisis pueden proporcionarnos una gran visión de los datos que estamos examinando"
 Fecha de actualización: 2025-08-27
 Nota previa: "[[Wireshark]]"
 Nota siguiente: "[[Desencriptar conexiones]]"
-Area: "[[Wireshark]]"
+Area: "[[Wireshark.base|Wireshark]]"
 ---
 ---
 # Complementos
@@ -21,7 +22,7 @@ Desde la pestaña `Analizar`, podemos utilizar complementos que nos **permiten h
 ![Menú Análisis de Wireshark que muestra opciones para mostrar filtros, aplicar filtros, protocolos habilitados e información de expertos.](https://academy.hackthebox.com/storage/modules/81/analyze.png)
 
 #### 1. Siguiendo los flujos TCP
-Wireshark puede **volver a unir paquetes TCP para recrear toda la transmisión en un formato legible**. Esta capacidad también nos permite extraer datos (`images, files, etc.`) fuera de la captura. Esto funciona para casi cualquier [[Protocolos de red]] que utilice TCP como mecanismo de transporte.
+Wireshark puede **volver a unir paquetes TCP para recrear toda la transmisión en un formato legible**. Esta capacidad también nos permite extraer datos (`images, files, etc.`) fuera de la captura. Esto funciona para casi cualquier [[Introducción a los protocolos de red|Protocolos de red]] que utilice TCP como mecanismo de transporte.
 
 Para *utilizar esta función*:
 - Hacer clic derecho en un paquete de la transmisión que deseamos recrear.

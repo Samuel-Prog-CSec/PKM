@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSTI
+  - Tipo/Introduccion
+Descripción: "Un motor de plantillas (*template engine*) es software que combina plantillas predefinidas con datos generados dinámicamente para producir una respuesta —típicamente HTML—"
 Fecha de actualización: 2026-06-22
 Nota previa: ""
 Nota siguiente: "[[01 - Identificación de SSTI]]"

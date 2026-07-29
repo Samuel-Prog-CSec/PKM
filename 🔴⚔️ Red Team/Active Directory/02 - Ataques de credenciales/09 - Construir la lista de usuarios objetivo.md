@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Enumeracion
+Descripción: "El spraying necesita combustible: una lista de usuarios válidos del dominio"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[08 - Enumerar políticas de contraseñas]]"
 Nota siguiente: "[[10 - Password Spraying interno]]"

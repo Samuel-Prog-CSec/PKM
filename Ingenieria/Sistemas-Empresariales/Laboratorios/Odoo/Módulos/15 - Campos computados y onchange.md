@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Hasta aquí los campos guardan lo que el usuario teclea"
 Fecha de actualización: 2026-05-31
 Nota previa: "[[14 - Seguridad y datos demo]]"
 Nota siguiente: "[[16 - Informes QWeb]]"

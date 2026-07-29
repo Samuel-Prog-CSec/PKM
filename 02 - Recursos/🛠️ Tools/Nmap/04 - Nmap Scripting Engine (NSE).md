@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "El *Nmap Scripting Engine* (NSE) permite ejecutar scripts en Lua que interactúan con los servicios detectados: desde leer un banner hasta hacer *brute force*, comprobar CVEs o…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[03 - Enumeración de servicios y versiones]]"
 Nota siguiente: "[[05 - Rendimiento y timing]]"

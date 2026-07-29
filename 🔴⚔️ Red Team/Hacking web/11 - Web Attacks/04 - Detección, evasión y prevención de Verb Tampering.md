@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Verb-Tampering
+  - Tipo/Deteccion
+Descripción: "Nota dedicada a encontrar verb tampering en un pentest real, evadir las defensas modernas que lo dificultan, y prevenirlo"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[03 - Bypass de filtros de seguridad]]"
 Nota siguiente: "[[05 - Herramientas para HTTP Verb Tampering]]"

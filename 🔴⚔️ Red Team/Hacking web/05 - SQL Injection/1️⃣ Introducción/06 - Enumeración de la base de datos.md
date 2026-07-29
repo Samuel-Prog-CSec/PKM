@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "Con una inyección UNION funcional y una columna visible, el objetivo es mapear y volcar el contenido del DBMS. El proceso es metódico: identificar el motor, listar bases de…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[05 - Inyección UNION]]"
 Nota siguiente: "[[07 - Lectura de archivos]]"

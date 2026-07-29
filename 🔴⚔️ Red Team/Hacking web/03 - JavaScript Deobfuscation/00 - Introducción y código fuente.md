@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - JavaScript
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "La desofuscación de código es la habilidad de revertir código deliberadamente vuelto ilegible para entender qué hace"
 Fecha de actualización: 2026-06-02
 Nota previa:
 Nota siguiente: "[[01 - Ofuscación de código JavaScript]]"

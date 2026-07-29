@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "El rendimiento importa cuando escaneas una red grande o con poco ancho de banda"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[04 - Nmap Scripting Engine (NSE)]]"
 Nota siguiente: "[[06 - Guardar y explotar resultados]]"

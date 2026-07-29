@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - LDAP
   - Pentesting/Explotacion
+Descripción: "Como en el resto de inyecciones, lo que marca la diferencia es explotar a pesar de los filtros"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[03 - Exfiltración de datos y explotación ciega]]"
 Nota siguiente: "[[05 - Arsenal de herramientas LDAP]]"

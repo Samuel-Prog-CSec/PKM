@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSRF
+  - Tipo/Introduccion
+Descripción: "Una Server-Side Request Forgery (SSRF) ocurre cuando una aplicación web obtiene un recurso remoto a partir de datos que controla el usuario —típicamente una URL—"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00 - Introducción a los ataques server-side]]"
 Nota siguiente: "[[02 - Identificación de SSRF]]"

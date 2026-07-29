@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "Componer a mano las capas de ofuscación es lento y propenso a error"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[07 - Ofuscación avanzada de comandos]]"
 Nota siguiente: "[[09 - Prevención de Command Injection]]"

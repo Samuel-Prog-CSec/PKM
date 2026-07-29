@@ -1,17 +1,21 @@
 views:
   - type: table
-    name: Todas
+    name: Notas
     filters:
       Area == link("Reconocimiento Web.base", "Reconocimiento Web")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
     columnSize:
-      file.name: 360
-      file.tags: 320
+      file.name: 330
+      note.Descripción: 480
+      file.tags: 300
+      note.Fecha de actualización: 150
   - type: table
     name: Recon
     filters:
@@ -20,13 +24,17 @@ views:
         - file.hasTag("Recon")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
     columnSize:
-      file.name: 360
-      file.tags: 320
+      file.name: 330
+      note.Descripción: 480
+      file.tags: 300
+      note.Fecha de actualización: 150
   - type: table
     name: Fuzzing
     filters:
@@ -35,10 +43,14 @@ views:
         - file.hasTag("Fuzzing")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
     columnSize:
-      file.name: 360
-      file.tags: 320
+      file.name: 330
+      note.Descripción: 480
+      file.tags: 300
+      note.Fecha de actualización: 150

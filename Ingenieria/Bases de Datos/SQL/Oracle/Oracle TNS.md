@@ -1,7 +1,8 @@
 ---
 tags:
-  - Bases de Datos
+  - Bases-de-Datos
   - SQL
+Descripción: "Oracle TNS (*Transparent Network Substrate*) es el protocolo de comunicación entre las bases de datos Oracle y sus clientes, parte de *Oracle Net Services*"
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente:

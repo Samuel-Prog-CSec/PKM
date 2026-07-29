@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Explotacion
+Descripción: "Cuando la aplicación refleja los resultados de la consulta, la extracción in-band vuelca los documentos"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[03 - Bypass de autenticación]]"
 Nota siguiente: "[[05 - Extracción de datos ciega y automatización]]"

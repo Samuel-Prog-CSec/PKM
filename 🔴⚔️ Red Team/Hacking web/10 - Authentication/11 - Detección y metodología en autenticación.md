@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Authentication
+  - Tipo/Deteccion
+Descripción: "Las notas anteriores son técnicas sueltas"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[10 - Ataques a tokens de sesión]]"
 Nota siguiente: "[[12 - Arsenal de herramientas para autenticación]]"

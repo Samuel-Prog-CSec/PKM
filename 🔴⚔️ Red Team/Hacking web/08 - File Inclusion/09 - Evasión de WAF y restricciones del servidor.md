@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "Los bypasses básicos esquivan el filtro que la propia app escribe en su código"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[08 - Detección y fuzzing automatizado]]"
 Nota siguiente: "[[10 - Prevención de File Inclusion]]"

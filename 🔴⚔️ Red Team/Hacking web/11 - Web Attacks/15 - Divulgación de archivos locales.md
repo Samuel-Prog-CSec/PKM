@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XXE
+Descripción: "El ataque XXE base: definir una entidad externa que apunte a un fichero local y lograr que su contenido se refleje en la respuesta"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[14 - Introducción a XXE]]"
 Nota siguiente: "[[16 - XXE a RCE, SSRF y DoS]]"

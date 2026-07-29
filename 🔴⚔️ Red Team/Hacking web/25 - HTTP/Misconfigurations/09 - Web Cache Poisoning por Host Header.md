@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Host-Header
+Descripción: "Aquí convergen los dos bloques del módulo: un host header attack que, por sí solo, no era explotable (no puedes forzar el Host del navegador de la víctima) se weaponiza con web…"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[08 - Password Reset Poisoning]]"
 Nota siguiente: "[[10 - Bypass de validación del Host Header]]"

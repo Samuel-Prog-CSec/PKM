@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Proxies
+Descripción: "El proxy no es solo para el navegador. Cualquier herramienta CLI o cliente pesado se puede enrutar por Burp/ZAP apuntando su proxy a http://127.0.0.1:8080"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[06 - Codificación y decodificación]]"
 Nota siguiente: "[[08 - Fuzzing web - Burp Intruder y ZAP Fuzzer]]"

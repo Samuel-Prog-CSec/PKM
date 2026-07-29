@@ -3,7 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Brute-Forcing
-  - Introduccion
+  - Tipo/Introduccion
+Descripción: El brute forcing es probar credenciales o claves de forma sistemática hasta dar con la correcta
 Fecha de actualización: 2026-06-23
 Nota previa:
 Nota siguiente: "[[01 - Tipos de ataque - diccionario, híbrido y máscara]]"

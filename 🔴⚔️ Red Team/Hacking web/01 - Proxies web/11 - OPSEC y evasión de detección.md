@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+  - Tipo/Deteccion
+Descripción: "Un proxy es ruidoso por defecto. Tu tráfico de Burp/ZAP deja huellas que los WAF y los SOC fingerprintean y bloquean, aunque falsees lo obvio"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[10 - Extensiones y BApp Store]]"
 Nota siguiente: "[[12 - Proxying de apps móviles]]"

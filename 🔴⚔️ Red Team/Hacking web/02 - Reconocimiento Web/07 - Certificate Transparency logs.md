@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "Cada vez que un sitio sirve HTTPS, presenta un certificado SSL/TLS que verifica su identidad"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[06 - Fuerza bruta de subdominios]]"
 Nota siguiente: "[[08 - Virtual Hosts]]"

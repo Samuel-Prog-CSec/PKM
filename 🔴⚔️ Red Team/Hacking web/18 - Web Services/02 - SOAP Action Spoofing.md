@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Pentesting/Explotacion
+Descripción: "Un mensaje SOAP lleva la operación a ejecutar en el primer hijo de soap:Body"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[01 - WSDL - enumeración y descubrimiento]]"
 Nota siguiente: "[[03 - Command Injection en Web Services]]"

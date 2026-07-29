@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - SQLi
   - Seguridad/Prevencion-Vulnerabilidad
+  - Tipo/Defensa
+Descripción: "Conocer las defensas no es solo cosa de desarrolladores: para un atacante, entender exactamente qué detiene una SQLi —y qué no— es lo que permite evadirlas"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[08 - Escritura de archivos]]"
 Nota siguiente:

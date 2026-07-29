@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El recon de DNS, subdominios y vhosts mapea lo que la organización publica por nombre, pero deja fuera buena parte de la superficie moderna: los activos alojados en la nube…"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[24 - Fuzzing de APIs]]"
 Nota siguiente: "[[26 - Escaneo dirigido con nuclei]]"

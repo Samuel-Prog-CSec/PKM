@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El search engine discovery (o OSINT con buscadores) usa los motores de búsqueda como herramientas para descubrir información sobre un objetivo: documentos sensibles, páginas de…"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[11 - Spidering con Scrapy]]"
 Nota siguiente: "[[13 - Web Archives]]"

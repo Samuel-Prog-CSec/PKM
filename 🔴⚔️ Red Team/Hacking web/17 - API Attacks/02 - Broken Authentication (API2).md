@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "Una API sufre Broken Authentication si alguno de sus mecanismos de autenticación puede saltarse o eludirse"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[01 - Broken Object Level Authorization (API1)]]"
 Nota siguiente: "[[03 - Broken Object Property Level Authorization (API3)]]"

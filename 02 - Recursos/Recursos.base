@@ -1,0 +1,82 @@
+formulas:
+  índice: 'file.name.replace(".base", "")'
+  bloque: |
+    if(file.folder.startsWith("02 - Recursos/🛠️ Tools"), "1 · Herramientas",
+      if(file.folder.startsWith("02 - Recursos/Biblioteca"), "2 · Biblioteca",
+        if(file.folder.startsWith("02 - Recursos/Lenguajes"), "3 · Lenguajes",
+          if(file.folder.startsWith("02 - Recursos/Decisiones"), "4 · Decisiones estructurales",
+            if(file.folder.startsWith("02 - Recursos/Templates"), "5 · Plantillas", "· Otros")))))
+properties:
+  formula.índice:
+    displayName: Índice
+  formula.bloque:
+    displayName: Bloque
+  file.folder:
+    displayName: Ubicación
+views:
+  - type: cards
+    name: Índices
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("02 - Recursos")
+        - file.name != "Recursos.base"
+    order:
+      - formula.índice
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 260
+  - type: table
+    name: Por bloque
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("02 - Recursos")
+        - file.name != "Recursos.base"
+    order:
+      - formula.índice
+      - file.folder
+    groupBy:
+      property: formula.bloque
+      direction: ASC
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      formula.índice: 300
+      file.folder: 400
+  - type: table
+    name: Decisiones estructurales (ADR)
+    filters:
+      and:
+        - file.inFolder("02 - Recursos/Decisiones estructurales")
+        - file.ext == "md"
+    order:
+      - file.name
+      - Estado
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: DESC
+    columnSize:
+      file.name: 560
+      note.Estado: 200
+  - type: table
+    name: Notas sin índice
+    filters:
+      and:
+        - file.inFolder("02 - Recursos")
+        - file.ext == "md"
+        - '!file.hasProperty("Area")'
+        - '!file.inFolder("02 - Recursos/Decisiones estructurales")'
+        - '!file.inFolder("02 - Recursos/Biblioteca")'
+    order:
+      - file.name
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      file.name: 400
+      file.folder: 400

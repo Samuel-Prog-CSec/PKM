@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "Las webs cambian y desaparecen, pero su rastro queda"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[12 - Search Engine Discovery]]"
 Nota siguiente: "[[14 - Automatización del recon]]"

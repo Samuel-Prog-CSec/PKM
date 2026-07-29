@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "Los fuzzers generan muchísima salida. Distinguir el hallazgo que importa del ruido de miles de respuestas inútiles es la habilidad que separa un fuzzing productivo de una lista…"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[20 - Fuzzing de vhosts y subdominios]]"
 Nota siguiente: "[[22 - Validación de hallazgos]]"

@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - Desarrollo-Web
   - Introduccion
+Descripción: "El desarrollo de aplicaciones web agrupa un conjunto de habilidades que se reparten en tres especialidades con nombre propio: front-end, back-end y full-stack"
 Fecha de actualización: 2026-06-22
 Nota previa: 
 Nota siguiente: "[[Patrones de diseño web (MVC y SPA)]]"

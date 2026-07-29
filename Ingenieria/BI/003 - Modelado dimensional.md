@@ -1,8 +1,9 @@
 ---
 tags:
-  - Análisis
+  - Análisis/Datos
   - Ingenieria
   - Visualización/Datos
+Descripción: "El modelado dimensional es una técnica de diseño lógico para Sistemas de BI y DW, específicamente adecuada para implementaciones ROLAP (*Relational OLAP*)"
 Fecha de actualización: 2025-11-28
 Nota previa: "[[002 - Implantación de sistemas BI]]"
 Nota siguiente:

@@ -1,7 +1,9 @@
 ---
 tags:
-  - Bases de Datos
+  - Bases-de-Datos
   - SQL
+  - Tipo/Introduccion
+Descripción: "Toda aplicación web con estado —autenticación, catálogos, mensajería, paneles de administración— delega el almacenamiento en una base de datos"
 Fecha de actualización: 2026-06-04
 Nota previa:
 Nota siguiente: "[[🐬 MySQL]]"

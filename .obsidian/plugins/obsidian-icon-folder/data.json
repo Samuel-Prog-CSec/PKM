@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "OcRocket24",
+      "LiTrainFrontTunnel",
+      "TiBrandSpeedtest",
       "LiLibrary",
-      "OcDatabase16",
-      "OcCodeReview16",
-      "TiSettingsDollar",
-      "TiBusinessplan"
+      "OcDatabase16"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -51,7 +51,6 @@
   "03 - Recursos/Templates": "TiTemplate",
   "05 - PENDIENTES/Hacking (ORGANIZAR)": "RaBurningEmbers",
   "05 - PENDIENTES/VARIOS": "TiReportSearch",
-  "01 - Proyectos/GO": "TiBrandGolang",
   "03 - Recursos/🛠️ Tools/Nmap": "TiEyeSearch",
   "05 - PENDIENTES/VARIOS/Pintura-Revisar.md": "BoBxPaint",
   "03 - Recursos/🛠️ Tools/John The Ripper": "RaScythe",
@@ -65,10 +64,8 @@
   "🔴⚔️ Red Team/Hacking Wi-Fi": "LiWifi",
   "🔴⚔️ Red Team/Hacking web": "TiSpider",
   "🔴⚔️ Red Team/AI Hacking": "OcCopilot96",
-  "🔵🛡️ Blue Team/(2) Análisis de red": "LiNetwork",
   "🔵🛡️ Blue Team/002 - Manejo de logs": "LiLogs",
   "🔵🛡️ Blue Team/000 - Manejo de incidentes": "RaCrackedShield",
-  "🔵🛡️ Blue Team/004 - Threat Intelligence": "BoBxsRadiation",
   "🔴⚔️ Red Team/Red-Team.base": "🔴",
   "02 - Areas/Ingenieria/BI": "TiReportSearch",
   "Redes": "TiNetwork",
@@ -76,17 +73,19 @@
     "iconName": "LiMouse",
     "iconColor": "#00ff11"
   },
-  "Arch Linux Custom.md": {
-    "iconName": "TiTerminal2",
-    "iconColor": "#ed06fe"
-  },
   "02 - Areas/Ingenieria/GPSI": "OcProject16",
-  "Windows 11 Pro Optimized Setup.md": {
-    "iconName": "BoBxlWindows",
-    "iconColor": "#009dff"
-  },
   "02 - Areas/Ingenieria/Sistemas-Empresariales": "TiSettingsDollar",
   "02 - Areas/Ingenieria/Sistemas-Empresariales/Laboratorios": "OcCodeReview16",
   "02 - Areas/Ingenieria/Bases de Datos": "OcDatabase16",
-  "02 - Recursos/Biblioteca/Librería.base": "LiLibrary"
+  "02 - Recursos/Biblioteca/Librería.base": "LiLibrary",
+  "Optimizaciones": "TiBrandSpeedtest",
+  "Optimizaciones/Windows 11 Pro Optimized Setup.md": {
+    "iconName": "BoBxlWindows",
+    "iconColor": "#009dff"
+  },
+  "Optimizaciones/Arch Linux Custom.md": {
+    "iconName": "TiTerminal2",
+    "iconColor": "#ed06fe"
+  },
+  "Optimizaciones/Fine-Tunning.md": "OcRocket24"
 }

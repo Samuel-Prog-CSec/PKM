@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - Desarrollo-Web
   - Patrones-Diseño
+Descripción: "Un patrón de diseño es una solución reutilizable a un problema típico y recurrente del desarrollo de software"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Front-end, back-end y full-stack]]"
 Nota siguiente: "[[La pila MERN]]"

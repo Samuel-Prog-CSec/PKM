@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - ColdFusion
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "Adobe ColdFusion es una plataforma de desarrollo web basada en Java (de 1995, hoy de Adobe) que usa el lenguaje CFML (.cfm, .cfc), con sintaxis de tags similar a HTML"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Vulnerabilidades web en thick clients]]"
 Nota siguiente: "[[01 - Ataques a ColdFusion]]"

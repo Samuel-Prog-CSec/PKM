@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSRF
+Descripción: "Confirmada la SSRF y mapeada la red interna, el objetivo es aumentar el impacto: alcanzar endpoints que solo escuchan en local, leer ficheros del servidor y —el salto…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[02 - Identificación de SSRF]]"
 Nota siguiente: "[[04 - Blind SSRF]]"
@@ -11,6 +12,9 @@ Area: "[[SSRF.base|SSRF]]"
 ---
 
 Confirmada la SSRF y mapeada la red interna, el objetivo es **aumentar el impacto**: alcanzar endpoints que solo escuchan en local, leer ficheros del servidor y —el salto cualitativo— enviar peticiones arbitrarias a servicios internos con `gopher://`.
+
+> [!example]+ Caso real — ESEA → metadata de AWS · $1.000
+> Brett Buerhaus llegó a un endpoint `media_preview.php?url=` (image fetch). Tras fallar los bypasses de null-byte, convirtió el `/1.png` final en query-string (`?url=http://ziot.org?1.png`) y ESEA renderizó **su web** → SSRF confirmada. Ben Sadeghipour sugirió apuntar `url` a `http://169.254.169.254/latest/meta-data/iam/security-credentials/` — como ESEA corría en **AWS**, devolvió las **credenciales IAM** vivas del servidor. **Lección**: confirmada la SSRF, *piensa a lo grande* — el endpoint de metadata cloud bate cualquier truco menor.
 
 # Acceder a endpoints restringidos
 

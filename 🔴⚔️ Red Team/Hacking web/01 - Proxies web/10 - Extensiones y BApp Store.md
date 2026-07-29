@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "Lo que de verdad hace a Burp imbatible es su ecosistema de extensiones"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[09 - Escáner de vulnerabilidades - Burp y ZAP Scanner]]"
 Nota siguiente: "[[11 - OPSEC y evasión de detección]]"

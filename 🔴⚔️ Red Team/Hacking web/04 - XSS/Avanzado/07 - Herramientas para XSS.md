@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "El instrumental de descubrimiento de XSS (recolección de parámetros, escáneres, blind) está en 06 - Herramientas para XSS del nivel básico"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[06 - Evasión de filtros XSS y ofuscación]]"
 Nota siguiente: "[[08 - DOM Clobbering]]"

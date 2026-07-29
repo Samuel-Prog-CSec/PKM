@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - TLS
+Descripción: "Además de los padding oracles y la compresión, otros ataques golpean los propios algoritmos cuando son débiles o están mal usados"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[08 - SSL Stripping]]"
 Nota siguiente: "[[10 - Downgrade Attacks]]"

@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "Con los hosts vivos localizados (01 - Host Discovery), el siguiente paso es averiguar qué puertos y servicios exponen"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[01 - Host Discovery]]"
 Nota siguiente: "[[03 - Enumeración de servicios y versiones]]"
@@ -10,7 +11,7 @@ Area: "[[Nmap.base|Nmap]]"
 ---
 ---
 
-Con los hosts vivos localizados ([[01 - Host Discovery]]), el siguiente paso es averiguar **qué puertos y servicios** exponen. Interpretar bien la salida exige entender cómo Nmap deduce el estado de cada puerto a partir de los paquetes de respuesta — repasa los fundamentos de TCP/IP en [[Protocolos de red]] si el *three-way handshake* y los flags no te suenan de memoria.
+Con los hosts vivos localizados ([[01 - Host Discovery]]), el siguiente paso es averiguar **qué puertos y servicios** exponen. Interpretar bien la salida exige entender cómo Nmap deduce el estado de cada puerto a partir de los paquetes de respuesta — repasa los fundamentos de TCP/IP en [[Introducción a los protocolos de red|Protocolos de red]] si el *three-way handshake* y los flags no te suenan de memoria.
 
 # Los 6 estados de un puerto
 

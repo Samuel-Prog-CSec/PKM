@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Seguridad/Prevencion-Vulnerabilidad
   - File-Inclusion
+  - Tipo/Defensa
+Descripción: "Saber explotar una file inclusion es saber dónde falla la defensa"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[09 - Evasión de WAF y restricciones del servidor]]"
 Nota siguiente: "[[11 - Arsenal de herramientas para File Inclusion]]"

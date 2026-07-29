@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Explotacion
+  - Tipo/Arsenal
+Descripción: "Set de herramientas actuales para atacar WordPress, organizado por propósito"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[05 - Detección y evasión en WordPress]]"
 Nota siguiente: "[[07 - Hardening de WordPress]]"

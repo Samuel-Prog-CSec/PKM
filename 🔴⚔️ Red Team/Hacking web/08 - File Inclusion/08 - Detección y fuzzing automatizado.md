@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - File-Inclusion
+  - Tipo/Deteccion
+Descripción: "El testing manual es más fiable y encuentra LFI que un escáner pasa por alto, pero en objetivos grandes conviene automatizar la fase de descubrimiento"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[07 - Log Poisoning y envenenamiento de sesiones]]"
 Nota siguiente: "[[09 - Evasión de WAF y restricciones del servidor]]"

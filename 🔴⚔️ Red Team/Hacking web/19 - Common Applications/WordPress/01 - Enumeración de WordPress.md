@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Enumeracion
+Descripción: "El objetivo de esta fase es responder tres preguntas"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[00 - Estructura y roles de WordPress]]"
 Nota siguiente: "[[02 - Login y fuerza bruta en WordPress]]"

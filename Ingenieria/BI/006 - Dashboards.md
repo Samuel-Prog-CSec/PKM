@@ -3,6 +3,7 @@ tags:
   - Ingenieria
   - Análisis/Datos
   - Visualización/Datos
+Descripción: "Una visualización de datos es una representación visual deseada con el propósito de transmitir el significado de los datos y las percepciones que se han podido obtener del…"
 Fecha de actualización: 2026-01-12
 Nota previa: "[[005 - Análisis de datos]]"
 Nota siguiente:

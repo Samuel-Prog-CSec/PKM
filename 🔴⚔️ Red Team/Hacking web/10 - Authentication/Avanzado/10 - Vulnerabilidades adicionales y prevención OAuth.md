@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - OAuth
+  - Tipo/Defensa
+Descripción: "Más allá de los fallos en el flujo mismo, OAuth se rompe encadenado con otras vulnerabilidades"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[09 - Protección CSRF deficiente en OAuth]]"
 Nota siguiente: "[[11 - Introducción a SAML]]"

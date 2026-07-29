@@ -1,4 +1,17 @@
-[[Tcpdump]]] proporciona una forma sólida y eficiente de analizar los datos incluidos en nuestras capturas mediante filtros de paquetes.
+---
+tags:
+  - Windows
+  - Linux
+  - Escaneo/Redes
+  - Sniffing
+Descripción: "Tcpdump proporciona una forma sólida y eficiente de analizar los datos incluidos en nuestras capturas mediante filtros de paquetes"
+Fecha de actualización: 2026-06-02
+Nota previa: "[[Tcpdump]]"
+Nota siguiente:
+Area: "[[Tcpdump.base|Tcpdump]]"
+---
+---
+[[Tcpdump]] proporciona una forma sólida y eficiente de analizar los datos incluidos en nuestras capturas mediante filtros de paquetes.
 
 ---
 

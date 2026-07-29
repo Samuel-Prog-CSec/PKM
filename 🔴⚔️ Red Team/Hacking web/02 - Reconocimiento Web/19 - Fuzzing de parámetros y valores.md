@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "Tras descubrir rutas, el siguiente objetivo son los parámetros: las variables que transportan información entre el navegador y el servidor"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[18 - Fuzzing recursivo]]"
 Nota siguiente: "[[20 - Fuzzing de vhosts y subdominios]]"

@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Confirmada la inyección boolean-based, el siguiente paso es construir un oráculo: una función a la que le pasamos una condición SQL y nos devuelve True o False según cómo…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[02 - Identificar SQLi basada en booleanos]]"
 Nota siguiente: "[[04 - Extracción de datos boolean-based]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

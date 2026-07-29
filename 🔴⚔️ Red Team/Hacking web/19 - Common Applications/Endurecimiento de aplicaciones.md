@@ -2,6 +2,7 @@
 tags:
   - Web/Red-Team
   - Common-Applications
+Descripción: "La cara defensiva del módulo. El primer paso de cualquier organización es un inventario de aplicaciones preciso (internas y externas) — sin saber qué existe, no se sabe qué…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[Other Notable Applications]]"
 Nota siguiente: ""

@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "A veces no puedes soltar herramientas: EDR agresivo, AppLocker, Constrained Language Mode o un host sin salida a internet. *Living off the land* (LotL) es enumerar el dominio…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[04 - Enumeración con credenciales]]"
 Nota siguiente: "[[06 - Envenenamiento LLMNR y NBT-NS]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - LDAP
   - Pentesting/Explotacion
+Descripción: "LDAP es el protocolo para acceder a servicios de directorio (usuarios, grupos, equipos)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[IIS Tilde Enumeration]]"
 Nota siguiente: "[[Web Mass Assignment Vulnerabilities]]"

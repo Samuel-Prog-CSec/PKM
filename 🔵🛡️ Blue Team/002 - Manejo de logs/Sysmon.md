@@ -1,3 +1,16 @@
+---
+tags:
+  - Blue-Team
+  - Windows
+  - Logs
+Descripción: "System Monitor (Sysmon)es un servicio del sistema Windows y un controlador de dispositivo que permanece residente durante los reinicios del sistema para monitorear y registrar…"
+Fecha de actualización: 2025-07-18
+Nota previa: "[[Seguimiento de eventos para Windows]]"
+Nota siguiente: 
+Area: "[[Manejo de logs.base|Manejo de logs]]"
+---
+---
+
 # Conceptos básicos de Sysmon
 `System Monitor (Sysmon)`es un servicio del sistema Windows y un controlador de dispositivo que permanece residente durante los reinicios del sistema **para monitorear y registrar la actividad del sistema en el registro de eventos de Windows**. Sysmon proporciona <mark style="background: #ADCCFFA6;">información detallada sobre la creación de procesos, conexiones de red, cambios en el tiempo de creación de archivos y más</mark>.
 

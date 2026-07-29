@@ -2,6 +2,7 @@
 tags:
   - Ingenieria
   - Datos
+Descripción: "Definir el conjunto de requisitos que serán usados para diseñar, construir e implementar la solución BI dentro del plazo y presupuestos fijados"
 Fecha de actualización: 2026-01-19
 Nota previa: "[[001 - El dato como activo y fundamentos de BI]]"
 Nota siguiente: "[[003 - Modelado dimensional]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - ColdFusion
   - Pentesting/Explotacion
+Descripción: "Fijada la versión (ColdFusion 8 en el ejemplo), el primer paso es searchsploit adobe coldfusion para cruzar versión ↔ exploit"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de ColdFusion]]"
 Nota siguiente: "[[IIS Tilde Enumeration]]"

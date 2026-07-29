@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Aunque no podamos ejecutar comandos, una SQLi en MSSQL permite robar las credenciales de red de la cuenta de servicio del SQL Server"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[10 - MSSQL ejecución de comandos con xp_cmdshell]]"
 Nota siguiente: "[[12 - MSSQL lectura de archivos]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

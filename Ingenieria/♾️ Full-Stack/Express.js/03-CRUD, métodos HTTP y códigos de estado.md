@@ -4,6 +4,7 @@ tags:
   - Express
   - HTTP
   - REST
+Descripción: "Cómo se traducen las operaciones CRUD a métodos HTTP en una API REST con Express, y qué código de estado devolver en cada respuesta"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[02-Rutas, manejadores y Express Router]]"
 Nota siguiente: "[[04-Mongoose y el patrón ODM en Express]]"

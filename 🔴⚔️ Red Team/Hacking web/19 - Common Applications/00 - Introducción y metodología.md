@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - Common-Applications
+  - Tipo/Introduccion
+Descripción: "Las aplicaciones comunes —CMS, servlet containers, herramientas de monitorización, ticketing, repositorios de código— son de los *footholds* más rentables en un pentest, tanto…"
 Fecha de actualización: 2026-07-16
 Nota previa: ""
 Nota siguiente: "[[01 - Descubrimiento y enumeración de aplicaciones]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Pentesting/Explotacion
+Descripción: "xmlrpc.php de WordPress es un web service XML-RPC: transmite datos con XML sobre HTTP. Que esté habilitado no es una vulnerabilidad en sí, pero según los métodos que exponga…"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[03 - Command Injection en Web Services]]"
 Nota siguiente: "[[05 - Detección y evasión en Web Services]]"

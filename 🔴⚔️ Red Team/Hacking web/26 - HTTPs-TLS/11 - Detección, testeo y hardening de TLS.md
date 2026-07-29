@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - TLS
+  - Tipo/Deteccion
+Descripción: "Esta es la nota operativa del módulo: en un pentest real casi nunca explotas los ataques anteriores; auditas la configuración y reportas lo que la habilita"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[10 - Downgrade Attacks]]"
 Nota siguiente: ""

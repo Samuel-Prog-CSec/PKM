@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+  - Tipo/Deteccion
+Descripción: "En 2026 la SQL injection es escasa pero no extinta: el reto profesional ya no es explotarla en un laboratorio limpio, sino detectarla donde sobrevive entre defensas modernas"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[00 - Introducción a SQL Injection]]"
 Nota siguiente: "[[02 - Subvertir la lógica de consulta]]"

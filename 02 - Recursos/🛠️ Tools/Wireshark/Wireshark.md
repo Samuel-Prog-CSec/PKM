@@ -3,9 +3,10 @@ tags:
   - Windows
   - Linux
   - Escaneo/Redes
+Descripción: "Wireshark es un analizador de tráfico de red gratuito y de código abierto muy parecido a Tcpdump pero con una interfaz gráfica"
 Fecha de actualización: 2025-07-30
 Nota siguiente: "[[Uso avanzado de Wireshark]]"
-Area: "[[Análisis del tráfico de red]]"
+Area: "[[Wireshark.base|Wireshark]]"
 ---
 ---
 
@@ -15,7 +16,7 @@ Area: "[[Análisis del tráfico de red]]"
 > Dependiendo del host que estemos usando, es posible que no siempre tengamos una GUI para utilizar Wireshark tradicional. Por suerte para nosotros, hay variantes que nos permiten utilizarlo desde la línea de comandos.
 
 # Características y capacidades
-- Inspección profunda de paquetes para cientos de [[Protocolos de red]] diferentes para un [[Proceso de análisis]] más profundo.
+- Inspección profunda de paquetes para cientos de [[Introducción a los protocolos de red|Protocolos de red]] diferentes para un [[Proceso de análisis]] más profundo.
 - Interfaces gráficas y TTY
 - Capaz de ejecutarse en la mayoría de los sistemas operativos
 - Ethernet, IEEE 802.11, PPP/HDLC, ATM, Bluetooth, USB, Token Ring, Frame Relay, FDDI, entre otros

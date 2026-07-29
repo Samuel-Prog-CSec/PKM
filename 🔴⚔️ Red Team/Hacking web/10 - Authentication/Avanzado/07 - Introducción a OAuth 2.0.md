@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - OAuth
+  - Tipo/Introduccion
+Descripción: "OAuth 2.0 es un estándar de autorización delegada: permite que una app acceda a tus recursos en otro servicio sin que le des tu contraseña"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[06 - Herramientas JWT y prevención]]"
 Nota siguiente: "[[08 - Robo de tokens de acceso OAuth]]"

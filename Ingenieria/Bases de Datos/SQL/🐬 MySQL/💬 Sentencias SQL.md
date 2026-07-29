@@ -1,7 +1,8 @@
 ---
 tags:
-  - Bases de Datos
+  - Bases-de-Datos
   - SQL
+Descripción: "Sobre la estructura ya creada en 🐬 MySQL, las sentencias de manipulación (DML) y definición (DDL) son las operaciones reales que la aplicación —y, por extensión, el atacante—…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[🐬 MySQL]]"
 Nota siguiente: "[[Consultas y operadores SQL]]"
@@ -86,4 +87,4 @@ mysql> UPDATE logins SET password = 'change_password' WHERE id > 1;
 
 Todas estas sentencias requieren **privilegios suficientes** en la cuenta que las ejecuta. Por eso, durante la explotación, enumerar los privilegios de la cuenta de la base de datos (`SHOW GRANTS`) determina hasta dónde se puede llegar: de solo leer, a escribir ficheros o ejecutar comandos.
 
-El verdadero poder para un atacante está en **filtrar y combinar** resultados: las cláusulas `WHERE`, `ORDER BY`, `LIMIT`, `LIKE` y los operadores lógicos —todo ello en [[Consultas y operadores SQL]]— son las piezas que se manipulan para [[01 - Subvertir la lógica de consulta|subvertir la lógica]] de una consulta.
+El verdadero poder para un atacante está en **filtrar y combinar** resultados: las cláusulas `WHERE`, `ORDER BY`, `LIMIT`, `LIKE` y los operadores lógicos —todo ello en [[Consultas y operadores SQL]]— son las piezas que se manipulan para [[02 - Subvertir la lógica de consulta|subvertir la lógica]] de una consulta.

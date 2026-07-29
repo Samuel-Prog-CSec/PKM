@@ -83,19 +83,32 @@ Notas que carecen de algún campo obligatorio (`tags`, `Fecha de actualización`
 ### 8. Contenido disperso
 Búsqueda de keywords clave en el cuerpo de notas para detectar contenido que está en una nota pero "debería" estar en otra. Heurística: si la nota X menciona el concepto Y >5 veces y existe una nota dedicada a Y, ¿no debería el contenido vivir allí o estar enlazado?
 
-### 9. Jerarquía `.base` Level 1 / Level 2
+### 9. Jerarquía `.base` Level 0 / Level 1 / Level 2
 
-Inspirado en la convención del vault (ver `CLAUDE.md` sección "Vista `.base`"):
+Convención del vault en `CLAUDE.md` § "Vista `.base`" y **ADR 009**. Checks:
 
 - **Sub-carpetas con notas pero sin `.base` Level 2** → falta el índice. Listar.
-- **Notas con `Area` apuntando al Level 1** (`Web Pentesting.base` y similares) → legacy. Migrar al Level 2 cuando se cree el correspondiente.
-- **`.base` Level 1 que no listan algún Level 2 existente** bajo su carpeta → filtro del Level 1 desactualizado.
-- **`.base` Level 2 con filtro `Area == link(...)` apuntando a un nombre incorrecto** (no coincide con su propio archivo) → roto, no devolverá notas.
-- **`.base` Level 2 huérfano**: existe pero ninguna nota lo tiene como `Area` → orphan MOC, decidir si borrar.
+- **Notas con `Area` apuntando a un Level 0/1 o a una nota** (`Area: "[[Wireshark]]"`, `Area: "[[Web Pentesting.base]]"`) → legacy roto. El `Area` solo apunta a un Level 2, con alias.
+- **`.base` Level 0/1 que no listan algún hijo existente** → filtro desactualizado.
+- **`.base` Level 2 con filtro `Area == link(...)` apuntando a un nombre distinto al del propio fichero** → roto, no devolverá notas.
+- **`.base` Level 2 huérfano**: ninguna nota lo tiene como `Area` → o es prematuro (crear `.base` antes que las notas está prohibido) o quedó vacío tras una migración.
+- **Level 1 que se autolista** → el filtro de auto-exclusión olvida la extensión. `file.name != "X"` **no funciona**: para un `.base`, `file.name` es `"X.base"`.
+- **Level 1 con lista de carpetas hardcoded** → se olvidará al añadir un área. Sustituir por regex de profundidad: `'/^<Área>\/[^\/]+$/.matches(file.folder)'`.
+- **Level 2 sin la columna `Fecha de actualización`** → índice sin señal de mantenimiento; no cumple la plantilla canónica.
+- **Level 1 con >15 sub-temas y sin vista `groupBy`** → lista plana, difícil de navegar. Añadir fórmula de familia.
+
+El script de integridad completo (recorre todos los `.base` y todas las notas, cruza `Area` ↔ fichero, y reporta filtros mal apuntados, `Area` rotos, MOC huérfanas y notas sin `Area`) está en `references/audit-bases.ps1`.
+
+> [!warning]+ Validar `.base` correctamente
+> - **`obsidian base:query` NO indexa ficheros `.base`**, solo `.md`. Toda vista Level 0/1 devuelve `[]` por CLI aunque funcione en la app → validarlas con `obsidian dev:screenshot`.
+> - **Tras editar por fuera de Obsidian, ejecutar `obsidian command id="app:reload"` y esperar ~20 s** antes de consultar: el caché de metadatos devuelve conteos obsoletos y hace creer que un filtro está mal.
+> - **Abrir un `.base` en la app puede reescribirlo** (normaliza `columnSize`, mueve `groupBy`). No editarlo por fuera mientras está abierto en una pestaña.
 
 ```shell-session
-$ obsidian bases                                                # listado de .base
-$ grep -rn 'Area: "\[\[Web Pentesting.base' "🔴⚔️ Red Team/"   # notas legacy con Area→Level 1
+$ obsidian bases                                    # listado de .base
+$ obsidian command id="app:reload"                  # SIEMPRE antes de validar
+$ obsidian base:query file="XSS.base" view="Notas"  # solo sirve para Level 2
+$ obsidian dev:errors                               # errores de fórmula tras recargar
 ```
 
 ## Cómo priorizar hallazgos

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+  - Tipo/Arsenal
+Descripción: "El instrumental específico de autenticación, por fase"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[11 - Detección y metodología en autenticación]]"
 Nota siguiente:

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Pentesting/Explotacion
+Descripción: "La *command injection* es de las vulnerabilidades más críticas en web services: ejecuta comandos del sistema directamente en el back-end"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[02 - SOAP Action Spoofing]]"
 Nota siguiente: "[[04 - Ataques a xmlrpc.php]]"

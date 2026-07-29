@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "Confirmada la inyección, el operador que elijamos determina cómo se encadena nuestro comando con el original y qué salida recibimos"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[01 - Detección de Command Injection]]"
 Nota siguiente: "[[03 - Identificación de filtros y defensas]]"

@@ -7,15 +7,13 @@ Autores:
   - Michal Zalewski
 Editorial: No Starch Press
 Año: 2012
-ISBN: "978-1-59327-388-0"
-Portada: "https://covers.openlibrary.org/b/isbn/9781593273880-L.jpg"
+ISBN: 978-1-59327-388-0
+Portada: https://covers.openlibrary.org/b/isbn/9781593273880-L.jpg
 PDF: "[[thetangledweb.pdf]]"
-Estado: Pendiente
+Estado: Aceptada
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---
----
-
 # The Tangled Web
 
 ![Portada de The Tangled Web](https://covers.openlibrary.org/b/isbn/9781593273880-L.jpg)

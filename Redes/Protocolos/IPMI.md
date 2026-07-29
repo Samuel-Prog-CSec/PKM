@@ -2,6 +2,7 @@
 tags:
   - Redes
   - Protocolos
+Descripción: "IPMI (*Intelligent Platform Management Interface*) es un estándar de gestión de hardware que funciona como un subsistema autónomo, independiente del BIOS, la CPU, el firmware y…"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

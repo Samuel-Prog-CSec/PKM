@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "POODLE (*Padding Oracle On Downgraded Legacy Encryption*) y BEAST (*Browser Exploit Against SSL/TLS*) son dos padding oracles concretos contra el modo CBC en SSL 3.0 y TLS 1.0"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[03 - Padding Oracle Attacks]]"
 Nota siguiente: "[[05 - Bleichenbacher y DROWN]]"

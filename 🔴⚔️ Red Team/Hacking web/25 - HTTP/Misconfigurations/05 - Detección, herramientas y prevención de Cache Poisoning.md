@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/Cache-Poisoning
+  - Tipo/Deteccion
+Descripción: "Probar a mano miles de cabeceras y parámetros para hallar cuáles son unkeyed es inviable en un objetivo real"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[04 - Técnicas avanzadas de Cache Poisoning]]"
 Nota siguiente: "[[06 - Introducción a los Host Header Attacks]]"

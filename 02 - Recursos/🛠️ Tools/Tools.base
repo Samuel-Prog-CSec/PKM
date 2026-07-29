@@ -1,0 +1,71 @@
+formulas:
+  herramienta: file.name.replace(".base", "")
+  categoría: |
+    if(file.name.containsAny("Nmap", "Ffuf"), "1 · Recon y escaneo",
+      if(file.name.containsAny("Nessus", "OpenVAS"), "2 · Evaluación de vulnerabilidades",
+        if(file.name.containsAny("Burp", "ZAP"), "3 · Proxies web",
+          if(file.name.containsAny("Metasploit", "SQLMap"), "4 · Explotación",
+            if(file.name.containsAny("Hashcat", "John"), "5 · Ataques a credenciales",
+              if(file.name.containsAny("Wireshark", "Tcpdump"), "6 · Análisis de red",
+                if(file.name.containsAny("Garak", "PyRIT", "Fickling", "ModelScan", "Picklescan"), "7 · Seguridad de IA",
+                  "· Sin clasificar")))))))
+properties:
+  formula.herramienta:
+    displayName: Herramienta
+  formula.categoría:
+    displayName: Categoría
+  file.folder:
+    displayName: Ubicación
+views:
+  - type: cards
+    name: Arsenal
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("02 - Recursos/🛠️ Tools")
+        - file.name != "Tools.base"
+    order:
+      - formula.herramienta
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 260
+  - type: table
+    name: Por categoría
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("02 - Recursos/🛠️ Tools")
+        - file.name != "Tools.base"
+    groupBy:
+      property: formula.categoría
+      direction: ASC
+    order:
+      - formula.herramienta
+      - file.folder
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      formula.herramienta: 300
+      file.folder: 380
+  - type: table
+    name: Todas las notas
+    filters:
+      and:
+        - file.inFolder("02 - Recursos/🛠️ Tools")
+        - file.ext == "md"
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - file.tags
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 400
+      file.tags: 280
+      note.Fecha de actualización: 150

@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "Con el código decompilado, buscar las consultas vulnerables a mano entre miles de líneas es inviable"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[01 - Decompilación de archivos Java]]"
 Nota siguiente: "[[03 - Live-debugging de aplicaciones Java]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

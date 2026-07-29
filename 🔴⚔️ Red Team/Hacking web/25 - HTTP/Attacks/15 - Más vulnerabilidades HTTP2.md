@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/H2
+Descripción: "El H2.CL/H2.TE básico requiere que el proxy arrastre un CL/TE mentido"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[14 - HTTP2 Downgrading]]"
 Nota siguiente: "[[16 - Herramientas y prevención de HTTP2 Downgrading]]"

@@ -8,10 +8,10 @@ Autores:
   - James Forshaw
 Editorial: No Starch Press
 Año: 2018
-ISBN: "978-1-59327-750-5"
-Portada: "https://covers.openlibrary.org/b/isbn/9781593277505-L.jpg"
+ISBN: 978-1-59327-750-5
+Portada: https://covers.openlibrary.org/b/isbn/9781593277505-L.jpg
 PDF: "[[attackingnetworkprotocols.pdf]]"
-Estado: Pendiente
+Estado: Aceptada
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---

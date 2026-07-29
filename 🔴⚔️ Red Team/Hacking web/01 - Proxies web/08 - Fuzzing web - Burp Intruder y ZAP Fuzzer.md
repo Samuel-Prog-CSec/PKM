@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "Más allá del proxy, Burp y ZAP traen fuzzers integrados"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[07 - Proxying de herramientas]]"
 Nota siguiente: "[[09 - Escáner de vulnerabilidades - Burp y ZAP Scanner]]"

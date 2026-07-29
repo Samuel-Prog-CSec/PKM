@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "Leer código es útil, pero el objetivo final es ejecutar comandos"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[03 - PHP wrappers I - php filter y disclosure de código]]"
 Nota siguiente: "[[05 - Remote File Inclusion (RFI)]]"

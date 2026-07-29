@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Proxies
+Descripción: "Ambos proxies traen un escáner de vulnerabilidades (DAST) que mapea la app y prueba clases comunes de fallos automáticamente"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[08 - Fuzzing web - Burp Intruder y ZAP Fuzzer]]"
 Nota siguiente: "[[10 - Extensiones y BApp Store]]"

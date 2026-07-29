@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Session-Puzzling
+Descripción: "La segunda variante de session puzzling: la población prematura"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[14 - Variables de sesión compartidas - bypass de autenticación]]"
 Nota siguiente: "[[16 - Variables de sesión compartidas - account takeover]]"

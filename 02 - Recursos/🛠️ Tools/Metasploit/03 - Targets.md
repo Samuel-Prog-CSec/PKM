@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Explotacion
   - Metasploit
+Descripción: "Un target es la variante concreta del objetivo para la que un exploit está preparado: una versión de sistema operativo, un *service pack*, un idioma, una arquitectura o incluso…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[02 - Módulos]]"
 Nota siguiente: "[[04 - Payloads en Metasploit]]"

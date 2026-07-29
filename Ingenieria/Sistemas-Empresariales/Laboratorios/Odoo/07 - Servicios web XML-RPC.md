@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Odoo
   - SIE
+Descripción: "Odoo expone una API externa por XML-RPC: desde un script Python puedes gestionar bases de datos, autenticarte y operar sobre cualquier modelo sin tocar la interfaz"
 Fecha de actualización: 2026-05-31
 Nota previa: "[[06 - Operativa compra-venta]]"
 Nota siguiente: "[[08 - Estructura de un módulo y scaffold]]"

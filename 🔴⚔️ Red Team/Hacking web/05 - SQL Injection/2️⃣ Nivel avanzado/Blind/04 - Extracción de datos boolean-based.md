@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Con un oráculo funcional, extraer un dato (la contraseña de maria) es un proceso en dos fases: averiguar su longitud y luego sacar cada carácter preguntando por su valor"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[03 - Diseño del oráculo booleano]]"
 Nota siguiente: "[[05 - Optimización de la extracción]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

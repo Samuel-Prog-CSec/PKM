@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Examen
   - SIE
+Descripción: "Sabes el contenido y tienes el patrón (19 - Variantes y práctica)"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[19 - Variantes y práctica]]"
 Nota siguiente: "[[21 - Ejercicio de práctica - Biblioteca (resuelto)]]"

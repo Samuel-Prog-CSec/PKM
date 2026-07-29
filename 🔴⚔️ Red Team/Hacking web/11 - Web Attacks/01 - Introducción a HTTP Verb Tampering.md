@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Verb-Tampering
+  - Tipo/Introduccion
+Descripción: "Un ataque de HTTP Verb Tampering explota aplicaciones o servidores que no tratan de forma coherente todos los métodos (verbos) HTTP. El protocolo HTTP acepta varios verbos al…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[00 - Introducción a los Web Attacks]]"
 Nota siguiente: "[[02 - Bypass de autenticación básica]]"

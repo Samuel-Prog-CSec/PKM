@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - CORS
   - CSRF
+Descripción: "Entender las defensas CSRF y cómo sortearlas exige dominar antes la Same-Origin Policy y CORS. La primera es la barrera que aísla orígenes en el navegador; el segundo, el…"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[01 - Fundamentos y defensas de CSRF]]"
 Nota siguiente: "[[03 - CORS Misconfigurations]]"

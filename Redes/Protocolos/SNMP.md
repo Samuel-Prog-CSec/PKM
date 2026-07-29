@@ -2,6 +2,7 @@
 tags:
   - Redes
   - Protocolos
+Descripción: "SNMP (*Simple Network Management Protocol*) sirve para monitorizar y gestionar dispositivos de red —routers, switches, servidores, IoT— y también para cambiar su configuración…"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

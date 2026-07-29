@@ -2,6 +2,7 @@
 tags:
   - Redes
   - Protocolos
+Descripción: "DNS (*Domain Name System*) resuelve nombres de dominio a direcciones IP. No tiene base de datos central: la información está distribuida en miles de servidores, como una…"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

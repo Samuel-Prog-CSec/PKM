@@ -4,6 +4,7 @@ tags:
   - SIE/Examen
   - SIE/Modulos
   - SIE
+Descripción: "El examen no será exactamente Filmoteca, pero será el mismo patrón con otros nombres"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[18 - Filmoteca paso a paso]]"
 Nota siguiente: "[[20 - Estrategia de examen y autoevaluación]]"

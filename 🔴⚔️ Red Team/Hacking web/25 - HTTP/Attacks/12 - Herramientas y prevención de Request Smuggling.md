@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/Request-Smuggling
+  - Tipo/Defensa
+Descripción: "Cierre del bloque de smuggling: el arsenal que automatiza la matriz de desyncs y ofuscaciones, y la prevención (que, spoiler, pasa por HTTP/2 extremo a extremo)"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[11 - Explotación de Request Smuggling]]"
 Nota siguiente: "[[13 - Introducción a HTTP2]]"

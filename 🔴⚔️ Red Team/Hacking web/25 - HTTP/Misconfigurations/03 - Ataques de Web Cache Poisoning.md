@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Cache-Poisoning
+Descripción: "El cache poisoning casi nunca es el bug final: es el multiplicador que distribuye otra vulnerabilidad de la aplicación a muchos usuarios"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[02 - Identificación de parámetros unkeyed]]"
 Nota siguiente: "[[04 - Técnicas avanzadas de Cache Poisoning]]"

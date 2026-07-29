@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Request-Smuggling
+Descripción: "Las variantes CL.TE/TE.CL/TE.TE nacen del conflicto CL/TE. Pero cualquier bug de parseo que haga a dos sistemas discrepar en la longitud de una petición produce smuggling…"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[09 - TE.CL]]"
 Nota siguiente: "[[11 - Explotación de Request Smuggling]]"

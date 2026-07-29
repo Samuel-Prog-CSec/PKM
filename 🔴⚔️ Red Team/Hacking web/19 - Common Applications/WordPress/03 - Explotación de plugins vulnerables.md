@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Explotacion
+Descripción: "Los plugins de terceros son el vector de ataque número uno de WordPress, muy por encima del core"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[02 - Login y fuerza bruta en WordPress]]"
 Nota siguiente: "[[04 - RCE como administrador en WordPress]]"

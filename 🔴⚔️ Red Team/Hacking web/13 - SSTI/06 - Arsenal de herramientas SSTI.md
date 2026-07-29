@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
   - Server-Side/SSTI
+  - Tipo/Arsenal
+Descripción: "Herramientas para automatizar la detección y explotación de SSTI. La identificación del motor y la explotación con filtros/sandbox siguen siendo trabajo manual (las herramientas…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[05 - Prevención de SSTI]]"
 Nota siguiente: ""

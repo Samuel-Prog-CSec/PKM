@@ -4,6 +4,8 @@ tags:
   - NoSQLi
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
+  - Tipo/Arsenal
+Descripción: "La NoSQLi combina tres frentes de tooling: fuzzing con wordlists para detectar, herramientas dedicadas para confirmar, y scripts a medida para la explotación ciega/SSJI (donde…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[07 - Evasión de filtros y WAF en NoSQL]]"
 Nota siguiente: "[[09 - Prevención de NoSQL injection]]"

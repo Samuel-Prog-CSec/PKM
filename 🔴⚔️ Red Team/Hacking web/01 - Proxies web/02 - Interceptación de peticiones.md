@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "La función estrella del proxy: pausar una petición HTTP en vuelo, examinarla, modificarla y reenviarla"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[01 - Instalación y configuración del proxy]]"
 Nota siguiente: "[[03 - Interceptación de respuestas]]"

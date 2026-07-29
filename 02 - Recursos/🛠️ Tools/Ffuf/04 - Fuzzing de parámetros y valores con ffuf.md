@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+Descripción: "Mover FUZZ a los parámetros descubre superficie que no se ve navegando: parámetros ocultos que activan funciones de debug, admin=true, endpoints de API sin documentar"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[03 - Fuzzing de dominios con ffuf]]"
 Nota siguiente: "[[05 - Matching y filtrado de resultados]]"

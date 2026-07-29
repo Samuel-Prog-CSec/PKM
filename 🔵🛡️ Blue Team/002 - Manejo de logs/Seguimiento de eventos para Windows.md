@@ -1,3 +1,16 @@
+---
+tags:
+  - Blue-Team
+  - Windows
+  - Logs
+Descripción: "Event Tracing for Windows (ETW) es un mecanismo de trazado de alto rendimiento integrado en Windows, que captura eventos tanto de modo usuario como de kernel"
+Fecha de actualización: 2025-07-20
+Nota previa: "[[Registros de eventos de Windows]]"
+Nota siguiente: "[[Sysmon]]"
+Area: "[[Manejo de logs.base|Manejo de logs]]"
+---
+---
+
 # 1. Introducción 
 **Event Tracing for Windows (ETW)** es un mecanismo de trazado de alto rendimiento integrado en Windows, que captura eventos tanto de modo usuario como de `kernel`. A diferencia de los [[Registros de eventos de Windows]] convencionales, ETW ofrece telemetría en tiempo real sobre llamadas al sistema, creación/terminación de procesos, actividad de red, cambios en ficheros y registro, y mucho más.
 

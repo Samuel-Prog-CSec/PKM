@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "SQLMap es la herramienta estándar para automatizar la detección y explotación de SQL injection"
 Fecha de actualización: 2026-06-04
 Nota previa:
 Nota siguiente: "[[01 - Interpretación de la salida de SQLMap]]"

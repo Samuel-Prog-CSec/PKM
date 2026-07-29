@@ -4,6 +4,8 @@ tags:
   - XPath
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
+  - Tipo/Arsenal
+Descripción: "La explotación manual de XPath —oráculo, schema walking, extracción carácter a carácter— es inviable a mano contra un objetivo real"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[06 - Evasión de filtros y WAF en XPath]]"
 Nota siguiente: "[[08 - Prevención de XPath Injection]]"

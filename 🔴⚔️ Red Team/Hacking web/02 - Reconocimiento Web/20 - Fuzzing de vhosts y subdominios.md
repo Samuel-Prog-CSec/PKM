@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "La última posición que fuzzear es el propio host"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[19 - Fuzzing de parámetros y valores]]"
 Nota siguiente: "[[21 - Filtrado de la salida de fuzzing]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Fuzzing
+Descripción: "El fuzzing lanza una red amplia y genera pistas, pero no todo hallazgo es una vulnerabilidad real: el proceso produce falsos positivos —anomalías inofensivas que disparan el…"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[21 - Filtrado de la salida de fuzzing]]"
 Nota siguiente: "[[23 - APIs web e identificación de endpoints]]"

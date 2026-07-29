@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "En 2026 lo raro es un objetivo sin protección"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[04 - Enumeración de bases de datos con SQLMap]]"
 Nota siguiente: "[[06 - Explotación del sistema operativo con SQLMap]]"

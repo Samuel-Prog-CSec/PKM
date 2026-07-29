@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - SAML
+Descripción: "El ataque SAML más sofisticado, y el que funciona aunque el SP sí exija una firma válida"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[12 - Ataque de exclusión de firma SAML]]"
 Nota siguiente: "[[14 - Vulnerabilidades adicionales y herramientas SAML]]"

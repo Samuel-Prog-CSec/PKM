@@ -4,6 +4,8 @@ tags:
   - PDF-Injection
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
+  - Tipo/Arsenal
+Descripción: "La explotación de PDF injection es sobre todo manual (inyectar payloads HTML), pero hay tooling clave en las fases de fingerprint, confirmación OOB y post-explotación"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[02 - Explotación de la generación de PDF]]"
 Nota siguiente: "[[04 - Prevención de la generación de PDF]]"

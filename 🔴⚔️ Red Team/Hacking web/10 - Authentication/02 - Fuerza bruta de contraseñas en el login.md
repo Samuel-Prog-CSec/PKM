@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "Con un usuario válido confirmado, el login depende solo de la contraseña"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[01 - Enumeración de usuarios]]"
 Nota siguiente: "[[03 - Fuerza bruta de tokens de reset]]"

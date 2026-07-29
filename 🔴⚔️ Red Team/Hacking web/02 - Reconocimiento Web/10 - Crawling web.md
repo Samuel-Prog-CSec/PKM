@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El crawling (o spidering) es el proceso automatizado de navegar un sitio siguiendo enlaces de página en página para recopilar información"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[09 - Fingerprinting web]]"
 Nota siguiente: "[[11 - Spidering con Scrapy]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+Descripción: "ffuf fuzzea dominios de dos formas que la gente confunde constantemente y que encuentran cosas distintas: *subdomain fuzzing* (contra el DNS público) y *vhost fuzzing* (contra…"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[02 - Fuzzing de directorios y archivos con ffuf]]"
 Nota siguiente: "[[04 - Fuzzing de parámetros y valores con ffuf]]"

@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+Descripción: "Entre bosques distintos, el truco del SID History suele estar bloqueado: el SID filtering está activo por defecto en los trusts de bosque y descarta el ExtraSid"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[21 - Ataque a trust hijo a padre]]"
 Nota siguiente: "[[23 - Hardening de Active Directory]]"

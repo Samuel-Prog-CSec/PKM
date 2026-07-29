@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "Antes de lanzar payloads o herramientas ruidosas conviene saber contra qué defensas juegas en el host donde tienes ejecución"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[02 - Enumeración inicial del dominio]]"
 Nota siguiente: "[[04 - Enumeración con credenciales]]"

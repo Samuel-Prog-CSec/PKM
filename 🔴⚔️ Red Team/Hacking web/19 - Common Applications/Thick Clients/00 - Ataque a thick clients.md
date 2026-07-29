@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Thick-Clients
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "Las *thick client applications* se instalan localmente (Java, C++, .NET, Silverlight), típicas de entornos corporativos (ERPs, CRMs, gestión de inventario)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Shellshock]]"
 Nota siguiente: "[[01 - Vulnerabilidades web en thick clients]]"

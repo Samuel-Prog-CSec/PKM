@@ -2,6 +2,7 @@
 tags:
   - Seguridad/Contraseñas
   - Pentesting/Post-Explotacion
+Descripción: "Más allá de los modos, el valor de John en un engagement está en dos cosas: los *2john que convierten cualquier fichero protegido en un hash crackeable, y las reglas que…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[00 - Introducción a John the Ripper]]"
 Nota siguiente: 

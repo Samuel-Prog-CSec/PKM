@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+Descripción: "Cada derecho abusable (12 - Primer de abuso de ACLs) tiene su técnica"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[13 - Enumeración de ACLs]]"
 Nota siguiente: "[[15 - DCSync]]"

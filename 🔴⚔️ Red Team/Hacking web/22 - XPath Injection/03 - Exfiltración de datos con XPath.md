@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - XPath
   - Pentesting/Explotacion
+Descripción: "Más allá del bypass de login, la XPath injection permite volcar el documento XML entero, igual que una SQLi UNION-based extrae tablas completas"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[02 - Bypass de autenticación con XPath]]"
 Nota siguiente: "[[04 - Exfiltración avanzada (schema walking)]]"

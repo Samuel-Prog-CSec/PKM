@@ -3,10 +3,12 @@ tags:
   - Web/Red-Team
   - SQLi
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "El módulo de SQLi a ciegas usa Microsoft SQL Server (MSSQL) como motor de referencia, así que conviene conocer sus particularidades antes de atacarlo"
 Fecha de actualización: 2026-06-04
 Nota previa:
 Nota siguiente: "[[01 - Introducción a Blind SQL Injection]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

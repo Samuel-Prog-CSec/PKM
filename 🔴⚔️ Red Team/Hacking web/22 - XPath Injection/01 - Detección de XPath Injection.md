@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - XPath
   - Pentesting/Enumeracion
+  - Tipo/Deteccion
+Descripción: "HTB da la detección por supuesta y salta directo a explotar"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Introducción a XPath Injection]]"
 Nota siguiente: "[[02 - Bypass de autenticación con XPath]]"

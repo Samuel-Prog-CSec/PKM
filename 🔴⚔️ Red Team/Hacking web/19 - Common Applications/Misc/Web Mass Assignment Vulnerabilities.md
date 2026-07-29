@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Mass-Assignment
   - Pentesting/Explotacion
+Descripción: "El *mass assignment* ocurre cuando un framework enlaza automáticamente los parámetros de la petición a los atributos de un objeto, sin una lista blanca"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[Attacking LDAP]]"
 Nota siguiente: "[[Attacking Applications Connecting to Services]]"

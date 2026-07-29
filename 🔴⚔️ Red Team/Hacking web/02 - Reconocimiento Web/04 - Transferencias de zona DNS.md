@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "La fuerza bruta adivina subdominios uno a uno"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[03 - Enumeración DNS con dig]]"
 Nota siguiente: "[[05 - Enumeración de subdominios]]"

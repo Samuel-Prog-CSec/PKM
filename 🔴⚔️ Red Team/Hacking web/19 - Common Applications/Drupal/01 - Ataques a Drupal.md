@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Drupal
   - Pentesting/Explotacion
+Descripción: "Conseguir shell en Drupal no es tan directo como editar un tema PHP (como en WordPress)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de Drupal]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de Tomcat]]"

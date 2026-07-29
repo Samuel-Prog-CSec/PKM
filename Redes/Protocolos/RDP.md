@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Windows
+Descripción: "RDP (*Remote Desktop Protocol*) es el protocolo de Microsoft para acceso remoto gráfico a escritorios Windows"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

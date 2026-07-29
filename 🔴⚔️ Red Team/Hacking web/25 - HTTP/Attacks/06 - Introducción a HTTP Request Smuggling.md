@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Request-Smuggling
+  - Tipo/Introduccion
+Descripción: "El HTTP Request Smuggling (o Desync Attack) explota una discrepancia entre un front-end (proxy inverso, caché, WAF) y un back-end (servidor web) al parsear la misma petición…"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[05 - Prevención y herramientas de CRLF]]"
 Nota siguiente: "[[07 - CL.TE]]"

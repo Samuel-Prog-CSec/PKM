@@ -7,10 +7,10 @@ Autores:
   - Georgia Weidman
 Editorial: No Starch Press
 Año: 2014
-ISBN: "978-1-59327-564-8"
-Portada: "https://covers.openlibrary.org/b/isbn/9781593275648-L.jpg"
+ISBN: 978-1-59327-564-8
+Portada: https://covers.openlibrary.org/b/isbn/9781593275648-L.jpg
 PDF: "[[penetrationtesting.pdf]]"
-Estado: Pendiente
+Estado: Aceptada
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---

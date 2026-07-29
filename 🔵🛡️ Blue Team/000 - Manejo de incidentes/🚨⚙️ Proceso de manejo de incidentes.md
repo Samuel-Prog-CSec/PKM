@@ -1,3 +1,15 @@
+---
+tags:
+  - Blue-Team
+  - Incident-Response
+Descripción: "Ahora que estamos familiarizados con la cadena de muerte cibernética y sus etapas, podemos predecir/anticipar mejor los próximos pasos en un ataque y también sugerir medidas…"
+Fecha de actualización: 2025-07-12
+Nota previa: "[[📍 Introducción]]"
+Nota siguiente: "[[1️⃣ Etapa de preparación]]"
+Area: "[[Manejo de incidentes.base|Manejo de incidentes]]"
+---
+---
+
 Ahora que estamos familiarizados con la cadena de muerte cibernética y sus etapas, podemos predecir/anticipar mejor los próximos pasos en un ataque y también sugerir medidas apropiadas contra ellos.
 
 Al igual que la cadena de muerte cibernética, hay diferentes etapas, al responder a un incidente, definidas como `incident handling process`. El `incident handling process` define una capacidad para que las organizaciones preparen, detecten y respondan a eventos maliciosos. Tenga en cuenta que este proceso es adecuado para responder a eventos de seguridad de TI, pero sus etapas no corresponden a las etapas de la cadena de muerte cibernética de una manera uno a uno.

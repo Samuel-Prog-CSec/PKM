@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "El tercer tipo, también no persistente, es el DOM-based XSS. Mientras el reflected envía la entrada al servidor, el DOM XSS se procesa 100% en el cliente"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[02 - XSS Reflejado]]"
 Nota siguiente: "[[04 - Descubrimiento de XSS]]"

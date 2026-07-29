@@ -11,8 +11,8 @@ Autores:
   - Beau Woods
 Editorial: No Starch Press
 Año: 2021
-ISBN: "978-1-7185-0090-7"
-Portada: "https://covers.openlibrary.org/b/isbn/9781718500907-L.jpg"
+ISBN: 978-1-7185-0090-7
+Portada: https://covers.openlibrary.org/b/isbn/9781718500907-L.jpg
 PDF: "[[practicaliothacking.pdf]]"
 Estado: Pendiente
 Rating:

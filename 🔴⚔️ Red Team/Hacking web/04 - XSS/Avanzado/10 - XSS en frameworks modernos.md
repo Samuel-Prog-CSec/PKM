@@ -3,9 +3,10 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "La web moderna corre sobre React, Angular y Vue, y los tres escapan la salida por defecto: interpolar {{ dato }} o {dato} produce texto, no HTML, lo que mata el XSS clásico por…"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[09 - Prototype Pollution hacia XSS]]"
-Nota siguiente:
+Nota siguiente: "[[11 - HTML Injection, Content Spoofing y Dangling Markup]]"
 Area: "[[XSS Avanzado.base|XSS Avanzado]]"
 ---
 ---

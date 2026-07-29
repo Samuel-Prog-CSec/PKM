@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Explotacion
   - Metasploit
+Descripción: "Un módulo es cada pieza ejecutable de Metasploit"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[01 - MSFconsole]]"
 Nota siguiente: "[[03 - Targets]]"

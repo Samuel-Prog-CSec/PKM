@@ -4,6 +4,7 @@ tags:
   - Pentesting/Enumeracion
   - CSRF
   - CORS
+Descripción: "La detección de CSRF y CORS se hace en buena parte a mano —el test de Origin en Repeater es insustituible—, pero hay instrumental que la acelera y la escala"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[06 - Tokens CSRF débiles y CSRF con JSON]]"
 Nota siguiente: "[[08 - Clickjacking]]"

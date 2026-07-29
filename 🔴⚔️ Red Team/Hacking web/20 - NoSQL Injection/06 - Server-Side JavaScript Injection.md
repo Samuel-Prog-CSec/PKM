@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Explotacion
+Descripción: "La Server-Side JavaScript Injection (SSJI) es un tipo de inyección único de NoSQL: cuando el servidor evalúa JavaScript controlado por el atacante mediante el operador $where"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[05 - Extracción de datos ciega y automatización]]"
 Nota siguiente: "[[07 - Evasión de filtros y WAF en NoSQL]]"

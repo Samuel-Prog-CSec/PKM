@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - LDAP
   - Pentesting/Explotacion
+Descripción: "Más allá del bypass de login, la LDAP injection permite extraer datos del directorio —usuarios, contraseñas, atributos internos—"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[02 - Bypass de autenticación con LDAP]]"
 Nota siguiente: "[[04 - Evasión de filtros en LDAP Injection]]"

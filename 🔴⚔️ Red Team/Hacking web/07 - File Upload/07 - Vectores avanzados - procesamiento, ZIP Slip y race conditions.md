@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "Los vectores anteriores atacan el *contenido* del fichero"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[06 - Uploads limitados - SVG, polyglots y metadatos]]"
 Nota siguiente: "[[08 - Detección y metodología en entornos reales]]"

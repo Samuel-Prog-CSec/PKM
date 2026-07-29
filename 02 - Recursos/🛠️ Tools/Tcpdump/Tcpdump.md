@@ -1,3 +1,16 @@
+---
+tags:
+  - Windows
+  - Linux
+  - Escaneo/Redes
+  - Sniffing
+Descripción: "Tcpdump es un rastreador de paquetes de línea de comandos que puede capturar e interpretar directamente datos desde un archivo o una interfaz de red"
+Fecha de actualización: 2025-10-20
+Nota previa:
+Nota siguiente: "[[Filtrado de paquetes Tcpdump]]"
+Area: "[[Tcpdump.base|Tcpdump]]"
+---
+---
 `Tcpdump` es un rastreador de paquetes de línea de comandos que puede capturar e interpretar directamente  datos desde un archivo o una interfaz de red. Fue creado para usarse en cualquier sistema operativo tipo Unix y tenía un gemelo de Windows llamado `WinDump` (el apoyo a esta herramienta ha cesado). Es una herramienta potente y sencilla que se utiliza en la mayoría de los sistemas basados en Unix. 
 
 No requiere GUI y se puede utilizar a través de cualquier terminal o conexión remota, como [[SSH]]. Sin embargo, esta herramienta puede parecer abrumadora al principio debido a las diferentes funciones y filtros que nos ofrece. Sin embargo, una vez que aprendamos las funciones esenciales, nos resultará mucho más fácil utilizar esta herramienta de manera eficiente. Para la captura y el [[Análisis del tráfico de red]], utiliza las bibliotecas `pcap` y `libpcap`, emparejado con una interfaz en modo promiscuo para escuchar datos. Esto permite que el programa vea y capture paquetes que provienen o están destinados a cualquier dispositivo en la red de área local, no solo los paquetes destinados a nosotros.
@@ -122,7 +135,7 @@ Al observar la salida de `tcpdump`, puede resultar un poco abrumadora. La imagen
 | ==Opciones de protocolo==                 | **Azul**: veremos cualquier valor *TCP* negociado establecido entre el cliente y el servidor, como tamaño de ventana, reconocimientos selectivos, factores de escala de ventana y más.                                                                                                                                                                       |
 | ==Notas / Siguiente encabezado==          | **Blanco**: Notas varias: el disector encontrado estará presente aquí. Como el tráfico que estamos viendo está encapsulado, es posible que veamos más información de encabezado para diferentes protocolos. En nuestro ejemplo, podemos ver que el disector TCPDump reconoce el tráfico [[📂🔄 FTP]] dentro de la encapsulación para mostrarlo por nosotros. |
 
-Hay muchas otras opciones e información que se pueden mostrar. Esta información varía según la cantidad de verbosidad habilitada. Para obtener una comprensión más detallada de IP y otros encabezados de protocolo, se pueden consultar los protocolos definidos en [[Protocolos de red]].
+Hay muchas otras opciones e información que se pueden mostrar. Esta información varía según la cantidad de verbosidad habilitada. Para obtener una comprensión más detallada de IP y otros encabezados de protocolo, se pueden consultar los protocolos definidos en [[Introducción a los protocolos de red|Protocolos de red]].
 
 > [!info]
 > Teóricamente, podemos utilizar `tcpdump` crear un sistema *IDS/IPS* haciendo que un script [[🐧⚔️ Bash Scripting]] analice los paquetes interceptados según un patrón específico. Luego podemos establecer condiciones para, por ejemplo, prohibir una dirección *IP* particular que haya enviado demasiadas solicitudes de eco *ICMP* durante un período determinado.

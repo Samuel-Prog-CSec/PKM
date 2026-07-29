@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "Antes de escanear puertos hay que saber qué hosts están vivos"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[00 - Introducción a Nmap]]"
 Nota siguiente: "[[02 - Escaneo de puertos y hosts]]"

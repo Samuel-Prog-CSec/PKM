@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Web-Attacks
+  - Tipo/Introduccion
+Descripción: "Este módulo agrupa tres ataques que aparecen en casi cualquier aplicación web y que no encajan en la lógica clásica de 'inyección en un sink concreto' (como XSS o SQLi)"
 Fecha de actualización: 2026-07-15
 Nota previa: ""
 Nota siguiente: "[[01 - Introducción a HTTP Verb Tampering]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Verb-Tampering
+Descripción: "Set de herramientas para detectar y explotar Verb Tampering de forma sistemática"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[04 - Detección, evasión y prevención de Verb Tampering]]"
 Nota siguiente: "[[06 - Introducción a IDOR]]"

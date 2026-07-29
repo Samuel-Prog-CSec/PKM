@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+Descripción: "El caso más común: descubrir directorios y archivos que la aplicación no enlaza"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[01 - Wordlists, keywords y modos de ffuf]]"
 Nota siguiente: "[[03 - Fuzzing de dominios con ffuf]]"

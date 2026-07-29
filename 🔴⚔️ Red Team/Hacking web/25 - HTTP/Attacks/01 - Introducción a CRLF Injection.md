@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/CRLF
+  - Tipo/Introduccion
+Descripción: "La CRLF Injection consiste en inyectar saltos de línea en un contexto donde el inicio de una nueva línea tiene significado semántico y la aplicación no sanea la entrada"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[00 - Introducción a los HTTP Attacks]]"
 Nota siguiente: "[[02 - Log Injection]]"

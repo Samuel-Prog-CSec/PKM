@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Un modelo es la unidad central de un módulo: define una 'tabla' de la base de datos y sus columnas"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[08 - Estructura de un módulo y scaffold]]"
 Nota siguiente: "[[10 - Relaciones entre modelos]]"

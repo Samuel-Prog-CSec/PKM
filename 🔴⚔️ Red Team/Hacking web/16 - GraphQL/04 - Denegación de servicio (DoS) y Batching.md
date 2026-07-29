@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - GraphQL
+Descripción: "Dos ataques propios del modelo GraphQL: consultas que amplifican el trabajo del servidor hasta el DoS, y el batching, que permite meter muchas operaciones en una petición y así…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[03 - Injection Attacks]]"
 Nota siguiente: "[[05 - Mutations]]"

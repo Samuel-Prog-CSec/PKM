@@ -5,10 +5,14 @@ views:
       Area == link("John the Ripper.base", "John the Ripper")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
     columnSize:
-      file.name: 360
-      file.tags: 320
+      file.name: 330
+      note.Descripción: 520
+      file.tags: 240
+      note.Fecha de actualización: 140

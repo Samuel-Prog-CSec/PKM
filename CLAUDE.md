@@ -44,8 +44,11 @@ El vault es una base de conocimiento de seguridad ofensiva que debe servir **ind
 1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos. **Base web — prácticamente completa; funciona ya como material de referencia.**
 2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, dificultad alta. **En pausa** — faltan whitebox, deserialización y parameter logic bugs.
 3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting. **Foco activo.**
+4. **HTB COAE** — *Certified Offensive AI Expert* (path "AI Red Teamer", desarrollado con Google). 12 módulos. Seguridad ofensiva de sistemas de IA: fundamentos de ML/DL, prompt injection, ataques a la salida de LLM, envenenamiento de datos, evasión adversarial, privacidad y defensa. Examen práctico de 7 días sobre infraestructura AI-driven. **Foco activo.**
 
-> **Foco actual: CPTS**, con parón temporal en las certis web (CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** (`project_cpts_*`) y en la columna `Estado` de la tabla del path CPTS más abajo — no en esta sección, que solo fija el rumbo. Con Attacking Common Services (#11) y Documentation & Reporting (#27) completados el 2026-07-23, el **único net-new pendiente** del path es el capstone **Attacking Enterprise Networks (#28)**.
+> **Foco actual: CPTS y COAE**, con parón temporal en las certis web (CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** (`project_cpts_*`) y en la columna `Estado` de las tablas de path más abajo — no en esta sección, que solo fija el rumbo. De CPTS, con Attacking Common Services (#11) y Documentation & Reporting (#27) completados el 2026-07-23, el **único net-new pendiente** es el capstone **Attacking Enterprise Networks (#28)**. De COAE, completados los 3 primeros módulos el 2026-07-28.
+>
+> ⚠️ **El acrónimo es COAE, no CORE** — confirmado contra la API de HTB (`certification_acronym` del path 418) y el anuncio oficial.
 
 ## Idioma, filosofía y voz
 
@@ -69,19 +72,18 @@ Aplican a **cualquier tema/módulo net-new**, no solo a CPTS (donde son más cr�
 Raíz PARA + carpetas temáticas:
 
 ```
-01 - Proyectos/         (proyectos activos con fecha límite, no usado por el flujo de extracción HTB)
-02 - Recursos/          (Biblioteca, Lenguajes, Templates, 🛠️ Tools)
+02 - Recursos/          (Biblioteca, Lenguajes, Templates, 🛠️ Tools, Decisiones estructurales · Level 0: Recursos.base)
 03 - Archivos/          (imágenes y adjuntos, también Escalidraw)
 04 - PENDIENTES/        (inbox, no usado por el flujo de extracción HTB)
-Ingenieria/             (fundamentos y conocimientos relacionados con la ingeniería de software, bases de datos, criptografía, etc.)
-🔴⚔️ Red Team/         (todo el contenido ofensivo: Hacking web + Pentesting/CPTS + Hacking Active Directory)
-🔵🛡️ Blue Team/        (defensivo: SOC analyst, analisis de malware y redes, etc.)
-Redes/                  (fundamentos de redes, utilidades, protocolos, etc. Interesante para Pentesting y Bug Bounty)
+Ingenieria/             (fundamentos y conocimientos relacionados con la ingeniería de software, bases de datos, criptografía, Inteligencia Artificial, etc. · Level 0: Ingenieria.base)
+🔴⚔️ Red Team/         (todo el contenido ofensivo: Hacking web + Pentesting/CPTS + Active Directory + AI Hacking + Evasión de defensas + Desarrollo ofensivo + Wi-Fi · Level 0: Red-Team.base)
+🔵🛡️ Blue Team/        (defensivo: SOC analyst, analisis de malware y redes, IA aplicada a la defensa, etc. · Level 0: Blue-Team.base)
+Redes/                  (fundamentos de redes, utilidades, protocolos, etc. Interesante para Pentesting y Bug Bounty · Level 0: Redes.base)
 ```
 
 El contenido se integra por **tema/área** (no por módulo HTB). Todo lo web va dentro de `🔴⚔️ Red Team/Hacking web/`; el pentest generalista (CPTS) en `🔴⚔️ Red Team/Pentesting/`. Las carpetas temáticas existentes son la base; se crean carpetas nuevas sólo cuando un tema todavía no existe.
 
-*Nota (migración en curso)*: las **áreas principales de conocimiento ya viven en la raíz** (`🔴⚔️ Red Team/`, `🔵🛡️ Blue Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/`, `03 - Archivos`). Las carpetas PARA numeradas restantes (`01 - Proyectos`, `04 - PENDIENTES`) se irán eliminando; la única que se mantiene con su nombre es Recursos y Archivos. **Ojo**: la carpeta de ingeniería en disco es `Ingenieria/` (sin tilde), aunque en prosa se escriba "Ingeniería".
+*Nota (migración en curso)*: las **áreas principales de conocimiento ya viven en la raíz** (`🔴⚔️ Red Team/`, `🔵🛡️ Blue Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/`, `03 - Archivos`). **`01 - Proyectos/` ya no existe** (ADR 010): su único contenido, el curso de Go ofensivo, es ahora el área `🔴⚔️ Red Team/Desarrollo ofensivo/`. Queda `04 - PENDIENTES` por vaciar. **Ojo**: la carpeta de ingeniería en disco es `Ingenieria/` (sin tilde), aunque en prosa se escriba "Ingeniería".
 
 ## Mapeo módulos HTB → carpetas del PKM
 
@@ -119,7 +121,7 @@ Las certis/áreas futuras (no solo web) siguen esta receta — evita re-improvis
 | 17  | Attacking GraphQL                   | `Hacking web/16 - GraphQL/` (notas 00-07)                                                                                 | Completado                |
 | 18  | API Attacks                         | `Hacking web/17 - API Attacks/` (OWASP API Top 10 2023 · notas 00-12)                                                     | Completado                |
 | 19  | Attacking Common Applications       | `Hacking web/19 - Common Applications/` — **subcarpeta por app** (~36 notas; **WordPress ampliado a 8 con el módulo 17**) | Completado ✅ (2026-07-16) |
-| 20  | Bug Bounty Hunting Process          | `Hacking web/30 - Bug Bounty/` (notas 00-04 · 5 notas)                                                                    | Completado ✅ (2026-07-17) |
+| 20  | Bug Bounty Hunting Process          | `Hacking web/30 - Bug Bounty/` (notas 00-06 · 7 notas; +metodología de caza y mindset/chaining del libro *Real-World Bug Hunting* → ADR 007)                                                                    | Completado ✅ (2026-07-17) |
 
 ### Path CWEE (Senior Web Penetration Tester)
 
@@ -183,6 +185,41 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 27 | Documentation & Reporting | `Pentesting/010 - Documentación y reporting/` (9 notas 00-08 + `.base`; Notetaking y Components divididas en 2; arsenal net-new modernizado [SysReptor, Ghostwriter, PlexTrac]; sin nota de detección/evasión [N/A en reporting]; tag `Reporting`) | ✅ Completado (2026-07-23) |
 | 28 | Attacking Enterprise Networks | `Pentesting/011 - Ataque a redes empresariales/` *(capstone · tentativo)* | Pendiente |
 
+### Path COAE (AI Red Teamer)
+
+Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **12 módulos**. Certificación **HTB COAE** (*Certified Offensive AI Expert*), examen práctico de 7 días.
+
+**Ubicación del contenido — el path se reparte en tres áreas** (decisión estructural del 2026-07-28, ver ADR 008):
+
+- **Fundamentos de IA/ML** ("cómo funciona") → `Ingenieria/Inteligencia Artificial/`, siguiendo la regla *fundamentos ≠ ofensiva* y el precedente Footprinting↔`Redes/Protocolos` y SQLi↔`Ingenieria/Bases de Datos`.
+- **Aplicaciones defensivas** (detectores ML: spam, anomalías de red, malware) → `🔵🛡️ Blue Team/005 - IA aplicada a la defensa/`.
+- **Contenido ofensivo** → `🔴⚔️ Red Team/AI Hacking/`, en carpetas numeradas por módulo del path (`00 - Fundamentos de Red Teaming AI`, `01 - Prompt Injection`, …). Los números de módulos no extraídos son **tentativos**.
+- **Herramientas** → `02 - Recursos/🛠️ Tools/` con su `.base` Level 2, como cualquier herramienta. Creadas (2026-07-28): **`Garak`** (4 notas), **`PyRIT`** (4), **`Fickling`** (2), **`ModelScan`** (2), **`Picklescan`** (1). Pendiente: `promptfoo` — **en espera deliberada** hasta que se cierre la adquisición por OpenAI (anunciada marzo 2026). `ART`, `TextAttack` y el resto siguen en la nota de arsenal del módulo 3.
+
+| #  | ID  | Módulo HTB | Carpeta destino | Estado |
+| -- | --- | ---------- | --------------- | ------ |
+| 1  | 290 | Fundamentals of AI | `Ingenieria/Inteligencia Artificial/{00 - Fundamentos de Machine Learning,01 - Deep Learning e IA generativa}/` (23 notas; **`Transformers y el mecanismo de atención` net-new** — HTB no lo cubre y es la base de todo el path) | ✅ Completado (2026-07-28) |
+| 2  | 292 | Applications of AI in InfoSec | **Partido**: pipeline → `Ingenieria/Inteligencia Artificial/02 - Entorno y pipeline de ML/` (6 notas); detectores → `🔵🛡️ Blue Team/005 - IA aplicada a la defensa/` (9 notas, incl. `Límites y evasión de los detectores ML` net-new) | ✅ Completado (2026-07-28) |
+| 3  | 294 | Introduction to Red Teaming AI | `🔴⚔️ Red Team/AI Hacking/00 - Fundamentos de Red Teaming AI/` (14 notas 00-13 + `Red Teaming AI.base`; net-new: `MITRE ATLAS y NIST AI RMF`, `Superficie de ataque por familia de modelos`, `Detección y evasión`, `Arsenal`) | ✅ Completado (2026-07-28) |
+| 4  | 297 | Prompt Injection Attacks | `AI Hacking/01 - Prompt Injection/` (16 notas 00-15 + `Prompt Injection.base`; **`garak` extraído a `02 - Recursos/🛠️ Tools/Garak/`** [4 notas + `Garak.base`]; net-new: `EchoLeak y la exfiltración zero-click`, `ASCII smuggling y payloads invisibles`, `Jailbreaks multi-turno y de contexto`, `Detección y evasión`) | ✅ Completado (2026-07-28) |
+| 5  | 307 | LLM Output Attacks | `AI Hacking/02 - LLM Output Attacks/` (17 notas 00-16 + `.base`; net-new: `Slopsquatting y alucinación de paquetes`, `Detección y evasión`, `Arsenal`; regulación actualizada al **Digital Omnibus on AI** de julio 2026) | ✅ Completado (2026-07-28) |
+| 6  | 302 | AI Data Attacks | `AI Hacking/03 - Ataques a los datos/` (16 notas 00-15 + `.base`; label flipping · clean label · trojan/backdoor CNN · pickle y esteganografía en tensores; net-new: `Detección y evasión`, `Arsenal`; **errata OWASP de HTB corregida**) | ✅ Completado (2026-07-28) |
+| 7  | 315 | Attacking AI - Application and System | `AI Hacking/04 - Aplicación y sistema/` *(tentativo)* | Pendiente |
+| 8  | 318 | AI Evasion - Foundations | `AI Hacking/05 - Evasión de modelos/` *(tentativo)* | Pendiente |
+| 9  | 319 | AI Evasion - First-Order Attacks | `AI Hacking/05 - Evasión de modelos/` *(tentativo)* | Pendiente |
+| 10 | 320 | AI Evasion - Sparsity Attacks | `AI Hacking/05 - Evasión de modelos/` *(tentativo)* | Pendiente |
+| 11 | 335 | AI Privacy | `AI Hacking/06 - Privacidad en IA/` *(tentativo)* | Pendiente |
+| 12 | 322 | AI Defense | `🔵🛡️ Blue Team/` *(a decidir: es defensivo)* | Pendiente |
+
+#### COAE — notas operativas
+
+- **Nombres de fichero sin `:`** — Windows lo rechaza. Ya costó un renombrado (`01 - Clasificación de spam: teoría y dataset` → `...con Naive Bayes`).
+- **HTB tiene erratas en este path**: el módulo 292 escribe `'loadmdoule'` por `loadmodule` (etiqueta ataques de escalada como tráfico normal), entrena sin conjunto de test en el clasificador de spam, promedia métricas con `average='weighted'` sobre clases muy desbalanceadas, y llama "detección de anomalías" a una clasificación supervisada. **Todo corregido y señalado en las notas** — asumir que hay más y verificar el código antes de reproducirlo.
+- **Marcos de referencia** verificados a 2026-07-28: OWASP ML Top 10 sigue en **v0.3 draft/Incubator** (citarlo como borrador); OWASP LLM Top 10 **edición 2025** es la vigente; existe además **OWASP Top 10 for Agentic Applications 2026** (dic. 2025) que HTB no cubre; NIST **AI 100-2e2025** es la taxonomía técnica de referencia.
+- **Erratas de HTB detectadas en los módulos 297/307/302** (además de las del 292): el **módulo 302 mapea los ataques a `OWASP LLM03: Training Data Poisoning` y `LLM05: Supply Chain`**, que es la numeración de la **edición 2023**; en la edición 2025 vigente corresponden a **`LLM04:2025` (Data and Model Poisoning)** y **`LLM03:2025` (Supply Chain)**. Corregido y señalado en `01 - Taxonomía de los ataques a los datos`. El módulo 307 titula *Code Injection* lo que es *command injection* (`CWE-78`, no `CWE-94`).
+- **Este path está especialmente desfasado.** El módulo 297 es de **octubre de 2024** y falla en: repo de `garak` (`leondz/garak` → **`NVIDIA/garak`**, v0.14 feb-2026) y su CLI (`--model_type`→`--target_type`, `--probes` deprecado → **`--spec`**); jailbreaks (le faltan Crescendo, Deceptive Delight, Bad Likert Judge, Echo Chamber, many-shot, Policy Puppetry, CCA, Best-of-N); inyección indirecta (le falta **EchoLeak/CVE-2025-32711** y familia); defensas (le faltan CaMeL, StruQ, SecAlign, spotlighting, jerarquía de instrucciones). **Asumir el mismo nivel de desfase en el resto de módulos del path** y contrastar todo contra fuente primaria.
+- **Truco de extracción validado (2026-07-28)**: el `javascript_tool` trunca a ~1000 chars, pero inyectando el `.content` en el DOM (`document.getElementById('d').textContent = esc(contenido)` dentro de un `<article><pre>`) y leyéndolo después con **`get_page_text`** se sacan **~30.000 caracteres limpios por llamada**. Combinado con los homoglifos fullwidth (`＝ ＆ ； ？ ꞉`) para esquivar el filtro, permite extraer un módulo entero en 4-5 llamadas.
+
 #### CPTS — estándares de calidad extra
 
 Todos los módulos CPTS net-new siguen los **3 ejes del vault** (detección · evasión · arsenal + fuentes + gráficos) — son especialmente críticos aquí porque los módulos de red/infra de HTB llevan años sin actualizarse. Ver la sección **"Estándares de calidad — los 3 ejes"** al principio del documento.
@@ -196,6 +233,7 @@ Extraídos por complementar módulos ya hechos con técnicas/herramientas/escena
 | 17 · Hacking WordPress | **Fusionado** en `Common Applications/WordPress/` (2→8 notas granulares: estructura/roles, enumeración, login/brute, plugins, RCE admin, detección/evasión, arsenal, hardening) | Completado ✅ (2026-07-17) |
 | 160 · Web Service & API Attacks | `Hacking web/18 - Web Services/` (SOAP/WSDL/SOAPAction/Command Injection/xmlrpc · 7 notas) + `Hacking web/29 - ReDoS/` (net-new · 2 notas). Su grupo "API Attacks" (vulns clásicas vía endpoint API) se **distribuyó como enriquecimientos** a las carpetas canónicas (SQLi, File Upload, File Inclusion, XSS, SSRF, Web Attacks/XXE) | Completado ✅ (2026-07-17) |
 | Prototype Pollution (server-side) | `Hacking web/27 - Prototype Pollution/` (4 notas 00-03: intro, server-side, gadgets/RCE server-side, detección/prevención). Complementa el client-side de `04 - XSS/Avanzado/09 - Prototype Pollution hacia XSS` | Completado ✅ |
+| *Real-World Bug Hunting* (libro · Yaworski 2019) | **Net-new**: `31 - Open Redirect`, `32 - HTTP Parameter Pollution`, `33 - Subdomain Takeover`, `34 - Race Conditions` (+ `04 - XSS/Avanzado/11 - HTML Injection, Content Spoofing y Dangling Markup`). **Proceso**: metodología de caza + mindset/chaining en `30 - Bug Bounty/`. **Casos** del libro embebidos en las notas de técnica (SSTI, SQLi, SSRF, XXE, RCE, IDOR, CSRF, OAuth). Modernizado 2025-2026 · ADR 007 | Completado ✅ (2026-07-27) |
 
 Antes de crear una carpeta nueva, **siempre verificar** con `ls` o `Glob` que no existe ya bajo otro nombre — el vault tiene cierta inconsistencia histórica (carpetas con emoji vs sin emoji).
 
@@ -213,6 +251,8 @@ tags:
   - <tag-área>                 # p. ej. Web/Red-Team, Pentesting, Active-Directory, Linux
   - <tag-fase>                 # fase del pentest: Pentesting/Enumeracion, /Explotacion, /Post-Explotacion
   - <tag-tema>                 # p. ej. XSS, SQLi, Fuzzing, Pivoting
+  - <tag-tipo>                 # SOLO si no es una nota de técnica: Tipo/Introduccion, /Deteccion, /Defensa, /Arsenal
+Descripción: "Qué resuelve la nota, en una frase sin punto final"
 Fecha de actualización: 2026-05-11
 Nota previa: "[[Nombre nota anterior]]"
 Nota siguiente: "[[Nombre nota siguiente]]"
@@ -221,10 +261,23 @@ Area: "[[XSS.base|XSS]]"       # ← .base Level 2 del sub-tema, NO Level 1
 ---
 ```
 
+- `Descripción`: **una frase** (≤180 caracteres, sin punto final) que diga qué resuelve la nota. Es la columna que hace legibles los índices `.base` — sin ella, el nombre del fichero es lo único que distingue una nota de otra. Entre comillas dobles; comillas internas en simple. Obligatoria en notas nuevas.
 - `Fecha de actualización`: siempre `YYYY-MM-DD` (ISO 8601), fecha real del día.
 - `Nota previa` / `Nota siguiente`: alias entre comillas (`"[[ ]]"`); forman la cadena Zettelkasten. La cabecera del tema tiene `prev` vacío; la cola, `next` vacío. Mantenimiento de la cadena → skill `zettelkasten-linking`.
 - `Area`: enlace al `.base` **Level 2** del sub-tema, **nunca** al Level 1 (ver "Vista `.base`" más abajo). Notas legacy apuntando a Level 1 = deuda a migrar.
-- `tags`: área + fase + tema. **Reusar** tags existentes antes de inventar (`grep` / `obsidian tags`). El primer tag **no es siempre** `Web/Red-Team` — depende del área de la nota (una nota de red/AD/privesc no es web).
+- `tags`: área + fase + tema. **Reusar** tags existentes antes de inventar (`grep` / `obsidian tags`). El primer tag **no es siempre** `Web/Red-Team` — depende del área de la nota (una nota de red/AD/privesc no es web). Convenciones de forma (ADR 009):
+  - **kebab-case con mayúsculas iniciales**: `Bases-de-Datos`, `Active-Directory`, `Command-Injection`. **Nunca espacios** — `#Bases de Datos` se parte como tag inline.
+  - **Gana siempre la variante jerárquica**: `Pentesting/Enumeracion` (no `Enumeracion`), `Escaneo/Redes` (no `Escaneo`), `Análisis/Datos` (no `Análisis`). Obsidian ya indexa el padre al filtrar por él.
+  - **No poner padre e hijo a la vez** (`Reporting` + `Pentesting/Reporting`) — es redundante. Excepción: la nota *paraguas* de una familia sí lleva solo el padre (`Server-Side` en la intro de los ataques server-side).
+  - ⚠️ Al consolidar tags con scripts de PowerShell, `-eq`/`-ne`/`-notcontains` son **case-insensitive**: usar `-ceq`/`-cne` o los cambios de solo-mayúsculas pasan desapercibidos.
+- **Eje `Tipo/`** (ADR 010): eje ortogonal al área/fase/tema que marca **qué clase de nota es**. Solo se etiqueta la **excepción**, nunca la norma:
+  - `Tipo/Introduccion` — puerta de entrada a un sub-tema (`00 - …`, `Qué es X`, `Fundamentos de X`).
+  - `Tipo/Deteccion` — nota de detección y evasión (eje 2 del vault).
+  - `Tipo/Defensa` — prevención, mitigación, hardening.
+  - `Tipo/Arsenal` — set de herramientas del tema (eje 3 del vault).
+  - **Las notas de técnica/payload no llevan `Tipo/`** — son ~75% del vault y etiquetarlas crearía otro tag inútil.
+  
+  Este eje es lo que alimenta las vistas transversales de `Red-Team.base` (Detección y evasión · Arsenal · Defensa · Puertas de entrada). Antes dependían de `file.name.contains(...)`, que se rompía al renombrar una nota.
 
 ### Marcas con colores (glosario semántico)
 
@@ -275,19 +328,51 @@ Detalle completo en la skill `pkm-note-format`. Recordatorios siempre-on:
 
 `02 - Recursos/Biblioteca/` cataloga los libros de seguridad que Samuel ya tiene en PDF (`PDF/`, notas en `Book-notes/`, MOC `Librería.base`). **No se usa el plugin Book Search** (Google Books API): sus 503 persistentes son un fallo real e intermitente del backend de Google (`reason: backendFailed`, confirmado contra la API directamente), no arreglable con API key propia — ver ADR `005 - Catálogo de la Biblioteca personal`. En su lugar, los metadatos se extraen del propio PDF (portada + copyright) y se verifican por contraste contra Open Library (gratis, sin key); si no hay portada real ahí, se extrae directamente de la página de portada del PDF con `PyMuPDF`. Estas notas van **sin cadena Zettelkasten** (como las ADR) — son fichas de catálogo, no notas de concepto.
 
-## Vista `.base` (MOCs de Obsidian) — jerarquía de 2 niveles
+## Vista `.base` (MOCs de Obsidian) — jerarquía de 3 niveles
 
-Las MOC del vault usan el formato nativo de Obsidian Bases (`.base`) y se organizan en **dos niveles**:
+Las MOC del vault usan el formato nativo de Obsidian Bases (`.base`) y se organizan en **tres niveles** (ver ADR 009). Solo el Level 2 recibe el `Area` de las notas; los Level 0/1 indexan **otros `.base`**, nunca notas.
 
-### Level 1 — Índice de tema grande
+| Nivel | Ubicación | Indexa | Ejemplo |
+| - | - | - | - |
+| **Level 0** — panel de área raíz | raíz de un área de la raíz del vault | los Level 1 de esa área + vistas transversales | `🔴⚔️ Red Team/Red-Team.base` |
+| **Level 1** — índice de tema grande | raíz de una carpeta temática mayor | los Level 2 hijos | `Hacking web/Web Pentesting.base` |
+| **Level 2** — índice de sub-tema | sub-carpeta del sub-tema | las notas atómicas, vía `Area` | `04 - XSS/XSS.base` |
 
-- **Ubicación**: raíz de una carpeta temática mayor (ej. `🔴⚔️ Red Team/Hacking web/Web Pentesting.base`).
-- **Función**: índice de los `.base` **Level 2 hijos**, no de notas individuales. Equivalente a una tabla de contenidos del tema mayor — lista sub-temas (XSS, SQL Injection, Fuzzing, ...) cada uno representado por su Level 2.
-- Las notas **no apuntan aquí** con `Area`.
+Level 0 existentes: `Red-Team.base`, `Blue-Team.base`, `Redes.base`, `Ingenieria.base`, `02 - Recursos/🛠️ Tools/Tools.base`.
 
-Filtro estándar Level 1 (lista los `.base` Level 2 bajo la carpeta del tema):
+### Level 2 — plantilla canónica
+
+Filtro `Area == link("<este .base>.base", "<alias>")`: desacopla el listado de la ubicación física de la nota, robusto ante reorganizaciones. **Tres columnas fijas** — nombre, tags y fecha (la fecha convierte el índice en panel de mantenimiento):
 
 ```yaml
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("XSS.base", "XSS")
+    order:
+      - file.name
+      - file.tags
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 380
+      file.tags: 300
+      note.Fecha de actualización: 150
+```
+
+Vistas extra por tag o sub-carpeta solo si aportan (`Reconocimiento Web.base` filtra por `Recon`/`Fuzzing`; `Common Applications.base` agrupa por aplicación).
+
+### Level 1 — plantilla canónica
+
+```yaml
+formulas:
+  sub-tema: 'file.name.replace(".base", "")'   # el nombre sin la extensión
+properties:
+  formula.sub-tema:
+    displayName: Sub-tema
 views:
   - type: table
     name: Sub-temas
@@ -295,40 +380,33 @@ views:
       and:
         - file.ext == "base"
         - file.folder.startsWith("🔴⚔️ Red Team/Hacking web")
-        - file.name != "Web Pentesting"   # excluir el propio Level 1
+        - file.name != "Web Pentesting.base"   # ⚠️ CON extensión, ver gotcha
     sort:
-      - property: file.name
+      - property: file.folder
         direction: ASC
 ```
 
-### Level 2 — Índice de sub-tema concreto
+Cuando un tema supera ~15 sub-temas, añadir una vista con `groupBy` sobre una **fórmula de familia** derivada de la carpeta, en lugar de reorganizar carpetas (`Web Pentesting.base` agrupa 39 sub-temas en 9 familias; `Pentesting.base` por fase del pentest). La certificación (CWES/CWEE/CPTS/COAE) se representa **solo así, como vista** — nunca como propiedad ni tag de la nota (ADR 009).
 
-- **Ubicación**: dentro de la sub-carpeta del sub-tema (ej. `🔴⚔️ Red Team/Hacking web/04 - XSS/XSS.base`).
-- **Función**: índice de las notas atómicas del sub-tema. A este `.base` apuntan las notas vía su propiedad `Area`.
-- **Filtro estándar**: `Area == link("<este .base>.base", "<alias>")`. Desacopla el listado de la ubicación física de la nota — robusto ante reorganizaciones.
+### Gotchas verificados contra Obsidian (2026-07-29)
 
-Ejemplo (XSS.base):
-
-```yaml
-views:
-  - type: table
-    name: Notas del sub-tema
-    filters:
-      Area == link("XSS.base", "XSS")
-    order:
-      - file.name
-      - file.tags
-    sort:
-      - property: file.name
-        direction: ASC
-```
+- **`file.name` de un `.base` incluye la extensión.** `file.name != "Web Pentesting"` **no excluye nada** — hay que escribir `!= "Web Pentesting.base"`. Los 8 Level 1 se autolistaban por esto.
+- **`base:query` del CLI no indexa ficheros `.base`**, solo `.md`: cualquier vista Level 0/1 devuelve `[]` por CLI aunque funcione en la app. **Validar Level 0/1 con `dev:screenshot`**, Level 2 con `base:query`.
+- **Tras editar ficheros fuera de Obsidian hay que ejecutar `obsidian command id="app:reload"`** (+ ~20 s) antes de validar: el caché de metadatos devuelve conteos obsoletos.
+- **Abrir un `.base` en la app puede reescribirlo** (normaliza `columnSize`, reordena `groupBy`). No editarlo por fuera mientras está abierto.
+- En fórmulas, la propiedad de la nota es `note["Fecha de actualización"]` (**no** `this[...]`). Antigüedad: `(now() - note["Fecha de actualización"]).days.round(0)`; guardar con `if(file.hasProperty(...), ..., "")`.
+- En `columnSize`, una propiedad de nota se referencia como `note.Fecha de actualización`; en `order`, como `Fecha de actualización` a secas.
+- `contains()` / `containsAny()` son **case-insensitive**.
+- Para listar `.base` a una profundidad exacta (Level 0 → Level 1 sin lista hardcoded): `'/^🔴⚔️ Red Team\/[^\/]+$/.matches(file.folder)'`.
 
 ### Reglas operativas
 
 - Cuando una nota nueva entra en un sub-tema, su `Area` apunta al **Level 2** del sub-tema. Si el Level 2 no existe todavía, **crearlo primero** (en Fase 0 del módulo HTB que se vaya a extraer, o como acción previa a la nota suelta).
-- **No crear `.base` Level 2 prematuros** (vacíos, sin notas inminentes). Crearlos justo antes de necesitarlos.
-- Cuando aparece un Level 2 nuevo bajo una carpeta de tema grande, verificar que el filtro del Level 1 lo recoge (puede requerir actualizar la cláusula `file.folder.startsWith(...)`).
-- Notas legacy con `Area` apuntando al Level 1 (p. ej. `Web Pentesting.base`) son **deuda a migrar**. Al crear el Level 2 correspondiente, migrar `Area` de **todas** las notas del sub-tema en lote (`obsidian property:set` o `Edit` directo del frontmatter).
+- **No crear `.base` Level 2 prematuros** (vacíos, sin notas inminentes). Crearlos justo antes de necesitarlos. *(Deuda actual: 6 Level 2 huérfanos en `Evasión de defensas/03..08`.)*
+- Un sub-tema que crece se parte en **Level 2 hermanos**, no en un Level 1 intermedio — patrón `XSS.base` + `XSS Avanzado.base`, `SQL Injection.base` + `SQLi Blind.base` + `SQLi Avanzado.base`.
+- Si las sub-divisiones son muchas y pequeñas (1-2 notas), **no crear un Level 2 por cada una**: una sola vista con `groupBy: file.folder` (patrón `Common Applications.base`, 36 notas en 13 aplicaciones).
+- Al añadir un área nueva bajo `🔴⚔️ Red Team/` (o Blue Team, Redes, Ingeniería) **no hay que tocar el Level 0**: el filtro por regex de profundidad la recoge sola.
+- Las **herramientas** siempre a `02 - Recursos/🛠️ Tools/` con su Level 2 propio, indexadas por `Tools.base`.
 
 ## Decisiones estructurales (ADR)
 

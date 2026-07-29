@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - File-Inclusion
+Descripción: "En aplicaciones PHP, una LFI se potencia muchísimo con los PHP wrappers: esquemas como php:// que dan acceso a streams de I/O. El wrapper php://filter aplica filtros a un…"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[02 - Bypasses básicos - traversal, null byte y encoding]]"
 Nota siguiente: "[[04 - PHP wrappers II - RCE y filter chains]]"

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - LDAP
   - Pentesting/Enumeracion
+  - Tipo/Deteccion
+Descripción: "Como en XPath, HTB salta directo a explotar"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Introducción a LDAP Injection]]"
 Nota siguiente: "[[02 - Bypass de autenticación con LDAP]]"

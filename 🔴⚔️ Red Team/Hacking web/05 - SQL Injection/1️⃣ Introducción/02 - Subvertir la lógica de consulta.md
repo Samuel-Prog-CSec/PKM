@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "El primer uso práctico de una SQL injection no es ejecutar consultas completas, sino alterar la lógica de la consulta existente para que devuelva lo que nos interesa"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[01 - Detección de SQL Injection]]"
 Nota siguiente: "[[03 - Uso de comentarios]]"

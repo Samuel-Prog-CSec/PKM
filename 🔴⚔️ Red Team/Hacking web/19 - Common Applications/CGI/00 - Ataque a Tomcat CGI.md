@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - CGI
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "El CGI Servlet de Tomcat permite ejecutar scripts externos (Perl, Python, Bash, .bat)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a GitLab]]"
 Nota siguiente: "[[01 - Shellshock]]"

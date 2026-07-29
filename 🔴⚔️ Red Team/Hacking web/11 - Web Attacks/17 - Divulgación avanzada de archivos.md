@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XXE
+Descripción: "Cuando el método básico falla —el fichero tiene caracteres que rompen el XML, o la app no refleja ninguna entidad— recurrimos a dos técnicas: exfiltración con CDATA (para…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[16 - XXE a RCE, SSRF y DoS]]"
 Nota siguiente: "[[18 - Exfiltración de datos ciega (OOB)]]"

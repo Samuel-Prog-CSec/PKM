@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+  - Tipo/Defensa
+Descripción: "Entender la prevención no es material defensivo 'de relleno' para un pentester: conocer la defensa correcta es saber exactamente dónde busca su grieta"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[08 - Herramientas de evasión y ofuscación]]"
 Nota siguiente: "[[10 - Arsenal de herramientas para Command Injection]]"

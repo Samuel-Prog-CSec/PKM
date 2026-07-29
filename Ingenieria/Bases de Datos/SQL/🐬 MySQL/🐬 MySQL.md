@@ -1,7 +1,8 @@
 ---
 tags:
-  - Bases de Datos
+  - Bases-de-Datos
   - SQL
+Descripción: "MySQL y su fork MariaDB son los RDBMS de referencia para aprender SQL injection: son los más desplegados en la web (todo el stack LAMP/LEMP, WordPress, etc.) y su dialecto es el…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[Introducción a las bases de datos]]"
 Nota siguiente: "[[💬 Sentencias SQL]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Brute-Forcing
+Descripción: "La taxonomía conceptual se traduce en tres técnicas que de verdad usas contra un login: diccionario (el caballo de batalla), híbrido (diccionario mutado) y máscara (brute force…"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[00 - Introducción al brute forcing]]"
 Nota siguiente: "[[02 - Hydra]]"

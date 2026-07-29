@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Explotacion
   - Metasploit
+Descripción: "Plugins y mixins suenan parecido pero son cosas distintas y para públicos distintos: los plugins extienden la consola para el usuario; los mixins reutilizan código para el…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[06 - Bases de datos y workspaces]]"
 Nota siguiente: "[[08 - Sesiones y Jobs]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El recon manual funciona, pero es lento y propenso a errores"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[13 - Web Archives]]"
 Nota siguiente: "[[15 - Introducción al web fuzzing]]"

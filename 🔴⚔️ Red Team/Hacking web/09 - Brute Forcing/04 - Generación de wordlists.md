@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Brute-Forcing
+Descripción: "Una wordlist genérica como rockyou lanza una red ancha y reza"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[03 - Medusa y alternativas modernas]]"
 Nota siguiente: "[[05 - Defensas y evasión]]"

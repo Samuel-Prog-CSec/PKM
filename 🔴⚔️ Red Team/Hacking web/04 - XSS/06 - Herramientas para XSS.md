@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - XSS
+Descripción: "Buscar XSS a mano en un programa con miles de endpoints no escala"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[05 - Evasión y ofuscación de XSS]]"
 Nota siguiente: "[[07 - Defacing]]"

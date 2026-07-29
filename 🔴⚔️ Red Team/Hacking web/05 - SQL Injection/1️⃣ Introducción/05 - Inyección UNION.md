@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Con la mecánica de UNION clara, la inyección práctica sigue tres pasos: averiguar cuántas columnas devuelve la consulta, identificar cuáles son visibles en la respuesta, y…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[04 - La cláusula UNION]]"
 Nota siguiente: "[[06 - Enumeración de la base de datos]]"

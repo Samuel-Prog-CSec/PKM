@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "El Stored XSS (o Persistent XSS) ocurre cuando el payload inyectado se guarda en la base de datos del back-end y se recupera al visitar la página"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[00 - Introducción a XSS]]"
 Nota siguiente: "[[02 - XSS Reflejado]]"

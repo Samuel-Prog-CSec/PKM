@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "Una lista blanca invierte la lógica de la blacklist: solo permite las extensiones que enumera y deniega todo lo demás"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[03 - Bypass de blacklist de extensiones]]"
 Nota siguiente: "[[05 - Validación de tipo - Content-Type y magic bytes]]"

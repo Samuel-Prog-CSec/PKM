@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - CRUD
   - HTTP
+Descripción: "CRUD es el acrónimo de Create, Read, Update, Delete: las cuatro maneras básicas de operar sobre información almacenada"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[La pila MERN]]"
 Nota siguiente: "[[La especificación JavaScript]]"

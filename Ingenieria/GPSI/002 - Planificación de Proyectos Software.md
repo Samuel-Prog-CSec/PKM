@@ -3,6 +3,7 @@ tags:
   - GPSI
   - Gestion-Proyectos
   - PMBOK
+Descripción: "Proyecto y operación se parecen (ambos los realizan personas, con recursos limitados, y se planifican, ejecutan y controlan), pero el proyecto es temporal y único"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[001 - Planificación Estratégica de SI]]"
 Nota siguiente: "[[003 - SCRUM]]"

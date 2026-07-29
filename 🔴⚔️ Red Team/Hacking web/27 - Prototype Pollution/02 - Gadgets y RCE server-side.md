@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Server-Side/Prototype-Pollution
   - Pentesting/Explotacion
+Descripción: "Contaminar Object.prototype es medio camino"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[01 - Prototype Pollution server-side]]"
 Nota siguiente: "[[03 - Detección, herramientas y prevención]]"

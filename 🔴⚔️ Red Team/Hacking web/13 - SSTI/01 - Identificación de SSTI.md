@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Server-Side/SSTI
+Descripción: "Antes de explotar hay que hacer dos cosas: confirmar que hay SSTI y averiguar qué motor se usa"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00 - Motores de plantillas e introducción a SSTI]]"
 Nota siguiente: "[[02 - Explotación de SSTI - Jinja2]]"

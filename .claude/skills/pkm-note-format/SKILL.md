@@ -14,6 +14,8 @@ Aplicar **siempre** que se cree o modifique una nota `.md` dentro del vault `C:\
 tags:
   - <tag-primario>
   - <tag-fase-pentesting>
+  - <Tipo/…>                     # solo si NO es una nota de técnica
+Descripción: "<una frase, ≤180 caracteres, sin punto final>"
 Fecha de actualización: YYYY-MM-DD
 Nota previa: "[[<nota anterior o vacío>]]"
 Nota siguiente: "[[<nota siguiente o vacío>]]"
@@ -36,10 +38,16 @@ Las dos líneas `---` consecutivas tras el frontmatter son intencionales:
   - Categoría: `Web/Red-Team`, `Pentesting`, `Linux`.
   - Fase del pentest: `Pentesting/Enumeracion`, `Pentesting/Explotacion`, `Pentesting/Post-Explotacion`, `Pentesting/Reporting`.
   - Tema específico: `XSS`, `SQLi`, `Fuzzing`, `Introduccion`.
+- **`Descripción`**: **obligatoria**. Una frase de ≤180 caracteres, **sin punto final**, que diga qué resuelve la nota — es la columna que hace legibles los 124 índices `.base`; sin ella el nombre del fichero es lo único que distingue una nota de otra. Entre comillas dobles, con las comillas internas en simple. No repetir el título: si la nota se llama `03 - XSS basado en DOM`, la descripción dice *qué es* y *cuándo importa*, no "nota sobre XSS basado en DOM".
+- **`tags` de tipo (`Tipo/…`)**: eje ortogonal que marca la **clase** de nota. Solo cuatro valores y **solo para la excepción**: `Tipo/Introduccion` (puerta de entrada del sub-tema), `Tipo/Deteccion` (detección y evasión), `Tipo/Defensa` (prevención/mitigación/hardening), `Tipo/Arsenal` (herramientas del tema). **Una nota de técnica o payload NO lleva `Tipo/`** — es el caso por defecto. Estos tags alimentan las vistas transversales de los Level 0.
 - **`Fecha de actualización`**: formato estricto `YYYY-MM-DD`. Hoy = obtener fecha del sistema.
 - **`Nota previa`**: nombre EXACTO de la nota anterior en la cadena Zettelkasten, entre `"[[ ]]"`. Vacío sin comillas si es la primera del tema.
 - **`Nota siguiente`**: ídem para la siguiente. Vacío si es la última.
-- **`Area`**: enlace al `.base` **Level 2** del sub-tema (no al Level 1). Sintaxis con alias: `"[[XSS.base|XSS]]"`, `"[[SQL Injection.base|SQL Injection]]"`, `"[[Fuzzing.base|Fuzzing]]"`, etc. El Level 1 (`Web Pentesting.base` y similares) agrega Level 2, no notas. Si el `.base` Level 2 del sub-tema **no existe** todavía, crearlo **antes** que la nota. Las notas legacy con `Area` apuntando al Level 1 son deuda a migrar — al crear el Level 2 correspondiente, migrar en lote.
+- **`Area`**: enlace al `.base` **Level 2** del sub-tema. La jerarquía tiene **3 niveles** (Level 0 panel de área → Level 1 índice de tema → Level 2 índice de sub-tema, ver `CLAUDE.md` § "Vista `.base`" y ADR 009) y **solo el Level 2 recibe `Area`**: los Level 0/1 (`Red-Team.base`, `Web Pentesting.base`, `Tools.base`…) agregan otros `.base`, no notas.
+  - **Siempre con alias**: `"[[XSS.base|XSS]]"`, `"[[SQLi Blind.base|SQLi Blind]]"`, `"[[Nmap.base|Nmap]]"`. Sin alias (`"[[X.base]]"`) el filtro del `.base` no casa y la nota desaparece del índice.
+  - **Siempre a un `.base`**, nunca a una nota: `Area: "[[Wireshark]]"` es legacy roto; lo correcto es `"[[Wireshark.base|Wireshark]]"`.
+  - Si el `.base` Level 2 del sub-tema **no existe** todavía, crearlo **antes** que la nota, con la plantilla canónica de `CLAUDE.md` (3 columnas: `file.name`, `file.tags`, `Fecha de actualización`).
+  - Cuando un sub-tema crece demasiado, se parte en **Level 2 hermanos** (`XSS` + `XSS Avanzado`), no en un Level 1 intermedio; y las notas afectadas migran su `Area` en lote.
 
 ## Glosario de colores (marks)
 
@@ -164,6 +172,8 @@ Para comparativas. Cabeceras cortas, ≤8 filas idealmente.
 ## Comprobación final (auto-check antes de marcar tarea completa)
 
 - [ ] Frontmatter completo, fecha `YYYY-MM-DD`, `Area` apunta a un `.base` real.
+- [ ] `Descripción` presente, ≤180 caracteres, sin punto final y sin repetir el título.
+- [ ] `Tipo/…` puesto **solo** si la nota es introducción, detección, defensa o arsenal.
 - [ ] 1000–1500 palabras de teoría (excluyendo callouts/código/enlaces/sintaxis).
 - [ ] 4–8 marks con colores correctamente asignados.
 - [ ] Bloques de código con lenguaje.

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - PDF-Injection
   - Pentesting/Enumeracion
+  - Tipo/Deteccion
+Descripción: "Antes de explotar hay dos preguntas: ¿la aplicación refleja HTML en el PDF? y ¿qué librería y versión lo genera? La segunda decide toda la explotación posterior, porque cada…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Introducción a HTML injection en generadores de PDF]]"
 Nota siguiente: "[[02 - Explotación de la generación de PDF]]"

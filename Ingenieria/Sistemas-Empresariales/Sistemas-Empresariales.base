@@ -1,12 +1,18 @@
 views:
   - type: table
-    name: Temas
+    name: Notas
     filters:
-      and:
-        - Area == link("Sistemas-Empresariales.base", "Sistemas-Empresariales")
+      Area == link("Sistemas-Empresariales.base", "Sistemas-Empresariales")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
+    columnSize:
+      file.name: 330
+      note.Descripción: 520
+      file.tags: 240
+      note.Fecha de actualización: 140

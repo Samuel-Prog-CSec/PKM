@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "Con los permisos adecuados, una SQLi en MSSQL permite leer ficheros arbitrarios del servidor —el equivalente al LOAD_FILE de MySQL—"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[11 - MSSQL robo de hashes NetNTLM]]"
 Nota siguiente: "[[13 - Herramientas para Blind SQLi]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

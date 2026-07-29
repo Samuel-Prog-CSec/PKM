@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSTI
+Descripción: "Los payloads 'de libro' (self.__init__.__globals__...) son verbosos y están llenos de guiones bajos y keywords que cualquier filtro bloquea"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[03 - Explotación de SSTI - Twig]]"
 Nota siguiente: "[[05 - Prevención de SSTI]]"

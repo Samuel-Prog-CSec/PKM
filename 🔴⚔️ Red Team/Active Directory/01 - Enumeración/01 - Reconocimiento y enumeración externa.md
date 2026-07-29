@@ -2,6 +2,7 @@
 tags:
   - Active-Directory
   - Pentesting/Enumeracion
+Descripción: "En una evaluación *assumed breach* el reconocimiento externo no busca el acceso inicial (ya lo damos por hecho), pero sigue aportando: el recon externo mapea la huella pública…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[00 - Introducción a la enumeración y ataques en AD]]"
 Nota siguiente: "[[02 - Enumeración inicial del dominio]]"

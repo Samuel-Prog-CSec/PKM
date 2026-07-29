@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+Descripción: "Dentro de un bosque, comprometer un dominio hijo te entrega el dominio raíz —y con él Enterprise Admins, el control de todo el bosque—"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[20 - Primer de trusts de dominio]]"
 Nota siguiente: "[[22 - Abuso de trust cross-forest]]"

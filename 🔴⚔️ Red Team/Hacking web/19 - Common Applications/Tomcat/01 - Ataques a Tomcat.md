@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Tomcat
   - Pentesting/Explotacion
+Descripción: "El camino clásico: acceder al /manager con credenciales débiles → subir un .war con web shell → RCE. Y si el AJP está expuesto, Ghostcat como alternativa"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de Tomcat]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de Jenkins]]"

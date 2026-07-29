@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Una URL GET suelta es la excepción. En un objetivo real la petición vulnerable lleva cookies de sesión, cabeceras concretas y a menudo un cuerpo POST o JSON. Errores tontos…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[01 - Interpretación de la salida de SQLMap]]"
 Nota siguiente: "[[03 - Tuning del ataque]]"

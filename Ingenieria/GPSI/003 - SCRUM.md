@@ -3,6 +3,7 @@ tags:
   - GPSI
   - Scrum
   - Agil
+Descripción: "Scrum no sigue un plan rígido, sino el control empírico (basado en la experiencia) y la adaptación continua"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[002 - Planificación de Proyectos Software]]"
 Nota siguiente: "[[004 - Estimación del Software]]"

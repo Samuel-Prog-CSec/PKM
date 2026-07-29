@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Explotacion
+Descripción: "El *password spraying* prueba UNA contraseña contra MUCHOS usuarios, al revés que la fuerza bruta (muchas contraseñas contra un usuario)"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[06 - Envenenamiento LLMNR y NBT-NS]]"
 Nota siguiente: "[[08 - Enumerar políticas de contraseñas]]"

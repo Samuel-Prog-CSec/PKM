@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+  - Tipo/Introduccion
+Descripción: "Las API (Application Programming Interfaces) son las reglas y protocolos que dictan cómo se comunican dos sistemas"
 Fecha de actualización: 2026-07-15
 Nota previa: ""
 Nota siguiente: "[[01 - Broken Object Level Authorization (API1)]]"

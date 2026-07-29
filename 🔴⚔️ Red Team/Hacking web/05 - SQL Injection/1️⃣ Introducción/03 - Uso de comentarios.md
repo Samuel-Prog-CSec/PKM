@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Equilibrar comillas manualmente para que la consulta inyectada quede válida es frágil"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[02 - Subvertir la lógica de consulta]]"
 Nota siguiente: "[[04 - La cláusula UNION]]"

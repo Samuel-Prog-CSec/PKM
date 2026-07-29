@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "Casi cualquier app moderna deja subir ficheros (avatar, adjuntos, documentos)"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[05 - Remote File Inclusion (RFI)]]"
 Nota siguiente: "[[07 - Log Poisoning y envenenamiento de sesiones]]"

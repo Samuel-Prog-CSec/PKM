@@ -1,12 +1,18 @@
 views:
   - type: table
-    name: Orden de lectura
+    name: Notas
     filters:
-      and:
-        - Area == link("Laboratorios.base", "Laboratorios")
+      Area == link("Laboratorios.base", "Laboratorios")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
+    columnSize:
+      file.name: 330
+      note.Descripción: 520
+      file.tags: 240
+      note.Fecha de actualización: 140

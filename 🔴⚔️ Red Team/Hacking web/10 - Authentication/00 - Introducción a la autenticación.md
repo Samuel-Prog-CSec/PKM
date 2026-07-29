@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "La autenticación es el proceso de verificar que una entidad es quien dice ser (RFC 4949)"
 Fecha de actualización: 2026-06-23
 Nota previa:
 Nota siguiente: "[[01 - Enumeración de usuarios]]"

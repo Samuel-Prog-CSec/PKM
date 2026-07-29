@@ -3,6 +3,7 @@ tags:
   - Datos
   - Análisis/Datos
   - Ingenieria
+Descripción: "El análisis de datos es la ciencia de examinar conjuntos de datos para obtener conclusiones, identificar tendencias y mejorar la toma de decisiones"
 Fecha de actualización: 2025-12-04
 Nota previa:
 Nota siguiente: "[[006 - Dashboards]]"

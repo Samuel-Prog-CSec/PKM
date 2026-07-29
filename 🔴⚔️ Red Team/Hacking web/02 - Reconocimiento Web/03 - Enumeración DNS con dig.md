@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "Con la teoría del DNS clara, toca interrogarlo"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[02 - DNS - fundamentos]]"
 Nota siguiente: "[[04 - Transferencias de zona DNS]]"

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - XXE
+  - Tipo/Deteccion
+Descripción: "Nota dedicada a encontrar superficie XXE (que hoy está más escondida), evadir los WAF y parsers endurecidos, y prevenir"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[18 - Exfiltración de datos ciega (OOB)]]"
 Nota siguiente: "[[20 - Herramientas para XXE]]"

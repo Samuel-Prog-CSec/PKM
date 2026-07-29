@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - XSS
   - CSP
+Descripción: "Una Content Security Policy (CSP) es una medida de *defense-in-depth* que reduce la explotabilidad de un XSS limitando de dónde puede cargarse y ejecutarse código"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[03 - Pivote a aplicaciones internas]]"
 Nota siguiente: "[[05 - Bypass de CSP]]"

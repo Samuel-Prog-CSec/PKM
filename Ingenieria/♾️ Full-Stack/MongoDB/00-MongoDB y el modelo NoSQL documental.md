@@ -4,6 +4,7 @@ tags:
   - MongoDB
   - NoSQL
   - Bases-de-Datos
+Descripción: "MongoDB es el motor de base de datos de la pila MERN y la pieza sobre la que se asienta el modelo de datos de la aplicación"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[La especificación JavaScript]]"
 Nota siguiente: "[[01-CRUD y filtros en MongoDB]]"

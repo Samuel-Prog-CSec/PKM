@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - LDAP
   - Pentesting/Explotacion
+Descripción: "El uso más directo de la LDAP injection es el bypass de autenticación contra un login que valida credenciales con una operación Bind/Search sobre el directorio"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Detección de LDAP Injection]]"
 Nota siguiente: "[[03 - Exfiltración de datos y explotación ciega]]"

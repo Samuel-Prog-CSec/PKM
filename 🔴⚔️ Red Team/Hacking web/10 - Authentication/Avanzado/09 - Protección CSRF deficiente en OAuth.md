@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - OAuth
+Descripción: "El parámetro state es opcional en OAuth pero crítico: es el token anti-CSRF del flujo"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[08 - Robo de tokens de acceso OAuth]]"
 Nota siguiente: "[[10 - Vulnerabilidades adicionales y prevención OAuth]]"

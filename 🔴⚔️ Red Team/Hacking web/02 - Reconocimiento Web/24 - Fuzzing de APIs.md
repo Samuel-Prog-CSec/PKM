@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "El API fuzzing es fuzzing adaptado a la estructura y los protocolos de las web APIs"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[23 - APIs web e identificación de endpoints]]"
 Nota siguiente: "[[25 - Cloud asset recon]]"

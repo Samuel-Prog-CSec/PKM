@@ -3,6 +3,7 @@ tags:
   - Pentesting/Explotacion
   - Metasploit
   - Payloads
+Descripción: "Un encoder recodifica un payload preservando su funcionalidad, anteponiendo un pequeño *decoder stub* que lo revierte en memoria antes de ejecutarlo"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[04 - Payloads en Metasploit]]"
 Nota siguiente: "[[06 - Bases de datos y workspaces]]"

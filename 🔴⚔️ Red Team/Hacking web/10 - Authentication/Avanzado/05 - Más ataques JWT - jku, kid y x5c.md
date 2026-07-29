@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - JWT
+Descripción: "Más allá de alg, el header de un JWT admite claims que indican qué clave usar para verificar"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[04 - Confusión de algoritmos JWT]]"
 Nota siguiente: "[[06 - Herramientas JWT y prevención]]"

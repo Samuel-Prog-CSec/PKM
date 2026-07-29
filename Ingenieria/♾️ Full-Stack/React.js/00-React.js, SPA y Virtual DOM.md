@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "React.js es la tecnología de cliente (front-end) en MERN: una librería JavaScript creada por Facebook para desarrollar aplicaciones de una sola página (SPA)"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[05-Seguridad de APIs REST (tokens y JWT)]]"
 Nota siguiente: "[[01-JSX]]"

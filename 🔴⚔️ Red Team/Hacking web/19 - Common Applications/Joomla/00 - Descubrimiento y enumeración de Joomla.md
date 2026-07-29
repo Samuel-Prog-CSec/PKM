@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Joomla
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "Joomla es un CMS open-source en PHP + MySQL (~3,5% del mercado CMS, ~2,5M de sitios)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[07 - Hardening de WordPress]]"
 Nota siguiente: "[[01 - Ataques a Joomla]]"

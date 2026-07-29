@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Vulnerabilidad
   - Escaneo/Vulnerabilidades
+Descripción: "Un escaneo solo vale por lo que sacas de él"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[01 - Escaneo y configuración avanzada]]"
 Nota siguiente: "[[03 - Problemas de escaneo]]"

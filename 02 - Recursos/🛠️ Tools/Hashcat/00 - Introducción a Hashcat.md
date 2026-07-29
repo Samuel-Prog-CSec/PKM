@@ -3,6 +3,8 @@ tags:
   - Seguridad/Contraseñas
   - Pentesting/Post-Explotacion
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Hashcat es el *password cracker* más rápido, acelerado por GPU (OpenCL/CUDA)"
 Fecha de actualización: 2026-07-18
 Nota previa: 
 Nota siguiente: "[[01 - Ataques avanzados y optimización con Hashcat]]"

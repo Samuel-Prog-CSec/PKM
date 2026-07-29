@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "A veces el control que estorba no está en la petición sino en la respuesta: el HTML que el servidor manda trae campos deshabilitados, ocultos o con restricciones (maxlength…"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[02 - Interceptación de peticiones]]"
 Nota siguiente: "[[04 - Modificación automática (Match and Replace)]]"

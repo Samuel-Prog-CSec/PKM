@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "BOPLA (Broken Object Property Level Authorization) agrupa dos subclases que atacan las propiedades de un objeto, no el objeto entero"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[02 - Broken Authentication (API2)]]"
 Nota siguiente: "[[04 - Unrestricted Resource Consumption (API4)]]"

@@ -4,6 +4,8 @@ tags:
   - Fuzzing
   - Pentesting/Enumeracion
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "ffuf (*Fuzz Faster U Fool*) es un fuzzer web escrito en Go: rápido, y sobre todo flexible"
 Fecha de actualización: 2026-07-19
 Nota previa: 
 Nota siguiente: "[[01 - Wordlists, keywords y modos de ffuf]]"

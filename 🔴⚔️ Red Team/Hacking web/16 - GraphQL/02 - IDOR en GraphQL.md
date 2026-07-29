@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - GraphQL
   - IDOR
+Descripción: "La autorización rota —el IDOR web, o BOLA en el mundo API— es tan común en GraphQL como en REST. Y GraphQL lo agrava: además de acceder a objetos ajenos, la naturaleza de 'pide…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[01 - Information Disclosure]]"
 Nota siguiente: "[[03 - Injection Attacks]]"

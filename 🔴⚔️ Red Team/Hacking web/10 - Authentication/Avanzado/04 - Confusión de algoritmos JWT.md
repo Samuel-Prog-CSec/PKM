@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - JWT
+Descripción: "El ataque JWT más elegante y de mayor impacto"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[03 - Ataque al secreto de firma JWT]]"
 Nota siguiente: "[[05 - Más ataques JWT - jku, kid y x5c]]"

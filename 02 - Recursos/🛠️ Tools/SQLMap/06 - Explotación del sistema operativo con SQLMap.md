@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Con privilegios suficientes, SQLMap lleva la SQLi más allá de los datos: lee y escribe ficheros del servidor y, en el mejor caso, da una shell del sistema operativo"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[05 - Bypass de protecciones web con SQLMap]]"
 Nota siguiente:

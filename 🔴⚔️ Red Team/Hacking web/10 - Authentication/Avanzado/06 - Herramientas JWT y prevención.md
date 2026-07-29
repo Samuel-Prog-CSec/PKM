@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - JWT
+  - Tipo/Defensa
+Descripción: "Todos los ataques JWT de las notas anteriores se ejecutan a mano, pero en un engagement real se automatizan"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[05 - Más ataques JWT - jku, kid y x5c]]"
 Nota siguiente: "[[07 - Introducción a OAuth 2.0]]"

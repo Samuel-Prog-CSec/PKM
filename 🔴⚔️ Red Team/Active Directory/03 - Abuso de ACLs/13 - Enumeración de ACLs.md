@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "Enumerar ACLs es buscar, entre miles de ACE, los pocos que te dan ventaja"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[12 - Primer de abuso de ACLs]]"
 Nota siguiente: "[[14 - Tácticas de abuso de ACLs]]"

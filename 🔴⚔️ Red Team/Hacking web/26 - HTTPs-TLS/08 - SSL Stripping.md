@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "En lugar de romper TLS, el SSL Stripping (o *HTTP downgrade*) fuerza a la víctima a no usar HTTPS en absoluto y comunicarse por HTTP plano"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[07 - Heartbleed]]"
 Nota siguiente: "[[09 - Primitivas criptográficas inseguras]]"

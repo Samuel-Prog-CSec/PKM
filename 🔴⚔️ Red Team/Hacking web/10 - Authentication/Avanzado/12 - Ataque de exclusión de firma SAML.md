@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - SAML
+Descripción: "El ataque SAML más simple y devastador cuando funciona"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[11 - Introducción a SAML]]"
 Nota siguiente: "[[13 - Ataque de envoltura de firma XML (XSW)]]"

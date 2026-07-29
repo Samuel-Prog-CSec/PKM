@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Python
   - SIE
+Descripción: "Odoo está escrito en Python. No hace falta dominar todo el lenguaje para aprobar el laboratorio: hace falta el subconjunto que aparece al programar módulos"
 Fecha de actualización: 2026-05-31
 Nota previa: ""
 Nota siguiente: "[[02 - Ejercicios Python resueltos]]"

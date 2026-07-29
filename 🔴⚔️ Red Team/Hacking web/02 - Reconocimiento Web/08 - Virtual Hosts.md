@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El DNS lleva el tráfico a la IP correcta; a partir de ahí, es el servidor web quien decide qué contenido servir"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[07 - Certificate Transparency logs]]"
 Nota siguiente: "[[09 - Fingerprinting web]]"

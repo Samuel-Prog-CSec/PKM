@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Vulnerabilidad
   - Escaneo/Vulnerabilidades
+Descripción: "Todo se gestiona desde la pestaña Scans del Greenbone Security Assistant"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[00 - Introducción a OpenVAS]]"
 Nota siguiente:

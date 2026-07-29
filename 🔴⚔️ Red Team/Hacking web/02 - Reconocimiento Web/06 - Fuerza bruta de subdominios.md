@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "La fuerza bruta de subdominios prueba sistemáticamente una lista de nombres candidatos contra el dominio para descubrir cuáles existen"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[05 - Enumeración de subdominios]]"
 Nota siguiente: "[[07 - Certificate Transparency logs]]"

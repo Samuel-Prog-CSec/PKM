@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Command-Injection
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Una command injection es, junto a la deserialización insegura, la vulnerabilidad web de mayor impacto inmediato: permite ejecutar comandos del sistema operativo directamente en…"
 Fecha de actualización: 2026-06-13
 Nota previa:
 Nota siguiente: "[[01 - Detección de Command Injection]]"
@@ -13,6 +15,9 @@ Area: "[[Command Injection.base|Command Injection]]"
 Una `command injection` es, junto a la deserialización insegura, la vulnerabilidad web de mayor impacto inmediato: <mark style="background: #ADCCFFA6;">permite ejecutar comandos del sistema operativo directamente en el servidor back-end</mark>. No se trata de leer un fichero ajeno o robar una sesión —se trata de obtener una shell. En la práctica del pentest y del bug bounty, encontrar una command injection equivale a `Remote Code Execution` (RCE): <mark style="background: #FFB86CA6;">el control del servidor, y desde ahí el pivote a la red interna</mark>. Es el hallazgo que convierte un informe de severidad media en un *critical*.
 
 El patrón es siempre el mismo: una aplicación toma entrada controlada por el usuario y la usa —directa o indirectamente— para construir un comando que pasa a una shell del sistema (`/bin/sh`, `bash`, `cmd.exe`, `PowerShell`). Si esa entrada no se sanea ni se escapa, podemos romper los límites del comando previsto e inyectar el nuestro.
+
+> [!example]+ Caso real — Polyvore/Yahoo ImageMagick (ImageTragick) · $2.000
+> Tras las CVE de ImageMagick de abril 2016 (su *delegate* invoca la shell según el **contenido** del fichero, no la extensión), Ben Sadeghipour creó un fichero MVG disfrazado de `.jpg` que ejecutaba `id` (entre backticks) y hacía `curl` de la salida a su listener. Subirlo como "imagen" a Polyvore hizo que ImageMagick lo procesara → **RCE** (su Netcat recibió la salida de `id`). **Lección**: las CVE públicas de librerías son vía rápida en sitios sin parchear — reproduce el exploit en tu propio servidor antes de dispararlo contra el objetivo.
 
 # La familia de las inyecciones
 
@@ -90,3 +95,6 @@ El impacto de una command injection es máximo por definición: ejecución arbit
 El reto profesional actual no es explotar la inyección en un lab limpio —eso es trivial—, sino **encontrarla** entre las defensas modernas (WAF, *allow-lists*, ejecución sin shell) y **evadir** los filtros cuando existe pero está parcialmente protegida. Ese es el recorrido de este sub-tema: primero la [[01 - Detección de Command Injection|detección]] rigurosa, después los [[02 - Operadores de inyección de comandos|operadores]] de explotación, y por último el bloque de [[03 - Identificación de filtros y defensas|evasión de filtros]] que ocupa la mayor parte del módulo.
 
 Empezamos por detectarla: [[01 - Detección de Command Injection]].
+
+> [!info]+ Variante moderna — comandos generados por un LLM
+> Un asistente que traduce peticiones en lenguaje natural a comandos del sistema tiene esta vulnerabilidad por diseño si no valida la salida. Y los agentes de programación con acceso a terminal la tienen de serie, con el agravante de que el prompt puede llegar en un `README` o un issue del repositorio. Ver [[03 - Inyección de comandos a través del LLM]].

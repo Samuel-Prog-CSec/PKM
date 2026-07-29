@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/XSLT
+  - Tipo/Introduccion
+Descripción: "XSLT (eXtensible Stylesheet Language Transformations) es un lenguaje para transformar documentos XML en otros formatos —HTML, texto, otro XML—"
 Fecha de actualización: 2026-06-22
 Nota previa: ""
 Nota siguiente: "[[01 - Prevención de XSLT]]"

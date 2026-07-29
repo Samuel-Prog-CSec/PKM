@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "Las apps móviles hablan con el mismo tipo de back-end que una web, pero no usan el navegador, así que el setup del proxy no basta"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[11 - OPSEC y evasión de detección]]"
 Nota siguiente: "[[13 - Flujo profesional y alternativas modernas]]"

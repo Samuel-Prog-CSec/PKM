@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Session-Puzzling
+  - Tipo/Introduccion
+Descripción: "Las sesiones dan contexto a un protocolo que no lo tiene"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[11 - Detección, herramientas y prevención de Host Header Attacks]]"
 Nota siguiente: "[[13 - Session IDs débiles]]"

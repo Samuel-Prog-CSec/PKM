@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Vulnerabilidad
   - Escaneo/Vulnerabilidades
+Descripción: "New Scan ofrece plantillas (*scan templates*) en tres categorías"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[00 - Introducción a Nessus]]"
 Nota siguiente: "[[02 - Interpretar y exportar resultados]]"

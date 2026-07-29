@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Examen
   - SIE
+Descripción: "Esta es la nota que tienes abierta durante el examen"
 Fecha de actualización: 2026-05-31
 Nota previa: "[[21 - Ejercicio de práctica - Biblioteca (resuelto)]]"
 Nota siguiente: ""

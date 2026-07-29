@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - JavaScript
   - Introduccion
+Descripción: "JavaScript es el lenguaje base del desarrollo web: junto con HTML y CSS forma la tríada del front-end"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Operaciones CRUD, HTTP y SQL]]"
 Nota siguiente: "[[00-MongoDB y el modelo NoSQL documental]]"

@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Odoo no solo deja crear modelos nuevos: deja extender los que ya existen sin tocar su código"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[10 - Relaciones entre modelos]]"
 Nota siguiente: "[[12 - Vistas XML]]"

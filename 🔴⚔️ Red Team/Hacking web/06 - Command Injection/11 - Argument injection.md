@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "Todo el módulo asume que controlas el comando o puedes encadenar el tuyo con operadores (;, |, &&)"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[10 - Arsenal de herramientas para Command Injection]]"
 Nota siguiente:

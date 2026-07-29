@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Command-Injection
+  - Tipo/Defensa
+Descripción: "Cuando la aplicación sí valida en el back-end, el payload 127.0.0.1; whoami deja de funcionar y devuelve un invalid input"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[02 - Operadores de inyección de comandos]]"
 Nota siguiente: "[[04 - Bypass de filtros de espacios]]"

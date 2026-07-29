@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "Aun habiendo resuelto los caracteres, la petición puede seguir bloqueada: hay un filtro distinto que inspecciona el nombre del comando"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[05 - Bypass de caracteres en blacklist]]"
 Nota siguiente: "[[07 - Ofuscación avanzada de comandos]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Session-Puzzling
+Descripción: "El caso más realista de session puzzling: no se puede saltar la autenticación de forma directa, pero dos procesos distintos comparten una variable de sesión y, intercalando sus…"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[15 - Población prematura de sesión]]"
 Nota siguiente: "[[17 - Detección, herramientas y prevención de Session Puzzling]]"

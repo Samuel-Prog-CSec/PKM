@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Explotacion
   - Metasploit
+Descripción: "msfconsole es la interfaz principal de Metasploit: una consola interactiva que da acceso a todos los módulos, la base de datos, las sesiones y los plugins"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[00 - Introducción a Metasploit]]"
 Nota siguiente: "[[02 - Módulos]]"

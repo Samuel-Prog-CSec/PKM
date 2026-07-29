@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "La NoSQL injection ocurre cuando la entrada del usuario llega a una consulta NoSQL sin sanitizar, permitiendo al atacante subvertir la lógica y forzar al servidor a devolver…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Introducción a NoSQL y MongoDB]]"
 Nota siguiente: "[[02 - Detección de NoSQL injection]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "Interceptar, modificar, reenviar y comprobar en el navegador son 5-6 pasos por cada intento"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[04 - Modificación automática (Match and Replace)]]"
 Nota siguiente: "[[06 - Codificación y decodificación]]"

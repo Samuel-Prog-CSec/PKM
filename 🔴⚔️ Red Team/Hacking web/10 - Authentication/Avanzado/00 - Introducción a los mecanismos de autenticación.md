@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Broken Authentication cubrió los ataques 'básicos' a un login: fuerza bruta, bypass, sesión"
 Fecha de actualización: 2026-06-23
 Nota previa:
 Nota siguiente: "[[01 - Introducción a JWT]]"

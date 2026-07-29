@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - XPath
   - Pentesting/Explotacion
+Descripción: "El uso más directo de la XPath injection es el bypass de autenticación: cuando un login valida credenciales contra un documento XML, alterar el predicado permite entrar sin…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Detección de XPath Injection]]"
 Nota siguiente: "[[03 - Exfiltración de datos con XPath]]"

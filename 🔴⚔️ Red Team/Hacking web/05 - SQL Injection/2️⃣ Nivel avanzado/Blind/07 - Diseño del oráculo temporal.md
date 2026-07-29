@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "El oráculo temporal es conceptualmente idéntico al booleano —una función que responde True/False a una condición SQL—, pero cambia el indicador: en lugar de '¿cambió el…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[06 - Identificar SQLi basada en tiempo]]"
 Nota siguiente: "[[08 - Extracción de datos time-based]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

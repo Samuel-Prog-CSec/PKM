@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "En JavaScript, casi todos los objetos heredan de Object.prototype"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[08 - DOM Clobbering]]"
 Nota siguiente: "[[10 - XSS en frameworks modernos]]"

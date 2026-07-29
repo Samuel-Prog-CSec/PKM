@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - CSRF
+  - Tipo/Defensa
+Descripción: "El Cross-Site Request Forgery (CSRF) fuerza al navegador de la víctima a realizar, sin que ella lo sepa, acciones en una aplicación donde está autenticada"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[00 - Primitivas y entorno de explotación]]"
 Nota siguiente: "[[02 - Same-Origin Policy y CORS]]"
@@ -11,6 +13,9 @@ Area: "[[CSRF.base|CSRF]]"
 ---
 
 <mark style="background: #ADCCFFA6;">El `Cross-Site Request Forgery` (CSRF) fuerza al navegador de la víctima a realizar, sin que ella lo sepa, acciones en una aplicación donde está autenticada</mark>. El payload vive en un sitio controlado por el atacante y lanza una petición *cross-origin* contra la aplicación vulnerable; el navegador adjunta automáticamente las cookies de sesión de la víctima, autenticando la petición. <mark style="background: #8000E1A6;">El atacante nunca ve la sesión ni roba la cookie: abusa de que el navegador la envía solo</mark>.
+
+> [!example]+ Caso real — Badoo Full Account Takeover · $852 · [H1 #127703](https://hackerone.com/reports/127703)
+> Badoo protegía las peticiones con un token `rt` por usuario (que CORS impedía leer del JSON)… pero Mahmoud Jamal vio que el `rt` **se reflejaba dentro de un fichero JavaScript** (`chrome-service-worker.js`). CORS no restringe cargar JS remoto con `<script src>`, así que una página maliciosa cargaba ese fichero, parseaba el `rt` y disparaba el endpoint de vincular-cuenta-Google → **secuestro de cuenta**. **Lección**: si el token CSRF aparece en cualquier otro sitio (JSON, ficheros JS), sigue cavando — revisa **todos** los recursos que carga la página.
 
 # Anatomía de un ataque
 

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - IDOR
+Descripción: "Los ataques directos de la sección anterior fallaron porque nos faltaban datos (el uuid de la víctima, un nombre de rol válido)"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[10 - IDOR en APIs inseguras]]"
 Nota siguiente: "[[12 - Detección, evasión y prevención de IDOR]]"

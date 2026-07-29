@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - Express
   - Backend
+Descripción: "Express.js es un framework ligero para Node.js, una de las piezas del back-end en MERN. Destaca por su facilidad y optimización en el manejo de solicitudes HTTP, y es la…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[01-package.json y el gestor de paquetes npm]]"
 Nota siguiente: "[[01-APIs REST (principios y características)]]"

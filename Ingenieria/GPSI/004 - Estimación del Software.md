@@ -3,6 +3,7 @@ tags:
   - GPSI
   - Estimacion
   - Puntos-Funcion
+Descripción: "Hay que separar tres términos que suelen confundirse"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[003 - SCRUM]]"
 Nota siguiente: "[[005 - Gestión de Riesgos en Proyectos Software]]"

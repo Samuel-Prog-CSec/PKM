@@ -13,15 +13,13 @@ Autores:
   - Dave Mound
 Editorial: Packt Publishing
 Año: 2015
-ISBN: "978-1-78439-293-2"
-Portada: "03 - Archivos/Images/Biblioteca/Python Web Penetration Testing Cookbook.jpg"
+ISBN: 978-1-78439-293-2
+Portada: 03 - Archivos/Images/Biblioteca/Python Web Penetration Testing Cookbook.jpg
 PDF: "[[Python-Web-Penetration-Testing-Cookbook.pdf]]"
-Estado: Pendiente
+Estado: Completado
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---
----
-
 # Python Web Penetration Testing Cookbook
 
 ![Portada de Python Web Penetration Testing Cookbook](03 - Archivos/Images/Biblioteca/Python Web Penetration Testing Cookbook.jpg)

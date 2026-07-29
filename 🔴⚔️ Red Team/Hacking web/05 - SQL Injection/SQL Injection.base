@@ -1,40 +1,18 @@
 views:
   - type: table
-    name: Todas las notas
-    filters: Area == link("SQL Injection.base", "SQL Injection")
+    name: Notas
+    filters:
+      Area == link("SQL Injection.base", "SQL Injection")
     order:
       - file.name
+      - Descripción
       - file.tags
+      - Fecha de actualización
     sort:
       - property: file.name
         direction: ASC
     columnSize:
-      file.name: 360
-      file.tags: 320
-  - type: table
-    name: Introducción
-    filters: file.folder.startsWith("🔴⚔️ Red Team/Hacking web/05 - SQL Injection/1️⃣ Introducción")
-    order:
-      - file.name
-      - file.tags
-    sort:
-      - property: file.name
-        direction: ASC
-  - type: table
-    name: Blind SQLi
-    filters: file.folder.startsWith("🔴⚔️ Red Team/Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Blind")
-    order:
-      - file.name
-      - file.tags
-    sort:
-      - property: file.name
-        direction: ASC
-  - type: table
-    name: Advanced SQLi
-    filters: file.folder.startsWith("🔴⚔️ Red Team/Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Advanced")
-    order:
-      - file.name
-      - file.tags
-    sort:
-      - property: file.name
-        direction: ASC
+      file.name: 330
+      note.Descripción: 520
+      file.tags: 240
+      note.Fecha de actualización: 140

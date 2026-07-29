@@ -3,10 +3,12 @@ tags:
   - "#Ingenieria"
   - "#Datos"
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "El dato se gestiona para maximizar su valor"
 Fecha de actualización: 2025-09-24
 Nota previa:
 Nota siguiente: "[[002 - Implantación de sistemas BI]]"
-Area: "[[Inteligencia del negocio.base]]"
+Area: "[[Inteligencia del negocio.base|Inteligencia del negocio]]"
 ---
 ---
 

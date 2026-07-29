@@ -4,6 +4,7 @@ tags:
   - SIE/Examen
   - SIE/Modulos
   - SIE
+Descripción: "El que corrige el examen es tu profesor. Conviene que tu entrega 'suene' como su código"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[16 - Informes QWeb]]"
 Nota siguiente: "[[18 - Filmoteca paso a paso]]"

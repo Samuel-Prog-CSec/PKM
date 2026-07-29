@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "El flujo de 'olvidé mi contraseña' es a menudo el eslabón más débil de la autenticación: permite cambiar la contraseña sin conocerla, apoyándose en un token de un solo uso…"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[02 - Fuerza bruta de contraseñas en el login]]"
 Nota siguiente: "[[04 - Fuerza bruta de códigos 2FA y MFA]]"

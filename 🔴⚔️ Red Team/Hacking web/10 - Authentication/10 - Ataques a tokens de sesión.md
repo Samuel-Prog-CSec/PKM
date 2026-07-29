@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "Tras autenticarse, el usuario se identifica en cada petición con un token de sesión"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[09 - Bypass de autenticación - modificación de parámetros]]"
 Nota siguiente: "[[11 - Detección y metodología en autenticación]]"

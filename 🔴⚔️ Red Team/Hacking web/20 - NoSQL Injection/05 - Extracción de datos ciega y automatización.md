@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Explotacion
+Descripción: "Cuando la aplicación no refleja el dato —solo responde distinto según la consulta case algo o no— estamos en blind NoSQL injection"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[04 - Extracción de datos in-band]]"
 Nota siguiente: "[[06 - Server-Side JavaScript Injection]]"

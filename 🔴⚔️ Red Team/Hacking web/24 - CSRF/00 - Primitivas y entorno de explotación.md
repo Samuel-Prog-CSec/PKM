@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - CSRF
+  - Tipo/Introduccion
+Descripción: "Los navegadores modernos han desactivado el CSRF clásico"
 Fecha de actualización: 2026-06-08
 Nota previa:
 Nota siguiente: "[[01 - Fundamentos y defensas de CSRF]]"

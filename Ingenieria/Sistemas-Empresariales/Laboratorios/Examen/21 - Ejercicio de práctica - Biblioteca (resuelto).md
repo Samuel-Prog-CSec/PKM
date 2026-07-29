@@ -4,6 +4,7 @@ tags:
   - SIE/Examen
   - SIE/Modulos
   - SIE
+Descripción: "La mejor forma de comprobar que dominas el patrón del examen es resolver otro enunciado nuevo de la misma dificultad que la Filmoteca, sin copiar y sin mirar la solución hasta…"
 Fecha de actualización: 2026-05-30
 Nota previa: "[[20 - Estrategia de examen y autoevaluación]]"
 Nota siguiente: "[[22 - Cheatsheet de examen (chuleta operativa)]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Pentesting/Enumeracion
+Descripción: "El WSDL (Web Service Description Language) es un fichero XML que describe un web service: qué operaciones/métodos ofrece, dónde residen y cómo invocarlos (parámetros, tipos…"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[00 - Introducción a Web Services y APIs]]"
 Nota siguiente: "[[02 - SOAP Action Spoofing]]"

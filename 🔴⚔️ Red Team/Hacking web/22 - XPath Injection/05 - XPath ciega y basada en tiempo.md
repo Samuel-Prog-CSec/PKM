@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - XPath
   - Pentesting/Explotacion
+Descripción: "Cuando la aplicación no refleja el resultado de la consulta —solo responde distinto según devuelva algo o nada— estamos en blind XPath injection"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[04 - Exfiltración avanzada (schema walking)]]"
 Nota siguiente: "[[06 - Evasión de filtros y WAF en XPath]]"

@@ -4,6 +4,7 @@ tags:
   - Express
   - REST
   - Backend
+Descripción: "REST (REpresentational State Transfer) es un estilo para el intercambio y la manipulación de datos en servicios de Internet, basado en HTTP. Los datos se devuelven en formatos…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00-Express.js, framework y middleware]]"
 Nota siguiente: "[[02-Rutas, manejadores y Express Router]]"

@@ -3,6 +3,8 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+  - Tipo/Introduccion
+Descripción: "Nmap (*Network Mapper*) es un escáner de red y herramienta de auditoría de seguridad open-source, escrito en C, C++, Python y Lua"
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente: "[[01 - Host Discovery]]"

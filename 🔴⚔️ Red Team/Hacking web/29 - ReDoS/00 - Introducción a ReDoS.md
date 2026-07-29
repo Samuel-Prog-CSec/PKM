@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - ReDoS
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "ReDoS (Regular Expression Denial of Service) explota expresiones regulares mal diseñadas para agotar la CPU del servidor con una entrada corta y maliciosa"
 Fecha de actualización: 2026-07-17
 Nota previa: ""
 Nota siguiente: "[[01 - Explotación, detección y mitigación de ReDoS]]"

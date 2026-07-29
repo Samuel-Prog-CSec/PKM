@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - XSS
+Descripción: "El payload XSS ejecuta en el navegador de la víctima, así que alcanza recursos que el atacante no puede tocar directamente"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[01 - Ataques desde la sesión de la víctima]]"
 Nota siguiente: "[[03 - Pivote a aplicaciones internas]]"

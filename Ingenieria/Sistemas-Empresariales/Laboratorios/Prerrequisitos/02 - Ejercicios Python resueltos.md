@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Python
   - SIE
+Descripción: "Los 40 ejercicios oficiales, resueltos decisión a decisión"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[01 - Python para Odoo]]"
 Nota siguiente: "[[03 - Docker para Odoo]]"

@@ -2,6 +2,7 @@
 tags:
   - Redes
   - Protocolos
+Descripción: "SMTP (*Simple Mail Transfer Protocol*) es el protocolo para enviar correo en una red IP. Funciona entre un cliente y su servidor de salida, y entre dos servidores SMTP (donde…"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "La explotación más directa de una File Inclusion es leer ficheros locales del servidor"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[00 - Introducción a File Inclusion]]"
 Nota siguiente: "[[02 - Bypasses básicos - traversal, null byte y encoding]]"

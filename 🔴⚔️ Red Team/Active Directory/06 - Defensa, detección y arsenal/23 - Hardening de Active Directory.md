@@ -3,6 +3,8 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Reporting
+  - Tipo/Defensa
+Descripción: "La otra cara del módulo: cómo se defiende AD. Para el pentester no es relleno — saber qué controles esperar te dice qué ataques van a fallar, y recomendar la remediación es…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[22 - Abuso de trust cross-forest]]"
 Nota siguiente: "[[24 - Auditoría avanzada en AD]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Server-Side/SSRF
+Descripción: "Encontrar una SSRF es reconocer dónde la app pide algo por nosotros"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[01 - Introducción a SSRF]]"
 Nota siguiente: "[[03 - Explotación de SSRF]]"

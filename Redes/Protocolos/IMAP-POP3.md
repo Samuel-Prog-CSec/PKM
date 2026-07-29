@@ -2,6 +2,7 @@
 tags:
   - Redes
   - Protocolos
+Descripción: "IMAP y POP3 son los protocolos para recuperar correo de un servidor (frente a SMTP, que lo envía)"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

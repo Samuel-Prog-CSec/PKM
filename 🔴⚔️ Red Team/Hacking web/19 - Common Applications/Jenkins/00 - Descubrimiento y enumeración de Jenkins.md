@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Jenkins
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "Jenkins es un servidor de automatización CI/CD escrito en Java que corre dentro de servlet containers como Tomcat"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a Tomcat]]"
 Nota siguiente: "[[01 - Ataques a Jenkins]]"

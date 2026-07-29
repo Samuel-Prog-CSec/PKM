@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - JWT
+Descripción: "La firma es lo único que impide manipular el payload"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[01 - Introducción a JWT]]"
 Nota siguiente: "[[03 - Ataque al secreto de firma JWT]]"

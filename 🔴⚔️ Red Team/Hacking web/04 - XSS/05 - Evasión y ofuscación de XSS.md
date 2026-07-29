@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "Un payload reflejado no es un payload ejecutado"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[04 - Descubrimiento de XSS]]"
 Nota siguiente: "[[06 - Herramientas para XSS]]"

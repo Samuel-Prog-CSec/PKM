@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Verb-Tampering
+Descripción: "Primer vector canónico: una configuración insegura del servidor limita la autenticación a ciertos métodos, y usamos un método fuera de esa lista para saltarnos el HTTP Basic…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[01 - Introducción a HTTP Verb Tampering]]"
 Nota siguiente: "[[03 - Bypass de filtros de seguridad]]"

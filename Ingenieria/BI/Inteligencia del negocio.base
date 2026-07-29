@@ -1,9 +1,18 @@
 views:
   - type: table
-    name: Tabla
+    name: Notas
     filters:
-      and:
-        - Area == link("Inteligencia del negocio.base")
-    sort: []
-  - type: table
-    name: Vista
+      Area == link("Inteligencia del negocio.base", "Inteligencia del negocio")
+    order:
+      - file.name
+      - Descripción
+      - file.tags
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 330
+      note.Descripción: 520
+      file.tags: 240
+      note.Fecha de actualización: 140

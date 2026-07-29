@@ -2,6 +2,8 @@
 tags:
   - Web/Red-Team
   - PDF-Injection
+  - Tipo/Defensa
+Descripción: "Todas las vulnerabilidades del sub-tema nacen de dos causas: configuración insegura de la librería y falta de sanitización de la entrada"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[03 - Arsenal de herramientas para PDF Injection]]"
 Nota siguiente: ""

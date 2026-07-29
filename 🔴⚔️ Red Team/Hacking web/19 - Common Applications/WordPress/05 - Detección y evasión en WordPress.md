@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Explotacion
+  - Tipo/Deteccion
+Descripción: "El WordPress de 2026 no es el del lab. Entre tu petición y el PHP suele haber un WAF de borde, un plugin de seguridad y una capa de *hardening*"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[04 - RCE como administrador en WordPress]]"
 Nota siguiente: "[[06 - Arsenal de herramientas para WordPress]]"

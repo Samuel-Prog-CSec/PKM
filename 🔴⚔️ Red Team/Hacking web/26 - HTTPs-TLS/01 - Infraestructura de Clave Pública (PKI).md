@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - TLS
+Descripción: "TLS combina cifrado simétrico y asimétrico, y la parte asimétrica se apoya en una Public Key Infrastructure (PKI)"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[00 - Introducción a HTTPS y TLS]]"
 Nota siguiente: "[[02 - Handshake TLS 1.2 y 1.3]]"

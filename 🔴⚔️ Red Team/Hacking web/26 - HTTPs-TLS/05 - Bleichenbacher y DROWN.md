@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "Los ataques anteriores atacaban el padding de la criptografía simétrica (CBC)"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[04 - POODLE y BEAST]]"
 Nota siguiente: "[[06 - Ataques de compresión (CRIME y BREACH)]]"

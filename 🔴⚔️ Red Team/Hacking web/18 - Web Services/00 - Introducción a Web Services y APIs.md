@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Un *web service* es una pieza de software que expone funcionalidad a otras aplicaciones a través de la red, típicamente con XML o JSON sobre HTTP. Permite que sistemas…"
 Fecha de actualización: 2026-07-17
 Nota previa: ""
 Nota siguiente: "[[01 - WSDL - enumeración y descubrimiento]]"

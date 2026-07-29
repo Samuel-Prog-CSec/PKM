@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Windows
+Descripción: "WMI (*Windows Management Instrumentation*) es la implementación de Microsoft de los estándares WBEM/CIM: expone datos de gestión y operaciones sobre casi cualquier componente de…"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

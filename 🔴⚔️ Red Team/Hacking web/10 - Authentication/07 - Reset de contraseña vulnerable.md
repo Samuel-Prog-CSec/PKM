@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "Forzar el token ataca su valor. Pero aunque el token sea fuerte y haya rate limiting, la lógica del flujo de reset suele estar rota — y un fallo de lógica vale un account…"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[06 - Credenciales por defecto]]"
 Nota siguiente: "[[08 - Bypass de autenticación - acceso directo]]"

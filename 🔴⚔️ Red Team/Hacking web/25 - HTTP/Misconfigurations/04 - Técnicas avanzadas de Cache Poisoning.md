@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Cache-Poisoning
+Descripción: "Cuando no hay entradas unkeyed reflejadas obvias, la caché parece segura"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[03 - Ataques de Web Cache Poisoning]]"
 Nota siguiente: "[[05 - Detección, herramientas y prevención de Cache Poisoning]]"

@@ -3,10 +3,12 @@ tags:
   - Web/Red-Team
   - SQLi
   - Seguridad/Prevencion-Vulnerabilidad
+  - Tipo/Defensa
+Descripción: "BlueBird acumulaba varias SQLi: una protegida por un filtro burlado, una error-based y una de segundo orden"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[09 - PostgreSQL ejecución de comandos]]"
 Nota siguiente: "[[11 - Inyección en ORMs]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

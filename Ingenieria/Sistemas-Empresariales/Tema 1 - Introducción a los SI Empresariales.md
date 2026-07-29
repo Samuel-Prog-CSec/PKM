@@ -2,6 +2,8 @@
 tags:
   - SIE/Tema1
   - SIE
+  - Tipo/Introduccion
+Descripción: "Dato: cantidad matemática, símbolo o combinación que representa un hecho sin contexto interpretativo (p. ej. -10, ABC 123)"
 Fecha de actualización: 2026-05-23
 Nota previa: ""
 Nota siguiente: "[[Tema 2 - Soluciones de negocio]]"

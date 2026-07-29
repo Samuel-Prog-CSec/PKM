@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Proxies
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Un web proxy es una herramienta que se sitúa entre el navegador (o app móvil) y el servidor back-end para capturar, ver y manipular todo el tráfico web que pasa entre ambos — un…"
 Fecha de actualización: 2026-06-23
 Nota previa:
 Nota siguiente: "[[01 - Instalación y configuración del proxy]]"

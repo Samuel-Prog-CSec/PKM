@@ -3,6 +3,8 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+  - Tipo/Arsenal
+Descripción: "Nmap es preciso pero lento a escala: un -p- sobre un /16 es inviable en tiempo real"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[08 - Detección de escaneos y evasión moderna]]"
 Nota siguiente:

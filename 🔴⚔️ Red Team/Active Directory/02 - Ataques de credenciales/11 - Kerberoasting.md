@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Explotacion
+Descripción: "El Kerberoasting es, probablemente, el ataque AD con mejor relación esfuerzo/impacto: cualquier usuario de dominio autenticado —sin privilegios especiales— puede pedir un ticket…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[10 - Password Spraying interno]]"
 Nota siguiente: "[[12 - Primer de abuso de ACLs]]"

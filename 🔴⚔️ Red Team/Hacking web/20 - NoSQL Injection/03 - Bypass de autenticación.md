@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Explotacion
+Descripción: "El uso más directo de la NoSQLi es el bypass de autenticación: inyectar operadores para que la consulta de credenciales devuelva un usuario sin conocer email ni contraseña"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[02 - Detección de NoSQL injection]]"
 Nota siguiente: "[[04 - Extracción de datos in-band]]"

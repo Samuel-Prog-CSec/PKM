@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Jenkins
   - Pentesting/Explotacion
+Descripción: "Con acceso a Jenkins (credenciales débiles o sin auth), la Script Console es una victoria casi inmediata: ejecuta Groovy arbitrario en el runtime del controlador, y Jenkins…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de Jenkins]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de Splunk]]"

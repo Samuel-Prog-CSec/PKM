@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
   - File-Upload
+  - Tipo/Arsenal
+Descripción: "El resto del sub-tema enseña la vulnerabilidad a bajo nivel —imprescindible para reconocerla y exprimirla—"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[09 - Prevención de File Upload Attacks]]"
 Nota siguiente: ""

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Brute-Forcing
+Descripción: "Medusa es el primo de Hydra: cracker de logins paralelo, modular y rápido"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[02 - Hydra]]"
 Nota siguiente: "[[04 - Generación de wordlists]]"

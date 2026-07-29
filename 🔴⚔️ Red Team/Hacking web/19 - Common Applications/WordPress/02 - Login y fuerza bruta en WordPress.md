@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Explotacion
+Descripción: "Con la instalación inventariada, el siguiente objetivo es una sesión autenticada"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[01 - Enumeración de WordPress]]"
 Nota siguiente: "[[03 - Explotación de plugins vulnerables]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - TLS
+Descripción: "El handshake es el proceso donde cliente y servidor negocian todos los parámetros de la sesión TLS y derivan la clave simétrica compartida"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[01 - Infraestructura de Clave Pública (PKI)]]"
 Nota siguiente: "[[03 - Padding Oracle Attacks]]"

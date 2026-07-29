@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - JWT
+Descripción: "Si la app sí verifica la firma, hay otra vía: conocer el secreto de firma permite calcular firmas válidas para tokens forjados"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[02 - Ataques a la verificación de firma JWT]]"
 Nota siguiente: "[[04 - Confusión de algoritmos JWT]]"

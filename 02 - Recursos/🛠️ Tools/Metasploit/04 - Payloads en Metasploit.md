@@ -3,6 +3,7 @@ tags:
   - Pentesting/Explotacion
   - Metasploit
   - Payloads
+Descripción: "El payload es el código que se ejecuta en el objetivo tras el exploit — lo que nos entrega la shell"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[03 - Targets]]"
 Nota siguiente: "[[05 - Encoders]]"

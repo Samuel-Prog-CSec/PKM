@@ -3,6 +3,7 @@ tags:
   - SIE/Tema5
   - SIE/BPM
   - SIE
+Descripción: "Marco común para que usuarios técnicos y empresariales puedan modelar, implementar, desplegar, ejecutar, medir y mejorar procesos de negocio"
 Fecha de actualización: 2026-05-30
 Nota previa: "[[Tema 5 - Parte I - Inteligencia de negocio]]"
 Nota siguiente: ""

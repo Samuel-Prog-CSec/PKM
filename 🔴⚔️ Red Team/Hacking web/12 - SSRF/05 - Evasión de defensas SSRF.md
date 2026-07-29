@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSRF
+  - Tipo/Defensa
+Descripción: "En producción, una SSRF choca con defensas: *allowlists* de dominios, *denylists* de IPs internas y protecciones del endpoint de metadatos"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[04 - Blind SSRF]]"
 Nota siguiente: "[[06 - Prevención de SSRF]]"

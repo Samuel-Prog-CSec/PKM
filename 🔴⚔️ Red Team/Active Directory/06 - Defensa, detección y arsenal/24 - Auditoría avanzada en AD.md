@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "Auditar la postura de AD sirve a los dos bandos: al defensor para medir su exposición, y al pentester para obtener en minutos un mapa de misconfiguraciones del dominio"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[23 - Hardening de Active Directory]]"
 Nota siguiente: "[[25 - Detección y evasión en AD]]"

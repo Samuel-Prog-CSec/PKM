@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "Las APIs consumen otras APIs para intercambiar datos, formando un ecosistema interconectado"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[09 - Improper Inventory Management (API9)]]"
 Nota siguiente: "[[11 - Detección y evasión en APIs]]"

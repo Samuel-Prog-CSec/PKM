@@ -3,6 +3,8 @@ tags:
   - Seguridad/Contraseñas
   - Pentesting/Post-Explotacion
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "John the Ripper (JtR) es un *password cracker* open source de Openwall, orientado a CPU (con soporte OpenCL para GPU), multiplataforma y con soporte para cientos de tipos de hash"
 Fecha de actualización: 2026-07-18
 Nota previa: 
 Nota siguiente: "[[01 - Cracking en la práctica con John]]"

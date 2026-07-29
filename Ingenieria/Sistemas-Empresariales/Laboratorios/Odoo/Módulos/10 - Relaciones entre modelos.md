@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Los modelos rara vez viven aislados: un curso tiene sesiones, una sesión tiene asistentes"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[09 - Modelos y tipos de campo]]"
 Nota siguiente: "[[11 - Herencia de modelos y de vistas]]"

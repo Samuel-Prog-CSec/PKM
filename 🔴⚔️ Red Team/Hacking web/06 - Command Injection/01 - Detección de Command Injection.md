@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Command-Injection
+  - Tipo/Deteccion
+Descripción: "En su forma básica, detectar una command injection es indistinguible de explotarla: se inyecta un operador seguido de un comando y, si la salida cambia respecto a la esperada…"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[00 - Introducción a Command Injection]]"
 Nota siguiente: "[[02 - Operadores de inyección de comandos]]"

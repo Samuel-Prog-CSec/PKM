@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Joomla
   - Pentesting/Explotacion
+Descripción: "Como en WordPress y Drupal, la vía principal de RCE en Joomla es entrar al backend admin y abusar de la edición de plantillas"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de Joomla]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de Drupal]]"

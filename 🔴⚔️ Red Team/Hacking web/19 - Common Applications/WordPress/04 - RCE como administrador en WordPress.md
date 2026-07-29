@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Explotacion
+Descripción: "Con credenciales de Administrator (02 - Login y fuerza bruta en WordPress), la ejecución de código es casi inmediata: el panel permite editar el PHP del sitio"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[03 - Explotación de plugins vulnerables]]"
 Nota siguiente: "[[05 - Detección y evasión en WordPress]]"

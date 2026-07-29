@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Session-Puzzling
+Descripción: "El session puzzling por excelencia: una misma variable de sesión se usa en dos flujos distintos, y escribirla desde el flujo 'débil' engaña al flujo 'fuerte'"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[13 - Session IDs débiles]]"
 Nota siguiente: "[[15 - Población prematura de sesión]]"

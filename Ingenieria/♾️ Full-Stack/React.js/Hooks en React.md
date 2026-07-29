@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "Los hooks son funciones, incorporadas en React 16.8, que permiten 'enganchar' el estado y el ciclo de vida desde componentes funcionales"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Reducers y Redux]]"
 Nota siguiente: 

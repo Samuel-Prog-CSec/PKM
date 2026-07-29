@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "Un componente es un elemento software visual con su propio estado, que recibe propiedades (props) e implementa su propia lógica de renderizado"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[01-JSX]]"
 Nota siguiente: "[[Propiedades y estado en React]]"

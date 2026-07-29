@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - PRTG
   - Pentesting/Explotacion
+Descripción: "PRTG Network Monitor (Paessler) es un sistema de monitorización de red *agentless*, en Delphi, con interfaz web en el puerto 8080"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a Splunk]]"
 Nota siguiente: "[[00 - Enumeración y ataques a osTicket]]"

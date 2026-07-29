@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "Interceptar y editar a mano cada petición no escala"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[03 - Interceptación de respuestas]]"
 Nota siguiente: "[[05 - Repeater - repetir y modificar peticiones]]"

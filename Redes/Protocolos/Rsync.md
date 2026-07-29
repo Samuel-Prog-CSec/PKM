@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Linux
+Descripción: "Rsync es una utilidad de copia y sincronización de ficheros rápida y versátil, muy usada para backups y espejos"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

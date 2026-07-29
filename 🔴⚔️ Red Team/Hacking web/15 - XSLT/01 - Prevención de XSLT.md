@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Seguridad/Prevencion-Vulnerabilidad
   - Server-Side/XSLT
+  - Tipo/Defensa
+Descripción: "Como toda inyección de este módulo, la XSLT Injection se previene impidiendo que el input del usuario se inserte en los datos XSL antes de que el procesador los transforme — más…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00 - Inyección XSLT]]"
 Nota siguiente: ""

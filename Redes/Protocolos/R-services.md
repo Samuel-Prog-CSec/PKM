@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Linux
+Descripción: "Los r-services (o *r-commands*) son la suite Berkeley de administración remota anterior a SSH: rlogin, rsh y rexec"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

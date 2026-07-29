@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "El ataque más simple sobre una XSS almacenada es el defacing. *Defacing* es cambiar el aspecto de una web para todo el que la visite"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[06 - Herramientas para XSS]]"
 Nota siguiente: "[[08 - Phishing]]"

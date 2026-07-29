@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - XPath
   - Pentesting/Explotacion
+Descripción: "El volcado directo con | //text() falla cuando la aplicación limita la salida (devuelve solo N resultados, o filtra qué campos muestra)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[03 - Exfiltración de datos con XPath]]"
 Nota siguiente: "[[05 - XPath ciega y basada en tiempo]]"

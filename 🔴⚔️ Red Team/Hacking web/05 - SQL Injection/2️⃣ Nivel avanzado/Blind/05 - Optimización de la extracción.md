@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "El volcado lineal funciona pero es inviable: ~95 peticiones por carácter, miles en total"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[04 - Extracción de datos boolean-based]]"
 Nota siguiente: "[[06 - Identificar SQLi basada en tiempo]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

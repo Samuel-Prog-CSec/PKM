@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/Session-Puzzling
+  - Tipo/Deteccion
+Descripción: "Cierre del bloque y del módulo. El session puzzling es el único vector de aquí que ningún escáner detecta: es lógica de estado pura"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[16 - Variables de sesión compartidas - account takeover]]"
 Nota siguiente: ""

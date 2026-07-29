@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "Validar solo la extensión no basta —ya hemos visto que shell.php.jpg puede ejecutar código—, así que las apps serias inspeccionan también el contenido para confirmar que el…"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[04 - Bypass de whitelist y doble extensión]]"
 Nota siguiente: "[[06 - Uploads limitados - SVG, polyglots y metadatos]]"

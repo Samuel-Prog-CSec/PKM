@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "La enumeración es el corazón del ataque: una vez confirmada la inyección, SQLMap automatiza lo que a mano sería tedioso —recorrer INFORMATION_SCHEMA, volcar tablas, romper hashes—"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[03 - Tuning del ataque]]"
 Nota siguiente: "[[05 - Bypass de protecciones web con SQLMap]]"

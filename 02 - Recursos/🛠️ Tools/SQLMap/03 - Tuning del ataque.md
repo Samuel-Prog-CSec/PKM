@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "SQLMap funciona 'de fábrica' en la mayoría de casos, pero saber afinar la detección marca la diferencia cuando un objetivo no responde a la configuración por defecto"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[02 - SQLMap sobre peticiones HTTP]]"
 Nota siguiente: "[[04 - Enumeración de bases de datos con SQLMap]]"

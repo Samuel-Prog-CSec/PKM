@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - XSS
+Descripción: "Detectar una XSS puede ser tan difícil como explotarla"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[03 - XSS basado en DOM]]"
 Nota siguiente: "[[05 - Evasión y ofuscación de XSS]]"

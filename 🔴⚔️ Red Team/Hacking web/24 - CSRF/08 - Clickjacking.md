@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - CSRF
+Descripción: "El clickjacking (o *UI redress*) es el ataque hermano del CSRF: también consigue que la víctima ejecute una acción no intencionada en una aplicación donde está autenticada, pero…"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[07 - Herramientas para CSRF y CORS]]"
 Nota siguiente:

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - IDOR
+Descripción: "Localizada la referencia, el objetivo es extraer los datos de todos los usuarios, no solo de uno"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[07 - Identificación de IDORs]]"
 Nota siguiente: "[[09 - Bypass de referencias codificadas]]"

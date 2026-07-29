@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "La SQLi error-based es una técnica in-band que exfiltra datos dentro de los mensajes de error de la base de datos"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[05 - Bypass de caracteres comunes]]"
 Nota siguiente: "[[07 - SQL Injection de segundo orden]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

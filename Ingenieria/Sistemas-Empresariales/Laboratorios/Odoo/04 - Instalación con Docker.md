@@ -4,6 +4,7 @@ tags:
   - SIE/Odoo
   - SIE/Docker
   - SIE
+Descripción: "Con Docker dominado, levantar Odoo es escribir un docker-compose.yml y arrancar"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[03 - Docker para Odoo]]"
 Nota siguiente: "[[05 - Administración funcional]]"

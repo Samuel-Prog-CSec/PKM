@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - WordPress
   - Pentesting/Enumeracion
+  - Tipo/Defensa
+Descripción: "Cierro el sub-tema por la cara defensiva, pero leída como atacante: la checklist de *hardening* es la checklist de ataque invertida"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[06 - Arsenal de herramientas para WordPress]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de Joomla]]"

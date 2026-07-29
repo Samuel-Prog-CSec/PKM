@@ -7,10 +7,10 @@ Autores:
   - Peter Yaworski
 Editorial: No Starch Press
 Año: 2019
-ISBN: "978-1-59327-861-8"
-Portada: "03 - Archivos/Images/Biblioteca/Real-World Bug Hunting.jpg"
+ISBN: 978-1-59327-861-8
+Portada: 03 - Archivos/Images/Biblioteca/Real-World Bug Hunting.jpg
 PDF: "[[real-worldbughunting.pdf]]"
-Estado: Pendiente
+Estado: Completado
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---
@@ -44,4 +44,17 @@ El enfoque es deliberadamente práctico y orientado a principiantes en cibersegu
 [[real-worldbughunting.pdf|Abrir PDF]]
 
 ## Notas propias
+
+Contenido extraído e integrado en el vault (2026-07-27), modernizado a 2025-2026 con fuentes primarias (PortSwigger, OWASP, RFCs, `can-i-take-over-xyz`) — decisión y alternativas descartadas en el [[007 - Ingesta del libro Real-World Bug Hunting|ADR 007]].
+
+**Proceso / metodología** — `🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/`:
+- [[03 - Metodología de caza - mapear y atacar la aplicación]] (cap 19: mapeo de funcionalidad + tabla *marker→técnica*).
+- [[04 - Mindset del cazador y encadenamiento de bugs]] (cap 1 + *chaining*).
+- [[05 - Escribir un buen reporte]] enriquecida con el cap 20 (reconfirmar, triager, apelar recompensa).
+
+**Vulns net-new** — carpetas nuevas en `Hacking web/`:
+- [[00 - Introducción a Open Redirect]] (`31`) · [[00 - Introducción a HTTP Parameter Pollution]] (`32`) · [[00 - Fundamentos de Subdomain Takeover]] (`33`) · [[00 - Fundamentos de Race Conditions (TOCTOU)]] (`34`).
+- [[11 - HTML Injection, Content Spoofing y Dangling Markup]] (en `04 - XSS/Avanzado`).
+
+**Case studies** del libro (Uber, Twitter, Facebook, Microsoft, Badoo…) embebidos como callouts de ejemplo en las notas de la técnica correspondiente (SSTI, SQLi, SSRF, XXE, RCE, IDOR, CSRF, OAuth).
 

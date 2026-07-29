@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "Una API es vulnerable a BFLA (Broken Function Level Authorization) si permite a usuarios sin privilegios invocar endpoints privilegiados"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[04 - Unrestricted Resource Consumption (API4)]]"
 Nota siguiente: "[[06 - Unrestricted Access to Sensitive Business Flows (API6)]]"

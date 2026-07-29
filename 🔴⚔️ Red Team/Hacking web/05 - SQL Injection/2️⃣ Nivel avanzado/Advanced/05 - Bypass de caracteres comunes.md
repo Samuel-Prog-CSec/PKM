@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "La habilidad que de verdad separa al profesional en 2026 es explotar SQLi a pesar de los filtros: allowlists de caracteres, bloqueo de comillas o espacios, WAFs"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[04 - Búsqueda de errores SQL en los logs]]"
 Nota siguiente: "[[06 - SQL Injection basada en errores]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

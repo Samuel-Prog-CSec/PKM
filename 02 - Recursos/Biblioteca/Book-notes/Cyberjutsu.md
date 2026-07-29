@@ -7,10 +7,10 @@ Autores:
   - Ben McCarty
 Editorial: No Starch Press
 Año: 2021
-ISBN: "978-1-7185-0054-9"
-Portada: "https://covers.openlibrary.org/b/isbn/9781718500549-L.jpg"
+ISBN: 978-1-7185-0054-9
+Portada: https://covers.openlibrary.org/b/isbn/9781718500549-L.jpg
 PDF: "[[cyberjutsu.pdf]]"
-Estado: Pendiente
+Estado: Aceptada
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---

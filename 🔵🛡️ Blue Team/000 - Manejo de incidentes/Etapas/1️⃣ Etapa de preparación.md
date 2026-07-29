@@ -1,3 +1,15 @@
+---
+tags:
+  - Blue-Team
+  - Incident-Response
+Descripción: "En el preparation etapa, tenemos dos objetivos separados"
+Fecha de actualización: 2025-07-10
+Nota previa: "[[🚨⚙️ Proceso de manejo de incidentes]]"
+Nota siguiente: 
+Area: "[[Manejo de incidentes.base|Manejo de incidentes]]"
+---
+---
+
 En el `preparation` etapa, tenemos dos objetivos separados. El primero es el establecimiento de capacidad de manejo de incidentes dentro de la organización. La segunda es la capacidad de proteger y prevenir incidentes de seguridad informática mediante la implementación de medidas de protección adecuadas. Estas medidas incluyen el fortalecimiento de los puntos finales y del servidor, la clasificación de directorios activos, la autenticación multifactor, la gestión de acceso privilegiado, etcétera. Si bien la protección contra incidentes no es responsabilidad del equipo de manejo de incidentes, esta actividad es fundamental para el éxito general de ese equipo.
 
 ---

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Authentication
+Descripción: "Antes de forzar nada, prueba lo obvio. Muchísimas aplicaciones y dispositivos se instalan con credenciales por defecto que nunca se cambian, dando acceso autenticado sin esfuerzo"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[05 - Bypass de protecciones anti-fuerza-bruta]]"
 Nota siguiente: "[[07 - Reset de contraseña vulnerable]]"

@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Con privilegios suficientes, una SQLi en PostgreSQL permite leer y escribir ficheros del servidor —el equivalente al LOAD_FILE/INTO OUTFILE de MySQL y al OPENROWSET de MSSQL—"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[07 - SQL Injection de segundo orden]]"
 Nota siguiente: "[[09 - PostgreSQL ejecución de comandos]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

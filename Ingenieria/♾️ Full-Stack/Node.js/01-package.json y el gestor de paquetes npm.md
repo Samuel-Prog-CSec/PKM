@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - npm
   - NodeJS
+Descripción: "package.json es el manifiesto de un proyecto Node: el fichero que define sus características principales y sus dependencias"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00-Node.js, entorno de ejecución del servidor]]"
 Nota siguiente: "[[00-Express.js, framework y middleware]]"

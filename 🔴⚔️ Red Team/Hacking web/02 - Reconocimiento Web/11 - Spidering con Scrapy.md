@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El crawling manual no escala. Para mapear un sitio entero se automatiza con herramientas que recorren y extraen los datos por ti, dejándote la parte de analizar"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[10 - Crawling web]]"
 Nota siguiente: "[[12 - Search Engine Discovery]]"

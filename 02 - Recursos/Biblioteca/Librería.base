@@ -4,6 +4,7 @@ views:
     filters:
       and:
         - file.folder == "02 - Recursos/Biblioteca/Book-notes"
+        - Estado == "Aceptada"
     order:
       - file.name
       - Autores

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "Cuando la app aplica filtros contra la inclusión, los payloads básicos de LFI dejan de funcionar"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[01 - Local File Inclusion (LFI)]]"
 Nota siguiente: "[[03 - PHP wrappers I - php filter y disclosure de código]]"

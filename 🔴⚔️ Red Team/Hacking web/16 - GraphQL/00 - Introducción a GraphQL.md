@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - GraphQL
+  - Tipo/Introduccion
+Descripción: "GraphQL es un lenguaje de consulta para APIs, alternativa a REST. El cliente pide exactamente los datos que necesita con una sintaxis simple, evitando el…"
 Fecha de actualización: 2026-07-15
 Nota previa: ""
 Nota siguiente: "[[01 - Information Disclosure]]"

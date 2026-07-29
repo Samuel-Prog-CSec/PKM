@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "Al construir peticiones a mano, los datos deben ir en el encoding que el servidor espera, o la petición se rompe"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[05 - Repeater - repetir y modificar peticiones]]"
 Nota siguiente: "[[07 - Proxying de herramientas]]"

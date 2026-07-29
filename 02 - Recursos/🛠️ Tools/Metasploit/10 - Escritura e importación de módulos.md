@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Explotacion
   - Metasploit
+Descripción: "Metasploit trae miles de exploits, pero un CVE recién publicado o un 0day no están todavía en el framework"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[09 - Meterpreter]]"
 Nota siguiente: "[[11 - MSFvenom]]"

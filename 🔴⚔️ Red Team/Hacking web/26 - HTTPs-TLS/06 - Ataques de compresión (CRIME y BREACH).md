@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "CRIME y BREACH explotan una verdad incómoda: comprimir antes de cifrar filtra información por el tamaño del texto cifrado"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[05 - Bleichenbacher y DROWN]]"
 Nota siguiente: "[[07 - Heartbleed]]"

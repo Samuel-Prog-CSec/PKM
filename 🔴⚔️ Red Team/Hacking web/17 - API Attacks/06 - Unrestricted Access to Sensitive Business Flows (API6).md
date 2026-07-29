@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "Todo negocio existe para generar ingresos"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[05 - Broken Function Level Authorization (API5)]]"
 Nota siguiente: "[[07 - Server-Side Request Forgery (API7)]]"

@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Linux
+Descripción: "SSH (*Secure Shell*) es el protocolo criptográfico estándar para administrar sistemas en remoto sobre una red insegura"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

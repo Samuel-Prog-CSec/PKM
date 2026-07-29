@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Seguridad/Prevencion-Vulnerabilidad
   - Server-Side/SSRF
+  - Tipo/Defensa
+Descripción: "Prevenir la SSRF se ataca en dos capas: la aplicación (qué se permite pedir) y la red (qué puede salir del servidor)"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[05 - Evasión de defensas SSRF]]"
 Nota siguiente: "[[07 - Arsenal de herramientas SSRF]]"

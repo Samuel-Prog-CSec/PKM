@@ -7,18 +7,16 @@ Autores:
   - Matt Hand
 Editorial: No Starch Press
 Año: 2024
-ISBN: "978-1-7185-0334-2"
-Portada: "03 - Archivos/Images/Biblioteca/Evading EDR.jpg"
+ISBN: 978-1-7185-0334-2
+Portada: 03 - Archivos/Images/Biblioteca/Evading EDR.jpg
 PDF: "[[evadingedr.pdf]]"
-Estado: Pendiente
+Estado: Aceptada
 Rating:
 Area: "[[Librería.base|Librería]]"
 ---
 ---
 
 # Evading EDR
-
-![Portada de Evading EDR](03 - Archivos/Images/Biblioteca/Evading EDR.jpg)
 
 **The Definitive Guide to Defeating Endpoint Detection Systems** — escrito por Matt Hand (operador de *red team* en SpecterOps), con Joe Desimone (ex-Elastic Security Labs) como revisor técnico.
 

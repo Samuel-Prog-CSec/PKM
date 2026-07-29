@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "En un assessment white-box de una aplicación Java compilada, el primer paso es recuperar el código fuente a partir del binario"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[00 - Introducción a PostgreSQL]]"
 Nota siguiente: "[[02 - Búsqueda de strings en el código]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

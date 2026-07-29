@@ -1,3 +1,10 @@
+formulas:
+  sub-tema: 'file.name.replace(".base", "")'
+properties:
+  formula.sub-tema:
+    displayName: Sub-tema
+  file.folder:
+    displayName: Ubicación
 views:
   - type: table
     name: Sub-temas
@@ -5,13 +12,13 @@ views:
       and:
         - file.ext == "base"
         - file.folder.startsWith("Ingenieria/♾️ Full-Stack")
-        - file.name != "Full-Stack"
+        - file.name != "Full-Stack.base"
     order:
-      - file.name
+      - formula.sub-tema
       - file.folder
     sort:
-      - property: file.name
+      - property: file.folder
         direction: ASC
     columnSize:
-      file.name: 280
+      formula.sub-tema: 320
       file.folder: 420

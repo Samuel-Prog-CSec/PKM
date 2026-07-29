@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - JavaScript
+Descripción: "El análisis reveló que secret.js envía un POST vacío a /serial.php"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[03 - Desofuscación y análisis de código]]"
 Nota siguiente:

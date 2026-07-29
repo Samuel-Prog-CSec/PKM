@@ -4,6 +4,8 @@ tags:
   - Windows
   - Pentesting/Enumeracion
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Active Directory (AD) es el servicio de directorio de Microsoft para redes Windows empresariales: una base de datos jerárquica y distribuida que centraliza la identidad y el…"
 Fecha de actualización: 2026-07-21
 Nota previa:
 Nota siguiente: "[[01 - Reconocimiento y enumeración externa]]"

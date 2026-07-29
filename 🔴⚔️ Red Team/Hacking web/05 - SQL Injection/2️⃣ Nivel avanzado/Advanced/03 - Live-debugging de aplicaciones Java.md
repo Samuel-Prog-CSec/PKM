@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "La búsqueda estática localiza las consultas sospechosas, pero a veces hay que ver en tiempo real cómo se transforma nuestra entrada antes de llegar a la query —especialmente…"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[02 - Búsqueda de strings en el código]]"
 Nota siguiente: "[[04 - Búsqueda de errores SQL en los logs]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

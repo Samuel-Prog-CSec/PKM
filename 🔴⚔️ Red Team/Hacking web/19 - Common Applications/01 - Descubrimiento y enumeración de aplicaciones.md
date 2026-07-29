@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Common-Applications
   - Pentesting/Enumeracion
+Descripción: "Antes de atacar aplicaciones hay que descubrirlas"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Introducción y metodología]]"
 Nota siguiente: "[[00 - Estructura y roles de WordPress]]"

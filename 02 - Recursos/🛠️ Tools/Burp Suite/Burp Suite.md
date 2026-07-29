@@ -1,9 +1,13 @@
 ---
 tags:
+  - Web/Red-Team
+  - Proxies
+  - Herramientas
+Descripción: "Burp Suite es el proxy web más común para pruebas de penetración web"
 Fecha de actualización: 2025-11-08
 Nota previa:
 Nota siguiente:
-Area: "[[Proxies web]]"
+Area: "[[Burp Suite.base|Burp Suite]]"
 ---
 ---
 

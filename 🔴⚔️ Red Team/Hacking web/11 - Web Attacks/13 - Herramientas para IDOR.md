@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - IDOR
+Descripción: "El IDOR es difícil de automatizar del todo (la máquina no sabe qué objeto 'debería' verse), así que las herramientas asisten el juicio humano: reproducen tráfico con otra…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[12 - Detección, evasión y prevención de IDOR]]"
 Nota siguiente: "[[14 - Introducción a XXE]]"

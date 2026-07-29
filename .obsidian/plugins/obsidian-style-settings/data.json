@@ -95,5 +95,7 @@
   "soft-paper-dark-settings@@sp-compact-bases": true,
   "soft-paper-dark-settings@@sp-compact-explorer": true,
   "soft-paper-dark-settings@@sp-compact-panes": true,
-  "soft-paper-dark-settings@@sp-hide-add-property": true
+  "soft-paper-dark-settings@@sp-hide-add-property": true,
+  "soft-paper-dark-settings@@sp-settings-transparent-80": false,
+  "soft-paper-dark-settings@@sp-compact-properties": true
 }

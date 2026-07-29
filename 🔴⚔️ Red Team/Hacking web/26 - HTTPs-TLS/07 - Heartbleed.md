@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "Heartbleed (CVE-2014-0160) no es un fallo del protocolo TLS sino de su implementación en OpenSSL. Es el arquetipo de cómo un bug de memoria en una librería criptográfica…"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[06 - Ataques de compresión (CRIME y BREACH)]]"
 Nota siguiente: "[[08 - SSL Stripping]]"

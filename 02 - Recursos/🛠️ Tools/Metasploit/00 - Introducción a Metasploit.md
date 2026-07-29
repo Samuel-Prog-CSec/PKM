@@ -3,6 +3,8 @@ tags:
   - Pentesting/Explotacion
   - Metasploit
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Metasploit Framework (MSF) es una plataforma modular de desarrollo y ejecución de exploits escrita en Ruby, mantenida por Rapid7"
 Fecha de actualización: 2026-07-18
 Nota previa: 
 Nota siguiente: "[[01 - MSFconsole]]"

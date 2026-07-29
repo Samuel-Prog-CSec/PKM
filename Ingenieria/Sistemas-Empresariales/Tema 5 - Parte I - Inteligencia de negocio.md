@@ -3,6 +3,7 @@ tags:
   - SIE/Tema5
   - SIE/BI
   - SIE
+Descripción: "El BI convierte datos → información → conocimiento para mejorar la toma de decisiones"
 Fecha de actualización: 2026-05-30
 Nota previa: "[[Tema 3 - Implantación de ERPs]]"
 Nota siguiente: "[[Tema 5 - Parte II - Gestión de procesos de negocio]]"

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - File-Upload
+  - Tipo/Deteccion
+Descripción: "En el lab, detectar es trivial: hay un formulario, subes un .php y ves el resultado"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[07 - Vectores avanzados - procesamiento, ZIP Slip y race conditions]]"
 Nota siguiente: "[[09 - Prevención de File Upload Attacks]]"

@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Escribir el oráculo y los algoritmos de extracción a mano es imprescindible para entender la blind SQLi y para los casos raros, pero en el día a día se automatiza"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[12 - MSSQL lectura de archivos]]"
 Nota siguiente: "[[14 - Defensa contra Blind SQL Injection]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

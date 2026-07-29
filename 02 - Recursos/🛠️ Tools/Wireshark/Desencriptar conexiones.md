@@ -6,7 +6,7 @@ tags:
 Fecha de actualización: 2025-08-29
 Nota previa: "[[Uso avanzado de Wireshark]]"
 Nota siguiente:
-Area: "[[Wireshark]]"
+Area: "[[Wireshark.base|Wireshark]]"
 ---
 ---
 

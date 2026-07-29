@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Enumeracion
+Descripción: "Con credenciales de dominio en la mano —aunque sean de un usuario sin privilegios— la enumeración cambia de marcha: ahora preguntas al dominio, autenticado, por usuarios…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[03 - Enumeración de controles de seguridad]]"
 Nota siguiente: "[[05 - Living Off the Land]]"

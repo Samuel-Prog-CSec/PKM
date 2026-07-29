@@ -2,6 +2,8 @@
 tags:
   - Pentesting/Vulnerabilidad
   - Escaneo/Vulnerabilidades
+  - Tipo/Introduccion
+Descripción: "Nessus (de Tenable) es el escáner de vulnerabilidades comercial de referencia: enorme base de *plugins*, rápido y con buen reporting"
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente: "[[01 - Escaneo y configuración avanzada]]"

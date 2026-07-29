@@ -3,6 +3,7 @@ tags:
   - Pentesting/Explotacion
   - Pentesting/Post-Explotacion
   - Metasploit
+Descripción: "Meterpreter es el payload avanzado de Metasploit: un agente que corre enteramente en memoria y ofrece una API completa de post-explotación — enumerar, escalar, robar…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[08 - Sesiones y Jobs]]"
 Nota siguiente: "[[10 - Escritura e importación de módulos]]"

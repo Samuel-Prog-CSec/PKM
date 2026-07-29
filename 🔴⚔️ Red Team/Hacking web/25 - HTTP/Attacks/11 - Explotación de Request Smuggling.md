@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Request-Smuggling
+Descripción: "Confirmada una desync (CL.TE/TE.CL/TE.TE), esta nota reúne qué se hace con ella"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[10 - Software vulnerable a smuggling]]"
 Nota siguiente: "[[12 - Herramientas y prevención de Request Smuggling]]"

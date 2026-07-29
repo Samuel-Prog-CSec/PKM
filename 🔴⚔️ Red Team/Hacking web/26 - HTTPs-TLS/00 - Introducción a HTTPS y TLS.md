@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+  - Tipo/Introduccion
+Descripción: "Este módulo ataca la criptografía de transporte, no la lógica de la aplicación"
 Fecha de actualización: 2026-07-14
 Nota previa: ""
 Nota siguiente: "[[01 - Infraestructura de Clave Pública (PKI)]]"

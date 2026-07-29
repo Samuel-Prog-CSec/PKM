@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "Tras el espacio, los caracteres que más se filtran son la barra / y la contrabarra \ —imprescindibles para rutas en Linux y Windows— y los propios operadores de inyección como ;"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[04 - Bypass de filtros de espacios]]"
 Nota siguiente: "[[06 - Bypass de comandos en blacklist]]"

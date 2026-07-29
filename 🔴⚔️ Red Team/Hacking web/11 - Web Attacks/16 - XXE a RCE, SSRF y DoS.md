@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XXE
+Descripción: "Más allá de leer ficheros, un XXE puede escalar a RCE, pivotar a la red interna con SSRF o tumbar el servidor con DoS. La viabilidad de cada uno varía mucho según el stack —…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[15 - Divulgación de archivos locales]]"
 Nota siguiente: "[[17 - Divulgación avanzada de archivos]]"

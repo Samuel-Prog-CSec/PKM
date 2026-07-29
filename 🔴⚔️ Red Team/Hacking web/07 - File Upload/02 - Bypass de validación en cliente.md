@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "Muchas aplicaciones validan el formato del fichero solo con JavaScript en el navegador, antes de enviarlo"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[01 - Explotación básica - web shells y reverse shells]]"
 Nota siguiente: "[[03 - Bypass de blacklist de extensiones]]"

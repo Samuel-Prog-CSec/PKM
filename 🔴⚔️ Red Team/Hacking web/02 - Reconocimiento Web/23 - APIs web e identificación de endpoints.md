@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "Una Web API es un conjunto de reglas que permite a distintas aplicaciones comunicarse por la web, intercambiando datos y servicios sin importar su tecnología"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[22 - Validación de hallazgos]]"
 Nota siguiente: "[[24 - Fuzzing de APIs]]"

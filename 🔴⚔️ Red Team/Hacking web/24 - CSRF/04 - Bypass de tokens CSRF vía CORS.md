@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - CORS
   - CSRF
+Descripción: "Un token CSRF bien implementado debería bloquear todo ataque cross-site: el atacante no puede adivinar el valor"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[03 - CORS Misconfigurations]]"
 Nota siguiente: "[[05 - Bypass de SameSite y defensas de cabecera]]"

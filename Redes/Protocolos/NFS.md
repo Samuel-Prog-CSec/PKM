@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Linux
+Descripción: "NFS (*Network File System*) es el sistema de ficheros en red de Sun Microsystems: acceder a un sistema de ficheros remoto como si fuera local"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

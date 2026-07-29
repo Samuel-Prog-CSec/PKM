@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "Hay dos tipos de XSS no persistente: el Reflected, que procesa el servidor back-end, y el DOM-based, que se procesa entero en el cliente"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[01 - XSS Almacenado]]"
 Nota siguiente: "[[03 - XSS basado en DOM]]"

@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "La SQLi time-based es el recurso cuando no hay ninguna diferencia observable en la respuesta: ni datos, ni errores, ni cambios de contenido"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[05 - Optimización de la extracción]]"
 Nota siguiente: "[[07 - Diseño del oráculo temporal]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

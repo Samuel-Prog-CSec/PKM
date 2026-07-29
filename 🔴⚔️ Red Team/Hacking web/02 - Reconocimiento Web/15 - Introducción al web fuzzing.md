@@ -4,6 +4,7 @@ tags:
   - Pentesting/Enumeracion
   - Fuzzing
   - Introduccion
+Descripción: "El web fuzzing prueba automáticamente entradas inesperadas o masivas contra una aplicación web para descubrir lo que no enlaza ni revela por sí sola"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[14 - Automatización del recon]]"
 Nota siguiente: "[[16 - Herramientas de fuzzing]]"

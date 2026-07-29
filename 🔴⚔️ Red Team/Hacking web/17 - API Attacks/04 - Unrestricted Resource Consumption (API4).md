@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "Una API es vulnerable a Unrestricted Resource Consumption si no limita las peticiones que consumen recursos — ancho de banda, CPU, memoria, almacenamiento"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[03 - Broken Object Property Level Authorization (API3)]]"
 Nota siguiente: "[[05 - Broken Function Level Authorization (API5)]]"

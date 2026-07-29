@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/H2
+Descripción: "El HTTP/2 Downgrading ocurre cuando el cliente habla HTTP/2 con el proxy inverso, pero el proxy habla HTTP/1.1 con el servidor"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[13 - Introducción a HTTP2]]"
 Nota siguiente: "[[15 - Más vulnerabilidades HTTP2]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - IDOR
+Descripción: "Hasta ahora el IDOR nos daba lectura de ficheros"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[09 - Bypass de referencias codificadas]]"
 Nota siguiente: "[[11 - Encadenamiento de IDOR]]"

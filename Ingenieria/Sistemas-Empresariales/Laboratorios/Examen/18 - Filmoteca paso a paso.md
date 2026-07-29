@@ -4,6 +4,7 @@ tags:
   - SIE/Examen
   - SIE/Modulos
   - SIE
+Descripción: "Resolución completa del examen de ejemplo (Práctica 6): un módulo Filmoteca que gestiona la emisión de películas y la asistencia de socios"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[17 - Cómo programa el profesor (estilo y buenas prácticas)]]"
 Nota siguiente: "[[19 - Variantes y práctica]]"

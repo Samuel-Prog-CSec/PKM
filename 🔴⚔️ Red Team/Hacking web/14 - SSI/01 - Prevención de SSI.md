@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Seguridad/Prevencion-Vulnerabilidad
   - Server-Side/SSI
+  - Tipo/Defensa
+Descripción: "La SSI Injection se previene como cualquier inyección —no dejar que el input del usuario forme directivas— más una capa de configuración del servidor que acota dónde y qué se…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00 - Inyección SSI (Server-Side Includes)]]"
 Nota siguiente: ""

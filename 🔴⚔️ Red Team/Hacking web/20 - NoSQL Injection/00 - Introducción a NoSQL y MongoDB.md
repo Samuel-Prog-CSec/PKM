@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - NoSQLi
+  - Tipo/Introduccion
+Descripción: "NoSQL ('Not only SQL') agrupa las bases de datos no relacionales: en lugar de tablas, filas y columnas, guardan los datos en estructuras flexibles"
 Fecha de actualización: 2026-07-16
 Nota previa: ""
 Nota siguiente: "[[01 - Introducción a la NoSQL injection]]"

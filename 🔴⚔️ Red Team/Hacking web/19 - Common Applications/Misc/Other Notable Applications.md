@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Common-Applications
   - Pentesting/Explotacion
+Descripción: "Ninguna lista cubre todas las aplicaciones"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[Attacking Applications Connecting to Services]]"
 Nota siguiente: "[[Endurecimiento de aplicaciones]]"

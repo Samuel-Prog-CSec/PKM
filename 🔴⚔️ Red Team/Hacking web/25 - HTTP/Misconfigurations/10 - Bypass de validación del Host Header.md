@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Host-Header
+Descripción: "Cuando la app valida el Host, la partida es la de siempre en seguridad web: romper una validación mal hecha"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[09 - Web Cache Poisoning por Host Header]]"
 Nota siguiente: "[[11 - Detección, herramientas y prevención de Host Header Attacks]]"

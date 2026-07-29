@@ -3,6 +3,8 @@ tags:
   - Pentesting/Explotacion
   - Pentesting/Post-Explotacion
   - Metasploit
+  - Tipo/Deteccion
+Descripción: "Metasploit es la herramienta ofensiva más analizada del planeta: cada firma, certificado y patrón por defecto lleva años catalogado por la defensa"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[11 - MSFvenom]]"
 Nota siguiente: "[[13 - Arsenal - automatización y alternativas]]"

@@ -4,6 +4,7 @@ tags:
   - Express
   - REST
   - Seguridad
+Descripción: "Las variables de entorno almacenan valores de configuración fuera del código, accesibles vía process.env"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[04-Mongoose y el patrón ODM en Express]]"
 Nota siguiente: "[[00-React.js, SPA y Virtual DOM]]"

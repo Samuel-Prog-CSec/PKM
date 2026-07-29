@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Seguridad/Prevencion-Vulnerabilidad
   - Server-Side/SSTI
+  - Tipo/Defensa
+Descripción: "La prevención de la SSTI parte de una regla simple, derivada de su causa raíz: la entrada del usuario nunca debe llegar al parámetro de plantilla de la función de render —solo a…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[04 - Evasión de filtros y sandbox en SSTI]]"
 Nota siguiente: "[[06 - Arsenal de herramientas SSTI]]"

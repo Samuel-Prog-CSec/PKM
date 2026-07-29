@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+Descripción: "FUZZ es el keyword por defecto, pero ffuf admite varias listas con nombres propios y distintos modos de combinarlas"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[00 - Introducción a ffuf]]"
 Nota siguiente: "[[02 - Fuzzing de directorios y archivos con ffuf]]"

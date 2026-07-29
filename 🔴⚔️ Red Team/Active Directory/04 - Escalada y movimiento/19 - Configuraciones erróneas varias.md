@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+Descripción: "No todo son exploits; muchos compromisos salen de configuraciones erróneas que se repiten en casi todos los dominios"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[18 - Vulnerabilidades bleeding-edge]]"
 Nota siguiente: "[[20 - Primer de trusts de dominio]]"

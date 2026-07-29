@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - SAML
+  - Tipo/Introduccion
+Descripción: "SAML (Security Assertion Markup Language) es un estándar XML para intercambiar autenticación y autorización entre partes, base del SSO empresarial"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[10 - Vulnerabilidades adicionales y prevención OAuth]]"
 Nota siguiente: "[[12 - Ataque de exclusión de firma SAML]]"

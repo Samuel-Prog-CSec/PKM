@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "El phishing con XSS inyecta un formulario de login falso en una página legítima para que la víctima envíe sus credenciales al servidor del atacante"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[07 - Defacing]]"
 Nota siguiente: "[[09 - Robo de sesión]]"

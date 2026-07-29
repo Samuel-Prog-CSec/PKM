@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - CSRF
+  - Tipo/Defensa
+Descripción: "Cuando no hay una CORS misconfiguration que explotar, quedan varias vías para sortear las defensas CSRF 'modernas'"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[04 - Bypass de tokens CSRF vía CORS]]"
 Nota siguiente: "[[06 - Tokens CSRF débiles y CSRF con JSON]]"

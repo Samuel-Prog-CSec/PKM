@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - osTicket
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "osTicket es un sistema de ticketing de soporte open-source (PHP + MySQL), comparable a Zendesk o Jira Service Desk"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[PRTG Network Monitor]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de GitLab]]"

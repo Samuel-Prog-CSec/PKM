@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Splunk
   - Pentesting/Explotacion
+Descripción: "Con acceso admin (o a un Splunk Free), el RCE se consigue subiendo una aplicación Splunk custom que ejecuta un script (Python en Linux, PowerShell/Batch en Windows)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de Splunk]]"
 Nota siguiente: "[[PRTG Network Monitor]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Command-Injection
+Descripción: "El espacio es uno de los caracteres más filtrados, y con lógica: un campo que espera una IP, un nombre de host o un número no debería contener espacios, así que bloquearlo no…"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[03 - Identificación de filtros y defensas]]"
 Nota siguiente: "[[05 - Bypass de caracteres en blacklist]]"

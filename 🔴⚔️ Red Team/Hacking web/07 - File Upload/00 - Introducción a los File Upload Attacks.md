@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - File-Upload
+  - Tipo/Introduccion
+Descripción: "Una vulnerabilidad de subida de ficheros (file upload) existe cuando una aplicación permite al usuario almacenar un fichero en el servidor sin validar correctamente su tipo…"
 Fecha de actualización: 2026-06-21
 Nota previa: ""
 Nota siguiente: "[[01 - Explotación básica - web shells y reverse shells]]"

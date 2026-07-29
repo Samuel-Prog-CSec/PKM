@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Explotacion
+Descripción: "Cada cierto tiempo aparece una vulnerabilidad específica de AD que lleva de un usuario cualquiera a Domain Admin en minutos"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[17 - El problema Double Hop de Kerberos]]"
 Nota siguiente: "[[19 - Configuraciones erróneas varias]]"

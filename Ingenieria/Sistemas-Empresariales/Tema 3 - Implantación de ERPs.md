@@ -3,6 +3,7 @@ tags:
   - SIE/Tema3
   - SIE/ERP
   - SIE
+Descripción: "Según *Rodríguez*/*Joana*, el ciclo se compone de cuatro fases básicas más dos procesos continuos"
 Fecha de actualización: 2026-05-25
 Nota previa: "[[Tema 2 - Soluciones de negocio]]"
 Nota siguiente: ""

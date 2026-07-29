@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - GitLab
   - Pentesting/Explotacion
+Descripción: "GitLab acumula cientos de CVEs; varias graves llevan a RCE. Dos frentes: acceso por credenciales (enumeración + spraying → secretos) y RCE por CVE"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Descubrimiento y enumeración de GitLab]]"
 Nota siguiente: "[[00 - Ataque a Tomcat CGI]]"

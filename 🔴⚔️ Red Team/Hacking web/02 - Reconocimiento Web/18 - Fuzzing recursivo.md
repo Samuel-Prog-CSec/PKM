@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "El fuzzing de directorios descubre carpetas en un nivel"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[17 - Fuzzing de directorios y archivos]]"
 Nota siguiente: "[[19 - Fuzzing de parámetros y valores]]"

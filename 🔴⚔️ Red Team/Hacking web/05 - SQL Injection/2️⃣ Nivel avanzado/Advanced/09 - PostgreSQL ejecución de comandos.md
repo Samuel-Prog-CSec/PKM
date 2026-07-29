@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "La escalada máxima en PostgreSQL: convertir la SQLi en ejecución de comandos del sistema —el equivalente a xp_cmdshell en MSSQL o la web shell en MySQL—"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[08 - PostgreSQL lectura y escritura de archivos]]"
 Nota siguiente: "[[10 - Prevención de SQL Injection]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

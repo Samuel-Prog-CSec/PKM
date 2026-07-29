@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
   - File-Inclusion
+  - Tipo/Arsenal
+Descripción: "Inventario de las herramientas que cubren el ciclo completo de file inclusion: descubrimiento de parámetros → detección → explotación (RCE y lectura ciega) → evasión → hosting…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[10 - Prevención de File Inclusion]]"
 Nota siguiente: ""

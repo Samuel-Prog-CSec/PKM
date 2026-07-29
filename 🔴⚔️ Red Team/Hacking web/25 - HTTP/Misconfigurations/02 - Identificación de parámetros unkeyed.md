@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/Cache-Poisoning
+Descripción: "El primer paso de todo cache poisoning es encontrar una entrada unkeyed que llegue reflejada a la respuesta"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[01 - Introducción a Web Cache Poisoning]]"
 Nota siguiente: "[[03 - Ataques de Web Cache Poisoning]]"

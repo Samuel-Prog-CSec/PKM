@@ -4,6 +4,7 @@ tags:
   - Express
   - Mongoose
   - MongoDB
+Descripción: "Un ODM (Object Document Mapper) es un mapeador que traduce entre un modelo de objetos y una base de datos de documentos (como MongoDB), igual que un ORM (Object Relational…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[03-CRUD, métodos HTTP y códigos de estado]]"
 Nota siguiente: "[[05-Seguridad de APIs REST (tokens y JWT)]]"

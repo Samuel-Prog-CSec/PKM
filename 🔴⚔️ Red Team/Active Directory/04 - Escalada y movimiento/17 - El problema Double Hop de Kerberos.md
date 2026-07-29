@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Post-Explotacion
+Descripción: "El 'double hop' es el problema de que tus credenciales no viajan al segundo salto"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[16 - Acceso privilegiado]]"
 Nota siguiente: "[[18 - Vulnerabilidades bleeding-edge]]"

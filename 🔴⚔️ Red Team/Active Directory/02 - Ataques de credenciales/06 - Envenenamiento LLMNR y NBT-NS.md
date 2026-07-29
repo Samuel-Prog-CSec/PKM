@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Explotacion
+Descripción: "El envenenamiento de LLMNR/NBT-NS suele ser el primer ataque que da credenciales sin tener ninguna"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[05 - Living Off the Land]]"
 Nota siguiente: "[[07 - Password Spraying - visión general]]"

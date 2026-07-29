@@ -2,6 +2,7 @@
 tags:
   - GPSI
   - Planificacion-Estrategica
+Descripción: "Los SI sobre TI ayudan a cumplir los objetivos de negocio, pero incorporar tecnología siempre implica un cambio en la forma de trabajar"
 Fecha de actualización: 2026-06-13
 Nota previa:
 Nota siguiente: "[[002 - Planificación de Proyectos Software]]"

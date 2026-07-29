@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
   - Command-Injection
+  - Tipo/Arsenal
+Descripción: "El módulo enseña a entender la command injection a bajo nivel —imprescindible para reconocerla y exprimirla—"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[09 - Prevención de Command Injection]]"
 Nota siguiente: "[[11 - Argument injection]]"

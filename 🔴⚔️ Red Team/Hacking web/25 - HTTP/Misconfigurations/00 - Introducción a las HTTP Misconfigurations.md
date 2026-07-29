@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP
+  - Tipo/Introduccion
+Descripción: "Este módulo no ataca la aplicación en aislamiento, sino su despliegue real: los sistemas que la rodean —cachés web, proxies inversos, balanceadores— y las peculiaridades del…"
 Fecha de actualización: 2026-07-14
 Nota previa: ""
 Nota siguiente: "[[01 - Introducción a Web Cache Poisoning]]"

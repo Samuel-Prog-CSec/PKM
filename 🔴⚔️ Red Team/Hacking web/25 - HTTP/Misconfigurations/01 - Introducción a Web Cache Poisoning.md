@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Cache-Poisoning
+  - Tipo/Introduccion
+Descripción: "El Web Cache Poisoning fuerza a una caché a almacenar y servir contenido malicioso a todos los usuarios que pidan un recurso"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[00 - Introducción a las HTTP Misconfigurations]]"
 Nota siguiente: "[[02 - Identificación de parámetros unkeyed]]"

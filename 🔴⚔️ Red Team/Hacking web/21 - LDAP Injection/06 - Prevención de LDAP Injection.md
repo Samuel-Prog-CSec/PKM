@@ -2,6 +2,8 @@
 tags:
   - Web/Red-Team
   - LDAP
+  - Tipo/Defensa
+Descripción: "La LDAP injection es más rara que la SQLi, así que hay mucha menos concienciación — potencialmente existe en cualquier aplicación con integración LDAP/AD. La buena noticia: las…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[05 - Arsenal de herramientas LDAP]]"
 Nota siguiente: ""

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - PDF-Injection
   - Pentesting/Explotacion
+Descripción: "La HTML injection en un generador de PDF escala a tres impactos según lo que permita el motor: ejecución de JavaScript (server-side), SSRF y LFI. Se prueban en ese orden porque…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Detección y fingerprinting de generadores de PDF]]"
 Nota siguiente: "[[03 - Arsenal de herramientas para PDF Injection]]"

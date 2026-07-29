@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/CRLF
+Descripción: "El HTTP Response Splitting es la variante grave de CRLF injection: cuando el servidor refleja input en una cabecera de respuesta sin sanear, inyectar \r\n rompe la cabecera…"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[02 - Log Injection]]"
 Nota siguiente: "[[04 - SMTP Header Injection]]"

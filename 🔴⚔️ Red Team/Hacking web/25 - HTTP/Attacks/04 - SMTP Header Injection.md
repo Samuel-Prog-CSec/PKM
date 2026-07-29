@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/CRLF
+Descripción: "La SMTP Header Injection (o *Email Injection*) aplica la CRLF injection al correo"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[03 - HTTP Response Splitting]]"
 Nota siguiente: "[[05 - Prevención y herramientas de CRLF]]"

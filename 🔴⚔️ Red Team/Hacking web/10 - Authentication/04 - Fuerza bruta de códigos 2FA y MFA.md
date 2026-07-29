@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "El MFA debería hacer inútil una contraseña robada"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[03 - Fuerza bruta de tokens de reset]]"
 Nota siguiente: "[[05 - Bypass de protecciones anti-fuerza-bruta]]"

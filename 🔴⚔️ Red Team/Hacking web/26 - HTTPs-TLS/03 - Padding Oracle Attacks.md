@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "Un padding oracle es un ataque criptográfico que surge cuando el servidor filtra de forma observable si el padding de un texto cifrado en modo CBC es correcto tras descifrarlo"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[02 - Handshake TLS 1.2 y 1.3]]"
 Nota siguiente: "[[04 - POODLE y BEAST]]"

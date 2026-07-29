@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "La autenticación está rota cuando depende de la presencia o el valor de un parámetro HTTP que el cliente controla"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[08 - Bypass de autenticación - acceso directo]]"
 Nota siguiente: "[[10 - Ataques a tokens de sesión]]"

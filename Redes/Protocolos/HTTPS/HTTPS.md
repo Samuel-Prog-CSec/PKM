@@ -1,10 +1,13 @@
 ---
 tags:
   - Redes
+  - Protocolos
   - HTTPS
   - TLS
   - Web
+Descripción: "El Hypertext Transfer Protocol Secure (HTTPS) no es un protocolo nuevo: es HTTP transportado dentro de TLS. En la pila de red, TLS se sitúa entre TCP y la capa de aplicación, de…"
 Fecha de actualización: 2026-07-14
+Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---
 ---
 

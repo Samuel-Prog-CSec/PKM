@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/H2
+  - Tipo/Introduccion
+Descripción: "HTTP/2 (2015) reduce latencia y mejora rendimiento, y —clave para este bloque— cierra de raíz el request smuggling cuando se usa bien"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[12 - Herramientas y prevención de Request Smuggling]]"
 Nota siguiente: "[[14 - HTTP2 Downgrading]]"

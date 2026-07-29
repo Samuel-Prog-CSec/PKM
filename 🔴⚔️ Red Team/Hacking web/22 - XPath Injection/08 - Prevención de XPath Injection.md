@@ -2,6 +2,8 @@
 tags:
   - Web/Red-Team
   - XPath
+  - Tipo/Defensa
+Descripción: "La XPath injection se previene, pero con un matiz que la diferencia de la SQLi: no existe un mecanismo de consultas parametrizadas universal para XPath en todos los lenguajes y…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[07 - Arsenal de herramientas XPath]]"
 Nota siguiente: ""

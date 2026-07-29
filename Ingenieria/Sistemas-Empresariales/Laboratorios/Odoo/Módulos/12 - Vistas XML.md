@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Los modelos guardan datos; las vistas deciden cómo se ven y editan"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[11 - Herencia de modelos y de vistas]]"
 Nota siguiente: "[[13 - Acciones y menús]]"

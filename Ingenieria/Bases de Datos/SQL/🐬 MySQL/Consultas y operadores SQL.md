@@ -1,7 +1,8 @@
 ---
 tags:
-  - Bases de Datos
+  - Bases-de-Datos
   - SQL
+Descripción: "Controlar *qué* registros devuelve una consulta y *en qué orden* es lo que hacen las cláusulas WHERE, ORDER BY, LIMIT y LIKE junto a los operadores lógicos"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[💬 Sentencias SQL]]"
 Nota siguiente:
@@ -23,7 +24,7 @@ SELECT * FROM logins WHERE username = 'admin';
 > [!warning]+
 > Los valores de tipo cadena y fecha van **entre comillas** (`'` o `"`); los números, directos. <mark style="background: #FF5582A6;">Ese par de comillas es el corazón de la inyección clásica</mark>: si la entrada del usuario se inserta dentro de las comillas sin sanear, una comilla extra rompe el literal y todo lo que sigue se interpreta como SQL. De ahí que el primer test de detección sea, casi siempre, inyectar una sola comilla.
 
-Manipular la condición `WHERE` para que sea siempre verdadera (`' OR 1=1 -- -`) es la base del bypass de autenticación que se detalla en [[01 - Subvertir la lógica de consulta]].
+Manipular la condición `WHERE` para que sea siempre verdadera (`' OR 1=1 -- -`) es la base del bypass de autenticación que se detalla en [[02 - Subvertir la lógica de consulta]].
 
 # `ORDER BY` — ordenar resultados
 
@@ -90,4 +91,4 @@ Así, en `WHERE username != 'tom' AND id > 3 - 2`, primero se evalúa `3 - 2 = 1
 > [!important]+
 > <mark style="background: #FF5582A6;">La precedencia explica por qué `OR 1=1` es tan eficaz</mark>: al tener `OR` la prioridad más baja, se evalúa el último, de modo que `usuario_inyectado' OR 1=1` hace verdadera toda la condición sin importar el resto. Entender este orden es lo que permite construir payloads que se ejecutan como uno espera —y depurarlos cuando un WAF o un filtro alteran el resultado—.
 
-Con los fundamentos de SQL cubiertos, el salto natural es ver cómo todo esto se vuelve un arma en [[00 - Introducción a SQL Injection]] y, en concreto, cómo se [[01 - Subvertir la lógica de consulta|subvierte la lógica de una consulta]].
+Con los fundamentos de SQL cubiertos, el salto natural es ver cómo todo esto se vuelve un arma en [[00 - Introducción a SQL Injection]] y, en concreto, cómo se [[02 - Subvertir la lógica de consulta|subvierte la lógica de una consulta]].

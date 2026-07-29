@@ -5,6 +5,7 @@ tags:
   - SIE/SCM
   - SIE/CRM
   - SIE
+Descripción: "Surgen como respuesta a la fragmentación de los SI departamentales del modelo vertical: cada área tenía su propio software, con duplicación de datos y visión parcial del negocio"
 Fecha de actualización: 2026-05-25
 Nota previa: "[[Tema 1 - Introducción a los SI Empresariales]]"
 Nota siguiente: "[[Tema 3 - Implantación de ERPs]]"

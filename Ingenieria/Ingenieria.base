@@ -1,0 +1,52 @@
+formulas:
+  área: file.name.replace(".base", "")
+properties:
+  formula.área:
+    displayName: Área
+  file.folder:
+    displayName: Ubicación
+views:
+  - type: cards
+    name: Áreas
+    filters:
+      and:
+        - file.ext == "base"
+        - /^Ingenieria\/[^\/]+$/.matches(file.folder)
+    order:
+      - formula.área
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 300
+  - type: table
+    name: Sub-temas
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("Ingenieria/")
+        - "!/^Ingenieria\\/[^\\/]+$/.matches(file.folder)"
+    order:
+      - formula.área
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      formula.área: 320
+      file.folder: 420
+  - type: table
+    name: Deuda · sin frontmatter
+    filters:
+      and:
+        - file.inFolder("Ingenieria")
+        - file.ext == "md"
+        - '!file.hasProperty("Area")'
+    order:
+      - file.name
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      file.name: 420
+      file.folder: 400

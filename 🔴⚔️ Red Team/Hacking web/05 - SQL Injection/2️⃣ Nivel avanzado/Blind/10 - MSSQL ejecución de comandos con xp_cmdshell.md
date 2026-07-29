@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Si la inyección se ejecuta como el usuario sa (o cualquier cuenta con rol sysadmin), MSSQL permite ejecutar comandos arbitrarios del sistema operativo vía xp_cmdshell"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[09 - Exfiltración Out-of-Band por DNS]]"
 Nota siguiente: "[[11 - MSSQL robo de hashes NetNTLM]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

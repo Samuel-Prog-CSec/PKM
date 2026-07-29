@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - CGI
   - Pentesting/Explotacion
+Descripción: "Los scripts CGI (en /cgi-bin/, escritos en Perl, C, Bash…) corren en el contexto del servidor web (normalmente www-data)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Ataque a Tomcat CGI]]"
 Nota siguiente: "[[00 - Ataque a thick clients]]"

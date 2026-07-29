@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "La extracción boolean y time-based son lentas: miles de peticiones para una sola tabla"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[08 - Extracción de datos time-based]]"
 Nota siguiente: "[[10 - MSSQL ejecución de comandos con xp_cmdshell]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

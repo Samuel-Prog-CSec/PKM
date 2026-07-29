@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "Cuando no podemos subir un fichero ni incluir uno remoto, queda una tercera vía a RCE: que sea el propio servidor quien escriba nuestro código en un fichero"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[06 - LFI + File Upload a RCE]]"
 Nota siguiente: "[[08 - Detección y fuzzing automatizado]]"

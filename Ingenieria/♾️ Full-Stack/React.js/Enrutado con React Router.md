@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "React Router es la librería de enrutado del cliente: asocia rutas (URLs) a los componentes y páginas que la aplicación renderiza según dónde se encuentre el usuario"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Propiedades y estado en React]]"
 Nota siguiente: "[[Consumo de APIs REST con axios]]"

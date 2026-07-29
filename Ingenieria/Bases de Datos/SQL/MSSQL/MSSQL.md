@@ -1,7 +1,8 @@
 ---
 tags:
-  - Bases de Datos
+  - Bases-de-Datos
   - SQL
+Descripción: "Microsoft SQL Server (MSSQL) es el RDBMS de Microsoft, profundamente integrado con Windows y Active Directory"
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente:

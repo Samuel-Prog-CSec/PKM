@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "SQLMap escupe muchísima información durante un escaneo"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[00 - Introducción a SQLMap]]"
 Nota siguiente: "[[02 - SQLMap sobre peticiones HTTP]]"

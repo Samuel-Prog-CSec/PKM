@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "Saber que el puerto 80 está abierto vale poco; saber que corre Apache httpd 2.4.29 lo cambia todo"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[02 - Escaneo de puertos y hosts]]"
 Nota siguiente: "[[04 - Nmap Scripting Engine (NSE)]]"

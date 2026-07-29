@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Host-Header
+Descripción: "El Password Reset Poisoning es de los host header attacks más rentables: termina en account takeover"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[07 - Bypass de autenticación por Host Header]]"
 Nota siguiente: "[[09 - Web Cache Poisoning por Host Header]]"

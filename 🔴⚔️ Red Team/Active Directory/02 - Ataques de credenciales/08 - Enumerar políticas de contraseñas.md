@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "Antes de rociar necesitas la política de contraseñas del dominio: sobre todo el umbral de bloqueo (lockout threshold) y la ventana de observación (observation window), que…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[07 - Password Spraying - visión general]]"
 Nota siguiente: "[[09 - Construir la lista de usuarios objetivo]]"

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Host-Header
+  - Tipo/Introduccion
+Descripción: "La cabecera Host es obligatoria desde HTTP/1.1 e indica a qué host va la petición"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[05 - Detección, herramientas y prevención de Cache Poisoning]]"
 Nota siguiente: "[[07 - Bypass de autenticación por Host Header]]"

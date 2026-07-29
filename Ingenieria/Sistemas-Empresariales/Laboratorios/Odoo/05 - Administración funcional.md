@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Odoo
   - SIE
+Descripción: "Antes de programar conviene moverse con soltura por la interfaz: instalar módulos, gestionar usuarios y permisos, y manejar los datos maestros (contactos y productos)"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[04 - Instalación con Docker]]"
 Nota siguiente: "[[06 - Operativa compra-venta]]"

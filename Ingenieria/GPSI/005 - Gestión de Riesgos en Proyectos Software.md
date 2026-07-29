@@ -2,6 +2,7 @@
 tags:
   - GPSI
   - Gestion-Riesgos
+Descripción: "Un riesgo es un evento o condición incierta que, si ocurre, tiene un efecto positivo o negativo sobre los objetivos del proyecto"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[004 - Estimación del Software]]"
 Nota siguiente:

@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+Descripción: "Con credenciales válidas, el siguiente paso suele ser ejecutar en otros hosts"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[15 - DCSync]]"
 Nota siguiente: "[[17 - El problema Double Hop de Kerberos]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - GraphQL
+Descripción: "GraphQL es solo una capa de consulta: si los resolvers construyen consultas SQL, comandos o HTML con los argumentos sin sanear, las inyecciones clásicas siguen vivas"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[02 - IDOR en GraphQL]]"
 Nota siguiente: "[[04 - Denegación de servicio (DoS) y Batching]]"

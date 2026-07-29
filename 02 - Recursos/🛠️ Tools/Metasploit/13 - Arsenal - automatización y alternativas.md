@@ -3,6 +3,8 @@ tags:
   - Pentesting/Explotacion
   - Pentesting/Post-Explotacion
   - Metasploit
+  - Tipo/Arsenal
+Descripción: "Cierre del sub-tema: cómo automatizar Metasploit y —igual de importante— cuándo cambiarlo por otra herramienta"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[12 - Detección y evasión]]"
 Nota siguiente: 

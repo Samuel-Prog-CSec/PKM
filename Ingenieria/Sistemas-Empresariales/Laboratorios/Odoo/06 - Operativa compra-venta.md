@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Odoo
   - SIE
+Descripción: "Esta nota recorre los flujos de negocio de extremo a extremo (Práctica 3): cómo una compra y una venta atraviesan inventario, facturación y contabilidad"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[05 - Administración funcional]]"
 Nota siguiente: "[[07 - Servicios web XML-RPC]]"

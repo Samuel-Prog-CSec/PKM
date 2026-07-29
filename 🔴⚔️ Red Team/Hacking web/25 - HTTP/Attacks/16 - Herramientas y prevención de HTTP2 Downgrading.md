@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/H2
+  - Tipo/Defensa
+Descripción: "Cierre del bloque HTTP/2 y del módulo: cómo detectar el downgrade smuggling con herramientas y la prevención de fondo"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[15 - Más vulnerabilidades HTTP2]]"
 Nota siguiente: ""

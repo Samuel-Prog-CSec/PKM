@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - File-Inclusion
+  - Tipo/Introduccion
+Descripción: "Los lenguajes de back-end modernos —PHP, JavaScript, Java, .NET— usan parámetros HTTP para decidir qué se muestra en la página: construyen páginas dinámicas cargando recursos…"
 Fecha de actualización: 2026-06-21
 Nota previa: ""
 Nota siguiente: "[[01 - Local File Inclusion (LFI)]]"

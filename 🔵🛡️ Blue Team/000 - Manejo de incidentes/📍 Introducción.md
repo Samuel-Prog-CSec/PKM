@@ -1,3 +1,16 @@
+---
+tags:
+  - Blue-Team
+  - Incident-Response
+  - Introduccion
+Descripción: "El manejo de incidentes (IH, '*Incident Handling*') se ha convertido en una parte importante de la capacidad defensiva de una organización contra el delito cibernético"
+Fecha de actualización: 2025-07-11
+Nota previa: 
+Nota siguiente: "[[🚨⚙️ Proceso de manejo de incidentes]]"
+Area: "[[Manejo de incidentes.base|Manejo de incidentes]]"
+---
+---
+
 El **manejo de incidentes** (`IH`, "*Incident Handling*") se ha convertido en una parte importante de la capacidad defensiva de una organización contra el delito cibernético. Si bien las medidas de protección se implementan constantemente para prevenir o reducir la cantidad de incidentes de seguridad, una ==capacidad de manejo de incidentes es innegablemente una necesidad para cualquier organización== que no pueda permitirse un compromiso de su confidencialidad, integridad o disponibilidad de datos. Algunas organizaciones optan por implementar esta capacidad internamente, mientras que otras confían en proveedores externos para apoyarlos, de forma continua o cuando sea necesario. Antes de sumergirnos en el mundo de los incidentes de seguridad, definamos algunos términos y establezcamos una comprensión común de ellos.
 
 Un **event (evento)** es una ==acción que ocurre en un sistema o red==. Ejemplos de eventos son:

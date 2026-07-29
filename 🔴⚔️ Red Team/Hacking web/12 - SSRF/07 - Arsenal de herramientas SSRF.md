@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
   - Server-Side/SSRF
+  - Tipo/Arsenal
+Descripción: "Herramientas que cubren el ciclo de la SSRF: confirmación OOB → enumeración interna → explotación con gopher:// → fuzzing de bypasses → DNS rebinding"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[06 - Prevención de SSRF]]"
 Nota siguiente: ""

@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - OAuth
+Descripción: "La clase de vulnerabilidad OAuth más grave: la fuga del authorization code (o el access token) al atacante por una validación deficiente del redirect_uri"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[07 - Introducción a OAuth 2.0]]"
 Nota siguiente: "[[09 - Protección CSRF deficiente en OAuth]]"
@@ -12,6 +13,9 @@ Area: "[[Authentication Avanzado.base|Authentication Avanzado]]"
 ---
 
 La clase de vulnerabilidad OAuth más grave: <mark style="background: #ADCCFFA6;">la fuga del `authorization code` (o el access token) al atacante por una validación deficiente del `redirect_uri`.</mark> Si el authorization server no verifica bien a dónde redirige, el atacante desvía el código de la víctima a su propio servidor y completa el flujo en su nombre — account takeover total.
+
+> [!example]+ Caso real — Robo de tokens de login de Microsoft · $13.000
+> Jack Whitton vio que el flujo validaba el `wreply` en **dos pasos**: un chequeo de que la URL parecía bien formada y, después, un **URL-decode recursivo**. Con doble-encoding de una barra y un `@example.com` (`…outlook.office.com%252f@example.com`) pasaba el chequeo, pero tras decodificar resolvía a `https://outlook.office.com/@example.com` — que por las reglas de parseo de URL autentica contra el host **`example.com`** (todo lo anterior al `@` es *userinfo*). Microsoft POSTeaba el token a ese dominio. **Lección**: prueba siempre `@<tu-dominio>` en los parámetros de redirect, sobre todo si el flujo **decodifica recursivamente** — el desajuste validar-una-vez/decodificar-recursivo es lo que lo convierte en ladrón de tokens.
 
 # El ataque: desviar el `redirect_uri`
 
@@ -52,10 +56,10 @@ En el mundo real el `redirect_uri` suele validarse contra un whitelist. Un valor
 | "contiene `academy.htb`" | `http://attacker.htb/callback?a=http://academy.htb` (query) |
 | el dominio en cualquier parte | `http://attacker.htb/callback#http://academy.htb` (fragmento) |
 
-<mark style="background: #FF5582A6;">El clásico es el `@`</mark>: `http://academy.htb@attacker.htb` — para el parser, `academy.htb` es el *userinfo* y el host real es `attacker.htb`, pero una validación por substring lo da por bueno. Estos bypasses son los mismos que en [[02 - Identificación de SSRF|SSRF]] y open redirect: parsing de URL roto.
+<mark style="background: #FF5582A6;">El clásico es el `@`</mark>: `http://academy.htb@attacker.htb` — para el parser, `academy.htb` es el *userinfo* y el host real es `attacker.htb`, pero una validación por substring lo da por bueno. Estos bypasses son los mismos que en [[02 - Identificación de SSRF|SSRF]] y [[01 - Bypasses de validación y chaining de Open Redirect|open redirect]]: parsing de URL roto.
 
 > [!warning]+ Open redirect en el cliente: el mismo robo sin tocar el redirect_uri
-> Aunque el `redirect_uri` esté bien validado contra el dominio del cliente, si **dentro** de ese dominio existe un [[open redirect]], el atacante encadena: `redirect_uri=http://academy.htb/redirect?url=http://attacker.htb`. El authz server acepta el dominio legítimo, y el open redirect reenvía el código al atacante. Por eso un open redirect "de bajo impacto" se vuelve crítico en presencia de OAuth.
+> Aunque el `redirect_uri` esté bien validado contra el dominio del cliente, si **dentro** de ese dominio existe un [[00 - Introducción a Open Redirect|open redirect]], el atacante encadena: `redirect_uri=http://academy.htb/redirect?url=http://attacker.htb`. El authz server acepta el dominio legítimo, y el open redirect reenvía el código al atacante. Por eso un open redirect "de bajo impacto" se vuelve crítico en presencia de OAuth.
 
 # Prevención
 

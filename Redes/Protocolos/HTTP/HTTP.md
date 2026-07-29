@@ -1,9 +1,12 @@
 ---
 tags:
   - Redes
+  - Protocolos
   - HTTP
   - Web
+Descripción: "El Hypertext Transfer Protocol (HTTP) es el protocolo de la capa de aplicación sobre el que se construye la web"
 Fecha de actualización: 2026-07-14
+Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---
 ---
 

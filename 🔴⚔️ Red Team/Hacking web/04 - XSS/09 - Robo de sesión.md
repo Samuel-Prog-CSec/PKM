@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "Las apps usan cookies para mantener la sesión: el usuario inicia sesión una vez y sigue autenticado en visitas posteriores"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[08 - Phishing]]"
 Nota siguiente: "[[10 - Prevención de XSS]]"

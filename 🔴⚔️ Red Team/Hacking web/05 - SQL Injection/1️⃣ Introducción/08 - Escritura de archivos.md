@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Escribir ficheros es la escalada máxima de una SQL injection: permite dejar una web shell en el webroot y obtener ejecución de comandos en el servidor"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[07 - Lectura de archivos]]"
 Nota siguiente: "[[09 - Mitigación de SQL Injection]]"

@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "La SQLi boolean-based se identifica en dos pasos: encontrar el punto de inyección y confirmar que la respuesta cambia de forma binaria según la lógica inyectada"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[01 - Introducción a Blind SQL Injection]]"
 Nota siguiente: "[[03 - Diseño del oráculo booleano]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

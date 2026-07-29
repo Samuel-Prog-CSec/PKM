@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "Cuando entre tú y el objetivo hay un firewall y un IDS/IPS, el escaneo directo se topa con puertos filtered y, si eres ruidoso, con un bloqueo de tu IP. Nmap trae varias…"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[06 - Guardar y explotar resultados]]"
 Nota siguiente: "[[08 - Detección de escaneos y evasión moderna]]"

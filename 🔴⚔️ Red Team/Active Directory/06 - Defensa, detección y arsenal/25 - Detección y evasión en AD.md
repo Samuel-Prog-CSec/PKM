@@ -3,6 +3,8 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Post-Explotacion
+  - Tipo/Deteccion
+Descripción: "Todas las notas de esta área apuntan aquí"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[24 - Auditoría avanzada en AD]]"
 Nota siguiente: "[[26 - Arsenal de herramientas AD]]"

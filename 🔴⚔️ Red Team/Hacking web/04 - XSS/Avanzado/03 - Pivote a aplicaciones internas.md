@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "Un paso más allá de enumerar APIs internas: usar el XSS para identificar y explotar vulnerabilidades en aplicaciones internas completas que el atacante no alcanza"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[02 - Enumeración de APIs internas]]"
 Nota siguiente: "[[04 - Content Security Policy (CSP)]]"

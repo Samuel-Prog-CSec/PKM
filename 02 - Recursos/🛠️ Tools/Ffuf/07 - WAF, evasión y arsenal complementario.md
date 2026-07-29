@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+  - Tipo/Arsenal
+Descripción: "HTB enseña ffuf como si el objetivo no tuviera defensas"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[06 - Opciones avanzadas y rendimiento]]"
 Nota siguiente: 

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - PDF-Injection
+  - Tipo/Introduccion
+Descripción: "Muchas aplicaciones generan PDFs —facturas, informes, tickets— a partir de datos del usuario"
 Fecha de actualización: 2026-07-16
 Nota previa: ""
 Nota siguiente: "[[01 - Detección y fingerprinting de generadores de PDF]]"

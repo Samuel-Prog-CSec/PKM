@@ -2,6 +2,8 @@
 tags:
   - Web/Red-Team
   - NoSQLi
+  - Tipo/Defensa
+Descripción: "A diferencia de SQL, MongoDB no tiene consultas parametrizadas como defensa universal, así que la prevención es distinta"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[08 - Arsenal de herramientas para NoSQL]]"
 Nota siguiente: ""

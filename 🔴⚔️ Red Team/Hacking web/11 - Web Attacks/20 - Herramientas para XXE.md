@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XXE
+Descripción: "Arsenal para detectar y explotar XXE: exploitation automática, entrega vía ficheros (el vector moderno), y detección ciega con canales OOB. Cierra el módulo Web Attacks"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[19 - Detección, evasión y prevención de XXE]]"
 Nota siguiente: ""

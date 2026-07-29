@@ -3,6 +3,7 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+Descripción: "Guardar cada escaneo no es opcional en un engagement: sirve para comparar técnicas, alimentar otras herramientas y, sobre todo, aportar evidencia en el informe"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[05 - Rendimiento y timing]]"
 Nota siguiente: "[[07 - Evasión de firewalls, IDS e IPS]]"

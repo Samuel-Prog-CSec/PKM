@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - Server-Side
+  - Tipo/Introduccion
+Descripción: "Los ataques server-side apuntan a la aplicación o el servicio que corre en el servidor, a diferencia de los client-side, que se ejecutan en la máquina del cliente"
 Fecha de actualización: 2026-06-22
 Nota previa: ""
 Nota siguiente: "[[01 - Introducción a SSRF]]"

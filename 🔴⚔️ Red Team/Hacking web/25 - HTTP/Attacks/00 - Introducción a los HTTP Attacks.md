@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP
+  - Tipo/Introduccion
+Descripción: "Este módulo ataca el protocolo HTTP en sí cuando varios sistemas —navegador, proxy inverso, servidor— lo interpretan de forma inconsistente"
 Fecha de actualización: 2026-07-14
 Nota previa: ""
 Nota siguiente: "[[01 - Introducción a CRLF Injection]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - IIS
   - Pentesting/Enumeracion
+Descripción: "Windows genera nombres cortos 8.3 (NOMBRE~1.EXT) para compatibilidad"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a ColdFusion]]"
 Nota siguiente: "[[Attacking LDAP]]"

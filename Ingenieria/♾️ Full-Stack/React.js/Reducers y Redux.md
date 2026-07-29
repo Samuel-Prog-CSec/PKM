@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "Cuando una aplicación tiene muchos componentes con estados que cambian constantemente, gestionarlos de forma eficiente se vuelve complejo"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Consumo de APIs REST con axios]]"
 Nota siguiente: "[[Hooks en React]]"

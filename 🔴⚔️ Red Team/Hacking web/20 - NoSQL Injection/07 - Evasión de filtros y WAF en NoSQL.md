@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Explotacion
+Descripción: "Igual que en el resto de inyecciones, lo que separa al profesional es explotar a pesar de los filtros"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[06 - Server-Side JavaScript Injection]]"
 Nota siguiente: "[[08 - Arsenal de herramientas para NoSQL]]"

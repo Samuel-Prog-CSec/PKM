@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Drupal
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "Drupal es un CMS open-source en PHP (backend MySQL, PostgreSQL o SQLite), extensible con temas y módulos, y el tercer CMS más usado tras WordPress y Joomla"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a Joomla]]"
 Nota siguiente: "[[01 - Ataques a Drupal]]"

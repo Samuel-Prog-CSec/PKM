@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+Descripción: "Los flags que convierten ffuf de 'rápido y ruidoso' en 'controlado y encajable en un flujo real': velocidad regulada, peticiones complejas desde Burp, proxy y salida reutilizable"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[05 - Matching y filtrado de resultados]]"
 Nota siguiente: "[[07 - WAF, evasión y arsenal complementario]]"

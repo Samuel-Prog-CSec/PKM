@@ -50,14 +50,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Windows 11 Pro Optimized Setup.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
-        "pattern": "Redes/Protocolos/Protocolos de red.md",
+        "pattern": "Optimizaciones/Windows 11 Pro Optimized Setup.md",
         "patternType": "STRICT"
       },
       {
@@ -120,7 +113,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Arch Linux Custom.md",
+        "pattern": "Optimizaciones/Arch Linux Custom.md",
         "patternType": "STRICT"
       },
       {
@@ -134,7 +127,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "OPTIMIZAR WINDOWS 11 PRO.md",
+        "pattern": "Optimizaciones/OPTIMIZAR WINDOWS 11 PRO.md",
         "patternType": "STRICT"
       },
       {
@@ -260,13 +253,6 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "01 - Proyectos/GO/GO.base",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
         "pattern": "🔴⚔️ Red Team/Hacking web/03 - JavaScript Deobfuscation/JavaScript Deobfuscation.base",
         "patternType": "STRICT"
       },
@@ -296,6 +282,20 @@
         "active": true,
         "type": "FILES",
         "pattern": "Check List Red Team.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Lugares donde aprender.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Optimizaciones/Fine-Tunning.md",
         "patternType": "STRICT"
       }
     ],

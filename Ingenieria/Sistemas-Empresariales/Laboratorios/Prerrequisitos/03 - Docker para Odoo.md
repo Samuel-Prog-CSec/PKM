@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Docker
   - SIE
+Descripción: "Docker es el segundo prerrequisito instrumental: no levantarás Odoo a mano, lo levantarás como contenedores"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[02 - Ejercicios Python resueltos]]"
 Nota siguiente: "[[04 - Instalación con Docker]]"

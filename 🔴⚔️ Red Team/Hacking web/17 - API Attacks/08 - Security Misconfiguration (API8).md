@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - API
+Descripción: "Las APIs sufren las mismas malas configuraciones que las apps web clásicas"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[07 - Server-Side Request Forgery (API7)]]"
 Nota siguiente: "[[09 - Improper Inventory Management (API9)]]"

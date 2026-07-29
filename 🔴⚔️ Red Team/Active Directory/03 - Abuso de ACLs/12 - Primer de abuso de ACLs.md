@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Post-Explotacion
+Descripción: "Las ACLs son el modelo de permisos de Active Directory: cada objeto del directorio —usuario, grupo, equipo, unidad organizativa, incluso el propio dominio— lleva una lista que…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[11 - Kerberoasting]]"
 Nota siguiente: "[[13 - Enumeración de ACLs]]"

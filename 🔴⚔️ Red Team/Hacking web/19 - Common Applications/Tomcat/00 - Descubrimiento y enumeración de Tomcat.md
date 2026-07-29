@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Tomcat
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "Apache Tomcat es un servidor web open-source que aloja aplicaciones Java (Servlets y JSP), usado por frameworks como Spring"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a Drupal]]"
 Nota siguiente: "[[01 - Ataques a Tomcat]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - TLS
+Descripción: "Un downgrade attack no rompe TLS: fuerza a la víctima a usar una configuración insegura —una versión antigua o un cipher suite débil— para romperla en un segundo paso"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[09 - Primitivas criptográficas inseguras]]"
 Nota siguiente: "[[11 - Detección, testeo y hardening de TLS]]"

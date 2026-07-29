@@ -1,3 +1,10 @@
+formulas:
+  sub-tema: 'file.name.replace(".base", "")'
+properties:
+  formula.sub-tema:
+    displayName: Sub-tema
+  file.folder:
+    displayName: Ubicación
 views:
   - type: table
     name: Sub-temas
@@ -5,13 +12,13 @@ views:
       and:
         - file.ext == "base"
         - file.folder.startsWith("🔴⚔️ Red Team/Active Directory")
-        - file.name != "Active Directory"
+        - file.name != "Active Directory.base"
     order:
-      - file.name
+      - formula.sub-tema
       - file.folder
     sort:
-      - property: file.name
+      - property: file.folder
         direction: ASC
     columnSize:
-      file.name: 300
-      file.folder: 460
+      formula.sub-tema: 320
+      file.folder: 420

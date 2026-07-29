@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Pentesting/Explotacion
+  - Tipo/Deteccion
+Descripción: "SOAP/WSDL es tecnología *legacy*, pero legacy no es lo mismo que muerto — es 'poco auditado'"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[04 - Ataques a xmlrpc.php]]"
 Nota siguiente: "[[06 - Arsenal de herramientas para Web Services]]"

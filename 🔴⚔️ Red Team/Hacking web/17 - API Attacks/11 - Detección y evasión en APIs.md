@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - API
+  - Tipo/Deteccion
+Descripción: "Nota dedicada a la metodología del pentest de APIs, que HTB no consolida: cómo descubrir la superficie (lo más difícil, no hay UI que navegar), cómo detectar sistemáticamente…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[10 - Unsafe Consumption of APIs (API10)]]"
 Nota siguiente: "[[12 - Herramientas para pentesting de APIs]]"

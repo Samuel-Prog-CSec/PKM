@@ -2,6 +2,7 @@
 tags:
   - SIE/Examen
   - SIE
+Descripción: "Los tres conceptos forman una jerarquía ascendente (*DIC*) en la que cada nivel se construye sobre el anterior añadiendo contexto y aplicabilidad"
 Fecha de actualización: 2026-05-31
 Nota previa: ""
 Nota siguiente: ""

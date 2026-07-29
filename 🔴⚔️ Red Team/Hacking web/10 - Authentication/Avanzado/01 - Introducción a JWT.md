@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - JWT
+  - Tipo/Introduccion
+Descripción: "Un JWT (JSON Web Token) es un formato para transportar datos (claims) firmados entre partes"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[00 - Introducción a los mecanismos de autenticación]]"
 Nota siguiente: "[[02 - Ataques a la verificación de firma JWT]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - IDOR
+Descripción: "Cuando la referencia no está en claro sino hasheada o codificada, la enumeración se complica pero rara vez es imposible"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[08 - Enumeración masiva de IDOR]]"
 Nota siguiente: "[[10 - IDOR en APIs inseguras]]"

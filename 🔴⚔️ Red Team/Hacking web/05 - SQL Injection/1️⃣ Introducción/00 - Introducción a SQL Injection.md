@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - SQLi
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "La SQL injection (SQLi) es la explotación de una consulta SQL que mezcla, sin separar, código y datos"
 Fecha de actualización: 2026-06-04
 Nota previa:
 Nota siguiente: "[[01 - Detección de SQL Injection]]"
@@ -72,3 +74,6 @@ Las SQLi se clasifican según **cómo y dónde** se recupera su salida:
 - **Inyección de [[07 - SQL Injection de segundo orden|segundo orden]]**, donde el dato malicioso se almacena y detona en una consulta posterior.
 
 El impacto justifica el esfuerzo: <mark style="background: #FFB86CA6;">lectura y modificación de datos arbitrarios, bypass de autenticación, y —según privilegios— lectura/escritura de ficheros y ejecución de comandos en el host del DBMS</mark>. El siguiente paso es saber **detectarla** de forma metódica: [[01 - Detección de SQL Injection]].
+
+> [!info]+ Variante moderna — `text-to-SQL`
+> Cuando un LLM traduce lenguaje natural a SQL, el atacante no controla un valor dentro de la consulta: controla **la consulta entera**. Las sentencias preparadas dejan de aplicar, porque no hay plan fijo del que separar los datos. Ver [[02 - SQL injection a través del LLM]].

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+  - Tipo/Introduccion
+Descripción: "El XSS básico se queda en robar cookies y desfigurar páginas"
 Fecha de actualización: 2026-06-08
 Nota previa:
 Nota siguiente: "[[01 - Ataques desde la sesión de la víctima]]"

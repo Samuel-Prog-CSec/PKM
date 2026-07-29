@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - CSRF
+Descripción: "Las dos últimas familias de bypass atacan el token cuando es débil, y el formato del cuerpo cuando la aplicación espera JSON y cree que eso la protege"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[05 - Bypass de SameSite y defensas de cabecera]]"
 Nota siguiente: "[[07 - Herramientas para CSRF y CORS]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Bug-Bounty
   - Pentesting/Reporting
+Descripción: "En bug bounty, la técnica es la mitad; la otra mitad es operar dentro de las reglas — legales y de conducta"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[00 - Programas de bug bounty y scope]]"
 Nota siguiente: "[[02 - Recon y herramientas para bug bounty]]"
@@ -34,7 +35,7 @@ Enviado el reporte, la conducta profesional sigue:
 - <mark style="background: #8000E1A6;">**No interactúes de inmediato**</mark>. Da tiempo al equipo a procesar y validar. Respeta los *vendor response SLAs* si el programa los publica, y **no hagas spam**.
 - Si no responden en un plazo razonable y fue vía plataforma, existe la **mediación**.
 - Cuando respondan, anota el usuario del *triager* y **etiquétalo** en la comunicación futura. Nunca uses canales no oficiales (redes sociales, etc.).
-- Ante **desacuerdos de severidad/bounty**: explica tu razonamiento guiándoles por **cada métrica del CVSS** que elegiste ([[03 - Escribir un buen reporte]]), verifica que tu envío cumple política y scope, y que el pago encaja con lo publicado. Si nada funciona, mediación.
+- Ante **desacuerdos de severidad/bounty**: explica tu razonamiento guiándoles por **cada métrica del CVSS** que elegiste ([[05 - Escribir un buen reporte]]), verifica que tu envío cumple política y scope, y que el pago encaja con lo publicado. Si nada funciona, mediación.
 
 Un reporte profesional merece una comunicación profesional. Mantén la calma y actúa como el profesional de seguridad que eres — incluso cuando no estés de acuerdo.
 

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "Toda la fuerza bruta de las notas anteriores choca con dos defensas: rate limiting y CAPTCHA. Ambas se implementan mal con frecuencia"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[04 - Fuerza bruta de códigos 2FA y MFA]]"
 Nota siguiente: "[[06 - Credenciales por defecto]]"

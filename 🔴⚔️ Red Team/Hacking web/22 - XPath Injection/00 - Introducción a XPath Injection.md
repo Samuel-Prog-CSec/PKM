@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - XPath
+  - Tipo/Introduccion
+Descripción: "XPath (XML Path Language) es un lenguaje de consulta para navegar y extraer datos de documentos XML — el equivalente de SQL para las bases de datos relacionales"
 Fecha de actualización: 2026-07-16
 Nota previa: ""
 Nota siguiente: "[[01 - Detección de XPath Injection]]"

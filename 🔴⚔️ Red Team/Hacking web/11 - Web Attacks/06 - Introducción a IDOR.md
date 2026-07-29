@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - IDOR
+  - Tipo/Introduccion
+Descripción: "Una vulnerabilidad IDOR (Insecure Direct Object Reference) ocurre cuando la aplicación expone una referencia directa a un objeto —un fichero, un registro de base de datos— que…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[05 - Herramientas para HTTP Verb Tampering]]"
 Nota siguiente: "[[07 - Identificación de IDORs]]"
@@ -13,6 +15,9 @@ Area: "[[Web Attacks.base|Web Attacks]]"
 <mark style="background: #ADCCFFA6;">Una vulnerabilidad `IDOR` (Insecure Direct Object Reference) ocurre cuando la aplicación expone una referencia directa a un objeto —un fichero, un registro de base de datos— que el usuario puede manipular para acceder a **otros** objetos similares</mark>. El fallo de fondo no es exponer la referencia, sino la **ausencia de control de acceso** en el back-end que verifique que ese objeto te pertenece.
 
 Ejemplo mínimo: subes un fichero y recibes el enlace `download.php?file_id=123`. ¿Qué pasa si pides `download.php?file_id=124`? Si el back-end no comprueba la propiedad, descargas el fichero de otro. Y si el `id` es **secuencial o predecible**, puedes recorrer todos.
+
+> [!example]+ Caso real — Twitter Mopub API Token Theft · $5.040 · [H1 #95552](https://hackerone.com/reports/95552)
+> Un endpoint de Mopub filtraba el `api_key` y el `build_secret` de cualquier cuenta, protegido solo por un `organization_id` de 24 dígitos "inadivinable"… pero ese ID se filtraba en URLs públicas de crash-reports (`crashes.to/…`), que Akhil Reni enumeró con un Google dork. Días después vio que el `build_secret` filtrado servía para **loguearse en la cuenta** → account takeover. **Lección**: persigue el impacto completo antes de cerrar tu investigación — el ATO es lo que pagó el bounty (ver [[11 - Encadenamiento de IDOR|encadenamiento]]).
 
 # Qué convierte esto en vulnerabilidad
 

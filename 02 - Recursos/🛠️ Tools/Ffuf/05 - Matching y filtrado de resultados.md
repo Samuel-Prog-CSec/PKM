@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Fuzzing
   - Pentesting/Enumeracion
+Descripción: "Lanzar peticiones es trivial; distinguir el acierto del ruido es donde se gana o se pierde el fuzzing. ffuf lo resuelve con dos familias de flags —matchers (qué conservar) y…"
 Fecha de actualización: 2026-07-19
 Nota previa: "[[04 - Fuzzing de parámetros y valores con ffuf]]"
 Nota siguiente: "[[06 - Opciones avanzadas y rendimiento]]"

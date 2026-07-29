@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSTI
+Descripción: "Confirmado que el motor es Jinja2 —el de Flask, y opcional en Django (que además trae su motor nativo, mucho más restringido y sin esta cadena de gadgets)—, la explotación…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[01 - Identificación de SSTI]]"
 Nota siguiente: "[[03 - Explotación de SSTI - Twig]]"
@@ -11,6 +12,9 @@ Area: "[[SSTI.base|SSTI]]"
 ---
 
 Confirmado que el motor es **Jinja2** —el de `Flask`, y opcional en `Django` (que además trae su **motor nativo**, mucho más restringido y sin esta cadena de gadgets)—, la explotación escala de fuga de información a RCE. La idea central: <mark style="background: #ADCCFFA6;">desde el contexto de la plantilla, navegamos los **atributos de los objetos Python** hasta alcanzar funciones peligrosas</mark> (`open`, `os.popen`). Los ejemplos asumen `Flask`; en otros frameworks la sintaxis varía un poco.
+
+> [!example]+ Caso real — Uber Flask/Jinja2 SSTI · $10.000 · [H1 #125980](https://hackerone.com/reports/125980)
+> Orange Tsai puso `{{1+1}}` como nombre de perfil en `riders.uber.com` (Node/Express) y recibió un email de notificación con un literal **"2"** — la entrada había cruzado a un servicio en **Flask/Jinja2** (`vault.uber.com`). Confirmó la ejecución con un bucle `{% for c in [1,2,3] %}{{c,c,c}}{% endfor %}` renderizado en el email, y **paró en la prueba de ejecución** sin forzar el RCE. **Lección**: rastrea qué stack expone cada subdominio y prueba si un input en *un* servicio llega a renderizarse en **otro**.
 
 # Fuga de información
 

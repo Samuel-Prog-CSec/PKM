@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "Los fundamentos de evasión —contextos de inyección, bypass de blacklists, encodings, strings sin comillas, *execution sinks* y polyglots— están en 05 - Evasión y ofuscación de…"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[05 - Bypass de CSP]]"
 Nota siguiente: "[[07 - Herramientas para XSS]]"

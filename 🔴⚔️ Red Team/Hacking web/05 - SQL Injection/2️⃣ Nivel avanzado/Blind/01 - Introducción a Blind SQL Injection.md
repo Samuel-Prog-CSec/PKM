@@ -3,14 +3,19 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "La SQLi clásica que hemos visto es *non-blind*: la salida de la consulta aparece en la respuesta, y se explota con UNION o leyendo errores"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[00 - Introducción a MSSQL]]"
 Nota siguiente: "[[02 - Identificar SQLi basada en booleanos]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 
 La SQLi clásica que hemos visto es *non-blind*: la salida de la consulta aparece en la respuesta, y se explota con [[05 - Inyección UNION|UNION]] o leyendo errores. <mark style="background: #ADCCFFA6;">La `blind SQL injection` es aquella en la que el atacante **no recibe el resultado** de la consulta y debe inferirlo a partir de diferencias en el comportamiento de la página</mark>. Es más lenta y laboriosa, pero —y esto es clave— es **la forma más común de SQLi que queda en aplicaciones modernas**.
+
+> [!example]+ Caso real — Uber Blind SQLi · $4.000 · [H1 #150156](https://hackerone.com/reports/150156)
+> Orange Tsai vio que el enlace de baja de un email de Uber llevaba un parámetro **base64 con JSON** (`{"user_id":"5755",...}`). Añadió `and sleep(12)=1` a `user_id`, lo re-codificó, y la respuesta tardó 12s+ → **blind time-based** confirmada. Extrajo el `user()` carácter a carácter con `mid(user(),N,1)='X'#` en un script Python (`requests`+`base64`). **Lección**: vigila los parámetros codificados —decodifica, inyecta, re-codifica— y un `sleep()` diferencial basta como PoC, sin volcar datos reales.
 
 > [!important]+
 > <mark style="background: #8000E1A6;">Por qué blind domina en 2026</mark>: las buenas prácticas actuales —desactivar mensajes de error detallados, no reflejar datos crudos del usuario, devolver respuestas genéricas— eliminan justo los canales que usa la SQLi *in-band*. Lo que sobrevive es la inyección que solo altera el comportamiento (un login que dice "ok"/"error", un filtro que devuelve más o menos resultados). Detectar y explotar a ciegas es, por tanto, la habilidad que de verdad se usa hoy.

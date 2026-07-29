@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - JavaScript
+Descripción: "Igual que hay herramientas para ofuscar, las hay para revertir"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[02 - Ofuscación avanzada]]"
 Nota siguiente: "[[04 - Peticiones HTTP y decodificación]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "WHOIS es un protocolo de consulta/respuesta para acceder a las bases de datos que almacenan información sobre recursos de internet registrados —principalmente nombres de…"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[00 - Reconocimiento web]]"
 Nota siguiente: "[[02 - DNS - fundamentos]]"

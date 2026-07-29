@@ -1,9 +1,13 @@
 ---
 tags:
+  - Web/Red-Team
+  - Proxies
+  - Herramientas
+Descripción: "Proxy de ataque OWASP Zed (ZAP) es otra herramienta proxy web común para pruebas de penetración web. es un proyecto gratuito y de código abierto iniciado por el Proyecto de…"
 Fecha de actualización: 2025-11-08
 Nota previa:
 Nota siguiente:
-Area: "[[Proxies web]]"
+Area: "[[ZAP.base|ZAP]]"
 ---
 ---
 

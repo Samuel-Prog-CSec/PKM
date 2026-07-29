@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Brute-Forcing
+Descripción: "Hydra (THC-Hydra) es un cracker de logins de red en paralelo: lanza muchos intentos simultáneos contra un servicio vivo y soporta decenas de protocolos"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[01 - Tipos de ataque - diccionario, híbrido y máscara]]"
 Nota siguiente: "[[03 - Medusa y alternativas modernas]]"

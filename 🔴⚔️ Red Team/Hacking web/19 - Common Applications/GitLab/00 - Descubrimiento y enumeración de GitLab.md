@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - GitLab
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "GitLab es una plataforma de repositorios Git con wiki, issue tracking y CI/CD (Ruby on Rails + Go + Vue)"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Enumeración y ataques a osTicket]]"
 Nota siguiente: "[[01 - Ataques a GitLab]]"

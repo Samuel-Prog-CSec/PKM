@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "JSX es una extensión de la sintaxis de JavaScript, creada por Facebook, que permite mezclar código JavaScript y HTML (XML) para describir componentes de interfaz"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00-React.js, SPA y Virtual DOM]]"
 Nota siguiente: "[[Componentes de React (tipos y ciclo de vida)]]"

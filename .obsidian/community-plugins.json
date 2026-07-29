@@ -17,7 +17,5 @@
   "templater-obsidian",
   "dataview",
   "folder-links",
-  "better-export-pdf",
-  "obsidian-linter",
-  "pdf-plus"
+  "better-export-pdf"
 ]

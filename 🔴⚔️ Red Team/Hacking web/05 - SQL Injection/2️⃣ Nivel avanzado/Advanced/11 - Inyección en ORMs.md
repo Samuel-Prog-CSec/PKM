@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "La prevención concluye que parametrizar separa código y datos y elimina la SQLi"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[10 - Prevención de SQL Injection]]"
 Nota siguiente:
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

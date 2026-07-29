@@ -3,10 +3,12 @@ tags:
   - Web/Red-Team
   - SQLi
   - Seguridad/Prevencion-Vulnerabilidad
+  - Tipo/Defensa
+Descripción: "La defensa contra la blind SQLi es la misma que contra cualquier SQLi —no hay nada especial en que la inyección sea ciega—"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[13 - Herramientas para Blind SQLi]]"
 Nota siguiente:
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

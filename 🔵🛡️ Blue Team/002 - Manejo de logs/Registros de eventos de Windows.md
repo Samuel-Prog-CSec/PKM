@@ -1,3 +1,17 @@
+---
+tags:
+  - Blue-Team
+  - Windows
+  - Logs
+  - Introduccion
+Descripción: "Windows Event Logs son una parte intrínseca del sistema operativo Windows y almacenan registros de diferentes componentes del sistema, incluido el propio sistema, las…"
+Fecha de actualización: 2025-09-02
+Nota previa: 
+Nota siguiente: "[[Seguimiento de eventos para Windows]]"
+Area: "[[Manejo de logs.base|Manejo de logs]]"
+---
+---
+
 # Registros de eventos de Windows
 **Windows Event Logs** son una parte intrínseca del sistema operativo Windows y <mark style="background: #ADCCFFA6;">almacenan registros de diferentes componentes del sistema</mark>, incluido el propio sistema, las aplicaciones que se ejecutan en él, los proveedores de ETW, los servicios y otros.
 

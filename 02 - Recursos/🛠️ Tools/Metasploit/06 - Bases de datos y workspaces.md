@@ -2,6 +2,7 @@
 tags:
   - Pentesting/Explotacion
   - Metasploit
+Descripción: "Metasploit puede respaldarse en una base de datos PostgreSQL que registra todo lo descubierto durante el engagement — hosts, servicios, vulnerabilidades, credenciales y botín"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[05 - Encoders]]"
 Nota siguiente: "[[07 - Plugins y Mixins]]"

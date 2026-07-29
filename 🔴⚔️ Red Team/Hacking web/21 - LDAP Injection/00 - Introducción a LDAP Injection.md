@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Introduccion
   - LDAP
+  - Tipo/Introduccion
+Descripción: "LDAP (Lightweight Directory Access Protocol) es el protocolo para consultar servidores de directorio como Active Directory u OpenLDAP. Muchas aplicaciones —sobre todo…"
 Fecha de actualización: 2026-07-16
 Nota previa: ""
 Nota siguiente: "[[01 - Detección de LDAP Injection]]"

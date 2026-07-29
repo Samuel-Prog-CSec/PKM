@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Server-Side/Prototype-Pollution
   - Pentesting/Explotacion
+  - Tipo/Introduccion
+Descripción: "En JavaScript casi todos los objetos heredan de Object.prototype"
 Fecha de actualización: 2026-07-17
 Nota previa: ""
 Nota siguiente: "[[01 - Prototype Pollution server-side]]"

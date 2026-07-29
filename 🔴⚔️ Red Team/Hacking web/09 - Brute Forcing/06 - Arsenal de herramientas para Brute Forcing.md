@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Brute-Forcing
+  - Tipo/Arsenal
+Descripción: "El instrumental del brute force ordenado por función"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[05 - Defensas y evasión]]"
 Nota siguiente:

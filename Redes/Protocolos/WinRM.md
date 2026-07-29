@@ -3,6 +3,7 @@ tags:
   - Redes
   - Protocolos
   - Windows
+Descripción: "WinRM (*Windows Remote Management*) es la implementación de Microsoft del protocolo WS-Management: administración remota de Windows mediante mensajes SOAP sobre HTTP(S)"
 Fecha de actualización: 2026-07-18
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---

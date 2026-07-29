@@ -4,6 +4,8 @@ tags:
   - Pentesting/Explotacion
   - XSS
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "El Cross-Site Scripting (XSS) explota un fallo en la sanitización de la entrada del usuario para 'escribir' código JavaScript en la página y ejecutarlo en el lado cliente"
 Fecha de actualización: 2026-06-02
 Nota previa:
 Nota siguiente: "[[01 - XSS Almacenado]]"
@@ -43,4 +45,10 @@ Tiene límites: <mark style="background: #FFB8EBA6;">se ejecuta dentro del motor
 | `Reflected` (No persistente) | La entrada se refleja en la página tras procesarla el servidor, **sin guardarla** (resultado de búsqueda, mensaje de error) |
 | `DOM-based` | No persistente y **100% cliente**: la entrada se procesa en el navegador sin llegar al back-end (parámetros HTTP del lado cliente, *anchors*) |
 
+> [!info]+ El primo sin JavaScript
+> Cuando el sitio deja inyectar HTML pero **no** ejecutar JS (sanea el `<script>` pero no el markup), estás ante [[11 - HTML Injection, Content Spoofing y Dangling Markup|HTML injection / content spoofing]] — útil para phishing y, con *dangling markup*, para exfiltrar tokens cuando el XSS está bloqueado.
+
 Cada tipo tiene su forma de descubrirse y explotarse. Empezamos por el más crítico: [[01 - XSS Almacenado]].
+
+> [!info]+ Variante moderna — XSS desde la salida de un LLM
+> Si una aplicación inserta en el DOM el texto que genera un modelo de lenguaje sin codificarlo, el XSS lo escribe el modelo. La particularidad: el payload puede llegar almacenado en un documento que el bot recupera, de modo que la página que lo sirve está perfectamente saneada y el bug aparece igual. Ver [[01 - XSS desde la salida del modelo]].

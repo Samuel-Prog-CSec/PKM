@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - API
   - IDOR
+Descripción: "BOLA (Broken Object Level Authorization) es el IDOR de las APIs y el riesgo nº1 del OWASP API Top 10"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[00 - Introducción a las API Attacks]]"
 Nota siguiente: "[[02 - Broken Authentication (API2)]]"

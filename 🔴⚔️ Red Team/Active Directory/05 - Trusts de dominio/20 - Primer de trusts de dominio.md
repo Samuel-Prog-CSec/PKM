@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "Un *trust* (relación de confianza) enlaza dos dominios para que los usuarios de uno accedan a recursos del otro"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[19 - Configuraciones erróneas varias]]"
 Nota siguiente: "[[21 - Ataque a trust hijo a padre]]"

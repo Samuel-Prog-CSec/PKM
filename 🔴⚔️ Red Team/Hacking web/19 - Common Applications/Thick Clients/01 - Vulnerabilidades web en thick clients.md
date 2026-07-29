@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Thick-Clients
   - Pentesting/Explotacion
+Descripción: "Los thick clients de arquitectura three-tier (cliente ↔ servidor de aplicación ↔ BD) son susceptibles a vulnerabilidades web como SQL injection y path traversal"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[00 - Ataque a thick clients]]"
 Nota siguiente: "[[00 - Descubrimiento y enumeración de ColdFusion]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Host-Header
+Descripción: "El primer ataque concreto: una aplicación que decide el control de acceso a partir del Host"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[06 - Introducción a los Host Header Attacks]]"
 Nota siguiente: "[[08 - Password Reset Poisoning]]"

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Brute-Forcing
+  - Tipo/Defensa
+Descripción: "En cualquier aplicación seria, lanzar Hydra a 16 hilos no acaba con un acceso, acaba con tu IP bloqueada"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[04 - Generación de wordlists]]"
 Nota siguiente: "[[06 - Arsenal de herramientas para Brute Forcing]]"

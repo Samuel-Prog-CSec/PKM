@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - MERN
   - Introduccion
+Descripción: "MERN es un stack de desarrollo web full-stack formado por cuatro tecnologías"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Patrones de diseño web (MVC y SPA)]]"
 Nota siguiente: "[[Operaciones CRUD, HTTP y SQL]]"

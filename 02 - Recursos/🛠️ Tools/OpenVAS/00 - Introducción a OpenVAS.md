@@ -2,6 +2,8 @@
 tags:
   - Pentesting/Vulnerabilidad
   - Escaneo/Vulnerabilidades
+  - Tipo/Introduccion
+Descripción: "OpenVAS (de Greenbone AG, antes Greenbone Networks) es el escáner de vulnerabilidades open-source de referencia, la alternativa gratuita a Nessus"
 Fecha de actualización: 2026-07-18
 Nota previa:
 Nota siguiente: "[[01 - Escaneo y exportación]]"

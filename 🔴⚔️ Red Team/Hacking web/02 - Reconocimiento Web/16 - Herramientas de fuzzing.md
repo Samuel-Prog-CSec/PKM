@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "El fuzzing web se apoya en un puñado de herramientas especializadas"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[15 - Introducción al web fuzzing]]"
 Nota siguiente: "[[17 - Fuzzing de directorios y archivos]]"

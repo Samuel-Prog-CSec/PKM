@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "Las aplicaciones web tienen directorios y archivos que no se enlazan en ninguna parte del interfaz"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[16 - Herramientas de fuzzing]]"
 Nota siguiente: "[[18 - Fuzzing recursivo]]"

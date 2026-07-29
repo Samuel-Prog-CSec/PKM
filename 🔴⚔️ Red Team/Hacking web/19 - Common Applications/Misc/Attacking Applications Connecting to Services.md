@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Common-Applications
   - Pentesting/Explotacion
+Descripción: "Las aplicaciones que se conectan a servicios (bases de datos, LDAP, APIs) llevan connection strings con credenciales"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[Web Mass Assignment Vulnerabilities]]"
 Nota siguiente: "[[Other Notable Applications]]"

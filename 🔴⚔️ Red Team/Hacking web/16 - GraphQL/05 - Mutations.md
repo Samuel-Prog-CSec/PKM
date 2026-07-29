@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - GraphQL
+Descripción: "Hasta ahora solo hemos leído datos. Las mutations son las queries de GraphQL que modifican datos del servidor: crear, actualizar o borrar objetos"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[04 - Denegación de servicio (DoS) y Batching]]"
 Nota siguiente: "[[06 - Detección, evasión y prevención de GraphQL]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "Bajo el dominio principal (example.com) suele esconderse una red de subdominios: extensiones que la organización crea para separar funciones o secciones —blog.example.com…"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[04 - Transferencias de zona DNS]]"
 Nota siguiente: "[[06 - Fuerza bruta de subdominios]]"

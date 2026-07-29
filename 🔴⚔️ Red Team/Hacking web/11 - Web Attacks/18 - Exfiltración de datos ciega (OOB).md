@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XXE
+Descripción: "El caso más duro: la app no refleja ninguna entidad ni muestra errores"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[17 - Divulgación avanzada de archivos]]"
 Nota siguiente: "[[19 - Detección, evasión y prevención de XXE]]"

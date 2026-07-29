@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/CRLF
+Descripción: "Las aplicaciones registran detalles de cada petición (IP, ruta, parámetros) para depurar y para análisis de incidentes; un WAF además loguea lo que considera sospechoso"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[01 - Introducción a CRLF Injection]]"
 Nota siguiente: "[[03 - HTTP Response Splitting]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "Hasta ahora hemos manipulado la consulta existente"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[03 - Uso de comentarios]]"
 Nota siguiente: "[[05 - Inyección UNION]]"

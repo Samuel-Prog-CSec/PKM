@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - XSS
   - CSP
+Descripción: "Que una aplicación tenga CSP no significa que esté protegida"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[04 - Content Security Policy (CSP)]]"
 Nota siguiente: "[[06 - Evasión de filtros XSS y ofuscación]]"
@@ -28,6 +29,13 @@ Permite scripts del propio origen y de cualquier subdominio de Google. El proble
 ```
 
 Como el script viene de `*.google.com`, la CSP lo permite, y el `callback=alert(1)` ejecuta tu código. Este endpoint concreto es ilustrativo —muchos gadgets JSONP de Google se han retirado con los años—. <mark style="background: #FF5582A6;">El repositorio [CSPBypass](https://github.com/renniepak/CSPBypass) mantiene una lista actualizada de endpoints JSONP por dominio</mark> — la primera parada cuando una CSP permite un host conocido.
+
+> [!warning]+ La allowlist envejece — y el fabricante suele ser su propio gadget
+> Dos patrones que las revisiones de CSP casi nunca cubren, ambos confirmados en incidentes de 2025:
+> - **Dominios caducados que siguen en la allowlist.** En `ForcedLeak` (Salesforce Agentforce, CVSS 9.4) el canal de exfiltración fue un dominio permitido por la CSP que había expirado; los investigadores lo recompraron por unos 5 $. Es un [[00 - Fundamentos de Subdomain Takeover|takeover]] que además atraviesa un control de seguridad.
+> - **Proxies y endpoints del propio fabricante.** El proxy de imágenes `Camo` de GitHub y una API de preview de Microsoft Teams sirvieron para sacar datos a través de dominios que la CSP permitía por diseño.
+>
+> Al auditar una CSP, la allowlist se trata como superficie: cada host se comprueba por gadgets JSONP, redirecciones abiertas, proxies de recursos **y registro del dominio**. Detalle en [[06 - EchoLeak y la exfiltración zero-click]].
 
 # `'self'` no es seguro por sí solo
 

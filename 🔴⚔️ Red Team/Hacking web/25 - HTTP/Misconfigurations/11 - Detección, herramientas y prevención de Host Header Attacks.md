@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/Host-Header
+  - Tipo/Deteccion
+Descripción: "Cierre operativo del bloque de Host Header: cómo detectarlos con método, con qué herramientas, y cómo prevenirlos a nivel de código"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[10 - Bypass de validación del Host Header]]"
 Nota siguiente: "[[12 - Introducción a Session Puzzling]]"

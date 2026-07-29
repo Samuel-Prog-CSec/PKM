@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Proxies
+Descripción: "Antes de interceptar nada hay que poner el proxy entre el navegador y el objetivo"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[00 - Introducción a los proxies web]]"
 Nota siguiente: "[[02 - Interceptación de peticiones]]"

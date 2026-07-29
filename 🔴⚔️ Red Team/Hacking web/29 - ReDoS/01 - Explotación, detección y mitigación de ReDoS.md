@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - ReDoS
   - Pentesting/Explotacion
+  - Tipo/Deteccion
+Descripción: "El primer paso es localizar una regex del lado servidor que toque entrada del usuario"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[00 - Introducción a ReDoS]]"
 Nota siguiente: ""

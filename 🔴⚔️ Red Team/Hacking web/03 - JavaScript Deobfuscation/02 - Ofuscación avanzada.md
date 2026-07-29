@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - JavaScript
+Descripción: "El *packing* deja los strings en texto claro"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[01 - Ofuscación de código JavaScript]]"
 Nota siguiente: "[[03 - Desofuscación y análisis de código]]"

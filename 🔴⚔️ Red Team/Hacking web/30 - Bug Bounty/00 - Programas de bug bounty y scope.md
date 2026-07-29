@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Bug-Bounty
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "Un programa de bug bounty (o *Vulnerability Rewards Program*, VRP) es testing de seguridad continuo y proactivo que complementa las auditorías internas y los pentests puntuales…"
 Fecha de actualización: 2026-07-17
 Nota previa: ""
 Nota siguiente: "[[01 - Reglas, legalidad y conducta]]"

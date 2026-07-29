@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Web-Services
   - Pentesting/Explotacion
+  - Tipo/Arsenal
+Descripción: "Herramientas actuales para atacar web services SOAP/WSDL. Como el testing de SOAP es sobre todo manual —los escáneres genéricos apenas lo cubren—, estas son las que de verdad…"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[05 - Detección y evasión en Web Services]]"
 Nota siguiente: ""

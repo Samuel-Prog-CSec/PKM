@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+Descripción: "DCSync abusa del servicio de replicación de AD para pedirle a un DC los secretos del dominio —los hashes de todas las cuentas— haciéndote pasar por otro Domain Controller"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[14 - Tácticas de abuso de ACLs]]"
 Nota siguiente: "[[16 - Acceso privilegiado]]"

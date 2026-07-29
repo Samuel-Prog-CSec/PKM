@@ -4,6 +4,8 @@ tags:
   - Windows
   - Linux
   - Pentesting/Post-Explotacion
+  - Tipo/Arsenal
+Descripción: "El set profesional 2026 para atacar AD, por fase"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[25 - Detección y evasión en AD]]"
 Nota siguiente:

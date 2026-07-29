@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "La tercera vía para confirmar qué consultas ejecuta la aplicación —y para depurar payloads mientras se desarrolla el exploit— es leer los logs del propio motor"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[03 - Live-debugging de aplicaciones Java]]"
 Nota siguiente: "[[05 - Bypass de caracteres comunes]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

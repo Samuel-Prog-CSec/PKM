@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - GraphQL
+Descripción: "Arsenal para atacar GraphQL, por fase. El flujo es: fingerprint → esquema → auditoría de config → explotación"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[06 - Detección, evasión y prevención de GraphQL]]"
 Nota siguiente: ""

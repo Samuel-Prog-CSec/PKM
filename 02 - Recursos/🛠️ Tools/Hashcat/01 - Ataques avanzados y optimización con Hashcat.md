@@ -2,6 +2,7 @@
 tags:
   - Seguridad/Contraseñas
   - Pentesting/Post-Explotacion
+Descripción: "Donde Hashcat despliega su potencia es en los ataques dirigidos: máscaras que explotan la estructura de las contraseñas y reglas que mutan wordlists a velocidad de GPU"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[00 - Introducción a Hashcat]]"
 Nota siguiente: 

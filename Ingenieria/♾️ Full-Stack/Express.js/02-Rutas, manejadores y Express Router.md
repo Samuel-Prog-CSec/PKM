@@ -4,6 +4,7 @@ tags:
   - Express
   - REST
   - Backend
+Descripción: "El *routing* (direccionamiento) es la definición de los puntos finales o *endpoints* de la aplicación y de cómo responden a las solicitudes HTTP del cliente, mediante una…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[01-APIs REST (principios y características)]]"
 Nota siguiente: "[[03-CRUD, métodos HTTP y códigos de estado]]"

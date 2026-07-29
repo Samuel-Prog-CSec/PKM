@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Authentication
+Descripción: "Las notas anteriores rompen la autenticación adivinando algo"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[07 - Reset de contraseña vulnerable]]"
 Nota siguiente: "[[09 - Bypass de autenticación - modificación de parámetros]]"

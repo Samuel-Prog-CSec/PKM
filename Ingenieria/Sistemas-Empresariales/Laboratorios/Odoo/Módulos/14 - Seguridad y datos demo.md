@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Dos piezas que cierran un módulo funcional: los permisos de acceso (sin ellos, un modelo nuevo es invisible) y los datos de demostración (opcionales, útiles para probar)"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[13 - Acciones y menús]]"
 Nota siguiente: "[[15 - Campos computados y onchange]]"

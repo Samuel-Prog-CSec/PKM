@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSRF
+Descripción: "En muchas SSRF reales la respuesta de la petición forzada no se nos devuelve"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[03 - Explotación de SSRF]]"
 Nota siguiente: "[[05 - Evasión de defensas SSRF]]"

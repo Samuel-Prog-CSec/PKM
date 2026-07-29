@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Proxies
+Descripción: "El módulo enseña las features; esta nota es cómo se usan de verdad en un engagement, y qué hay más allá de Burp/ZAP en 2026"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[12 - Proxying de apps móviles]]"
 Nota siguiente:

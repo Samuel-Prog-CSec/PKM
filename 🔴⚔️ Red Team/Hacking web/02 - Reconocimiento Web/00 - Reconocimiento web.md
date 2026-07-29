@@ -4,6 +4,8 @@ tags:
   - Pentesting/Enumeracion
   - Recon
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "El reconocimiento web (web reconnaissance) es la recopilación sistemática y metódica de información sobre un sitio o aplicación web objetivo"
 Fecha de actualización: 2026-06-02
 Nota previa:
 Nota siguiente: "[[01 - WHOIS]]"

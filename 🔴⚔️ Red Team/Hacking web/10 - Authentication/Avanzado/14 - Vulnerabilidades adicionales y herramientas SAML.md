@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - Authentication
   - SAML
+Descripción: "SAML es XML, y eso abre una segunda superficie además de los ataques de firma: todo lo que afecta a un parser XML mal configurado aplica a la SAMLResponse"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[13 - Ataque de envoltura de firma XML (XSW)]]"
 Nota siguiente:

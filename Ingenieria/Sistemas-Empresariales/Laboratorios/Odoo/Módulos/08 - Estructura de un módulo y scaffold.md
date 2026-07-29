@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Empieza el núcleo del examen: programar un módulo Odoo"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[07 - Servicios web XML-RPC]]"
 Nota siguiente: "[[09 - Modelos y tipos de campo]]"

@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - Backend
   - NodeJS
+Descripción: "Node.js es un entorno de ejecución de JavaScript del lado del servidor que permite desplegar y configurar aplicaciones de back-end con facilidad"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[01-CRUD y filtros en MongoDB]]"
 Nota siguiente: "[[01-package.json y el gestor de paquetes npm]]"

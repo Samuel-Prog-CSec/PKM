@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - IDOR
+Descripción: "Antes de explotar hay que localizar las referencias directas"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[06 - Introducción a IDOR]]"
 Nota siguiente: "[[08 - Enumeración masiva de IDOR]]"

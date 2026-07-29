@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Seguridad/Prevencion-Vulnerabilidad
   - File-Upload
+  - Tipo/Defensa
+Descripción: "Un pentest no termina con la PoC: el valor para el cliente está en los *action points*"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[08 - Detección y metodología en entornos reales]]"
 Nota siguiente: "[[10 - Arsenal de herramientas para File Upload]]"

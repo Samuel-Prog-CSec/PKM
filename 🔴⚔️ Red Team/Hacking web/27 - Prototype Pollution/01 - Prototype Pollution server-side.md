@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Server-Side/Prototype-Pollution
   - Pentesting/Explotacion
+Descripción: "La misma primitiva de contaminar Object.prototype, pero en el proceso Node del servidor"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[00 - Introducción a Prototype Pollution]]"
 Nota siguiente: "[[02 - Gadgets y RCE server-side]]"

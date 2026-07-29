@@ -4,6 +4,8 @@ tags:
   - LDAP
   - Pentesting/Enumeracion
   - Pentesting/Explotacion
+  - Tipo/Arsenal
+Descripción: "A diferencia de la SQLi (sqlmap) o la XPath (XCat), la LDAP injection no tiene un explotador estándar de facto"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[04 - Evasión de filtros en LDAP Injection]]"
 Nota siguiente: "[[06 - Prevención de LDAP Injection]]"

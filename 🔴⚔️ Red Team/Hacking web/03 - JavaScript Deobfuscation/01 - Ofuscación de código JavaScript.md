@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - JavaScript
+Descripción: "La ofuscación transforma un script para hacerlo difícil de leer por humanos, manteniéndolo funcionalmente idéntico (aunque algo más lento)"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[00 - Introducción y código fuente]]"
 Nota siguiente: "[[02 - Ofuscación avanzada]]"

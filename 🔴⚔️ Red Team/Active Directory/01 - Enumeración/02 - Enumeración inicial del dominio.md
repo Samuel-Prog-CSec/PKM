@@ -3,6 +3,7 @@ tags:
   - Active-Directory
   - Windows
   - Pentesting/Enumeracion
+Descripción: "Punto de partida del *assumed breach*: una IP en la red interna, sin credenciales todavía"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[01 - Reconocimiento y enumeración externa]]"
 Nota siguiente: "[[03 - Enumeración de controles de seguridad]]"

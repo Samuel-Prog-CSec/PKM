@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Inclusion
+Descripción: "Cuando la función vulnerable admite URLs remotas, la inclusión deja de limitarse a ficheros locales: podemos hacer que el servidor descargue e incluya un fichero que nosotros…"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[04 - PHP wrappers II - RCE y filter chains]]"
 Nota siguiente: "[[06 - LFI + File Upload a RCE]]"

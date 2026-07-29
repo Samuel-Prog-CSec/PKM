@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - API
+Descripción: "A medida que una API evoluciona, un versionado descuidado deja versiones viejas, incompatibles o de prueba accesibles, ampliando la superficie de ataque"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[08 - Security Misconfiguration (API8)]]"
 Nota siguiente: "[[10 - Unsafe Consumption of APIs (API10)]]"

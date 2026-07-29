@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - NoSQLi
   - Pentesting/Enumeracion
+  - Tipo/Deteccion
+Descripción: "Antes de explotar hay que reconocer que el backend es NoSQL (MongoDB) y confirmar la inyección de operadores"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Introducción a la NoSQL injection]]"
 Nota siguiente: "[[03 - Bypass de autenticación]]"

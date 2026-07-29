@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - GraphQL
+  - Tipo/Deteccion
+Descripción: "Nota dedicada a detectar de forma sistemática las malas configuraciones de un GraphQL, evadir las defensas (introspección deshabilitada, filtros), y prevenir"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[05 - Mutations]]"
 Nota siguiente: "[[07 - Herramientas para GraphQL]]"

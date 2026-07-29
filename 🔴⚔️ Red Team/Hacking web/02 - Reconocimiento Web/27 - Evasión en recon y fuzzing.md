@@ -4,6 +4,7 @@ tags:
   - Pentesting/Enumeracion
   - Recon
   - Fuzzing
+Descripción: "El recon y el fuzzing a escala generan mucho tráfico, y eso choca de frente con las defensas perimetrales"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[26 - Escaneo dirigido con nuclei]]"
 Nota siguiente:

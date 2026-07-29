@@ -4,6 +4,7 @@ tags:
   - Windows
   - Linux
   - Pentesting/Explotacion
+Descripción: "Con la lista de usuarios (09 - Construir la lista de usuarios objetivo) y la política (08 - Enumerar políticas de contraseñas) en la mano, toca rociar — respetando siempre la…"
 Fecha de actualización: 2026-07-21
 Nota previa: "[[09 - Construir la lista de usuarios objetivo]]"
 Nota siguiente: "[[11 - Kerberoasting]]"

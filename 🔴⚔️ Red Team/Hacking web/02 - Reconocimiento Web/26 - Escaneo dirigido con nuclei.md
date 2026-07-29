@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Fuzzing
+Descripción: "El recon y el fuzzing producen una lista de hosts y endpoints vivos; el siguiente paso es comprobar, a escala, cuáles tienen vulnerabilidades conocidas. nuclei…"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[25 - Cloud asset recon]]"
 Nota siguiente: "[[27 - Evasión en recon y fuzzing]]"

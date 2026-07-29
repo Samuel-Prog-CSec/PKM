@@ -3,6 +3,7 @@ tags:
   - Pentesting/Explotacion
   - Pentesting/Post-Explotacion
   - Metasploit
+Descripción: "Cuando un exploit tiene éxito, la conexión resultante es una session"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[07 - Plugins y Mixins]]"
 Nota siguiente: "[[09 - Meterpreter]]"

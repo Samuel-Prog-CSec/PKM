@@ -4,6 +4,7 @@ tags:
   - React
   - Frontend
   - REST
+Descripción: "axios es una librería JavaScript que implementa un cliente HTTP ligero, basado en promesas, para consumir servicios de una API REST desde el front-end"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Enrutado con React Router]]"
 Nota siguiente: "[[Reducers y Redux]]"

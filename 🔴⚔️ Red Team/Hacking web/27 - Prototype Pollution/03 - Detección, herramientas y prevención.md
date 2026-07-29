@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Server-Side/Prototype-Pollution
   - Pentesting/Enumeracion
+  - Tipo/Deteccion
+Descripción: "En un target real rara vez hay reflexión de propiedad, y contaminar propiedades de negocio a ciegas puede tumbar la app de forma persistente (DoS)"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[02 - Gadgets y RCE server-side]]"
 Nota siguiente: ""

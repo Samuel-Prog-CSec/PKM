@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - API
   - Server-Side/SSRF
+Descripción: "Una API es vulnerable a SSRF (Server-Side Request Forgery, también *XSPA*) si usa entrada controlada por el usuario para pedir recursos remotos o locales sin validarla"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[06 - Unrestricted Access to Sensitive Business Flows (API6)]]"
 Nota siguiente: "[[08 - Security Misconfiguration (API8)]]"

@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Authentication
+Descripción: "Hay enumeración de usuarios cuando la app responde de forma distinta ante un usuario válido y uno inválido"
 Fecha de actualización: 2026-06-23
 Nota previa: "[[00 - Introducción a la autenticación]]"
 Nota siguiente: "[[02 - Fuerza bruta de contraseñas en el login]]"

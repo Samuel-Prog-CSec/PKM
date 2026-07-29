@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Explotacion
+Descripción: "La SQLi de segundo orden ocurre cuando la entrada del usuario se almacena de forma segura y, más tarde, se usa sin sanear en otra consulta"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[06 - SQL Injection basada en errores]]"
 Nota siguiente: "[[08 - PostgreSQL lectura y escritura de archivos]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

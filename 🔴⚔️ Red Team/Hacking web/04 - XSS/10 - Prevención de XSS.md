@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Reporting
   - XSS
+  - Tipo/Defensa
+Descripción: "La XSS se ancla en dos puntos: un Source (la entrada del usuario) y un Sink (donde se muestra)"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[09 - Robo de sesión]]"
 Nota siguiente:

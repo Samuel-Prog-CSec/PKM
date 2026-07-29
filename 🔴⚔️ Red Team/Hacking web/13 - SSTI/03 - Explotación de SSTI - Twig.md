@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSTI
+Descripción: "Twig es el motor de plantillas de PHP (el que usa el framework Symfony)"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[02 - Explotación de SSTI - Jinja2]]"
 Nota siguiente: "[[04 - Evasión de filtros y sandbox en SSTI]]"

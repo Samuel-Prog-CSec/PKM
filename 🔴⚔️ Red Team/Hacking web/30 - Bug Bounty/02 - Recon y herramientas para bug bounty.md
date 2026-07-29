@@ -3,9 +3,10 @@ tags:
   - Web/Red-Team
   - Bug-Bounty
   - Pentesting/Enumeracion
-Fecha de actualización: 2026-07-17
+Descripción: "El módulo original no cubre la parte que más determina el éxito en bug bounty: el recon"
+Fecha de actualización: 2026-07-27
 Nota previa: "[[01 - Reglas, legalidad y conducta]]"
-Nota siguiente: "[[03 - Escribir un buen reporte]]"
+Nota siguiente: "[[03 - Metodología de caza - mapear y atacar la aplicación]]"
 Area: "[[Bug Bounty.base|Bug Bounty]]"
 ---
 ---
@@ -38,9 +39,9 @@ $ subfinder -d target.com -silent | httpx -silent | nuclei -tags cve,exposure
 Descubre subdominios → filtra los que responden → los pasa por las plantillas de `nuclei`. Variantes: añadir `katana`/`gau` para URLs, o `nuclei -t` con plantillas propias.
 
 > [!important]+ El recon no sustituye el trabajo manual
-> La automatización **expande la superficie**; los bugs que pagan bien salen del **testing manual** de la lógica de negocio con [[13 - Flujo profesional y alternativas modernas|Burp o Caido]]. `nuclei` encuentra CVEs conocidas (que suelen ser duplicados o *out-of-scope*); tú buscas lo que el escáner no ve: IDOR, fallos de autorización, *race conditions*, lógica rota. Registra **todo** el proceso — lo necesitarás para el PoC del [[03 - Escribir un buen reporte|reporte]].
+> La automatización **expande la superficie**; los bugs que pagan bien salen del **testing manual** de la lógica de negocio con [[13 - Flujo profesional y alternativas modernas|Burp o Caido]]. `nuclei` encuentra CVEs conocidas (que suelen ser duplicados o *out-of-scope*); tú buscas lo que el escáner no ve: IDOR, fallos de autorización, *race conditions*, lógica rota. Registra **todo** el proceso — lo necesitarás para el PoC del [[05 - Escribir un buen reporte|reporte]].
 
 > [!info]+ Frameworks de automatización
 > Para no orquestar a mano, hay *frameworks* que encadenan todo el pipeline: [`reconftw`](https://github.com/six2dez/reconftw), [`reNgine`](https://github.com/yogeshojha/rengine) y [`Osmedeus`](https://github.com/j3ssie/osmedeus). Útiles para *continuous recon* (monitorizar un scope amplio en el tiempo y cazar activos nuevos en cuanto aparecen), pero conviene entender cada herramienta por separado antes de delegar en el framework.
 
-Encontrado y confirmado el bug, el último paso — y el que se cobra — es comunicarlo bien: [[03 - Escribir un buen reporte]].
+El recon expande la superficie; ahora hay que convertirla en bugs. La metodología para mapear y atacar la aplicación de forma sistemática: [[03 - Metodología de caza - mapear y atacar la aplicación]].

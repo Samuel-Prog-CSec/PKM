@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
+Descripción: "El DNS (Domain Name System) traduce nombres de dominio legibles (www.example.com) a las direcciones IP numéricas (192.0.2.1) que las máquinas usan para comunicarse"
 Fecha de actualización: 2026-06-02
 Nota previa: "[[01 - WHOIS]]"
 Nota siguiente: "[[03 - Enumeración DNS con dig]]"

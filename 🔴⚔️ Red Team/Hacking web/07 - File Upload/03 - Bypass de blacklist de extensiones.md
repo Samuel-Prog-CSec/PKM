@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "Cuando la validación se mueve al servidor, la forma más débil es comparar la extensión contra una lista negra de tipos prohibidos"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[02 - Bypass de validación en cliente]]"
 Nota siguiente: "[[04 - Bypass de whitelist y doble extensión]]"

@@ -4,6 +4,7 @@ tags:
   - MongoDB
   - CRUD
   - NoSQL
+Descripción: "Operaciones CRUD sobre MongoDB desde la shell (mongo)"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[00-MongoDB y el modelo NoSQL documental]]"
 Nota siguiente: "[[00-Node.js, entorno de ejecución del servidor]]"

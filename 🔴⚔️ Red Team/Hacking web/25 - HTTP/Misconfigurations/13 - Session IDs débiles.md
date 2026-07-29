@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - HTTP/Session-Puzzling
+Descripción: "Aunque las variables de sesión se manejen bien, si el propio session ID es débil el atacante puede adivinar o forzar la sesión de otro usuario y secuestrar su cuenta"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[12 - Introducción a Session Puzzling]]"
 Nota siguiente: "[[14 - Variables de sesión compartidas - bypass de autenticación]]"

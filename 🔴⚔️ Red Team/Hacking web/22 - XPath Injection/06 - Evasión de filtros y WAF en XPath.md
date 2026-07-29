@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - XPath
   - Pentesting/Explotacion
+Descripción: "Lo que separa al profesional es explotar a pesar de los filtros"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[05 - XPath ciega y basada en tiempo]]"
 Nota siguiente: "[[07 - Arsenal de herramientas XPath]]"

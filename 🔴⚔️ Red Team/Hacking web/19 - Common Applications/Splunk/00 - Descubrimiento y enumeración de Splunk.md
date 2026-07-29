@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Splunk
   - Pentesting/Enumeracion
+  - Tipo/Introduccion
+Descripción: "Splunk es una herramienta de analítica de logs usada como SIEM. Custodia datos sensibles (logs, credenciales, telemetría) y suele correr como root (Linux) o SYSTEM (Windows)…"
 Fecha de actualización: 2026-07-16
 Nota previa: "[[01 - Ataques a Jenkins]]"
 Nota siguiente: "[[01 - Ataques a Splunk]]"

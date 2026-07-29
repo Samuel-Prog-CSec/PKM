@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - HTTP/CRLF
+  - Tipo/Defensa
+Descripción: "Cierre del bloque CRLF: cómo automatizar la detección con herramientas actuales y cómo prevenir cada variante a nivel de código"
 Fecha de actualización: 2026-07-14
 Nota previa: "[[04 - SMTP Header Injection]]"
 Nota siguiente: "[[06 - Introducción a HTTP Request Smuggling]]"

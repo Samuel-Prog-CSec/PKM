@@ -3,6 +3,7 @@ tags:
   - Full-Stack
   - React
   - Frontend
+Descripción: "Las props (propiedades) y el state (estado) son objetos JavaScript planos; un cambio en cualquiera de los dos dispara el método render() del componente"
 Fecha de actualización: 2026-06-22
 Nota previa: "[[Componentes de React (tipos y ciclo de vida)]]"
 Nota siguiente: "[[Enrutado con React Router]]"

@@ -3,10 +3,12 @@ tags:
   - Web/Red-Team
   - SQLi
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "El módulo de SQLi avanzado explora técnicas modernas (error-based, second-order, bypass de filtros) y ataques específicos de PostgreSQL, todo desde un enfoque white-box: tenemos…"
 Fecha de actualización: 2026-06-04
 Nota previa:
 Nota siguiente: "[[01 - Decompilación de archivos Java]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Avanzado.base|SQLi Avanzado]]"
 ---
 ---
 

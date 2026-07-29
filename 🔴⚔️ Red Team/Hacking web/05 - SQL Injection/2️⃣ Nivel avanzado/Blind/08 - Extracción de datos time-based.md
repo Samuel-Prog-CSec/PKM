@@ -3,10 +3,11 @@ tags:
   - Web/Red-Team
   - SQLi
   - Pentesting/Enumeracion
+Descripción: "A diferencia del caso boolean (donde adivinamos la tabla users y la columna password), aquí no sabemos nada de la consulta salvo que usa el User-Agent"
 Fecha de actualización: 2026-06-04
 Nota previa: "[[07 - Diseño del oráculo temporal]]"
 Nota siguiente: "[[09 - Exfiltración Out-of-Band por DNS]]"
-Area: "[[SQL Injection.base|SQL Injection]]"
+Area: "[[SQLi Blind.base|SQLi Blind]]"
 ---
 ---
 

@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - WordPress
   - Introduccion
+  - Tipo/Introduccion
+Descripción: "WordPress es el CMS más usado de la web — mueve en torno al 43% de todos los sitios de internet (W3Techs, 2025) y más del 60% del mercado de CMS. Corre en PHP sobre un stack…"
 Fecha de actualización: 2026-07-17
 Nota previa: "[[01 - Descubrimiento y enumeración de aplicaciones]]"
 Nota siguiente: "[[01 - Enumeración de WordPress]]"

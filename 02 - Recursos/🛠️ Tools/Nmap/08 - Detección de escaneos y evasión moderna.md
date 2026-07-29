@@ -3,6 +3,8 @@ tags:
   - Pentesting/Enumeracion
   - Escaneo/Redes
   - Linux
+  - Tipo/Deteccion
+Descripción: "Las técnicas de evasión de 07 - Evasión de firewalls, IDS e IPS son de la era del IDS de firma simple"
 Fecha de actualización: 2026-07-18
 Nota previa: "[[07 - Evasión de firewalls, IDS e IPS]]"
 Nota siguiente: "[[09 - Arsenal de herramientas de escaneo]]"

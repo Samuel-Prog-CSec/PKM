@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "No siempre logramos un upload arbitrario"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[05 - Validación de tipo - Content-Type y magic bytes]]"
 Nota siguiente: "[[07 - Vectores avanzados - procesamiento, ZIP Slip y race conditions]]"

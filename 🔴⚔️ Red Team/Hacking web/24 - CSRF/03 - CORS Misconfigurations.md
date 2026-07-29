@@ -4,6 +4,7 @@ tags:
   - Pentesting/Explotacion
   - CORS
   - CSRF
+Descripción: "Una CORS misconfiguration concede a un origen atacante una excepción a la Same-Origin Policy"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[02 - Same-Origin Policy y CORS]]"
 Nota siguiente: "[[04 - Bypass de tokens CSRF vía CORS]]"

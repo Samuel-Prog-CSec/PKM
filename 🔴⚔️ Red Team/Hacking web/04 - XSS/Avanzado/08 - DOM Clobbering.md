@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "La evasión clásica asume que puedes meter JavaScript"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[07 - Herramientas para XSS]]"
 Nota siguiente: "[[09 - Prototype Pollution hacia XSS]]"

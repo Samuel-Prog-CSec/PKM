@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Una vista no se muestra sola. Hace falta una acción que diga 'abre este modelo con estas vistas' y un menú que el usuario pulse para lanzar la acción"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[12 - Vistas XML]]"
 Nota siguiente: "[[14 - Seguridad y datos demo]]"

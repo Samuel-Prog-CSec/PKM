@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - XSS
+Descripción: "Con control total sobre la sesión de la víctima, el XSS puede disparar cualquier funcionalidad de la aplicación en su nombre"
 Fecha de actualización: 2026-06-08
 Nota previa: "[[00 - Introducción a la explotación XSS avanzada]]"
 Nota siguiente: "[[02 - Enumeración de APIs internas]]"

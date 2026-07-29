@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Server-Side/SSI
+  - Tipo/Introduccion
+Descripción: "Los Server-Side Includes (SSI) son una tecnología que generan contenido dinámico en páginas HTML mediante directivas que el servidor interpreta antes de servir la página"
 Fecha de actualización: 2026-06-22
 Nota previa: ""
 Nota siguiente: "[[01 - Prevención de SSI]]"

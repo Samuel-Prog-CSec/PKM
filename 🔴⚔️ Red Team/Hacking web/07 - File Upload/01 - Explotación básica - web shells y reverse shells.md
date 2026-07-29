@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - File-Upload
+Descripción: "El caso más simple de file upload es el que no aplica validación alguna: la app acepta cualquier extensión y contenido por defecto"
 Fecha de actualización: 2026-06-21
 Nota previa: "[[00 - Introducción a los File Upload Attacks]]"
 Nota siguiente: "[[02 - Bypass de validación en cliente]]"

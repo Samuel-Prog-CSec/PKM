@@ -3,6 +3,7 @@ tags:
   - SIE/Laboratorio
   - SIE/Modulos
   - SIE
+Descripción: "Última pieza del openacademy completo: generar un informe PDF desde un registro"
 Fecha de actualización: 2026-05-27
 Nota previa: "[[15 - Campos computados y onchange]]"
 Nota siguiente: "[[17 - Cómo programa el profesor (estilo y buenas prácticas)]]"

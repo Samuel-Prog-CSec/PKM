@@ -3,6 +3,7 @@ tags:
   - Web/Red-Team
   - Pentesting/Explotacion
   - Verb-Tampering
+Descripción: "Segundo vector, más frecuente y más peligroso: código inseguro que aplica un filtro de seguridad a una fuente de parámetros pero ejecuta la acción con otra"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[02 - Bypass de autenticación básica]]"
 Nota siguiente: "[[04 - Detección, evasión y prevención de Verb Tampering]]"

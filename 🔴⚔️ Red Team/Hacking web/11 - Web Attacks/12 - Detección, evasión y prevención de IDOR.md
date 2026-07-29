@@ -3,6 +3,8 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - IDOR
+  - Tipo/Deteccion
+Descripción: "Nota dedicada a cazar IDOR de forma sistemática, evadir las defensas que hoy los dificultan, y prevenirlos"
 Fecha de actualización: 2026-07-15
 Nota previa: "[[11 - Encadenamiento de IDOR]]"
 Nota siguiente: "[[13 - Herramientas para IDOR]]"

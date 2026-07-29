@@ -3,6 +3,8 @@ tags:
   - Introduccion
   - Pentesting/Wi-Fi
   - Seguridad/Autenticacion
+  - Tipo/Introduccion
+Descripción: "Los tipos de autenticación WiFi son cruciales para proteger las redes inalámbricas y proteger los datos del acceso no autorizado"
 Fecha de actualización: 2025-10-30
 Nota previa:
 Nota siguiente:
