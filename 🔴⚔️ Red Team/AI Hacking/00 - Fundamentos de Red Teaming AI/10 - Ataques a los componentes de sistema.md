@@ -14,6 +14,9 @@ Area: "[[Red Teaming AI.base|Red Teaming AI]]"
 
 El componente `system` cubre el hardware, el sistema operativo, la configuración y —lo que lo hace específico— **la infraestructura de despliegue del modelo**. Aplican los riesgos tradicionales, más una capa propia que en la práctica es donde están los compromisos totales más rápidos.
 
+> [!info]+ Explotación detallada
+> El marco está aquí; la explotación práctica del stack de MLOps —model deployment tampering, RCE en Ray/Triton/ollama, la familia de CVEs de [[08 - MLflow, del path traversal al RCE|MLflow]], almacenamiento inseguro— está en el sub-tema [[00 - Superficie de ataque de aplicación y sistema|Aplicación y sistema]].
+
 # Riesgos tradicionales
 
 Configuraciones por defecto o mal ajustadas: puertos abiertos, ACLs débiles, interfaces administrativas expuestas, credenciales por defecto. Son fáciles de encontrar porque se automatizan con escáner, y llevan a acceso no autorizado a la infraestructura subyacente.

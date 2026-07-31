@@ -64,7 +64,7 @@ email=admin@httpattacks.htb
 Se consulta el log del servicio OOB y aparece el `GET /reset?token=...` con el token de la víctima.
 
 > [!important] Variante imprescindible: `X-Forwarded-Host`
-> Si el `Host` está validado (allowlist), <mark style="background: #FF5582A6;">prueba `X-Forwarded-Host: attacker.oast.me`</mark>: muchas apps construyen el enlace con la override header sin validarla. También funcionan a veces el `Host` duplicado o inyectar el dominio malicioso en un subdominio/puerto. Repasa las técnicas de [[06 - Introducción a los Host Header Attacks#Cuando no puedes tocar el Host directamente (evasión)|inyección de Host]].
+> Si el `Host` está validado (allowlist), <mark style="background: #FF5582A6;">prueba `X-Forwarded-Host: attacker.oast.me`</mark>: muchas apps construyen el enlace con la override header sin validarla. También funcionan a veces el `Host` duplicado o inyectar el dominio malicioso en un subdominio/puerto. Repasa las técnicas de [[06 - Introducción a los Host Header Attacks#Cuando no puedes tocar el `Host` directamente (evasión)|inyección de Host]].
 
 > [!warning] Interacción del usuario, pero práctica
 > El ataque necesita que la víctima **haga clic** en el enlace. Parece una limitación, pero los emails de reset son **HTML** y ocultan el destino real tras el texto del botón — la víctima no ve el dominio envenenado hasta después de pulsar, y para entonces el token ya está robado. En un lab HTB sin acceso a email, el enlace se "ve" enviando la petición y observando la respuesta; el callback se captura en el vhost local (`interactsh.local/log`).

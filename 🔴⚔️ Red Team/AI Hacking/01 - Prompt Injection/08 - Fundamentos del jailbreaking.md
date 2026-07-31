@@ -72,7 +72,9 @@ La métrica estándar es el **`Attack Success Rate` (ASR)**: número de éxitos 
 - **Registrar el ASR en el informe**, no un "funciona". Un 2/10 y un 9/10 describen riesgos muy distintos y el cliente necesita esa diferencia para priorizar.
 - Es exactamente lo que hacen las herramientas automatizadas: [[00 - Qué es garak y cuándo usarlo|`garak`]] ejecuta cada `probe` varias veces y reporta *failure rate* precisamente por esto — el flag es [[02 - Ejecución y lectura de informes de garak#`--generations` es el flag que decide si el dato vale|`--generations`]]. Para medir el ASR de una técnica propia sobre muchas repeticiones, [[02 - Ataques multi-turno con PyRIT|PyRIT]].
 
-> [!warning]+ Consideraciones legales y de alcance
+# Consideraciones legales y de alcance
+
+> [!warning]+ Esto no se prueba sin autorización escrita
 > Probar jailbreaks implica **intentar generar contenido dañino** de forma deliberada. Antes de tocar nada:
 > - Que esté en el alcance por escrito, con las categorías de contenido que se van a probar explícitamente listadas.
 > - Usar `proxies` de daño siempre que se pueda: el lab de HTB pide instrucciones para robar manzanas, no para sintetizar nada. Si el objetivo es demostrar que el guardrail cae, un payload benigno-pero-prohibido lo demuestra igual y no genera material problemático.

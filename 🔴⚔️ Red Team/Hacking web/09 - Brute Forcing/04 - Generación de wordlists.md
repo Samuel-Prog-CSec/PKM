@@ -9,6 +9,8 @@ Nota previa: "[[03 - Medusa y alternativas modernas]]"
 Nota siguiente: "[[05 - Defensas y evasión]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
+---
+
 Una wordlist genérica como `rockyou` lanza una red ancha y reza. <mark style="background: #ADCCFFA6;">Una wordlist dirigida se construye con lo que sabes del objetivo</mark> —su nombre, su empresa, su jerga, su web— y multiplica la tasa de acierto reduciendo el espacio. Contra "Thomas Edison en su empresa", `xato-net-10-million-usernames.txt` no va a contener su usuario; un esquema generado a su medida, sí.
 
 # Usuarios: de un nombre a todas sus variantes

@@ -66,7 +66,7 @@ Las SQLi se clasifican según **cómo y dónde** se recupera su salida:
 
 # Dónde sobrevive SQLi hoy
 
-<mark style="background: #8000E1A6;">El uso generalizado de `prepared statements` y ORMs ha reducido drásticamente la SQLi clásica, pero no la ha erradicado</mark>. Sigue apareciendo en:
+<mark style="background: #FFB8EBA6;">El uso generalizado de `prepared statements` y ORMs ha reducido drásticamente la SQLi clásica</mark>, pero <mark style="background: #FF5582A6;">no la ha erradicado</mark>. Sigue apareciendo en:
 
 - **Cláusulas no parametrizables** (`ORDER BY`, `LIMIT`, nombres de tabla/columna), que los ORMs construyen concatenando.
 - **APIs y cuerpos JSON**, donde la entrada llega por rutas que escapan a la validación del formulario clásico.

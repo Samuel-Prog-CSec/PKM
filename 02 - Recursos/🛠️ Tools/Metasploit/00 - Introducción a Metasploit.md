@@ -83,7 +83,7 @@ data  documentation  lib  modules  plugins  scripts  tools
 
 # Dónde encaja — y su gran problema
 
-Metasploit cubre las fases de [[3️⃣ Explotación|explotación]] y [[4️⃣ Post-Explotación|post-explotación]]: una vez la [[00 - Principios y metodología de enumeración|enumeración]] revela un servicio vulnerable, MSF a menudo tiene el exploit listo. Es el puente natural desde el descubrimiento de una vulnerabilidad ([[01 - Evaluación de vulnerabilidades|vulnerability assessment]]) hasta una shell.
+Metasploit cubre las fases de [[07 - Explotación|explotación]] y [[08 - Post-explotación|post-explotación]]: una vez la [[00 - Principios y metodología de enumeración|enumeración]] revela un servicio vulnerable, MSF a menudo tiene el exploit listo. Es el puente natural desde el descubrimiento de una vulnerabilidad ([[01 - Evaluación de vulnerabilidades|vulnerability assessment]]) hasta una shell.
 
 > [!warning]+ Potente pero ruidoso
 > <mark style="background: #FF5582A6;">MSF —y sobre todo `Meterpreter`— es de lo más detectado de la industria</mark>: firmas YARA para el stub, el certificado TLS por defecto del handler, patrones de *staging* y nombres de payload estándar. En un objetivo con `EDR`, lanzar un exploit de MSF sin precauciones es delatarse. Saber **cuándo** usarlo, cómo reducir su huella y cuándo migrar a un C2 más sigiloso es criterio de pentester senior — desarrollado en [[12 - Detección y evasión]] y [[13 - Arsenal - automatización y alternativas]].

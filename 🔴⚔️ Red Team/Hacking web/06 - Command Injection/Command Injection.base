@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("Command Injection.base", "Command Injection")
+    filters: Area == link("Command Injection.base", "Command Injection")
     order:
       - file.name
       - Descripción

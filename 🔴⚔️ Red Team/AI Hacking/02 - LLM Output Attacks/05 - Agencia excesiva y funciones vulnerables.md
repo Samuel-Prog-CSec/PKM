@@ -102,10 +102,10 @@ Dos particularidades del canal:
 
 # La superficie moderna — MCP y agentes
 
-El `Model Context Protocol` estandarizó cómo un agente descubre y llama herramientas de servidores externos, y con ello movió el problema de sitio. Lo que hay que revisar hoy:
+El `Model Context Protocol` estandarizó cómo un agente descubre y llama herramientas de servidores externos, y con ello movió el problema de sitio. Tiene sub-tema propio en [[00 - Qué es MCP y por qué cambia la superficie de ataque|MCP y seguridad de agentes]]; aquí, lo que hay que revisar desde la óptica de la agencia excesiva:
 
-- **Descripciones de herramientas escritas por terceros.** En MCP, la descripción de cada herramienta entra literalmente en el prompt del agente. Un servidor malicioso o comprometido inyecta instrucciones ahí, y el agente las obedece antes de que el usuario escriba nada — *tool poisoning*.
-- **Composición de servidores.** Un agente con varios servidores MCP conectados puede combinar capacidades que ninguno concedió por separado: leer un fichero con uno y publicarlo con otro. Es la [[01 - Prompt injection y por qué no tiene parche#La lethal trifecta|lethal trifecta]] montada por accidente.
+- **Descripciones de herramientas escritas por terceros.** En MCP, la descripción de cada herramienta entra literalmente en el prompt del agente. Un servidor malicioso o comprometido inyecta instrucciones ahí, y el agente las obedece antes de que el usuario escriba nada — [[06 - Tool poisoning y prompt injection vía descripción|*tool poisoning*]].
+- **Composición de servidores.** Un agente con varios servidores MCP conectados puede combinar capacidades que ninguno concedió por separado: leer un fichero con uno y publicarlo con otro. Es la [[01 - Prompt injection y por qué no tiene parche#La lethal trifecta|lethal trifecta]] montada por accidente, y la base del [[07 - Rug pull y tool shadowing|tool shadowing]].
 - **Autorización delegada.** El servidor MCP suele autenticarse con las credenciales del usuario, así que **todo lo que el usuario puede hacer, lo puede hacer el agente** — y por tanto, quien controle el contenido que el agente lee. Confused deputy de manual.
 - **Resultados de herramienta como contexto de confianza.** Lo que devuelve una herramienta vuelve al prompt sin sanear. Si devuelve texto de un tercero, es un vector de [[05 - Inyección indirecta en RAG, email y web|inyección indirecta]].
 

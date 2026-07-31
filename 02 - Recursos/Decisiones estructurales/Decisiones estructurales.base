@@ -1,0 +1,30 @@
+formulas:
+  número: file.name.split(" - ")[0]
+  título: file.name.replace(".md", "").split(" - ").slice(1).join(" - ")
+properties:
+  formula.número:
+    displayName: Nº
+  formula.título:
+    displayName: Decisión
+  note.Estado:
+    displayName: Estado
+views:
+  - type: table
+    name: Decisiones
+    filters:
+      and:
+        - file.inFolder("02 - Recursos/Decisiones estructurales")
+        - file.ext == "md"
+    order:
+      - formula.número
+      - formula.título
+      - Estado
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: DESC
+    columnSize:
+      formula.número: 70
+      formula.título: 560
+      note.Estado: 120
+      note.Fecha de actualización: 150

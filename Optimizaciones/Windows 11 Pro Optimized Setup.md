@@ -69,7 +69,11 @@ Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` 
 
 <mark style="background: #ADCCFFA6;">Eliminar servicios ocultos de telemetría de red</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\TCPIPLOGGER` -> *Start* -> **0 (Hexadecimal)** (APAGADO)
 
-<mark style="background: #ADCCFFA6;">Liberar RAM porque obliga a borrar DLLs al cerrar una app</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer` -> Crear nuevo valor `DWORD (32 bits)` -> Nombrarlo `AlwaysUnloadDll` -> **Establecer valor a 1** (*Hexadecimal*)
+<mark style="background: #ADCCFFA6;">Liberar RAM porque obliga a borrar DLLs al cerrar una app</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer` -> Crear nuevo valor `DWORD (32 bits)` -> Nombrarlo `AlwaysUnloadDll` -> **Establecer valor a 1** (*Hexadecimal*).
+
+Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile -> SystemResponsiveness -> **Valor a 0** (*Hexadedcimal*).
+
+Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile -> NetworkThrottlingIndex -> **Valor a ffffffff** (*Hexadecimal*).
 
 
 
@@ -177,3 +181,7 @@ https://youtu.be/W6cKFliWW6Q
 # 6. Optimizar Teclado / Ratón
 - **Reducir input lag del teclado**: ajustes de teclado (`Teclado`) -> Retraso de la repetición y Velocidad de la repetición -> **al máximo** (*Corto* y *Rápida*).
 - **Reducir input lag ratón**: ajustes de ratón (`Ratón`) -> Opciones de puntero -> Establecer velocidad de puntero en el **tick número 6**/11 && **Desactivar precisión de puntero**.
+- **USB Ultra-rápido**: Administrador de dispositivos -> Controladoras de bus serie universal. En todas las entradas que haya: Doble click -> Administrador de energía -> Permitir que el equipo apague este dispositivo para ahorrar energía -> **Desactivado**.
+- Editar la configuración del plan de energía -> Cambiar la configuración avanzada de energía -> Configuración de USB -> Configuración de suspensión selectiva de USB -> **Configuración: Deshabilitado**.
+- Editar la configuración del plan de energía -> Cambiar la configuración avanzada de energía ->PCI Express -> Administración de energía del estado de vínculos -> **Configuración: Desactivar**.
+- Administrador de dispositivos -> Dispositivos de interfaz de usuario (HID) -> Dispositivos de periféricos y los "Dispositivo de entrada USB": Doble click -> Administrador de energía -> Permitir que el equipo apague este dispositivo para ahorrar energía -> **Desactivado**.

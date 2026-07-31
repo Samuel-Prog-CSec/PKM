@@ -1,31 +1,15 @@
 {
+  "data_version": 2,
   "command_timeout": 5,
   "templates_folder": "02 - Recursos/Templates",
-  "templates_pairs": [
-    [
-      "",
-      ""
-    ]
-  ],
-  "trigger_on_file_creation": false,
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "folder",
   "auto_jump_to_cursor": false,
-  "enable_system_commands": false,
+  "jump_to_cursor_after_file_name": false,
   "shell_path": "",
   "user_scripts_folder": "",
-  "enable_folder_templates": true,
-  "folder_templates": [
-    {
-      "folder": "",
-      "template": ""
-    }
-  ],
-  "enable_file_templates": false,
-  "file_templates": [
-    {
-      "regex": ".*",
-      "template": ""
-    }
-  ],
+  "folder_templates": [],
+  "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": true,
   "enabled_templates_hotkeys": [
@@ -34,10 +18,6 @@
   "startup_templates": [
     "02 - Recursos/Templates/Template para proyectos.md"
   ],
-  "intellisense_render": 1,
-  "ignore_folders_on_creation": [
-    {
-      "folder": ""
-    }
-  ]
+  "intellisense_render": "1",
+  "ignore_folders_on_creation": []
 }

@@ -10,6 +10,8 @@ Nota previa:
 Nota siguiente: "[[01 - Tipos de ataque - diccionario, híbrido y máscara]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
+---
+
 <mark style="background: #ADCCFFA6;">El `brute forcing` es probar credenciales o claves de forma sistemática hasta dar con la correcta.</mark> Es la última herramienta del cinturón: ruidosa, lenta y dependiente de la fuerza de la contraseña objetivo. Pero cuando el resto de vías falla —no hay vulnerabilidad conocida, el phishing no entra, no hay reutilización de credenciales evidente— sigue siendo el camino que abre la puerta. Esta nota fija el marco conceptual; las siguientes lo ejecutan con `Hydra`, `Medusa` y wordlists.
 
 # Online vs. offline: la distinción que lo cambia todo

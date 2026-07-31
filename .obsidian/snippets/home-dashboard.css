@@ -1,0 +1,1572 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   HOME DASHBOARD — panel de entrada del PKM
+   ---------------------------------------------------------------------------
+   Alcance: SOLO las notas con `cssclasses: [home]` en el frontmatter.
+   Nada de este archivo toca el resto del vault.
+
+   Compatible con:
+     · Soft Paper  (modo claro)  → .theme-light
+     · AnuPpuccin  (modo oscuro) → .theme-dark
+   Los tokens de abajo se redefinen por tema; el resto del CSS es agnóstico.
+
+   Animación: CSS puro, sin JavaScript. Todo se apaga bajo
+   `prefers-reduced-motion: reduce` (bloque final).
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   0 · TOKENS DE COLOR
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home {
+  /* Curvas y tiempos compartidos */
+  --pkm-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --pkm-radius: 16px;
+  --pkm-radius-sm: 10px;
+  --pkm-gap: 14px;
+}
+
+/* ── Modo claro · Soft Paper ─────────────────────────────────────────────── */
+.theme-light .home {
+  --pkm-ink: #2b2622;
+  --pkm-ink-soft: #6f665e;
+  --pkm-ink-faint: #9b9089;
+
+  --pkm-surface: rgba(255, 253, 250, 0.82);
+  --pkm-surface-2: rgba(246, 241, 234, 0.9);
+  --pkm-border: rgba(70, 58, 48, 0.13);
+  --pkm-border-strong: rgba(70, 58, 48, 0.24);
+  --pkm-shadow: 0 1px 2px rgba(60, 48, 38, 0.06), 0 8px 24px rgba(60, 48, 38, 0.07);
+  --pkm-shadow-lift: 0 2px 6px rgba(60, 48, 38, 0.1), 0 18px 40px rgba(60, 48, 38, 0.14);
+
+  /* Acentos por área — saturados y profundos para contrastar sobre papel */
+  --pkm-red: #b4232f;
+  --pkm-blue: #1d4ed8;
+  --pkm-teal: #0f766e;
+  --pkm-amber: #a35709;
+  --pkm-violet: #6d28d9;
+  --pkm-green: #15803d;
+
+  /* Fondo del hero */
+  --pkm-hero-base: linear-gradient(135deg, #fdfaf5 0%, #f5eee3 100%);
+  --pkm-hero-veil: rgba(255, 253, 249, 0.42);
+  --pkm-hero-ink: #241f1b;
+  --pkm-hero-ink-soft: #6b6058;
+  --pkm-mesh-alpha: 0.52;
+  --pkm-grid-line: rgba(80, 64, 50, 0.09);
+  --pkm-scan: rgba(90, 72, 56, 0.05);
+  --pkm-spark: rgba(120, 96, 74, 0.5);
+}
+
+/* ── Modo oscuro · AnuPpuccin (base Catppuccin Mocha) ────────────────────── */
+.theme-dark .home {
+  --pkm-ink: #cdd6f4;
+  --pkm-ink-soft: #a6adc8;
+  --pkm-ink-faint: #7f849c;
+
+  --pkm-surface: rgba(49, 50, 68, 0.46);
+  --pkm-surface-2: rgba(30, 30, 46, 0.66);
+  --pkm-border: rgba(205, 214, 244, 0.1);
+  --pkm-border-strong: rgba(205, 214, 244, 0.2);
+  --pkm-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.28);
+  --pkm-shadow-lift: 0 2px 8px rgba(0, 0, 0, 0.4), 0 20px 46px rgba(0, 0, 0, 0.45);
+
+  /* Acentos por área — pasteles Catppuccin */
+  --pkm-red: #f38ba8;
+  --pkm-blue: #89b4fa;
+  --pkm-teal: #94e2d5;
+  --pkm-amber: #fab387;
+  --pkm-violet: #cba6f7;
+  --pkm-green: #a6e3a1;
+
+  --pkm-hero-base: linear-gradient(135deg, #181825 0%, #1e1e2e 55%, #11111b 100%);
+  --pkm-hero-veil: rgba(17, 17, 27, 0.34);
+  --pkm-hero-ink: #f5f3ff;
+  --pkm-hero-ink-soft: #a6adc8;
+  --pkm-mesh-alpha: 0.5;
+  --pkm-grid-line: rgba(205, 214, 244, 0.07);
+  --pkm-scan: rgba(205, 214, 244, 0.035);
+  --pkm-spark: rgba(203, 166, 247, 0.65);
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   1 · CONTENEDOR — ancho, título y neutralización de envoltorios
+   Obsidian mete el HTML crudo en `.cm-html-embed` (Live Preview) y los bloques
+   de Dataview en `.block-language-dataviewjs`. Ambos traen margen propio.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Rompe el "readable line length" solo aquí: el dashboard necesita el ancho. */
+.home .markdown-preview-sizer,
+.home .cm-sizer {
+  max-width: 1180px !important;
+  margin-inline: auto !important;
+}
+
+/* En Live Preview el ancho se recorta DOS veces: el sizer (arriba) y además
+   `.cm-content`, que lleva el readable-line-length (~700px). Sin esto, el
+   dashboard se ve a media anchura en edición y ancho en lectura. */
+.home .cm-content,
+.home .cm-line {
+  max-width: none !important;
+}
+
+/* El hero ya hace de cabecera; el título inline y el bloque de propiedades
+   solo restan sitio en un dashboard. Necesitan !important: Obsidian marca el
+   contenedor con `show-properties` y esa regla gana por especificidad. */
+.home .inline-title,
+.home .metadata-container,
+.home .metadata-properties-heading,
+.home .mod-header {
+  display: none !important;
+}
+
+/* Envoltorios sin margen para que hero y grid queden pegados donde toca. */
+.home .cm-html-embed,
+.home .cm-embed-block {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+.home .cm-embed-block:hover {
+  box-shadow: none !important;
+}
+.home .block-language-dataviewjs {
+  margin-block: 0;
+}
+
+/* Separación vertical uniforme entre secciones. */
+.home .pkm-section {
+  margin-block: 34px 12px;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   2 · HERO
+   Cuatro capas apiladas: malla de color → rejilla → scanlines → chispas.
+   Todas animadas con `transform`/`opacity` (compositor puro, sin repaint).
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--pkm-radius);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-hero-base);
+  padding: 46px 40px 40px;
+  margin-bottom: 26px;
+  box-shadow: var(--pkm-shadow);
+  contain: paint;
+}
+
+/* Capa 1 — malla de color a la deriva (la "aurora"). */
+.home .pkm-hero-mesh {
+  position: absolute;
+  inset: -40%;
+  z-index: -4;
+  opacity: var(--pkm-mesh-alpha);
+  background:
+    radial-gradient(38% 46% at 18% 26%, var(--pkm-red) 0%, transparent 62%),
+    radial-gradient(34% 42% at 78% 22%, var(--pkm-violet) 0%, transparent 60%),
+    radial-gradient(42% 48% at 62% 82%, var(--pkm-blue) 0%, transparent 62%),
+    radial-gradient(30% 38% at 24% 78%, var(--pkm-teal) 0%, transparent 58%);
+  filter: blur(26px) saturate(1.15);
+  animation: pkm-drift 34s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Capa 2 — rejilla técnica con parallax lento. */
+.home .pkm-hero-grid {
+  position: absolute;
+  inset: -60px;
+  z-index: -3;
+  background-image:
+    linear-gradient(var(--pkm-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pkm-grid-line) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(120% 100% at 50% 0%, #000 25%, transparent 78%);
+  animation: pkm-pan 60s linear infinite;
+  will-change: transform;
+}
+
+/* Capa 3 — scanlines derivando en vertical. */
+.home .pkm-hero-scan {
+  position: absolute;
+  inset: -20px;
+  z-index: -2;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--pkm-scan) 0px,
+    var(--pkm-scan) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  animation: pkm-scan 9s linear infinite;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Capa 4 — velo que devuelve legibilidad al texto sobre la malla. */
+.home .pkm-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--pkm-hero-veil);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+/* Chispas: puntos que suben lento. Se posicionan con --x/--d inline. */
+.home .pkm-spark {
+  position: absolute;
+  bottom: -8px;
+  left: var(--x, 50%);
+  z-index: -1;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--pkm-spark);
+  opacity: 0;
+  animation: pkm-rise 14s linear infinite;
+  animation-delay: var(--d, 0s);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* ── Contenido del hero ──────────────────────────────────────────────────── */
+
+.home .pkm-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--pkm-hero-ink-soft);
+  margin-bottom: 12px;
+}
+
+.home .pkm-title {
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+  margin: 0 0 14px;
+  /* Gradiente en movimiento sobre el propio texto. */
+  background: linear-gradient(
+    100deg,
+    var(--pkm-hero-ink) 0%,
+    var(--pkm-red) 26%,
+    var(--pkm-violet) 46%,
+    var(--pkm-blue) 64%,
+    var(--pkm-hero-ink) 88%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pkm-sheen 14s ease-in-out infinite;
+}
+
+.home .pkm-tagline {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--pkm-hero-ink-soft);
+  max-width: 62ch;
+  margin: 0 0 22px;
+}
+
+/* Fila de métricas del hero */
+.home .pkm-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home .pkm-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--pkm-border-strong);
+  background: var(--pkm-surface);
+  backdrop-filter: blur(8px);
+  font-size: 0.8rem;
+  color: var(--pkm-hero-ink-soft);
+  white-space: nowrap;
+}
+
+.home .pkm-stat b {
+  font-size: 0.98rem;
+  font-weight: 750;
+  color: var(--pkm-hero-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   3 · GRID DE ÁREAS
+   Cada tarjeta es un <a class="internal-link"> → hay que desmontar el estilo
+   de enlace que aplica Obsidian antes de vestirla.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-grid {
+  display: grid;
+  /* 300px → 3 columnas a 1180px de ancho, 2 en ventana estrecha. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--pkm-gap);
+}
+
+.home .pkm-card {
+  --accent: var(--pkm-ink-soft);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 18px 17px;
+  border-radius: var(--pkm-radius);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  transition:
+    transform 0.32s var(--pkm-ease),
+    box-shadow 0.32s var(--pkm-ease),
+    border-color 0.32s var(--pkm-ease);
+
+  /* Neutraliza el estilo de enlace de Obsidian */
+  color: var(--pkm-ink) !important;
+  text-decoration: none !important;
+}
+
+.home .pkm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--pkm-shadow-lift);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* Barra de acento superior, crece al pasar por encima. */
+.home .pkm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0.16);
+  transform-origin: left;
+  transition: transform 0.42s var(--pkm-ease);
+}
+.home .pkm-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Halo cónico giratorio, solo visible en hover. */
+.home .pkm-card::after {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  z-index: -1;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    color-mix(in srgb, var(--accent) 42%, transparent) 40deg,
+    transparent 110deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--pkm-ease);
+  animation: pkm-spin 5s linear infinite;
+  animation-play-state: paused;
+}
+.home .pkm-card:hover::after {
+  opacity: 0.5;
+  animation-play-state: running;
+}
+
+/* Máscara interior: deja el halo solo como borde luminoso. */
+.home .pkm-card-inner {
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: calc(var(--pkm-radius) - 1px);
+  background: var(--pkm-surface-2);
+  backdrop-filter: blur(12px);
+}
+
+/* Icono en pastilla: SVG de Lucide teñido con el acento del área.
+   Se usa SVG y no emoji a propósito — hay plugins que reescriben los emoji
+   a <img class="emoji"> y dejan el glifo de texto debajo (icono duplicado). */
+.home .pkm-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 13px;
+  border-radius: 12px;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+  transition:
+    transform 0.4s var(--pkm-ease),
+    background 0.3s var(--pkm-ease),
+    box-shadow 0.3s var(--pkm-ease);
+}
+
+.home .pkm-card-icon svg {
+  width: 21px;
+  height: 21px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.home .pkm-card:hover .pkm-card-icon {
+  transform: scale(1.08) rotate(-4deg);
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.home .pkm-card-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  color: var(--pkm-ink);
+}
+
+.home .pkm-card-desc {
+  font-size: 0.78rem;
+  line-height: 1.42;
+  color: var(--pkm-ink-soft);
+  flex: 1;
+}
+
+.home .pkm-card-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-top: 11px;
+  padding-top: 10px;
+  border-top: 1px solid var(--pkm-border);
+  font-size: 0.72rem;
+  color: var(--pkm-ink-faint);
+}
+
+.home .pkm-card-count {
+  font-size: 1.18rem;
+  font-weight: 750;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Acento por área */
+.home .pkm-card[data-accent="red"]    { --accent: var(--pkm-red); }
+.home .pkm-card[data-accent="blue"]   { --accent: var(--pkm-blue); }
+.home .pkm-card[data-accent="teal"]   { --accent: var(--pkm-teal); }
+.home .pkm-card[data-accent="amber"]  { --accent: var(--pkm-amber); }
+.home .pkm-card[data-accent="violet"] { --accent: var(--pkm-violet); }
+.home .pkm-card[data-accent="green"]  { --accent: var(--pkm-green); }
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   4 · CABECERAS DE SECCIÓN
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-h {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px;
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pkm-ink-faint);
+}
+
+.home .pkm-h::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--pkm-border-strong), transparent);
+  order: 3;
+}
+
+/* Aclaración a la derecha del título de sección: el criterio, en corto. */
+.home .pkm-h-note {
+  order: 2;
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--pkm-ink-soft);
+}
+.home .pkm-h-note code {
+  font-size: 0.9em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--pkm-surface-2);
+}
+.home .pkm-h-note a {
+  color: var(--pkm-violet) !important;
+  text-decoration: none !important;
+}
+.home .pkm-h-note a:hover {
+  text-decoration: underline !important;
+}
+
+.home .pkm-muted {
+  color: var(--pkm-ink-faint);
+  font-weight: 400;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   5 · CERTIFICACIONES — barras de progreso
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  gap: var(--pkm-gap);
+}
+
+.home .pkm-cert {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 17px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  transition: border-color 0.3s var(--pkm-ease);
+}
+.home .pkm-cert:hover {
+  border-color: color-mix(in srgb, var(--accent, var(--pkm-ink-soft)) 40%, transparent);
+}
+
+/* ── Anillo de progreso ──────────────────────────────────────────────────
+   La circunferencia (--c) y el desfase final (--o) se calculan en JS y se
+   inyectan inline; el anillo se dibuja animando `stroke-dashoffset`.       */
+.home .pkm-ring {
+  position: relative;
+  flex: none;
+  width: 76px;
+  height: 76px;
+}
+
+.home .pkm-ring svg {
+  width: 100%;
+  height: 100%;
+  /* Empieza a las 12 en punto en vez de a las 3. */
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.home .pkm-ring-bg {
+  fill: none;
+  stroke: var(--pkm-surface-2);
+  stroke-width: 7;
+}
+
+.home .pkm-ring-fg {
+  fill: none;
+  stroke: var(--accent, var(--pkm-blue));
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: var(--c);
+  stroke-dashoffset: var(--c);
+  animation: pkm-ring 1.7s var(--pkm-ease) forwards;
+  animation-delay: var(--d, 0s);
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--accent) 45%, transparent));
+}
+
+.home .pkm-ring-txt {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 750;
+  color: var(--accent, var(--pkm-ink));
+  font-variant-numeric: tabular-nums;
+}
+
+.home .pkm-cert-body {
+  min-width: 0;
+}
+
+.home .pkm-cert-top {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-bottom: 5px;
+}
+
+.home .pkm-cert-name {
+  font-size: 0.95rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: var(--pkm-ink);
+}
+
+.home .pkm-cert-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent, var(--pkm-ink-soft));
+  font-variant-numeric: tabular-nums;
+}
+
+/* El texto viene del párrafo que hay bajo el encabezado en el temario, así
+   que puede ser largo: se recorta a dos líneas para no descuadrar la fila. */
+.home .pkm-cert-sub {
+  font-size: 0.74rem;
+  line-height: 1.42;
+  color: var(--pkm-ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   5b · SIGUIENTE ACCIÓN — lo que toca ahora, leído del frontmatter
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-next {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: var(--pkm-gap);
+}
+
+.home .pkm-next-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 17px 15px 16px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  border-left: 3px solid var(--accent, var(--pkm-ink-soft));
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  transition: transform 0.28s var(--pkm-ease), border-color 0.28s var(--pkm-ease);
+}
+.home .pkm-next-item:hover {
+  transform: translateX(3px);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  border-left-color: var(--accent);
+}
+
+.home .pkm-next-n {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 23px;
+  height: 23px;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.home .pkm-next-txt {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--pkm-ink);
+}
+
+.home .pkm-next-item[data-accent="red"]    { --accent: var(--pkm-red); }
+.home .pkm-next-item[data-accent="blue"]   { --accent: var(--pkm-blue); }
+.home .pkm-next-item[data-accent="teal"]   { --accent: var(--pkm-teal); }
+.home .pkm-next-item[data-accent="amber"]  { --accent: var(--pkm-amber); }
+.home .pkm-next-item[data-accent="violet"] { --accent: var(--pkm-violet); }
+.home .pkm-next-item[data-accent="green"]  { --accent: var(--pkm-green); }
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   5b-bis · PLAN DE ESTUDIO — reparto, plazos y cuellos de botella
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Fila de indicadores */
+.home .pkm-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(126px, 1fr));
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.home .pkm-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 14px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  border-left: 3px solid var(--tono, var(--pkm-ink-faint));
+  background: var(--pkm-surface);
+}
+
+.home .pkm-kpi-n {
+  font-size: 1.32rem;
+  font-weight: 750;
+  line-height: 1.1;
+  color: var(--tono, var(--pkm-ink));
+  font-variant-numeric: tabular-nums;
+}
+
+.home .pkm-kpi-t {
+  font-size: 0.7rem;
+  color: var(--pkm-ink-soft);
+}
+
+.home .pkm-kpi[data-tono="mal"]   { --tono: var(--pkm-red); }
+.home .pkm-kpi[data-tono="aviso"] { --tono: var(--pkm-amber); }
+.home .pkm-kpi[data-tono="curso"] { --tono: var(--pkm-blue); }
+.home .pkm-kpi[data-tono="ok"]    { --tono: var(--pkm-green); }
+.home .pkm-kpi[data-tono="info"]  { --tono: var(--pkm-violet); }
+
+/* Lista de tareas */
+.home .pkm-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.home .pkm-tarea {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  transition: transform 0.24s var(--pkm-ease), border-color 0.24s var(--pkm-ease);
+}
+.home .pkm-tarea:hover {
+  transform: translateX(3px);
+  border-color: var(--pkm-border-strong);
+}
+
+/* Marca de estado: anillo hueco pendiente, medio lleno en curso.
+   Es clicable — cicla el estado y reescribe la línea del temario. */
+.home .pkm-tarea-estado {
+  flex: none;
+  width: 13px;
+  height: 13px;
+  margin-top: 3px;
+  border-radius: 50%;
+  border: 2px solid var(--pkm-ink-faint);
+  cursor: pointer;
+  transition: transform 0.18s var(--pkm-ease), box-shadow 0.18s var(--pkm-ease);
+}
+.home .pkm-tarea-estado:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--pkm-ink-soft) 16%, transparent);
+}
+.home .pkm-tarea-estado:focus-visible {
+  outline: 2px solid var(--pkm-violet);
+  outline-offset: 3px;
+}
+/* Mientras se escribe en el temario, para que el clic dé señal de vida. */
+.home .pkm-tarea-estado.pkm-ocupado {
+  opacity: 0.45;
+  cursor: wait;
+}
+.home .pkm-tarea[data-estado="curso"] .pkm-tarea-estado {
+  border-color: var(--pkm-blue);
+  background: linear-gradient(90deg, var(--pkm-blue) 50%, transparent 50%);
+}
+.home .pkm-tarea[data-estado="hecha"] .pkm-tarea-estado {
+  border-color: var(--pkm-green);
+  background: var(--pkm-green);
+}
+.home .pkm-tarea[data-estado="cancel"] .pkm-tarea-estado {
+  border-color: var(--pkm-ink-faint);
+  background: linear-gradient(
+    135deg, transparent 44%, var(--pkm-ink-faint) 44%,
+    var(--pkm-ink-faint) 56%, transparent 56%);
+}
+
+/* Cerradas: siguen visibles pero en segundo plano, para poder revertirlas. */
+.home .pkm-tarea[data-estado="hecha"],
+.home .pkm-tarea[data-estado="cancel"] {
+  opacity: 0.5;
+  box-shadow: none;
+}
+.home .pkm-tarea[data-estado="hecha"]:hover,
+.home .pkm-tarea[data-estado="cancel"]:hover {
+  opacity: 1;
+}
+.home .pkm-tarea[data-estado="hecha"] .pkm-tarea-titulo,
+.home .pkm-tarea[data-estado="cancel"] .pkm-tarea-titulo {
+  text-decoration: line-through;
+  text-decoration-color: var(--pkm-ink-faint);
+}
+
+/* El borde izquierdo grita el diagnóstico sin tener que leer la etiqueta. */
+.home .pkm-tarea[data-alerta="vencida"]      { border-left: 3px solid var(--pkm-red); }
+.home .pkm-tarea[data-alerta="sin arrancar"] { border-left: 3px solid var(--pkm-amber); }
+.home .pkm-tarea[data-alerta="en riesgo"]    { border-left: 3px solid var(--pkm-amber); }
+.home .pkm-tarea[data-alerta="bloqueada"]    { border-left: 3px solid var(--pkm-violet); }
+
+.home .pkm-tarea-cuerpo {
+  flex: 1;
+  min-width: 0;
+}
+
+.home .pkm-tarea-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.home .pkm-tarea-titulo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pkm-ink);
+}
+.home .pkm-tarea-titulo a {
+  color: var(--pkm-ink) !important;
+  text-decoration: none !important;
+}
+.home .pkm-tarea-titulo a:hover {
+  color: var(--pkm-violet) !important;
+}
+
+/* Barra de plazo consumido: verde al principio, roja al agotarse. */
+.home .pkm-tarea-barra {
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: var(--pkm-surface-2);
+  overflow: hidden;
+}
+
+.home .pkm-tarea-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--pkm-green);
+  transform-origin: left;
+  animation: pkm-grow 1s var(--pkm-ease) both;
+}
+.home .pkm-tarea[data-alerta="en riesgo"] .pkm-tarea-fill,
+.home .pkm-tarea[data-alerta="sin arrancar"] .pkm-tarea-fill { background: var(--pkm-amber); }
+.home .pkm-tarea[data-alerta="vencida"] .pkm-tarea-fill      { background: var(--pkm-red); }
+.home .pkm-tarea[data-alerta="bloqueada"] .pkm-tarea-fill    { background: var(--pkm-violet); }
+
+.home .pkm-tarea-pie {
+  margin-top: 6px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--pkm-ink-soft);
+}
+
+.home .pkm-tarea-plazo {
+  flex: none;
+  align-self: center;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--pkm-ink-soft);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.home .pkm-tarea[data-alerta="vencida"] .pkm-tarea-plazo { color: var(--pkm-red); }
+
+/* Etiquetas pequeñas de la fila */
+.home .pkm-tarea-top > span[class^="pkm-tag"] {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.home .pkm-tag-info {
+  background: var(--pkm-surface-2);
+  color: var(--pkm-ink-soft);
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* Las tres prioridades se pintan: si solo se marcase la alta, «media» y
+   «sin prioridad» serían indistinguibles a la vista. */
+.home .pkm-tag-prio[data-p="alta"] {
+  background: color-mix(in srgb, var(--pkm-red) 15%, transparent);
+  color: var(--pkm-red);
+}
+.home .pkm-tag-prio[data-p="media"] {
+  background: color-mix(in srgb, var(--pkm-amber) 18%, transparent);
+  color: var(--pkm-amber);
+}
+.home .pkm-tag-prio[data-p="baja"] {
+  background: color-mix(in srgb, var(--pkm-ink-soft) 14%, transparent);
+  color: var(--pkm-ink-soft);
+}
+
+.home .pkm-tag-alerta[data-a="vencida"] {
+  background: color-mix(in srgb, var(--pkm-red) 15%, transparent);
+  color: var(--pkm-red);
+}
+.home .pkm-tag-alerta[data-a="sin arrancar"],
+.home .pkm-tag-alerta[data-a="en riesgo"] {
+  background: color-mix(in srgb, var(--pkm-amber) 18%, transparent);
+  color: var(--pkm-amber);
+}
+.home .pkm-tag-alerta[data-a="bloqueada"] {
+  background: color-mix(in srgb, var(--pkm-violet) 15%, transparent);
+  color: var(--pkm-violet);
+}
+
+
+/* Pie del plan: botón de alta rápida */
+.home .pkm-plan-pie {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 10px;
+}
+
+.home .pkm-btn {
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: 1px dashed var(--pkm-border-strong);
+  background: transparent;
+  color: var(--pkm-ink-soft);
+  font-family: inherit;
+  font-size: 0.77rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.22s var(--pkm-ease), color 0.22s var(--pkm-ease),
+              background 0.22s var(--pkm-ease);
+}
+.home .pkm-btn:hover {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--pkm-violet) 55%, transparent);
+  color: var(--pkm-violet);
+  background: color-mix(in srgb, var(--pkm-violet) 8%, transparent);
+}
+
+.home .pkm-plan-nota {
+  font-size: 0.71rem;
+  color: var(--pkm-ink-faint);
+}
+.home .pkm-plan-nota code {
+  font-size: 0.94em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--pkm-surface-2);
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   5c · BUSCADOR — filtra en cliente sobre el índice ya cargado
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-search {
+  position: relative;
+}
+
+/* Centrado real respecto al input, no a ojo: con `top` fijo bailaba en
+   cuanto cambiaba el alto de la caja. */
+.home .pkm-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: var(--pkm-ink-faint);
+  pointer-events: none;
+}
+.home .pkm-search-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.home .pkm-search input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  color: var(--pkm-ink);
+  font-size: 0.88rem;
+  font-family: inherit;
+  box-shadow: var(--pkm-shadow);
+  transition: border-color 0.24s var(--pkm-ease), box-shadow 0.24s var(--pkm-ease);
+}
+
+.home .pkm-search input::placeholder {
+  color: var(--pkm-ink-faint);
+}
+
+.home .pkm-search input:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--pkm-violet) 60%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--pkm-violet) 15%, transparent);
+}
+
+.home .pkm-search-count {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+  color: var(--pkm-ink-faint);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.home .pkm-results {
+  margin-top: 9px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  max-height: 330px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.home .pkm-results:empty {
+  display: none;
+}
+
+.home .pkm-result {
+  display: block;
+  padding: 9px 15px;
+  border-bottom: 1px solid color-mix(in srgb, var(--pkm-border) 55%, transparent);
+  color: var(--pkm-ink) !important;
+  text-decoration: none !important;
+  transition: background 0.16s ease, padding-left 0.16s var(--pkm-ease);
+}
+.home .pkm-result:last-child {
+  border-bottom: none;
+}
+.home .pkm-result:hover {
+  background: color-mix(in srgb, var(--pkm-violet) 10%, transparent);
+  padding-left: 19px;
+}
+
+.home .pkm-result-name {
+  display: block;
+  font-size: 0.83rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.home .pkm-result-desc {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--pkm-ink-soft);
+  margin-top: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home .pkm-result mark {
+  background: color-mix(in srgb, var(--pkm-amber) 34%, transparent);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 1px;
+}
+
+.home .pkm-search-empty {
+  padding: 15px;
+  font-size: 0.78rem;
+  color: var(--pkm-ink-faint);
+  text-align: center;
+}
+
+.home .pkm-cert[data-accent="red"]    { --accent: var(--pkm-red); }
+.home .pkm-cert[data-accent="blue"]   { --accent: var(--pkm-blue); }
+.home .pkm-cert[data-accent="teal"]   { --accent: var(--pkm-teal); }
+.home .pkm-cert[data-accent="amber"]  { --accent: var(--pkm-amber); }
+.home .pkm-cert[data-accent="violet"] { --accent: var(--pkm-violet); }
+.home .pkm-cert[data-accent="green"]  { --accent: var(--pkm-green); }
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   5d · LOS 3 EJES — vistas transversales por el campo `Tipo/`
+   Cada tarjeta declara su criterio y reparte el total por área, para que se
+   entienda de dónde sale la lista sin tener que abrir nada.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-axes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--pkm-gap);
+}
+
+.home .pkm-axis {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 18px 14px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  border-top: 3px solid var(--accent, var(--pkm-ink-soft));
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+}
+
+.home .pkm-axis-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 7px;
+}
+
+.home .pkm-axis-title {
+  font-size: 0.98rem;
+  font-weight: 750;
+  color: var(--pkm-ink);
+}
+
+.home .pkm-axis-total {
+  margin-left: auto;
+  font-size: 1.32rem;
+  font-weight: 750;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.home .pkm-axis-crit {
+  font-size: 0.77rem;
+  line-height: 1.45;
+  color: var(--pkm-ink-soft);
+  margin-bottom: 9px;
+}
+
+.home .pkm-axis-tag {
+  font-size: 0.71rem;
+  color: var(--pkm-ink-faint);
+  padding-bottom: 11px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--pkm-border);
+}
+.home .pkm-axis-tag code {
+  font-size: 0.95em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+}
+
+.home .pkm-axis-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Cada fila es un enlace al .base Level 0 de esa área. */
+.home .pkm-axis-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 7px;
+  border-radius: 7px;
+  color: var(--pkm-ink) !important;
+  text-decoration: none !important;
+  transition: background 0.18s ease, transform 0.18s var(--pkm-ease);
+}
+.home .pkm-axis-row:hover {
+  background: color-mix(in srgb, var(--accent) 11%, transparent);
+  transform: translateX(3px);
+}
+
+.home .pkm-axis-name {
+  flex: none;
+  width: 74px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home .pkm-axis-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--pkm-surface-2);
+  overflow: hidden;
+}
+
+.home .pkm-axis-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--pkm-row-accent, var(--accent));
+  transform-origin: left;
+  animation: pkm-grow 1.1s var(--pkm-ease) both;
+}
+
+.home .pkm-axis-n {
+  flex: none;
+  min-width: 24px;
+  text-align: right;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--pkm-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* La barra de cada fila toma el color del área a la que enlaza, no el del eje. */
+.home .pkm-axis-row[data-accent="red"]    { --pkm-row-accent: var(--pkm-red); }
+.home .pkm-axis-row[data-accent="blue"]   { --pkm-row-accent: var(--pkm-blue); }
+.home .pkm-axis-row[data-accent="teal"]   { --pkm-row-accent: var(--pkm-teal); }
+.home .pkm-axis-row[data-accent="amber"]  { --pkm-row-accent: var(--pkm-amber); }
+.home .pkm-axis-row[data-accent="violet"] { --pkm-row-accent: var(--pkm-violet); }
+.home .pkm-axis-row[data-accent="green"]  { --pkm-row-accent: var(--pkm-green); }
+
+.home .pkm-axis[data-accent="red"]    { --accent: var(--pkm-red); }
+.home .pkm-axis[data-accent="blue"]   { --accent: var(--pkm-blue); }
+.home .pkm-axis[data-accent="teal"]   { --accent: var(--pkm-teal); }
+.home .pkm-axis[data-accent="amber"]  { --accent: var(--pkm-amber); }
+.home .pkm-axis[data-accent="violet"] { --accent: var(--pkm-violet); }
+.home .pkm-axis[data-accent="green"]  { --accent: var(--pkm-green); }
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   6 · PANELES — contenedores de las queries de Dataview
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-panels {
+  display: grid;
+  gap: var(--pkm-gap);
+}
+.home .pkm-panels--3 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.home .pkm-panels--2 { grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)); }
+
+.home .pkm-panel {
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  overflow: hidden;
+}
+
+.home .pkm-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--pkm-border);
+  background: var(--pkm-surface-2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--pkm-ink);
+}
+
+.home .pkm-panel-head .pkm-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent, var(--pkm-ink-soft));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent, var(--pkm-ink-soft)) 20%, transparent);
+  flex: none;
+}
+
+.home .pkm-panel-head .pkm-panel-note {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--pkm-ink-faint);
+}
+
+.home .pkm-panel[data-accent="red"]    { --accent: var(--pkm-red); }
+.home .pkm-panel[data-accent="blue"]   { --accent: var(--pkm-blue); }
+.home .pkm-panel[data-accent="teal"]   { --accent: var(--pkm-teal); }
+.home .pkm-panel[data-accent="amber"]  { --accent: var(--pkm-amber); }
+.home .pkm-panel[data-accent="violet"] { --accent: var(--pkm-violet); }
+.home .pkm-panel[data-accent="green"]  { --accent: var(--pkm-green); }
+
+/* Cuerpo del panel: aquí caen los bloques ```dataview``` que van justo
+   debajo del <div class="pkm-panel-body"> abierto en el markdown. */
+.home .pkm-panel-body {
+  padding: 6px 6px 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.home .pkm-panel-body::-webkit-scrollbar { width: 8px; }
+.home .pkm-panel-body::-webkit-scrollbar-thumb {
+  background: var(--pkm-border-strong);
+  border-radius: 999px;
+}
+
+/* ── Estilo de las listas/tablas que produce Dataview dentro de un panel ── */
+
+.home .pkm-panel-body .block-language-dataview > ul,
+.home .pkm-panel-body ul.dataview {
+  margin: 0;
+  padding: 4px 6px;
+  list-style: none;
+}
+
+.home .pkm-panel-body ul.dataview li {
+  padding: 5px 9px;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  transition: background 0.18s ease, transform 0.18s var(--pkm-ease);
+}
+.home .pkm-panel-body ul.dataview li:hover {
+  background: color-mix(in srgb, var(--accent, var(--pkm-ink-soft)) 11%, transparent);
+  transform: translateX(3px);
+}
+
+.home .pkm-panel-body table.dataview {
+  font-size: 0.78rem;
+  border: none;
+}
+.home .pkm-panel-body table.dataview th {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--pkm-ink-faint);
+  border: none;
+  border-bottom: 1px solid var(--pkm-border);
+  padding: 7px 9px;
+}
+.home .pkm-panel-body table.dataview td {
+  border: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--pkm-border) 55%, transparent);
+  padding: 7px 9px;
+  vertical-align: top;
+}
+.home .pkm-panel-body table.dataview tr:last-child td {
+  border-bottom: none;
+}
+.home .pkm-panel-body table.dataview tbody tr {
+  transition: background 0.18s ease;
+}
+.home .pkm-panel-body table.dataview tbody tr:hover {
+  background: color-mix(in srgb, var(--accent, var(--pkm-ink-soft)) 9%, transparent);
+}
+
+/* El contador "N results" de Dataview: discreto pero legible. */
+.home .pkm-panel-body .dataview.result-count {
+  font-size: 0.66rem;
+  color: var(--pkm-ink-faint);
+  padding: 2px 10px 0;
+}
+
+/* Aviso de resultado vacío: en la home significa "todo en orden". */
+.home .pkm-panel-body .dataview-error-box,
+.home .pkm-panel-body .dataview.dataview-error {
+  font-size: 0.76rem;
+  border-radius: 7px;
+  border: 1px dashed var(--pkm-border-strong);
+  background: transparent;
+  color: var(--pkm-ink-faint);
+  padding: 10px 12px;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   7 · PIE DE ACCESOS RÁPIDOS
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.home .pkm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--pkm-border);
+  background: var(--pkm-surface);
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--pkm-ink) !important;
+  text-decoration: none !important;
+  transition:
+    transform 0.24s var(--pkm-ease),
+    border-color 0.24s var(--pkm-ease),
+    background 0.24s var(--pkm-ease);
+}
+
+.home .pkm-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--pkm-border-strong);
+  background: var(--pkm-surface-2);
+}
+
+/* Hay plugins que insertan un <img class="emoji"> junto al glifo de texto:
+   el resultado es el icono pintado dos veces. Se queda el glifo nativo. */
+.home .pkm-chip img.emoji,
+.home .pkm-card img.emoji {
+  display: none;
+}
+
+/* Los chips a carpeta (ADR, Pendientes) los marca Obsidian como no resueltos
+   porque una carpeta no es una nota — pero el plugin Folder Links sí abre la
+   carpeta al pulsarlos. Se les quita el aspecto de enlace roto. */
+.home .pkm-chip.is-unresolved {
+  color: var(--pkm-ink) !important;
+  opacity: 1;
+  text-decoration: none !important;
+}
+
+.home .pkm-foot {
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid var(--pkm-border);
+  font-size: 0.72rem;
+  color: var(--pkm-ink-faint);
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   8 · KEYFRAMES
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Deriva de la malla del hero */
+@keyframes pkm-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  50%  { transform: translate3d(3%, -2.5%, 0) scale(1.1) rotate(4deg); }
+  100% { transform: translate3d(-3%, 2%, 0) scale(1.06) rotate(-3deg); }
+}
+
+/* Parallax de la rejilla (46px = un tile completo → bucle sin salto) */
+@keyframes pkm-pan {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-46px, -46px, 0); }
+}
+
+/* Scanlines (4px = un ciclo del repeating-gradient) */
+@keyframes pkm-scan {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, 4px, 0); }
+}
+
+/* Chispas que ascienden y se apagan */
+@keyframes pkm-rise {
+  0%   { transform: translate3d(0, 0, 0) scale(0.6); opacity: 0; }
+  12%  { opacity: 0.9; }
+  78%  { opacity: 0.55; }
+  100% { transform: translate3d(14px, -230px, 0) scale(1.15); opacity: 0; }
+}
+
+/* Barrido del gradiente del título */
+@keyframes pkm-sheen {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* Giro del halo cónico de las tarjetas */
+@keyframes pkm-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Dibujado del anillo de progreso: de circunferencia completa al desfase
+   final, que se inyecta inline como --o. */
+@keyframes pkm-ring {
+  to { stroke-dashoffset: var(--o); }
+}
+
+/* Crecimiento de las barras de reparto por área */
+@keyframes pkm-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   9 · RESPONSIVE Y ACCESIBILIDAD
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .home .pkm-hero {
+    padding: 32px 22px 28px;
+  }
+  .home .pkm-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .home .pkm-panel-body {
+    max-height: 260px;
+  }
+}
+
+/* Foco visible por teclado en todo lo navegable. */
+.home .pkm-card:focus-visible,
+.home .pkm-chip:focus-visible {
+  outline: 2px solid var(--accent, var(--pkm-blue));
+  outline-offset: 3px;
+}
+
+/* Sin movimiento para quien lo pida — se conserva todo el color y el layout. */
+@media (prefers-reduced-motion: reduce) {
+  .home .pkm-hero-mesh,
+  .home .pkm-hero-grid,
+  .home .pkm-hero-scan,
+  .home .pkm-spark,
+  .home .pkm-title,
+  .home .pkm-card::after {
+    animation: none !important;
+  }
+  .home .pkm-spark {
+    display: none;
+  }
+  .home .pkm-title {
+    background: none;
+    color: var(--pkm-hero-ink);
+  }
+  /* El anillo y las barras se pintan ya en su valor final, sin recorrido. */
+  .home .pkm-ring-fg {
+    animation: none !important;
+    stroke-dashoffset: var(--o);
+  }
+  .home .pkm-axis-fill,
+  .home .pkm-tarea-fill {
+    animation: none !important;
+    transform: scaleX(1);
+  }
+  .home .pkm-tarea:hover {
+    transform: none;
+  }
+  .home .pkm-card,
+  .home .pkm-chip,
+  .home .pkm-card-icon,
+  .home .pkm-next-item,
+  .home .pkm-axis-row,
+  .home .pkm-result,
+  .home .pkm-panel-body ul.dataview li {
+    transition-duration: 0.01ms !important;
+  }
+  .home .pkm-card:hover,
+  .home .pkm-next-item:hover,
+  .home .pkm-axis-row:hover {
+    transform: none;
+  }
+}

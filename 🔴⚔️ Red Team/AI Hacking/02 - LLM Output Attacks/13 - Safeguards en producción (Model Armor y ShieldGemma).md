@@ -141,3 +141,6 @@ Lo que hay que llevarse a un engagement:
 - **Buscar el hueco de cobertura antes que la evasión.** Ninguno cubre las tres categorías; casi ningún despliegue tiene dos guardrails distintos. La pregunta útil es qué **no** cubre el que hay.
 - **Buscar la ruta sin inspección.** Es más barato que evadir el clasificador y suele existir.
 - **Recordar que un guardrail no es una frontera de seguridad.** En los cinco casos de producción de [[06 - EchoLeak y la exfiltración zero-click]] había defensas puestas y ninguna impidió la cadena; el clasificador dedicado de Microsoft (XPIA) fue el primer eslabón que cayó.
+
+> [!info]+ El lado de la construcción
+> Cómo se integra Model Armor en una aplicación —con el manejo del estado de invocación que lo hace *fail-closed*—, qué alternativas gestionadas hay y cómo se comparan con librería o implementación propia, está en [[05 - Servicios gestionados de guardrails|servicios gestionados de guardrails]]; el panorama de modelos guardián dedicados (Llama Guard, Prompt Guard, Granite Guardian) en [[03 - Guardrails basados en IA|guardrails basados en IA]].

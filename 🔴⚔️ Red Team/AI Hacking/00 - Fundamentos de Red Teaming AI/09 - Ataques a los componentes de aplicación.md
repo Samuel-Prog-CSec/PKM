@@ -14,6 +14,9 @@ Area: "[[Red Teaming AI.base|Red Teaming AI]]"
 
 <mark style="background: #ADCCFFA6;">El componente de aplicación es el que más se parece a un sistema tradicional, y es donde un pentester con oficio web tiene ventaja inmediata.</mark> Los sistemas generativos casi nunca se despliegan aislados: se integran en aplicaciones web, servicios de correo y sistemas internos. Todo el catálogo clásico de vulnerabilidades sigue aplicando.
 
+> [!info]+ Explotación detallada
+> Esta nota da el marco conceptual del componente de aplicación. La explotación práctica —model reverse engineering, DoS de ML, IDOR e inyecciones en plugins, rogue actions— está en el sub-tema [[00 - Superficie de ataque de aplicación y sistema|Aplicación y sistema]]. La superficie específica de agentes con `MCP` tiene su propio sub-tema en [[00 - Qué es MCP y por qué cambia la superficie de ataque|MCP y seguridad de agentes]].
+
 # Riesgos tradicionales, sin cambios
 
 - **Acceso no autorizado** — entrada a áreas sensibles sin credenciales válidas: interfaces administrativas, datos de otros usuarios. Puede escalar a compromiso completo.

@@ -43,10 +43,10 @@ El vault es una base de conocimiento de seguridad ofensiva que debe servir **ind
 
 1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos. **Base web — prácticamente completa; funciona ya como material de referencia.**
 2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, dificultad alta. **En pausa** — faltan whitebox, deserialización y parameter logic bugs.
-3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting. **Foco activo.**
+3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting. **✅ Los 28 módulos net-new completados (2026-07-31).**
 4. **HTB COAE** — *Certified Offensive AI Expert* (path "AI Red Teamer", desarrollado con Google). 12 módulos. Seguridad ofensiva de sistemas de IA: fundamentos de ML/DL, prompt injection, ataques a la salida de LLM, envenenamiento de datos, evasión adversarial, privacidad y defensa. Examen práctico de 7 días sobre infraestructura AI-driven. **Foco activo.**
 
-> **Foco actual: CPTS y COAE**, con parón temporal en las certis web (CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** (`project_cpts_*`) y en la columna `Estado` de las tablas de path más abajo — no en esta sección, que solo fija el rumbo. De CPTS, con Attacking Common Services (#11) y Documentation & Reporting (#27) completados el 2026-07-23, el **único net-new pendiente** es el capstone **Attacking Enterprise Networks (#28)**. De COAE, completados los 3 primeros módulos el 2026-07-28.
+> **Foco actual: COAE** (CPTS ya completa; parón temporal en las certis web CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** (`project_cpts_*`) y en la columna `Estado` de las tablas de path más abajo — no en esta sección, que solo fija el rumbo. **CPTS está completa**: con Attacking Common Services (#11) y Documentation & Reporting (#27) el 2026-07-23, y **Penetration Testing Process (#1) + Attacking Enterprise Networks (#28) el 2026-07-31**, ya no queda ningún módulo net-new de CPTS. De COAE, completados los módulos 1-6 el 2026-07-28 y los **módulos 7-9 (315 Application & System, 318 Evasion Foundations, 319 Evasion First-Order) el 2026-07-29**; pendientes 10-12 (Sparsity, Privacy, Defense).
 >
 > ⚠️ **El acrónimo es COAE, no CORE** — confirmado contra la API de HTB (`certification_acronym` del path 418) y el anuncio oficial.
 
@@ -72,6 +72,8 @@ Aplican a **cualquier tema/módulo net-new**, no solo a CPTS (donde son más cr�
 Raíz PARA + carpetas temáticas:
 
 ```
+🏡 Home.md              (dashboard de entrada · lo abre el plugin Homepage al arrancar · ver "Home" más abajo)
+📋 Temario.md           (fuente única del progreso: certificaciones y bloques de estudio · lo lee la Home)
 02 - Recursos/          (Biblioteca, Lenguajes, Templates, 🛠️ Tools, Decisiones estructurales · Level 0: Recursos.base)
 03 - Archivos/          (imágenes y adjuntos, también Escalidraw)
 04 - PENDIENTES/        (inbox, no usado por el flujo de extracción HTB)
@@ -156,7 +158,7 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 
 | #  | Módulo HTB | Carpeta destino | Estado |
 | -- | ---------- | --------------- | ------ |
-| 1  | Penetration Testing Process | `Pentesting/000 - Fases del Pentesting/` (enriquece las notas de fases existentes) | Legacy parcial |
+| 1  | Penetration Testing Process | `Pentesting/000 - Fases del Pentesting/` (14 notas 00-13 + `.base`; renombradas de los 6 placeholders emoji a la convención numérica; net-new: `Marco legal y regulatorio` [España CP 197bis/264 + RGPD art. 28 + NIS2/DORA/CRA UE + CFAA/DMCA], `Niveles de evasividad y TLPT` [eje 2, TIBER-EU/DORA], `Arsenal de gestión del engagement` [eje 3]; modernizado NVD 2026, EUVD, CVSS v4/EPSS/KEV, MITRE ATT&CK v19, DBIR 2026) | ✅ Completado (2026-07-31) |
 | 2  | Getting Started | *(se salta / cherry-pick — primer generalista, contenido cubierto en otros módulos)* | — |
 | 3  | Network Enumeration with Nmap | `02 - Recursos/🛠️ Tools/Nmap/` (herramienta → Tools; 10 notas 00-09 + `Nmap.base`) | ✅ Completado (2026-07-18) |
 | 4  | Footprinting | `Pentesting/001 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingenieria/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
@@ -183,7 +185,7 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 25 | Linux Privilege Escalation | `Pentesting/008 - Escalada de privilegios Linux/` (25 notas 00-24 + `.base`; detección/evasión + arsenal net-new; CVEs 2021-2025 [PwnKit, Baron Samedit, Dirty Pipe, Looney Tunables, GameOver(lay), sudo 2025, nf_tables] y escapes de contenedores [runc, K8s] modernizados) | ✅ Completado (2026-07-22) |
 | 26 | Windows Privilege Escalation | `Pentesting/009 - Escalada de privilegios Windows/` (26 notas 00-25 + `.base`; familia Potato [GodPotato/PrintSpoofer], UAC, CLFS/PrintNightmare/SeriousSAM modernizados; detección/evasión + arsenal net-new) | ✅ Completado (2026-07-22) |
 | 27 | Documentation & Reporting | `Pentesting/010 - Documentación y reporting/` (9 notas 00-08 + `.base`; Notetaking y Components divididas en 2; arsenal net-new modernizado [SysReptor, Ghostwriter, PlexTrac]; sin nota de detección/evasión [N/A en reporting]; tag `Reporting`) | ✅ Completado (2026-07-23) |
-| 28 | Attacking Enterprise Networks | `Pentesting/011 - Ataque a redes empresariales/` *(capstone · tentativo)* | Pendiente |
+| 28 | Attacking Enterprise Networks | `Pentesting/011 - Ataque a redes empresariales/` (18 notas 00-17 + `.base`; **capstone en modo playbook + cadena de ataque**: no reexplica técnicas [las enlaza], desarrolla las transiciones/decisiones/callejones sin salida y solo lo net-new; net-new: `Detección y respuesta a lo largo de la cadena` [eje 2], `Arsenal del engagement completo` [eje 3]; modernizado CME→NetExec, BloodHound→CE, firma SMB 24H2, wkhtmltopdf archivado, XSS Hunter self-hosted, Ligolo-ng, GodPotato) | ✅ Completado (2026-07-31) |
 
 ### Path COAE (AI Red Teamer)
 
@@ -192,7 +194,7 @@ Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **
 **Ubicación del contenido — el path se reparte en tres áreas** (decisión estructural del 2026-07-28, ver ADR 008):
 
 - **Fundamentos de IA/ML** ("cómo funciona") → `Ingenieria/Inteligencia Artificial/`, siguiendo la regla *fundamentos ≠ ofensiva* y el precedente Footprinting↔`Redes/Protocolos` y SQLi↔`Ingenieria/Bases de Datos`.
-- **Aplicaciones defensivas** (detectores ML: spam, anomalías de red, malware) → `🔵🛡️ Blue Team/005 - IA aplicada a la defensa/`.
+- **Aplicaciones defensivas** (detectores ML: spam, anomalías de red, malware) → `🔵🛡️ Blue Team/005 - IA aplicada a la defensa/`. **Ojo con la distinción**: `005` es *IA para defender* (detectores ML); `007 - Defensa de sistemas de IA` es *defender la IA* (guardrails, entrenamiento adversarial, safety tuning). Son temas distintos y Level-2 separados.
 - **Contenido ofensivo** → `🔴⚔️ Red Team/AI Hacking/`, en carpetas numeradas por módulo del path (`00 - Fundamentos de Red Teaming AI`, `01 - Prompt Injection`, …). Los números de módulos no extraídos son **tentativos**.
 - **Herramientas** → `02 - Recursos/🛠️ Tools/` con su `.base` Level 2, como cualquier herramienta. Creadas (2026-07-28): **`Garak`** (4 notas), **`PyRIT`** (4), **`Fickling`** (2), **`ModelScan`** (2), **`Picklescan`** (1). Pendiente: `promptfoo` — **en espera deliberada** hasta que se cierre la adquisición por OpenAI (anunciada marzo 2026). `ART`, `TextAttack` y el resto siguen en la nota de arsenal del módulo 3.
 
@@ -204,12 +206,12 @@ Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **
 | 4  | 297 | Prompt Injection Attacks | `AI Hacking/01 - Prompt Injection/` (16 notas 00-15 + `Prompt Injection.base`; **`garak` extraído a `02 - Recursos/🛠️ Tools/Garak/`** [4 notas + `Garak.base`]; net-new: `EchoLeak y la exfiltración zero-click`, `ASCII smuggling y payloads invisibles`, `Jailbreaks multi-turno y de contexto`, `Detección y evasión`) | ✅ Completado (2026-07-28) |
 | 5  | 307 | LLM Output Attacks | `AI Hacking/02 - LLM Output Attacks/` (17 notas 00-16 + `.base`; net-new: `Slopsquatting y alucinación de paquetes`, `Detección y evasión`, `Arsenal`; regulación actualizada al **Digital Omnibus on AI** de julio 2026) | ✅ Completado (2026-07-28) |
 | 6  | 302 | AI Data Attacks | `AI Hacking/03 - Ataques a los datos/` (16 notas 00-15 + `.base`; label flipping · clean label · trojan/backdoor CNN · pickle y esteganografía en tensores; net-new: `Detección y evasión`, `Arsenal`; **errata OWASP de HTB corregida**) | ✅ Completado (2026-07-28) |
-| 7  | 315 | Attacking AI - Application and System | `AI Hacking/04 - Aplicación y sistema/` *(tentativo)* | Pendiente |
-| 8  | 318 | AI Evasion - Foundations | `AI Hacking/05 - Evasión de modelos/` *(tentativo)* | Pendiente |
-| 9  | 319 | AI Evasion - First-Order Attacks | `AI Hacking/05 - Evasión de modelos/` *(tentativo)* | Pendiente |
-| 10 | 320 | AI Evasion - Sparsity Attacks | `AI Hacking/05 - Evasión de modelos/` *(tentativo)* | Pendiente |
-| 11 | 335 | AI Privacy | `AI Hacking/06 - Privacidad en IA/` *(tentativo)* | Pendiente |
-| 12 | 322 | AI Defense | `🔵🛡️ Blue Team/` *(a decidir: es defensivo)* | Pendiente |
+| 7  | 315 | Attacking AI - Application and System | **Partido en 2 Level-2 hermanos** (ADR 011): `AI Hacking/04 - Aplicación y sistema/` (11 notas 00-10 + `.base`; reverse engineering/robo · DoS/sponge · componentes integrados · rogue actions · almacenamiento inseguro · deployment tampering · stack ML · MLflow · detección · arsenal) + `AI Hacking/05 - MCP y seguridad de agentes/` (13 notas 00-12 + `MCP.base`; **`mcp-scan` → `02 - Recursos/🛠️ Tools/MCP-Scan/`** [3 notas + `.base`]; net-new: OAuth/spec security, CVEs 2025-2026, detección, arsenal). **MCP modernizado a la spec final 2026-07-28 stateless** (HTB enseña el handshake ya eliminado) | ✅ Completado (2026-07-29) |
+| 8  | 318 | AI Evasion - Foundations | `AI Hacking/06 - Evasión de modelos/` (6 notas 00-05 + `.base`; GoodWords sobre Naive Bayes · caja blanca/negra con bandits UCB; net-new: `Detección y defensa`, `Arsenal` [compartidos con #9]) | ✅ Completado (2026-07-29) |
+| 9  | 319 | AI Evasion - First-Order Attacks | `AI Hacking/07 - Ataques de primer orden/` (5 notas 00-04 + `.base`; normas Lp · FGSM/Hölder · I-FGSM/PGD · DeepFool/ρ_adv; detección y arsenal reutilizan los de #8) | ✅ Completado (2026-07-29) |
+| 10 | 320 | AI Evasion - Sparsity Attacks | `AI Hacking/08 - Ataques dispersos/` (10 notas 00-09 + `.base`; EAD/ElasticNet con operadores proximales y FISTA · JSMA de un píxel y por pares; **detección/defensa y arsenal reutilizan los de #8**, extendidos con el hueco $L_0$: ablación aleatoria, filtrado de mediana, sAT/sTRADES, σ-zero, Sparse-RS, SparseFool) | ✅ Completado (2026-07-29) |
+| 11 | 335 | AI Privacy | `AI Hacking/09 - Privacidad en IA/` (12 notas 00-11 + `.base`; MIA con shadow models · DP-SGD/Opacus · PATE; net-new: `Detección y evasión`, `Arsenal para auditoría`. **Errata metodológica de HTB corregida**: la "ventaja" del ataque está mal calculada por el desbalance 2:1 — la real es ~5 puntos, no 19. Modernizado con LiRA, RMIA y TPR@low-FPR) | ✅ Completado (2026-07-29) |
+| 12 | 322 | AI Defense | `🔵🛡️ Blue Team/007 - Defensa de sistemas de IA/` (11 notas 00-10 + `Defensa de IA.base`; guardrails [tradicionales · IA · librerías · servicios] · entrenamiento adversarial min-max · adversarial tuning con LoRA; net-new: `Límites de las defensas y cómo se rompen` como puente ofensivo) | ✅ Completado (2026-07-29) |
 
 #### COAE — notas operativas
 
@@ -219,6 +221,15 @@ Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **
 - **Erratas de HTB detectadas en los módulos 297/307/302** (además de las del 292): el **módulo 302 mapea los ataques a `OWASP LLM03: Training Data Poisoning` y `LLM05: Supply Chain`**, que es la numeración de la **edición 2023**; en la edición 2025 vigente corresponden a **`LLM04:2025` (Data and Model Poisoning)** y **`LLM03:2025` (Supply Chain)**. Corregido y señalado en `01 - Taxonomía de los ataques a los datos`. El módulo 307 titula *Code Injection* lo que es *command injection* (`CWE-78`, no `CWE-94`).
 - **Este path está especialmente desfasado.** El módulo 297 es de **octubre de 2024** y falla en: repo de `garak` (`leondz/garak` → **`NVIDIA/garak`**, v0.14 feb-2026) y su CLI (`--model_type`→`--target_type`, `--probes` deprecado → **`--spec`**); jailbreaks (le faltan Crescendo, Deceptive Delight, Bad Likert Judge, Echo Chamber, many-shot, Policy Puppetry, CCA, Best-of-N); inyección indirecta (le falta **EchoLeak/CVE-2025-32711** y familia); defensas (le faltan CaMeL, StruQ, SecAlign, spotlighting, jerarquía de instrucciones). **Asumir el mismo nivel de desfase en el resto de módulos del path** y contrastar todo contra fuente primaria.
 - **Truco de extracción validado (2026-07-28)**: el `javascript_tool` trunca a ~1000 chars, pero inyectando el `.content` en el DOM (`document.getElementById('d').textContent = esc(contenido)` dentro de un `<article><pre>`) y leyéndolo después con **`get_page_text`** se sacan **~30.000 caracteres limpios por llamada**. Combinado con los homoglifos fullwidth (`＝ ＆ ； ？ ꞉`) para esquivar el filtro, permite extraer un módulo entero en 4-5 llamadas.
+- **Desfase confirmado en 315/318/319 (2026-07-29)**: **MCP** es el caso más grave — HTB (2024) enseña el handshake `initialize`/`initialized` + `Mcp-Session-Id`, **eliminados** en la spec final **2026-07-28 stateless** (`_meta.protocolVersion`, `server/discover`, MRTR, headers `Mcp-Method`/`Mcp-Name`); +40 CVEs de MCP en Q1 2026 (CurXecute, MCPoison, mcp-remote CVSS 9.6) que HTB no menciona. **TorchServe archivado** (7-ago-2025, sin parches) → ShellTorch reencuadrado como legado; objetivos vivos hoy: Ray/ShadowRay, Triton CVE-2026-24207, vLLM, MLflow (CVEs 2025-26). **MLflow** de HTB (CVE-2023-6909/2024-1594) ampliado con traversal→RCE y DNS-rebinding contra localhost. Model reverse engineering modernizado con Carlini *Stealing Part of a Production LM* (logit_bias). Sponge examples (2020) → Engorgio/OverThink/LoopLLM.
+- **MathML → LaTeX (318/319)**: estos módulos traen fórmulas en MathML; extraer la `annotation encoding="application/x-tex"` y convertir a `$...$`/`$$...$$` de Obsidian. Regex de limpieza: reemplazar el bloque `<math>...</math>` por su anotación TeX antes de `get_page_text`.
+- **Erratas de HTB en 320/335/322 (2026-07-29)** — el patrón se confirma en los tres módulos finales, y aquí llega a afectar a las **conclusiones**, no solo a las cifras:
+  - **335 (Privacy)**: la "ventaja del ataque" se calcula como `accuracy − 0.5` sobre un conjunto **desbalanceado 2:1**, donde la línea base trivial ("siempre miembro") ya acierta el 66,7 %. La ventaja real es ~5 puntos (precisión balanceada 54,9 %), no los 19 que reporta. Además: los modelos sombra llevan `dropout=0.3` + early stopping mientras el objetivo no lleva ninguno, lo que rompe la premisa del ataque; la brecha de sobreajuste aparece con **cuatro valores distintos** en la misma sección; se afirma usar el *moments accountant* de PATE pero se implementa **composición avanzada**; y la `confident_aggregation` compara el umbral **sin ruido**, lo que filtra información y hace falso el "las consultas rechazadas no gastan presupuesto".
+  - **320 (Sparsity)**: el análisis de sinergia por pares imprime `0.000000` en todo y cita un par distinto al que analiza; rangos de gradiente inconsistentes en 3 órdenes de magnitud; la sección agregada contradice a la de configuración (fallo universal vs. 70 % de éxito).
+  - **322 (Defense)**: la caída bajo FGSM se da como "74 %" y como "5 %" en secciones contiguas; el entrenamiento adversarial usa **solo FGSM** en el bucle interno (riesgo conocido de *catastrophic overfitting* / gradient masking; el estándar es PGD o FGSM con init aleatoria); se evalúa robustez hasta $\epsilon=1{,}0$ en `[0,1]`, régimen donde la imagen queda destruida y el número deja de significar nada.
+- **Tag nuevo**: `IA/Privacidad` (módulo 335). Los demás tags de IA se reutilizaron.
+- **Imágenes**: las del módulo **320** viven en `/storage/modules/320/…` y son públicas (verificado 200 sin cookies). Las de **335** (`/content/sections/335_*.png`) y las de entrenamiento adversarial de **322** dan **404 en todas las rutas probadas** — no se incrustaron; solo `/storage/modules/322/diagram.png` responde.
+- **Decisión estructural (ADR 011)**: 315 se partió en 2 Level-2 hermanos (`04 - Aplicación y sistema` + `05 - MCP y seguridad de agentes`) por la superficie propia y creciente de MCP. 318+319 son el tema **Evasión** unificado en 2 carpetas hermanas (`06`/`07`) que **comparten** las notas de detección/defensa y arsenal (viven en `06`, `07` las referencia) — no se duplican los ejes 2/3 cuando dos módulos forman un solo tema.
 
 #### CPTS — estándares de calidad extra
 
@@ -408,6 +419,108 @@ Cuando un tema supera ~15 sub-temas, añadir una vista con `groupBy` sobre una *
 - Al añadir un área nueva bajo `🔴⚔️ Red Team/` (o Blue Team, Redes, Ingeniería) **no hay que tocar el Level 0**: el filtro por regex de profundidad la recoge sola.
 - Las **herramientas** siempre a `02 - Recursos/🛠️ Tools/` con su Level 2 propio, indexadas por `Tools.base`.
 
+## Home — el dashboard de entrada (ADR 013)
+
+`🏡 Home.md` (raíz) es la nota que el plugin **Homepage** abre al arrancar Obsidian (`openOnStartup`, `pin`, *Replace all open notes*). No es conocimiento ni un índice: es el **tercer tipo de nota** del vault —la **nota-panel**—, que presenta *estado* en vez de enseñar o indexar. Reglas propias: **sin cadena Zettelkasten, sin `Area`, sin tags de contenido**, como las ADR y las fichas de la Biblioteca.
+
+**Dónde vive cada cosa:**
+
+| Archivo | Contenido |
+| - | - |
+| `🏡 Home.md` | 2 bloques `dataviewjs` (hero + áreas + certis + qué toca · buscador + ejes + mantenimiento) y HTML estático para el pie |
+| `📋 Temario.md` | **Fuente única del progreso**: los módulos de cada certificación y los bloques de estudio, como casillas |
+| `.obsidian/snippets/home-dashboard.css` | Todo el estilo, *scoped* bajo `.home` (llega por `cssclasses: [home]`). Ninguna regla escapa a otras notas |
+| `.obsidian/appearance.json` | Solo `enabledCssSnippets: ["home-dashboard"]` |
+
+**Qué muestra**, de arriba abajo: hero · 6 tarjetas de área que enlazan a los `.base` Level 0 con su recuento real · 4 **anillos de certificación calculados desde el temario** · **qué toca ahora** (los módulos sin marcar, en orden) · **buscador** que filtra en cliente por nombre y `Descripción` · **los 3 ejes del vault** (cada uno declara su criterio y reparte el total por área) · lo último tocado · radar de deuda · **cadenas Zettelkasten rotas**.
+
+### El temario manda sobre el progreso
+
+`📋 Temario.md` es la fuente única. **La Home no tiene ninguna lista de certificaciones**: las descubre leyendo el temario, así que añadir una certi nueva (OSEP, PNPT, lo que sea) **no requiere tocar la Home**. Verificado el 2026-07-31 añadiendo una OSCP de prueba: apareció su anillo, con color asignado solo y sus pendientes recogidos, sin editar una línea de la Home.
+
+**Contrato del temario** — es la parte que hay que respetar:
+
+| Escribes en el temario | Qué hace la Home |
+| - | - |
+| `## SIGLA · Nombre completo` | Crea un **anillo** para esa certificación. El `·` es lo que la distingue de una sección auxiliar |
+| Párrafo bajo el encabezado | Es el texto que sale bajo la sigla (recortado a 2 líneas) |
+| `- [ ]` / `- [x]` | Pendiente / hecho |
+| `- ~~Módulo~~ — motivo` (**sin casilla**) | **Saltado**: fuera del numerador *y* del denominador |
+| `## Sección sin punto medio` | **No** genera anillo. Su primer pendiente va a «Qué toca ahora» |
+| `## Plan de estudio` | **Encabezado reservado**: la planificación con fechas. Se parsea aparte y **no** alimenta «Qué toca ahora» |
+| `## Ejes` | **Encabezado reservado**: las fichas de los ejes `Tipo/`. Tampoco alimenta «Qué toca ahora» |
+
+### La sección `## Ejes`
+
+Pone nombre, color y criterio a los ejes transversales que la Home muestra bajo «Los ejes del vault». Una línea por eje:
+
+```markdown
+- Tipo/Arsenal · Arsenal · green · El set de herramientas actual de cada tema, con el comando de ejemplo…
+```
+
+- **El color es opcional** (`red`, `blue`, `teal`, `amber`, `violet`, `green`); si se omite, la Home asigna uno libre. Se detecta comparando el tercer trozo contra esa lista, así que un criterio que empiece por otra palabra se interpreta bien.
+- El criterio **puede llevar `·`**: solo se parten los dos o tres primeros separadores.
+- **Esta sección no da de alta nada.** Un `Tipo/` que exista en el vault aparece en la Home aunque no esté aquí — con su nombre crudo y un aviso en lugar del criterio. La sección sirve para vestirlo.
+
+**Los ejes se descubren del índice de etiquetas** (`app.metadataCache.getTags()` filtrando `Tipo/`), no de una lista. Verificado el 2026-07-31 creando un `Tipo/Laboratorio`: apareció como quinto eje con el título, color y criterio declarados en el temario, sin tocar una línea de la Home; al borrar la nota, desapareció.
+
+### La sección `## Plan de estudio`
+
+Alimenta el panel de planificación de la Home. Una tarea por línea, editable desde el modal del plugin **Tasks**:
+
+```markdown
+- [/] Tarea [[bloque del PKM]] 🛫 2026-08-01 📅 2026-08-20 ⏫ [esfuerzo:: 8h] [depende:: otra tarea] [nota:: por qué está parada]
+```
+
+- **Estado** (nativo de Tasks, ya configurado): `[ ]` pendiente · `[/]` en progreso · `[x]` hecha · `[-]` cancelada.
+- **Fechas**: `🛫` inicio · `📅` límite. **Prioridad**: `⏫` alta · `🔼` media · `🔽` baja.
+- **Campos inline de Dataview** para lo que Tasks no cubre: `esfuerzo`, `depende`, `nota`. Todos opcionales.
+- El `[[wikilink]]` apunta al bloque del PKM que prepara esa tarea; la Home lo convierte en enlace.
+
+**Lo que calcula la Home** (nada de esto se escribe):
+
+- **Plazo consumido** — 0 % el día de inicio, 100 % el del límite. Es la barra de cada fila.
+- **Diagnóstico**, por orden de gravedad: `vencida` (pasó el límite) · `sin arrancar` (pasó el inicio y sigue pendiente) · `en riesgo` (≥60 % del plazo gastado sin empezar) · `bloqueada` (tiene `depende`).
+- **Orden**: primero lo que arde, luego por fecha límite. **`bloqueada` no adelanta puesto** — lo urgente no es la tarea que espera, sino la que la desbloquea.
+- **Indicadores**: vencidas · en progreso · vencen en 7 días · bloqueadas · suma de horas pendientes (de `esfuerzo`, para repartir carga).
+
+**La Home escribe en el temario** — es el único punto del vault donde el panel no solo lee:
+
+- El **círculo de estado es clicable** y cicla pendiente → en progreso → hecha → pendiente, reescribiendo la línea. Al cerrar una tarea le añade `✅ YYYY-MM-DD`; al reabrirla se la quita.
+- Se usa **`app.vault.process()`**, que lee y escribe de forma atómica: si el temario está abierto y editándose, no se pisan los cambios. La tarea se localiza por **número de línea** (guardado al parsear), no por texto, y antes de escribir se verifica que esa línea siga siendo una tarea — si se movió, no se toca nada.
+- **Pintado optimista, obligatorio aquí.** Dataview reconstruye sus bloques en su propio ciclo (`refreshInterval`, **2500 ms**), así que esperar al re-render dejaba cada clic sin respuesta un par de segundos y parecía que la Home iba lenta. La fila se repinta en el acto (**~0,6 ms**), después se escribe y se dispara `app.workspace.trigger("dataview:refresh-views")`; si la escritura falla, la fila vuelve a su estado anterior. El plazo original viaja en `data-vivo` para poder restaurarlo al reabrir una tarea sin esperar al refresco.
+- Las tareas **cerradas siguen listadas** (atenuadas, al final). Sin eso, un clic por error sería irreversible desde la Home, porque la fila desaparecería.
+- El botón **«+ Nueva tarea»** inserta una plantilla al final de la sección, abre el temario **por el ancla `#Plan de estudio`** y deja el cursor con el placeholder `Tarea nueva` **ya seleccionado**, para escribir el título sin buscar nada. Se dejó así a propósito: un formulario completo en la Home sería más vistoso y bastante más frágil que editar en el editor. El posicionado del cursor reintenta hasta 12 veces cada 60 ms, porque `openLinkText` resuelve antes de que el editor esté montado.
+
+**El `esfuerzo` sale de HTB, no de una estimación a ojo**: es la suma de `estimated_time_of_completion_in_minutes` de los módulos de esa semana, que se consulta en `GET /api/v2/modules` (devuelve los 354 módulos con su duración oficial; requiere Chrome logueado en HTB Academy).
+
+- **El orden de los anillos** es el orden de los encabezados en el temario; **el color** es automático (las 4 siglas originales tienen tono fijo para que no cambien al añadir otra).
+- **Los saltados van sin casilla a propósito.** Un checkbox solo alterna vacío ↔ marcado, así que un clic destruiría el estado «saltado» — pasó con `02 · Getting Started` el 2026-07-31.
+- Lo que el plugin **Tasks** cuelgue al final (`✅ 2026-07-31`, prioridades, fechas) se limpia al leer; no hace falta borrarlo.
+
+**Mantenimiento**: marcar la casilla. Nada más. No hay ningún porcentaje escrito a mano en el vault.
+
+> [!warning]+ Doble anotación al cerrar un módulo
+> Las **tablas de path de este archivo** (arriba) y el **temario** cuentan cosas distintas y hay que tocar las dos: las tablas guardan el **mapeo y el detalle** (módulo → carpeta, cuántas notas, qué se modernizó, erratas de HTB); el temario guarda solo el **estado** para la Home. Al completar un módulo: `Estado` en la tabla **y** casilla en el temario.
+
+**Dependencia**: Dataview con **JavaScript habilitado** (`enableDataviewJs`, `enableInlineDataviewJs` en `.obsidian/plugins/dataview/data.json`). Es el único punto del vault que depende de ejecutar JS. Ambos bloques van con `try/catch` y fallback: si Dataview falla, la home degrada a hero estático en lugar de romperse.
+
+**Doble tema**: los colores se declaran como variables en `.theme-light .home` (Soft Paper) y `.theme-dark .home` (AnuPpuccin / Catppuccin Mocha); el resto del CSS es agnóstico. Al tocar el snippet, **verificar siempre en los dos modos**.
+
+### Gotchas verificados contra Obsidian 1.13.4 (2026-07-31)
+
+Aplican a cualquier nota que mezcle HTML, Dataview y CSS propio — no solo a la Home:
+
+- **Las queries inline de Dataview NO se procesan dentro de HTML crudo.** Un `` `= date(today)` `` o `` `$= dv.pages(...).length` `` dentro de un `<div>` se imprime literal. Fuera del HTML funcionan con normalidad. **Consecuencia**: si hace falta un dato dentro de una caja HTML, esa caja la tiene que generar `dataviewjs`.
+- **`<a class="internal-link" href="ruta">` SÍ resuelve**, incluso generado por `innerHTML` desde `dataviewjs`, y **también a ficheros `.base`** (por nombre suelto o por ruta completa). Es la vía para enlazar desde HTML propio.
+- **Live Preview recorta el ancho DOS veces**: el `.cm-sizer` y además `.cm-content`, que lleva el *readable line length* (~700 px). Liberar solo el primero deja la nota **a media anchura en edición y ancha en lectura**. Hay que soltar los dos.
+- **Ocultar propiedades por nota necesita `!important`**: Obsidian marca el contenedor con `show-properties` y esa regla gana por especificidad a `.home .metadata-container`.
+- **Los emoji no son fiables como iconos estilables**: un plugin del vault los reescribe a `<img class="emoji">` **sin retirar el glifo de texto**, así que el icono se pinta dos veces. Usar **SVG inline** (Lucide) en todo lo que el CSS deba teñir o dimensionar; se tiñen solos con `currentColor`.
+- **NUNCA enlazar a una carpeta con `internal-link`.** Sale marcado `is-unresolved` y, lo grave: **al pulsarlo Obsidian crea una nota vacía con el nombre de la carpeta**. Así apareció `02 - Recursos/Decisiones estructurales.md` (0 bytes) el 2026-07-31, que además secuestra el wikilink `[[Decisiones estructurales]]` porque la nota gana a la carpeta. Es el mismo patrón de colisión que la ADR 009 arregló en `Protocolos de red`. **Enlazar siempre a un `.base` o a una nota real** — para eso existe `Decisiones estructurales.base`.
+- **`dev:dom` del CLI devuelve vacío**; para inspeccionar el DOM usar `obsidian eval code="document.querySelectorAll(...)"`. Y al consultar, **filtrar por `getBoundingClientRect().width > 0`**: quedan restos de hojas cerradas en el DOM que falsean los conteos.
+- **En el arranque, el índice de Dataview aún no está montado.** Un bloque `dataviewjs` que se ejecute entonces —y la Home lo hace, porque el plugin Homepage la abre al arrancar— puede leer datos vacíos y pintar ceros hasta el refresco siguiente. Se manifestó como anillos a `0/0` durante un instante en cada arranque. **Para localizar un fichero desde `dataviewjs`, usar `app.metadataCache.getFirstLinkpathDest(nombre, "")` y no `dv.page(...)`**, que depende del índice; y si el resultado sale vacío, reintentar un par de veces con una espera corta antes de darlo por bueno.
+- **`app.vault.cachedRead(archivo)` es la vía para leer el markdown crudo** desde `dataviewjs` (es `async`, y los bloques `dataviewjs` admiten `await` en el nivel superior). Necesario cuando importa el texto literal: Dataview normaliza cosas por el camino (el `·` de los encabezados) y no indexa los ítems de lista que no son tareas.
+
 ## Decisiones estructurales (ADR)
 
 Las decisiones estructurales del vault que se **ejecutan** (reorganizaciones, nuevas convenciones, fusiones/divisiones de temas, renombrados masivos) se registran como **ADR** (*Architecture Decision Record*) para no perder el **porqué** ni las **alternativas descartadas** —lo que la memoria y este archivo capturan peor—.
@@ -551,7 +664,8 @@ $ obsidian command id="<command-id>"
 
 - El vault es un repositorio git con su origen en `Obsidian Git` (plugin de Obsidian). Los commits con mensaje `Fecha: DD/MM/YYYY` los hace el plugin automáticamente al cerrar Obsidian.
 - **Claude no hace commits a menos que el usuario lo pida explícitamente.** Cuando lo pida, seguir las reglas de la sección "Committing changes with git" del system prompt (mensajes en español si se acompaña al estilo del repo; firmar con `Co-Authored-By` solo si el usuario lo pide).
-- No tocar `.obsidian/` salvo que se solicite cambiar configuración. Los cambios de ese directorio que aparezcan modificados (`M .obsidian/...`) en `git status` son actualizaciones de plugins gestionadas por Obsidian.
+- No tocar `.obsidian/` salvo que se solicite cambiar configuración. Los cambios de ese directorio que aparezcan modificados (`M .obsidian/...`) en `git status` son actualizaciones de plugins gestionadas por Obsidian. **Excepción**: `.obsidian/snippets/home-dashboard.css` es **contenido propio del vault** (ADR 013), no configuración de plugin — se edita con normalidad al trabajar sobre la Home.
+- **Para activar un snippet CSS, hacerlo desde la app**, no editando `appearance.json` a mano: Obsidian tiene el estado en memoria y sobrescribe el fichero al cerrar. `obsidian eval code="app.customCss.readSnippets(); app.customCss.setCssEnabledStatus('<nombre>', true)"`. Para recargar tras editarlo: `app.customCss.readSnippets(); app.customCss.loadSnippets()`.
 
 ## Consideraciones de uso del contenido HTB
 

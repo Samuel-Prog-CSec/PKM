@@ -10,6 +10,8 @@ Nota previa: "[[05 - Defensas y evasión]]"
 Nota siguiente:
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
+---
+
 El instrumental del brute force ordenado por función. La regla de oro: <mark style="background: #ADCCFFA6;">Hydra/Medusa para protocolos de red; Burp/ffuf para web</mark>. Lo demás es soporte (generar wordlists, rotar IP, crackear hashes capturados).
 
 # Cracking de logins online

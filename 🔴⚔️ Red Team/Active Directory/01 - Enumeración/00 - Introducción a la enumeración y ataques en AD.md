@@ -81,3 +81,6 @@ Aunque AD es tecnología Windows, <mark style="background: #FFB8EBA6;">rara vez 
 
 > [!warning]+ Todo esto se registra
 > El AD moderno está fuertemente instrumentado: DCs con auditoría avanzada y, sobre todo, **Microsoft Defender for Identity** (MDI), que detecta Kerberoasting, DCSync, reconocimiento LDAP y movimiento lateral casi en tiempo real. Cada técnica de esta área tiene su contrapartida de telemetría; la opsec se trata en [[25 - Detección y evasión en AD]].
+
+> [!example]+ Estas técnicas encadenadas en un engagement real
+> El capstone [[13 - Compromiso del dominio]] muestra la cadena `GenericWrite → Kerberoasting dirigido → GenericAll → DCSync` sobre una red completa, integrada con la parte web, de infraestructura y de pivoting — un pentest de principio a fin donde AD es solo el último tramo.

@@ -108,3 +108,6 @@ El trabajo de [Beurer-Kellner et al., *Design Patterns for Securing LLM Agents a
 | Cliente que entrena su propio modelo | Todo lo anterior + `SecAlign` o `StruQ` en el fine-tuning |
 
 Y en todos los casos, la constante: **el impacto se acota en la arquitectura, no en el prompt**.
+
+> [!info]+ La construcción de estas defensas, en Blue Team
+> Esta nota cubre las defensas desde el punto de vista del atacante: qué hay enfrente y qué recomendar. Cómo se **construyen** —guardrails de entrada y salida paso a paso, `LLM-as-a-judge` con diseño *fail-closed*, librerías, servicios gestionados, y *safety fine-tuning* con LoRA contra jailbreaks y ataques de *prefill*— está en [[00 - Defensa en profundidad para sistemas de IA|Defensa de sistemas de IA]]. En particular, [[08 - Adversarial tuning con LoRA para seguridad|el adversarial tuning]] es la implementación concreta del entrenamiento adversarial mencionado arriba, y [[10 - Límites de las defensas y cómo se rompen|la nota de límites]] es el mapa cruzado ataque↔defensa de las tres capas.

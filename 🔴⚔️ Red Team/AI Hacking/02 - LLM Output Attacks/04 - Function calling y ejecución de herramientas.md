@@ -114,6 +114,6 @@ No es hipotético ni exclusivo de labs. Aparece en tres sitios reales:
 # Mitigación
 
 - **Nunca ejecutar la salida del modelo como código.** Usar el mecanismo de `tool calling` estructurado del proveedor, que devuelve un objeto con nombre de función y argumentos, y despacharlo contra un diccionario de funciones registradas.
-- **Validar los argumentos** contra un esquema estricto antes de llamar. Que el JSON sea válido no significa que los valores lo sean — mismo punto que en [[04 - Inyección directa contra la lógica de negocio#La señal del Invalid Model Response|salida estructurada]].
+- **Validar los argumentos** contra un esquema estricto antes de llamar. Que el JSON sea válido no significa que los valores lo sean — mismo punto que en [[04 - Inyección directa contra la lógica de negocio#La señal del "Invalid Model Response"|salida estructurada]].
 - **Si la ejecución de código es la funcionalidad**, aislarla: proceso separado sin red, sin credenciales, sistema de ficheros efímero, límites de CPU y memoria, y `gVisor` o microVM en lugar de un contenedor a secas.
 - **Nunca `eval` ni `exec`** sobre texto generado, ni siquiera con una allowlist de nombres — la reflexión de Python hace inútil cualquier filtro léxico.

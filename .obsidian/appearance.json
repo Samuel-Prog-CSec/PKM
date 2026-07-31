@@ -3,7 +3,9 @@
   "theme": "moonstone",
   "accentColor": "",
   "baseFontSize": 18,
-  "enabledCssSnippets": [],
+  "enabledCssSnippets": [
+    "home-dashboard"
+  ],
   "nativeMenus": false,
   "showViewHeader": true,
   "showRibbon": true,

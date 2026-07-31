@@ -37,7 +37,7 @@ La taxonomía operativa depende de por dónde entra el payload:
 
 <mark style="background: #FFB86CA6;">La indirecta es la que produce los hallazgos de impacto alto en un engagement real</mark>, porque convierte al atacante en un tercero remoto y no autenticado: no necesita hablar con el chatbot, le basta con dejar el payload donde el chatbot vaya a leerlo. Se cubre en [[05 - Inyección indirecta en RAG, email y web]] y [[06 - EchoLeak y la exfiltración zero-click]].
 
-# La *lethal trifecta*
+# La lethal trifecta
 
 La heurística más útil para triar riesgo real en un sistema con LLM la formuló Simon Willison en junio de 2025. Un agente es explotable de forma catastrófica cuando combina las **tres** propiedades siguientes:
 

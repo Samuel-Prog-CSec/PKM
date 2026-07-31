@@ -1,20 +1,26 @@
 {
   "main": {
-    "id": "bdc1aed7993e787c",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "cefd2cb138dc8eaf",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "fe9d25d28d034eec",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "🏡 Home.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "🏡 Home"
             }
           }
         ]
@@ -37,7 +43,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -49,7 +57,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"03 - Archivos/Excalidraw/\" ",
+                "query": "tag:#TCP",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -83,7 +91,7 @@
       {
         "id": "4804e00b54e49735",
         "type": "tabs",
-        "dimension": 27.897435897435898,
+        "dimension": 34.25925925925926,
         "children": [
           {
             "id": "493c843bd0f9665f",
@@ -91,6 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "🏡 Home.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -137,7 +146,7 @@
       {
         "id": "670bf0020afcab0e",
         "type": "tabs",
-        "dimension": 36.205128205128204,
+        "dimension": 33.24074074074074,
         "children": [
           {
             "id": "3e2e9f160d67cf90",
@@ -159,7 +168,7 @@
       {
         "id": "f7749b6223e3ef3c",
         "type": "tabs",
-        "dimension": 35.8974358974359,
+        "dimension": 32.5,
         "children": [
           {
             "id": "8b107ad643ff1169",
@@ -189,47 +198,48 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "callout-manager:Insert Callout": false,
       "templater-obsidian:Templater": false,
-      "graph:Abrir vista gráfica": false
+      "graph:Abrir vista gráfica": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "a5984c00f83c5aee",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/00 - Introducción al brute forcing.md",
-    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/Brute Forcing.base",
-    "🔴⚔️ Red Team/Pentesting/008 - Escalada de privilegios Linux/Escalada de privilegios Linux.base",
-    "02 - Recursos/🛠️ Tools/Tools.base",
-    "02 - Recursos/Decisiones estructurales/010 - Eje Tipo, propiedad Descripción y Go como área de Red Team.md",
-    "CLAUDE.md.tmp.21012.2726b06d31b6",
-    "CLAUDE.md.tmp.21012.fe953a8bf144",
-    "CLAUDE.md.tmp.21012.e7b7126e785b",
-    "CLAUDE.md.tmp.21012.4a7ce05b9c9d",
-    "🔴⚔️ Red Team/Red-Team.base.tmp.21012.19d6c5743ea2",
-    "02 - Recursos/Recursos.base",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/Desarrollo ofensivo.base.tmp.21012.5ddcf508a094",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/17 - Manipulación de cabeceras HTTP/03 - Spoofing de User-Agent y sitios alternativos.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/17 - Manipulación de cabeceras HTTP/02 - Cookies inseguras y session fixation.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/17 - Manipulación de cabeceras HTTP/01 - Auditoría de cabeceras de seguridad y clickjacking.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/17 - Manipulación de cabeceras HTTP/00 - Testing de métodos HTTP y fingerprinting.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/16 - Escáner de vulnerabilidades web/03 - Escáner de Shellshock.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/16 - Escáner de vulnerabilidades web/01 - Escáner de path traversal.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/16 - Escáner de vulnerabilidades web/02 - Escáner de XSS reflejado.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/16 - Escáner de vulnerabilidades web/00 - Motor de fuzzing web.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/15 - Enumeración y fuerza bruta web/03 - Fuerza bruta de login.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/15 - Enumeración y fuerza bruta web/02 - Enumeración de usuarios.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/15 - Enumeración y fuerza bruta web/01 - Content discovery - directorios y ficheros.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/15 - Enumeración y fuerza bruta web/00 - Patrón worker pool y rate limiting.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/14 - Arsenal y OPSEC/02 - OPSEC del binario Go.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/14 - Arsenal y OPSEC/01 - Herramientas del ecosistema Go ofensivo.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/14 - Arsenal y OPSEC/00 - Arsenal de librerías Go ofensivas.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/13 - Command and Control/02 - Implante, admin y endurecer el RAT.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/13 - Command and Control/01 - El servidor C2 - proxy con channels.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/13 - Command and Control/00 - Diseñar la API C2 con gRPC y Protobuf.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/12 - Esteganografía/02 - Ofuscar el payload con XOR.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/12 - Esteganografía/01 - Implantar un payload en un chunk PNG.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/12 - Esteganografía/00 - El formato PNG - leer chunks.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/11 - Windows y PE/03 - CGO - mezclar C y Go.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/11 - Windows y PE/02 - Parsear ficheros PE con debug-pe.md",
-    "🔴⚔️ Red Team/Desarrollo ofensivo/11 - Windows y PE/01 - Process injection clásica.md",
+    "README.md",
+    "🏡 Home.md",
+    "03 - Archivos/Excalidraw/proceso_resolucion_dns.md",
+    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/06 - Arsenal de herramientas para Brute Forcing.md.tmp",
+    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/05 - Defensas y evasión.md.tmp",
+    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/03 - Medusa y alternativas modernas.md.tmp",
+    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/02 - Hydra.md.tmp",
+    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/01 - Tipos de ataque - diccionario, híbrido y máscara.md.tmp",
+    "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/00 - Introducción al brute forcing.md.tmp",
+    "📋 Temario.md",
+    "🏡 Home.md.tmp.15048.f8f08f16c658",
+    "🏡 Home.md.tmp.15048.7c950c109493",
+    "🏡 Home.md.tmp.15048.91356dc94180",
+    "02 - Recursos/Decisiones estructurales/013 - Home como dashboard generado y CSS scoped por cssclass.md.tmp.15048.1b01673303ef",
+    "ZZ-TEST-EJE2.md",
+    "ZZ-TEST-EJE.md",
+    "📋 Temario HTB.md",
+    "02 - Recursos/Decisiones estructurales/014 - Cierre de CPTS - renumeración del 000 y capstone en modo playbook.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/17 - Arsenal del engagement completo.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/16 - Detección y respuesta a lo largo de la cadena.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/14 - Después del Domain Admin - impacto y doble pivote.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/13 - Compromiso del dominio.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/12 - Movimiento lateral II - de WinRM a mssqladm.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/11 - Movimiento lateral I - la cosecha de credenciales.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/10 - Explotación interna y escalada a SYSTEM.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/09 - Reconocimiento interno y pillaging de shares.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/08 - Pivoting hacia la red interna.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/07 - Acceso inicial y escalada en la DMZ.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/06 - El foothold - inyección de comandos y bypass de filtros.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/05 - De la web al RCE - cadenas de explotación.md",
+    "🔴⚔️ Red Team/Evasión de defensas/02 - Callbacks de kernel/09 - Manipulación de la imagen de proceso.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/04 - Triaje de aplicaciones web.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/03 - Enumeración de servicios expuestos y disciplina de callejones sin salida.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/02 - Reconocimiento externo.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/01 - Escenario, alcance y arranque del engagement.md",
+    "🔴⚔️ Red Team/Pentesting/011 - Ataque a redes empresariales/00 - Anatomía de un engagement completo.md",
     "Pasted image 20260725110756.png",
     "03 - Archivos/Images/Web-Pentesting/Brute-Force/Modificar_Contraseña.webp",
     "03 - Archivos/Images/Web-Pentesting/Brute-Force/taxonomia_brute_force.png",

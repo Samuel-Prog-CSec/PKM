@@ -281,13 +281,6 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "Check List Red Team.md",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
         "pattern": "Lugares donde aprender.md",
         "patternType": "STRICT"
       },
@@ -296,6 +289,13 @@
         "active": true,
         "type": "FILES",
         "pattern": "Optimizaciones/Fine-Tunning.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "🏡 Home.md",
         "patternType": "STRICT"
       }
     ],

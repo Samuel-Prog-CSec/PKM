@@ -43,7 +43,7 @@ $ python -m garak --target_type openai --target_name <modelo> --spec 'tag:owasp:
 
 # ML adversarial clásico
 
-Para lo que no es un LLM: clasificadores, detectores, modelos tabulares y de imagen.
+Para lo que no es un LLM: clasificadores, detectores, modelos tabulares y de imagen. El uso de estas herramientas para **evasión** (ejemplos adversariales, FGSM, DeepFool) tiene detalle propio en [[05 - Arsenal para la evasión de modelos|el arsenal de evasión de modelos]].
 
 | Herramienta | Para qué |
 | - | - |

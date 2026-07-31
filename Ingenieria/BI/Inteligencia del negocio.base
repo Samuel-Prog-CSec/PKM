@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("Inteligencia del negocio.base", "Inteligencia del negocio")
+    filters: Area == link("Inteligencia del negocio.base", "Inteligencia del negocio")
     order:
       - file.name
       - Descripción

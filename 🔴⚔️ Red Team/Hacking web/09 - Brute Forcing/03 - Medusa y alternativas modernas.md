@@ -9,6 +9,8 @@ Nota previa: "[[02 - Hydra]]"
 Nota siguiente: "[[04 - Generación de wordlists]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
+---
+
 <mark style="background: #ADCCFFA6;">`Medusa` es el primo de [[02 - Hydra|Hydra]]: cracker de logins paralelo, modular y rápido.</mark> Hace lo mismo con flags distintos. Importa conocer los dos porque cada uno falla en cosas distintas, y porque para web ambos quedan por detrás de `ffuf` cuando hay tokens de por medio.
 
 # Sintaxis de Medusa

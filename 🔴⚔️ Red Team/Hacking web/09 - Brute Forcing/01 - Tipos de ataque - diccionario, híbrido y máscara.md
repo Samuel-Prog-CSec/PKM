@@ -9,6 +9,8 @@ Nota previa: "[[00 - Introducción al brute forcing]]"
 Nota siguiente: "[[02 - Hydra]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
+---
+
 La [[00 - Introducción al brute forcing|taxonomía conceptual]] se traduce en tres técnicas que de verdad usas contra un login: **diccionario** (el caballo de batalla), **híbrido** (diccionario mutado) y **máscara** (brute force acotado a un patrón). La fuerza bruta exhaustiva pura queda relegada a keyspaces diminutos.
 
 # Diccionario: la técnica de cabecera

@@ -10,6 +10,8 @@ Nota previa: "[[04 - Generación de wordlists]]"
 Nota siguiente: "[[06 - Arsenal de herramientas para Brute Forcing]]"
 Area: "[[Brute Forcing.base|Brute Forcing]]"
 ---
+---
+
 En cualquier aplicación seria, lanzar [[02 - Hydra|Hydra]] a 16 hilos no acaba con un acceso, acaba con tu IP bloqueada. <mark style="background: #ADCCFFA6;">El brute force real hoy no va de velocidad, va de **evadir** los controles anti-fuerza-bruta.</mark> Esta nota cataloga esos controles (lado defensa) y cómo se saltan (lado ataque) — el material que HTB no desarrolla y que de verdad importa en bug bounty.
 
 # Lado defensa: qué te frena y cómo te detectan

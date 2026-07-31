@@ -7,7 +7,7 @@ tags:
 Descripción: "El recon y el fuzzing a escala generan mucho tráfico, y eso choca de frente con las defensas perimetrales"
 Fecha de actualización: 2026-06-13
 Nota previa: "[[26 - Escaneo dirigido con nuclei]]"
-Nota siguiente:
+Nota siguiente: "[[28 - Origen real tras WAF, CDN y balanceadores]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
 ---
@@ -58,4 +58,4 @@ $ ffuf -u https://target.htb/FUZZ -w wordlist.txt -H "User-Agent: Mozilla/5.0 (W
 > - [wafw00f](https://github.com/EnableSecurity/wafw00f) · [fireprox](https://github.com/ustayready/fireprox) (AWS API Gateway; abandonado desde 2023) · [OmniProx](https://github.com/ZephrFish/OmniProx) (multi-cloud) · [axiom](https://github.com/pry0cc/axiom)
 > - [ffuf wiki](https://github.com/ffuf/ffuf/wiki) (flags `-rate`/`-p`) · [nuclei rate limiting](https://docs.projectdiscovery.io/tools/nuclei/running#rate-limit)
 
-Con la superficie mapeada, escaneada y la metodología de evasión clara, termina la fase de descubrimiento. El siguiente paso del path es **explotar** lo encontrado —[[00 - Introducción a SQL Injection|inyección]], [[00 - Introducción a XSS|XSS]], [[00 - Introducción a Command Injection|command injection]], autenticación y lógica— sobre el mapa de endpoints y parámetros que estas notas han construido.
+Todo lo anterior asume que hay que pasar **a través** de la defensa. Queda la vía que la hace innecesaria: <mark style="background: #8000E1A6;">si el servidor de origen sigue aceptando conexiones directas, no hay WAF que evadir</mark> — [[28 - Origen real tras WAF, CDN y balanceadores]].

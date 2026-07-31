@@ -126,7 +126,7 @@ El vector que más ha crecido en 2025-2026 no es el chatbot sino el **agente que
 
 Superficies específicas a revisar en un engagement moderno:
 
-- **Descripciones de herramientas** (*tool poisoning*): en MCP, la descripción de una herramienta va literalmente en el prompt del agente. Un servidor MCP malicioso o comprometido inyecta instrucciones ahí, y el agente las obedece antes de que el usuario escriba nada.
+- **Descripciones de herramientas** ([[06 - Tool poisoning y prompt injection vía descripción|*tool poisoning*]]): en MCP, la descripción de una herramienta va literalmente en el prompt del agente. Un servidor MCP malicioso o comprometido inyecta instrucciones ahí, y el agente las obedece antes de que el usuario escriba nada. La seguridad de MCP tiene sub-tema propio en [[00 - Qué es MCP y por qué cambia la superficie de ataque|MCP y seguridad de agentes]].
 - **Contenido de repositorios**: issues, pull requests, comentarios de código y `README` de dependencias que un agente de programación lee para "entender el proyecto".
 - **Salida de herramientas**: el resultado de una llamada (una respuesta HTTP, el contenido de un fichero) vuelve al contexto como texto de confianza y raramente se sanea.
 

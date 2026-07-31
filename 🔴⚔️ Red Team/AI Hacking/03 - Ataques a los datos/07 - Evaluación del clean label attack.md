@@ -92,5 +92,7 @@ Las técnicas que sí funcionan contra esta familia, que son distintas de las de
 - **Activaciones espectrales** (`spectral signatures`) y agrupamiento de representaciones internas: las muestras envenenadas tienden a formar un subgrupo separable dentro de su clase en el espacio de activaciones. Es la técnica estándar contra clean label y backdoors — ver [[14 - Detección y evasión en ataques a los datos]].
 - **Comparación de predicciones entre versiones** sobre un conjunto canario fijo, como se decía arriba.
 
-> [!important]+ Al reportar
+# Al reportar
+
+> [!important]+ El hallazgo sin métrica que enseñar
 > Este es el hallazgo más difícil de comunicar de la carpeta, porque **no hay una métrica que enseñar**. La forma que funciona es demostrar la cadena completa: *"con acceso de escritura a X y modificando 5 registros de 1050, conseguimos que la pieza Y se rechace sistemáticamente, y ninguna de las métricas que ustedes monitorizan cambia de forma detectable"*. <mark style="background: #FFB8EBA6;">El hallazgo no es el ataque: es la **ausencia de capacidad de detección**</mark>, y de ahí salen las recomendaciones — versionado de datasets, control de integridad, detección de outliers intra-clase y conjunto canario.
