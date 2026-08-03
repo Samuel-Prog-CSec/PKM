@@ -1,0 +1,24 @@
+formulas:
+  sub-tema: 'file.name.replace(".base", "")'
+properties:
+  formula.sub-tema:
+    displayName: Sub-tema
+  file.folder:
+    displayName: Ubicación
+views:
+  - type: table
+    name: Sub-temas
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("Red Team/AI Hacking")
+        - file.name != "AI Hacking.base"
+    order:
+      - formula.sub-tema
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      formula.sub-tema: 320
+      file.folder: 420

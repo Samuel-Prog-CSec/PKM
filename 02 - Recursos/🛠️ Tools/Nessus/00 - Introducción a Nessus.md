@@ -11,7 +11,7 @@ Area: "[[Nessus.base|Nessus]]"
 ---
 ---
 
-<mark style="background: #ADCCFFA6;">`Nessus` (de Tenable) es el escáner de vulnerabilidades comercial de referencia</mark>: enorme base de *plugins*, rápido y con buen reporting. Es la herramienta central de una [[01 - Evaluación de vulnerabilidades|evaluación de vulnerabilidades]] de infraestructura. Esta carpeta cubre su uso; el *porqué* del VA vive en `Pentesting/002 - Evaluación de vulnerabilidades`.
+<mark style="background: #ADCCFFA6;">`Nessus` (de Tenable) es el escáner de vulnerabilidades comercial de referencia</mark>: enorme base de *plugins*, rápido y con buen reporting. Es la herramienta central de una [[01 - Evaluación de vulnerabilidades|evaluación de vulnerabilidades]] de infraestructura. Esta carpeta cubre su uso; el *porqué* del VA vive en `Pentesting/02 - Evaluación de vulnerabilidades`.
 
 # Instalación y arranque
 

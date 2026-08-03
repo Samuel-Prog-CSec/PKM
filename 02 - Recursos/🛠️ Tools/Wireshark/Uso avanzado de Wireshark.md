@@ -64,3 +64,12 @@ Dado que `FTP` utiliza `TCP` como mecanismo de transporte, podemos utilizar el 
 3. Elegir un archivo y luego filtrar por `ftp-data`. **Seleccionar un paquete que corresponda con el archivo de interés y seguir el flujo TCP** que se correlaciona con él.
 4. Una vez hecho esto, cambiar "`Show and save data as`" a "`Raw`" y **guardar el contenido como el nombre del archivo original**.
 5. <mark style="background: #FF5582A6;">Validar la extracción</mark> comprobando el tipo de archivo.
+---
+
+## Cuando Wireshark no conoce el protocolo
+
+Todo lo anterior funciona porque Wireshark trae disector para `HTTP`, `FTP`, `SMB` y compañía. Con un **protocolo propietario** no hay disector: lo que ves es un flujo TCP en crudo, y Wireshark incluso intentará disecarlo como otra cosa (con puertos altos suele equivocarse y etiquetarlo como `GVSP`, lo que además vacía el campo `data` — se corrige con `--disable-protocol <nombre>`).
+
+La salida es **escribir tu propio disector en Lua**, sin recompilar nada: defines los campos con `ProtoField`, los registras en la tabla de puertos y a partir de ahí el protocolo aparece con nombre, en árbol y —lo importante— **filtrable** (`miproto.command == 3`). El procedimiento completo, incluido el reensamblado de PDUs partidos entre segmentos TCP con `dissect_tcp_pdus()`, está en [[06 - Dissectors de Wireshark en Lua]].
+
+Y el flujo previo —deducir la estructura del protocolo a partir del volcado hexadecimal antes de poder escribir el disector— en [[05 - Del hex dump a la estructura del protocolo]].

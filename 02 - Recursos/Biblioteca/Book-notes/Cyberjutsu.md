@@ -2,7 +2,7 @@
 tags:
   - Biblioteca
   - Pentesting
-Fecha de actualización: 2026-07-22
+Fecha de actualización: 2026-08-03
 Autores:
   - Ben McCarty
 Editorial: No Starch Press
@@ -46,3 +46,14 @@ El enfoque histórico-táctico es su mayor fortaleza y su mayor límite: aporta 
 [[cyberjutsu.pdf|Abrir PDF]]
 
 ## Notas propias
+
+Ingerido en el vault como **doctrina bicéfala** (ver [[018 - Ingesta del libro Cyberjutsu como doctrina bicéfala|ADR 018]]): el mismo material se lee desde el lado ofensivo y el defensivo, con lo net-new modernizado a 2026 y lo ya cubierto enlazado en vez de duplicado.
+
+- **Óptica ofensiva** ("cómo el atacante evade") → área [[Doctrina pentesting.base|Doctrina pentesting]] de Red Team:
+	- [[00 - El mindset del atacante persistente]] · [[01 - Frameworks de threat intelligence y la Pyramid of Pain]] · [[02 - Atribución y operaciones de bandera falsa]] · [[03 - Coordinación de operadores y deconflicting]] · [[04 - Explotar y crear circunstancias]]
+- **Óptica defensiva** ("cómo el ingeniero de seguridad defiende") → área [[Doctrina defensiva.base|Doctrina defensiva]] de Blue Team:
+	- [[00 - Threat modeling, STRIDE y el concepto de guarding]] · [[01 - Sensores defensivos - tipos y colocación]] · [[02 - Zero-trust - bloquear lo sospechoso, no solo lo malicioso]] · [[03 - Deception defensiva - honeypots, tiger traps y captura en vivo]] · [[04 - Cultura del SOC, complacencia y vigilancia]]
+
+**Enriquecimientos y net-new adicional**: Footprinting (el mapa del atacante), Evasividad (light/noise/litter + timing) y una nota net-new de [[14 - Canales encubiertos y salto de air-gap]] en Pivoting y túneles (cap. *Bridges & Ladders*, modernizado con RAMBO/PIXHELL 2024).
+
+Capítulos descartados por bajo valor o fuera de scope: *Hiring Shinobi* (gestión/RRHH) y *Locks* (seguridad física). Los ya cubiertos por el vault (living-off-the-land, C2, supply chain, OPSEC) se enlazan desde las notas de doctrina en lugar de reexplicarse.

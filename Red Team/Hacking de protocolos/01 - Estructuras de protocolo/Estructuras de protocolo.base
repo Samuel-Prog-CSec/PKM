@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("Estructuras de protocolo.base", "Estructuras de protocolo")
+    order:
+      - file.name
+      - file.tags
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 380
+      file.tags: 300
+      note.Fecha de actualización: 150

@@ -103,7 +103,7 @@ $ obsidian files | grep "XSS/" | while read f; do
 **Opción B — Filesystem directo (cuando Obsidian está cerrado)**:
 
 ```bash
-cd "C:/Users/Samuel/Documents/PKM/🔴⚔️ Red Team/Hacking web/XSS"
+cd "C:/Users/Samuel/Documents/PKM/Red Team/Hacking web/XSS"
 for f in *.md; do
   prev=$(grep '^Nota previa:' "$f" | sed 's/Nota previa: //')
   next=$(grep '^Nota siguiente:' "$f" | sed 's/Nota siguiente: //')

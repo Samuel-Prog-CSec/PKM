@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBinary",
       "OcRocket24",
       "LiTrainFrontTunnel",
       "TiBrandSpeedtest",
-      "LiLibrary",
-      "OcDatabase16"
+      "LiLibrary"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -57,16 +57,7 @@
   "03 - Recursos/🛠️ Tools/Tcpdump": "TiSpy",
   "03 - Recursos/🛠️ Tools/Wireshark": "RaShark",
   "Redes/Protocolos": "TiProtocol",
-  "Redes/Protocolos/HTTP": "TiHttpConnect",
-  "Redes/Protocolos/HTTPS": "TiLock",
   "03 - Recursos/🛠️ Tools/Metasploit": "RaFireBomb",
-  "🔴⚔️ Red Team/Pentesting": "RaCrossedAxes",
-  "🔴⚔️ Red Team/Hacking Wi-Fi": "LiWifi",
-  "🔴⚔️ Red Team/Hacking web": "TiSpider",
-  "🔴⚔️ Red Team/AI Hacking": "OcCopilot96",
-  "🔵🛡️ Blue Team/002 - Manejo de logs": "LiLogs",
-  "🔵🛡️ Blue Team/000 - Manejo de incidentes": "RaCrackedShield",
-  "🔴⚔️ Red Team/Red-Team.base": "🔴",
   "02 - Areas/Ingenieria/BI": "TiReportSearch",
   "Redes": "TiNetwork",
   "Reparación Razer Basilisk V3 Pro 35k.md": {
@@ -87,5 +78,13 @@
     "iconName": "TiTerminal2",
     "iconColor": "#ed06fe"
   },
-  "Optimizaciones/Fine-Tunning.md": "OcRocket24"
+  "Optimizaciones/Fine-Tunning.md": "OcRocket24",
+  "Ingenieria": "LiBinary",
+  "Red Team/AI Hacking": "OcCopilot96",
+  "Red Team/Hacking web": "TiSpider",
+  "Red Team/Hacking Wi-Fi": "LiWifi",
+  "Red Team/Pentesting": "RaCrossedAxes",
+  "Red Team/Red-Team.base": "🔴",
+  "Blue Team/00 - Manejo de incidentes": "RaCrackedShield",
+  "Blue Team/02 - Manejo de logs": "LiLogs"
 }

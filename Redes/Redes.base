@@ -15,9 +15,7 @@ views:
     order:
       - formula.sub-tema
       - file.folder
-    sort:
-      - property: file.folder
-        direction: ASC
+    sort: []
     columnSize:
       formula.sub-tema: 320
       file.folder: 420

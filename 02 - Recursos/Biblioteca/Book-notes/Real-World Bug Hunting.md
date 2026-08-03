@@ -47,7 +47,7 @@ El enfoque es deliberadamente práctico y orientado a principiantes en cibersegu
 
 Contenido extraído e integrado en el vault (2026-07-27), modernizado a 2025-2026 con fuentes primarias (PortSwigger, OWASP, RFCs, `can-i-take-over-xyz`) — decisión y alternativas descartadas en el [[007 - Ingesta del libro Real-World Bug Hunting|ADR 007]].
 
-**Proceso / metodología** — `🔴⚔️ Red Team/Hacking web/30 - Bug Bounty/`:
+**Proceso / metodología** — `Red Team/Hacking web/30 - Bug Bounty/`:
 - [[03 - Metodología de caza - mapear y atacar la aplicación]] (cap 19: mapeo de funcionalidad + tabla *marker→técnica*).
 - [[04 - Mindset del cazador y encadenamiento de bugs]] (cap 1 + *chaining*).
 - [[05 - Escribir un buen reporte]] enriquecida con el cap 20 (reconfirmar, triager, apelar recompensa).

@@ -47,11 +47,11 @@ const ICONOS = {
 const AREAS = [
   { icon: ICONOS.crosshair, nombre: "Red Team",   accent: "red",
     desc: "Web, pentesting, AD, IA ofensiva, evasión y desarrollo",
-    base: "🔴⚔️ Red Team/Red-Team.base", carpeta: "🔴⚔️ Red Team" },
+    base: "Red Team/Red-Team.base", carpeta: "Red Team" },
 
   { icon: ICONOS.escudo,    nombre: "Blue Team",  accent: "blue",
     desc: "Incidentes, análisis de red y logs, defensa de sistemas de IA",
-    base: "🔵🛡️ Blue Team/Blue-Team.base", carpeta: "🔵🛡️ Blue Team" },
+    base: "Blue Team/Blue-Team.base", carpeta: "Blue Team" },
 
   { icon: ICONOS.red,       nombre: "Redes",      accent: "teal",
     desc: "Fundamentos de protocolo: el «cómo funciona» del footprinting",
@@ -661,8 +661,8 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
 
 /* Áreas raíz, para reagrupar cualquier nota por su carpeta de primer nivel. */
 const RAICES = {
-  "🔴⚔️ Red Team":  { nombre: "Red Team",   accent: "red",    base: "🔴⚔️ Red Team/Red-Team.base" },
-  "🔵🛡️ Blue Team": { nombre: "Blue Team",  accent: "blue",   base: "🔵🛡️ Blue Team/Blue-Team.base" },
+  "Red Team":  { nombre: "Red Team",   accent: "red",    base: "Red Team/Red-Team.base" },
+  "Blue Team": { nombre: "Blue Team",  accent: "blue",   base: "Blue Team/Blue-Team.base" },
   "Redes":           { nombre: "Redes",      accent: "teal",   base: "Redes/Redes.base" },
   "Ingenieria":      { nombre: "Ingeniería", accent: "amber",  base: "Ingenieria/Ingenieria.base" },
   "02 - Recursos":   { nombre: "Recursos",   accent: "violet", base: "02 - Recursos/Recursos.base" },
@@ -1011,5 +1011,4 @@ try {
 ```
 
 <div class="pkm-section"><div class="pkm-h">Accesos rápidos</div><div class="pkm-quick"><a class="internal-link pkm-chip" href="📋 Temario">📋 Temario</a><a class="internal-link pkm-chip" href="02 - Recursos/Templates/Template para proyectos.md">🧩 Plantilla de nota</a><a class="internal-link pkm-chip" href="02 - Recursos/Biblioteca/Librería.base">📖 Biblioteca</a><a class="internal-link pkm-chip" href="02 - Recursos/Decisiones estructurales/Decisiones estructurales.base">🏛️ Decisiones (ADR)</a><a class="internal-link pkm-chip" href="02 - Recursos/🛠️ Tools/Tools.base">🛠️ Herramientas</a><a class="internal-link pkm-chip" href="README">📄 README</a></div></div>
-
 <div class="pkm-foot">Zettelkasten en español · términos técnicos en inglés · índices en <code>.base</code><br>Contenido propio bajo CC BY-NC-SA 4.0 · material de terceros con sus licencias</div>

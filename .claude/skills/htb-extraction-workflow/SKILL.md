@@ -5,7 +5,7 @@ description: Use when extracting content from a HackTheBox Academy module to cre
 
 # Workflow de extracción HTB Academy → notas del PKM
 
-Activar este skill **antes** de tocar el navegador, antes de crear cualquier nota nueva y antes de modificar carpetas del vault (`🔴⚔️ Red Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/🛠️ Tools/`…). Aplica a **cualquier** path HTB (CWES/CWEE web o CPTS de red/infra), no solo web.
+Activar este skill **antes** de tocar el navegador, antes de crear cualquier nota nueva y antes de modificar carpetas del vault (`Red Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/🛠️ Tools/`…). Aplica a **cualquier** path HTB (CWES/CWEE web o CPTS de red/infra), no solo web.
 
 ## Precondiciones
 

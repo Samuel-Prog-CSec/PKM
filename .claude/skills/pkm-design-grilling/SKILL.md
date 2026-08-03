@@ -58,7 +58,7 @@ Recorrer estas categorías y formular las preguntas que apliquen al cambio concr
 
 ### 5. Mapeo con CWES/CWEE
 
-- Si el cambio afecta a `🔴⚔️ Red Team/Hacking web/`, ¿sigue compatible con el mapeo de módulos HTB → carpetas que vive en `CLAUDE.md`?
+- Si el cambio afecta a `Red Team/Hacking web/`, ¿sigue compatible con el mapeo de módulos HTB → carpetas que vive en `CLAUDE.md`?
 - ¿Adelanta o complica la integración futura de módulos que aún no hemos extraído?
 
 ### 6. Modelo mental

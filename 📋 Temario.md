@@ -23,22 +23,37 @@ Fecha de actualización: 2026-07-31
 >
 > **`## Plan de estudio` es un encabezado reservado**: no es un catálogo de módulos sino la planificación con fechas. Se parsea aparte, alimenta su propio panel y **no** entra en «Qué toca ahora».
 
+## CWPE · Wi-Fi Penetration Tester
+
+Foco activo. Seguridad ofensiva de redes inalámbricas 802.11.
+
+- [x] 01 · Wi-Fi Penetration Testing Basics — `Hacking Wi-Fi/00 - Fundamentos del pentesting Wi-Fi/` ✅ 2026-08-01
+- [x] 02 · Attacking Wi-Fi Protected Setup (WPS) — `Hacking Wi-Fi/01 - Ataques a WPS/` ✅ 2026-08-01
+- [x] 03 · Wired Equivalent Privacy (WEP) Attacks — `Hacking Wi-Fi/02 - Ataques a WEP/` ✅ 2026-08-01
+- [ ] 04 · Attacking WPA/WPA2 Wi-Fi Networks — `Hacking Wi-Fi/03 - Ataques a WPA-WPA2/` (crear)
+- [ ] 05 · Wi-Fi Evil Twin Attacks — `Hacking Wi-Fi/04 - Evil Twin/` (crear)
+- [ ] 06 · Attacking WPA3 Wi-Fi Networks — `Hacking Wi-Fi/05 - Ataques a WPA3/` (crear)
+- [ ] 07 · Bypassing Wi-Fi Captive Portals — `Hacking Wi-Fi/06 - Portales cautivos/` (crear)
+- [ ] 08 · Wi-Fi Password Cracking Techniques — `Hacking Wi-Fi/07 - Cracking de contraseñas Wi-Fi/` (crear)
+- [ ] 09 · Wi-Fi Penetration Testing Tools and Techniques — `Hacking Wi-Fi/08 - Herramientas y técnicas/` (crear)
+- [ ] 10 · Attacking Corporate Wi-Fi Networks — `Hacking Wi-Fi/09 - Wi-Fi corporativo/` (crear)
+
 ## CPTS · Penetration Tester
 
-Certificación generalista: red, infraestructura, AD, escalada de privilegios, web y reporting. Los módulos web se reutilizan del trabajo de CWES/CWEE.
+Foco activo. Certificación generalista.
 
-- [x] 01 · Penetration Testing Process — `Pentesting/000 - Fases del Pentesting/` (legacy parcial, pendiente enriquecer)
+- [x] 01 · Penetration Testing Process — `Pentesting/00 - Fases del Pentesting/` (legacy parcial, pendiente enriquecer)
 - ~~02 · Getting Started~~ — se salta, contenido cubierto en otros módulos
 - [x] 03 · Network Enumeration with Nmap — `02 - Recursos/🛠️ Tools/Nmap/`
-- [x] 04 · Footprinting — `Pentesting/001 - Footprinting/`
+- [x] 04 · Footprinting — `Pentesting/01 - Footprinting/`
 - [x] 05 · Information Gathering – Web Edition — `Hacking web/02 - Reconocimiento Web/`
-- [x] 06 · Vulnerability Assessment — `Pentesting/002 - Evaluación de vulnerabilidades/`
-- [x] 07 · File Transfers — `Pentesting/003 - Transferencia de archivos/`
-- [x] 08 · Shells & Payloads — `Pentesting/004 - Shells y Payloads/`
+- [x] 06 · Vulnerability Assessment — `Pentesting/02 - Evaluación de vulnerabilidades/`
+- [x] 07 · File Transfers — `Pentesting/03 - Transferencia de archivos/`
+- [x] 08 · Shells & Payloads — `Pentesting/04 - Shells y Payloads/`
 - [x] 09 · Using the Metasploit Framework — `02 - Recursos/🛠️ Tools/Metasploit/`
-- [x] 10 · Password Attacks — `Pentesting/005 - Ataques a contraseñas/`
-- [x] 11 · Attacking Common Services — `Pentesting/006 - Ataque a servicios comunes/`
-- [x] 12 · Pivoting, Tunneling & Port Forwarding — `Pentesting/007 - Pivoting y túneles/`
+- [x] 10 · Password Attacks — `Pentesting/05 - Ataques a contraseñas/`
+- [x] 11 · Attacking Common Services — `Pentesting/06 - Ataque a servicios comunes/`
+- [x] 12 · Pivoting, Tunneling & Port Forwarding — `Pentesting/07 - Pivoting y túneles/`
 - [x] 13 · Active Directory Enumeration & Attacks — `Red Team/Active Directory/`
 - [x] 14 · Using Web Proxies — `Hacking web/01 - Proxies web/`
 - [x] 15 · Attacking Web Applications with Ffuf — `02 - Recursos/🛠️ Tools/Ffuf/`
@@ -51,17 +66,17 @@ Certificación generalista: red, infraestructura, AD, escalada de privilegios, w
 - [x] 22 · Command Injections — `Hacking web/06 - Command Injection/`
 - [x] 23 · Web Attacks — `Hacking web/11 - Web Attacks/`
 - [x] 24 · Attacking Common Applications — `Hacking web/19 - Common Applications/`
-- [x] 25 · Linux Privilege Escalation — `Pentesting/008 - Escalada de privilegios Linux/`
-- [x] 26 · Windows Privilege Escalation — `Pentesting/009 - Escalada de privilegios Windows/`
-- [x] 27 · Documentation & Reporting — `Pentesting/010 - Documentación y reporting/`
-- [x] 28 · Attacking Enterprise Networks — `Pentesting/011 - Ataque a redes empresariales/` (capstone) ✅ 2026-07-31
+- [x] 25 · Linux Privilege Escalation — `Pentesting/08 - Escalada de privilegios Linux/`
+- [x] 26 · Windows Privilege Escalation — `Pentesting/09 - Escalada de privilegios Windows/`
+- [x] 27 · Documentation & Reporting — `Pentesting/10 - Documentación y reporting/`
+- [x] 28 · Attacking Enterprise Networks — `Pentesting/11 - Ataque a redes empresariales/` (capstone) ✅ 2026-07-31
 
 ## COAE · AI Red Teamer
 
-Path desarrollado con Google. Repartido en tres áreas: fundamentos a `Ingenieria/`, defensivo a `Blue Team/`, ofensivo a `Red Team/AI Hacking/` (ADR 008 y 011).
+Foco activo. Red Team de IA: fundamentos a `Ingenieria/`, defensivo a `Blue Team/`, ofensivo a `Red Team/AI Hacking/`.
 
 - [x] 01 · Fundamentals of AI — `Ingenieria/Inteligencia Artificial/00-01/`
-- [x] 02 · Applications of AI in InfoSec — partido: `Ingenieria/IA/02/` + `Blue Team/005/`
+- [x] 02 · Applications of AI in InfoSec — partido: `Ingenieria/IA/02/` + `Blue Team/05/`
 - [x] 03 · Introduction to Red Teaming AI — `AI Hacking/00 - Fundamentos de Red Teaming AI/`
 - [x] 04 · Prompt Injection Attacks — `AI Hacking/01 - Prompt Injection/`
 - [x] 05 · LLM Output Attacks — `AI Hacking/02 - LLM Output Attacks/`
@@ -71,11 +86,11 @@ Path desarrollado con Google. Repartido en tres áreas: fundamentos a `Ingenieri
 - [x] 09 · AI Evasion - First-Order Attacks — `AI Hacking/07 - Ataques de primer orden/`
 - [x] 10 · AI Evasion - Sparsity Attacks — `AI Hacking/08 - Ataques dispersos/`
 - [x] 11 · AI Privacy — `AI Hacking/09 - Privacidad en IA/`
-- [x] 12 · AI Defense — `Blue Team/007 - Defensa de sistemas de IA/`
+- [x] 12 · AI Defense — `Blue Team/07 - Defensa de sistemas de IA/`
 
 ## CWES · Web Penetration Tester
 
-Base web. Completa y funcionando ya como material de referencia.
+Foco activo. Base web pentesting.
 
 - ~~01 · Web Requests~~ — se salta
 - ~~02 · Introduction to Web Applications~~ — se salta
@@ -100,7 +115,7 @@ Base web. Completa y funcionando ya como material de referencia.
 
 ## CWEE · Senior Web Penetration Tester
 
-En pausa mientras CPTS y COAE son el foco. Lo que queda es whitebox, deserialización y lógica de parámetros.
+En pausa. Web Pentesting avanzado.
 
 - [x] 01 · Injection Attacks — `Hacking web/{21 LDAP, 22 XPath, 23 PDF}/`
 - [x] 02 · Introduction to NoSQL Injection — `Hacking web/20 - NoSQL Injection/`
@@ -110,7 +125,7 @@ En pausa mientras CPTS y COAE son el foco. Lo que queda es whitebox, deserializa
 - [x] 06 · Abusing HTTP Misconfigurations — `Hacking web/25 - HTTP/Misconfigurations/`
 - [x] 07 · HTTP Attacks — `Hacking web/25 - HTTP/Attacks/`
 - [x] 08 · Blind SQL Injection — `Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Blind/`
-- [ ] 09 · Intro to Whitebox Pentesting — `Hacking web/Whitebox/Intro/` (crear)
+- [x] 09 · Intro to Whitebox Pentesting — `Hacking web/35 - Whitebox Pentesting/` (19 notas) + `Tools/{Semgrep,CodeQL}/`
 - [x] 10 · Modern Web Exploitation Techniques — `Hacking web/28 - Modern Exploitation/`
 - [ ] 11 · Introduction to Deserialization Attacks — `Hacking web/Deserialization/Intro/` (crear)
 - [ ] 12 · Whitebox Attacks — `Hacking web/Whitebox/Attacks/` (crear)

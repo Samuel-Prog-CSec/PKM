@@ -2,7 +2,6 @@
 tags:
   - Redes
   - Protocolos
-  - Introduccion
   - Tipo/Introduccion
 Descripción: "Un protocolo de red es el contrato que fija cómo dos máquinas intercambian datos: qué bytes se envían, en qué orden, qué significa cada campo y qué se hace cuando algo falla"
 Fecha de actualización: 2026-07-29
@@ -14,6 +13,9 @@ Area: "[[Protocolos de red.base|Protocolos de red]]"
 
 Esta nota es la puerta de entrada al sub-tema: agrupa las fichas de "cómo funciona" cada protocolo. La contraparte ofensiva —cómo enumerarlo y atacarlo— vive en [[00 - Principios y metodología de enumeración|Footprinting]], y cada ficha de aquí enlaza con su nota de enumeración correspondiente.
 
+> [!important]+ ¿Y si el protocolo no está en esta lista?
+> Todo lo de este sub-tema son protocolos **documentados**: hay RFC, hay disector en Wireshark y hay herramienta dedicada. El caso contrario —el binario propietario del ERP, del dispositivo industrial o del *backend* de una app, sin documentación ni nombre— se ataca con otra metodología: capturar, deducir la estructura byte a byte, escribir un disector y buscar los fallos de implementación. Eso vive en **[[Hacking de protocolos.base|Red Team/Hacking de protocolos]]**, y su puerta de entrada es [[00 - Modelo de análisis de protocolos de red]].
+
 # Por qué importa el modelo de capas
 
 Los protocolos se apilan: cada capa resuelve un problema y delega el resto en la de abajo. <mark style="background: #8000E1A6;">Eso significa que un fallo de seguridad en una capa baja compromete todo lo que viaja encima, por muy bien diseñado que esté</mark> — es exactamente lo que explota un ataque de red clásico: si controlas la resolución de nombres (DNS) o el enrutado (ARP/BGP), da igual lo robusto que sea el protocolo de aplicación que corre por encima.
@@ -24,7 +26,7 @@ Los protocolos se apilan: cada capa resuelve un problema y delega el resto en la
 | Presentación / Sesión | Cifrado, codificación, sesiones | [[HTTPS]], [[SSH]] |
 | Transporte | Entrega fiable o no fiable, puertos | TCP / UDP |
 | Red | Direccionamiento y enrutado | IP, ICMP |
-| Enlace y física | Trama y medio | Ethernet, Wi-Fi |
+| Enlace y física | Trama y medio | Ethernet, [[00 - El estándar 802.11 y sus generaciones\|Wi-Fi (802.11)]] |
 
 La distinción **TCP vs UDP** es la que más consecuencias prácticas tiene. TCP establece conexión, garantiza orden y reintenta; UDP dispara y se olvida. Por eso [[📂🚀 TFTP\|TFTP]] (UDP) no puede ofrecer las garantías de [[📂🔄 FTP\|FTP]] (TCP), y por eso un escaneo UDP es lento y ruidoso mientras que uno TCP obtiene respuesta inmediata.
 

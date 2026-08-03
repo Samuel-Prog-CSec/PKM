@@ -43,7 +43,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/Web Pentesting.base",
+        "pattern": "Red Team/Hacking web/Web Pentesting.base",
         "patternType": "STRICT"
       },
       {
@@ -57,7 +57,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking Wi-Fi/Wi-Fi Pentesting.base",
+        "pattern": "Red Team/Hacking Wi-Fi/Wi-Fi Pentesting.base",
         "patternType": "STRICT"
       },
       {
@@ -92,14 +92,14 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Pentesting/000 - Fases del Pentesting/Pentesting.md",
+        "pattern": "Red Team/Pentesting/00 - Fases del Pentesting/Pentesting.md",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Red-Team.base",
+        "pattern": "Red Team/Red-Team.base",
         "patternType": "STRICT"
       },
       {
@@ -134,7 +134,7 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/AI Hacking/AI Pentesting.base",
+        "pattern": "Red Team/AI Hacking/AI Pentesting.base",
         "patternType": "STRICT"
       },
       {
@@ -246,35 +246,35 @@
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Active Directory/Active Directory.base",
+        "pattern": "Red Team/Active Directory/Active Directory.base",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/03 - JavaScript Deobfuscation/JavaScript Deobfuscation.base",
+        "pattern": "Red Team/Hacking web/03 - JavaScript Deobfuscation/JavaScript Deobfuscation.base",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/05 - SQL Injection/SQL Injection.base",
+        "pattern": "Red Team/Hacking web/05 - SQL Injection/SQL Injection.base",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/06 - Command Injection/Command Injection.base",
+        "pattern": "Red Team/Hacking web/06 - Command Injection/Command Injection.base",
         "patternType": "STRICT"
       },
       {
         "name": "",
         "active": true,
         "type": "FILES",
-        "pattern": "🔴⚔️ Red Team/Hacking web/09 - Brute Forcing/Brute Forcing.base",
+        "pattern": "Red Team/Hacking web/09 - Brute Forcing/Brute Forcing.base",
         "patternType": "STRICT"
       },
       {
@@ -296,6 +296,55 @@
         "active": true,
         "type": "FILES",
         "pattern": "🏡 Home.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Redes/Protocolos/Protocolos de red.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Redes/Redes.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Ingenieria/Ingenieria.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Redes/Protocolos/Introducción a los protocolos de red.md",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "Red Team",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "Blue Team",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "Ingenieria",
         "patternType": "STRICT"
       }
     ],

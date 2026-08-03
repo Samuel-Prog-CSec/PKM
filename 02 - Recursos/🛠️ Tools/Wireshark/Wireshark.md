@@ -20,7 +20,7 @@ Area: "[[Wireshark.base|Wireshark]]"
 - Interfaces gráficas y TTY
 - Capaz de ejecutarse en la mayoría de los sistemas operativos
 - Ethernet, IEEE 802.11, PPP/HDLC, ATM, Bluetooth, USB, Token Ring, Frame Relay, FDDI, entre otros
-- Capacidades de descifrado para IPsec, ISAKMP, Kerberos, SNMPv3, SSL/TLS, WEP y WPA/WPA2
+- Capacidades de descifrado para IPsec, ISAKMP, Kerberos, SNMPv3, SSL/TLS, [[03 - Cifrado y descifrado WEP paso a paso|WEP]] y WPA/WPA2 — configurable en *Preferences ▸ Protocols ▸ IEEE 802.11*, ver [[05 - Airdecap-ng]]
 - Muchos muchos más...
 
 ---
@@ -34,7 +34,7 @@ Area: "[[Wireshark.base|Wireshark]]"
 - Cualquier pantalla moderna. Se recomienda una resolución de 1280 × 1024 o superior. Wireshark utilizará resoluciones HiDPI o Retina si están disponibles. Los usuarios avanzados encontrarán útiles varios monitores.
 - Una tarjeta de red compatible para capturar:
     - Ethernet. Cualquier tarjeta compatible con Windows debería funcionar.
-    - 802.11. Consulte la página wiki de Wireshark. Capturar información 802.11 sin procesar puede resultar difícil sin un equipo especial.
+    - 802.11. Capturar tramas 802.11 en crudo exige **modo monitor**, que en Windows apenas está soportado. En Linux es el modo de trabajo normal — ver [[05 - Modos de operación y modo monitor]] y [[04 - Interfaces, chipsets y drivers]] para el hardware que lo permite.
 - Para instalar, descargue el ejecutable desde [su pagina web](https://www.wireshark.org/), valide el hash e instálelo.
 
 ## Linux

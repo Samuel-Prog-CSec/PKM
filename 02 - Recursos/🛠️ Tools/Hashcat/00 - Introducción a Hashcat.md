@@ -42,7 +42,7 @@ Cada tipo de hash tiene un número. Los que aparecen en un pentest:
 | `13100` | **Kerberos krb5tgs** RC4 (Kerberoasting) |
 | `19700` | **Kerberos krb5tgs** AES256 (Kerberoasting con RC4 deshabilitado) |
 | `18200` | Kerberos krb5asrep (AS-REP) |
-| `22000` | WPA/WPA2 |
+| `22000` | **WPA/WPA2** (PMKID + EAPOL). Sustituye al `2500`, deprecado — ver [[06 - Aircrack-ng]] |
 
 ```shell-session
 $ hashcat --example-hashes | less     # formato de ejemplo de cada -m

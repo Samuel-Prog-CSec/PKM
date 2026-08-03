@@ -1,0 +1,161 @@
+formulas:
+  área: file.name.replace(".base", "")
+  días: if(file.hasProperty("Fecha de actualización"), (now() - note["Fecha de actualización"]).days.round(0), "")
+  certificación: |
+    if(file.folder.startsWith("Red Team/AI Hacking"), "COAE",
+      if(file.folder.containsAny("Red Team/Pentesting", "Red Team/Active Directory"), "CPTS",
+        if(file.folder.startsWith("Red Team/Hacking web"), "CWES / CWEE",
+          if(file.folder.startsWith("Red Team/Hacking Wi-Fi"), "CWPE",
+            "Sin certificación asociada"))))
+properties:
+  formula.área:
+    displayName: Área
+  formula.días:
+    displayName: Días sin tocar
+  formula.certificación:
+    displayName: Certificación
+  file.folder:
+    displayName: Ubicación
+views:
+  - type: cards
+    name: Áreas
+    filters:
+      and:
+        - file.ext == "base"
+        - /^Red Team\/[^\/]+$/.matches(file.folder)
+    order:
+      - formula.área
+    sort:
+      - property: file.name
+        direction: ASC
+    cardSize: 320
+  - type: table
+    name: Sub-temas por certificación
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("Red Team/")
+        - "!/^Red Team\\/[^\\/]+$/.matches(file.folder)"
+    groupBy:
+      property: formula.certificación
+      direction: ASC
+    order:
+      - formula.área
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      formula.área: 320
+      file.folder: 460
+  - type: table
+    name: Detección y evasión
+    filters:
+      and:
+        - file.inFolder("Red Team")
+        - file.hasTag("Tipo/Deteccion")
+    order:
+      - file.name
+      - Descripción
+      - Area
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 340
+      note.Descripción: 460
+      note.Area: 220
+  - type: table
+    name: Arsenal
+    filters:
+      and:
+        - file.inFolder("Red Team")
+        - file.hasTag("Tipo/Arsenal")
+    order:
+      - file.name
+      - Descripción
+      - Area
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 340
+      note.Descripción: 460
+      note.Area: 220
+  - type: table
+    name: Defensa y mitigación
+    filters:
+      and:
+        - file.inFolder("Red Team")
+        - file.hasTag("Tipo/Defensa")
+    order:
+      - file.name
+      - Descripción
+      - Area
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 340
+      note.Descripción: 460
+      note.Area: 220
+  - type: table
+    name: Puertas de entrada
+    filters:
+      and:
+        - file.inFolder("Red Team")
+        - file.hasTag("Tipo/Introduccion")
+    order:
+      - file.name
+      - Descripción
+      - Area
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 340
+      note.Descripción: 460
+      note.Area: 220
+  - type: table
+    name: Sin tocar (>180 días)
+    filters:
+      and:
+        - file.inFolder("Red Team")
+        - file.hasProperty("Area")
+        - (now() - note["Fecha de actualización"]).days > 180
+    order:
+      - file.name
+      - Descripción
+      - Area
+      - Fecha de actualización
+      - formula.días
+    sort:
+      - property: formula.días
+        direction: DESC
+    columnSize:
+      file.name: 340
+      note.Descripción: 420
+      note.Area: 200
+  - type: table
+    name: Tocadas en 30 días
+    filters:
+      and:
+        - file.inFolder("Red Team")
+        - file.hasProperty("Area")
+        - (now() - note["Fecha de actualización"]).days <= 30
+    order:
+      - file.name
+      - Descripción
+      - Area
+      - Fecha de actualización
+      - formula.días
+    sort:
+      - property: formula.días
+        direction: ASC
+    columnSize:
+      file.name: 340
+      note.Descripción: 420
+      note.Area: 200

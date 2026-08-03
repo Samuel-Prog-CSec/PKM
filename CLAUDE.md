@@ -44,11 +44,12 @@ El vault es una base de conocimiento de seguridad ofensiva que debe servir **ind
 1. **HTB CWES** — *Certified Web Exploitation Specialist* (path "Web Penetration Tester", antes CBBH). 20 módulos. **Base web — prácticamente completa; funciona ya como material de referencia.**
 2. **HTB CWEE** — *Certified Web Exploitation Expert* (path "Senior Web Penetration Tester"). 15 módulos, dificultad alta. **En pausa** — faltan whitebox, deserialización y parameter logic bugs.
 3. **HTB CPTS** — *Certified Penetration Testing Specialist* (path "Penetration Tester"). 28 módulos. Pentesting **generalista**: reconocimiento, red/infraestructura, Active Directory, escalada de privilegios (Linux/Windows), web y reporting. **✅ Los 28 módulos net-new completados (2026-07-31).**
-4. **HTB COAE** — *Certified Offensive AI Expert* (path "AI Red Teamer", desarrollado con Google). 12 módulos. Seguridad ofensiva de sistemas de IA: fundamentos de ML/DL, prompt injection, ataques a la salida de LLM, envenenamiento de datos, evasión adversarial, privacidad y defensa. Examen práctico de 7 días sobre infraestructura AI-driven. **Foco activo.**
+4. **HTB COAE** — *Certified Offensive AI Expert* (path "AI Red Teamer", desarrollado con Google). 12 módulos. Seguridad ofensiva de sistemas de IA: fundamentos de ML/DL, prompt injection, ataques a la salida de LLM, envenenamiento de datos, evasión adversarial, privacidad y defensa. Examen práctico de 7 días sobre infraestructura AI-driven. **✅ Los 12 módulos completados (2026-07-29).**
+5. **HTB CWPE** — *Certified Wi-Fi Pentesting Expert* (path "Wi-Fi Penetration Tester", id 421). 10 módulos, 170 secciones. Seguridad ofensiva de redes inalámbricas **802.11**: fundamentos de trama y modo monitor, WPS, WEP, WPA/WPA2, evil twins, WPA3/SAE, portales cautivos, cracking de contraseñas y Wi-Fi corporativo (802.1X/EAP). **Foco activo.**
 
-> **Foco actual: COAE** (CPTS ya completa; parón temporal en las certis web CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** (`project_cpts_*`) y en la columna `Estado` de las tablas de path más abajo — no en esta sección, que solo fija el rumbo. **CPTS está completa**: con Attacking Common Services (#11) y Documentation & Reporting (#27) el 2026-07-23, y **Penetration Testing Process (#1) + Attacking Enterprise Networks (#28) el 2026-07-31**, ya no queda ningún módulo net-new de CPTS. De COAE, completados los módulos 1-6 el 2026-07-28 y los **módulos 7-9 (315 Application & System, 318 Evasion Foundations, 319 Evasion First-Order) el 2026-07-29**; pendientes 10-12 (Sparsity, Privacy, Defense).
+> **Foco actual: CWPE** (CPTS y COAE ya completas; parón temporal en las certis web CWES/CWEE). El **detalle vivo** de qué módulos están hechos/pendientes vive en la **memoria** y en la columna `Estado` de las tablas de path más abajo — no en esta sección, que solo fija el rumbo. **CPTS quedó completa el 2026-07-31** (Penetration Testing Process #1 + Attacking Enterprise Networks #28 cerraron el path) y **COAE el 2026-07-29** (los 12 módulos). Lo único vivo hoy es **CWPE**, arrancado el 2026-08-01 por los módulos 222/186/185.
 >
-> ⚠️ **El acrónimo es COAE, no CORE** — confirmado contra la API de HTB (`certification_acronym` del path 418) y el anuncio oficial.
+> ⚠️ **Acrónimos confirmados contra la API de HTB** (`certification_acronym` del path): **COAE**, no CORE (path 418); **CWPE** (path 421).
 
 ## Idioma, filosofía y voz
 
@@ -78,14 +79,14 @@ Raíz PARA + carpetas temáticas:
 03 - Archivos/          (imágenes y adjuntos, también Escalidraw)
 04 - PENDIENTES/        (inbox, no usado por el flujo de extracción HTB)
 Ingenieria/             (fundamentos y conocimientos relacionados con la ingeniería de software, bases de datos, criptografía, Inteligencia Artificial, etc. · Level 0: Ingenieria.base)
-🔴⚔️ Red Team/         (todo el contenido ofensivo: Hacking web + Pentesting/CPTS + Active Directory + AI Hacking + Evasión de defensas + Desarrollo ofensivo + Wi-Fi · Level 0: Red-Team.base)
-🔵🛡️ Blue Team/        (defensivo: SOC analyst, analisis de malware y redes, IA aplicada a la defensa, etc. · Level 0: Blue-Team.base)
+Red Team/               (todo el contenido ofensivo: Hacking web + Pentesting/CPTS + Active Directory + AI Hacking + Evasión de defensas + Desarrollo ofensivo + Wi-Fi + Doctrina pentesting + Hacking de protocolos · Level 0: Red-Team.base)
+Blue Team/              (defensivo: SOC analyst, analisis de malware y redes, IA aplicada a la defensa, etc. · Level 0: Blue-Team.base)
 Redes/                  (fundamentos de redes, utilidades, protocolos, etc. Interesante para Pentesting y Bug Bounty · Level 0: Redes.base)
 ```
 
-El contenido se integra por **tema/área** (no por módulo HTB). Todo lo web va dentro de `🔴⚔️ Red Team/Hacking web/`; el pentest generalista (CPTS) en `🔴⚔️ Red Team/Pentesting/`. Las carpetas temáticas existentes son la base; se crean carpetas nuevas sólo cuando un tema todavía no existe.
+El contenido se integra por **tema/área** (no por módulo HTB). Todo lo web va dentro de `Red Team/Hacking web/`; el pentest generalista (CPTS) en `Red Team/Pentesting/`. Las carpetas temáticas existentes son la base; se crean carpetas nuevas sólo cuando un tema todavía no existe.
 
-*Nota (migración en curso)*: las **áreas principales de conocimiento ya viven en la raíz** (`🔴⚔️ Red Team/`, `🔵🛡️ Blue Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/`, `03 - Archivos`). **`01 - Proyectos/` ya no existe** (ADR 010): su único contenido, el curso de Go ofensivo, es ahora el área `🔴⚔️ Red Team/Desarrollo ofensivo/`. Queda `04 - PENDIENTES` por vaciar. **Ojo**: la carpeta de ingeniería en disco es `Ingenieria/` (sin tilde), aunque en prosa se escriba "Ingeniería".
+*Nota (migración en curso)*: las **áreas principales de conocimiento ya viven en la raíz** (`Red Team/`, `Blue Team/`, `Redes/`, `Ingenieria/`, `02 - Recursos/`, `03 - Archivos`). **`01 - Proyectos/` ya no existe** (ADR 010): su único contenido, el curso de Go ofensivo, es ahora el área `Red Team/Desarrollo ofensivo/`. Queda `04 - PENDIENTES` por vaciar. **Ojo**: la carpeta de ingeniería en disco es `Ingenieria/` (sin tilde), aunque en prosa se escriba "Ingeniería".
 
 ## Mapeo módulos HTB → carpetas del PKM
 
@@ -93,7 +94,7 @@ El contenido se integra por **tema/área** (no por módulo HTB). Todo lo web va 
 
 Las certis/áreas futuras (no solo web) siguen esta receta — evita re-improvisar de cero cada vez:
 
-1. **Ubicar por *tema/área*, no por módulo.** El conocimiento va a su área de la raíz (`🔴⚔️ Red Team/`, `🔵🛡️ Blue Team/`, `Redes/`, `Ingenieria/`). Las **herramientas** siempre a `02 - Recursos/🛠️ Tools/` con su `.base` Level 2 propio (patrón `Nmap.base` / `SQLMap.base`), **nunca** bajo el área temática.
+1. **Ubicar por *tema/área*, no por módulo.** El conocimiento va a su área de la raíz (`Red Team/`, `Blue Team/`, `Redes/`, `Ingenieria/`). Las **herramientas** siempre a `02 - Recursos/🛠️ Tools/` con su `.base` Level 2 propio (patrón `Nmap.base` / `SQLMap.base`), **nunca** bajo el área temática.
 2. **Reutilizar antes de crear.** Una certi nueva suele solaparse con lo ya hecho (los módulos web de CPTS se reutilizan tal cual). Mapear primero qué módulos ya están cubiertos y cuáles son net-new.
 3. **Fundamentos ≠ ofensiva.** "Cómo funciona" (protocolo, motor BBDD, lenguaje) → `Redes/` o `Ingenieria/`; "cómo enumerar/atacar" → el área ofensiva. Cross-linkear ambos (patrón Footprinting ↔ `Redes/Protocolos/`).
 4. **Aplicar los 3 ejes** (detección · evasión · arsenal + fuentes + gráficos — ver "Estándares de calidad" arriba) a cada módulo net-new.
@@ -137,10 +138,10 @@ Las certis/áreas futuras (no solo web) siguen esta receta — evita re-improvis
 | 6 | Abusing HTTP Misconfigurations | `Hacking web/25 - HTTP/Misconfigurations/` | Completado |
 | 7 | HTTP Attacks | `Hacking web/25 - HTTP/Attacks/` | Completado |
 | 8 | Blind SQL Injection | `Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Blind/` | Completado |
-| 9 | Intro to Whitebox Pentesting | `Hacking web/Whitebox/Intro/` *(crear)* | Pendiente |
+| 9 | Intro to Whitebox Pentesting | `Hacking web/35 - Whitebox Pentesting/` (19 notas 00-18 + `.base`; metodología ASVS 5.0/WSTG/Secure Code Review Cheat Sheet + caso práctico eval injection NodeJS; net-new: `Detección y evasión`, `Arsenal`. **SAST → `Tools/`**: `Semgrep` [+Opengrep, 4 notas] y `CodeQL` [4 notas]. Tags nuevos `Whitebox`, `Code-Injection`. ADR 016) | ✅ Completado (2026-08-01) |
 | 10 | Modern Web Exploitation Techniques | `Hacking web/28 - Modern Exploitation/` (DNS rebinding · second-order · WebSockets · notas 00-17) | Completado |
 | 11 | Introduction to Deserialization Attacks | `Hacking web/Deserialization/Intro/` *(crear)* | Pendiente |
-| 12 | Whitebox Attacks | `Hacking web/Whitebox/Attacks/` *(crear)* | Pendiente |
+| 12 | Whitebox Attacks | `Hacking web/36 - Whitebox Attacks/` *(crear · Level 2 hermano de 35, no anidado — ADR 016)* | Pendiente |
 | 13 | Advanced SQL Injections | `Hacking web/05 - SQL Injection/2️⃣ Nivel avanzado/Advanced/` | Completado |
 | 14 | Advanced Deserialization Attacks | `Hacking web/Deserialization/Advanced/` *(crear)* | Pendiente |
 | 15 | Parameter Logic Bugs | `Hacking web/Parameter Logic Bugs/` *(crear)* | Pendiente |
@@ -152,25 +153,25 @@ Path "Penetration Tester" de HTB Academy — **28 módulos**, ~250 secciones, de
 Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta por el trabajo CWES/CWEE y **se reutiliza tal cual**. CPTS aporta net-new sobre todo **red, infraestructura, Active Directory, escalada de privilegios y reporting**.
 
 **Ubicación del contenido net-new**:
-- Conocimiento de pentest → `🔴⚔️ Red Team/Pentesting/`, en **carpetas numeradas por fase / orden lógico del pentest** (`000 - Fases del Pentesting`, `001 - Footprinting`, `002 - Evaluación de vulnerabilidades`, …). Los números de módulos aún no extraídos son **tentativos** — se confirman al llegar.
+- Conocimiento de pentest → `Red Team/Pentesting/`, en **carpetas numeradas por fase / orden lógico del pentest** (`00 - Fases del Pentesting`, `01 - Footprinting`, `02 - Evaluación de vulnerabilidades`, …). Los números de módulos aún no extraídos son **tentativos** — se confirman al llegar.
 - **Herramientas** (Nmap, Metasploit, John the Ripper, Hashcat, …) → `02 - Recursos/🛠️ Tools/` como cualquier herramienta, **NO** bajo Pentesting. Su MOC es un `.base` Level 2 propio en la carpeta de la herramienta (patrón `SQLMap.base`).
-- Footprinting es **autocontenido** (1 nota ofensiva por servicio en `001 - Footprinting/`) y **cross-linkea** a la nota de **fundamentos del protocolo** (Redes = "cómo funciona"; Footprinting = "cómo enumerar/atacar"). **Cada protocolo de red tiene su nota de fundamentos en `Redes/Protocolos/`** (indexadas por `Protocolos de red.base`; creadas/rellenadas al hacer Footprinting: FTP, SMB, NFS, DNS, SMTP, IMAP-POP3, SNMP, IPMI, SSH, Rsync, R-services, RDP, WinRM, WMI). Los **motores de BBDD** (MySQL, MSSQL, Oracle) van a `Ingenieria/Bases de Datos/` (no a Redes), indexados por `Bases de Datos.base`.
+- Footprinting es **autocontenido** (1 nota ofensiva por servicio en `01 - Footprinting/`) y **cross-linkea** a la nota de **fundamentos del protocolo** (Redes = "cómo funciona"; Footprinting = "cómo enumerar/atacar"). **Cada protocolo de red tiene su nota de fundamentos en `Redes/Protocolos/`** (indexadas por `Protocolos de red.base`; creadas/rellenadas al hacer Footprinting: FTP, SMB, NFS, DNS, SMTP, IMAP-POP3, SNMP, IPMI, SSH, Rsync, R-services, RDP, WinRM, WMI). Los **motores de BBDD** (MySQL, MSSQL, Oracle) van a `Ingenieria/Bases de Datos/` (no a Redes), indexados por `Bases de Datos.base`.
 
 | #  | Módulo HTB | Carpeta destino | Estado |
 | -- | ---------- | --------------- | ------ |
-| 1  | Penetration Testing Process | `Pentesting/000 - Fases del Pentesting/` (14 notas 00-13 + `.base`; renombradas de los 6 placeholders emoji a la convención numérica; net-new: `Marco legal y regulatorio` [España CP 197bis/264 + RGPD art. 28 + NIS2/DORA/CRA UE + CFAA/DMCA], `Niveles de evasividad y TLPT` [eje 2, TIBER-EU/DORA], `Arsenal de gestión del engagement` [eje 3]; modernizado NVD 2026, EUVD, CVSS v4/EPSS/KEV, MITRE ATT&CK v19, DBIR 2026) | ✅ Completado (2026-07-31) |
+| 1  | Penetration Testing Process | `Pentesting/00 - Fases del Pentesting/` (14 notas 00-13 + `.base`; renombradas de los 6 placeholders emoji a la convención numérica; net-new: `Marco legal y regulatorio` [España CP 197bis/264 + RGPD art. 28 + NIS2/DORA/CRA UE + CFAA/DMCA], `Niveles de evasividad y TLPT` [eje 2, TIBER-EU/DORA], `Arsenal de gestión del engagement` [eje 3]; modernizado NVD 2026, EUVD, CVSS v4/EPSS/KEV, MITRE ATT&CK v19, DBIR 2026) | ✅ Completado (2026-07-31) |
 | 2  | Getting Started | *(se salta / cherry-pick — primer generalista, contenido cubierto en otros módulos)* | — |
 | 3  | Network Enumeration with Nmap | `02 - Recursos/🛠️ Tools/Nmap/` (herramienta → Tools; 10 notas 00-09 + `Nmap.base`) | ✅ Completado (2026-07-18) |
-| 4  | Footprinting | `Pentesting/001 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingenieria/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
+| 4  | Footprinting | `Pentesting/01 - Footprinting/` (19 notas 00-18 + `Footprinting.base`; fundamentos de protocolo en `Redes/Protocolos/` [11 notas + `Protocolos de red.base`] y BBDD en `Ingenieria/Bases de Datos/` [MSSQL, Oracle]) | ✅ Completado (2026-07-18) |
 | 5  | Information Gathering – Web Edition | `Hacking web/02 - Reconocimiento Web/` | ✅ Contenido web |
-| 6  | Vulnerability Assessment | `Pentesting/002 - Evaluación de vulnerabilidades/` (7 notas 00-06 + `.base`; **Nessus** [4 notas] y **OpenVAS** [2 notas] → `02 - Recursos/🛠️ Tools/`, como Nmap) | ✅ Completado (2026-07-18) |
-| 7  | File Transfers | `Pentesting/003 - Transferencia de archivos/` (12 notas 00-11 + `.base`; misc/protegidas/catching/LotL + detección/evasión + arsenal) | ✅ Completado (2026-07-19) |
-| 8  | Shells & Payloads | `Pentesting/004 - Shells y Payloads/` (13 notas 00-12 + `.base`; incl. detección/evasión + arsenal) | ✅ Completado (2026-07-18) |
+| 6  | Vulnerability Assessment | `Pentesting/02 - Evaluación de vulnerabilidades/` (7 notas 00-06 + `.base`; **Nessus** [4 notas] y **OpenVAS** [2 notas] → `02 - Recursos/🛠️ Tools/`, como Nmap) | ✅ Completado (2026-07-18) |
+| 7  | File Transfers | `Pentesting/03 - Transferencia de archivos/` (12 notas 00-11 + `.base`; misc/protegidas/catching/LotL + detección/evasión + arsenal) | ✅ Completado (2026-07-19) |
+| 8  | Shells & Payloads | `Pentesting/04 - Shells y Payloads/` (13 notas 00-12 + `.base`; incl. detección/evasión + arsenal) | ✅ Completado (2026-07-18) |
 | 9  | Using the Metasploit Framework | `02 - Recursos/🛠️ Tools/Metasploit/` (**rehecho desde 0**: 14 notas 00-13 + `Metasploit.base`, patrón Nmap) | ✅ Completado (2026-07-18) |
-| 10 | Password Attacks | `Pentesting/005 - Ataques a contraseñas/` (19 notas 00-18 + `.base`; **John the Ripper** y **Hashcat** → `Tools/` con `.base` propio) | ✅ Completado (2026-07-18) |
-| 11 | Attacking Common Services | `Pentesting/006 - Ataque a servicios comunes/` (12 notas 00-11 + `.base`; SMB dividido en 2 [acceso / RCE-lateral]; Latest Vulns fusionadas y modernizadas [EternalBlue, SMBGhost, BlueKeep, ProxyLogon/ProxyShell]; detección/evasión + arsenal net-new; NetExec sobre CrackMapExec; tag `Servicios-Comunes`) | ✅ Completado (2026-07-23) |
-| 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/007 - Pivoting y túneles/` (16 notas 00-15 + `.base`; **Ligolo-ng** net-new, detección/evasión, arsenal; rpivot plegado en arsenal) | ✅ Completado (2026-07-19) |
-| 13 | Active Directory Enumeration & Attacks | `🔴⚔️ Red Team/Active Directory/Enumeración y Ataques/` (**área propia** · 6 sub-temas Level-2 · 27 notas 00-26 · Linux/Windows unificados por técnica; las 5 notas AD de `005` [NTLM-Kerberos/PtH/PtT/Pass the Certificate/NTDS.dit] **cross-linkeadas, no movidas**) | ✅ Completado (2026-07-21) |
+| 10 | Password Attacks | `Pentesting/05 - Ataques a contraseñas/` (19 notas 00-18 + `.base`; **John the Ripper** y **Hashcat** → `Tools/` con `.base` propio) | ✅ Completado (2026-07-18) |
+| 11 | Attacking Common Services | `Pentesting/06 - Ataque a servicios comunes/` (12 notas 00-11 + `.base`; SMB dividido en 2 [acceso / RCE-lateral]; Latest Vulns fusionadas y modernizadas [EternalBlue, SMBGhost, BlueKeep, ProxyLogon/ProxyShell]; detección/evasión + arsenal net-new; NetExec sobre CrackMapExec; tag `Servicios-Comunes`) | ✅ Completado (2026-07-23) |
+| 12 | Pivoting, Tunneling & Port Forwarding | `Pentesting/07 - Pivoting y túneles/` (17 notas 00-16 + `.base`; **Ligolo-ng** net-new, detección/evasión, arsenal; rpivot plegado en arsenal; **`14 - Canales encubiertos y salto de air-gap`** net-new de *Cyberjutsu*, modernizado con la investigación de Guri/BGU — RAMBO/PIXHELL 2024) | ✅ Completado (2026-07-19; air-gap 2026-08-03) |
+| 13 | Active Directory Enumeration & Attacks | `Red Team/Active Directory/Enumeración y Ataques/` (**área propia** · 6 sub-temas Level-2 · 27 notas 00-26 · Linux/Windows unificados por técnica; las 5 notas AD de `05` [NTLM-Kerberos/PtH/PtT/Pass the Certificate/NTDS.dit] **cross-linkeadas, no movidas**) | ✅ Completado (2026-07-21) |
 | 14 | Using Web Proxies | `Hacking web/01 - Proxies web/` | ✅ Contenido web |
 | 15 | Attacking Web Applications with Ffuf | `Hacking web/02 - Reconocimiento Web/` (Fuzzing, metodología) + `02 - Recursos/🛠️ Tools/Ffuf/` (8 notas 00-07 + `Ffuf.base`, referencia de la herramienta) | ✅ Contenido web + tool (2026-07-19) |
 | 16 | Login Brute Forcing | `Hacking web/09 - Brute Forcing/` | ✅ Contenido web |
@@ -182,10 +183,10 @@ Buena parte del path — **los módulos web (5, 14–24)** — ya está cubierta
 | 22 | Command Injections | `Hacking web/06 - Command Injection/` | ✅ Contenido web |
 | 23 | Web Attacks | `Hacking web/11 - Web Attacks/` | ✅ Contenido web |
 | 24 | Attacking Common Applications | `Hacking web/19 - Common Applications/` | ✅ Contenido web |
-| 25 | Linux Privilege Escalation | `Pentesting/008 - Escalada de privilegios Linux/` (25 notas 00-24 + `.base`; detección/evasión + arsenal net-new; CVEs 2021-2025 [PwnKit, Baron Samedit, Dirty Pipe, Looney Tunables, GameOver(lay), sudo 2025, nf_tables] y escapes de contenedores [runc, K8s] modernizados) | ✅ Completado (2026-07-22) |
-| 26 | Windows Privilege Escalation | `Pentesting/009 - Escalada de privilegios Windows/` (26 notas 00-25 + `.base`; familia Potato [GodPotato/PrintSpoofer], UAC, CLFS/PrintNightmare/SeriousSAM modernizados; detección/evasión + arsenal net-new) | ✅ Completado (2026-07-22) |
-| 27 | Documentation & Reporting | `Pentesting/010 - Documentación y reporting/` (9 notas 00-08 + `.base`; Notetaking y Components divididas en 2; arsenal net-new modernizado [SysReptor, Ghostwriter, PlexTrac]; sin nota de detección/evasión [N/A en reporting]; tag `Reporting`) | ✅ Completado (2026-07-23) |
-| 28 | Attacking Enterprise Networks | `Pentesting/011 - Ataque a redes empresariales/` (18 notas 00-17 + `.base`; **capstone en modo playbook + cadena de ataque**: no reexplica técnicas [las enlaza], desarrolla las transiciones/decisiones/callejones sin salida y solo lo net-new; net-new: `Detección y respuesta a lo largo de la cadena` [eje 2], `Arsenal del engagement completo` [eje 3]; modernizado CME→NetExec, BloodHound→CE, firma SMB 24H2, wkhtmltopdf archivado, XSS Hunter self-hosted, Ligolo-ng, GodPotato) | ✅ Completado (2026-07-31) |
+| 25 | Linux Privilege Escalation | `Pentesting/08 - Escalada de privilegios Linux/` (25 notas 00-24 + `.base`; detección/evasión + arsenal net-new; CVEs 2021-2025 [PwnKit, Baron Samedit, Dirty Pipe, Looney Tunables, GameOver(lay), sudo 2025, nf_tables] y escapes de contenedores [runc, K8s] modernizados) | ✅ Completado (2026-07-22) |
+| 26 | Windows Privilege Escalation | `Pentesting/09 - Escalada de privilegios Windows/` (26 notas 00-25 + `.base`; familia Potato [GodPotato/PrintSpoofer], UAC, CLFS/PrintNightmare/SeriousSAM modernizados; detección/evasión + arsenal net-new) | ✅ Completado (2026-07-22) |
+| 27 | Documentation & Reporting | `Pentesting/10 - Documentación y reporting/` (9 notas 00-08 + `.base`; Notetaking y Components divididas en 2; arsenal net-new modernizado [SysReptor, Ghostwriter, PlexTrac]; sin nota de detección/evasión [N/A en reporting]; tag `Reporting`) | ✅ Completado (2026-07-23) |
+| 28 | Attacking Enterprise Networks | `Pentesting/11 - Ataque a redes empresariales/` (18 notas 00-17 + `.base`; **capstone en modo playbook + cadena de ataque**: no reexplica técnicas [las enlaza], desarrolla las transiciones/decisiones/callejones sin salida y solo lo net-new; net-new: `Detección y respuesta a lo largo de la cadena` [eje 2], `Arsenal del engagement completo` [eje 3]; modernizado CME→NetExec, BloodHound→CE, firma SMB 24H2, wkhtmltopdf archivado, XSS Hunter self-hosted, Ligolo-ng, GodPotato) | ✅ Completado (2026-07-31) |
 
 ### Path COAE (AI Red Teamer)
 
@@ -194,15 +195,15 @@ Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **
 **Ubicación del contenido — el path se reparte en tres áreas** (decisión estructural del 2026-07-28, ver ADR 008):
 
 - **Fundamentos de IA/ML** ("cómo funciona") → `Ingenieria/Inteligencia Artificial/`, siguiendo la regla *fundamentos ≠ ofensiva* y el precedente Footprinting↔`Redes/Protocolos` y SQLi↔`Ingenieria/Bases de Datos`.
-- **Aplicaciones defensivas** (detectores ML: spam, anomalías de red, malware) → `🔵🛡️ Blue Team/005 - IA aplicada a la defensa/`. **Ojo con la distinción**: `005` es *IA para defender* (detectores ML); `007 - Defensa de sistemas de IA` es *defender la IA* (guardrails, entrenamiento adversarial, safety tuning). Son temas distintos y Level-2 separados.
-- **Contenido ofensivo** → `🔴⚔️ Red Team/AI Hacking/`, en carpetas numeradas por módulo del path (`00 - Fundamentos de Red Teaming AI`, `01 - Prompt Injection`, …). Los números de módulos no extraídos son **tentativos**.
+- **Aplicaciones defensivas** (detectores ML: spam, anomalías de red, malware) → `Blue Team/05 - IA aplicada a la defensa/`. **Ojo con la distinción**: `05` es *IA para defender* (detectores ML); `07 - Defensa de sistemas de IA` es *defender la IA* (guardrails, entrenamiento adversarial, safety tuning). Son temas distintos y Level-2 separados.
+- **Contenido ofensivo** → `Red Team/AI Hacking/`, en carpetas numeradas por módulo del path (`00 - Fundamentos de Red Teaming AI`, `01 - Prompt Injection`, …). Los números de módulos no extraídos son **tentativos**.
 - **Herramientas** → `02 - Recursos/🛠️ Tools/` con su `.base` Level 2, como cualquier herramienta. Creadas (2026-07-28): **`Garak`** (4 notas), **`PyRIT`** (4), **`Fickling`** (2), **`ModelScan`** (2), **`Picklescan`** (1). Pendiente: `promptfoo` — **en espera deliberada** hasta que se cierre la adquisición por OpenAI (anunciada marzo 2026). `ART`, `TextAttack` y el resto siguen en la nota de arsenal del módulo 3.
 
 | #  | ID  | Módulo HTB | Carpeta destino | Estado |
 | -- | --- | ---------- | --------------- | ------ |
 | 1  | 290 | Fundamentals of AI | `Ingenieria/Inteligencia Artificial/{00 - Fundamentos de Machine Learning,01 - Deep Learning e IA generativa}/` (23 notas; **`Transformers y el mecanismo de atención` net-new** — HTB no lo cubre y es la base de todo el path) | ✅ Completado (2026-07-28) |
-| 2  | 292 | Applications of AI in InfoSec | **Partido**: pipeline → `Ingenieria/Inteligencia Artificial/02 - Entorno y pipeline de ML/` (6 notas); detectores → `🔵🛡️ Blue Team/005 - IA aplicada a la defensa/` (9 notas, incl. `Límites y evasión de los detectores ML` net-new) | ✅ Completado (2026-07-28) |
-| 3  | 294 | Introduction to Red Teaming AI | `🔴⚔️ Red Team/AI Hacking/00 - Fundamentos de Red Teaming AI/` (14 notas 00-13 + `Red Teaming AI.base`; net-new: `MITRE ATLAS y NIST AI RMF`, `Superficie de ataque por familia de modelos`, `Detección y evasión`, `Arsenal`) | ✅ Completado (2026-07-28) |
+| 2  | 292 | Applications of AI in InfoSec | **Partido**: pipeline → `Ingenieria/Inteligencia Artificial/02 - Entorno y pipeline de ML/` (6 notas); detectores → `Blue Team/05 - IA aplicada a la defensa/` (9 notas, incl. `Límites y evasión de los detectores ML` net-new) | ✅ Completado (2026-07-28) |
+| 3  | 294 | Introduction to Red Teaming AI | `Red Team/AI Hacking/00 - Fundamentos de Red Teaming AI/` (14 notas 00-13 + `Red Teaming AI.base`; net-new: `MITRE ATLAS y NIST AI RMF`, `Superficie de ataque por familia de modelos`, `Detección y evasión`, `Arsenal`) | ✅ Completado (2026-07-28) |
 | 4  | 297 | Prompt Injection Attacks | `AI Hacking/01 - Prompt Injection/` (16 notas 00-15 + `Prompt Injection.base`; **`garak` extraído a `02 - Recursos/🛠️ Tools/Garak/`** [4 notas + `Garak.base`]; net-new: `EchoLeak y la exfiltración zero-click`, `ASCII smuggling y payloads invisibles`, `Jailbreaks multi-turno y de contexto`, `Detección y evasión`) | ✅ Completado (2026-07-28) |
 | 5  | 307 | LLM Output Attacks | `AI Hacking/02 - LLM Output Attacks/` (17 notas 00-16 + `.base`; net-new: `Slopsquatting y alucinación de paquetes`, `Detección y evasión`, `Arsenal`; regulación actualizada al **Digital Omnibus on AI** de julio 2026) | ✅ Completado (2026-07-28) |
 | 6  | 302 | AI Data Attacks | `AI Hacking/03 - Ataques a los datos/` (16 notas 00-15 + `.base`; label flipping · clean label · trojan/backdoor CNN · pickle y esteganografía en tensores; net-new: `Detección y evasión`, `Arsenal`; **errata OWASP de HTB corregida**) | ✅ Completado (2026-07-28) |
@@ -211,7 +212,7 @@ Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **
 | 9  | 319 | AI Evasion - First-Order Attacks | `AI Hacking/07 - Ataques de primer orden/` (5 notas 00-04 + `.base`; normas Lp · FGSM/Hölder · I-FGSM/PGD · DeepFool/ρ_adv; detección y arsenal reutilizan los de #8) | ✅ Completado (2026-07-29) |
 | 10 | 320 | AI Evasion - Sparsity Attacks | `AI Hacking/08 - Ataques dispersos/` (10 notas 00-09 + `.base`; EAD/ElasticNet con operadores proximales y FISTA · JSMA de un píxel y por pares; **detección/defensa y arsenal reutilizan los de #8**, extendidos con el hueco $L_0$: ablación aleatoria, filtrado de mediana, sAT/sTRADES, σ-zero, Sparse-RS, SparseFool) | ✅ Completado (2026-07-29) |
 | 11 | 335 | AI Privacy | `AI Hacking/09 - Privacidad en IA/` (12 notas 00-11 + `.base`; MIA con shadow models · DP-SGD/Opacus · PATE; net-new: `Detección y evasión`, `Arsenal para auditoría`. **Errata metodológica de HTB corregida**: la "ventaja" del ataque está mal calculada por el desbalance 2:1 — la real es ~5 puntos, no 19. Modernizado con LiRA, RMIA y TPR@low-FPR) | ✅ Completado (2026-07-29) |
-| 12 | 322 | AI Defense | `🔵🛡️ Blue Team/007 - Defensa de sistemas de IA/` (11 notas 00-10 + `Defensa de IA.base`; guardrails [tradicionales · IA · librerías · servicios] · entrenamiento adversarial min-max · adversarial tuning con LoRA; net-new: `Límites de las defensas y cómo se rompen` como puente ofensivo) | ✅ Completado (2026-07-29) |
+| 12 | 322 | AI Defense | `Blue Team/07 - Defensa de sistemas de IA/` (11 notas 00-10 + `Defensa de IA.base`; guardrails [tradicionales · IA · librerías · servicios] · entrenamiento adversarial min-max · adversarial tuning con LoRA; net-new: `Límites de las defensas y cómo se rompen` como puente ofensivo) | ✅ Completado (2026-07-29) |
 
 #### COAE — notas operativas
 
@@ -231,6 +232,62 @@ Path "AI Red Teamer" de HTB Academy (id 418, desarrollado con **Google**) — **
 - **Imágenes**: las del módulo **320** viven en `/storage/modules/320/…` y son públicas (verificado 200 sin cookies). Las de **335** (`/content/sections/335_*.png`) y las de entrenamiento adversarial de **322** dan **404 en todas las rutas probadas** — no se incrustaron; solo `/storage/modules/322/diagram.png` responde.
 - **Decisión estructural (ADR 011)**: 315 se partió en 2 Level-2 hermanos (`04 - Aplicación y sistema` + `05 - MCP y seguridad de agentes`) por la superficie propia y creciente de MCP. 318+319 son el tema **Evasión** unificado en 2 carpetas hermanas (`06`/`07`) que **comparten** las notas de detección/defensa y arsenal (viven en `06`, `07` las referencia) — no se duplican los ejes 2/3 cuando dos módulos forman un solo tema.
 
+### Path CWPE (Wi-Fi Penetration Tester)
+
+Path "Wi-Fi Penetration Tester" de HTB Academy (id **421**) — **10 módulos**, 170 secciones. Certificación **HTB CWPE** (*Certified Wi-Fi Pentesting Expert*). Seguridad ofensiva de **802.11** de punta a punta: capa física y de enlace, WPS, WEP, WPA/WPA2, evil twins, WPA3/SAE, portales cautivos, cracking y Wi-Fi corporativo con 802.1X/EAP.
+
+**Ubicación del contenido — se reparte en tres áreas** (ADR 014):
+
+- **Fundamentos del estándar** ("cómo funciona": generaciones, bandas y canales, arquitectura BSS/ESS, anatomía de la trama MAC) → `Redes/Protocolos/Wi-Fi (802.11)/`, indexado por `Protocolos de red.base`. Misma regla *fundamentos ≠ ofensiva* que Footprinting↔`Redes/Protocolos` y SQLi↔`Ingenieria/Bases de Datos`.
+- **Contenido ofensivo** → `Red Team/Hacking Wi-Fi/`, en carpetas numeradas por módulo del path (`00 - Fundamentos del pentesting Wi-Fi`, `01 - Ataques a WPS`, …). Los números de módulos no extraídos son **tentativos**.
+- **Herramientas** → `02 - Recursos/🛠️ Tools/` con su `.base` Level 2. Creadas (2026-08-01): **`Aircrack-ng`** (la suite entera), **`Reaver`** (familia de ataque WPS por PIN: reaver+wash, bully, pixiewps, OneShot — agrupadas porque wash se distribuye con reaver, bully es una reimplementación suya y pixiewps lo invocan ambos), **`MDK4`**.
+
+`Hacking Wi-Fi/Wi-Fi Pentesting.base` **es Level 1** (índice de sub-temas), no Level 2: con 10 módulos el área agrupa varios sub-temas. Cada módulo tiene su Level 2 propio.
+
+**Tags** — familia jerárquica `Wi-Fi/…` siguiendo el patrón `IA/…` (ADR 014): `Wi-Fi` (paraguas), `Wi-Fi/802.11`, `Wi-Fi/WEP`, `Wi-Fi/WPS`, y a futuro `Wi-Fi/WPA`, `Wi-Fi/WPA3`, `Wi-Fi/Evil-Twin`, `Wi-Fi/Enterprise`. El tag legacy `Pentesting/Wi-Fi` **queda retirado** — `Pentesting/…` está reservado en el vault para el eje de **fase**, no de área.
+
+| #  | ID  | Módulo HTB | Carpeta destino | Estado |
+| -- | --- | ---------- | --------------- | ------ |
+| 1  | 222 | Wi-Fi Penetration Testing Basics | `Hacking Wi-Fi/00 - Fundamentos del pentesting Wi-Fi/` (11 notas 00-10 + `Fundamentos Wi-Fi.base`) + `Tools/Aircrack-ng/` (7 notas + `.base`) + `Redes/Protocolos/Wi-Fi (802.11)/` (3 notas net-new: estándar/generaciones, bandas y regulación, arquitectura y trama MAC) | ✅ Completado (2026-08-01) |
+| 2  | 186 | Attacking Wi-Fi Protected Setup (WPS) | `Hacking Wi-Fi/01 - Ataques a WPS/` (13 notas 00-12 + `WPS.base`) + `Tools/Reaver/` (4 notas: reaver+wash, bully, pixiewps, OneShot) + `Tools/MDK4/` (1 nota) | ✅ Completado (2026-08-01) |
+| 3  | 185 | Wired Equivalent Privacy (WEP) Attacks | `Hacking Wi-Fi/02 - Ataques a WEP/` (13 notas 00-12 + `WEP.base`) | ✅ Completado (2026-08-01) |
+| 4  | 282 | Attacking WPA/WPA2 Wi-Fi Networks | `Hacking Wi-Fi/03 - Ataques a WPA-WPA2/` *(crear)* | Pendiente |
+| 5  | 291 | Wi-Fi Evil Twin Attacks | `Hacking Wi-Fi/04 - Evil Twin/` *(crear)* | Pendiente |
+| 6  | 304 | Attacking WPA3 Wi-Fi Networks | `Hacking Wi-Fi/05 - Ataques a WPA3/` *(crear)* | Pendiente |
+| 7  | 299 | Bypassing Wi-Fi Captive Portals | `Hacking Wi-Fi/06 - Portales cautivos/` *(crear)* | Pendiente |
+| 8  | 312 | Wi-Fi Password Cracking Techniques | `Hacking Wi-Fi/07 - Cracking de contraseñas Wi-Fi/` *(crear)* | Pendiente |
+| 9  | 298 | Wi-Fi Penetration Testing Tools and Techniques | `Hacking Wi-Fi/08 - Herramientas y técnicas/` *(crear)* | Pendiente |
+| 10 | 305 | Attacking Corporate Wi-Fi Networks | `Hacking Wi-Fi/09 - Wi-Fi corporativo/` *(crear)* | Pendiente |
+
+#### CWPE — notas operativas
+
+- **Legacy borrado (2026-08-01)**: `Hacking Wi-Fi/001 - Introducción/Fundamentos.md` era una traducción automática cruda de las secciones 1-3 del módulo 222 ("marcos de balizas", "Cuadros IEEE", "el marco MAC") sin cumplir ningún estándar del vault. Se rehízo desde cero. Igual con `Referencias.md` (dos URLs sueltas sin frontmatter), integradas como fuentes citadas.
+- **Regulación del espectro**: el canal y la potencia legales dependen del **dominio regulatorio** (`iw reg get` / `crda`). En la UE rige la **ETSI EN 300 328** (2,4 GHz) y **EN 301 893** (5 GHz, DFS+TPC obligatorios); en 6 GHz, la Decisión (UE) 2021/1067 abre 5945-6425 MHz sólo para LPI/VLP en interiores. Un `iw reg set BO` para desbloquear canales/potencia es **ilegal** fuera del laboratorio y además delata al operador.
+- **Marco legal español**: interceptar tráfico Wi-Fi ajeno encaja en el **art. 197 bis CP** (acceso a sistemas) y en el **art. 197.1 CP** (interceptación de telecomunicaciones); descifrar una PSK ajena agrava. En un engagement hace falta autorización escrita del titular **y** que el alcance geográfico esté acotado (las ondas no respetan el perímetro del cliente — riesgo de captar redes de terceros).
+- **HTB usa herramientas obsoletas en todo el path.** Los módulos se apoyan casi por completo en `iwconfig`/`iwlist`/`ifconfig` (`wireless-tools` está deprecado y habla WEXT, que **no entiende 802.11ac/ax ni 6 GHz**) y en `dhclient` (ISC DHCP descontinuado en diciembre de 2022). Las notas usan `iw`, `ip`, `dhcpcd`/`nmcli` y traen una tabla de equivalencias en `04 - Interfaces, chipsets y drivers`.
+- **`mdk3` → `mdk4`**: el módulo 222 enseña `mdk3` (muerto, fuera de los repos) para la fuerza bruta de SSID ocultos; el 186 ya usa `mdk4`. Todo el vault usa `mdk4`.
+
+##### Erratas de HTB detectadas y corregidas en 222/186/185
+
+- **222 · deauth bidireccional**: afirma que las tramas de desasociación/desautenticación "se envían **del AP al cliente**". Es falso —son bidireccionales— y su propia captura de ejemplo muestra una que va del cliente al AP.
+- **222 · `PMF` no se menciona nunca**: presenta la deauth como vía estándar de captura de handshake sin decir que `802.11w` la invalida, y que **`PMF` es obligatorio para certificar desde Wi-Fi 6 (2020)** y Wi-Fi 7 exige además *beacon protection*. Es el desfase más grave del módulo.
+- **222 · "monitor mode, también conocido como modo promiscuo"**: son cosas distintas (asociado + tramas Ethernet vs. RFMON + tramas 802.11 crudas con radiotap).
+- **222 · autenticación**: presenta `Shared Key` como el sistema de WPA/WPA2. `Shared Key` es de **WEP**; WPA/WPA2/WPA3 usan `Open System` en la fase 802.11 y su seguridad está en el RSN posterior.
+- **222 · columna `PWR` de airodump-ng**: dice "cuanto más alto, mejor". Es RSSI en **dBm negativos**, y **`-1` significa que el driver no reporta potencia**, no señal pésima.
+- **222 · ad-hoc/IBSS**: afirma que los sistemas mesh domésticos lo usan para el backhaul. Falso: usan 802.11s, EasyMesh o enlaces propietarios.
+- **222 · tipos de trama**: da el tipo `11` por reservado. Desde 802.11ad-2012 es **Extension** (DMG Beacon, S1G Beacon).
+- **222 · config WPA-Enterprise**: el `wpa_supplicant.conf` que enseña **no fija `eap`, `ca_cert` ni `domain_suffix_match`** — es exactamente la configuración vulnerable a evil twin, y no lo señala.
+- **222 · WPA3**: indica que basta `key_mgmt=SAE`. Falta `ieee80211w=2` (obligatorio) y `sae_password` en vez de `psk`.
+- **222/186 · `aircrack-ng -K`**: usa KoreK sin explicar que **PTW es el método por defecto y necesita 10× menos IVs** (20-40k frente a 250k-1,5M). El 185 sí lo explica bien.
+- **186 · `wps_locked: 2`**: dice que significa "no bloqueado". Verificado en `src/libwps/libwps.h` de reaver: el enum es `UNLOCKED=0, WPSLOCKED=1, UNSPECIFIED=2` — el `2` es **"sin especificar"**, no una confirmación.
+- **186 · OneShot en modo monitor**: lo pone en monitor con `airmon-ng`, pero OneShot opera sobre `wpa_supplicant`, que **no funciona en modo monitor**.
+- **185 · script de fuerza bruta**: `if int(output.split('\n')[5][-1]) > 0` toma **el último carácter** de la línea; con 10 paquetes descifrados la línea acaba en `0` y **descarta la clave correcta**. Corregido con regex por etiqueta en `10 - Cracking - PTW, FMS y KoreK`.
+- **Imagen rota en el propio HTB**: `/storage/modules/185/Diagrams/wep__3.png` devuelve **404**. No incrustada.
+
+##### Estado del ecosistema de herramientas (verificado 2026-08-01 contra la API de GitHub)
+
+`hcxdumptool` (rel. 7.1.2, feb-2026) y `airgeddon` (jul-2026) son lo más activo · `pixiewps` activo en `master` (rel. 1.4.2 de 2018) · `reaver` t6x activo en `master`, **release v1.6.6 de marzo de 2020** · `aircrack-ng` **1.7 de mayo de 2022**, sin release desde entonces · `bully` **estancado desde octubre de 2023** · `Default-wps-pin` **abandonado desde 2014, Python 2** · **`drygdryg/OneShot` y `drygdryg/wpspin` han desaparecido de GitHub** — el fork vivo es `fulvius31/OneShot`. Aviso en las notas: un nombre de repositorio huérfano es blanco de suplantación.
+
 #### CPTS — estándares de calidad extra
 
 Todos los módulos CPTS net-new siguen los **3 ejes del vault** (detección · evasión · arsenal + fuentes + gráficos) — son especialmente críticos aquí porque los módulos de red/infra de HTB llevan años sin actualizarse. Ver la sección **"Estándares de calidad — los 3 ejes"** al principio del documento.
@@ -245,8 +302,36 @@ Extraídos por complementar módulos ya hechos con técnicas/herramientas/escena
 | 160 · Web Service & API Attacks | `Hacking web/18 - Web Services/` (SOAP/WSDL/SOAPAction/Command Injection/xmlrpc · 7 notas) + `Hacking web/29 - ReDoS/` (net-new · 2 notas). Su grupo "API Attacks" (vulns clásicas vía endpoint API) se **distribuyó como enriquecimientos** a las carpetas canónicas (SQLi, File Upload, File Inclusion, XSS, SSRF, Web Attacks/XXE) | Completado ✅ (2026-07-17) |
 | Prototype Pollution (server-side) | `Hacking web/27 - Prototype Pollution/` (4 notas 00-03: intro, server-side, gadgets/RCE server-side, detección/prevención). Complementa el client-side de `04 - XSS/Avanzado/09 - Prototype Pollution hacia XSS` | Completado ✅ |
 | *Real-World Bug Hunting* (libro · Yaworski 2019) | **Net-new**: `31 - Open Redirect`, `32 - HTTP Parameter Pollution`, `33 - Subdomain Takeover`, `34 - Race Conditions` (+ `04 - XSS/Avanzado/11 - HTML Injection, Content Spoofing y Dangling Markup`). **Proceso**: metodología de caza + mindset/chaining en `30 - Bug Bounty/`. **Casos** del libro embebidos en las notas de técnica (SSTI, SQLi, SSRF, XXE, RCE, IDOR, CSRF, OAuth). Modernizado 2025-2026 · ADR 007 | Completado ✅ (2026-07-27) |
+| *Cyberjutsu* (libro · McCarty 2021) | **Doctrina bicéfala** (mindset, no técnicas · transversal Red+Blue Team): óptica ofensiva → `Red Team/Doctrina pentesting/` (5 notas 00-04: mindset APT, Pyramid of Pain/ATT&CK/Diamond, atribución/false flags, deconflicting, timing) + óptica defensiva → `Blue Team/04 - Doctrina defensiva/` (5 notas 00-04: threat modeling/guarding, sensores, zero-trust, deception, cultura SOC). Enriquece Footprinting (mapa del atacante) y Evasividad (light/noise/litter), y aporta **`Pentesting/07/14 - Canales encubiertos y salto de air-gap`** net-new (cap. Bridges & Ladders · modernizado con Guri/BGU: RAMBO/PIXHELL 2024). Modernizado 2026: NIST CSF 2.0, ATT&CK v19, CISA ZTMM 2.0, Volt Typhoon, Olympic Destroyer. Descartados *Hiring Shinobi* y *Locks* · ADR 018 | Completado ✅ (2026-08-03) |
+
+| *Attacking Network Protocols* (libro · Forshaw 2018) | **Área Level-1 net-new**: `Red Team/Hacking de protocolos/` (49 notas · 6 Level-2 + `.base` Level 1). Cubre el hueco de **protocolos binarios propietarios**, que el vault no tocaba: `00 - Metodología de análisis` (10), `01 - Estructuras de protocolo` (7), `02 - MITM a nivel de red` (7), `03 - Reversing de la implementación` (5), `04 - Causas raíz de vulnerabilidades` (10), `05 - Fuzzing y explotación` (10). **Cap. 7 NO duplicado** — cripto/TLS ya estaba en `26 - HTTPs-TLS`; se enriqueció (post-cuántica 2026). Tools net-new: `mitmproxy`, `Frida`, `Ghidra`, `AFL++`, `bettercap`; `Scapy` rellenado (era stub de 0 bytes) · ADR 019 | Completado ✅ (2026-08-03) |
 
 Antes de crear una carpeta nueva, **siempre verificar** con `ls` o `Glob` que no existe ya bajo otro nombre — el vault tiene cierta inconsistencia histórica (carpetas con emoji vs sin emoji).
+
+#### *Attacking Network Protocols* — notas operativas
+
+- **Tags nuevos** (3, verificados como inexistentes antes de crearlos): `MITM`, `Reversing`, `Corrupcion-Memoria`.
+- **Lo que el libro tiene muerto** (verificado 2026-08-03 contra la API de GitHub y páginas oficiales): **`Canape`/`Canape Core`** —la herramienta del propio autor, sobre la que están construidos *todos* los ejemplos prácticos— **sin mantenimiento desde 2017** → `mitmproxy` 12.2.3 con modos `raw_tcp`/`raw_udp`. **`IDA Pro Free 5`** (x86-32, sin decompilador, sin uso comercial) → **Ghidra 12.1.2** (libre, decompilador para todas las arquitecturas, **uso comercial permitido**). **`PEiD`** (muerto en 2011) → `Detect It Easy` + `capa`. **`Sulley`** → `boofuzz`. **`JD-GUI`** → `CFR`/`Vineflower`/`jadx`. **`Mallory`** y **Microsoft Message Analyzer** → retirados.
+- ⚠️ **`Ettercap` NO está muerto**, en contra de lo que se repite: **v0.8.4.1 «Garofalo» de abril de 2026**. El flujo del cap. 4 sigue siendo válido; `bettercap` (v2.41.7, mayo 2026) gana en ergonomía y cubre IPv6, que Ettercap no.
+- **Huecos del libro cubiertos como net-new**: **IPv6 completo** (no se menciona en las 340 páginas, y `mitm6` es hoy el vector MITM más rentable en redes Windows), **Frida**, **Kaitai Struct**, **use-after-free/confusión de tipos**, **fuzzing guiado por cobertura y con estado** (AFL++/AFLNet/`libdesock`), **sanitizers** y **mitigaciones post-2010** (CFI/CFG/XFG, Intel CET shadow stack+IBT, ARM PAC/BTI/MTE, RELRO).
+- **El cap. 10 del libro se queda en DEP/ASLR/canarios** (estado de ~2010). Verificado a 2026: CET **existe pero no está activo por defecto** (glibc decidió no activarlo para no romper compatibilidad; hay que pedirlo con `GLIBC_TUNABLES=glibc.cpu.hwcaps=SHSTK`). No asumirlo en un objetivo — comprobar con `readelf -n`.
+- **Caso real que valida el cap. 3**: **CVE-2026-55200** (`libssh2` ≤ 1.11.1, CVSS 4.0 **9,2**, junio 2026) es una escritura fuera de límites en `ssh2_transport_read()` por **no acotar superiormente `packet_length`** — exactamente el patrón «campo de longitud sin cota» del libro, ocho años después, en una librería madura y dentro de `curl`, `git` y PHP.
+- **Deuda detectada**: `02 - Recursos/🛠️ Tools/Scapy/🔨📦 Scapy.md` estaba a **0 bytes** y `Firewalk/👣🏰 Firewalk.md` a 131. Scapy se rellenó y recibió `.base` (ADR 009 lo había descartado *por ser stub*, condición que deja de aplicar); **Firewalk sigue siendo un stub pendiente**. Ambos conservan nombre con emoji — inconsistencia histórica no resuelta, se mantuvo para no romper backlinks.
+- **`iptables` sigue funcionando pero es `iptables-nft`**: en Debian 10+, RHEL 8+ y Ubuntu 20.10+ es una capa de traducción sobre `nftables`, que Netfilter tiene en mantenimiento legado. Las notas usan sintaxis `nft` nativa con tabla de equivalencias.
+
+##### Pasada de revisión (2026-08-03) — errores propios detectados y qué enseñan
+
+Se revisaron las 58 notas buscando fallos, incoherencias y explicaciones cojas. **Lo encontrado no vino del libro, vino de la redacción**, y el patrón es reutilizable para futuras ingestas:
+
+1. **Salidas de comando inventadas.** El ejemplo de Scapy mostraba `chksum = 0x47b`; el valor real es **`0x61a`** (calculado: `tag + sum(cuerpo)` = 3 + 1559 = 1562). ⚠️ **Toda salida de consola que se escriba en una nota hay que calcularla o ejecutarla, nunca estimarla** — se lee como verificada y no lo está.
+2. **API mal usada por no leer la referencia.** El disector Lua hacía `if tvb:len() - offset < N then return 0 end` en `get_len`. Es **redundante y peligroso**: `dissect_tcp_pdus` ya garantiza el mínimo vía `min_header_size`, y devolver 0 puede dejar a Wireshark en bucle. El idioma correcto (comprobación de cordura devolviendo `tvb:len()`) sale del disector de ejemplo del propio repositorio de Wireshark.
+3. **Escapado roto al escribir por heredoc.** Quedó `b"\\x00"` (4 octetos literales) donde debía ir `b"\x00"` (un NUL) en el addon de mitmproxy. Verificar con `grep '\\\\x'` tras escribir cualquier código con secuencias de escape.
+4. **Prosa y código incoherentes.** El addon comprobaba `msg.content[0] == 0x00` como si fuera el tag, cuando en modo `raw_tcp` ese octeto es el byte alto de la longitud (casi siempre `0x00`, así que la condición era falsamente cierta). El volcado de la prosa mostraba el cuerpo ya desenvuelto; el código recibía el flujo crudo.
+5. **Cifras plausibles pero falsas.** bzip2 se dio como «~500.000:1»; el valor correcto es **~1.400.000:1**. Y `calloc` se afirmó «obligado por el estándar» a detectar el desbordamiento — lo hacen glibc/musl/CRT en la práctica, pero ISO C no lo exige literalmente.
+6. **Atribuciones vagas.** «el trabajo de 2024 sobre best-fit mapping» → es **WorstFit**, de Orange Tsai y splitline (DEVCORE), Black Hat EU 2024, con **CVE-2024-4577** (RCE no autenticada en PHP-CGI) como caso insignia. Una cita precisa vale mucho más que una alusión.
+7. **Densidad de marcas por debajo del estándar.** 10 notas salieron con **cero** marcas frente a las 4-6 habituales del vault. Corregidas marcando frases existentes; la media sigue en ~1,7, por debajo de la guía, justificado por el peso de tablas y código pero **es una desviación real, no un óptimo**.
+
+Además se profundizó donde la explicación se quedaba corta: **descodificación de varint paso a paso**, **lectura manual de un mensaje Protobuf** (tabla de `wire_type` + volcado comentado), **por qué una cadena ROP se encadena sola** (`ret` = `pop RIP`, con la pila dibujada), y **arnés de fuzzing que reconstruye el marco** para no acabar fuzzeando el validador de checksum.
 
 ## Convenciones de nota
 
@@ -345,7 +430,7 @@ Las MOC del vault usan el formato nativo de Obsidian Bases (`.base`) y se organi
 
 | Nivel | Ubicación | Indexa | Ejemplo |
 | - | - | - | - |
-| **Level 0** — panel de área raíz | raíz de un área de la raíz del vault | los Level 1 de esa área + vistas transversales | `🔴⚔️ Red Team/Red-Team.base` |
+| **Level 0** — panel de área raíz | raíz de un área de la raíz del vault | los Level 1 de esa área + vistas transversales | `Red Team/Red-Team.base` |
 | **Level 1** — índice de tema grande | raíz de una carpeta temática mayor | los Level 2 hijos | `Hacking web/Web Pentesting.base` |
 | **Level 2** — índice de sub-tema | sub-carpeta del sub-tema | las notas atómicas, vía `Area` | `04 - XSS/XSS.base` |
 
@@ -390,7 +475,7 @@ views:
     filters:
       and:
         - file.ext == "base"
-        - file.folder.startsWith("🔴⚔️ Red Team/Hacking web")
+        - file.folder.startsWith("Red Team/Hacking web")
         - file.name != "Web Pentesting.base"   # ⚠️ CON extensión, ver gotcha
     sort:
       - property: file.folder
@@ -408,7 +493,7 @@ Cuando un tema supera ~15 sub-temas, añadir una vista con `groupBy` sobre una *
 - En fórmulas, la propiedad de la nota es `note["Fecha de actualización"]` (**no** `this[...]`). Antigüedad: `(now() - note["Fecha de actualización"]).days.round(0)`; guardar con `if(file.hasProperty(...), ..., "")`.
 - En `columnSize`, una propiedad de nota se referencia como `note.Fecha de actualización`; en `order`, como `Fecha de actualización` a secas.
 - `contains()` / `containsAny()` son **case-insensitive**.
-- Para listar `.base` a una profundidad exacta (Level 0 → Level 1 sin lista hardcoded): `'/^🔴⚔️ Red Team\/[^\/]+$/.matches(file.folder)'`.
+- Para listar `.base` a una profundidad exacta (Level 0 → Level 1 sin lista hardcoded): `'/^Red Team\/[^\/]+$/.matches(file.folder)'`.
 
 ### Reglas operativas
 
@@ -416,7 +501,7 @@ Cuando un tema supera ~15 sub-temas, añadir una vista con `groupBy` sobre una *
 - **No crear `.base` Level 2 prematuros** (vacíos, sin notas inminentes). Crearlos justo antes de necesitarlos. *(Deuda actual: 6 Level 2 huérfanos en `Evasión de defensas/03..08`.)*
 - Un sub-tema que crece se parte en **Level 2 hermanos**, no en un Level 1 intermedio — patrón `XSS.base` + `XSS Avanzado.base`, `SQL Injection.base` + `SQLi Blind.base` + `SQLi Avanzado.base`.
 - Si las sub-divisiones son muchas y pequeñas (1-2 notas), **no crear un Level 2 por cada una**: una sola vista con `groupBy: file.folder` (patrón `Common Applications.base`, 36 notas en 13 aplicaciones).
-- Al añadir un área nueva bajo `🔴⚔️ Red Team/` (o Blue Team, Redes, Ingeniería) **no hay que tocar el Level 0**: el filtro por regex de profundidad la recoge sola.
+- Al añadir un área nueva bajo `Red Team/` (o Blue Team, Redes, Ingeniería) **no hay que tocar el Level 0**: el filtro por regex de profundidad la recoge sola.
 - Las **herramientas** siempre a `02 - Recursos/🛠️ Tools/` con su Level 2 propio, indexadas por `Tools.base`.
 
 ## Home — el dashboard de entrada (ADR 013)
@@ -520,6 +605,18 @@ Aplican a cualquier nota que mezcle HTML, Dataview y CSS propio — no solo a la
 - **`dev:dom` del CLI devuelve vacío**; para inspeccionar el DOM usar `obsidian eval code="document.querySelectorAll(...)"`. Y al consultar, **filtrar por `getBoundingClientRect().width > 0`**: quedan restos de hojas cerradas en el DOM que falsean los conteos.
 - **En el arranque, el índice de Dataview aún no está montado.** Un bloque `dataviewjs` que se ejecute entonces —y la Home lo hace, porque el plugin Homepage la abre al arrancar— puede leer datos vacíos y pintar ceros hasta el refresco siguiente. Se manifestó como anillos a `0/0` durante un instante en cada arranque. **Para localizar un fichero desde `dataviewjs`, usar `app.metadataCache.getFirstLinkpathDest(nombre, "")` y no `dv.page(...)`**, que depende del índice; y si el resultado sale vacío, reintentar un par de veces con una espera corta antes de darlo por bueno.
 - **`app.vault.cachedRead(archivo)` es la vía para leer el markdown crudo** desde `dataviewjs` (es `async`, y los bloques `dataviewjs` admiten `await` en el nivel superior). Necesario cuando importa el texto literal: Dataview normaliza cosas por el camino (el `·` de los encabezados) y no indexa los ítems de lista que no son tareas.
+- **Tras renombrar carpetas, el índice de Dataview queda obsoleto y hay que tirarlo a mano.** Los objetos `Link` que devuelve siguen llevando la **ruta vieja** en su campo `.path`, aunque el enlace del fichero sea correcto y `metadataCache` ya esté al día. En la Home eso hace que el panel de **cadenas rotas invente enlaces rotos que no existen**: reporta un `[[Nombre]]` sano como si apuntara a `🔵🛡️ Blue Team/…`, porque es lo que Dataview tiene cacheado. **Un `app:reload` NO lo arregla** (Dataview revalida por `mtime`, y un renombrado no la toca). Hay que ejecutar `dataview:dataview-drop-cache`, esperar al reindexado (~20-30 s en este vault) y después `dataview:dataview-force-refresh-views`. Verificado el 2026-08-01 con los renombrados de la ADR 017.
+
+## Cómo renombrar carpetas del vault (ADR 017)
+
+Un renombrado de carpeta toca cuatro capas y **solo una se arregla sola**. Receta verificada el 2026-08-01 sobre ~1.050 ficheros:
+
+1. **Renombrar con la API de Obsidian, no con `mv`/`git mv`**: `app.fileManager.renameFile(carpeta, rutaNueva)` vía `obsidian eval`. Es lo que hace la app desde el explorador — mantiene coherente el `metadataCache`, reescribe `workspace.json` y notifica a los plugins (`obsidian-icon-folder` y `file-explorer-plus` reasignaron sus rutas solos). Con `mv` te quedas con la caché y los plugins apuntando a rutas muertas.
+2. **Obsidian NO actualiza los literales de texto**: los filtros de los `.base` (`startsWith`, `inFolder`, `containsAny`, regex de profundidad) y el código `dataviewjs` de la Home (`AREAS`, `RAICES`) son cadenas, no enlaces. Se reescriben a mano — es la parte que de verdad rompe.
+3. **Los plugins que guardan estado en memoria pisan lo que edites en disco.** `file-explorer-plus` reescribió su `data.json` y revirtió el cambio; hay que ir por su API (`plugin.settings` + `plugin.saveSettings()`), igual que con `appearance.json`.
+4. **Después**: tirar la caché de Dataview (arriba) y verificar. Lo mínimo: recuento de ficheros por carpeta contra la línea base tomada *antes*, `getFirstLinkpathDest` sobre todos los wikilinks y sobre `Nota previa`/`Nota siguiente`/`Area`, y **comparación de hash contra `HEAD`** (`git ls-tree -r HEAD` + `git hash-object`) para probar que nada se ha perdido ni alterado por el camino.
+
+**Sustituir rutas con emoji: construir el patrón por punto de código**, no pegando el emoji en el script (`[string]::new([char[]]@(0xD83D,0xDD34,0x2694,0xFE0F))`). Y **anclar las sustituciones de numeración al título completo** de la carpeta (`005 - Ataques a contraseñas`, no `005 - `): hay carpetas homónimas en número entre áreas distintas.
 
 ## Decisiones estructurales (ADR)
 
@@ -679,8 +776,9 @@ $ obsidian command id="<command-id>"
 - Antes de crear una carpeta nueva, comprobar con `Glob`/`ls` que no existe ya bajo otro nombre.
 - Antes de crear un tag nuevo, hacer `grep` en el vault por el tag deseado o variantes.
 - Antes de enlazar a una nota, comprobar que el nombre exacto coincide (los wikilinks rotos en Obsidian son silenciosos).
+- ⚠️ **La herramienta `Grep` no es fiable con patrones que contengan emoji en este vault**: devolvió *"No matches found"* sobre cadenas que sí existían (2026-08-01, buscando `🔴⚔️`/`🔵🛡️` y con el glob `**/*.base`), y por poco se cuela una omisión en el renombrado de la ADR 017. **Para emoji, usar `grep -rn` de bash**, que sí acierta. Vale también como regla general: si un `Grep` devuelve cero sobre algo que esperabas encontrar, contrastar con bash antes de concluir que no existe.
 - Cuando extraiga un módulo HTB completo, **resumir al usuario el plan de fragmentación antes de escribir**, salvo en módulos cortos (<8 secciones).
-- No tocar `TFG/` salvo petición explícita. Tampoco `🔵🛡️ Blue Team/` salvo que la tarea lo requiera. **`Redes/`**: se puede **leer y enlazar** libremente (Footprinting de CPTS cross-linkea a `Redes/Protocolos/`); modificar sus notas solo si la tarea lo pide.
+- No tocar `TFG/` salvo petición explícita. Tampoco `Blue Team/` salvo que la tarea lo requiera. **`Redes/`**: se puede **leer y enlazar** libremente (Footprinting de CPTS cross-linkea a `Redes/Protocolos/`); modificar sus notas solo si la tarea lo pide.
 - Si encuentro inconsistencia en el vault (notas con frontmatter incompleto, enlaces rotos, MOCs desactualizadas), **flaggear al usuario** — no "limpiar" silenciosamente.
 - El campo `Fecha de actualización` se rellena con la fecha real del día en formato ISO `YYYY-MM-DD` (obtener del sistema); convertir fechas relativas siempre a absolutas.
 - Tras **ejecutar una decisión estructural** (reorg, convención nueva, fusión/división, renombrado masivo), registrar un **ADR** en `02 - Recursos/Decisiones estructurales/` — ver «Decisiones estructurales (ADR)».

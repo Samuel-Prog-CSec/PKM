@@ -44,7 +44,7 @@ Arranca con la sintaxis y filosofía del lenguaje aplicadas a protocolos de red 
 
 ## Curso derivado
 
-Este libro se está transformando en un curso de **Go ofensivo** (modernizado a Go 1.26) en `🔴⚔️ Red Team/Desarrollo ofensivo`. Índice del curso: [[Desarrollo ofensivo.base|Desarrollo ofensivo]]. Bloque de fundamentos del lenguaje completo (14 notas 00-13): [[Fundamentos de Go.base|Fundamentos de Go]].
+Este libro se está transformando en un curso de **Go ofensivo** (modernizado a Go 1.26) en `Red Team/Desarrollo ofensivo`. Índice del curso: [[Desarrollo ofensivo.base|Desarrollo ofensivo]]. Bloque de fundamentos del lenguaje completo (14 notas 00-13): [[Fundamentos de Go.base|Fundamentos de Go]].
 
 ## Notas propias
 

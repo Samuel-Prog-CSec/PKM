@@ -1,0 +1,44 @@
+formulas:
+  sub-tema: 'file.name.replace(".base", "")'
+properties:
+  formula.sub-tema:
+    displayName: Sub-tema
+  file.folder:
+    displayName: Ubicación
+views:
+  - type: table
+    name: Sub-temas
+    filters:
+      and:
+        - file.ext == "base"
+        - file.folder.startsWith("Red Team/Hacking de protocolos")
+        - file.name != "Hacking de protocolos.base"
+    order:
+      - formula.sub-tema
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+    columnSize:
+      formula.sub-tema: 320
+      file.folder: 460
+  - type: table
+    name: Todas las notas
+    filters:
+      and:
+        - file.inFolder("Red Team/Hacking de protocolos")
+        - file.ext == "md"
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - Descripción
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 380
+      note.Descripción: 480
+      note.Fecha de actualización: 150
