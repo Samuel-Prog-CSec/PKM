@@ -34,9 +34,9 @@ Foco activo. Seguridad ofensiva de redes inalámbricas 802.11.
 - [ ] 05 · Wi-Fi Evil Twin Attacks — `Hacking Wi-Fi/04 - Evil Twin/` (crear)
 - [ ] 06 · Attacking WPA3 Wi-Fi Networks — `Hacking Wi-Fi/05 - Ataques a WPA3/` (crear)
 - [ ] 07 · Bypassing Wi-Fi Captive Portals — `Hacking Wi-Fi/06 - Portales cautivos/` (crear)
-- [ ] 08 · Wi-Fi Password Cracking Techniques — `Hacking Wi-Fi/07 - Cracking de contraseñas Wi-Fi/` (crear)
+- [x] 08 · Wi-Fi Password Cracking Techniques — `Hacking Wi-Fi/07 - Cracking de contraseñas Wi-Fi/` ✅ 2026-08-04
 - [ ] 09 · Wi-Fi Penetration Testing Tools and Techniques — `Hacking Wi-Fi/08 - Herramientas y técnicas/` (crear)
-- [ ] 10 · Attacking Corporate Wi-Fi Networks — `Hacking Wi-Fi/09 - Wi-Fi corporativo/` (crear)
+- [x] 10 · Attacking Corporate Wi-Fi Networks — `Hacking Wi-Fi/09 - Wi-Fi corporativo/` ✅ 2026-08-04
 
 ## CPTS · Penetration Tester
 
@@ -152,7 +152,7 @@ Estados: `[ ]` pendiente · `[/]` en progreso · `[x]` hecha · `[-]` cancelada.
 - [/] Semana 1 · Brute forcing + SQLi básico [[Brute Forcing.base]] 🛫 2026-07-28 📅 2026-08-03 ⏫ [esfuerzo:: 14h]
 - [/] Semana 1 · Nmap [[Nmap.base]] 🛫 2026-07-28 📅 2026-08-03 🔽 [esfuerzo:: 7h]
 - [ ] Semana 2 · XSS básico + File Inclusion [[XSS.base]] 🛫 2026-08-04 📅 2026-08-10 ⏫ [esfuerzo:: 14h]
-- [ ] Semana 2 · Evaluación de vulnerabilidades [[Evaluación de vulnerabilidades.base]] 🛫 2026-08-04 📅 2026-08-10 🔽 [esfuerzo:: 2h]
+- [/] Semana 2 · Evaluación de vulnerabilidades [[Evaluación de vulnerabilidades.base]] 🛫 2026-08-04 📅 2026-08-10 🔽 [esfuerzo:: 2h]
 - [ ] Semana 3 · Command Injection + File Upload [[Command Injection.base]] 🛫 2026-08-11 📅 2026-08-17 [esfuerzo:: 14h]
 - [ ] Semana 4 · SSRF + SSTI/SSI/XSLT [[SSRF.base]] 🛫 2026-08-18 📅 2026-08-24 [esfuerzo:: 8h]
 - [ ] Semana 5 · Authentication básico + GraphQL [[Authentication.base]] 🛫 2026-08-25 📅 2026-08-31 [esfuerzo:: 24h]

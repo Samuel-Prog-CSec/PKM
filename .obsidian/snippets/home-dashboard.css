@@ -1247,6 +1247,161 @@
 
 
 /* ───────────────────────────────────────────────────────────────────────────
+   5e · PROYECTOS OFENSIVOS — catálogo en Go, coloreado por dificultad
+   Cada fila es un <a class="internal-link"> a la nota del proyecto. El rail y
+   el badge toman el color del nivel (1 verde → 5 violeta), así el degradado de
+   dificultad del catálogo se lee de un vistazo.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.home .pkm-projs {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.home .pkm-proj {
+  --dif: var(--pkm-ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--pkm-radius-sm);
+  border: 1px solid var(--pkm-border);
+  border-left: 3px solid var(--dif);
+  background: var(--pkm-surface);
+  box-shadow: var(--pkm-shadow);
+  color: var(--pkm-ink) !important;
+  text-decoration: none !important;
+  transition: transform 0.24s var(--pkm-ease), border-color 0.24s var(--pkm-ease),
+              box-shadow 0.24s var(--pkm-ease);
+}
+.home .pkm-proj:hover {
+  transform: translateX(3px);
+  border-color: color-mix(in srgb, var(--dif) 45%, transparent);
+  box-shadow: var(--pkm-shadow-lift);
+}
+
+/* Badge del número, teñido por dificultad */
+.home .pkm-proj-num {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--dif) 15%, transparent);
+  color: var(--dif);
+  font-size: 0.82rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.home .pkm-proj-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.home .pkm-proj-name {
+  font-size: 0.87rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--pkm-ink);
+}
+.home .pkm-proj:hover .pkm-proj-name {
+  color: var(--dif);
+}
+
+.home .pkm-proj-desc {
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: var(--pkm-ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home .pkm-proj-side {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+/* Pips de dificultad: cinco puntos, los N primeros encendidos */
+.home .pkm-proj-pips {
+  display: inline-flex;
+  gap: 3px;
+}
+.home .pkm-pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pkm-surface-2);
+  border: 1px solid var(--pkm-border-strong);
+}
+.home .pkm-pip.on {
+  background: var(--dif);
+  border-color: var(--dif);
+}
+
+/* Chip de estado */
+.home .pkm-proj-estado {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: var(--pkm-surface-2);
+  color: var(--pkm-ink-soft);
+}
+.home .pkm-proj-estado[data-e="hecho"] {
+  background: color-mix(in srgb, var(--pkm-green) 16%, transparent);
+  color: var(--pkm-green);
+}
+.home .pkm-proj-estado[data-e="curso"] {
+  background: color-mix(in srgb, var(--pkm-blue) 16%, transparent);
+  color: var(--pkm-blue);
+}
+.home .pkm-proj-estado[data-e="descartado"] {
+  background: color-mix(in srgb, var(--pkm-ink-faint) 15%, transparent);
+  color: var(--pkm-ink-faint);
+  text-decoration: line-through;
+}
+
+.home .pkm-proj-esf {
+  min-width: 84px;
+  text-align: right;
+  font-size: 0.72rem;
+  color: var(--pkm-ink-faint);
+  white-space: nowrap;
+}
+
+/* Rail y acentos por nivel de dificultad */
+.home .pkm-proj[data-dif="1"] { --dif: var(--pkm-green); }
+.home .pkm-proj[data-dif="2"] { --dif: var(--pkm-teal); }
+.home .pkm-proj[data-dif="3"] { --dif: var(--pkm-amber); }
+.home .pkm-proj[data-dif="4"] { --dif: var(--pkm-red); }
+.home .pkm-proj[data-dif="5"] { --dif: var(--pkm-violet); }
+
+/* En estrecho: la descripción salta de línea y el esfuerzo se oculta */
+@media (max-width: 700px) {
+  .home .pkm-proj-desc { white-space: normal; }
+  .home .pkm-proj-esf { display: none; }
+  .home .pkm-proj-side { gap: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .pkm-proj { transition-duration: 0.01ms !important; }
+  .home .pkm-proj:hover { transform: none; }
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
    6 · PANELES — contenedores de las queries de Dataview
    ─────────────────────────────────────────────────────────────────────────── */
 
@@ -1419,10 +1574,19 @@
   background: var(--pkm-surface-2);
 }
 
-/* Hay plugins que insertan un <img class="emoji"> junto al glifo de texto:
-   el resultado es el icono pintado dos veces. Se queda el glifo nativo. */
-.home .pkm-chip img.emoji,
-.home .pkm-card img.emoji {
+/* Dos plugins ensucian el icono de la tarjeta en modo LECTURA:
+     · Iconize (obsidian-icon-folder) resuelve el destino del enlace y, si la
+       carpeta/base tiene icono asignado, lo inyecta DENTRO del <a> como
+       <span class="iconize-icon-in-link">. La tarjeta de Red Team apunta a
+       `Red Team/Red-Team.base`, cuya carpeta arrastra un 🔴 del nombre legacy
+       `🔴⚔️ Red Team`, así que salía un 🔴 suelto encima del crosshair (solo
+       en reading view — su post-procesador no corre en live preview).
+     · Otros insertan un <img class="emoji"> junto al glifo, pintándolo doble.
+   El icono de la tarjeta es SIEMPRE el SVG de Lucide; se anula lo demás. */
+.home .pkm-card .iconize-icon-in-link,
+.home .pkm-chip .iconize-icon-in-link,
+.home .pkm-card img.emoji,
+.home .pkm-chip img.emoji {
   display: none;
 }
 

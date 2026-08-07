@@ -1,14 +1,14 @@
 formulas:
   herramienta: file.name.replace(".base", "")
   categoría: |
-    if(file.name.containsAny("Nmap", "Ffuf"), "1 · Recon y escaneo",
+    if(file.name.containsAny("Nmap", "Ffuf", "Masscan", "RustScan", "ZMap", "sx", "Smap", "ProjectDiscovery", "Firewalk"), "1 · Recon y escaneo",
       if(file.name.containsAny("Nessus", "OpenVAS"), "2 · Evaluación de vulnerabilidades",
         if(file.name.containsAny("Burp", "ZAP"), "3 · Proxies web",
           if(file.name.containsAny("Metasploit", "SQLMap"), "4 · Explotación",
             if(file.name.containsAny("Hashcat", "John"), "5 · Ataques a credenciales",
               if(file.name.containsAny("Wireshark", "Tcpdump", "Scapy"), "6 · Análisis de red",
                 if(file.name.containsAny("Garak", "PyRIT", "Fickling", "ModelScan", "Picklescan"), "7 · Seguridad de IA",
-                  if(file.name.containsAny("Aircrack-ng", "Reaver", "MDK4"), "8 · Wi-Fi y 802.11",
+                  if(file.name.containsAny("Aircrack-ng", "Reaver", "MDK4", "hcxtools", "Kismet", "EAPHammer", "hostapd", "Wifiphisher"), "8 · Wi-Fi y 802.11",
                   if(file.name.containsAny("Semgrep", "CodeQL"), "9 · Análisis estático (SAST)",
                     if(file.name.containsAny("mitmproxy", "bettercap"), "10 · Interceptación y MITM",
                       if(file.name.containsAny("Ghidra", "Frida"), "11 · Reversing e instrumentación",

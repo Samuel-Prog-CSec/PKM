@@ -1,0 +1,87 @@
+formulas:
+  nivel: if(Dificultad >= 5, "⬛⬛⬛⬛⬛", if(Dificultad == 4, "⬛⬛⬛⬛", if(Dificultad == 3, "⬛⬛⬛", if(Dificultad == 2, "⬛⬛", "⬛"))))
+  días: if(file.hasProperty("Fecha de actualización"), (now() - note["Fecha de actualización"]).days.round(0), "")
+properties:
+  formula.nivel:
+    displayName: Nivel
+  formula.días:
+    displayName: Días sin tocar
+  note.Estado:
+    displayName: Estado
+  note.Dificultad:
+    displayName: Dificultad
+  note.Esfuerzo:
+    displayName: Esfuerzo
+views:
+  - type: table
+    name: Ruta
+    filters: Area == link("Proyectos ofensivos.base", "Proyectos ofensivos")
+    order:
+      - file.name
+      - Estado
+      - formula.nivel
+      - Esfuerzo
+      - Descripción
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 380
+      note.Estado: 110
+      formula.nivel: 120
+      note.Esfuerzo: 130
+      note.Descripción: 520
+  - type: table
+    name: Por estado
+    filters: Area == link("Proyectos ofensivos.base", "Proyectos ofensivos")
+    groupBy:
+      property: Estado
+      direction: ASC
+    order:
+      - file.name
+      - formula.nivel
+      - Esfuerzo
+      - Fecha de actualización
+    sort:
+      - property: Dificultad
+        direction: ASC
+    columnSize:
+      file.name: 400
+      formula.nivel: 120
+      note.Esfuerzo: 130
+  - type: cards
+    name: Portfolio
+    filters:
+      and:
+        - Area == link("Proyectos ofensivos.base", "Proyectos ofensivos")
+        - Estado == "Terminado"
+    order:
+      - file.name
+      - Descripción
+      - Esfuerzo
+    sort:
+      - property: Dificultad
+        direction: ASC
+    cardSize: 340
+  - type: table
+    name: Siguiente a construir
+    filters:
+      and:
+        - Area == link("Proyectos ofensivos.base", "Proyectos ofensivos")
+        - Estado != "Terminado"
+        - Estado != "Descartado"
+    order:
+      - file.name
+      - Estado
+      - formula.nivel
+      - Esfuerzo
+      - Fecha de actualización
+      - formula.días
+    sort:
+      - property: Dificultad
+        direction: ASC
+    columnSize:
+      file.name: 400
+      note.Estado: 110
+      formula.nivel: 120
+      note.Esfuerzo: 130

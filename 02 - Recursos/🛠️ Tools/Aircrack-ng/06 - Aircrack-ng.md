@@ -4,7 +4,7 @@ tags:
   - Seguridad/Contraseñas
   - Pentesting/Explotacion
 Descripción: "Recuperar claves WEP con PTW y WPA/WPA2 por diccionario, y por qué conviene delegar el cracking WPA a hashcat"
-Fecha de actualización: 2026-08-01
+Fecha de actualización: 2026-08-04
 Nota previa: "[[05 - Airdecap-ng]]"
 Nota siguiente: 
 Area: "[[Aircrack-ng.base|Aircrack-ng]]"
@@ -119,3 +119,8 @@ $ awk 'length($0) >= 8 && length($0) <= 63' rockyou.txt > wifi.txt
 ```
 
 Y donde más se acierta es en lo específico del objetivo: nombre de la empresa con años y sufijos, la dirección, el SSID mismo con variaciones, y sobre todo <mark style="background: #8000E1A6;">los patrones de clave por defecto del ISP</mark>, que en muchos operadores se derivan del BSSID o del SSID con un algoritmo conocido. Generarlos con reglas es más rentable que cualquier diccionario grande — [[01 - Wordlists y reglas personalizadas]].
+
+> [!important]+ Para crackear en serio, esta no es la herramienta
+> `aircrack-ng` es CPU pura y queda dos o tres órdenes de magnitud por debajo de una GPU en `-m 22000`. Sirve para una comprobación rápida en el sitio; para el ataque real, la cadena es `hcxpcapngtool` → `hashcat`. La comparación con números y el árbol de decisión completo están en [[03 - Herramientas de crackeo y su estado en 2026]] y [[11 - Arsenal de cracking Wi-Fi]].
+>
+> Los patrones de clave por defecto del ISP que se mencionan arriba ya vienen implementados en **`hcxpsktool`**, que los deriva del propio hash sin necesidad de generarlos a mano — ver [[06 - Credenciales por defecto y keyspaces de fabricante]].

@@ -3,9 +3,9 @@ tags:
   - Seguridad/Contraseñas
   - Pentesting/Post-Explotacion
 Descripción: "Donde Hashcat despliega su potencia es en los ataques dirigidos: máscaras que explotan la estructura de las contraseñas y reglas que mutan wordlists a velocidad de GPU"
-Fecha de actualización: 2026-07-18
+Fecha de actualización: 2026-08-04
 Nota previa: "[[00 - Introducción a Hashcat]]"
-Nota siguiente: 
+Nota siguiente: "[[02 - Combinator e híbridos a fondo]]"
 Area: "[[Hashcat.base|Hashcat]]"
 ---
 ---
@@ -49,7 +49,7 @@ $ hashcat -m 1000 -a 0 hashes.txt rockyou.txt -r /usr/share/hashcat/rules/best64
 | --- | --- |
 | `best64.rule` | El equilibrio por defecto |
 | `rockyou-30000.rule` | Amplio |
-| `OneRuleToRuleThemAll` | El más agresivo (comunidad) |
+| `OneRuleToRuleThemStill` | El más agresivo (comunidad). Sucesor de `OneRuleToRuleThemAll` |
 
 <mark style="background: #8000E1A6;">`rockyou.txt` + una buena regla rompe la enorme mayoría de contraseñas humanas reales</mark> — más eficiente que fuerza bruta pura. La creación de reglas propias, en [[01 - Wordlists y reglas personalizadas]].
 
@@ -61,7 +61,7 @@ $ hashcat -b -m 1000                                     # benchmark del tipo de
 ```
 
 > [!warning]+ Cuidado con `-O`
-> <mark style="background: #FF5582A6;">`-O` (optimized kernel) acelera mucho pero **limita la longitud máxima** de contraseña</mark> (típicamente a 31 chars o menos según el hash). Para passphrases largas puede saltarse candidatos válidos. `-w 3`/`-w 4` sube el *workload* (menos interactividad, más velocidad) — ideal en un rig dedicado, no en tu portátil de trabajo.
+> <mark style="background: #FF5582A6;">`-O` (optimized kernel) acelera mucho pero **limita la longitud máxima** de contraseña</mark> — típicamente a 31 chars, aunque **depende del modo**: en `-m 22000` (WPA) no recorta nada. La forma de saberlo es leer las líneas `Minimum/Maximum password length supported by kernel` que hashcat imprime al arrancar. Detalle en [[04 - Backends, dispositivos y tuning]]. `-w 3`/`-w 4` sube el *workload* (menos interactividad, más velocidad) — ideal en un rig dedicado, no en tu portátil de trabajo.
 
 # Sesiones y reanudación
 

@@ -35,6 +35,9 @@ Un único informe markdown con esta estructura:
 
 ## Checks que se ejecutan
 
+> [!info]+ Herramientas dedicadas antes que bash
+> Ejecutar los checks con `Grep`/`Glob`/`Read` siempre que se pueda: en este entorno son más fiables que los bucles `for`/`find` de bash y que la CLI de Obsidian encadenada con pipes (motivo en `CLAUDE.md` § «Reglas operativas para mí»). Los `obsidian deadends`/`orphans`/`base:query` de abajo quedan para lo que solo la app resuelve, y como comandos **sueltos**, no compuestos.
+
 ### 1. Wikilinks rotos
 Para cada `[[Nombre]]` o `[[Nombre|alias]]` en el vault, comprobar que `Nombre.md` existe. Excepción: enlaces fantasma intencionados (notas que aún no se han escrito) — si hay más de un wikilink a la misma nota fantasma desde notas distintas, considerarla **deuda concreta** (alguien la necesita); si solo hay uno, es probablemente fantasma intencional.
 

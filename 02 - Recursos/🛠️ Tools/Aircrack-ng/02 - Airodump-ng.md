@@ -3,7 +3,7 @@ tags:
   - Wi-Fi
   - Pentesting/Enumeracion
 Descripción: "Lectura correcta de cada columna, filtros por banda, canal y cifrado, ficheros de salida y las opciones que HTB no menciona"
-Fecha de actualización: 2026-08-01
+Fecha de actualización: 2026-08-04
 Nota previa: "[[01 - Airmon-ng]]"
 Nota siguiente: "[[03 - Airgraph-ng]]"
 Area: "[[Aircrack-ng.base|Aircrack-ng]]"
@@ -136,3 +136,14 @@ El sufijo `-01` se incrementa en cada ejecución con el mismo prefijo, así que 
 Para trabajar sobre la captura mientras se llena, `airodump-ng` puede escribir a una FIFO o se puede abrir el `.cap` en Wireshark en paralelo. En capturas largas conviene bajar `--write-interval` a 1 segundo: por defecto el volcado es menos frecuente y un `Ctrl+C` mal dado pierde los últimos segundos, que son justo los del handshake que se acaba de forzar.
 
 La visualización de las relaciones que salen de los `.csv` es [[03 - Airgraph-ng]].
+
+# Cuándo cambiar de herramienta
+
+`airodump-ng` da una instantánea del canal actual y su cabecera «WPA handshake» usa un criterio laxo: que aparezca no garantiza que haya un par utilizable. Dos alternativas cubren lo que no hace:
+
+| Necesidad | Herramienta |
+| --------- | ----------- |
+| Estado acumulado, correlación cliente↔AP en el tiempo, muchos AP | [[00 - Introducción a Kismet\|Kismet]] |
+| Captura con filtro BPF, PMKID sin clientes, salida `pcapng` | [[01 - hcxdumptool\|hcxdumptool]] |
+
+La validación real de lo capturado la hace [[02 - hcxpcapngtool\|`hcxpcapngtool`]], que informa de cuántos pares hay y de qué calidad.

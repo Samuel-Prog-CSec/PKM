@@ -32,7 +32,8 @@
       "Bash(obsidian:*)",
       "Bash(python3:*)",
       "Bash(pdftotext:*)",
-      "Agent"
+      "Agent",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   },
   "skillOverrides": {

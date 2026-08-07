@@ -4,7 +4,7 @@ tags:
   - Tipo/Arsenal
   - Pentesting/Explotacion
 Descripción: "El árbol de decisión completo de los ataques a WEP, las herramientas que siguen sirviendo y dónde encontrar WEP veinte años después de su retirada"
-Fecha de actualización: 2026-08-01
+Fecha de actualización: 2026-08-04
 Nota previa: "[[11 - Detección y evasión de ataques WEP]]"
 Nota siguiente: 
 Area: "[[WEP.base|WEP]]"
@@ -130,3 +130,5 @@ Los tres errores de WEP siguen apareciendo en auditorías de 2026, fuera de Wi-F
 
 > [!important]+ La demostración que convence
 > Enseñar la clave recuperada rara vez mueve a nadie. Lo que mueve es el **tráfico descifrado**: ejecutar `airdecap-ng` y abrir el `.cap` resultante en Wireshark mostrando credenciales, nombres de host, protocolos internos y qué sistemas hablan con qué. <mark style="background: #FFB86CA6;">Ver su propia red en claro es lo que convierte un hallazgo técnico en presupuesto para sustituir equipamiento</mark>. Ver [[05 - Airdecap-ng]].
+
+Migrar de WEP lleva casi siempre a WPA2-PSK, que **no** se rompe por estadística sino por diccionario contra el handshake: es un modelo de ataque distinto, y el punto de partida es [[00 - Metodología del cracking de PSK]]. Que la clave nueva sea larga y generada es lo único que separa una red migrada de otra igual de accesible — la aritmética que lo sostiene está en [[04 - Anatomía de una contraseña Wi-Fi]].

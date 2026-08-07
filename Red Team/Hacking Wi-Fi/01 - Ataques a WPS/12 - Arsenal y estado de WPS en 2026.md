@@ -4,7 +4,7 @@ tags:
   - Tipo/Arsenal
   - Pentesting/Explotacion
 Descripción: "Qué herramientas del ecosistema WPS siguen mantenidas, cuáles están abandonadas y el flujo de trabajo recomendado en un engagement"
-Fecha de actualización: 2026-08-01
+Fecha de actualización: 2026-08-04
 Nota previa: "[[11 - Detección y evasión de ataques WPS]]"
 Nota siguiente: 
 Area: "[[WPS.base|WPS]]"
@@ -108,3 +108,8 @@ Dos hechos que conviene tener claros al escribir el informe:
 - ¿El interruptor de WPS de la interfaz web **realmente** lo desactiva? Comprobarlo con `wash` después de tocarlo.
 - ¿Los AP tienen el botón físico accesible? Es una credencial en la pared — [[09 - Push Button Configuration y sus abusos]].
 - ¿El controlador alerta de `WPS-SUCCESS` desde dispositivos desconocidos? Es la única detección que cubre Pixie Dust — [[11 - Detección y evasión de ataques WPS]].
+
+> [!info]+ Si WPS no cede, la siguiente vía
+> WPS es el atajo, no la única puerta. Cuando está desactivado o bloqueado, el ataque a la misma red continúa por el handshake o el PMKID — el árbol de decisión completo está en [[00 - Metodología del cracking de PSK]] y su arsenal en [[11 - Arsenal de cracking Wi-Fi]].
+>
+> Y al revés: **`hcxpsktool --wpskeys`** genera claves WPS sin depender de los repositorios de generación de PIN, dos de los cuales han desaparecido de GitHub — ver [[06 - Credenciales por defecto y keyspaces de fabricante]].

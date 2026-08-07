@@ -1,0 +1,18 @@
+views:
+  - type: table
+    name: Notas
+    filters:
+      Area == link("Sustantivos, artículos y cuantificadores.base", "Sustantivos, artículos y cuantificadores")
+    order:
+      - file.name
+      - Descripción
+      - file.tags
+      - Fecha de actualización
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 340
+      note.Descripción: 500
+      file.tags: 220
+      note.Fecha de actualización: 140

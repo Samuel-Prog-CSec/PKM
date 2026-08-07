@@ -846,7 +846,10 @@ try {
   const indiceTags = app.metadataCache.getTags();
   const tagsTipo = Object.keys(indiceTags)
     .map((t) => t.replace(/^#/, ""))
-    .filter((t) => /^tipo\//i.test(t));
+    /* `Tipo/Proyecto` queda fuera: no es un eje transversal del conocimiento
+       (detección, arsenal…), sino el tipo de la nota-artefacto de portfolio, y
+       tiene su propia sección «Proyectos ofensivos» más abajo. */
+    .filter((t) => /^tipo\//i.test(t) && !/^tipo\/proyecto$/i.test(t));
 
   const conocidos = Object.keys(FICHA_EJE);
   tagsTipo.sort((a, b) => {
@@ -1006,6 +1009,99 @@ try {
   dv.container.createDiv({
     cls: "dataview-error-box",
     text: "No se han podido construir los paneles: " + e.message,
+  });
+}
+```
+
+```dataviewjs
+/* ══════════════════════════════════════════════════════════════════════════
+   BLOQUE 3 · Proyectos ofensivos · catálogo en Go, de más simple a capstone
+   ---------------------------------------------------------------------------
+   Lee las notas de `Red Team/Proyectos` (las que llevan `Dificultad`), las
+   ordena por su número de fichero —que va de menor a mayor dificultad— y las
+   pinta como filas con nivel, estado y esfuerzo. Todo sale del frontmatter; el
+   mismo `.base` que las indexa es la única fuente. El color del rail y del
+   badge sale del nivel (1 verde → 5 violeta).
+   ══════════════════════════════════════════════════════════════════════════ */
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+try {
+  const YO = dv.current().file.path;
+  const norm = (s) => String(s ?? "").trim().toLowerCase();
+
+  /* Estado del frontmatter a una clave corta para el CSS. */
+  const claseEstado = (e) => {
+    const k = norm(e);
+    if (k.includes("termin") || k.includes("hecho")) return "hecho";
+    if (k.includes("curso") || k.includes("progreso")) return "curso";
+    if (k.includes("descart") || k.includes("pausa")) return "descartado";
+    return "idea";
+  };
+
+  const proyectos = dv.pages('"Red Team/Proyectos"')
+    .where((p) => p.Dificultad != null && p.file.path !== YO)
+    .sort((p) => p.file.name, "asc")
+    .array();
+
+  const sec = dv.container.createDiv({ cls: "pkm-section" });
+  const baseHref = "Red Team/Proyectos/Proyectos ofensivos.base";
+  sec.createDiv({ cls: "pkm-h", text: "Proyectos ofensivos" }).insertAdjacentHTML(
+    "beforeend",
+    `<span class="pkm-h-note">${proyectos.length} en Go, de más simple a capstone · ` +
+    `<a class="internal-link" href="${esc(baseHref)}" data-href="${esc(baseHref)}">el catálogo</a></span>`);
+
+  if (!proyectos.length) {
+    sec.createDiv({ cls: "dataview-error-box", text: "Ningún proyecto indexado todavía." });
+  } else {
+    const cuenta = (f) => proyectos.filter(f).length;
+    const kpi = (n, t, tono) =>
+      `<div class="pkm-kpi" data-tono="${tono}"><span class="pkm-kpi-n">${n}</span><span class="pkm-kpi-t">${t}</span></div>`;
+
+    const ideas = cuenta((p) => claseEstado(p.Estado) === "idea");
+    const enCurso = cuenta((p) => claseEstado(p.Estado) === "curso");
+    const hechos = cuenta((p) => claseEstado(p.Estado) === "hecho");
+
+    sec.insertAdjacentHTML("beforeend", `<div class="pkm-kpis">
+${kpi(proyectos.length, "proyectos", "info")}
+${kpi(ideas, "en idea", "aviso")}
+${kpi(enCurso, "en curso", "curso")}
+${kpi(hechos, hechos === 1 ? "terminado" : "terminados", "ok")}
+</div>`);
+
+    const filas = proyectos.map((p) => {
+      const m = p.file.name.match(/^(\d+)\s*-\s*(.+)$/);
+      const num = m ? m[1] : "";
+      const titulo = m ? m[2] : p.file.name;
+      const dif = Number(p.Dificultad) || 0;
+      const estado = String(p.Estado ?? "—");
+      const ek = claseEstado(estado);
+      const esf = p.Esfuerzo ? esc(String(p.Esfuerzo)) : "";
+      const desc = p["Descripción"] ? esc(String(p["Descripción"])) : "";
+      const pips = Array.from({ length: 5 }, (_, i) =>
+        `<i class="pkm-pip${i < dif ? " on" : ""}"></i>`).join("");
+
+      return `<a class="internal-link pkm-proj" data-dif="${dif}" data-estado="${ek}" href="${esc(p.file.path)}" data-href="${esc(p.file.path)}" aria-label="${esc(titulo)}">
+<span class="pkm-proj-num">${esc(num)}</span>
+<span class="pkm-proj-main">
+<span class="pkm-proj-name">${esc(titulo)}</span>
+${desc ? `<span class="pkm-proj-desc">${desc}</span>` : ""}
+</span>
+<span class="pkm-proj-side">
+<span class="pkm-proj-pips" title="Dificultad ${dif}/5">${pips}</span>
+<span class="pkm-proj-estado" data-e="${ek}">${esc(estado)}</span>
+${esf ? `<span class="pkm-proj-esf">${esf}</span>` : ""}
+</span>
+</a>`;
+    }).join("");
+
+    sec.insertAdjacentHTML("beforeend", `<div class="pkm-projs">${filas}</div>`);
+  }
+} catch (e) {
+  dv.container.createDiv({
+    cls: "dataview-error-box",
+    text: "No se ha podido construir el panel de proyectos: " + e.message,
   });
 }
 ```

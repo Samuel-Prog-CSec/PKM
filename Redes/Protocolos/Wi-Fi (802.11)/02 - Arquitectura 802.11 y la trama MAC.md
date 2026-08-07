@@ -4,7 +4,7 @@ tags:
   - Protocolos
   - Wi-Fi/802.11
 Descripción: "BSS, ESS y sistema de distribución, la estructura real de la trama MAC 802.11 y la tabla completa de tipos, subtipos y reason codes"
-Fecha de actualización: 2026-08-01
+Fecha de actualización: 2026-08-04
 Area: "[[Protocolos de red.base|Protocolos de red]]"
 ---
 ---
@@ -147,3 +147,5 @@ Con `802.11w` activo, las tramas de gestión **unicast posteriores a la asociaci
 Ese hueco es donde vive la ofensiva moderna. Schepers y Vanhoef demostraron que un beacon falsificado que anuncie un ancho de canal inválido basta para que el cliente se desconecte solo ([WiSec 2022](https://papers.mathyvanhoef.com/wisec2022.pdf)), y el vector sigue produciendo CVE: **`CVE-2025-71127`** cubre beacons unicast dirigidos contra estaciones asociadas en el kernel de Linux. Wi-Fi 7 responde exigiendo **beacon protection**, pero sólo cubre el beacon, no la *probe request*.
 
 La explotación concreta de cada una de estas tramas se desarrolla en [[01 - Tramas de gestión y su valor ofensivo]] y [[02 - El ciclo de conexión y sus puntos de ruptura]].
+
+Lo que va **dentro** del cuerpo de esas tramas —el elemento RSN que declara cifrados y método de autenticación, la jerarquía de claves y el 4-way handshake— continúa en [[03 - RSN, WPA2 y el 4-way handshake]], y lo que WPA3 cambia de ese modelo, en [[04 - WPA3, SAE y OWE]].

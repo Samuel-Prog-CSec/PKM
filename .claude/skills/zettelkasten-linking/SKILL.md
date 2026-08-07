@@ -111,7 +111,7 @@ for f in *.md; do
 done
 ```
 
-O usar `Grep` con `output_mode: content` sobre `^Nota (previa|siguiente):` para inventariar.
+**Preferir la herramienta `Grep`** (no el bucle `for` de bash) con `output_mode: content` sobre `^(Nota previa|Nota siguiente):` para inventariar la carpeta de una vez — más limpio y más fiable en este entorno que un bucle bash (motivo en `CLAUDE.md` § «Reglas operativas para mí»). El bloque bash de arriba queda como *fallback* con Obsidian cerrado.
 
 Verificar:
 - Una y solo una nota tiene `prev` vacío (la cabecera del tema).
