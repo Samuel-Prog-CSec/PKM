@@ -151,7 +151,7 @@ Estados: `[ ]` pendiente · `[/]` en progreso · `[x]` hecha · `[-]` cancelada.
 
 - [/] Semana 1 · Brute forcing + SQLi básico [[Brute Forcing.base]] 🛫 2026-07-28 📅 2026-08-03 ⏫ [esfuerzo:: 14h]
 - [/] Semana 1 · Nmap [[Nmap.base]] 🛫 2026-07-28 📅 2026-08-03 🔽 [esfuerzo:: 7h]
-- [ ] Semana 2 · XSS básico + File Inclusion [[XSS.base]] 🛫 2026-08-04 📅 2026-08-10 ⏫ [esfuerzo:: 14h]
+- [/] Semana 2 · XSS básico + File Inclusion [[XSS.base]] 🛫 2026-08-04 📅 2026-08-10 ⏫ [esfuerzo:: 14h]
 - [/] Semana 2 · Evaluación de vulnerabilidades [[Evaluación de vulnerabilidades.base]] 🛫 2026-08-04 📅 2026-08-10 🔽 [esfuerzo:: 2h]
 - [ ] Semana 3 · Command Injection + File Upload [[Command Injection.base]] 🛫 2026-08-11 📅 2026-08-17 [esfuerzo:: 14h]
 - [ ] Semana 4 · SSRF + SSTI/SSI/XSLT [[SSRF.base]] 🛫 2026-08-18 📅 2026-08-24 [esfuerzo:: 8h]

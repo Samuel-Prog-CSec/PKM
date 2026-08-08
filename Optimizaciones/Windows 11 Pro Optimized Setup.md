@@ -72,7 +72,7 @@ https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 
 `Win + r` -> `services.msc` -> *Servicio de zona con cobertura inalámbrica móvil* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
-`Win + r` -> `services.msc` -> *Registro remoto* (**SI NO SE USA MANDO**) -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
+`Win + r` -> `services.msc` -> *Registro remoto* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 `Win + r` -> `services.msc` -> *Servicio de compatibilidad con Bluetooth* + *puerta enlace audio BT* (**SI NO SE USA BT**) -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
@@ -95,11 +95,7 @@ https://www.youtube.com/watch?v=Ntkc6PeImhU&t=2s
 `Win + r` -> `services.msc` -> *Redirector de puerto UM de Escritorio remoto* -> `Doble click` -> Tipo de inicio -> **Deshabilitado**
 
 ## 1.2 Editor del registro
-Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` -> *SvcHostSplitThresholdInKB* -> **67108864** (64 GB de RAM instalada * 1024 * 1024)
-
-<mark style="background: #ADCCFFA6;">Eliminar más servicios ocultos de telemetría</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ndu` -> *Start* -> **4 (Hexadecimal)** (APAGADO)
-
-<mark style="background: #ADCCFFA6;">Eliminar servicios ocultos de telemetría adicionales</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dmwappushservice` -> *Start* -> **4 (Hexadecimal)** (APAGADO)
+Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ndu` -> *Start* -> **2 (Hexadecimal)**
 
 <mark style="background: #ADCCFFA6;">Eliminar servicios ocultos de recolección de datos</mark>: Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DiagLog` -> *Start* -> **0 (Hexadecimal)** (APAGADO)
 
@@ -116,7 +112,13 @@ Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` 
 <mark style="background: #ADCCFFA6;">Para desbloquear los 6 perfiles de aceleración del PC</mark>: `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\be337238-0d82-4146-a960-4f3749d470c7` -> `Atributtes` -> **Valor a 2** (*Hexadecimal*).
 
 ## 1.3 Configuración de red
-<mark style="background: #ADCCFFA6;">Configuración de Ethernet</mark>: Configuración (Sistema) -> Red e Internet -> Configuración de red avanzada -> Ethernet -> Más opciones de adaptador (Editar) -> *Configurar...* -> Administración de energía -> **Desactivar todo** | Opciones avanzadas -> Ethernet de consumo eficiente de energía -> **Desactivado** | Ethernet ecológico -> **Desactivado** |  Gigabit Lite -> **Desactivado** | Power Saving Mode -> **Desactivado** | Velocidad de enlace WOL y Apagado -> **Sin reducción de velocidad** | Velocidad y Dúplex -> **2.5 Gbps Full Dúplex**
+<mark style="background: #ADCCFFA6;">Configuración de Ethernet</mark>: Configuración (Sistema) -> Red e Internet -> Configuración de red avanzada -> Ethernet -> Más opciones de adaptador (Editar) -> *Configurar...* -> Administración de energía -> **Desactivar todo**
+Opciones avanzadas -> Ethernet de consumo eficiente de energía -> **Desactivado**
+Ethernet ecológico -> **Desactivado**
+Gigabit Lite -> **Desactivado**
+Power Saving Mode -> **Desactivado**
+Velocidad de enlace WOL y Apagado -> **Sin reducción de velocidad**
+Velocidad y Dúplex -> **Autonegociación**
 
 <mark style="background: #ADCCFFA6;">Liberar uso de CPU de temas de paquetes de red</mark>: `sudo netsh int ip set global taskoffload=enabled`
 
@@ -125,38 +127,20 @@ Editor del registro -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control` 
 
 <mark style="background: #ADCCFFA6;">Limpieza automática de disco</mark>: Configuración -> Sistema -> Almacenamiento -> Sensor de almacenamiento (*Activado*) -> Limpieza automática de contenido de usuario (*Activado*) -> **Ejecutar sensor de almacenamiento (Mensualmente)** -> **Eliminar archivos de la papelera de reciclaje si llevan en esta más de: (14 días)** -> **Eliminar archivos de carpeta de Descargas si no se han abierto durante más de: (14 días)**
 
-### 1.4.1 Usar drivers SSD en Windows 11
-Windows 11 "traduce" comunicación del SSD a formato para discos más viejos, ralentizando velocidad de los discos más rápidos. Para desbloquear el driver oculto:
-1. El primer comando **activa la anulación de la gestión de funciones**: 
-	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 735209102 /t REG_DWORD /d 1 /f`
-2. El segundo comando **habilita la siguiente clave necesaria**:
-	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 1853569164 /t REG_DWORD /d 1 /f`
-3. Y el tercero **completa la configuración**:
-	- `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 156965516 /t REG_DWORD /d 1 /f`
-
-#### ¿Cómo sabemos si ha funcionado? 
-Para verificarlo, `clic derecho` en el botón de Inicio -> Administrador de dispositivos. El disco SSD ya no aparece bajo la categoría habitual de *Unidades de disco*, sino que ahora se muestra bajo **Discos de almacenamiento**.
-> [!important]+
-> Doble clic sobre el SSD en esa nueva ubicación. Controlador -> Detalles del controlador, debería aparrecer el nombre del archivo: `nvmedisk.sys`. <mark style="background: #FF5582A6;">Si está eso, ya está corriendo con el motor de Windows Server</mark>. Si sigue estando `disk.sys` o `stornvme.sys`, el *cambio no se ha aplicado*.
+Configuración del sistema -> Arranque -> Opciones avanzadas -> 
+![[arranque.png]]
 
 ## 1.5 Windows 11 Privacidad
 [Herramienta para eliminar app de IA y telemetría](https://hixec.com/winzard/)
 
-## 1.6 Liberar 5GB de RAM de Windows 11 (SOLO SI SE TIENE UN BUEN SSD)
-- `Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain` -> Valor `Start` -> **Valor = 4** | **Base = Hexadecimal**
-- `Win + r` -> `regedit` -> `Equipo\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters` -> Valor `EnablePrefetcher` -> **Valor = 0** | **Base = Hexadecimal**
-
-## 1.7 Modos de aceleración del procesador
+## 1.6 Modos de aceleración del procesador
 Editar la configuración del plan de energía -> Cambiar la configuración avanzada de energía -> Administración de energía del procesador -> Modo de mejora del rendimiento del procesador -> **Agresiva** | **Eficiencia agresiva** (*en el caso de portátil, únicamente*)
 
-## 1.8 Vaciar caché de la memoria RAM
+## 1.7 Vaciar caché de la memoria RAM
+<mark style="background: #FF5582A6;">NO EJECUTAR CÍCLICAMENTE</mark>, <mark style="background: #FF5582A6;">HARÁ EL SISTEMA MÁS LENTO</mark>. <mark style="background: #ADCCFFA6;">Ejecutar para benchmarking</mark> con caché fría.
 1. Descargar [RAMMap](https://learn.microsoft.com/es-es/sysinternals/downloads/rammap)
 2. Abrir `RAMMap64.exe`.
 3. Click en `Empty` -> Click en `Empty StandBy List`.
-
-## 1.9 Configuración del sistema
-Configuración del sistema -> Arranque -> Opciones avanzadas -> 
-![[arranque.png]]
 
 ---
 
