@@ -353,6 +353,20 @@
         "type": "FILES",
         "pattern": "Red Team/Pentesting/02 - Evaluación de vulnerabilidades/Evaluación de vulnerabilidades.base",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "02 - Recursos/🛠️ Tools/Tools.base",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

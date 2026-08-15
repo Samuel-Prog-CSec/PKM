@@ -142,6 +142,24 @@ Editar la configuración del plan de energía -> Cambiar la configuración avanz
 2. Abrir `RAMMap64.exe`.
 3. Click en `Empty` -> Click en `Empty StandBy List`.
 
+## 1.8 Configuración del plan energía
+Una vez establecido el plan de energía en `Equilibrado` (o el que corresponda). Configuraremos el plan de energía. `Editar plan de energía` -> `Cambiar la configuración avanzada de energía`.
+- Disco duro -> Apagar disco duro tras -> Configuración (Minutos): **0**.
+- Configuración de adaptador inalámbrico -> Modo de ahorro de energía -> Configuración: **Rendimiento máximo**.
+- Configuración de USB -> Configuración de suspensión selectica de USB -> Configuración: **Deshabilitado**.
+- PCI Express -> Administración de energía del estado de vínculos -> Configuración: **Desactivar**.
+- Configuración multimedia -> Al compartir multimedia -> Configuración: **Prevenir la suspensión debida a inactividad**.
+- Configuración multimedia -> Compensar la calidad de reproducción de video -> Configuración: **Compensación de rendimiento de reproducción de video**.
+- Configuración multimedia -> Al reproducir video -> Configuración: **Optimizar calidad de video**.
+- AMD Powe Slider -> Overlay -> Configuración: **Mejor desempeño**.
+- Gráficos dinámicos intercambiables -> Configuración global -> Configuración: **Maximizar rendimiento**.
+
+## 1.9 Liberar RAM y cuidar el NVMe: Adiós a la Hibernación
+Teniendo unos masivos 64GB de RAM DDR5, la función de hibernación de Windows es tu peor enemiga. Por defecto, Windows reserva un espacio equivalente a un gran porcentaje de tu RAM en el disco duro (el archivo `hiberfil.sys`) para volcar los datos cuando el PC se suspende profundamente. **Esto te roba decenas de gigabytes en tu NVMe de 2TB y genera escrituras masivas e innecesarias que degradan la vida útil del SSD**.
+- Abre la terminal (`CMD`) como Administrador.
+- Escribe el siguiente comando y pulsa Enter: `powercfg.exe /hibernate off`
+- Esto borrará el archivo de inmediato, recuperará el espacio para tus repositorios, proyectos y vídeos, y evitará ciclos de escritura inútiles.
+
 ---
 
 # 2. Customización de Brave Browser
@@ -176,7 +194,7 @@ https://youtu.be/W6cKFliWW6Q
 - Tamaño de la cache del sombreador -> **10 GB** _(la mejor opción en general)_ | **Desactivado** _(algunos juegos pueden dar problemas con esta opción, si se da el caso, valorar desactivar)_
 - Tecnologia del monitor -> **Actualización fija**
 - Triple búfer -> **Desactivado** -> Mejor desactivado en general
-- Frecuencia máxima fotograma -> **58**.
+- Frecuencia máxima fotograma -> **58-60**
 
 ## NVIDIA APP
 - RTX Dynamic Vibrance -> **Desactivado para trabajo / Activado (moderado) para gaming** _(altera la precisión de color; no recomendable para uso profesional)_
@@ -185,7 +203,6 @@ https://youtu.be/W6cKFliWW6Q
 - Anulación de DLSS - Modo generación de fotogramas -> **Utilizar la configuración de la aplicación 3D**
 - Escalado en imagen -> *Si esta activo DLSS Super resolution* -> **Desactivado**
 - RTX Video HDR -> **Activado solo con HDR habilitado en Windows** _(convierte vídeo SDR a HDR10 con IA)_
-- Movimiento fluido -> **Activado**
 
 ---
 
@@ -193,6 +210,21 @@ https://youtu.be/W6cKFliWW6Q
 - **Reducir input lag del teclado**: ajustes de teclado (`Teclado`) -> Retraso de la repetición y Velocidad de la repetición -> **al máximo** (*Corto* y *Rápida*).
 - **Reducir input lag ratón**: ajustes de ratón (`Ratón`) -> Opciones de puntero -> Establecer velocidad de puntero en el **tick número 6**/11 && **Desactivar precisión de puntero**.
 - **USB Ultra-rápido**: Administrador de dispositivos -> Controladoras de bus serie universal. En todas las entradas que haya: Doble click -> Administrador de energía -> Permitir que el equipo apague este dispositivo para ahorrar energía -> **Desactivado**.
-- Editar la configuración del plan de energía -> Cambiar la configuración avanzada de energía -> Configuración de USB -> Configuración de suspensión selectiva de USB -> **Configuración: Deshabilitado**.
-- Editar la configuración del plan de energía -> Cambiar la configuración avanzada de energía ->PCI Express -> Administración de energía del estado de vínculos -> **Configuración: Desactivar**.
 - Administrador de dispositivos -> Dispositivos de interfaz de usuario (HID) -> Dispositivos de periféricos y los "Dispositivo de entrada USB": Doble click -> Administrador de energía -> Permitir que el equipo apague este dispositivo para ahorrar energía -> **Desactivado**.
+
+# 5. Configuración de ventiladores
+Usando el software para manejar ventiladores (Armoury Crate o cualquier otro), ajustar lo correpondiente. **Modo inteligente** activado.
+
+## 5.1 Disipador de CPU
+**Aceleración y desaceleración**: 1 punto.
+- **Punto 1**: 35% | 50ºC
+- **Punto 2**: 50% | 65ºC
+- **Punto 3**: 70% | 75ºC
+- **Punto 4**: 100% | 85ºC
+
+## 5.2 Resto de ventiladores
+**Aceleración y desaceleración**: 1 punto.
+- **Punto 1**: 35% | 40ºC
+- **Punto 2**: 50% | 60ºC
+- **Punto 3**: 70% | 75ºC
+- **Punto 4**: 100% | 85ºC

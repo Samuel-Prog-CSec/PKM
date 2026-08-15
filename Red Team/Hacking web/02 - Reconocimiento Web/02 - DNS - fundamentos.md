@@ -9,9 +9,7 @@ Nota previa: "[[01 - WHOIS]]"
 Nota siguiente: "[[03 - Enumeración DNS con dig]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
-<mark style="background: #ADCCFFA6;">El `DNS` (Domain Name System) traduce nombres de dominio legibles (`www.example.com`) a las direcciones IP numéricas (`192.0.2.1`) que las máquinas usan para comunicarse</mark>. Es el GPS de internet: tú memorizas un nombre, el `DNS` resuelve la coordenada exacta. Sin él tendrías que recordar la IP de cada servicio.
+<mark style="background: #ADCCFFA6;">El `DNS` (Domain Name System) traduce nombres de dominio legibles (`www.example.com`) a las direcciones IP numéricas (`192.0.2.1`) que las máquinas usan para comunicarse</mark>. Es el **GPS de internet**: tú memorizas un nombre, el `DNS` resuelve la coordenada exacta. Sin él tendrías que recordar la IP de cada servicio.
 
 Para el recon, el `DNS` no es solo plumbing: es <mark style="background: #FFB86CA6;">un mapa de la infraestructura del objetivo</mark>. Cada registro publicado es un activo que el objetivo expone voluntariamente, y leerlos no requiere tocar sus servidores web.
 
@@ -27,7 +25,7 @@ La resolución es una carrera de relevos por la jerarquía `DNS`. Cuando pides `
 6. El `resolver` entrega la IP a tu equipo y la **cachea** durante el `TTL` del registro.
 7. Tu equipo se conecta directamente al servidor web.
 
-<mark style="background: #FFB8EBA6;">El `TTL` (Time-To-Live) controla cuánto se cachea cada registro</mark>. Un `TTL` muy bajo (30–60 s) suele delatar balanceo de carga, *failover* o infraestructura que cambia a menudo — información útil al perfilar al objetivo.
+<mark style="background: #FFB8EBA6;">El `TTL` (Time-To-Live) controla cuánto se cachea cada registro</mark>. Un `TTL` muy bajo (30–60 s) <mark style="background: #FF5582A6;">suele delatar balanceo de carga, failover o infraestructura que cambia a menudo</mark> — información útil al perfilar al objetivo.
 
 # El fichero hosts
 
@@ -90,18 +88,18 @@ Este fichero declara los servidores de nombres (`NS`), el de correo (`MX`) y las
 | `PTR` | Pointer | DNS inverso: IP → nombre | `1.2.0.192.in-addr.arpa. IN PTR www...` |
 
 > [!info]+ La clase `IN`
-> El `IN` que precede al tipo significa "Internet" — el campo de clase del registro. Existen otras clases (`CH` Chaosnet, `HS` Hesiod), pero en el DNS moderno verás `IN` casi siempre.
+> El `IN` que <mark style="background: #FFB86CA6;">precede al tipo significa "Internet"</mark> — el campo de clase del registro. Existen otras clases (`CH` Chaosnet, `HS` Hesiod), pero en el DNS moderno verás `IN` casi siempre.
 
 # Por qué el DNS importa en recon
 
 El `DNS` es un componente crítico de la infraestructura del objetivo y una de las fuentes más rentables de la fase pasiva:
 
 - **Descubrir activos**: los registros revelan subdominios, servidores de correo y de nombres. <mark style="background: #FF5582A6;">Un `CNAME` que apunta a un recurso externo ya dado de baja (`dev.example.com → bucket-abandonado.s3.aws`) es un *dangling CNAME*: la base de un `subdomain takeover`</mark>, una de las vulnerabilidades más cazadas en bug bounty. Lo retomamos en [[07 - Certificate Transparency logs]] y [[05 - Enumeración de subdominios]].
-- **Mapear la infraestructura**: los `NS` revelan el proveedor de hosting; un `A` para `loadbalancer.example.com` localiza el balanceador; los `MX` el correo. <mark style="background: #8000E1A6;">Encadenando registros reconstruyes cómo se conectan los sistemas</mark> y dónde están los puntos de estrangulamiento.
+- **Mapear la infraestructura**: los `NS` <mark style="background: #ADCCFFA6;">revelan el proveedor de hosting</mark>; un `A` para `loadbalancer.example.com` <mark style="background: #FFB86CA6;">localiza el balanceador</mark>; los `MX` el correo. <mark style="background: #8000E1A6;">Encadenando registros reconstruyes cómo se conectan los sistemas</mark> y dónde están los puntos de estrangulamiento.
 - **Fugas en registros `TXT`**: <mark style="background: #FFB86CA6;">los `TXT` filtran qué SaaS usa la organización</mark>. Un `google-site-verification=...` indica Google Workspace; `_1password=...` delata el gestor de contraseñas; los registros `SPF`/`DKIM`/`DMARC` listan los proveedores de correo autorizados. Todo ello alimenta fingerprinting y campañas de phishing dirigidas.
 - **Monitorización de cambios**: vigilar el `DNS` en el tiempo delata infraestructura nueva. La aparición repentina de `vpn.example.com` o `staging.example.com` señala un punto de entrada recién expuesto — la lógica del recon continuo.
 
 > [!info]+ DNS over HTTPS / TLS (DoH/DoT)
-> Resolvers modernos (`1.1.1.1`, `8.8.8.8`) cifran las consultas con `DoH`/`DoT`. No cambia lo que el objetivo **publica** en sus zonas, pero sí dificulta espiar las consultas DNS de un usuario en la red — relevante en escenarios de *man-in-the-middle* o *DNS hijacking* defensivo.
+> Resolvers modernos (`1.1.1.1`, `8.8.8.8`) cifran las consultas con `DoH`/`DoT`. No cambia lo que el objetivo **publica** en sus zonas, pero sí <mark style="background: #FF5582A6;">dificulta espiar las consultas DNS de un usuario en la red</mark> — relevante en escenarios de *man-in-the-middle* o *DNS hijacking* defensivo.
 
 Conocer la teoría es la mitad; la otra es interrogar el `DNS` activamente. La herramienta de referencia es `dig`, que abrimos en [[03 - Enumeración DNS con dig]].

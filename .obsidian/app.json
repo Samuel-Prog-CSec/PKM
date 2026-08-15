@@ -13,5 +13,6 @@
   "smartIndentList": true,
   "useTab": true,
   "vimMode": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "openBehavior": ""
 }

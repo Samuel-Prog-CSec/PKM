@@ -10,8 +10,6 @@ Nota previa: ""
 Nota siguiente: "[[01 - Introducción a SSRF]]"
 Area: "[[SSRF.base|SSRF]]"
 ---
----
-
 Los ataques **server-side** apuntan a la aplicación o el servicio que corre en el servidor, a diferencia de los **client-side**, que se ejecutan en la máquina del cliente. <mark style="background: #ADCCFFA6;">La distinción es la frontera de confianza: un [[00 - Introducción a XSS|XSS]] ataca el navegador de la víctima; un ataque server-side ataca el propio servidor</mark> —y con él, la red interna, los secrets y, a menudo, la ejecución de comandos—. Este sub-tema cubre cuatro clases de vulnerabilidad server-side que comparten una misma raíz.
 
 # El hilo común

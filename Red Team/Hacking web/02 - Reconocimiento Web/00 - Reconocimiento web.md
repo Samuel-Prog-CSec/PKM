@@ -3,24 +3,21 @@ tags:
   - Web/Red-Team
   - Pentesting/Enumeracion
   - Recon
-  - Introduccion
   - Tipo/Introduccion
-Descripción: "El reconocimiento web (web reconnaissance) es la recopilación sistemática y metódica de información sobre un sitio o aplicación web objetivo"
+Descripción: El reconocimiento web (web reconnaissance) es la recopilación sistemática y metódica de información sobre un sitio o aplicación web objetivo
 Fecha de actualización: 2026-06-02
 Nota previa:
 Nota siguiente: "[[01 - WHOIS]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
 <mark style="background: #ADCCFFA6;">El **reconocimiento web** (`web reconnaissance`) es la recopilación sistemática y metódica de información sobre un sitio o aplicación web objetivo</mark>. Es la fase preparatoria que precede a cualquier análisis o explotación: define **qué** vas a atacar antes de plantearte el **cómo**. En la metodología del pentest se encuadra dentro de la fase `Information Gathering`, y en bug bounty es —sin discusión— la actividad que más separa a un cazador mediocre de uno rentable: <mark style="background: #FF5582A6;">cada activo que el objetivo expuso por descuido y olvidó es un punto de entrada que el resto de cazadores aún no ha mirado</mark>.
 
 ![Diagrama del proceso de pentesting con la fase de Information Gathering dentro del ciclo](https://academy.hackthebox.com/storage/modules/144/PT-process.png)
 
 El recon persigue cuatro objetivos:
 
-- **Identificar activos** (`assets`): descubrir todos los componentes accesibles públicamente —páginas, subdominios, direcciones IP, tecnologías—. Construye el mapa de la presencia online del objetivo.
-- **Descubrir información oculta**: localizar datos expuestos por descuido —archivos de backup, ficheros de configuración, documentación interna, credenciales filtradas en repositorios—. Estos hallazgos suelen ser puntos de entrada directos.
+- **Identificar activos** (`assets`): descubrir <mark style="background: #FFB8EBA6;">todos los componentes accesibles públicamente</mark> —páginas, subdominios, direcciones IP, tecnologías—. Construye el mapa de la presencia online del objetivo.
+- **Descubrir información oculta**: localizar <mark style="background: #FFB8EBA6;">datos expuestos por descuido</mark> —archivos de backup, ficheros de configuración, documentación interna, credenciales filtradas en repositorios—. Estos hallazgos suelen ser puntos de entrada directos.
 - **Analizar la superficie de ataque**: evaluar tecnologías, versiones, configuraciones y posibles vectores. <mark style="background: #FFB86CA6;">Cuanto mayor es la superficie expuesta, más probable es que exista un eslabón débil</mark>.
 - **Reunir inteligencia**: información aprovechable para explotación posterior o ingeniería social —personal clave, direcciones de correo, patrones de nomenclatura de cuentas y hosts—.
 
@@ -34,15 +31,15 @@ El reconocimiento se divide en dos metodologías con un compromiso fundamental e
 
 <mark style="background: #ADCCFFA6;">En el reconocimiento activo interactúas directamente con los sistemas del objetivo para extraer información</mark>. Es más directo y suele dar una visión más completa de la infraestructura, pero <mark style="background: #FFB86CA6;">cada interacción deja rastro</mark>: genera tráfico que un `IDS`, un `WAF` o un equipo de *blue team* pueden registrar y correlacionar.
 
-| Técnica | Descripción | Ejemplo | Herramientas | Riesgo de detección |
-| - | - | - | - | - |
-| `Port Scanning` | Identificar puertos y servicios abiertos | Escanear con `nmap` los puertos 80 (HTTP) y 443 (HTTPS) | `nmap`, `masscan`, `unicornscan` | Alto: la interacción directa puede disparar IDS y firewalls |
-| `Vulnerability Scanning` | Probar vulnerabilidades conocidas (software obsoleto, *misconfigs*) | Lanzar Nessus contra una app buscando `SQLi` o `XSS` | Nessus, OpenVAS, `nikto` | Alto: los escáneres envían *payloads* de explotación detectables |
-| `Network Mapping` | Mapear la topología de red y sus relaciones | `traceroute` para revelar saltos e infraestructura | `traceroute`, `nmap` | Medio-Alto: el tráfico inusual levanta sospechas |
-| `Banner Grabbing` | Leer los *banners* de los servicios | Conectar al puerto 80 y leer el banner HTTP para identificar el servidor | `netcat`, `curl` | Bajo: interacción mínima, pero registrable |
-| `OS Fingerprinting` | Identificar el sistema operativo | `nmap -O` para distinguir Windows/Linux | `nmap`, `xprobe2` | Bajo: alguna técnica avanzada es detectable |
-| `Service Enumeration` | Determinar versiones exactas de servicios | `nmap -sV` para saber si corre Apache 2.4.50 o Nginx 1.18.0 | `nmap` | Bajo: registrable, pero rara vez alerta |
-| `Web Spidering` | Rastrear el sitio para mapear páginas, directorios y archivos | Burp Spider / OWASP ZAP Spider mapeando la estructura | Burp Suite, OWASP ZAP, Scrapy | Bajo-Medio: detectable si el *crawler* no imita tráfico legítimo |
+| Técnica                  | Descripción                                                         | Ejemplo                                                                  | Herramientas                     | Riesgo de detección                                              |
+| ------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------- |
+| `Port Scanning`          | Identificar puertos y servicios abiertos                            | Escanear con `nmap` los puertos 80 (HTTP) y 443 (HTTPS)                  | `nmap`, `masscan`, `unicornscan` | Alto: la interacción directa puede disparar IDS y firewalls      |
+| `Vulnerability Scanning` | Probar vulnerabilidades conocidas (software obsoleto, *misconfigs*) | Lanzar Nessus contra una app buscando `SQLi` o `XSS`                     | Nessus, OpenVAS, `nikto`         | Alto: los escáneres envían *payloads* de explotación detectables |
+| `Network Mapping`        | Mapear la topología de red y sus relaciones                         | `traceroute` para revelar saltos e infraestructura                       | `traceroute`, `nmap`             | Medio-Alto: el tráfico inusual levanta sospechas                 |
+| `Banner Grabbing`        | Leer los *banners* de los servicios                                 | Conectar al puerto 80 y leer el banner HTTP para identificar el servidor | `netcat`, `curl`                 | Bajo: interacción mínima, pero registrable                       |
+| `OS Fingerprinting`      | Identificar el sistema operativo                                    | `nmap -O` para distinguir Windows/Linux                                  | `nmap`, `xprobe2`                | Bajo: alguna técnica avanzada es detectable                      |
+| `Service Enumeration`    | Determinar versiones exactas de servicios                           | `nmap -sV` para saber si corre Apache 2.4.50 o Nginx 1.18.0              | `nmap`                           | Bajo: registrable, pero rara vez alerta                          |
+| `Web Spidering`          | Rastrear el sitio para mapear páginas, directorios y archivos       | Burp Spider / OWASP ZAP Spider mapeando la estructura                    | Burp Suite, OWASP ZAP, Scrapy    | Bajo-Medio: detectable si el *crawler* no imita tráfico legítimo |
 
 El `port scanning` y el `service enumeration` con `nmap` son la puerta de entrada clásica al recon activo de un host — el detalle operativo de esas técnicas vive en [[02 - Escaneo de puertos y hosts|el escaneo de puertos con Nmap]].
 
@@ -50,14 +47,14 @@ El `port scanning` y el `service enumeration` con `nmap` son la puerta de entrad
 
 <mark style="background: #ADCCFFA6;">El reconocimiento pasivo reúne información sin tocar el objetivo, analizando únicamente fuentes públicas</mark>. Consultas a terceros (motores de búsqueda, bases de datos `WHOIS`, registros DNS públicos, archivos web) que no generan tráfico hacia la infraestructura del objetivo.
 
-| Técnica | Descripción | Ejemplo | Herramientas | Riesgo de detección |
-| - | - | - | - | - |
-| `Search Engine Queries` | Descubrir información indexada | Buscar `"[empresa] employees"` o *dorks* de archivos expuestos | Google, DuckDuckGo, Bing, Shodan | Muy bajo: actividad normal de internet |
-| `WHOIS Lookups` | Recuperar datos de registro de dominio | `whois` para obtener registrante, contactos y *name servers* | `whois`, servicios web | Muy bajo: consultas legítimas |
-| `DNS` | Analizar registros DNS (subdominios, servidores de correo) | `dig` para enumerar registros de un dominio | `dig`, `nslookup`, `host`, `dnsenum`, `fierce`, `dnsrecon` | Muy bajo: tráfico esencial de internet |
-| `Web Archive Analysis` | Examinar instantáneas históricas del sitio | Wayback Machine para ver versiones antiguas y rutas desaparecidas | Wayback Machine | Muy bajo: actividad normal |
-| `Social Media Analysis` | Recopilar datos de RRSS | LinkedIn para roles y objetivos de ingeniería social | LinkedIn, Twitter, herramientas OSINT | Muy bajo: perfiles públicos |
-| `Code Repositories` | Buscar secretos en repos públicos | GitHub en busca de credenciales o lógica filtrada | GitHub, GitLab | Muy bajo: repos pensados para acceso público |
+| Técnica                 | Descripción                                                | Ejemplo                                                           | Herramientas                                               | Riesgo de detección                          |
+| ----------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------- |
+| `Search Engine Queries` | Descubrir información indexada                             | Buscar `"[empresa] employees"` o *dorks* de archivos expuestos    | Google, DuckDuckGo, Bing, Shodan                           | Muy bajo: actividad normal de internet       |
+| `WHOIS Lookups`         | Recuperar datos de registro de dominio                     | `whois` para obtener registrante, contactos y *name servers*      | `whois`, servicios web                                     | Muy bajo: consultas legítimas                |
+| `DNS`                   | Analizar registros DNS (subdominios, servidores de correo) | `dig` para enumerar registros de un dominio                       | `dig`, `nslookup`, `host`, `dnsenum`, `fierce`, `dnsrecon` | Muy bajo: tráfico esencial de internet       |
+| `Web Archive Analysis`  | Examinar instantáneas históricas del sitio                 | Wayback Machine para ver versiones antiguas y rutas desaparecidas | Wayback Machine                                            | Muy bajo: actividad normal                   |
+| `Social Media Analysis` | Recopilar datos de RRSS                                    | LinkedIn para roles y objetivos de ingeniería social              | LinkedIn, Twitter, herramientas OSINT                      | Muy bajo: perfiles públicos                  |
+| `Code Repositories`     | Buscar secretos en repos públicos                          | GitHub en busca de credenciales o lógica filtrada                 | GitHub, GitLab                                             | Muy bajo: repos pensados para acceso público |
 
 <mark style="background: #FFB8EBA6;">El recon pasivo es más sigiloso, pero produce información menos completa</mark>: se limita a lo que ya es público. El activo rellena los huecos a cambio de exponerte.
 

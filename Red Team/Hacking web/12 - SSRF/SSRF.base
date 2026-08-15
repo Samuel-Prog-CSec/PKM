@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("SSRF.base", "SSRF")
+    filters: Area == link("SSRF.base", "SSRF")
     order:
       - file.name
       - Descripción

@@ -10,8 +10,6 @@ Nota previa: ""
 Nota siguiente: "[[01 - Detección y fingerprinting de generadores de PDF]]"
 Area: "[[PDF Injection.base|PDF Injection]]"
 ---
----
-
 <mark style="background: #ADCCFFA6;">Muchas aplicaciones generan PDFs —facturas, informes, tickets— a partir de datos del usuario</mark>. Para controlar el diseño del documento, las librerías de generación aceptan **HTML como entrada** y lo renderizan a PDF. Si parte de ese HTML proviene del usuario sin sanitizar, tenemos **HTML injection en el generador de PDF**. Y como el renderizado ocurre en el **servidor**, el impacto va mucho más allá de un [[00 - Introducción a XSS|XSS]] de cliente.
 
 <mark style="background: #FFB86CA6;">El motor de PDF suele ser un navegador *headless*</mark> —wkhtmltopdf usa WebKit/Qt— que, al procesar el HTML inyectado, descarga recursos externos y ejecuta JavaScript en el servidor. Eso abre la puerta a [[01 - Introducción a SSRF|SSRF]] (`<img>`/`<iframe>` apuntando a URLs internas), LFI (`file:///etc/passwd`) y lectura de ficheros locales vía JS. La propia documentación de wkhtmltopdf lo advierte sin rodeos:

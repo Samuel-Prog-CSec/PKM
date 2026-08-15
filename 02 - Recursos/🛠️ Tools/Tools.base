@@ -72,5 +72,5 @@ views:
         direction: ASC
     columnSize:
       file.name: 400
-      file.tags: 280
+      file.tags: 523
       note.Fecha de actualización: 150

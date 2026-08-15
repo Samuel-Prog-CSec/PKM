@@ -1,8 +1,7 @@
 views:
   - type: table
     name: Notas
-    filters:
-      Area == link("Reconocimiento Web.base", "Reconocimiento Web")
+    filters: Area == link("Reconocimiento Web.base", "Reconocimiento Web")
     order:
       - file.name
       - Descripción
@@ -33,7 +32,7 @@ views:
     columnSize:
       file.name: 330
       note.Descripción: 480
-      file.tags: 300
+      file.tags: 452
       note.Fecha de actualización: 150
   - type: table
     name: Fuzzing

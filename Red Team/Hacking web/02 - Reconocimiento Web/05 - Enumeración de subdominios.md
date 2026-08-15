@@ -9,20 +9,18 @@ Nota previa: "[[04 - Transferencias de zona DNS]]"
 Nota siguiente: "[[06 - Fuerza bruta de subdominios]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
 Bajo el dominio principal (`example.com`) suele esconderse una red de **subdominios**: extensiones que la organización crea para separar funciones o secciones —`blog.example.com`, `shop.example.com`, `mail.example.com`—. <mark style="background: #ADCCFFA6;">Enumerar subdominios es identificar sistemáticamente todos esos hosts</mark>, y es uno de los pasos que más amplía la superficie de ataque.
 
 # Por qué importan tanto
 
-Los subdominios alojan recursos que **no** se enlazan desde la web principal y que a menudo tienen menos vigilancia:
+Los subdominios alojan recursos que **no** se enlazan desde la web principal y que <mark style="background: #ADCCFFA6;">a menudo tienen menos vigilancia</mark>:
 
 - **Entornos de desarrollo y *staging***: `dev.`, `staging.`, `test.`, `uat.`. <mark style="background: #FFB86CA6;">Con medidas de seguridad relajadas, suelen exponer vulnerabilidades o información sensible</mark> que en producción estaría protegida.
 - **Portales de login ocultos**: paneles de administración (`admin.`, `portal.`, `vpn.`) que no deberían ser públicos pero lo son.
-- **Aplicaciones legacy**: webs viejas y olvidadas en subdominios, con software desactualizado y `CVE` conocidas.
+- **Aplicaciones legacy**: webs viejas y olvidadas en subdominios, con software desactualizado y [[04 - CVE|CVE]] conocidas.
 - **Información sensible**: documentos, datos internos o ficheros de configuración expuestos por descuido.
 
-A esto se suma el premio mayor: <mark style="background: #FF5582A6;">el `subdomain takeover`</mark>. Cuando un subdominio mantiene un `CNAME` apuntando a un servicio externo dado de baja (un bucket S3, un Heroku, un Azure, un GitHub Pages que ya no existe), un atacante puede **reclamar** ese recurso y servir contenido bajo el dominio legítimo de la víctima. Ojo: solo es explotable si el proveedor permite reaprovisionar el recurso liberado **sin verificar propiedad previa** —muchos ya lo mitigan (Azure y GitHub exigen verificación)—, así que no todo `CNAME` colgante es *takeover*: comprueba el *fingerprint* del proveedor (proyecto `can-i-take-over-xyz`) antes de reportar. <mark style="background: #8000E1A6;">El resultado es control total de un host del objetivo</mark> para phishing, robo de cookies o *bypass* de CORS. Es de los hallazgos más reportados —y mejor pagados— en bug bounty.
+A esto se suma el premio mayor: <mark style="background: #FF5582A6;">el `subdomain takeover`</mark>. Cuando un subdominio mantiene un `CNAME` apuntando a un servicio externo dado de baja (un bucket S3, un Heroku, un Azure, un GitHub Pages que ya no existe), un atacante puede **reclamar** ese recurso y servir contenido bajo el dominio legítimo de la víctima. Ojo: <mark style="background: #FF5582A6;">solo es explotable si el proveedor permite reaprovisionar el recurso liberado</mark> **sin verificar propiedad previa** —muchos ya lo mitigan (Azure y GitHub exigen verificación)—, así que no todo `CNAME` colgante es *takeover*: <mark style="background: #ADCCFFA6;">comprueba el fingerprint del proveedor</mark> (proyecto `can-i-take-over-xyz`) antes de reportar. <mark style="background: #8000E1A6;">El resultado es control total de un host del objetivo</mark> para phishing, robo de cookies o *bypass* de [[03 - CORS Misconfigurations|CORS]]. Es de los hallazgos más reportados —y mejor pagados— en bug bounty.
 
 # Dos enfoques: activo y pasivo
 

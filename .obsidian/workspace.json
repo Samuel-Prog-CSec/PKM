@@ -22,23 +22,8 @@
               "icon": "lucide-file",
               "title": "🏡 Home"
             }
-          },
-          {
-            "id": "783c937d618825fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Optimizaciones/Windows 11 Pro Optimized Setup.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows 11 Pro Optimized Setup"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 288
   },
   "right": {
     "id": "ea45d4bdceb40593",
@@ -191,8 +176,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -204,57 +189,58 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "bases:Crear nueva base": false,
       "switcher:Abrir selector rápido": false,
       "canvas:Crear nuevo lienzo": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "markdown-importer:Abrir el importador de Markdown": false,
+      "graph:Abrir vista gráfica": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "callout-manager:Insert Callout": false,
-      "templater-obsidian:Templater": false,
-      "graph:Abrir vista gráfica": false,
-      "homepage:Open homepage": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "a5984c00f83c5aee",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "🏡 Home.md",
     "Optimizaciones/Windows 11 Pro Optimized Setup.md",
+    "Optimizaciones/Fine-Tunning.md",
+    "Optimizaciones/Arch Linux Custom.md",
     "Optimizaciones/OPTIMIZAR WINDOWS 11 PRO.md",
+    "🏡 Home.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/09 - Fingerprinting web.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/08 - Virtual Hosts.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/04 - Transferencias de zona DNS.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/03 - Enumeración DNS con dig.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/06 - Fuerza bruta de subdominios.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/02 - DNS - fundamentos.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/01 - WHOIS.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/00 - Reconocimiento web.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/07 - Certificate Transparency logs.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/05 - Enumeración de subdominios.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
+    "Red Team/Hacking web/Web Pentesting.base",
+    "Red Team/Red-Team.base",
+    "Red Team/Hacking web/12 - SSRF/05 - Evasión de defensas SSRF.md",
+    "Red Team/Hacking web/12 - SSRF/04 - Blind SSRF.md",
+    "Red Team/Hacking web/12 - SSRF/03 - Explotación de SSRF.md",
+    "Red Team/Hacking web/12 - SSRF/02 - Identificación de SSRF.md",
+    "Red Team/Hacking web/12 - SSRF/SSRF.base",
+    "Red Team/Hacking web/12 - SSRF/01 - Introducción a SSRF.md",
+    "Redes/Protocolos/DNS.md",
+    "Red Team/Hacking web/04 - XSS/XSS.base",
+    "Red Team/Hacking web/23 - PDF Injection/PDF Injection.base",
+    "02 - Recursos/🛠️ Tools/Tools.base",
+    "Red Team/Hacking web/23 - PDF Injection/02 - Explotación de la generación de PDF.md",
+    "Red Team/Hacking web/04 - XSS/00 - Introducción a XSS.md",
+    "Red Team/Hacking web/12 - SSRF/00 - Introducción a los ataques server-side.md",
+    "Red Team/Hacking web/23 - PDF Injection/01 - Detección y fingerprinting de generadores de PDF.md",
+    "Red Team/Hacking web/23 - PDF Injection/03 - Arsenal de herramientas para PDF Injection.md",
+    "Red Team/Proyectos/Proyectos ofensivos.base",
     "03 - Archivos/Images/Optimización",
     "03 - Archivos/Images/Optimización/arranque.png",
-    "Optimizaciones/Fine-Tunning.md",
-    "Red Team/Pentesting/02 - Evaluación de vulnerabilidades/04 - CVE.md",
-    "Red Team/Pentesting/02 - Evaluación de vulnerabilidades/03 - CVSS.md",
-    "Red Team/Pentesting/02 - Evaluación de vulnerabilidades/02 - Estándares de evaluación.md",
-    "Red Team/Pentesting/02 - Evaluación de vulnerabilidades/01 - Evaluación de vulnerabilidades.md",
-    "Red Team/Pentesting/02 - Evaluación de vulnerabilidades/00 - Evaluaciones de seguridad.md",
     "Red Team/Pentesting/05 - Ataques a contraseñas/18 - Arsenal de herramientas.md.tmp.12784.e3dc70a44819",
-    "Red Team/Pentesting/05 - Ataques a contraseñas/01 - Wordlists y reglas personalizadas.md.tmp.12784.e2ace3566dce",
-    "02 - Recursos/🛠️ Tools/Hashcat/01 - Ataques avanzados y optimización con Hashcat.md.tmp.12784.123e929a0d3c",
-    "02 - Recursos/🛠️ Tools/Aircrack-ng/06 - Aircrack-ng.md.tmp.12784.226de4e8b40d",
-    "02 - Recursos/🛠️ Tools/Aircrack-ng/02 - Airodump-ng.md.tmp.12784.204f3ef1ac53",
-    "Redes/Protocolos/Wi-Fi (802.11)/02 - Arquitectura 802.11 y la trama MAC.md.tmp.12784.6d7261977f56",
-    "Red Team/Hacking Wi-Fi/02 - Ataques a WEP/12 - WEP en 2026 y arsenal.md.tmp.12784.fbcb288360d9",
-    "Red Team/Hacking Wi-Fi/01 - Ataques a WPS/12 - Arsenal y estado de WPS en 2026.md.tmp.12784.5d038a00f343",
-    "Red Team/Hacking Wi-Fi/00 - Fundamentos del pentesting Wi-Fi/10 - Arsenal de herramientas Wi-Fi.md.tmp.12784.8b018bcfbe9a",
-    "Inglés/01 - Gramática/Tiempos verbales/10 - Futuro con going to.md",
-    "02 - Recursos/Decisiones estructurales/023 - Módulos CWPE fuera de orden y reparto del cracking entre Wi-Fi y Hashcat.md",
-    "02 - Recursos/🛠️ Tools/Wifiphisher/01 - Escenarios y opciones de Wifiphisher.md",
-    "02 - Recursos/🛠️ Tools/Wifiphisher/00 - Introducción a Wifiphisher.md",
-    "02 - Recursos/🛠️ Tools/hostapd/02 - hostapd-mana.md",
-    "02 - Recursos/🛠️ Tools/hostapd/01 - AP falso con hostapd.md",
-    "02 - Recursos/🛠️ Tools/hostapd/00 - hostapd y su configuración.md",
-    "02 - Recursos/🛠️ Tools/Kismet/02 - Alertas y uso como WIDS.md",
-    "02 - Recursos/🛠️ Tools/Kismet/01 - Fuentes de datos y uso operativo.md",
-    "02 - Recursos/🛠️ Tools/Kismet/00 - Introducción a Kismet.md",
-    "02 - Recursos/🛠️ Tools/EAPHammer/02 - Portales, Karma y ataques a PSK con EAPHammer.md",
-    "02 - Recursos/🛠️ Tools/EAPHammer/01 - Ataques a WPA-Enterprise con EAPHammer.md",
-    "02 - Recursos/🛠️ Tools/EAPHammer/00 - Introducción a EAPHammer.md",
-    "02 - Recursos/🛠️ Tools/hcxtools/03 - hcxhashtool, hcxpsktool y el resto.md",
-    "02 - Recursos/🛠️ Tools/hcxtools/02 - hcxpcapngtool.md",
-    "02 - Recursos/🛠️ Tools/hcxtools/01 - hcxdumptool.md",
     "Pasted image 20260725110756.png",
     "03 - Archivos/Images/Web-Pentesting/Brute-Force/Modificar_Contraseña.webp",
     "03 - Archivos/Images/Web-Pentesting/Brute-Force/taxonomia_brute_force.png",

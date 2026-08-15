@@ -10,8 +10,6 @@ Nota previa: "[[04 - Blind SSRF]]"
 Nota siguiente: "[[06 - Prevención de SSRF]]"
 Area: "[[SSRF.base|SSRF]]"
 ---
----
-
 En producción, una SSRF choca con defensas: *allowlists* de dominios, *denylists* de IPs internas y protecciones del endpoint de metadatos. <mark style="background: #ADCCFFA6;">Casi todas validan **un string** (la URL o el host) y no la **IP final** a la que se conecta</mark> — y esa brecha entre lo que se valida y lo que se pide es la que explotamos. Esta nota recoge la evasión moderna.
 
 # Representaciones alternativas de la IP

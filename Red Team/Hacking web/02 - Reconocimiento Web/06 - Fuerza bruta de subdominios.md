@@ -9,21 +9,19 @@ Nota previa: "[[05 - Enumeración de subdominios]]"
 Nota siguiente: "[[07 - Certificate Transparency logs]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
-<mark style="background: #ADCCFFA6;">La fuerza bruta de subdominios prueba sistemáticamente una lista de nombres candidatos contra el dominio para descubrir cuáles existen</mark>. Es la técnica **activa** de descubrimiento por excelencia: rellena los huecos que la enumeración pasiva no ve, a cambio de generar consultas DNS detectables.
+<mark style="background: #ADCCFFA6;">La fuerza bruta de subdominios prueba sistemáticamente una lista de nombres candidatos contra el dominio para descubrir cuáles existen</mark>. Es la técnica **activa** de descubrimiento por excelencia: <mark style="background: #FFB8EBA6;">rellena los huecos que la enumeración pasiva no ve</mark>, a cambio de generar consultas DNS detectables.
 
 # El proceso en cuatro pasos
 
 1. **Selección de `wordlist`**: el motor de todo. Puede ser:
-   - *General*: nombres comunes (`dev`, `staging`, `admin`, `mail`, `test`). Útil cuando no conoces las convenciones del objetivo.
-   - *Dirigida*: enfocada a la industria, tecnología o patrones del objetivo. Más eficiente y con menos falsos positivos.
-   - *Custom*: generada a partir de inteligencia previa (nombres de productos, regiones, entornos vistos en otros activos).
+   - *General*: nombres comunes (`dev`, `staging`, `admin`, `mail`, `test`). <mark style="background: #FFB86CA6;">Útil cuando no conoces las convenciones del objetivo</mark>.
+   - *Dirigida*: <mark style="background: #ADCCFFA6;">enfocada a la industria, tecnología o patrones del objetivo</mark>. Más eficiente y con menos falsos positivos.
+   - *Custom*: <mark style="background: #ADCCFFA6;">generada a partir de inteligencia previa</mark> (nombres de productos, regiones, entornos vistos en otros activos).
 2. **Iteración**: la herramienta antepone cada palabra al dominio (`dev.example.com`, `staging.example.com`…).
 3. **Consulta DNS**: resuelve cada candidato (registro `A`/`AAAA`). Si resuelve, el subdominio existe.
 4. **Filtrado y validación**: los que resuelven pasan a la lista de válidos; conviene confirmarlos sondeándolos por HTTP.
 
-<mark style="background: #FFB8EBA6;">La calidad de la `wordlist` determina el resultado más que la herramienta</mark>. El estándar de facto es `SecLists`:
+<mark style="background: #FFB8EBA6;">La calidad de la `wordlist` determina el resultado más que la herramienta</mark>. El estándar de facto es [SecList](https://github.com/danielmiessler/SecLists.git):
 
 ```shell-session
 $ ls /usr/share/seclists/Discovery/DNS/

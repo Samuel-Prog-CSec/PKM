@@ -9,9 +9,7 @@ Nota previa: "[[06 - Fuerza bruta de subdominios]]"
 Nota siguiente: "[[08 - Virtual Hosts]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
-Cada vez que un sitio sirve `HTTPS`, presenta un certificado `SSL/TLS` que verifica su identidad. Para evitar que una `CA` (Certificate Authority) emita certificados fraudulentos sin que nadie se entere, existe `Certificate Transparency`: <mark style="background: #ADCCFFA6;">los `CT logs` son registros públicos, *append-only*, que anotan la emisión de cada certificado `SSL/TLS`</mark>. Cuando una CA emite un certificado, debe enviarlo a varios `CT logs` independientes, abiertos a inspección por cualquiera.
+Cada vez que un sitio sirve HTTPS, presenta un certificado SSL/TLS que verifica su identidad. <mark style="background: #ADCCFFA6;">Para evitar que una CA (Certificate Authority) emita certificados fraudulentos sin que nadie se entere, existe Certificate Transparency</mark>: los `CT logs` son registros públicos, *append-only*, que <mark style="background: #FFB8EBA6;">anotan la emisión de cada certificado</mark> `SSL/TLS`. Cuando una CA emite un certificado, debe enviarlo a varios CT logs independientes, abiertos a inspección por cualquiera.
 
 > [!info]+ Cómo se garantiza el *append-only*
 > Cada `CT log` es un **árbol de Merkle** criptográfico: añadir un certificado produce una prueba que no permite borrar ni alterar entradas anteriores sin romper el hash raíz. Al emitir un certificado, la CA recibe un `SCT` (*Signed Certificate Timestamp*) que prueba su inclusión en el log; los navegadores pueden **exigir** ese `SCT` para aceptar el certificado. No cambia tu uso ofensivo (sigues consultando `crt.sh`), pero es lo que distingue un CT log de "una base de datos de certificados".
@@ -37,16 +35,16 @@ Los subdominios viven en el campo `SAN` (`Subject Alternative Name`) del certifi
 
 # Dónde buscar
 
-| Herramienta | Características | Pros | Contras |
-| - | - | - | - |
-| `crt.sh` | Interfaz web sencilla, búsqueda por dominio, muestra detalles y `SAN` | Gratis, sin registro, API JSON | Filtrado y análisis limitados |
-| `Censys` | Motor de búsqueda de dispositivos e infra, filtrado avanzado por dominio/IP/atributos del certificado | Datos extensos, API, *pivoting* | Requiere registro (capa gratuita) |
+| Herramienta                         | Características                                                                                       | Pros                            | Contras                           |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------- | --------------------------------- |
+| [crt.sh](https://crt.sh/)           | Interfaz web sencilla, búsqueda por dominio, muestra detalles y `SAN`                                 | Gratis, sin registro, API JSON  | Filtrado y análisis limitados     |
+| [Censys](https://search.censys.io/) | Motor de búsqueda de dispositivos e infra, filtrado avanzado por dominio/IP/atributos del certificado | Datos extensos, API, *pivoting* | Requiere registro (capa gratuita) |
 
 # `crt.sh` desde la terminal
 
-`crt.sh` expone una API JSON, ideal para automatizar. Para sacar todos los subdominios `dev` de `facebook.com`:
+`crt.sh` expone una *API JSON*, ideal para automatizar. Para sacar todos los subdominios `dev` de `facebook.com`:
 
-```shell-session
+```bash
 $ curl -s "https://crt.sh/?q=facebook.com&output=json" \
   | jq -r '.[] | select(.name_value | contains("dev")) | .name_value' \
   | sort -u
@@ -64,9 +62,9 @@ newdev.facebook.com
 - `sort -u`: ordena y elimina duplicados.
 
 > [!warning]+ Wildcards y nombres muertos
-> Verás muchas entradas *wildcard* (`*.dev.facebook.com`): el certificado ampara cualquier host bajo ese sufijo, pero **no** te dice qué hosts existen realmente. Además, parte de los nombres de CT corresponden a certificados viejos cuyos hosts ya no resuelven. <mark style="background: #8000E1A6;">CT te da candidatos, no hosts vivos</mark>: pasa siempre la lista por un resolvedor (`dnsx`, `puredns`) y un sondeo HTTP (`httpx`) para quedarte con lo que responde.
+> Verás muchas entradas *wildcard* (`*.dev.facebook.com`): el certificado ampara cualquier host bajo ese sufijo, pero **no** te dice qué hosts existen realmente. Además, parte de los nombres de CT corresponden a certificados viejos cuyos hosts ya no resuelven. <mark style="background: #FF5582A6;">CT te da candidatos, no hosts vivos</mark>: <mark style="background: #ADCCFFA6;">pasa siempre la lista por un resolvedor</mark> (`dnsx`, `puredns`) <mark style="background: #ADCCFFA6;">y un sondeo HTTP</mark> (`httpx`) para quedarte con lo que responde.
 
 > [!info]+ Herramientas que consumen CT
-> No necesitas parsear `crt.sh` a mano: `subfinder` y `amass` ya integran los CT logs entre sus fuentes pasivas. `certspotter` monitoriza emisiones nuevas en tiempo real (útil para recon continuo), y `cero` extrae los `SAN` directamente del handshake TLS de hosts vivos. En `Censys` o `Shodan` puedes **pivotar por certificado**: dado el hash o el `SAN` de un certificado, encuentras todos los hosts que lo presentan — una vía para correlacionar infraestructura aparentemente inconexa.
+> No necesitas parsear `crt.sh` a mano: `subfinder` y `amass` ya integran los CT logs entre sus fuentes pasivas. `certspotter` monitoriza emisiones nuevas en tiempo real (útil para recon continuo), y `cero` extrae los `SAN` directamente del handshake TLS de hosts vivos. En `Censys` o `Shodan` puedes **pivotar por certificado**: <mark style="background: #ADCCFFA6;">dado el hash o el `SAN` de un certificado, encuentras todos los hosts que lo presentan</mark> — una <mark style="background: #FFB8EBA6;">vía para correlacionar infraestructura aparentemente inconexa</mark>.
 
 CT y DNS cubren los hosts que el objetivo publica. Pero algunos servidores esconden sitios que solo responden a la cabecera `Host` correcta y nunca aparecen en ningún registro: los [[08 - Virtual Hosts]].
