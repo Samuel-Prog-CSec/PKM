@@ -4,8 +4,6 @@ https://www.youtube.com/watch?v=4JXvewurhks
 https://www.youtube.com/watch?v=rY2nlI84S0E
 https://www.youtube.com/watch?v=N60M36PRHsY
 
----
-
 # Fine Tunning GPU (NVIDIA)
 https://www.youtube.com/watch?v=biwZbY2Hrig
 https://www.youtube.com/watch?v=JS5eaKS62q4
@@ -20,8 +18,9 @@ Reinicia, pulsa `Supr` o `F2` para entrar en la BIOS, y pulsa `F7` para ir al **
 
 ## 1. Optimización de la Memoria RAM (64GB DDR5)
 En la pestaña **Ai Tweaker**, vamos a ajustar la memoria para que rinda al máximo y, sobre todo, para evitar que Windows tarde una eternidad en arrancar (un problema común en la plataforma AM5 con 64GB de RAM).
-- **Ai Overclock Tuner -> EXPO I:** Esto carga las frecuencias y latencias óptimas de fábrica de tus módulos DDR5.
-- **VDDCR SOC Voltage -> Manual Mode (1.20V - 1.25V):** Al activar EXPO, las placas base suelen meter demasiado voltaje al controlador de memoria (SoC), a veces rondando los 1.35V. Limitarlo a 1.20V o 1.25V es totalmente estable y le quita varios grados de temperatura al procesador, protegiendo la delicada caché 3D.
+- **Ai Overclock Tuner -> DOC I:** Esto carga las frecuencias y latencias óptimas de fábrica de tus módulos DDR5.
+- **CPU SOC Voltage -> Manual Mode (1.25V | 1.25000):** Al activar EXPO (DOC), las placas base suelen meter demasiado voltaje al controlador de memoria (SoC), a veces rondando los 1.35V. Limitarlo a 1.20V o 1.25V es totalmente estable y le quita varios grados de temperatura al procesador, protegiendo la delicada caché 3D.
+- **CPU VDDIO / MC Voltage-> Manual Mode (1.35V | 1.35000):** hay que cambiarlo también.
 - _Uso de la lupa (F9)_ - Busca **Memory Context Restore** y ponlo en **Enabled**. Haz lo mismo buscando **Power Down Enable** y ponlo en **Enabled**. Esto evita que la placa base "entrene" la memoria DDR5 en cada encendido, reduciendo el tiempo de arranque de 40 segundos a apenas 10-15 segundos.
 
 ## 2. Undervolt y Rendimiento del Ryzen 7 7800X3D

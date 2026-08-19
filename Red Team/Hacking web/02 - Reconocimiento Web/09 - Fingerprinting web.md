@@ -9,8 +9,6 @@ Nota previa: "[[08 - Virtual Hosts]]"
 Nota siguiente: "[[10 - Crawling web]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
 <mark style="background: #ADCCFFA6;">El `fingerprinting` extrae los detalles técnicos de las tecnologías que sostienen un sitio web</mark>: servidor, sistema operativo, lenguaje, framework, `CMS`, `WAF`. Igual que una huella identifica a una persona, la firma digital de cada componente revela qué corre por debajo — y, con ello, qué exploits pueden funcionar.
 
 # Por qué importa
@@ -29,20 +27,20 @@ Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 
 # Herramientas
 
-| Herramienta | Descripción |
-| - | - |
-| `Wappalyzer` | Extensión/servicio que perfila tecnologías web (CMS, frameworks, analítica) |
-| `BuiltWith` | Perfilador con informes detallados del stack |
-| `WhatWeb` | CLI con gran base de firmas |
-| `Nmap` | Escáner versátil; con `NSE` hace fingerprinting de servicio/SO (ver [[02 - Escaneo de puertos y hosts|escaneo de puertos]]) |
-| `Netcraft` | Informes de tecnología, hosting y postura de seguridad |
-| `wafw00f` | Detecta e identifica `WAF` |
+| Herramienta  | Descripción                                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `Wappalyzer` | Extensión/servicio que perfila tecnologías web (CMS, frameworks, analítica)                                                 |
+| `BuiltWith`  | Perfilador con informes detallados del stack                                                                                |
+| `WhatWeb`    | CLI con gran base de firmas                                                                                                 |
+| `Nmap`       | Escáner versátil; con `NSE` hace fingerprinting de servicio/SO (ver [[02 - Escaneo de puertos y hosts escaneo de puertos]]) |
+| `Netcraft`   | Informes de tecnología, hosting y postura de seguridad                                                                      |
+| `wafw00f`    | Detecta e identifica `WAF`                                                                                                  |
 
 # Banner grabbing con `curl`
 
 `curl -I` (o `--head`) pide **solo** las cabeceras. Seguir la cadena de redirecciones es donde está la información:
 
-```shell-session
+```bash
 $ curl -I inlanefreight.com
 HTTP/1.1 301 Moved Permanently
 Server: Apache/2.4.41 (Ubuntu)

@@ -367,6 +367,13 @@
         "type": "FILES",
         "pattern": "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES",
+        "pattern": "Red Team/Pentesting/03 - Transferencia de archivos/Transferencia de archivos.base",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

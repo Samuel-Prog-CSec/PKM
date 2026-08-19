@@ -9,8 +9,6 @@ Nota previa: "[[07 - Certificate Transparency logs]]"
 Nota siguiente: "[[09 - Fingerprinting web]]"
 Area: "[[Reconocimiento Web.base|Reconocimiento Web]]"
 ---
----
-
 El DNS lleva el tráfico a la IP correcta; a partir de ahí, es el **servidor web** quien decide qué contenido servir. Apache, Nginx o IIS pueden alojar muchos sitios en una sola IP mediante `virtual hosting`. <mark style="background: #ADCCFFA6;">Un `Virtual Host` (VHost) es una configuración del servidor web que permite servir varios sitios distintos desde la misma IP</mark>, diferenciándolos por la cabecera HTTP `Host`.
 
 # La cabecera `Host` como interruptor

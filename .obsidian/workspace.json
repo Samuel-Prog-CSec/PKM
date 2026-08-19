@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "9611e39b191cb947",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "f0884f1e5b01de4c",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,8 +22,23 @@
               "icon": "lucide-file",
               "title": "🏡 Home"
             }
+          },
+          {
+            "id": "1ba48f0e0ded1fe8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Red Team/Pentesting/03 - Transferencia de archivos/06 - Transferencias protegidas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06 - Transferencias protegidas"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -57,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#TCP",
+                "query": "tag:Introduccion",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -99,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🏡 Home.md",
+                "file": "Optimizaciones/Windows 11 Pro Optimized Setup.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -176,8 +191,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -202,15 +217,26 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "1ba48f0e0ded1fe8",
   "lastOpenFiles": [
+    "Red Team/Pentesting/03 - Transferencia de archivos/Transferencia de archivos.base",
+    "Red Team/Pentesting/03 - Transferencia de archivos/05 - Métodos misceláneos.md",
+    "🏡 Home.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/04 - Transferencia con código.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/01 - Transferencia en Windows - descarga.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/02 - Transferencia en Windows - subida.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/03 - Transferencia en Linux.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/00 - Introducción a la transferencia de archivos.md",
+    "Red Team/Red-Team.base",
+    "Red Team/Hacking web/Web Pentesting.base",
     "Optimizaciones/Windows 11 Pro Optimized Setup.md",
     "Optimizaciones/Fine-Tunning.md",
-    "Optimizaciones/Arch Linux Custom.md",
     "Optimizaciones/OPTIMIZAR WINDOWS 11 PRO.md",
-    "🏡 Home.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/09 - Fingerprinting web.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/08 - Virtual Hosts.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/15 - Introducción al web fuzzing.md",
+    "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
+    "Optimizaciones/Arch Linux Custom.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/04 - Transferencias de zona DNS.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/03 - Enumeración DNS con dig.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/06 - Fuerza bruta de subdominios.md",
@@ -219,24 +245,13 @@
     "Red Team/Hacking web/02 - Reconocimiento Web/00 - Reconocimiento web.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/07 - Certificate Transparency logs.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/05 - Enumeración de subdominios.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
-    "Red Team/Hacking web/Web Pentesting.base",
-    "Red Team/Red-Team.base",
     "Red Team/Hacking web/12 - SSRF/05 - Evasión de defensas SSRF.md",
     "Red Team/Hacking web/12 - SSRF/04 - Blind SSRF.md",
     "Red Team/Hacking web/12 - SSRF/03 - Explotación de SSRF.md",
-    "Red Team/Hacking web/12 - SSRF/02 - Identificación de SSRF.md",
     "Red Team/Hacking web/12 - SSRF/SSRF.base",
-    "Red Team/Hacking web/12 - SSRF/01 - Introducción a SSRF.md",
-    "Redes/Protocolos/DNS.md",
     "Red Team/Hacking web/04 - XSS/XSS.base",
     "Red Team/Hacking web/23 - PDF Injection/PDF Injection.base",
     "02 - Recursos/🛠️ Tools/Tools.base",
-    "Red Team/Hacking web/23 - PDF Injection/02 - Explotación de la generación de PDF.md",
-    "Red Team/Hacking web/04 - XSS/00 - Introducción a XSS.md",
-    "Red Team/Hacking web/12 - SSRF/00 - Introducción a los ataques server-side.md",
-    "Red Team/Hacking web/23 - PDF Injection/01 - Detección y fingerprinting de generadores de PDF.md",
-    "Red Team/Hacking web/23 - PDF Injection/03 - Arsenal de herramientas para PDF Injection.md",
     "Red Team/Proyectos/Proyectos ofensivos.base",
     "03 - Archivos/Images/Optimización",
     "03 - Archivos/Images/Optimización/arranque.png",
