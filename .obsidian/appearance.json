@@ -6,7 +6,7 @@
   "enabledCssSnippets": [
     "home-dashboard"
   ],
-  "nativeMenus": false,
+  "nativeMenus": true,
   "showViewHeader": true,
   "showRibbon": true,
   "translucency": false,

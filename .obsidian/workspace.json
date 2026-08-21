@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9611e39b191cb947",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "f0884f1e5b01de4c",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -24,17 +24,17 @@
             }
           },
           {
-            "id": "1ba48f0e0ded1fe8",
+            "id": "f75e24a46177c3ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Red Team/Pentesting/03 - Transferencia de archivos/06 - Transferencias protegidas.md",
+                "file": "Optimizaciones/Nuevo/00_Setup_Definitivo_7800X3D_5070Ti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - Transferencias protegidas"
+              "title": "00_Setup_Definitivo_7800X3D_5070Ti"
             }
           }
         ],
@@ -106,7 +106,7 @@
       {
         "id": "4804e00b54e49735",
         "type": "tabs",
-        "dimension": 34.25925925925926,
+        "dimension": 34.24550430023456,
         "children": [
           {
             "id": "493c843bd0f9665f",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Optimizaciones/Windows 11 Pro Optimized Setup.md",
+                "file": "🏡 Home.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 - Proyectos/Tcpdump/Filtrado de paquetes Tcpdump.md",
+                "file": "🏡 Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Filtrado de paquetes Tcpdump"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -156,12 +156,13 @@
               "title": "Enlaces salientes de Filtrado de paquetes Tcpdump"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "670bf0020afcab0e",
         "type": "tabs",
-        "dimension": 33.24074074074074,
+        "dimension": 39.17122752150117,
         "children": [
           {
             "id": "3e2e9f160d67cf90",
@@ -183,7 +184,7 @@
       {
         "id": "f7749b6223e3ef3c",
         "type": "tabs",
-        "dimension": 32.5,
+        "dimension": 26.58326817826427,
         "children": [
           {
             "id": "8b107ad643ff1169",
@@ -217,11 +218,22 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1ba48f0e0ded1fe8",
+  "active": "a5984c00f83c5aee",
   "lastOpenFiles": [
+    "🏡 Home.md",
+    "Optimizaciones/Fine-Tunning.md",
+    "Optimizaciones/Nuevo/01_Reversing_Estado_Actual_1.md",
+    "Optimizaciones/Nuevo/00_Setup_Definitivo_7800X3D_5070Ti.md",
+    "Optimizaciones/Nuevo/01_Reversing_Estado_Actual.md",
+    "Optimizaciones/Windows 11 Pro Optimized Setup.md",
+    "Optimizaciones/OPTIMIZAR WINDOWS 11 PRO.md",
+    "Optimizaciones/Arch Linux Custom.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/07 - Recibir archivos over HTTP-S.md",
+    "Red Team/Pentesting/03 - Transferencia de archivos/06 - Transferencias protegidas.md",
+    "Blue Team/07 - Defensa de sistemas de IA/10 - Límites de las defensas y cómo se rompen.md",
+    "Blue Team/Blue-Team.base",
     "Red Team/Pentesting/03 - Transferencia de archivos/Transferencia de archivos.base",
     "Red Team/Pentesting/03 - Transferencia de archivos/05 - Métodos misceláneos.md",
-    "🏡 Home.md",
     "Red Team/Pentesting/03 - Transferencia de archivos/04 - Transferencia con código.md",
     "Red Team/Pentesting/03 - Transferencia de archivos/01 - Transferencia en Windows - descarga.md",
     "Red Team/Pentesting/03 - Transferencia de archivos/02 - Transferencia en Windows - subida.md",
@@ -229,33 +241,22 @@
     "Red Team/Pentesting/03 - Transferencia de archivos/00 - Introducción a la transferencia de archivos.md",
     "Red Team/Red-Team.base",
     "Red Team/Hacking web/Web Pentesting.base",
-    "Optimizaciones/Windows 11 Pro Optimized Setup.md",
-    "Optimizaciones/Fine-Tunning.md",
-    "Optimizaciones/OPTIMIZAR WINDOWS 11 PRO.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/09 - Fingerprinting web.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/08 - Virtual Hosts.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/15 - Introducción al web fuzzing.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
-    "Optimizaciones/Arch Linux Custom.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/04 - Transferencias de zona DNS.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/03 - Enumeración DNS con dig.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/06 - Fuerza bruta de subdominios.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/02 - DNS - fundamentos.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/01 - WHOIS.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/00 - Reconocimiento web.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/07 - Certificate Transparency logs.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/05 - Enumeración de subdominios.md",
-    "Red Team/Hacking web/12 - SSRF/05 - Evasión de defensas SSRF.md",
-    "Red Team/Hacking web/12 - SSRF/04 - Blind SSRF.md",
-    "Red Team/Hacking web/12 - SSRF/03 - Explotación de SSRF.md",
     "Red Team/Hacking web/12 - SSRF/SSRF.base",
     "Red Team/Hacking web/04 - XSS/XSS.base",
     "Red Team/Hacking web/23 - PDF Injection/PDF Injection.base",
     "02 - Recursos/🛠️ Tools/Tools.base",
     "Red Team/Proyectos/Proyectos ofensivos.base",
-    "03 - Archivos/Images/Optimización",
     "03 - Archivos/Images/Optimización/arranque.png",
-    "Red Team/Pentesting/05 - Ataques a contraseñas/18 - Arsenal de herramientas.md.tmp.12784.e3dc70a44819",
     "Pasted image 20260725110756.png",
     "03 - Archivos/Images/Web-Pentesting/Brute-Force/Modificar_Contraseña.webp",
     "03 - Archivos/Images/Web-Pentesting/Brute-Force/taxonomia_brute_force.png",

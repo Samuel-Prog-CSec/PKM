@@ -15,12 +15,13 @@ views:
     order:
       - formula.sub-tema
       - file.folder
+      - file.name
     sort:
       - property: file.folder
         direction: ASC
     columnSize:
       formula.sub-tema: 320
-      file.folder: 420
+      file.folder: 398
   - type: table
     name: Todas las notas
     filters:
