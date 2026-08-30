@@ -149,7 +149,7 @@ Estados: `[ ]` pendiente · `[/]` en progreso · `[x]` hecha · `[-]` cancelada.
 >
 > El botón **«+ Nueva tarea»** de la Home añade una plantilla al final de esta sección y abre esta nota para que la rellenes.
 
-- [/] Semana 1 · Brute forcing + SQLi básico [[Brute Forcing.base]] 🛫 2026-07-28 📅 2026-08-03 ⏫ [esfuerzo:: 14h]
+- [ ] Semana 1 · Brute forcing + SQLi básico [[Brute Forcing.base]] 🛫 2026-07-28 📅 2026-08-03 ⏫ [esfuerzo:: 14h]
 - [/] Semana 1 · Nmap [[Nmap.base]] 🛫 2026-07-28 📅 2026-08-03 🔽 [esfuerzo:: 7h]
 - [/] Semana 2 · XSS básico + File Inclusion [[XSS.base]] 🛫 2026-08-04 📅 2026-08-10 ⏫ [esfuerzo:: 14h]
 - [/] Semana 2 · Evaluación de vulnerabilidades [[Evaluación de vulnerabilidades.base]] 🛫 2026-08-04 📅 2026-08-10 🔽 [esfuerzo:: 2h]

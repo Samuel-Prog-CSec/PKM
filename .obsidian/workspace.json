@@ -15,30 +15,15 @@
               "type": "markdown",
               "state": {
                 "file": "🏡 Home.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
               "title": "🏡 Home"
             }
-          },
-          {
-            "id": "f75e24a46177c3ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Optimizaciones/Nuevo/00_Setup_Definitivo_7800X3D_5070Ti.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00_Setup_Definitivo_7800X3D_5070Ti"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,8 +177,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -205,7 +190,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "homepage:Open homepage": false,
       "bases:Crear nueva base": false,
       "switcher:Abrir selector rápido": false,
       "canvas:Crear nuevo lienzo": false,
@@ -215,15 +199,31 @@
       "graph:Abrir vista gráfica": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "callout-manager:Insert Callout": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "a5984c00f83c5aee",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Optimizaciones/Nuevo/00_Setup_Definitivo_7800X3D_5070Ti.md",
+    "📋 Temario.md",
     "🏡 Home.md",
+    "Red Team/Hacking web/08 - File Inclusion/11 - Arsenal de herramientas para File Inclusion.md",
+    "Red Team/Hacking web/08 - File Inclusion/07 - Log Poisoning y envenenamiento de sesiones.md",
+    "Red Team/Hacking web/08 - File Inclusion/06 - LFI + File Upload a RCE.md",
+    "Red Team/Hacking web/08 - File Inclusion/05 - Remote File Inclusion (RFI).md",
+    "Red Team/Hacking web/08 - File Inclusion/04 - PHP wrappers II - RCE y filter chains.md",
+    "Red Team/Hacking web/07 - File Upload/06 - Uploads limitados - SVG, polyglots y metadatos.md",
+    "Red Team/Pentesting/04 - Shells y Payloads/10 - Web shells en la práctica - Laudanum, Antak y PHP.md",
+    "Red Team/Hacking web/07 - File Upload/05 - Validación de tipo - Content-Type y magic bytes.md",
+    "Red Team/Hacking web/07 - File Upload/02 - Bypass de validación en cliente.md",
+    "Red Team/Hacking web/07 - File Upload/01 - Explotación básica - web shells y reverse shells.md",
+    "Red Team/Hacking web/07 - File Upload/07 - Vectores avanzados - procesamiento, ZIP Slip y race conditions.md",
+    "Red Team/Hacking web/11 - Web Attacks/16 - XXE a RCE, SSRF y DoS.md",
+    "Red Team/Hacking web/05 - SQL Injection/1️⃣ Introducción/08 - Escritura de archivos.md",
+    "02 - Recursos/🛠️ Tools/SQLMap/06 - Explotación del sistema operativo con SQLMap.md",
     "Optimizaciones/Fine-Tunning.md",
     "Optimizaciones/Nuevo/01_Reversing_Estado_Actual_1.md",
-    "Optimizaciones/Nuevo/00_Setup_Definitivo_7800X3D_5070Ti.md",
     "Optimizaciones/Nuevo/01_Reversing_Estado_Actual.md",
     "Optimizaciones/Windows 11 Pro Optimized Setup.md",
     "Optimizaciones/OPTIMIZAR WINDOWS 11 PRO.md",
@@ -233,24 +233,9 @@
     "Blue Team/07 - Defensa de sistemas de IA/10 - Límites de las defensas y cómo se rompen.md",
     "Blue Team/Blue-Team.base",
     "Red Team/Pentesting/03 - Transferencia de archivos/Transferencia de archivos.base",
-    "Red Team/Pentesting/03 - Transferencia de archivos/05 - Métodos misceláneos.md",
-    "Red Team/Pentesting/03 - Transferencia de archivos/04 - Transferencia con código.md",
-    "Red Team/Pentesting/03 - Transferencia de archivos/01 - Transferencia en Windows - descarga.md",
-    "Red Team/Pentesting/03 - Transferencia de archivos/02 - Transferencia en Windows - subida.md",
-    "Red Team/Pentesting/03 - Transferencia de archivos/03 - Transferencia en Linux.md",
-    "Red Team/Pentesting/03 - Transferencia de archivos/00 - Introducción a la transferencia de archivos.md",
     "Red Team/Red-Team.base",
     "Red Team/Hacking web/Web Pentesting.base",
-    "Red Team/Hacking web/02 - Reconocimiento Web/09 - Fingerprinting web.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/08 - Virtual Hosts.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/15 - Introducción al web fuzzing.md",
     "Red Team/Hacking web/02 - Reconocimiento Web/Reconocimiento Web.base",
-    "Red Team/Hacking web/02 - Reconocimiento Web/04 - Transferencias de zona DNS.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/03 - Enumeración DNS con dig.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/06 - Fuerza bruta de subdominios.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/02 - DNS - fundamentos.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/01 - WHOIS.md",
-    "Red Team/Hacking web/02 - Reconocimiento Web/00 - Reconocimiento web.md",
     "Red Team/Hacking web/12 - SSRF/SSRF.base",
     "Red Team/Hacking web/04 - XSS/XSS.base",
     "Red Team/Hacking web/23 - PDF Injection/PDF Injection.base",

@@ -46,18 +46,18 @@ FASE 7  →  Curve Optimizer (§17)                 15 min  ← ruta rápida
 
 `Ai Tweaker`:
 
-| Opción | Valor | Motivo |
-|---|---|---|
-| **Ai Overclock Tuner** | **EXPO I** | Carga el perfil validado del fabricante. **EXPO II relaja subtimings y suele rendir peor** |
-| **DRAM Frequency** | 🔴 **DDR5-6000** (bajar manualmente desde los 6400 del perfil) | Ver el bloque de abajo |
-| **UCLK DIV1 MODE** | **UCLK == MEMCLK** | Fuerza el 1:1 |
-| **FCLK Frequency** | **Auto** (≈2000 MHz) | Tocarlo a mano es la causa nº1 de errores WHEA en AM5 |
-| **CPU SOC Voltage** | **Manual · 1.20 V** (1.25 V si aparece inestabilidad) | AMD impuso un **tope duro de 1.30 V** tras los fallos de 2023. Limitarlo evita que la placa aplique 1.30-1.35 V sola con EXPO |
-| **CPU VDDIO / MC Voltage** | **Manual · 1.30 V** (1.35 V si aparece inestabilidad) | <mark style="background: #FFB86CA6;">No es un raíl de "menos es mejor": demasiado bajo desestabiliza igual que demasiado alto</mark> |
-| **DRAM VDD / VDDQ** | **Auto** (lo que fije EXPO — 1,41 V en este kit) | No tocar |
-| **Memory Context Restore** | **Enabled** | Reduce el POST de ~40 s a ~12-18 s. El mejor cambio de la BIOS. <mark style="background: #FFB86CA6;">Tras cambiar frecuencia o flashear BIOS, el primer arranque tarda más: está reentrenando. Es normal</mark> |
-| **Power Down Enable** | **Auto** | Ahorra <1 W y, combinado con MCR, causa inestabilidad en algunos kits de 64 GB. **No es lo mismo que MCR**: quien acorta el arranque es solo MCR |
-| **Gear Down Mode / tREFI** | **Auto** | No tocar sin dominar la materia |
+| Opción                     | Valor                                                          | Motivo                                                                                                                               |
+| -------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ai Overclock Tuner**     | **EXPO I**                                                     | Carga el perfil validado del fabricante. **EXPO II relaja subtimings y suele rendir peor**                                           |
+| **DRAM Frequency**         | 🔴 **DDR5-6000** (bajar manualmente desde los 6400 del perfil) | Ver el bloque de abajo                                                                                                               |
+| **UCLK DIV1 MODE**         | **UCLK == MEMCLK**                                             | Fuerza el 1:1                                                                                                                        |
+| **FCLK Frequency**         | **Auto** (≈2000 MHz)                                           | Tocarlo a mano es la causa nº1 de errores WHEA en AM5                                                                                |
+| **CPU SOC Voltage**        | **Manual · 1.20 V** (1.25 V si aparece inestabilidad)          | AMD impuso un **tope duro de 1.30 V** tras los fallos de 2023. Limitarlo evita que la placa aplique 1.30-1.35 V sola con EXPO        |
+| **CPU VDDIO / MC Voltage** | **Manual · 1.30 V** (1.35 V si aparece inestabilidad)          | <mark style="background: #FFB86CA6;">No es un raíl de "menos es mejor": demasiado bajo desestabiliza igual que demasiado alto</mark> |
+| **DRAM VDD / VDDQ**        | **Auto** (lo que fije EXPO — 1,41 V en este kit)               | No tocar                                                                                                                             |
+| **Memory Context Restore** | **Disabled**                                                   | Aunque ponerlo *enabled* ahorra el tiempo del entrenamiento **puede producir errores del stack de memoria**.                         |
+| **Power Down Enable**      | **Disabled**                                                   | Deja de depender de lo que decida la placa tras un flasheo.                                                                          |
+| **Gear Down Mode / tREFI** | **Auto**                                                       | No tocar sin dominar la materia                                                                                                      |
 
 #### Valores de referencia verificados en este equipo
 
